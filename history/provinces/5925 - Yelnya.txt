@@ -1,0 +1,37 @@
+#5925 - Yelnya
+#Area - Smolensk
+#Region - Ruthenia 
+
+#Core Details
+capital = "Yelnya"
+is_city = yes
+owner = LIT
+controller = LIT
+
+#Demographics
+culture = byelorussian
+religion = orthodox
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = fur
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = LIT
+add_core = SMO
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = nomad_group
+
+#Histories

@@ -1,0 +1,42 @@
+# Venetian League Members
+
+#vassal = {
+#	first = VEN
+#	second = CEP
+#	start_date = 1444.1.1
+#	end_date = 1460.1.1
+#}
+
+#Venice-Naxos tribute/guarantee 
+guarantee = {
+	first = VEN
+	second = NAX
+	start_date = 1415.1.1
+	end_date = 1416.1.1
+}
+
+# Venice-Candia
+dependency = {
+	subject_type = trade_colony
+	first = VEN  
+	second = CDA
+	start_date = 1205.1.1
+	end_date = 1444.1.1
+}
+
+# Venice-Negroponte
+dependency = {
+	subject_type = trade_colony
+	first = VEN  
+	second = NEG
+	start_date = 1205.1.1
+	end_date = 1444.1.1
+}
+
+
+guarantee = {
+	first = VEN
+	second = KTR
+	start_date = 1400.1.1
+	end_date = 1420.1.1
+}

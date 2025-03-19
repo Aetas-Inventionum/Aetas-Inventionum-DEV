@@ -1,0 +1,38 @@
+#3354 - Pallars
+#Area - Catalonia
+#Region - Iberia
+
+#Core Details
+capital = "Sort"
+is_city = yes
+owner = PLL
+controller = PLL
+
+#Demographics
+culture = catalan
+religion = catholic
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = apiculture
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = PLL
+add_core = CAT
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

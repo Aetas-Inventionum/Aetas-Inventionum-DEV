@@ -1,0 +1,8 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+primary_culture = castillian
+add_accepted_culture = leonese
+religion = catholic
+technology_group = western
+capital = 4943 #Plasencia

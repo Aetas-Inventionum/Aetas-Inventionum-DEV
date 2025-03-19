@@ -1,0 +1,1970 @@
+ai_wur_branch_1a = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = WUR 
+			was_tag = WUR 
+			tag = STT
+			was_tag = STT
+			tag = URC
+			was_tag = URC
+		}
+		NOT = { 
+			OR = { 
+				tag = GER 
+				tag = HLR 
+			}
+		}
+	} 
+
+	wur_mbd = {
+		icon = mission_henriette
+		position = 1
+		provinces_to_highlight = {  
+			province_id = 3398
+			NOT = { 
+				AND = {
+					owned_by = ROOT
+					is_core = ROOT 
+				}
+			}
+		} 
+
+		trigger = { owns_core_province = 3398 } 
+
+		effect = {  
+			add_country_modifier = { 
+				name = count_of_mbd
+				duration = 18250
+			}
+		} 
+	}
+
+	wur_family = {
+		icon = mission_ulrich
+		position = 2
+		required_missions = { wur_mbd } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			OR = { 
+				custom_trigger_tooltip = { 
+					tooltip = partition_wur_happened.tt
+					has_country_flag = wur_partition_flag
+				}
+				is_year = 1490
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = wur_wars
+				duration = 7300
+			}
+		} 
+	}
+
+	wur_unity = {
+		icon = king_of_kings
+		position = 3
+		required_missions = { wur_family } 
+		provinces_to_highlight = {  
+			OR = { 
+				province_id = 70
+				province_id = 5335
+				province_id = 4713
+			}
+			NOT = { 
+				AND = { 
+					owned_by = ROOT 
+					is_core = ROOT 
+				}
+			}
+		} 
+
+		trigger = {  
+			owns_core_province = 70
+			owns_core_province = 5335
+			owns_core_province = 4713
+			if = { 
+				limit = { tag = URC }
+				NOT = { exists = STT }
+			}
+			else_if = { 
+				limit = { tag = STT }
+				NOT = { exists = URC }
+			}
+		} 
+
+		effect = {  
+			change_tag = WUR 
+			add_prestige = 15
+			# add_ruler_modifier = { #nonexisting modifier
+			# 	name = wur_reuni
+			# 	duration = 7300
+			# }
+		} 
+	}
+
+	wur_ehrbarkeit = {
+		icon = mission_eberhard_iii
+		position = 4
+		provinces_to_highlight = {  } 
+
+		trigger = { has_reform = ehrbarkeit_reform } 
+
+		effect = { 
+			add_stability = 1 
+			add_adm_power = 75
+		} 
+	}
+
+	wur_oberrat = {
+		icon = invade_poland
+		position = 5
+		required_missions = { wur_ehrbarkeit } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			has_institution = renaissance 
+			reform_level = 3
+		} 
+
+		effect = { add_government_reform = oberramt_reform } 
+	}
+
+	wur_baroque = {
+		icon = mission_eber_lud
+		position = 6
+		required_missions = { wur_oberrat } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			reform_level = 10 
+			prestige = 75
+			is_year = 1600
+		} 
+
+		effect = { add_government_reform = wur_absolutism_reform } 
+	}
+
+	wur_ludwigsburg = {
+		icon = mission_ludwigsburg
+		position = 7
+		required_missions = { wur_baroque } 
+		provinces_to_highlight = {  
+			province_id = 70
+			NOT = { 
+				AND = { 
+					development = 30
+					has_building = courthouse
+					has_tax_building_trigger = yes 
+					has_trade_building_trigger = yes 
+					has_production_building_trigger = yes 
+				}
+			}
+		} 
+
+		trigger = {  
+			70 = { 
+				development = 30
+				has_building = courthouse
+				has_tax_building_trigger = yes 
+				has_trade_building_trigger = yes 
+				has_production_building_trigger = yes 
+			}
+			artist = 3
+			treasury = 1500
+		} 
+
+		effect = {  
+			70 = { 
+				add_great_project_tier = {
+					type = ai_ludwigsberg
+					tier = 2
+				}
+			}
+		} 
+	}
+}
+ai_wur_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = WUR 
+			was_tag = WUR 
+			tag = STT
+			was_tag = STT
+			tag = URC
+			was_tag = URC
+		}
+		NOT = { 
+			OR = { 
+				tag = GER 
+				tag = HLR 
+			}
+		}
+	} 
+
+	wur_landgraben = {
+		icon = mission_wur_castle
+		position = 2
+		required_missions = { wur_army } 
+		provinces_to_highlight = {  
+			province_id = 70
+			NOT = { 
+				AND = { 
+					owned_by = ROOT 
+					is_core = ROOT 
+					has_manpower_building_trigger = yes 
+					base_manpower = 6
+					has_fort_building_trigger = yes 
+				}
+			}
+		} 
+
+		trigger = {  
+			70 = { 
+				owned_by = ROOT 
+				is_core = ROOT 
+				has_manpower_building_trigger = yes 
+				base_manpower = 6
+				has_fort_building_trigger = yes 
+			}
+		} 
+
+		effect = { 
+			country_event = { id = aetas_wur.4 } 
+			5333 = { add_permanent_claim = ROOT }
+			add_casus_belli = {
+				target = HEL
+				type = cb_vassalize_mission
+				months = 1200
+			}
+		} 
+	}
+
+	wur_hel = {
+		icon = mission_hundred_years_war
+		position = 3
+		required_missions = { wur_landgraben } 
+		provinces_to_highlight = {  
+			province_id = 5333
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		} 
+
+		trigger = {  
+			5333 = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = wur_hel
+				duration = 7300
+			}
+			5332 = { add_permanent_claim = ROOT }
+			77 = { add_permanent_claim = ROOT }
+		} 
+	}
+
+	wur_religion = {
+		icon = victor_for_the_true_faith
+		position = 4
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			NOT = { current_age = age_of_discovery }
+			is_religion_enabled = protestant
+			is_religion_enabled = reformed 
+			OR = { 
+				religion = protestant
+				religion = reformed
+				religion = catholic 
+			}
+			stability = 2
+		} 
+
+		effect = {  
+			custom_tooltip = wur_religion.tt
+			hidden_effect = { 
+				if = { 
+					limit = { religion = catholic }
+					set_country_flag = wur_cath 
+				}
+				else = { set_country_flag = wur_prot }
+			}
+			swap_non_generic_missions = yes 
+		} 
+	}
+}
+ai_wur_branching_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = WUR
+			was_tag = WUR
+			tag = URC 
+			was_tag = URC
+			tag = STT
+			was_tag = STT 
+		}
+		NOT = { 
+			OR = { 
+				has_country_flag = wur_cath
+				has_country_flag = wur_prot
+				tag = HLR
+				tag = GER 
+			}
+		}
+	}
+
+
+	wur_branching_2aa = {
+		icon = mission_unknown_mission
+		position = 5
+		required_missions = {
+			wur_ehrbarkeit
+			wur_religion
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no
+			}
+		} 
+
+		effect = {  } 
+	}
+}
+ai_wur_protestant_branching_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = WUR
+			was_tag = WUR
+			tag = STT
+			was_tag = STT 
+			tag = URC 
+			was_tag = URC 
+		}
+		NOT = { 
+			OR = { 
+				tag = HLR 
+				tag = GER 
+			}
+		}
+		has_country_flag = wur_prot
+	} 
+
+	wur_church_codes = {
+		icon = mission_wur_kirchen
+		position = 5
+		required_missions = {
+			wur_ehrbarkeit
+			wur_religion
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			has_reform = kirchenordinung_reform 
+			adm = 5
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = grand_church_order
+				duration = 18250
+			}
+		} 
+	}
+}
+ai_wur_catholic_branching_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = WUR
+			was_tag = WUR
+			tag = STT
+			was_tag = STT 
+			tag = URC 
+			was_tag = URC 
+		}
+		NOT = { 
+			OR = { 
+				tag = HLR 
+				tag = GER 
+			}
+		}
+		has_country_flag = wur_cath
+	} 
+
+	wur_catholic = {
+		icon = support_the_orders
+		position = 5
+		required_missions = {
+			wur_ehrbarkeit
+			wur_religion
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			reverse_has_opinion = { 
+				who = PAP 
+				value = 125
+			}
+		} 
+
+		effect = { country_event = { id = aetas_wur.7 } } 
+	}
+}
+ai_wur_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = WUR 
+			was_tag = WUR 
+			tag = STT
+			was_tag = STT
+			tag = URC
+			was_tag = URC
+		}
+		NOT = { 
+			OR = { 
+				tag = GER 
+				tag = HLR 
+			}
+		}
+	} 
+
+	wur_army = {
+		icon = the_italian_league
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			army_size_percentage = 1
+			manpower_percentage = 0.9
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = wur_army_mod
+				duration = 18250
+			}
+		} 
+	}
+
+	wur_urc = {
+		icon = mission_urach
+		position = 2
+		required_missions = { wur_army } 
+		provinces_to_highlight = {  
+			province_id = 4713
+			NOT = { 
+				AND = { 
+					num_of_times_improved = 5
+					has_tax_building_trigger = yes 
+				}
+			}
+		} 
+
+		trigger = {  
+			4773 = { 
+				num_of_times_improved = 5
+				has_tax_building_trigger = yes 
+			}
+		} 
+
+		effect = {  
+			4773 = { 
+				add_province_triggered_modifier = urc_mod
+				add_building = courthouse
+			}
+		} 
+	}
+
+	wur_stuttgart = {
+		icon = mission_stuttgart
+		position = 3
+		required_missions = { wur_urc } 
+		provinces_to_highlight = {  
+			province_id = 70
+			NOT = { 
+				AND = { 
+					owned_by = ROOT
+					is_core = ROOT 
+					num_of_times_improved = 10
+					has_tax_building_trigger = yes 
+					has_trade_building_trigger = yes 
+					renaissance = 100 
+				}
+			}
+		} 
+
+		trigger = {  
+			70 = { 
+				owned_by = ROOT
+				is_core = ROOT 
+				num_of_times_improved = 10
+				has_tax_building_trigger = yes 
+				has_trade_building_trigger = yes 
+				renaissance = 100 
+			}
+		} 
+
+		effect = { 70 = { add_province_triggered_modifier = stt_mod } } 
+	}
+
+	wur_reu = {
+		icon = weimar_classicism
+		position = 4
+		required_missions = { wur_ulm } 
+		provinces_to_highlight = {  
+			province_id = 5347
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			OR = { 
+				AND = { 
+					exists = REU 
+					alliance_with = REU 
+					REU = {
+						owns_core_province = 5347
+						NOT = { num_of_cities = 2 }
+						has_opinion = { 
+							who = ROOT 
+							value = 190 
+						}
+					}
+				}
+				5347 = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = wur_reu.tt
+			hidden_effect = { 
+				if = { 
+					limit = { NOT = { 5347 = { country_or_non_sovereign_subject_holds = ROOT } } }
+					country_event = { id = aetas_wur.5 }
+				}
+			}
+			5342 = { add_permanent_claim = ROOT }
+		} 
+	}
+
+	wur_rtw = {
+		icon = mercenary_companies
+		position = 5
+		required_missions = { wur_reu } 
+		provinces_to_highlight = {  
+			province_id = 5342
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			5342 = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = wur_interests
+				duration = 7300
+			}
+		} 
+	}
+}
+ai_wur_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = WUR 
+			was_tag = WUR 
+			tag = STT
+			was_tag = STT
+			tag = URC
+			was_tag = URC
+		}
+		NOT = { 
+			OR = { 
+				tag = GER 
+				tag = HLR 
+			}
+		}
+	} 
+
+	wur_league = {
+		icon = mission_swa_leg
+		position = 2
+		required_missions = {
+			wur_duchy
+			wur_army
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			calc_true_if = { 
+				all_ally = { 
+					primary_culture = swabian 
+				}
+				amount = 2 
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = wur_swa_league
+				duration = 18250
+			}
+			every_ally = { 
+				limit = { primary_culture = swabian }
+				add_country_modifier = { 
+					name = wur_swa_league
+					duration = 18250
+				}
+			}
+			add_casus_belli = {
+				target = ULM
+				type = cb_vassalize_mission
+				months = 1200
+			}
+			1872 = { add_permanent_claim = ROOT }
+			every_province = { 
+				limit = {
+					owner = { dynasty = "von Habsburg" }
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+					OR = { 
+						culture = swabian
+						culture = alsatian
+						culture = swiss 
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	wur_ulm = {
+		icon = mission_ulm
+		position = 3
+		required_missions = { wur_league } 
+		provinces_to_highlight = {  
+			province_id = 1872
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = { 1872 = { country_or_non_sovereign_subject_holds = ROOT } } 
+
+		effect = {  
+			add_country_modifier = { 
+				name = wur_ulm_mod
+				duration = 7300
+			}
+			add_casus_belli = {
+				target = MEM
+				type = cb_vassalize_mission
+				months = 1200
+			}
+			68 = { add_permanent_claim = ROOT }
+			add_casus_belli = {
+				target = AUG
+				type = cb_vassalize_mission
+				months = 1200
+			}
+			1868 = { add_permanent_claim = ROOT }
+		} 
+	}
+
+	wur_aug = {
+		icon = evengelize_the_faith
+		position = 4
+		required_missions = { wur_ulm } 
+		provinces_to_highlight = {  
+			province_id = 1868
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = { 1868 = { country_or_non_sovereign_subject_holds = ROOT } } 
+
+		effect = {  
+			add_country_modifier = { 
+				name = wur_aug_mod
+				duration = 7300
+			}
+			upper_swabia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	wur_swa = {
+		icon = mission_swabia
+		position = 5
+		required_missions = {
+			wur_reu
+			wur_aug
+			wur_mem
+		}
+		provinces_to_highlight = {  
+			OR = { 
+				province_id = 70
+				province_id = 5347
+				province_id = 1872
+				province_id = 68
+				province_id = 1868
+				province_id = 5344
+				AND = { 
+					owner = { 
+						dynasty = "von Habsburg" 
+						NOT = { primary_culture = swabian }
+					}
+					OR = { 
+						culture = swabian
+						culture = alsatian
+						culture = swiss 
+					}
+				}
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			70 = { country_or_non_sovereign_subject_holds = ROOT }
+			5347 = { country_or_non_sovereign_subject_holds = ROOT }
+			1872 = { country_or_non_sovereign_subject_holds = ROOT }
+			68 = { country_or_non_sovereign_subject_holds = ROOT }
+			1868 = { country_or_non_sovereign_subject_holds = ROOT }
+			5344 = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { 
+				any_province = { 
+					OR = { 
+						culture = swabian
+						culture = alsatian
+						culture = swiss 
+					}
+					owner = { 
+						dynasty = "von Habsburg" 
+						NOT = { primary_culture = swabian }
+					}
+				}
+			}
+		} 
+
+		effect = {  
+			change_tag = SWA 
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = SWA_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			swap_non_generic_missions = yes
+			lower_swabia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			upper_rhineland_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			switzerland_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+}
+ai_wur_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = WUR 
+			was_tag = WUR 
+			tag = STT
+			was_tag = STT
+			tag = URC
+			was_tag = URC
+		}
+		NOT = { 
+			OR = { 
+				tag = GER 
+				tag = HLR 
+			}
+		}
+	} 
+
+	wur_duchy = {
+		icon = mission_eberhard
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			dip = 5
+			prestige = 25
+			OR = { 
+				custom_trigger_tooltip = { 
+					tooltip = partition_wur_happened.tt
+					has_country_flag = wur_partition_flag
+				}
+				is_year = 1490
+			}
+		} 
+
+		effect = {  
+			country_event = { id = aetas_wur.3 }
+		} 
+	}
+
+	wur_elector = {
+		icon = mission_bannerbearer
+		position = 2
+		required_missions = { wur_duchy } 
+		provinces_to_highlight = {  } 
+
+		trigger = { is_elector = yes } 
+
+		effect = {  
+			add_country_modifier = { 
+				name = arch_bannerbearer
+				duration = -1
+			}
+		} 
+	}
+
+	wur_hab = {
+		icon = mission_furstenberg_habsburg
+		position = 3
+		required_missions = { wur_league } 
+		provinces_to_highlight = {  
+			owner = { 
+				dynasty = "von Habsburg"
+				NOT = { primary_culture = swabian }
+			}
+			OR = { 
+				culture = swabian 
+				culture = alsatian
+				culture = swiss
+			}
+		} 
+
+		trigger = {  
+			NOT = { 
+				any_province = {
+					owner = { 
+						dynasty = "von Habsburg"
+						NOT = { primary_culture = swabian }
+					}
+					OR = { 
+						culture = swabian 
+						culture = alsatian
+						culture = swiss
+					}
+				}
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = expelled_hab
+				duration = 18250
+			}
+		} 
+	}
+
+	wur_mem = {
+		icon = regents_contracts
+		position = 4
+		required_missions = { wur_ulm } 
+		provinces_to_highlight = {  
+			province_id = 1868
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			1868 = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = wur_mem_mod
+				duration = 7300
+			}
+			add_casus_belli = {
+				target = MBZ
+				type = cb_vassalize_mission
+				months = 1200
+			}
+		} 
+	}
+
+	wur_mbz = {
+		icon = catholic_confraternity
+		position = 5
+		required_missions = { wur_mem } 
+		provinces_to_highlight = {  
+			OR = { 
+				province_id = 5344
+				province_id = 4710
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		} 
+
+		trigger = {  
+			5344 = { country_or_non_sovereign_subject_holds = ROOT } 
+			4710 = { country_or_non_sovereign_subject_holds = ROOT } 
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = wur_mbz_mod
+				duration = 7300
+			}
+		} 
+	}
+}
+ai_swa_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = SWA } 
+
+	swa_staufen = {
+		icon = mission_staufen
+		position = 6
+		required_missions = { wur_swa } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			OR = {
+				prestige = 100
+				is_emperor = yes 
+			}
+		} 
+
+		effect = {  
+			country_event = { id = aetas_wur.10 }
+			add_casus_belli = {
+				target = SIC
+				type = cb_restore_personal_union
+				months = 480
+			}
+			if = { 
+				limit = { exists = NAP }
+				add_casus_belli = {
+					target = NAP
+					type = cb_restore_personal_union
+					months = 480
+				}
+			}
+			else = { 
+				add_casus_belli = {
+					target = NPO
+					type = cb_restore_personal_union
+					months = 480
+				}
+			}
+		} 
+	}
+
+	swa_sic = {
+		icon = mission_konrad_sic
+		position = 7
+		required_missions = { swa_staufen } 
+		provinces_to_highlight = {  
+			OR = { 
+				owned_by = NAP 
+				owned_by = SIC 
+				owned_by = NPO
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			if = { 
+				limit = { exists = NAP }
+				OR = { 
+					senior_union_with = SIC
+					senior_union_with = NAP 
+				}
+			}
+			else_if = { 
+				limit = { exists = NPO }
+				OR = { 
+					senior_union_with = SIC
+					senior_union_with = NPO
+				}
+			}
+			else = { 
+				OR = { 
+					AND = {
+						owns_core_province = 121
+						owns_core_province = 5111
+						owns_core_province = 2983
+					}
+					AND = { 
+						owns_core_province = 125
+						owns_core_province = 124
+						owns_core_province = 2982
+					}
+				}
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = swa_sic_mod
+				duration = 18250
+			}
+			palestine_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	swa_koj = {
+		icon = mission_sepulchre
+		position = 8
+		required_missions = { swa_sic } 
+		provinces_to_highlight = {  
+			area = palestine_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			palestine_area = { 
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all 
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = swa_koj_mod
+				duration = -1
+			}
+			379 = { 
+				change_religion = ROOT 
+				change_culture = ROOT 
+			}
+		} 
+	}
+}
+ai_swa_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = SWA } 
+
+	swa_bad = {
+		icon = take_the_bishoprics
+		position = 6
+		required_missions = { wur_swa } 
+		provinces_to_highlight = {  
+			OR = { 
+				province_id = 4714
+				province_id = 74
+				province_id = 5336
+				province_id = 72
+				province_id = 5339
+				province_id = 5340
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			4714 = { country_or_non_sovereign_subject_holds = ROOT }
+			74 = { country_or_non_sovereign_subject_holds = ROOT }
+			5336 = { country_or_non_sovereign_subject_holds = ROOT }
+			72 = { country_or_non_sovereign_subject_holds = ROOT }
+			5339 = { country_or_non_sovereign_subject_holds = ROOT }
+			5340 = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		effect = {  
+			74 = { 
+				add_province_modifier = { 
+					name = high_castle_baden
+					duration = -1 
+				}
+			}
+			alsace_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	swa_als = {
+		icon = mission_sell_indulgences
+		position = 7
+		required_missions = { swa_bad } 
+		provinces_to_highlight = {  
+			area = alsace_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			alsace_area = { 
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all 
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = swa_als_mod
+				duration = 18250
+			}
+			bourgogne_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			palatinate_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+}
+ai_swa_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = SWA } 
+
+	swa_thurgau = {
+		icon = reorganize_the_confederacy
+		position = 6
+		required_missions = { wur_swa } 
+		provinces_to_highlight = {  
+			OR = { 
+				province_id = 5037
+				province_id = 1869
+				province_id = 5036
+				province_id = 5035
+				province_id = 166
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		} 
+
+		trigger = {  
+			5037 = { country_or_non_sovereign_subject_holds = ROOT } 
+			1869 = { country_or_non_sovereign_subject_holds = ROOT } 
+			5036 = { country_or_non_sovereign_subject_holds = ROOT } 
+			5035 = { country_or_non_sovereign_subject_holds = ROOT } 
+			166 = { country_or_non_sovereign_subject_holds = ROOT } 
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = swa_swi
+				duration = 18250
+			}
+			romandie_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			savoy_dauphine_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			graubunden_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	swa_chur = {
+		icon = integrate_the_three_leagues
+		position = 7
+		required_missions = { swa_thurgau } 
+		provinces_to_highlight = {  
+			area = graubunden_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			graubunden_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all 
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = grey_alps
+				duration = 36500
+			}
+			lombardy_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			po_valley_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	swa_trade = {
+		icon = reform_the_monte
+		position = 8
+		required_missions = { swa_chur } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			OR = { 
+				AND = { 
+					1298 = { is_strongest_trade_power = ROOT }
+					1889 = { is_strongest_trade_power = ROOT }
+				}
+				AND = { 
+					1308 = { is_strongest_trade_power = ROOT }
+					67 = { is_strongest_trade_power = ROOT }
+				}
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = swa_ita_trade
+				duration = -1
+			}
+		} 
+	}
+}
+ai_swa_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = SWA } 
+
+	swa_free_cities = {
+		icon = promote_urbanization
+		position = 6
+		required_missions = { wur_swa } 
+		provinces_to_highlight = {  
+			OR = { 
+				province_id = 68
+				province_id = 1872 
+				province_id = 4711
+				province_id = 5348
+				province_id = 5334
+				province_id = 5333
+				province_id = 5347
+				province_id = 4712
+				province_id = 5342
+				province_id = 1868
+			}
+			NOT = { 
+				AND = { 
+					owned_by = ROOT 
+					is_core = ROOT 
+					development = 25
+					has_manufactory_trigger = yes 
+					has_tax_building_trigger = yes 
+				}
+			}
+		} 
+
+		trigger = {  
+			num_of_owned_provinces_with = { 
+				OR = { 
+					province_id = 68
+					province_id = 1872 
+					province_id = 4711
+					province_id = 5348
+					province_id = 5334
+					province_id = 5333
+					province_id = 5347
+					province_id = 4712
+					province_id = 5342
+					province_id = 1868
+				}
+				owned_by = ROOT 
+				is_core = ROOT 
+				development = 25
+				has_manufactory_trigger = yes 
+				has_tax_building_trigger = yes 
+				value = 5
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = swa_fc.tt
+			hidden_effect = { 
+				every_owned_province = { 
+					limit = { 
+						OR = { 
+							province_id = 68
+							province_id = 1872 
+							province_id = 4711
+							province_id = 5348
+							province_id = 5334
+							province_id = 5333
+							province_id = 5347
+							province_id = 4712
+							province_id = 5342
+							province_id = 1868
+						}
+						owned_by = ROOT 
+						is_core = ROOT 
+						development = 25
+						has_manufactory_trigger = yes 
+						has_tax_building_trigger = yes
+					}
+					add_province_triggered_modifier = swa_fc_mod
+				}
+			}
+		} 
+	}
+
+	swa_capital = {
+		icon = mission_empire
+		position = 7
+		required_missions = { swa_free_cities } 
+		provinces_to_highlight = {  
+			OR = { 
+				province_id = 70 
+				province_id = 1872
+				province_id = 68
+				province_id = 1868
+			}
+			NOT = { 
+				AND = { 
+					owned_by = ROOT
+					is_core = ROOT 
+					development = 35
+				}
+			}
+		} 
+
+		trigger = {  
+			70 = { 
+				owned_by = ROOT
+				is_core = ROOT 
+				development = 35
+			}
+			1872 = { 
+				owned_by = ROOT
+				is_core = ROOT 
+				development = 35
+			}
+			68 = { 
+				owned_by = ROOT
+				is_core = ROOT 
+				development = 35
+			}
+			1868 = { 
+				owned_by = ROOT
+				is_core = ROOT 
+				development = 35
+			}
+		} 
+
+		effect = { country_event = { id = aetas_wur.9 } } 
+	}
+}
+ai_wur_locked_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = WUR } 
+
+	wur_locked_2a = {
+		icon = mission_locked_mission
+		position = 6
+		required_missions = { wur_swa } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no 
+			}
+			OR = {
+				prestige = 100
+				is_emperor = yes 
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = swa_unlock_mission.tt
+			country_event = { id = aetas_wur.10 }
+			add_casus_belli = {
+				target = SIC
+				type = cb_restore_personal_union
+				months = 480
+			}
+			if = { 
+				limit = { exists = NAP }
+				add_casus_belli = {
+					target = NAP
+					type = cb_restore_personal_union
+					months = 480
+				}
+			}
+			else = { 
+				add_casus_belli = {
+					target = NPO
+					type = cb_restore_personal_union
+					months = 480
+				}
+			}
+		} 
+	}
+
+	wur_locked_2b = {
+		icon = mission_locked_mission
+		position = 7
+		required_missions = { wur_locked_2a } 
+		provinces_to_highlight = {  
+			OR = { 
+				owned_by = NAP 
+				owned_by = SIC 
+				owned_by = NPO
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no 
+			}
+			if = { 
+				limit = { exists = NAP }
+				OR = { 
+					senior_union_with = SIC
+					senior_union_with = NAP 
+				}
+			}
+			else_if = { 
+				limit = { exists = NPO }
+				OR = { 
+					senior_union_with = SIC
+					senior_union_with = NPO
+				}
+			}
+			else = { 
+				OR = { 
+					AND = {
+						owns_core_province = 121
+						owns_core_province = 5111
+						owns_core_province = 2983
+					}
+					AND = { 
+						owns_core_province = 125
+						owns_core_province = 124
+						owns_core_province = 2982
+					}
+				}
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = swa_unlock_mission.tt
+			add_country_modifier = { 
+				name = swa_sic_mod
+				duration = 18250
+			}
+			palestine_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	wur_locked_2c = {
+		icon = mission_locked_mission
+		position = 8
+		required_missions = { wur_locked_2b } 
+		provinces_to_highlight = {  
+			area = palestine_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no 
+			}
+			palestine_area = { 
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all 
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = swa_unlock_mission.tt
+			add_country_modifier = { 
+				name = swa_koj_mod
+				duration = -1
+			}
+			379 = { 
+				change_religion = ROOT 
+				change_culture = ROOT 
+			}
+		} 
+	}
+}
+ai_wur_locked_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = WUR } 
+
+	wur_locked_3a = {
+		icon = mission_locked_mission
+		position = 6
+		required_missions = { wur_swa } 
+		provinces_to_highlight = {  
+			OR = { 
+				province_id = 4714
+				province_id = 74
+				province_id = 5336
+				province_id = 72
+				province_id = 5339
+				province_id = 5340
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no 
+			}
+			4714 = { country_or_non_sovereign_subject_holds = ROOT }
+			74 = { country_or_non_sovereign_subject_holds = ROOT }
+			5336 = { country_or_non_sovereign_subject_holds = ROOT }
+			72 = { country_or_non_sovereign_subject_holds = ROOT }
+			5339 = { country_or_non_sovereign_subject_holds = ROOT }
+			5340 = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		effect = {  
+			custom_tooltip = swa_unlock_mission.tt
+			74 = { 
+				add_province_modifier = { 
+					name = high_castle_baden
+					duration = -1 
+				}
+			}
+			alsace_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	wur_locked_3b = {
+		icon = mission_locked_mission
+		position = 7
+		required_missions = { wur_locked_3a } 
+		provinces_to_highlight = {  
+			area = alsace_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no 
+			}
+			alsace_area = { 
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all 
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = swa_unlock_mission.tt
+			add_country_modifier = { 
+				name = swa_als_mod
+				duration = 18250
+			}
+			bourgogne_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			palatinate_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+}
+ai_wur_locked_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = WUR } 
+
+	wur_locked_4a = {
+		icon = mission_locked_mission
+		position = 6
+		required_missions = { wur_swa } 
+		provinces_to_highlight = {  
+			OR = { 
+				province_id = 5037
+				province_id = 1869
+				province_id = 5036
+				province_id = 5035
+				province_id = 166
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		} 
+
+		trigger = {  
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no 
+			}
+			5037 = { country_or_non_sovereign_subject_holds = ROOT } 
+			1869 = { country_or_non_sovereign_subject_holds = ROOT } 
+			5036 = { country_or_non_sovereign_subject_holds = ROOT } 
+			5035 = { country_or_non_sovereign_subject_holds = ROOT } 
+			166 = { country_or_non_sovereign_subject_holds = ROOT } 
+		} 
+
+		effect = {  
+			custom_tooltip = swa_unlock_mission.tt
+			add_country_modifier = { 
+				name = swa_swi
+				duration = 18250
+			}
+			romandie_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			savoy_dauphine_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			graubunden_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	wur_locked_4b = {
+		icon = mission_locked_mission
+		position = 7
+		required_missions = { wur_locked_4a } 
+		provinces_to_highlight = {  
+			area = graubunden_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no 
+			}
+			graubunden_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all 
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = swa_unlock_mission.tt
+			add_country_modifier = { 
+				name = grey_alps
+				duration = 36500
+			}
+			lombardy_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			po_valley_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	wur_locked_4c = {
+		icon = mission_locked_mission
+		position = 8
+		required_missions = { wur_locked_4b } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no 
+			}
+			OR = { 
+				AND = { 
+					1298 = { is_strongest_trade_power = ROOT }
+					1889 = { is_strongest_trade_power = ROOT }
+				}
+				AND = { 
+					1308 = { is_strongest_trade_power = ROOT }
+					67 = { is_strongest_trade_power = ROOT }
+				}
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = swa_unlock_mission.tt
+			add_country_modifier = { 
+				name = swa_ita_trade
+				duration = -1
+			}
+		} 
+	}
+}
+ai_wur_locked_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = WUR } 
+
+	wur_locked_5a = {
+		icon = mission_locked_mission
+		position = 6
+		required_missions = { wur_swa } 
+		provinces_to_highlight = {  
+			OR = { 
+				province_id = 68
+				province_id = 1872 
+				province_id = 4711
+				province_id = 5348
+				province_id = 5334
+				province_id = 5333
+				province_id = 5347
+				province_id = 4712
+				province_id = 5342
+				province_id = 1868
+			}
+			NOT = { 
+				AND = { 
+					owned_by = ROOT 
+					is_core = ROOT 
+					development = 25
+					has_manufactory_trigger = yes 
+					has_tax_building_trigger = yes 
+				}
+			}
+		} 
+
+		trigger = {  
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no 
+			}
+			num_of_owned_provinces_with = { 
+				OR = { 
+					province_id = 68
+					province_id = 1872 
+					province_id = 4711
+					province_id = 5348
+					province_id = 5334
+					province_id = 5333
+					province_id = 5347
+					province_id = 4712
+					province_id = 5342
+					province_id = 1868
+				}
+				owned_by = ROOT 
+				is_core = ROOT 
+				development = 25
+				has_manufactory_trigger = yes 
+				has_tax_building_trigger = yes 
+				value = 5
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = swa_unlock_mission.tt
+			custom_tooltip = swa_fc.tt
+			hidden_effect = { 
+				every_owned_province = { 
+					limit = { 
+						OR = { 
+							province_id = 68
+							province_id = 1872 
+							province_id = 4711
+							province_id = 5348
+							province_id = 5334
+							province_id = 5333
+							province_id = 5347
+							province_id = 4712
+							province_id = 5342
+							province_id = 1868
+						}
+						owned_by = ROOT 
+						is_core = ROOT 
+						development = 25
+						has_manufactory_trigger = yes 
+						has_tax_building_trigger = yes
+					}
+					add_province_triggered_modifier = swa_fc_mod
+				}
+			}
+		} 
+	}
+
+	wur_locked_5b = {
+		icon = mission_locked_mission
+		position = 7
+		required_missions = { wur_locked_5a } 
+		provinces_to_highlight = {  
+			OR = { 
+				province_id = 70 
+				province_id = 1872
+				province_id = 68
+				province_id = 1868
+			}
+			NOT = { 
+				AND = { 
+					owned_by = ROOT
+					is_core = ROOT 
+					development = 35
+				}
+			}
+		} 
+
+		trigger = {  
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no 
+			}
+			70 = { 
+				owned_by = ROOT
+				is_core = ROOT 
+				development = 35
+			}
+			1872 = { 
+				owned_by = ROOT
+				is_core = ROOT 
+				development = 35
+			}
+			68 = { 
+				owned_by = ROOT
+				is_core = ROOT 
+				development = 35
+			}
+			1868 = { 
+				owned_by = ROOT
+				is_core = ROOT 
+				development = 35
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = swa_unlock_mission.tt
+			country_event = { id = aetas_wur.9 }
+		} 
+	}
+}

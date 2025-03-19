@@ -1,0 +1,8 @@
+government = monarchy
+add_government_reform = appanage_reform
+government_rank = 1
+primary_culture = leonese
+religion = catholic
+technology_group = western
+capital = 4942 #alburquerque
+fixed_capital = 4942

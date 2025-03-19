@@ -1,0 +1,40 @@
+#195 - Limousin
+#Area - Limousin
+#Region - France
+
+#Core Details
+capital = "Limoges"
+is_city = yes
+owner = LIM
+controller = LIM 
+
+#Demographics
+culture = limousin
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 2
+base_manpower = 2
+trade_goods = glass
+
+#Cores and Occupation (Alphabetical after current)
+add_core = LIM
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+center_of_trade = 1
+add_local_autonomy = 25 #Count of Limoges
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

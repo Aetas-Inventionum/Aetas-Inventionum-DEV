@@ -1,0 +1,1438 @@
+namespace = aetas_cas
+normal_or_historical_nations = yes
+
+#Papal Bull of 1415
+country_event = {
+	id = aetas_cas.2
+	title = aetas_cas.2.t
+	desc = aetas_cas.2.d
+	picture = BIG_BOOK_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = CAS
+		any_owned_province = {
+			religion = jewish
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	immediate = { 
+		hidden_effect = { 
+			ARA = { 
+				country_event = { id = aetas_cas.2 }
+			}
+			POR =  {
+				country_event = { id = aetas_cas.2 }
+			}
+		}
+	}
+
+	option = { #we abide
+		name = "aetas_cas.2.a"
+		every_owned_province = { 
+			limit = { religion = jewish }
+			add_province_modifier = { 
+				name = jews_1415
+				duration = -1
+			}
+		}
+	}
+
+	option = { 
+		name = "aetas_cas.2.b" #no ty
+	}
+}
+#juan II event
+country_event = {
+	id = aetas_cas.5
+	title = aetas_cas.5.t
+	desc = aetas_cas.5.d
+	picture = BAD_WITH_MONARCH_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = aetas_cas.5.a
+		add_ruler_modifier = { 
+			name = juan_ii #missed loc
+			duration = -1
+		}
+		define_consort = { 
+			name = "María de Aragón"
+			dynasty = "de Trastámara"
+			age = 17
+			female = yes 
+			country_of_origin = ARA 
+			adm = 2
+			dip = 4
+			mil = 3
+		}
+	}
+}
+# Reverse Valladolid Laws?
+country_event = {
+	id = aetas_cas.6
+	title = aetas_cas.6.t
+	desc = aetas_cas.6.d
+	picture = FAMINE_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = CAS
+		any_owned_province = {
+			religion = jewish
+		}
+		has_ruler = "Juan II"
+	}
+
+	mean_time_to_happen = {
+		months = 40
+	}
+
+	option = { #reverse them immediately
+		name = aetas_cas.6.a
+		ai_chance = { factor = 50 }
+		every_owned_province = { 
+			limit = { has_province_modifier = jewish_cas }
+			remove_province_modifier = jewish_cas
+		}
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -10
+		}
+	}
+
+	option = { #keep the status quo
+		name = aetas_cas.6.b
+		ai_chance = { factor = 50 }
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 5
+		}
+	}
+}
+country_event = {
+	id = aetas_cas.12
+	title = aetas_cas.12.t
+	desc = aetas_cas.12.d
+	picture = QUEEN_AT_COUNCIL_TABLE_eventPicture
+
+	fire_only_once = yes 
+
+	trigger = { 
+		is_year = 1465
+		tag = CAS 
+		dynasty = "de Trastámara"
+	}
+
+	mean_time_to_happen = { 
+		months = 120
+	}
+
+	option = { 
+		name = aetas_cas.12.a #allow Isabel to become heiress
+		define_heir = { 
+			name = "Isabel"
+			dynasty = "de Trastámara"
+			claim = 50 #disputed by her rivals and caused civil war
+			block_disinherit = yes
+			age = 15
+			adm = 5
+			dip = 5
+			mil = 5
+			female = yes
+		}
+		set_country_flag = isabel_heir
+	}
+
+	option = { 
+		name = aetas_cas.12.b #no!
+	}
+}
+#fall of granada
+country_event = {
+	id = aetas_cas.13
+	title = aetas_cas.13.t
+	desc = aetas_cas.13.d
+	picture = BAD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes 
+	major = yes 
+
+	option = { 
+		name = aetas_cas.13.a
+		if = {
+			limit = {
+				is_in_war = {
+					attacker_leader = ROOT
+					defender_leader = GRA
+				}
+			}
+			white_peace = GRA
+		}
+		if = {
+			limit = {
+				is_in_war = {
+					attacker_leader = GRA
+					defender_leader = ROOT
+				}
+			}
+			white_peace = GRA
+		}
+		inherit = GRA
+		hidden_effect = { 
+			every_province = { 
+				limit = { is_core = GRA }
+				add_core = GRD
+			}
+		}
+	}
+}
+#Decree of Alhambra
+country_event = {
+	id = aetas_cas.14
+	title = aetas_cas.14.t
+	desc = aetas_cas.14.d
+	picture = PRAYING_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes 
+	major = yes 
+
+	option = { 
+		name = aetas_cas.14.a #they cannot be trusted; conversion or expulsion
+		custom_tooltip = ai_expel.tt
+		hidden_effect = { 
+			set_country_flag = end_of_granada
+			iberia_region = { 
+				limit = { 
+					country_or_non_sovereign_subject_holds = ROOT
+					religion = jewish 
+				}
+				change_religion = catholic
+				if = { 
+					limit = { 
+						OR = { 
+							province_id = 3409 
+							province_id = 3376
+						}
+					}
+					change_culture = andalucian 
+				}
+				if = { 
+					limit = { province_id = 3404 }
+					change_culture = leonese
+				}
+				if = { 
+					limit = { province_id = 4956 }
+					change_culture = castillian
+				}
+				if = { 
+					limit = { 
+						base_tax = 2
+					}
+					random_list = { 
+						1 = { 
+							add_base_tax = -1
+						}
+						1 = {}
+					}
+				}
+				if = { 
+					limit = { 
+						base_production = 2
+					}
+					random_list = { 
+						1 = { 
+							add_base_production = -1
+						}
+						1 = {}
+					}
+				}
+				if = { 
+					limit = { 
+						base_manpower = 2
+					}
+					random_list = { 
+						1 = { 
+							add_base_manpower = -1
+						}
+						1 = {}
+					}
+				}
+			}
+			every_owned_province = { 
+				limit = { 
+					religion = jewish 
+					culture = sephardic
+					region = iberia_region
+				}
+				change_religion = catholic
+				change_culture = andalucian 
+				if = { 
+					limit = { 
+						base_tax = 2
+					}
+					random_list = { 
+						1 = { 
+							add_base_tax = -1
+						}
+						1 = {}
+					}
+				}
+				if = { 
+					limit = { 
+						base_production = 2
+					}
+					random_list = { 
+						1 = { 
+							add_base_production = -1
+						}
+						1 = {}
+					}
+				}
+				if = { 
+					limit = { 
+						base_manpower = 2
+					}
+					random_list = { 
+						1 = { 
+							add_base_manpower = -1
+						}
+						1 = {}
+					}
+				}
+			}
+			#Repeat of effect from earlier persecutions:
+			random_country = {
+				limit = {
+					religion_group = muslim
+					any_owned_province = {
+						sea_zone = {
+							any_neighbor_province = {
+								owned_by = ROOT
+							}
+						}
+					}
+				}
+				country_event = {  id = flavor_spa.3151 days = 10 tooltip = "flavor_spa.EVTTOOLTIP3150" }
+			}
+		}
+		set_global_flag = alhambra_decrees_flag
+	}
+
+	option = { 
+		name = "flavor_spa.14.b" #missed loc
+		if = {
+			limit = { NOT = { stability = 3 } }
+			add_stability_or_adm_power = yes
+		}
+		add_papal_influence = -25
+		if = {
+			limit = { stability = 3 }
+			every_owned_province = {
+				limit = {
+					is_core = GRA
+				}
+				add_unrest = -2
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+#habsburg spain test event
+country_event = {
+	id = aetas_cas.15
+	title = aetas_cas.15.t
+	desc = aetas_cas.15.d
+	picture = BIG_BOOK_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = aetas_cas.15.a
+		change_tag = SPN
+			on_change_tag_effect = yes
+			restore_country_name = yes
+			if = {
+				limit = {
+					NOT = { 
+						AND = {
+							has_dlc = "Golden Century" 
+							OR = {
+								tag = ARA
+								tag = CAT
+								tag = VAL
+							}
+						}
+					}
+				}
+				swap_non_generic_missions = yes
+			}
+			#remove_non_electors_emperors_from_empire_effect = yes
+			add_government_reform = hispanic_monarchy_reform
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = SPN_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			custom_tooltip = spanish_unification_effect.tooltip
+			hidden_effect = {
+				iberia_region = {
+					limit = {
+						NOT = { area = alentejo_area }
+						NOT = { area = beieras_area }
+					}
+					add_permanent_claim = SPN
+				}
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			set_country_flag = formed_spain_flag
+			add_prestige = 25
+			hidden_effect = { 
+				define_ruler = { 
+					name = "Carlos I"
+					dynasty = "von Habsburg"
+					adm = 6
+					dip = 6
+					mil = 6
+					age = 30
+				}
+				remove_heir = {}
+				inherit = GRA 
+				inherit = ARA 
+				inherit = SAR 
+				inherit = SIC 
+				inherit = NAP 
+				inherit = BUR 
+				inherit = FLA 
+				inherit = LUX 
+				inherit = BRB 
+				inherit = HOL 
+				inherit = GEL 
+				inherit = UTR
+				inherit = FRI
+				inherit = ATS 
+				inherit = HAI 
+				inherit = NAM 
+				inherit = ZUT 
+				inherit = GRN
+				inherit = ZEE
+				inherit = MLO
+				inherit = LBG 
+				inherit = GDI 
+				inherit = TTA 
+				inherit = ORS 
+				inherit = RAN 
+				inherit = ADI 
+				inherit = ATR 
+				inherit = LCC
+				inherit = JAI 
+				inherit = PLL
+				inherit = ABQ 
+				inherit = PNF
+				5039 = { 
+					cede_province = SWI
+					add_core = SWI 
+				}
+				5048 = { 
+					cede_province = SAV
+					add_core = SAV 
+					remove_core = ROOT
+				}
+				inherit = CMO 
+				inherit = CRM
+				inherit = OMM
+				3304 = { 
+					cede_province = ROOT
+					add_core = ROOT 
+				}
+				west_burgundy_area = {
+					limit = { 
+						owned_by = ROOT 
+						NOT = {
+							OR = { 
+								province_id = 1877
+							}
+						 }
+					}
+					cede_province = FRA 
+					add_core = FRA 
+				}
+				FRA = { inherit = NEV }
+				185 = { 
+					cede_province = FRA 
+					add_core = FRA 
+				}
+				3232 = { 
+					cede_province = FRA 
+					add_core = FRA 
+				}
+				3266 = { 
+					cede_province = NAV 
+					add_core = NAV
+				}
+				3263 = {
+					cede_province = NAV
+					add_core = NAV
+				 }
+				NAV = { 
+					change_primary_culture = gascon 
+					add_accepted_culture = basque 
+					inherit = FOI
+					inherit = ABT
+					inherit = LIM
+					inherit = NRB
+				}
+				FRA = { 
+					inherit = BER 
+					inherit = TRN 
+					inherit = PRO 
+					inherit = BRI 
+					inherit = ROH 
+					inherit = PHV 
+					inherit = VLN
+					inherit = BAR 
+					white_peace = ENG
+				}
+				3258 = { 
+					cede_province = FRA 
+					add_core = FRA 
+				}
+				174 = { 
+					cede_province = FRA 
+					add_core = FRA 
+				}
+				3260 = { 
+					cede_province = FRA 
+					add_core = FRA 
+				}
+				3262 = { 
+					cede_province = FRA 
+					add_core = FRA 
+				}
+				173 = { 
+					cede_province = FRA 
+					add_core = FRA 
+				}
+				4697 = { 
+					cede_province = AMG 
+					add_core = AMG 
+				}
+				5221 = { 
+					cede_province = AMG 
+					add_core = AMG 
+				}
+				185 = { 
+					cede_province = AMG 
+					add_core = AMG 
+				}
+				FRA = { 
+					every_owned_province = { 
+						limit = { 
+							area = massif_central_area
+							NOT = { province_id = 199 } 
+						}
+						cede_province = BOU 
+						add_core = BOU 
+						remove_core = ROOT
+					}
+				}
+				disband_all_units = yes
+			}
+	}
+}
+#resignation of maciot
+country_event = {
+	id = aetas_cas.17
+	title = aetas_cas.17.t
+	desc = aetas_cas.17.d
+	picture = CORRUPTION_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = CAS 
+		CAE = { 
+			ai = yes 
+			NOT = { has_ruler = "Jean I" }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 60
+	}
+
+	option = { #fuck the portuguese, but at least we have the islands
+		name = aetas_cas.17.a
+		inherit = CAE  
+		5709 = { 
+			add_core = POR 
+		}
+		5710 = {
+			add_core = POR 
+		}
+	}
+}
+#spain cheat
+country_event = {
+	id = aetas_cas.100
+	title = aetas_cas.100.t
+	desc = aetas_cas.100.d
+	picture = CORRUPTION_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = {
+		name = aetas_cas.100.a 
+		hidden_effect = { 
+			inherit = GRA 
+			every_owned_province = { 
+				limit = { culture = andalusi }
+				change_culture = andalucian 
+				change_religion = ROOT 
+				add_core = GRD 
+			}
+			inherit = ARA 
+			inherit = SAR 
+			inherit = SIC 
+			inherit = NAP 
+			inherit = BUR 
+			inherit = FLA 
+			inherit = BRB 
+			inherit = HAI 
+			inherit = LUX 
+			inherit = NEV
+			inherit = ZEE 
+			inherit = HOL 
+			inherit = UTR 
+			inherit = FRI 
+			inherit = LBG 
+			inherit = GRN 
+			inherit = ATS 
+			inherit = NAM 
+			inherit = GEL 
+			inherit = ZUT 
+		}
+		change_tag = SPA 
+		on_change_tag_effect = yes
+		restore_country_name = yes
+		if = {
+			limit = {
+				NOT = { 
+					AND = {
+						has_dlc = "Golden Century" 
+						OR = {
+							tag = ARA
+							tag = CAT
+							tag = VAL
+						}
+					}
+				}
+			}
+			swap_non_generic_missions = yes
+		}
+		#remove_non_electors_emperors_from_empire_effect = yes
+		if = {
+			limit = { NOT = { government_rank = 2 } }
+			set_government_rank = 2
+		}
+		if = {
+			limit = {
+				has_custom_ideas = no
+				NOT = { has_idea_group = ai_SPA_ideas }
+			}
+			country_event = { id = ideagroups.1 } #Swap Ideas
+		}
+		custom_tooltip = spanish_unification_effect.tooltip
+		hidden_effect = {
+			iberia_region = {
+				limit = {
+					NOT = { area = alentejo_area }
+					NOT = { area = beieras_area }
+				}
+				add_permanent_claim = SPA
+			}
+		}
+	}
+}
+#Castilianization
+province_event = {
+	id = aetas_cas.18
+	title = aetas_cas.18.t
+	desc = aetas_cas.18.d
+	picture = BIG_BOOK_eventPicture
+	
+	trigger = {
+		is_year = 1620
+		owner = { 
+			OR = {
+				primary_culture = castillian 
+				AND = { 
+					tag = ARA 
+					ruler_culture = castillian 
+				}
+			}
+		}
+		region = iberia_region
+		OR = { 
+			culture = aragonese
+			culture = leonese
+		}
+		any_neighbor_province = { culture = castillian }
+		NOT = { 
+			OR = { 
+				has_province_flag = castilianized_flag
+				province_id = 3366
+				province_id = 3367
+				province_id = 4942
+				province_id = 4972
+				province_id = 4973
+				province_id = 4553
+				province_id = 4968
+				province_id = 4969
+				province_id = 208
+				province_id = 4965
+				province_id = 4964
+				province_id = 207
+				province_id = 4963
+			}
+		}
+	}
+
+	mean_time_to_happen = { 
+		months = 360
+		modifier = { 
+			factor = 1.5
+			culture = aragonese 
+		}
+		modifier = { 
+			factor = 0.75
+			culture = manchego
+		}
+		modifier = { 
+			factor = 0.8
+			culture = murcian
+		}
+	}
+
+	option = { 
+		name = aetas_cas.18.a #a very natural process indeed...
+		change_culture = castillian 
+		set_province_flag = castilianized_flag
+	}
+}
+#Duchy of Medina Sidonia
+country_event = {
+	id = aetas_cas.19
+	title = aetas_cas.19.t
+	desc = aetas_cas.19.d
+	picture = COURT_eventPicture
+
+	fire_only_once = yes 
+	trigger = { 
+		OR = { 
+			tag = CAS 
+			was_tag = CAS 
+		}
+		owns_core_province = 3402
+		NOT = { exists = MDS }
+		is_year = 1440
+	}
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			tag = NIE 
+			is_subject_of = ROOT
+		}
+	}
+
+	mean_time_to_happen = { 
+		months = 120
+	}
+
+	option = { 
+		name = aetas_cas.19.a #Name the Counts of Niebla as Dukes of Medina Sidonia!
+		ai_chance = { factor = 1 } #historical
+		add_prestige = 5
+		if = { 
+			limit = { 
+				exists = NIE 
+				NIE = { 
+					NOT = { is_lesser_in_union = yes }
+					is_subject_of = ROOT 
+				}
+			}
+			3402 = { 
+				cede_province = NIE 
+				add_core = NIE 
+				remove_core = ROOT 
+			}
+			if = { 
+				limit = { owns_core_province = 3401 }
+				3401 = { 
+					cede_province = NIE 
+					add_core = NIE 
+					remove_core = ROOT 
+				}
+			}
+			if = {
+				limit = { owns_core_province = 226 }
+				226 = { 
+					cede_province = NIE 
+					add_core = NIE 
+					remove_core = ROOT 
+				}
+			}
+			NIE = { 
+				set_capital = 3402
+				change_tag = MDS 
+			}
+		}
+		else = { 
+			3402 = { 
+				cede_province = MDS 
+				add_core = MDS 
+				remove_core = ROOT
+			}
+			if = { 
+				limit = { owns_core_province = 3401 }
+				3401 = { 
+					cede_province = MDS 
+					add_core = MDS 
+					remove_core = ROOT 
+				}
+			}
+			if = { 
+				limit = { owns_core_province = 226 }
+				226 = { 
+					cede_province = MDS 
+					add_core = MDS 
+					remove_core = ROOT 
+				}
+			}
+			MDS = { 
+				define_ruler = { 
+					name = "Juan Alonso I" #1st bc 1st duke of medina sidonia
+					dynasty = "de Guzmán"
+					age = 40
+					adm = 2
+					dip = 4
+					mil = 3
+				}
+			}
+			create_subject = { 
+				who = MDS 
+				subject_type = fief 
+			}
+		}
+		custom_tooltip = cas_mds.tt
+		hidden_effect = { 
+			add_country_modifier = { 
+				name = cas_mds_mod
+				duration = -1
+			}
+		}
+	}
+	option = { 
+		name = aetas_cas.19.b #this seems like too much.
+		ai_chance = { factor = 0 }
+		add_prestige = -10
+	}
+}
+#Fall of Granada
+country_event = {
+	id = aetas_cas.20
+	title = aetas_cas.20.t
+	desc = aetas_cas.20.d
+	picture = SIEGE_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes 
+	major = yes 
+
+	immediate = { 
+		hidden_effect = { 
+			GRA = { 
+				every_owned_province = { set_province_flag = gra_province_flag }
+			}
+		}
+	}
+
+	option = { 
+		name = aetas_cas.20.a #guarantee their religious freedom, but they must be dispersed a little.
+		white_peace = GRA 
+		inherit = GRA 
+		every_owned_province = { 
+			limit = { has_province_flag = gra_province_flag }
+			if = { 
+				limit = { base_tax = 1 }
+				add_base_tax = -1
+			}
+			if = { 
+				limit = { base_production = 1 }
+				add_base_production = -1
+			}
+			if = { 
+				limit = { base_manpower = 1 }
+				add_base_manpower = -1
+			}
+			add_province_triggered_modifier = treaty_of_granada
+			add_core = GRN
+		}
+		random_owned_province = {
+			limit = { 
+				area = lamancha_area
+			}
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+			add_province_modifier = { 
+				name = influx_of_moors
+				duration = -1
+			}
+		}
+		random_owned_province = {
+			limit = { 
+				area = toledo_area
+				NOT = { province_id = 219 }
+			}
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+			add_province_modifier = { 
+				name = influx_of_moors
+				duration = -1
+			}
+		}
+	}
+}
+#Republic of Gibraltar
+country_event = {
+	id = aetas_cas.21
+	title = aetas_cas.21.t
+	desc = aetas_cas.21.d
+	picture = FARMING_eventPicture
+
+	fire_only_once = yes  
+	major = yes 
+	major_trigger = { 
+		overlord_of = ROOT 
+	}
+
+	trigger = { 
+		OR = { 
+			tag = MDS 
+			tag = CAS 
+			was_tag = CAS 
+			owns_core_province = 226
+		}
+	}
+
+	option = { 
+		name = aetas_cas.21.a #sure, why not
+		add_treasury = 250
+		226 = { 
+			cede_province = GBL 
+			add_core = GBL 
+			change_culture = andalucian
+			change_religion = catholic
+			add_base_tax = 1
+			add_base_production = 1
+		}
+		create_subject = { 
+			who = GBL 
+			subject_type = fief
+		}
+		hidden_effect = { set_country_flag = GBL_lease_flag }
+	}
+	option = { 
+		name = aetas_cas.21.b #idgaf
+	}
+}
+#lease is up
+country_event = {
+	id = aetas_cas.22
+	title = aetas_cas.22.t
+	desc = aetas_cas.22.d
+	picture = COLONIZATION_eventPicture
+
+	fire_only_once = yes  
+	major = yes 
+	major_trigger = { 
+		overlord_of = ROOT
+	}
+
+	trigger = { 
+		OR = { 
+			tag = MDS 
+			tag = CAS 
+			was_tag = CAS 
+		}
+		exists = GBL 
+		GBL = { is_subject_of = ROOT }
+		had_country_flag = {
+			flag = GBL_lease_flag
+			days = 620
+		}
+	}
+
+	option = { 
+		name = aetas_cas.22.a #a deal is a deal!
+		inherit = GBL 
+	}
+	option = { 
+		name = aetas_cas.22.b #permanently renew the lease
+		add_treasury = 250
+		add_stability = 1
+		226 = { 
+			add_base_tax = 1
+			add_base_production = 1
+		}
+	}
+}
+#duchy of alburquerque
+country_event = {
+	id = aetas_cas.23
+	title = aetas_cas.23.t
+	desc = aetas_cas.23.d
+	picture = WESTERNISATION_eventPicture
+
+	fire_only_once = yes  
+
+	trigger = { 
+		OR = { 
+			tag = CAS 
+			was_tag = CAS 
+		}
+		NOT = { exists = ABQ }
+		owns_core_province = 4942
+	}
+
+	mean_time_to_happen = { 
+		months = 240
+	}
+
+	option = { 
+		name = aetas_cas.23.a #yes!
+		hidden_effect = { 
+			every_province = { 
+				limit = { is_core = ABQ }
+				remove_core = ABQ 
+			}
+		}
+		4942 = { 
+			add_core = AB2
+			cede_province = AB2 
+		}
+		4955 = { 
+			add_core = AB2
+			cede_province = AB2 
+		}
+		2755 = { 
+			add_core = AB2
+			cede_province = AB2 
+		}
+		4957 = { 
+			add_core = AB2
+			cede_province = AB2 
+		}
+		AB2 = { 
+			change_government = monarchy 
+			add_government_reform = appanage_reform
+			add_historical_friend = ROOT 
+			define_ruler = { 
+				name = "Beltrán I"
+				dynasty = "de la Cueva"
+				age = 27 
+				adm = 4
+				dip = 5
+				mil = 4
+			}
+		}
+		create_subject = { 
+			who = AB2
+			subject_type = fief
+		}
+		add_historical_friend = AB2
+	}
+	option = { 
+		name = aetas_cas.23.b #no thx
+	}
+}
+#On the Conversion of the Moors
+country_event = {
+	id = aetas_cas.24
+	title = aetas_cas.24.t
+	desc = aetas_cas.24.d
+	picture = POPE_PREACHING_eventPicture
+
+	fire_only_once = yes 
+	
+	trigger = {
+		OR = {
+			has_country_flag = fate_of_granada_mission_flag
+			AND = {
+				NOT = { has_dlc = "Golden Century" }
+				OR = {
+					AND = {
+						tag = CAS
+						NOT = { exists = SPA }
+						NOT = { exists = SPN }
+					}
+					tag = SPA
+					tag = SPN
+				}
+				has_country_flag = alpujarras_revolt_happened
+				NOT = { has_country_flag = end_of_granada }
+				NOT = { exists = GRA }
+				owns = 223 #Granada
+				NOT = {
+					any_owned_province = {
+						culture = andalusi
+						controlled_by = REB
+					}
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = { 
+		days = 120
+	}
+
+	option = { 
+		name = aetas_cas.24.a #conversion or expulsion
+		every_owned_province = { 
+			limit = { 
+				religion = sunni 
+				region = iberia_region
+			}
+			change_religion = catholic 
+			if = { 
+				limit = { culture = andalusi }
+				change_culture = morisco 
+			}
+			if = { 
+				limit = { has_province_modifier = treaty_of_granada }
+				remove_province_modifier = treaty_of_granada
+			}
+			if = { 
+				limit = { base_tax = 2 }
+				add_base_tax = -1
+			}
+			if = { 
+				limit = { base_production = 2 }
+				add_base_production = -1
+			}
+			if = { 
+				limit = { base_manpower = 2 }
+				add_base_manpower = -1
+			}
+			add_province_modifier = {
+				name = forced_conversion
+				duration = 3650
+			}
+		}
+		random_country = {
+			limit = {
+				religion_group = muslim
+				any_owned_province = {
+					sea_zone = {
+						any_neighbor_province = {
+							owned_by = ROOT
+						}
+					}
+				}
+			}
+			country_event = {  id = flavor_spa.3151 days = 10 tooltip = "flavor_spa.EVTTOOLTIP3150" }
+		}
+		set_country_flag = torquemada_expelled
+		add_reform_desire = 0.02
+	}
+	option = { 
+		name = aetas_cas.24.b 
+		ai_chance = { factor = 0 }
+		if = {
+			limit = { NOT = { stability = 3 } }
+			add_stability_or_adm_power = yes
+		}
+		add_papal_influence = -25
+		if = {
+			limit = { stability = 3 }
+			every_owned_province = {
+				limit = {
+					culture = andalusi
+				}
+				add_unrest = -2
+			}
+		}
+	}
+}
+#fate of the moriscos
+country_event = {
+	id = aetas_cas.25
+	title = aetas_cas.25.t
+	desc = aetas_cas.25.d
+	picture = RELIGIOUS_TURMOIL_eventPicture
+
+	fire_only_once = yes 
+	major = yes
+
+	trigger = { 
+		is_year = 1590
+		OR = { 
+			tag = CAS 
+			was_tag = CAS 
+			tag = SPA 
+			was_tag = SPA 
+		}
+		any_owned_province = { 
+			region = iberia_region 
+			OR = { 
+				culture = morisco
+				culture = mudejar
+			}
+		}
+		religion = catholic 
+	}
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	option = { 
+		name = aetas_cas.25.a #expel them. now.
+		custom_tooltip = cas_moriscos.tt
+		add_stability = -1
+		hidden_effect = { 
+			every_owned_province = { 
+				limit = { 
+					OR = { 
+						province_id = 226
+						province_id = 3378
+						province_id = 3379
+						province_id = 4546
+						province_id = 223
+						province_id = 3377
+						province_id = 3376
+						province_id = 222
+					}
+					OR = { 
+						culture = mudejar
+						culture = morisco
+					}
+				}
+				change_culture = andalucian
+				if = { 
+					limit = { base_tax = 2 }
+					add_base_tax = -1
+				}
+				if = { 
+					limit = { base_production = 2 }
+					add_base_production = -1
+				}
+				if = { 
+					limit = { base_manpower = 2 }
+					add_base_manpower = -1
+				}
+			}
+			every_owned_province = { 
+				limit = { 
+					OR = { 
+						province_id = 3374
+						province_id = 3375
+						province_id = 5757
+					}
+					OR = { 
+						culture = mudejar
+						culture = morisco
+					}
+				}
+				change_culture = murcian
+				if = { 
+					limit = { base_tax = 2 }
+					add_base_tax = -1
+				}
+				if = { 
+					limit = { base_production = 2 }
+					add_base_production = -1
+				}
+				if = { 
+					limit = { base_manpower = 2 }
+					add_base_manpower = -1
+				}
+			}
+			every_owned_province = { 
+				limit = { 
+					area = valencia_area
+					OR = { 
+						culture = mudejar
+						culture = morisco
+					}
+				}
+				change_culture = catalan 
+				if = { 
+					limit = { base_tax = 2 }
+					add_base_tax = -1
+				}
+				if = { 
+					limit = { base_production = 2 }
+					add_base_production = -1
+				}
+				if = { 
+					limit = { base_manpower = 2 }
+					add_base_manpower = -1
+				}
+			}
+			every_owned_province = { 
+				limit = { 
+					area = aragon_area
+					OR = { 
+						culture = mudejar
+						culture = morisco
+					}
+				}
+				change_culture = aragonese 
+				if = { 
+					limit = { base_tax = 2 }
+					add_base_tax = -1
+				}
+				if = { 
+					limit = { base_production = 2 }
+					add_base_production = -1
+				}
+				if = { 
+					limit = { base_manpower = 2 }
+					add_base_manpower = -1
+				}
+			}
+			every_owned_province = { 
+				limit = {
+					OR = { 
+						area = leon_area
+						area = castille_area
+						area = toledo_area
+					}
+					OR = { 
+						culture = morisco
+						culture = mudejar
+					}
+				}
+				change_culture = castillian
+				if = { 
+					limit = { base_tax = 2 }
+					add_base_tax = -1
+				}
+				if = { 
+					limit = { base_production = 2 }
+					add_base_production = -1
+				}
+				if = { 
+					limit = { base_manpower = 2 }
+					add_base_manpower = -1
+				}
+			}
+		}
+		granada_area = { 
+			limit = { owned_by = ROOT }
+			add_province_modifier = { 
+				name = cas_economic_disaster
+				duration = 36500
+			}
+		}
+		valencia_area = { 
+			limit = { owned_by = ROOT }
+			add_province_modifier = { 
+				name = cas_economic_disaster
+				duration = 36500
+			}
+		}
+	}
+	option = { 
+		name = aetas_cas.25.b #no!
+		ai_chance = { factor = 0 }
+		add_stability = -3
+		add_papal_influence = -25
+	}
+}
+#University of Alcalá
+country_event = {
+	id = aetas_cas.26
+	title = aetas_cas.26.t
+	desc = aetas_cas.26.d
+	picture = RELIGIOUS_TURMOIL_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_cas.26.a  #cool!
+		4948 = { 
+			add_building = university
+			add_province_modifier = { 
+				name = alcala_university_mod
+				duration = -1
+			}
+		}
+	}
+}
+#hermandad de las  marismas
+country_event = {
+	id = aetas_cas.27
+	title = aetas_cas.27.t
+	desc = aetas_cas.27.d
+	picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_cas.27.a
+		1745 = { 
+			add_permanent_province_modifier = { 
+				name = hdlm
+				duration = -1
+			}
+		}
+		4962 = { 
+			add_permanent_province_modifier = { 
+				name = hdlm
+				duration = -1
+			}
+		}
+		4960 = { 
+			add_permanent_province_modifier = { 
+				name = hdlm
+				duration = -1
+			}
+		}
+		4961 = { 
+			add_permanent_province_modifier = { 
+				name = hdlm
+				duration = -1
+			}
+		}
+	}
+}

@@ -1,0 +1,39 @@
+#6551 - Avilés
+#Area - Asturias-Cantabria
+#Region - Iberia
+
+#Core Details
+capital = "Avilés"
+is_city = yes
+owner = CAS
+controller = CAS
+
+#Demographics
+culture = asturian
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 1
+base_manpower = 2
+trade_goods = salt   #salt production and export
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = CAS
+add_core = ASU
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+center_of_trade = 1
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

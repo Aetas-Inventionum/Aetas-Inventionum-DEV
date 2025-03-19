@@ -1,0 +1,37 @@
+#5012 - Courtrai
+#Area - Flanders
+#Region - France
+
+#Core Details
+capital = "Courtrai"
+is_city = yes
+owner = FLA
+controller = FLA
+
+#Demographics
+culture = flemish
+religion = catholic
+
+#Development and Trade
+base_tax = 3
+base_production = 3
+base_manpower = 3
+trade_goods = glass
+
+#Cores and Occupation (Alphabetical after current)
+add_core = FLA
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

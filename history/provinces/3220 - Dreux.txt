@@ -1,0 +1,38 @@
+#3220 - Dreux
+#Area - Orléanais
+#Region - France
+
+#Core Details
+capital = "Dreux"
+is_city = yes
+owner = ABT 
+controller = ABT 
+
+#Demographics
+culture = cosmopolitan_french
+religion = catholic
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 2
+trade_goods = cloth
+
+#Cores and Occupation (Alphabetical after current)
+add_core = ABT
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+add_local_autonomy = 25 #Count of Dreux
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

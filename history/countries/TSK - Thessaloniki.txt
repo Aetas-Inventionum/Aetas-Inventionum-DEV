@@ -1,0 +1,18 @@
+government = monarchy
+add_government_reform = appanage_reform
+government_rank = 1
+technology_group = eastern
+primary_culture = greek
+religion = orthodox
+capital = 148
+
+1408.1.1 = {
+	monarch = {
+		name = "Andrónikos II"
+		dynasty = "Palaiológos"
+		birth_date = 1400.1.1
+		adm = 2
+		dip = 3
+		mil = 1
+	}
+}

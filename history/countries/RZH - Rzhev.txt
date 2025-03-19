@@ -1,0 +1,9 @@
+government = monarchy
+add_government_reform = principality
+government_rank = 1
+primary_culture = russian
+add_accepted_culture = novgorodian
+religion = orthodox
+technology_group = eastern
+capital = 1752 # Rzhev
+fixed_capital = 1752 # Cannot move capital away from this province & no power cost to move to it

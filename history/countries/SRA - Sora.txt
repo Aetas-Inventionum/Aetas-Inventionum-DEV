@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = appanage_reform
+government_rank = 1
+technology_group = western
+primary_culture = neapolitan
+religion = catholic
+capital = 5110 #sora
+fixed_capital = 5110
+
+1399.1.1 = { 
+	monarch = { 
+		name = "Nicolò I"
+		dynasty = "Cantelmo"
+		birth_date = 1380.1.1 #approx?
+		adm = 2
+		dip = 4
+		mil = 2
+	}
+}

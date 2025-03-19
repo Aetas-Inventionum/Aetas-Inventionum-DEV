@@ -1,0 +1,18 @@
+government = tribal
+government_rank = 1
+add_government_reform = tribal_federation
+technology_group = sub_saharan
+religion = sunni
+primary_culture = tuareg
+capital = 6102	# Tazirbu
+religious_school = maliki_school
+
+1444.1.1 = { #generated
+	monarch = {
+		name = "Oueddei"
+		dynasty = "Toubou"
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}

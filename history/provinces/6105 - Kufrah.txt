@@ -1,0 +1,35 @@
+#6105 - Kufrah
+#Area - Kufrah
+#Region - Egypt
+
+#Core Details
+capital = "Kufrah"
+is_city = yes
+owner = TOO
+controller = TOO
+
+#Demographics
+culture = tebu
+religion = sunni
+
+#Development and Trade
+base_tax = 1
+base_production = 2
+base_manpower = 1
+trade_goods = ivory
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = TOO
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+center_of_trade = 1
+
+#Discoveries
+discovered_by = sub_saharan
+
+#Histories

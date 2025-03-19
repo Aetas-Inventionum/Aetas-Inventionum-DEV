@@ -1,0 +1,2133 @@
+tyr_ire_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		primary_culture = irish
+		OR = {
+			tag = TYR
+			was_tag = TYR
+		}
+	}
+
+	tyr_special = {
+		icon = mission_renaissance_fra
+		position = 1
+		provinces_to_highlight = {
+			province_id = 4121
+			NOT = {
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					owner = {
+						AND = {
+							tag = CLN
+							has_opinion = {
+								who = ROOT
+								value = 125
+							}
+							alliance_with = ROOT
+						}
+					}
+				}
+			}
+		}
+
+		trigger = {
+			OR = {
+				4121 = { country_or_non_sovereign_subject_holds = ROOT } 
+				AND = {
+					4121 = { is_capital_of = CLN } 
+					CLN = {
+						NOT = { num_of_cities = 3 } 
+						alliance_with = ROOT
+						has_opinion = {
+							who = ROOT
+							value = 125
+						}
+					}
+				}
+			}
+		}
+
+		effect = {
+			custom_tooltip = if_cln.tt
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							AND = {
+								CLN = { ai = no } 
+								4121 = { country_or_non_sovereign_subject_holds = ROOT } 
+							}
+						}
+					}
+					country_event = { id = aetas_ire.2 } 
+				}
+			}
+			custom_tooltip = regardless.tt
+			add_country_modifier = {
+				name = "oneills_united"
+				duration = -1
+			}
+		}
+	}
+
+	tyr_special2 = {
+		icon = mission_umbria
+		position = 2
+		required_missions = {
+			tyr_special
+			ire_clan_seat
+		}
+		provinces_to_highlight = {
+			province_id = 372
+			NOT = {
+				AND = {
+					is_capital_of = ROOT
+					num_of_times_improved = 10
+					has_tax_building_trigger = yes
+					has_production_building_trigger = yes
+					has_trade_building_trigger = yes
+				}
+			}
+		}
+
+		trigger = {
+			372 = {
+				is_capital_of = ROOT
+				num_of_times_improved = 10
+				has_tax_building_trigger = yes
+				has_production_building_trigger = yes
+				has_trade_building_trigger = yes
+			}
+		}
+
+		effect = {
+			372 = {
+				change_trade_goods = cloth
+				center_of_trade = 1
+				add_province_modifier = {
+					name = "dunngannon_mod"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+cnn_ire_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		primary_culture = irish
+		OR = {
+			tag = CNN
+			was_tag = CNN
+		}
+	}
+
+	cnn_merchants = {
+		icon = mission_african_gold
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 60
+			}
+			mercantilism = 20
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "cnn_merchants_mod" #missing loc
+				duration = 7300
+			}
+		}
+	}
+
+	cnn_special = {
+		icon = purely_for_commerce
+		position = 2
+		required_missions = {
+			ire_clan_seat
+			cnn_merchants
+		}
+		provinces_to_highlight = {
+			province_id = 5171
+			NOT = {
+				AND = {
+					num_of_times_improved = 10
+					has_trade_building_trigger = yes
+				}
+			}
+		}
+
+		trigger = {
+			5171 = {
+				num_of_times_improved = 10
+				has_trade_building_trigger = yes
+				has_tax_building_trigger = yes
+			}
+		}
+
+		effect = {
+			5171 = {
+				add_province_modifier = {
+					name = "tribes_galway3"
+					duration = -1
+				}
+			}
+			unlock_government_reform = { government_reform = galway_tribes_reform } 
+		}
+	}
+}
+sln_ire_branch = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		primary_culture = irish
+		OR = {
+			tag = SLN
+			was_tag = SLN
+		}
+	}
+
+	sln_special = {
+		icon = invest_in_the_rich_trades
+		position = 2
+		required_missions = { cnn_merchants } 
+		provinces_to_highlight = {
+			province_id = 4119
+			NOT = {
+				AND = {
+					num_of_times_improved = 10
+					has_trade_building_trigger = yes
+				}
+			}
+		}
+
+		trigger = {
+			4119 = {
+				num_of_times_improved = 10
+				has_trade_building_trigger = yes
+				has_tax_building_trigger = yes
+			}
+		}
+
+		effect = {
+			4119 = {
+				add_province_modifier = {
+					name = "sln_port" #missing loc
+					duration = -1
+				}
+			}
+			unlock_government_reform = { government_reform = sligo_reform } 
+		}
+	}
+}
+lei_ire_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		primary_culture = irish
+		OR = {
+			tag = LEI
+			was_tag = LEI
+		}
+	}
+
+	lei_special1 = {
+		icon = mission_subjugate_the_merchants
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = { has_reform = clans_laigin_reform } 
+
+		effect = {
+			add_country_modifier = {
+				name = "lei_prep_for_war"
+				duration = 7300
+			}
+		}
+	}
+
+	lei_special = {
+		icon = protect_against_austria
+		position = 2
+		required_missions = { lei_special1 } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4377
+				province_id = 4120
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			OR = {
+				any_war_enemy_country = {
+					OR = {
+						tag = ENG
+						was_tag = ENG
+						tag = KID
+						tag = ORD
+					}
+				}
+				AND = {
+					4377 = { country_or_non_sovereign_subject_holds = ROOT } 
+					4120 = { country_or_non_sovereign_subject_holds = ROOT } 
+				}
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "lei_kings"
+				duration = -1
+			}
+		}
+	}
+}
+mcm_ire_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MCM } 
+
+	mcm_dms = {
+		icon = mission_kaffa
+		position = 1
+		provinces_to_highlight = {
+			OR = {
+				province_id = 5176
+				province_id = 5178
+				province_id = 5177
+			}
+			NOT = { owned_by = ROOT } 
+		}
+
+		trigger = {
+			owns_core_province = 5176
+			owns_core_province = 5178
+			owns_core_province = 5177
+			NOT = { exists = DMS } 
+		}
+
+		effect = {
+			override_country_name = "DESMOND" #missing loc
+			add_prestige = 15
+		}
+	}
+
+	mcm_capital = {
+		icon = mission_pol_breadbasket_europe
+		position = 2
+		required_missions = {
+			mcm_dms
+			ire_clan_seat
+		}
+		provinces_to_highlight = {
+			province_id = 5177
+			NOT = {
+				AND = {
+					is_capital = yes
+					is_capital_of = ROOT
+					num_of_times_improved = 10
+					culture = ROOT
+				}
+			}
+		}
+
+		trigger = {
+			5177 = {
+				is_capital = yes
+				is_capital_of = ROOT
+				num_of_times_improved = 10
+				culture = ROOT
+			}
+		}
+
+		effect = {
+			5177 = {
+				rename_capital = "Caiseal"
+				change_province_name = "Caiseal"
+				custom_tooltip = mcm_royal_site.tt
+				add_province_triggered_modifier = caiseal #missing loc
+			}
+			country_event = { id = aetas_ire.1 } 
+		}
+	}
+}
+try_ire_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = TRY } 
+
+	mobilize_gallowglass = {
+		icon = mission_rb_unite_the_clans
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			mil_power = 400
+			capital_scope = {
+				culture = norse_gael
+				has_manpower_building_trigger = yes
+			}
+		}
+
+		effect = { custom_tooltip = unlock_gallowglass_reform_tt } 
+	}
+
+	try_special2 = {
+		icon = mission_extent_yasak_to_the_east
+		position = 2
+		required_missions = {
+			mobilize_gallowglass
+			ire_clan_seat
+		}
+		provinces_to_highlight = {
+			province_id = 4380
+			NOT = {
+				AND = {
+					is_capital_of = ROOT
+					num_of_times_improved = 10
+					has_tax_building_trigger = yes
+				}
+			}
+		}
+
+		trigger = {
+			4380 = {
+				is_capital_of = ROOT
+				num_of_times_improved = 10
+				has_tax_building_trigger = yes
+			}
+		}
+
+		effect = {
+			custom_tooltip = try_royal_site.tt
+			4380 = { add_province_triggered_modifier = kilmacrennan } 
+			country_event = { id = aetas_ire.1 } 
+		}
+	}
+}
+mns_ire_branch = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MNS } 
+
+	mns_shannon = {
+		icon = mission_advance_to_the_dnieper
+		position = 1
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4118
+				province_id = 5173
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			owns_core_province = 4118
+			owns_core_province = 5173
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "mns_mod"
+				duration = 7300
+			}
+		}
+	}
+
+	mns_limerick = {
+		icon = mission_seize_north_sea_trade
+		position = 2
+		required_missions = {
+			mns_shannon
+			ire_clan_seat
+		}
+		provinces_to_highlight = {
+			province_id = 4118
+			NOT = {
+				AND = {
+					owned_by = ROOT
+					is_core = ROOT
+					num_of_times_improved = 10
+					has_trade_building_trigger = yes
+				}
+			}
+		}
+
+		trigger = {
+			4118 = {
+				owned_by = ROOT
+				is_core = ROOT
+				num_of_times_improved = 10
+				has_trade_building_trigger = yes
+			}
+		}
+
+		effect = {
+			4118 = {
+				center_of_trade = 1
+				add_province_modifier = {
+					name = "mns_lim"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+gen_ire_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = no
+	potential = { primary_culture = irish } 
+
+	ai_ire_uls = {
+		icon = mission_rb_conquer_ulster
+		position = 3
+		required_missions = { ire_prov_king } 
+		provinces_to_highlight = {
+			area = ulster_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			owns_core_province = 372
+			ulster_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "wisdom_oneill"
+				duration = 7300
+			}
+		}
+	}
+}
+gen_ire_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = no
+	potential = { primary_culture = irish } 
+
+	ire_clan_seat = {
+		icon = mission_ballycarbery
+		position = 1
+		provinces_to_highlight = { is_capital_of = ROOT } 
+
+		trigger = { capital_scope = { num_of_times_improved = 5 }  } 
+
+		effect = {
+			capital_scope = {
+				add_province_modifier = {
+					name = "irish_seat"
+					duration = -1
+				}
+			}
+		}
+	}
+
+	ire_prov_king = {
+		icon = mission_restore_faith_in_the_throne
+		position = 2
+		required_missions = {
+			ire_clan_seat
+			gaelic_resurgence
+		}
+		provinces_to_highlight = {
+			#capital_scope = { area = ROOT } 
+			OR = {
+				area = ulster_area
+				area = leinster_area
+				area = connacht_area
+				area = munster_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			if = {
+				limit = {
+					OR = {
+						tag = TRY
+						tag = MGH
+						tag = ANR
+						tag = CLN
+						tag = TYR
+					}
+				}
+				AND = {
+					owns_core_province = 372
+					ulster_area = {
+						country_or_non_sovereign_subject_holds = ROOT
+						type = all
+					}
+				}
+			}
+			else_if = {
+				limit = { tag = LEI } 
+				owns_core_province = 5174
+				5120 = { country_or_non_sovereign_subject_holds = ROOT } 
+			}
+			else_if = {
+				limit = {
+					OR = {
+						tag = ECO
+						tag = WCO
+						tag = MYO
+						tag = CNN
+						tag = HYM
+						tag = BIF
+					}
+				}
+				AND = {
+					owns_core_province = 5169
+					connacht_area = {
+						country_or_non_sovereign_subject_holds = ROOT
+						type = all
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						tag = MCM
+						tag = MNS
+					}
+				}
+				AND = {
+					owns_core_province = 5181
+					munster_area = {
+						country_or_non_sovereign_subject_holds = ROOT
+						type = all
+					}
+				}
+			}
+			else_if = {
+				limit = { tag = FLY } 
+				owns_core_province = 5168
+				owns_core_province = 5167
+				owns_core_province = 5163
+			}
+		}
+
+		effect = {
+			if = {
+				limit = { NOT = { tag = LEI }  } 
+				country_event = { id = aetas_ire.7 } 
+			}
+			if = {
+				limit = {
+					OR = {
+						tag = TRY
+						tag = MGH
+						tag = ANR
+						tag = CLN
+						tag = TYR
+					}
+				}
+				complete_mission = ai_ire_uls
+			}
+			else_if = {
+				limit = {
+					OR = {
+						tag = ECO
+						tag = WCO
+						tag = MYO
+						tag = CNN
+						tag = HYM
+						tag = BIF
+					}
+				}
+				complete_mission = ai_ire_cnn
+			}
+			else_if = {
+				limit = {
+					OR = {
+						tag = MCM
+						tag = MNS
+					}
+				}
+				complete_mission = ai_ire_mcm
+			}
+			else = {
+				add_prestige = 15
+				add_country_modifier = { name = "growing_ambition_lei" duration = 3650 } #was no duration
+			}
+		}
+	}
+
+	ai_ire_cnn = {
+		icon = mission_rb_conquer_connacth
+		position = 3
+		required_missions = { ire_prov_king } 
+		provinces_to_highlight = {
+			area = connacht_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			owns_core_province = 5169
+			connacht_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "wisdom_cnn"
+				duration = 7300
+			}
+		}
+	}
+}
+gen_ire_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = no
+	potential = { primary_culture = irish } 
+
+	gaelic_resurgence = {
+		icon = mission_rb_control_electors
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			stability = 1
+			army_size_percentage = 1
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "gr_mod"
+				duration = 18250
+			}
+			if = {
+				limit = { capital_scope = { area = ulster_area }  } 
+				ulster_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			else_if = {
+				limit = { capital_scope = { area = leinster_area }  } 
+				leinster_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			else_if = {
+				limit = { capital_scope = { area = connacht_area }  } 
+				connacht_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			else_if = {
+				limit = { capital_scope = { area = munster_area }  } 
+				munster_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+
+	ire_kells = {
+		icon = mission_kells
+		position = 2
+		required_missions = { gaelic_resurgence } 
+		provinces_to_highlight = { has_province_modifier = book_of_kells } 
+
+		trigger = { any_owned_province = { has_province_modifier = book_of_kells }  } 
+
+		effect = { add_prestige = 15 } 
+	}
+
+	ai_ire_lei = {
+		icon = mission_rb_conquer_leinster
+		position = 3
+		required_missions = { ire_prov_king } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 374
+				province_id = 5174
+				province_id = 4120
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			owns_core_province = 374
+			5174 = { country_or_non_sovereign_subject_holds = ROOT } 
+			4120 = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "wisdom_laighin"
+				duration = 7300
+			}
+		}
+	}
+
+	mcm_unite_ire = {
+		icon = mission_high_king_ire
+		position = 4
+		required_missions = {
+			ai_ire_uls
+			ai_ire_cnn
+			ai_ire_lei
+			ai_ire_mcm
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = munster_area
+				area = leinster_area
+				area = connacht_area
+				area = ulster_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = { 
+			ulster_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all
+			}
+			leinster_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all
+			}
+			connacht_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all
+			}
+			munster_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all
+			}
+		} 
+
+		effect = {
+			add_country_modifier = { 
+				name = high_kings_ire
+				duration = -1
+			}
+		}
+	}
+}
+gen_ire_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = no
+	potential = { primary_culture = irish } 
+
+	ire_monks = {
+		icon = reform_the_nomocanon
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			any_owned_province = {
+				OR = {
+					holy_order = benedictines
+					holy_order = franciscan_order
+					holy_order = dominican_order
+					holy_order = carmelites
+					holy_order = augustinians
+				}
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "monasticism_ire"
+				duration = -1
+			}
+		}
+	}
+
+	ire_catholic = {
+		icon = show_piety
+		position = 2
+		required_missions = {
+			ire_dip
+			ire_monks
+		}
+		provinces_to_highlight = { is_capital_of = PAP } 
+
+		trigger = {
+			PAP = {
+				has_opinion = {
+					who = ROOT
+					value = 175
+				}
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "pap_ire_legate"
+				duration = -1
+			}
+		}
+	}
+
+	ai_ire_mcm = {
+		icon = mission_rb_conquer_munster
+		position = 3
+		required_missions = { ire_prov_king } 
+		provinces_to_highlight = {
+			area = munster_area
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+
+		trigger = {
+			owns_core_province = 5181
+			munster_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "wisdom_mcm"
+				duration = 7300
+			}
+		}
+	}
+}
+gen_ire_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = no
+	potential = { primary_culture = irish } 
+
+	ire_dip = {
+		icon = feast_of_pheasants
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			any_ally = {
+				OR = {
+					culture_group = french
+					culture_group = iberian
+					primary_culture = catalan
+					is_great_power = yes
+				}
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "irish_alliances"
+				duration = 7300
+			}
+		}
+	}
+}
+tyr_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = TYR } 
+
+	tyr_geraldine_league = {
+		icon = contracts_of_correspondence
+		position = 2
+		required_missions = { ire_dip } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			calc_true_if = {
+				all_ally = {
+					capital_scope = { NOT = { region = british_isles_region }  } 
+					marriage_with = ROOT
+				}
+				amount = 4
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "tyr_mission"
+				duration = -1
+			}
+		}
+	}
+}
+gen_ire_branch_5b = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = no
+	potential = { primary_culture = irish } 
+
+	ire_pale = {
+		icon = mission_rb_beyond_the_pale
+		position = 3
+		required_missions = { ire_prov_king } 
+		provinces_to_highlight = {
+			OR = {
+				area = leinster_area
+				area = munster_area
+				area = ulster_area
+				area = connacht_area
+			}
+			owner = { primary_culture = english } 
+		}
+
+		trigger = {
+			373 = { country_or_non_sovereign_subject_holds = ROOT } 
+			5168 = { country_or_non_sovereign_subject_holds = ROOT } 
+			NOT = {
+				any_province = {
+					OR = {
+						area = leinster_area
+						area = munster_area
+						area = ulster_area
+						area = connacht_area
+					}
+					owner = { primary_culture = english } 
+				}
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "vic_over_eng"
+				duration = -1
+			}
+			5168 = { change_culture = irish } 
+			tooltip = {
+				random_owned_province = {
+					limit = {
+						NOT = { province_id = 5168 } 
+						culture = hiberno_norman
+					}
+					change_culture = irish
+				}
+			}
+			hidden_effect = {
+				random_owned_province = {
+					limit = {
+						NOT = { province_id = 5168 } 
+						culture = hiberno_norman
+					}
+					change_culture = irish
+				}
+			}
+		}
+	}
+}
+ire_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = IRE } 
+
+	ire_belfast = {
+		icon = mission_perth
+		position = 4
+		required_missions = { ai_ire_uls } 
+		provinces_to_highlight = {
+			province_id = 4121
+			NOT = {
+				AND = {
+					country_or_non_sovereign_subject_holds = ROOT
+					num_of_times_improved = 10
+					has_manufactory_trigger = yes
+				}
+			}
+		}
+
+		trigger = {
+			4121 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				num_of_times_improved = 10
+				has_manufactory_trigger = yes
+			}
+		}
+
+		effect = {
+			4121 = {
+				rename_capital = "Béal Feirste"
+				change_trade_goods = cloth
+				add_province_modifier = {
+					name = "ire_beal_feirste"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+ire_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = IRE } 
+
+	ire_ports_cnn = {
+		icon = mission_bra_kapelle
+		position = 4
+		required_missions = { ai_ire_cnn } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 5171
+				province_id = 4119
+			}
+			NOT = {
+				AND = {
+					num_of_times_improved = 10
+					has_tax_building_trigger = yes
+					has_production_building_trigger = yes
+					has_trade_building_trigger = yes
+				}
+			}
+		}
+
+		trigger = {
+			OR = {
+				5171 = {
+					num_of_times_improved = 10
+					has_tax_building_trigger = yes
+					has_production_building_trigger = yes
+					has_trade_building_trigger = yes
+				}
+				4119 = {
+					num_of_times_improved = 10
+					has_tax_building_trigger = yes
+					has_production_building_trigger = yes
+					has_trade_building_trigger = yes
+				}
+			}
+		}
+
+		effect = {
+			custom_tooltip = ire_port.tt
+			hidden_effect = {
+				if = {
+					limit = {
+						AND = {
+							5171 = {
+								num_of_times_improved = 10
+								has_tax_building_trigger = yes
+								has_production_building_trigger = yes
+								has_trade_building_trigger = yes
+							}
+							4119 = {
+								num_of_times_improved = 10
+								has_tax_building_trigger = yes
+								has_production_building_trigger = yes
+								has_trade_building_trigger = yes
+							}
+						}
+					}
+					5171 = {
+						add_province_modifier = {
+							name = "ire_galway_mod" #missing loc
+							duration = -1
+						}
+					}
+					4119 = {
+						add_province_modifier = {
+							name = "ire_sligo_mod" #missing loc
+							duration = -1
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						4119 = {
+							num_of_times_improved = 10
+							has_tax_building_trigger = yes
+							has_production_building_trigger = yes
+							has_trade_building_trigger = yes
+						}
+					}
+					4119 = {
+						add_province_modifier = {
+							name = "ire_sligo_mod" #missing loc
+							duration = -1
+						}
+					}
+				}
+				else = {
+					5171 = {
+						add_province_modifier = {
+							name = "ire_galway_mod" #missing loc
+							duration = -1
+						}
+					}
+				}
+			}
+		}
+	}
+}
+ire_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = IRE } 
+
+	ire_cities = {
+		icon = mission_rb_the_bank_of_scotland
+		position = 5
+		required_missions = {
+			ire_belfast
+			ire_ports_cnn
+			ire_old_eng
+			ire_dublin
+		}
+		provinces_to_highlight = {
+			owned_by = ROOT
+			is_core = ROOT
+			NOT = { development = 35 } 
+		}
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				OR = {
+					area = ulster_area
+					area = leinster_area
+					area = connacht_area
+					area = munster_area
+				}
+				development = 35
+				has_manufactory_trigger = yes
+				value = 4
+			}
+		}
+
+		effect = {
+			custom_tooltip = ire_cities.tt
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = ulster_area
+							area = leinster_area
+							area = connacht_area
+							area = munster_area
+						}
+						development = 35
+						has_manufactory_trigger = yes
+					}
+					add_province_modifier = {
+						name = "ire_city"
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+}
+ire_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = IRE } 
+
+	ire_old_eng = {
+		icon = mission_rb_monopolize_the_channel
+		position = 4
+		required_missions = {
+			ai_ire_mcm
+			ire_pale
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 5178
+				province_id = 5175
+				province_id = 5174
+			}
+		}
+
+		trigger = {
+			5178 = {
+				has_owner_accepted_culture = yes
+				num_of_times_improved = 7
+				has_trade_building_trigger = yes
+				has_tax_building_trigger = yes
+				has_production_building_trigger = yes
+			}
+			5175 = {
+				has_owner_accepted_culture = yes
+				num_of_times_improved = 7
+				has_trade_building_trigger = yes
+				has_tax_building_trigger = yes
+				has_production_building_trigger = yes
+			}
+			5174 = {
+				has_owner_accepted_culture = yes
+				num_of_times_improved = 7
+				has_trade_building_trigger = yes
+				has_tax_building_trigger = yes
+				has_production_building_trigger = yes
+			}
+		}
+
+		effect = {
+			5174 = {
+				change_culture = ROOT
+				if = {
+					limit = { NOT = { province_has_center_of_trade_of_level = 1 }  } 
+					center_of_trade = 1
+				}
+				else = { add_center_of_trade_level = 1 } 
+				add_province_modifier = {
+					name = "irish_charter_grant"
+					duration = -1
+				}
+			}
+			5175 = {
+				change_culture = ROOT
+				if = {
+					limit = { NOT = { province_has_center_of_trade_of_level = 1 }  } 
+					center_of_trade = 1
+				}
+				else = { add_center_of_trade_level = 1 } 
+				add_province_modifier = {
+					name = "irish_charter_grant"
+					duration = -1
+				}
+			}
+			5178 = {
+				change_culture = ROOT
+				if = {
+					limit = { NOT = { province_has_center_of_trade_of_level = 1 }  } 
+					center_of_trade = 1
+				}
+				else = { add_center_of_trade_level = 1 } 
+				add_province_modifier = {
+					name = "irish_charter_grant"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+ire_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = IRE } 
+
+	ire_dublin = {
+		icon = mission_rb_trinity_college_dublin
+		position = 4
+		required_missions = { ire_pale } 
+		provinces_to_highlight = {
+			province_id = 373
+			NOT = {
+				AND = {
+					has_owner_accepted_culture = yes
+					development = 25
+					has_tax_building_trigger = yes
+					has_trade_building_trigger = yes
+					has_production_building_trigger = yes
+				}
+			}
+		}
+
+		trigger = {
+			373 = {
+				has_owner_accepted_culture = yes
+				development = 25
+				has_tax_building_trigger = yes
+				has_trade_building_trigger = yes
+				has_production_building_trigger = yes
+			}
+		}
+
+		effect = {
+			373 = {
+				if = {
+					limit = { NOT = { culture = ROOT }  } 
+					change_culture = ROOT
+				}
+				add_province_modifier = {
+					name = "ire_dublin_mod"
+					duration = -1
+				}
+			}
+		}
+	}
+
+	ire_capital = {
+		icon = mission_empire
+		position = 5
+		required_missions = { ire_dublin } 
+		provinces_to_highlight = {
+			OR = {
+				is_capital_of = ROOT
+				province_id = 5168
+				province_id = 373
+				province_id = 4377
+			}
+		}
+
+		trigger = {
+			capital_scope = {
+				has_owner_accepted_culture = yes
+				num_of_times_improved = 5
+				has_tax_building_trigger = yes
+			}
+			5168 = {
+				has_owner_accepted_culture = yes
+				num_of_times_improved = 5
+				has_tax_building_trigger = yes
+			}
+			373 = {
+				has_owner_accepted_culture = yes
+				num_of_times_improved = 5
+				has_tax_building_trigger = yes
+			}
+			4377 = {
+				has_owner_accepted_culture = yes
+				num_of_times_improved = 5
+				has_tax_building_trigger = yes
+			}
+		}
+
+		effect = { country_event = { id = aetas_ire.8 }  } 
+	}
+}
+ire_colonial_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = IRE } 
+
+	ire_brasil = {
+		icon = mission_caribbean_cn
+		position = 6
+		required_missions = { ire_explorers } 
+		provinces_to_highlight = {
+			colonial_region = colonial_the_carribean
+			has_discovered = ROOT
+			NOT = {
+				AND = {
+					country_or_non_sovereign_subject_holds = ROOT
+					is_city = yes
+				}
+			}
+		}
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				colonial_region = colonial_the_carribean
+				is_city = yes
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "ire_colonial"
+				duration = 7300
+			}
+		}
+	}
+
+	ire_ghuine = {
+		icon = mission_west_african_ports
+		position = 7
+		required_missions = { ire_brasil } 
+		provinces_to_highlight = {
+			region = guinea_region
+			has_port = yes
+			NOT = {
+				AND = {
+					country_or_non_sovereign_subject_holds = ROOT
+					is_city = yes
+				}
+			}
+		}
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				region = guinea_region
+				has_port = yes
+				value = 3
+			}
+		}
+
+		effect = {
+			central_swahili_coast_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	ire_zanzibar = {
+		icon = mission_colonize_the_west
+		position = 8
+		required_missions = { ire_ghuine } 
+		provinces_to_highlight = {
+			province_id = 1201
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = { owns_core_province = 1201 } 
+
+		effect = {
+			1201 = {
+				add_province_modifier = {
+					name = "irish_zanzibar"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+ire_colonial_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = IRE } 
+
+	ire_explorers = {
+		icon = mission_look_west
+		position = 5
+		required_missions = { ire_ports_cnn } 
+		provinces_to_highlight = {  } 
+
+		trigger = { num_of_explorers = 1 } 
+
+		effect = {
+			if = {
+				limit = { NOT = { is_year = 1492 }  } 
+				define_explorer = {
+					name = "Críostóir Columbus"
+					fire = 2
+					shock = 2
+					manuever = 6
+					siege = 0
+				}
+			}
+			else = { add_navy_tradition = 15 } 
+		}
+	}
+
+	ire_brendan = {
+		icon = mission_rb_colonise_canada
+		position = 6
+		required_missions = { ire_explorers } 
+		provinces_to_highlight = {
+			colonial_region = colonial_canada
+			has_discovered = ROOT
+			NOT = {
+				AND = {
+					country_or_non_sovereign_subject_holds = ROOT
+					is_city = yes
+				}
+			}
+		}
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				colonial_region = colonial_canada
+				is_city = yes
+			}
+		}
+
+		effect = {
+			every_subject_country = {
+				limit = {
+					is_colonial_nation_of = ROOT
+					capital_scope = { colonial_region = colonial_canada } 
+				}
+				capital_scope = {
+					change_province_name = "Naomh Breandán"
+					rename_capital = "Baile Naomh Breandán"
+					add_base_tax = 1
+					add_base_production = 1
+					if = {
+						limit = { NOT = { province_has_center_of_trade_of_level = 1 }  } 
+						center_of_trade = 1
+					}
+				}
+			}
+			add_country_modifier = {
+				name = "brandan_legacy"
+				duration = -1
+			}
+		}
+	}
+
+	ire_coffee = {
+		icon = mission_rb_colonise_spice_islands
+		position = 7
+		required_missions = { ire_brasil } 
+		provinces_to_highlight = {
+			colonial_region = colonial_the_carribean
+			OR = {
+				trade_goods = coffee
+				trade_goods = sugar
+				trade_goods = cotton
+				trade_goods = tobacco
+			}
+			country_or_non_sovereign_subject_holds = ROOT
+			is_city = yes
+			NOT = { has_manufactory_trigger = yes } 
+		}
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				colonial_region = colonial_the_carribean
+				OR = {
+					trade_goods = coffee
+					trade_goods = sugar
+					trade_goods = cotton
+					trade_goods = tobacco
+				}
+				has_manufactory_trigger = yes
+				value = 5
+			}
+		}
+
+		effect = {
+			custom_tooltip = irish_coffee.tt
+			hidden_effect = {
+				every_province = {
+					limit = {
+						colonial_region = colonial_the_carribean
+						OR = {
+							trade_goods = coffee
+							trade_goods = sugar
+							trade_goods = cotton
+							trade_goods = tobacco
+						}
+						has_manufactory_trigger = yes
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					add_province_triggered_modifier = irish_coffee_mod
+				}
+			}
+		}
+	}
+
+	irish_india = {
+		icon = mission_rb_control_the_hansa
+		position = 8
+		required_missions = { ire_ghuine } 
+		provinces_to_highlight = {
+			superregion = india_superregion
+			has_port = yes
+			province_has_center_of_trade_of_level = 1
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				superregion = india_superregion
+				has_port = yes
+				province_has_center_of_trade_of_level = 1
+				value = 3
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "irish_india_mod"
+				duration = -1
+			}
+		}
+	}
+}
+ire_colonial_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = IRE } 
+
+	ire_americay = {
+		icon = mission_rb_the_thirteen_colonies
+		position = 6
+		required_missions = { ire_explorers } 
+		provinces_to_highlight = {
+			colonial_region = colonial_eastern_america
+			has_discovered = ROOT
+			NOT = {
+				AND = {
+					country_or_non_sovereign_subject_holds = ROOT
+					is_city = yes
+				}
+			}
+		}
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				colonial_region = colonial_eastern_america
+				is_city = yes
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "irish_merica"
+				duration = 18250
+			}
+		}
+	}
+
+	ire_new_cork = {
+		icon = mission_develop_nevas_port
+		position = 7
+		required_missions = { ire_americay } 
+		provinces_to_highlight = {
+			province_id = 965
+			NOT = {
+				AND = {
+					is_city = yes
+					country_or_non_sovereign_subject_holds = ROOT
+					num_of_times_improved = 10
+					has_tax_building_trigger = yes
+					has_trade_building_trigger = yes
+					has_production_building_trigger = yes
+				}
+			}
+		}
+
+		trigger = {
+			965 = {
+				is_city = yes
+				country_or_non_sovereign_subject_holds = ROOT
+				num_of_times_improved = 10
+				OR = {
+					holy_order = augustinians
+					holy_order = dominican_order
+					holy_order = franciscan_order
+				}
+			}
+		}
+
+		effect = {
+			965 = {
+				random_list = {
+					1 = {
+						rename_capital = "Nua-Corcaigh Cathair"
+						change_province_name = "Nua-Corcaigh"
+					}
+					1 = {
+						rename_capital = "Nua-Duibhlinn Cathair"
+						change_province_name = "Nua-Duibhlinn"
+					}
+					1 = {
+						rename_capital = "Nua-Sligeach Cathair"
+						change_province_name = "Nua-Sligeach"
+					}
+					1 = {
+						rename_capital = "Nua-Gaillimh Cathair"
+						change_province_name = "Nua-Gaillimh"
+					}
+					1 = {
+						rename_capital = "Nua-Luimneach Cathair"
+						change_province_name = "Nua-Luimneach"
+					}
+					1 = {
+						rename_capital = "Nua-Dún na nGall Cathair"
+						change_province_name = "Nua-Dún na nGall"
+					}
+					1 = {
+						rename_capital = "Nua-Droichead Átha Cathair"
+						change_province_name = "Nua-Droichead Átha"
+					}
+				}
+				add_base_tax = 1
+				add_base_production = 1
+				if = {
+					limit = { NOT = { province_has_center_of_trade_of_level = 1 }  } 
+					center_of_trade = 1
+				}
+				else = { add_center_of_trade_level = 1 } 
+				change_trade_goods = cloth
+			}
+		}
+	}
+}
+ire_locked_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = no
+	potential = {
+		primary_culture = irish
+		NOT = {
+			OR = {
+				tag = DMS
+				tag = ANI
+				tag = IRE
+			}
+		}
+	}
+
+	ire_locked_1a = {
+		icon = mission_locked_mission
+		position = 4
+		required_missions = { ai_ire_uls } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = locked_ire.tt
+				always = no 
+			}
+		} 
+
+		effect = {  } 
+	}
+
+	ire_locked_1c = {
+		icon = mission_locked_mission
+		position = 6
+		required_missions = { ire_locked_2b } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = locked_ire.tt
+				always = no 
+			}
+		} 
+
+		effect = {  } 
+	}
+
+	ire_locked_1d = {
+		icon = mission_locked_mission
+		position = 7
+		required_missions = { ire_locked_1c } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = locked_ire.tt
+				always = no 
+			}
+		} 
+
+		effect = {  } 
+	}
+
+	ire_locked_1e = {
+		icon = mission_locked_mission
+		position = 8
+		required_missions = { ire_locked_1d } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = locked_ire.tt
+				always = no 
+			}
+		} 
+
+		effect = {  } 
+	}
+}
+ire_locked_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = no
+	potential = {
+		primary_culture = irish
+		NOT = {
+			OR = {
+				tag = DMS
+				tag = ANI
+				tag = IRE
+			}
+		}
+	}
+
+	ire_locked_2a = {
+		icon = mission_locked_mission
+		position = 4
+		required_missions = { ai_ire_cnn } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = locked_ire.tt
+				always = no 
+			}
+		} 
+
+		effect = {  } 
+	}
+
+	ire_locked_2b = {
+		icon = mission_locked_mission
+		position = 5
+		required_missions = { ire_locked_2a } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = locked_ire.tt
+				always = no 
+			}
+		} 
+
+		effect = {  } 
+	}
+
+	ire_locked_2c = {
+		icon = mission_locked_mission
+		position = 6
+		required_missions = { ire_locked_2b } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = locked_ire.tt
+				always = no 
+			}
+		} 
+
+		effect = {  } 
+	}
+
+	ire_locked_2d = {
+		icon = mission_locked_mission
+		position = 7
+		required_missions = { ire_locked_1c } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = locked_ire.tt
+				always = no 
+			}
+		} 
+
+		effect = {  } 
+	}
+
+	ire_locked_2e = {
+		icon = mission_locked_mission
+		position = 8
+		required_missions = { ire_locked_1d } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = locked_ire.tt
+				always = no 
+			}
+		} 
+
+		effect = {  } 
+	}
+}
+ire_locked_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = no
+	potential = {
+		primary_culture = irish
+		NOT = {
+			OR = {
+				tag = DMS
+				tag = ANI
+				tag = IRE
+			}
+		}
+	}
+
+	ire_locked_3b = {
+		icon = mission_locked_mission
+		position = 5
+		required_missions = {
+			ire_locked_1a
+			ire_locked_2a
+			ire_locked_4a
+			ire_locked_5a
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = locked_ire.tt
+				always = no 
+			}
+		} 
+
+		effect = {  } 
+	}
+
+	ire_locked_3c = {
+		icon = mission_locked_mission
+		position = 6
+		required_missions = { ire_locked_2b } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = locked_ire.tt
+				always = no 
+			}
+		} 
+
+		effect = {  } 
+	}
+
+	ire_locked_3d = {
+		icon = mission_locked_mission
+		position = 7
+		required_missions = { ire_locked_3c } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = locked_ire.tt
+				always = no 
+			}
+		} 
+
+		effect = {  } 
+	}
+}
+ire_locked_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = no
+	potential = {
+		primary_culture = irish
+		NOT = {
+			OR = {
+				tag = DMS
+				tag = ANI
+				tag = IRE
+			}
+		}
+	}
+
+	ire_locked_4a = {
+		icon = mission_locked_mission
+		position = 4
+		required_missions = {
+			ai_ire_mcm
+			ire_pale
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = locked_ire.tt
+				always = no 
+			}
+		} 
+
+		effect = {  } 
+	}
+}
+ire_locked_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		primary_culture = irish
+		NOT = {
+			OR = {
+				tag = DMS
+				tag = ANI
+				tag = IRE
+			}
+		}
+	}
+
+	ire_locked_5a = {
+		icon = mission_locked_mission
+		position = 4
+		required_missions = { ire_pale } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = locked_ire.tt
+				always = no 
+			}
+		} 
+
+		effect = {  } 
+	}
+
+	ire_locked_5b = {
+		icon = mission_locked_mission
+		position = 5
+		required_missions = { ire_locked_5a } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = locked_ire.tt
+				always = no 
+			}
+		} 
+
+		effect = {  } 
+	}
+}

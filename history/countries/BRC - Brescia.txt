@@ -1,0 +1,22 @@
+government = monarchy
+add_government_reform = signoria_monarchy_reform
+government_rank = 1
+primary_culture = lombard
+add_accepted_culture = umbrian
+religion = catholic
+technology_group = western
+capital = 107 # Brescia
+fixed_capital = 107 # Cannot move capital away from this province & no power cost to move to it
+
+1406.1.1 = { 
+	monarch = { 
+		name = "Pandolfo III"
+		dynasty = "Malatesta"
+		birth_date = 1370.1.1
+		culture = umbrian
+		adm = 2
+		dip = 1
+		mil = 4
+	}
+}
+

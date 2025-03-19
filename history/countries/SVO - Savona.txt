@@ -1,0 +1,22 @@
+government = republic
+add_government_reform = signoria_reform
+government_rank = 1
+technology_group = western
+primary_culture = ligurian
+religion = catholic
+capital = 5051
+fixed_capital = 5051
+
+#historical_friend = XXX
+#historical_rival = XXX
+
+
+1399.1.1 = {
+	monarch = {
+		name = "Commune di Savona"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}

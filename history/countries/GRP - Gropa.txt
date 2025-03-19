@@ -1,0 +1,18 @@
+government = monarchy
+add_government_reform = albanian_lordship_reform
+government_rank = 1
+primary_culture = albanian
+religion = orthodox
+technology_group = eastern
+capital = 4780
+
+
+1415.3.4 = {
+	monarch = {
+		name = "Zacharia"
+		dynasty = "Gropa"	
+		adm = 3
+		dip = 5
+		mil = 3
+	}
+}

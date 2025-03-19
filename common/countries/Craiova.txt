@@ -1,0 +1,103 @@
+#Country Name: Please see filename.
+
+graphical_culture = easterngfx
+
+color = { 175 160 65 } # 94 154 92 #195 180 85
+revolutionary_colors = { 14 8 4 }
+
+historical_idea_groups = {
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	trade_ideas
+	diplomatic_ideas
+	economic_ideas
+	innovativeness_ideas
+	religious_ideas
+}
+
+historical_units = {
+	eastern_medieval_infantry
+	eastern_knights
+	slavic_stradioti
+	eastern_militia
+	ottoman_sekban
+	ottoman_reformed_spahi
+	ottoman_reformed_janissary
+	ottoman_toprakli_hit_and_run
+	ottoman_nizami_cedid
+	ottoman_toprakli_dragoon
+	eastern_skirmisher
+	eastern_uhlan
+	eastern_carabinier
+	ottoman_new_model
+	ottoman_lancer
+}
+
+monarch_names = {
+	#Historical List of Domni
+	"Basarab #1" = 60
+	"Nicolae Alexandru #1" = 1
+	"Vladislav #1" = 10
+	"Radu #1" = 90
+	"Dan #1" = 10
+	"Mircea #1" = 30
+	"Vlad #1" = 80
+	"Mihai #0" = 30
+	"Alexandru #0" = 10
+	"Mihnea #0" = 10
+	"Teodosie #0" = 5
+	"Moise #0" = 1
+	"Petru #0" = 10
+	"Shtefan #0" = 5
+	"Simeon #0" = 5
+	"Gabriel #0" = 5
+	"Nicolae #0" = 5
+	"Leon #0" = 5
+	"Matei #0" = 5
+	"Constantin #0" = 5
+	"Gheorghe #0" = 5
+	"Grigore #0" = 5
+	"Antonie #0" = 5
+	"Ioan #0" = 5
+	"Scarlat #0" = 5
+	"Manole #0" = 1
+
+	"Rahela #0" = -1
+	"Flavia #0" = -1
+	"Cosmina #0" = -1
+}
+
+leader_names = {
+	"de la Amfumati"
+	Baleanu Balota Bibescu Brâncoveanu Borcea Bucshanu Buicescu Buzeshti
+	Calian Câmpineanu Cantacuzino Castriotul "din Cojeshti" Craioveshti
+	Daneshti Draculeshti
+	Faca Florescu
+	Ghica Golescu
+	Ion
+	Karadjas
+	Lambrino Leurdeanu
+	Merishanu Moruzi Movila Mushatin
+	Patrashcu
+	Racovita "Roshci Codreanu"
+	Vacarescu
+}
+
+ship_names = {
+	Dracul
+	Viteazul
+	Putera mari
+	Sperietoaria
+	"Frumuseatsa valurilor"
+	Posada
+	Calugareni
+	Rovine
+	Sirmium
+	"Atacul de noapte"
+	Litovoi
+}
+
+army_names = {
+	"Oastea de $PROVINCE$" 
+}

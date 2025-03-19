@@ -1,0 +1,33 @@
+government = monarchy
+add_government_reform = fief_reform
+government_rank = 1
+technology_group = western
+religion = catholic
+primary_culture = sicilian
+capital = 5133 #Modica
+
+
+1392.6.5 = {
+	monarch = { 
+		name = "Bernardu I"
+		dynasty = "de Cabrera"
+		culture = catalan
+		birth_date = 1350.1.1
+		dip = 3
+		mil = 1
+		adm = 2
+	}
+}
+1400.1.1 = { 
+	heir = { 
+		name = "Bernardu"
+		monarch_name = "Bernardu II"
+		dynasty = "de Cabrera"
+		culture = catalan
+		birth_date = 1400.1.1
+		death_date = 1466.5.14
+		adm = 2
+		dip = 1
+		mil = 1
+	}
+}

@@ -1,0 +1,42 @@
+#5015 - Mechelen
+#Area - Brabant
+#Region - Low Countries
+
+#Core Details
+capital = "Mechelen"
+is_city = yes
+owner = BUR
+controller = BUR
+
+#Demographics
+culture = brabantian
+religion = catholic
+
+#Development and Trade
+base_tax = 4
+base_production = 3
+base_manpower = 3
+trade_goods = cloth
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = BUR
+add_core = MEC
+add_core = BRB
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+fort_15th = yes
+courthouse = yes
+
+#Special Modifiers
+add_province_triggered_modifier = schepenhuis
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

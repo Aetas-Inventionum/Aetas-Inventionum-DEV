@@ -1,0 +1,396 @@
+wt_greatfrisianwar = {
+	type = take_capital
+	
+	attacker = {
+		badboy_factor = 1
+		prestige_factor = 1.25
+		peace_cost_factor = 1
+		
+		allowed_provinces = {
+			always = no
+		}
+		
+		allowed_provinces_are_eligible = yes
+		
+		peace_options = {
+			po_demand_provinces
+			po_revoke_cores
+			po_release_vassals
+			po_release_annexed
+			po_return_cores
+			po_gold
+			po_annul_treaties
+			po_trade_power
+			po_steer_trade
+			po_humiliate
+			po_humiliate_rival
+		}
+		
+		deny_annex = yes
+		country_desc = ALL_COUNTRIES
+		prov_desc = NO_PROVS
+	}
+	
+	defender = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+
+		allowed_provinces = {
+			always = no
+		}
+		
+		allowed_provinces_are_eligible = yes
+		
+		peace_options = {
+			po_demand_provinces
+			po_revoke_cores
+			po_release_vassals
+			po_release_annexed
+			po_return_cores
+			po_gold
+			po_annul_treaties
+			po_trade_power
+			po_steer_trade
+			po_humiliate
+			po_humiliate_rival
+		}
+		
+		deny_annex = yes
+		country_desc = ALL_COUNTRIES
+		prov_desc = NO_PROVS
+	}
+
+	war_name = GREATFRISIANWAR_WAR_NAME
+}
+lombard_venetian_war = {
+	type = take_capital
+	
+	attacker = {
+		badboy_factor = 1
+		prestige_factor = 1.25
+		peace_cost_factor = 1
+		
+		allowed_provinces = {
+			always = yes
+		}
+		
+		allowed_provinces_are_eligible = yes
+		
+		peace_options = {
+			po_demand_provinces
+			po_revoke_cores
+			po_release_vassals
+			po_release_annexed
+			po_return_cores
+			po_gold
+			po_annul_treaties
+			po_trade_power
+			po_steer_trade
+			po_humiliate
+			po_humiliate_rival
+		}
+	}
+	
+	defender = {
+		badboy_factor = 0.5
+		prestige_factor = 1
+		peace_cost_factor = 1
+
+		allowed_provinces = {
+			always = yes 
+		}
+		
+		allowed_provinces_are_eligible = yes
+		
+		peace_options = {
+			po_demand_provinces
+			po_revoke_cores
+			po_release_vassals
+			po_release_annexed
+			po_return_cores
+			po_gold
+			po_annul_treaties
+			po_trade_power
+			po_steer_trade
+			po_humiliate
+			po_humiliate_rival
+		}
+	}
+
+	war_name = LOMBARD_WARS
+}
+hussite_crusade_war = {
+	type = take_capital
+	
+	attacker = {
+		badboy_factor = 1
+		prestige_factor = 1.25
+		peace_cost_factor = 1
+		
+		allowed_provinces = {
+			always = no
+		}
+		
+		allowed_provinces_are_eligible = yes
+		
+		peace_options = {
+			po_revoke_cores
+			po_release_vassals
+			po_release_annexed
+			po_return_cores
+			po_gold
+			po_annul_treaties
+			po_trade_power
+			po_steer_trade
+			po_humiliate
+			po_humiliate_rival
+			po_form_personal_union
+		}
+	}
+	
+	defender = {
+		badboy_factor = 0.5
+		prestige_factor = 1
+		peace_cost_factor = 1
+
+		allowed_provinces = {
+			always = yes 
+		}
+		
+		allowed_provinces_are_eligible = yes
+		
+		peace_options = {
+			po_demand_provinces
+			po_revoke_cores
+			po_release_vassals
+			po_release_annexed
+			po_return_cores
+			po_gold
+			po_annul_treaties
+			po_trade_power
+			po_steer_trade
+			po_humiliate
+			po_humiliate_rival
+		}
+	}
+
+	war_name = HUSSITE_WARS
+}
+wg_lit_rebel = {
+	type = take_capital
+	
+	attacker = {
+		badboy_factor = 1
+		prestige_factor = 1.25
+		peace_cost_factor = 1
+		
+		allowed_provinces = {
+			always = no
+		}
+		
+		allowed_provinces_are_eligible = yes
+		
+		peace_options = {
+			po_demand_provinces
+			po_revoke_cores
+			po_release_vassals
+			po_release_annexed
+			po_return_cores
+			po_gold
+			po_annul_treaties
+			po_trade_power
+			po_steer_trade
+			po_humiliate
+			po_humiliate_rival
+		}
+	}
+	
+	defender = {
+		badboy_factor = 0.5
+		prestige_factor = 1
+		peace_cost_factor = 1
+
+		allowed_provinces = {
+			always = no
+		}
+		
+		allowed_provinces_are_eligible = yes
+		
+		peace_options = {
+			po_demand_provinces
+			po_revoke_cores
+			po_release_vassals
+			po_release_annexed
+			po_return_cores
+			po_gold
+			po_annul_treaties
+			po_trade_power
+			po_steer_trade
+			po_humiliate
+			po_humiliate_rival
+		}
+	}
+
+	war_name = LIT_REBELLION
+}
+wg_holstein = {
+	type = take_capital
+	
+	attacker = {
+		badboy_factor = 1
+		prestige_factor = 1.25
+		peace_cost_factor = 1
+		
+		allowed_provinces = {
+			area = schleswig_area
+		}
+		
+		allowed_provinces_are_eligible = yes
+		
+		peace_options = {
+			po_demand_provinces
+			po_revoke_cores
+			po_return_cores
+			po_independence
+		}
+	}
+	
+	defender = {
+		badboy_factor = 0.5
+		prestige_factor = 1
+		peace_cost_factor = 1
+
+		allowed_provinces = {
+			area = schleswig_area
+		}
+		
+		allowed_provinces_are_eligible = yes
+		
+		peace_options = {
+			po_demand_provinces
+			po_revoke_cores
+			po_release_vassals
+			po_release_annexed
+			po_return_cores
+		}
+	}
+
+	war_name = DAN_SLESVIG
+}
+take_capital_former_hre_theocracy_wg = {
+	type = take_capital
+	
+	attacker = {
+		badboy_factor = 1
+		prestige_factor = 1.25
+		peace_cost_factor = 1
+		
+		allowed_provinces = {
+			always = no
+		}
+		
+		allowed_provinces_are_eligible = yes
+		
+		peace_options = {
+			po_revoke_cores
+			po_release_vassals
+			po_release_annexed
+			po_return_cores
+			po_gold
+			po_annul_treaties
+			po_trade_power
+			po_steer_trade
+			po_humiliate
+			po_humiliate_rival
+			po_restore_bishopric
+		}
+		
+		deny_annex = yes
+		country_desc = ALL_COUNTRIES
+		prov_desc = NO_PROVS
+	}
+	
+	defender = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+
+		allowed_provinces = {
+			always = no
+		}
+		
+		allowed_provinces_are_eligible = yes
+		
+		peace_options = {
+			po_revoke_cores
+			po_release_vassals
+			po_release_annexed
+			po_return_cores
+			po_gold
+			po_annul_treaties
+			po_trade_power
+			po_steer_trade
+			po_humiliate
+			po_humiliate_rival
+		}
+		
+		deny_annex = yes
+		country_desc = ALL_COUNTRIES
+		prov_desc = NO_PROVS
+	}
+
+	war_name = RESTORE_BISHOPRIC_WAR_NAME
+}
+canarian_conquest_wg = {
+	type = take_capital
+	
+	attacker = {
+		badboy_factor = 1
+		prestige_factor = 1.25
+		peace_cost_factor = 1
+		
+		allowed_provinces = {
+			area = macaronesia_area
+		}
+		
+		allowed_provinces_are_eligible = yes
+		
+		peace_options = {
+			po_demand_provinces
+		}
+		
+		country_desc = ALL_COUNTRIES
+		prov_desc = NO_PROVS
+	}
+	
+	defender = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+
+		allowed_provinces = {
+			always = no
+		}
+		
+		allowed_provinces_are_eligible = yes
+		
+		peace_options = {
+			po_revoke_cores
+			po_release_vassals
+			po_release_annexed
+			po_return_cores
+			po_gold
+			po_annul_treaties
+			po_trade_power
+			po_steer_trade
+			po_humiliate
+			po_humiliate_rival
+		}
+		
+		country_desc = ALL_COUNTRIES
+		prov_desc = NO_PROVS
+	}
+
+	war_name = CANARIAN_CONQUEST_WAR_NAME
+}

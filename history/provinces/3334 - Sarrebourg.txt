@@ -1,0 +1,40 @@
+#3334 - Sarrebourg
+#Area - Lorraine
+#Region - France
+
+#Core Details
+capital = "Sarrebourg"
+is_city = yes
+owner = MTZ
+controller = MTZ 
+
+#Demographics
+culture = alsatian #culturally linked to Strassbourg
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 3
+base_manpower = 2
+trade_goods = cloth
+latent_trade_goods = { coal }
+
+#Cores and Occupation (Alphabetical after current)`
+add_core = MTZ
+add_core = SRR
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+
+#Special Modifiers
+center_of_trade = 1
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

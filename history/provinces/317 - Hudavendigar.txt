@@ -1,0 +1,41 @@
+#317 - Hudavendigar
+#Area - Bithynia
+#Region - Anatolia
+
+#Core Details
+capital = "Bursa"
+is_city = yes
+owner = TUR
+controller = TUR
+
+#Demographics
+culture = turkish
+religion = sunni
+
+#Development and Trade
+base_tax = 5
+base_production = 5
+base_manpower = 5
+trade_goods = silk
+
+#Cores and Occupation (Alphabetical after current)
+add_core = TUR
+add_core = BYZ
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+center_of_trade = 3
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = nomad_group
+
+#Histories

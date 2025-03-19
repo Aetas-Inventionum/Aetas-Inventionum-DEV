@@ -1,0 +1,21 @@
+﻿l_french:
+
+#Brittany
+ PROV169:0 "Saint-Malo"
+ PROV170:0 "Léon"
+ PROV171:0 "Vannes"
+ PROV172:0 "Nantes"
+ PROV4384:0 "Rennes"
+ 
+ #France
+ PROV177:0 "Le Mans"
+ PROV178:0 "Angers"
+ PROV178:0 "Bourges"
+ PROV180:0 "Poitiers"
+ PROV184:0 "Orléans"
+ PROV4386:0 "Fontenay"
+ PROV4389:0 "Tours"
+ 
+ brittany_area:0 "Bretagne Sud"
+ loire_area:0 "Anjou-Maine-Touraine"
+ 

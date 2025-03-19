@@ -1,0 +1,37 @@
+#5017 - Couvin
+#Area - Wallonia
+#Region - France
+
+#Core Details
+capital = "Couvin"
+is_city = yes
+owner = LIE
+controller = LIE
+
+#Demographics
+culture = wallonian
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 2
+base_manpower = 2
+trade_goods = wool
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = LIE
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

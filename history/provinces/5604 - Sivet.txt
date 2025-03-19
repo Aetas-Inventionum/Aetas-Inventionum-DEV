@@ -1,0 +1,38 @@
+#5604 - Sivet
+#Area - Bukovina-Pukottia
+#Region - Balkans
+
+#Core Details
+capital = "Radauti"
+is_city = yes
+owner = MOL
+controller = MOL
+
+#Demographics
+culture = transylvanian_saxon
+religion = catholic
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 2
+trade_goods = paper
+
+#Cores and Occupation (Alphabetical after current)
+add_core = MOL
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = nomad_group
+
+#Histories

@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 2
+add_government_reform = feudalism_reform
+technology_group = western
+unit_type = western
+primary_culture = finlandic
+religion = catholic
+add_accepted_culture = finnish
+capital = 27	#Abo

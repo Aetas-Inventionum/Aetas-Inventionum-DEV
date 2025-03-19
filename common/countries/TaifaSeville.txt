@@ -1,0 +1,101 @@
+#Country Name: Please see filename.
+
+graphical_culture = muslimgfx
+
+color = { 45 110 55 } #FFEBEE
+
+revolutionary_colors = { 1  0  10 }
+
+historical_idea_groups = {
+	defensive_ideas
+	innovativeness_ideas
+	maritime_ideas
+	exploration_ideas
+	trade_ideas
+	diplomatic_ideas
+	economic_ideas
+	quality_ideas
+}
+
+historical_units = {
+	mamluk_archer
+	mamluk_cavalry_charge
+	mamluk_duel
+	mamluk_musket_charge
+	muslim_mass_infantry
+	muslim_dragoon
+	ali_bey_reformed_infantry
+}
+
+monarch_names = {
+	#historical emirs
+	"Muhammad #6" = 50
+	"Nasr #1" = 5
+	"Isma'il #1" = 20
+	"Yusuf #3" = 25
+	"Sa'd #0" = 5
+	"'Abu al-Hassan #0" = 5
+	#caliphs of cordoba
+	"'Abd al-Rahman #5" = 100
+	"al-Hakam #2" = 30
+	"Hisham #3" = 50
+	"Sulayman #1" = 20
+	"Yahya #1" = 20
+	#misc
+	"Ibn Hud #0" = 0
+	"'Uthman #0" = 0
+	"'Abu Muhammad #0" = 0
+	"'Abu Thabit #0" = 0
+	"'Umar #0" = 0
+	"'Ali #0" = 0
+	"Ibn Zamrak #0" = 0
+	"'Ahmad #0" = 0
+	"'Idris #0" = 0
+	"Naya #0" = 0
+	"'Abu Nour #0" = 0
+	"'Abdallah #0" = 0
+	"'Abd al-Aziz #0" = 0
+	"Fadl #0" = 0
+	"Abbas #0" = 0
+	"Siddray #0" = 0
+	"'Abd al-Malik #0" = 0
+	"'Abu al-Qasim #0" = 0
+	"Ibn al-'Ammar #0" = 0
+	
+	"Aliya #0" = -1
+	"Fahima #0" = -1
+	"Haifa #0" = -1
+	"Hamta #0" = -5
+}
+
+leader_names = {
+	"Banu Aftas" "Banu Ashqilula" 
+	"Banu Dil-Nun"
+	Ghumara
+	"Banu Hayy" "Banu Hud" al-Husayn
+	"Banu Ifran"
+	"Banu Jirun"
+	"Banu Khalid"
+	"Banu Lakhm"
+	"Banu Marin" "Banu'l-Mawl" "Banu'l-Ula"
+	"Banu Nasr"
+	"Banu Qasim"
+	"Banu Razin"
+	"Banu Sabur" "Banu Sarraj" "Banu Sinadid" "Banu Sumadh"
+	"Banu Tujib"
+	"Banu Wazir"
+	"Banu Zannun" "Banu Ziri"
+}
+
+ship_names = {
+	"Muhammed ibn Nasr" "Muhammed al-Faqih"
+	"Muhammed III" Nasr "Ismail I" "Muhammed IV"
+	"Yusuf I" "Muhammed V" "Ismail II" "Muhammed VI"
+	"Yusuf II" "Muhammed VII" "Yusuf III" "Muhammed VIII"
+	"Muhammed IX" "Yusuf IV" "Yusuf V" "Muhammed X"
+}
+
+
+army_names = {
+	"Jaysh al-$PROVINCE$" 
+}

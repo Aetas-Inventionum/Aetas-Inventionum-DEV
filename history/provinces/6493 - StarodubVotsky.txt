@@ -1,0 +1,37 @@
+#6493 - StarodubVotsky
+#Area - Nizhny Novgorod
+#Region - Russia 
+
+#Core Details
+capital = "Starodub Votsky" 
+is_city = yes
+owner = MOS
+controller = MOS
+
+#Demographics
+culture = russian
+religion = orthodox
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = stone #gypsom
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = MOS
+add_core = NZH
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = nomad_group
+
+#Histories

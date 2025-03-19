@@ -1,0 +1,324 @@
+
+on_startup = {
+	4064 = {
+		add_province_triggered_modifier = african_great_lakes_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = african_great_lakes }
+	}
+	4097 = {
+		add_province_triggered_modifier = kongo_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = kongo }
+	}
+	1191 = {
+		add_province_triggered_modifier = zambezi_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = zambezi }
+	}
+	2868 = {
+		add_province_triggered_modifier = patagonia_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = patagonia }
+	}
+	2935 = {
+		add_province_triggered_modifier = amazonas_node_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = amazonas_node }
+	}
+	2499 = {
+		add_province_triggered_modifier = rio_grande_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = rio_grande }
+	}
+	1486 = {
+		add_province_triggered_modifier = james_bay_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = james_bay }
+	}
+	2021 = {
+		add_province_triggered_modifier = california_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = california }
+	}
+	730 = {
+		add_province_triggered_modifier = girin_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = girin }
+	}
+	1507 = {
+		add_province_triggered_modifier = mississippi_river_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = mississippi_river }
+	}
+	2526 = {
+		add_province_triggered_modifier = ohio_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = ohio }
+	}
+	1551 = {
+		add_province_triggered_modifier = mexico_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = mexico }
+	}
+	677 = {
+		add_province_triggered_modifier = lhasa_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = lhasa }
+	}
+	679 = {
+		add_province_triggered_modifier = chengdu_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = chengdu }
+	}
+	584 = {
+		add_province_triggered_modifier = burma_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = burma }
+	}
+	1365 = {
+		add_province_triggered_modifier = gulf_of_siam_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = gulf_of_siam }
+	}
+	1371 = {
+		add_province_triggered_modifier = canton_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = canton }
+	}
+	1397 = {
+		add_province_triggered_modifier = philippines_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = philippines }
+	}
+	800 = {
+		add_province_triggered_modifier = cuiaba_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = cuiaba }
+	}
+	809 = {
+		add_province_triggered_modifier = lima_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = lima }
+	}
+	1987 = {
+		add_province_triggered_modifier = polynesia_node_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = polynesia_node }
+	}
+	1411 = {
+		add_province_triggered_modifier = australia_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = australia }
+	}
+	1376 = {
+		add_province_triggered_modifier = nippon_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = nippon }
+	}
+	684 = {
+		add_province_triggered_modifier = hangzhou_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = hangzhou }
+	}
+	700 = {
+		add_province_triggered_modifier = xian_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = xian }
+	}
+	4233 = {
+		add_province_triggered_modifier = beijing_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = beijing }
+	}
+	1357 = {
+		add_province_triggered_modifier = the_moluccas_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = the_moluccas }
+	}
+	1064 = {
+		add_province_triggered_modifier = siberia_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = siberia }
+	}
+	707 = {
+		add_province_triggered_modifier = yumen_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = yumen }
+	}
+	1361 = {
+		add_province_triggered_modifier = malacca_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = malacca }
+	}
+	1343 = {
+		add_province_triggered_modifier = ganges_delta_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = ganges_delta }
+	}
+	524 = {
+		add_province_triggered_modifier = doab_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = doab }
+	}
+	507 = {
+		add_province_triggered_modifier = lahore_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = lahore }
+	}
+	1948 = {
+		add_province_triggered_modifier = deccan_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = deccan }
+	}
+	1340 = {
+		add_province_triggered_modifier = comorin_cape_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = comorin_cape }
+	}
+	504 = {
+		add_province_triggered_modifier = gujarat_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = gujarat }
+	}
+	1149 = {
+		add_province_triggered_modifier = katsina_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = katsina }
+	}
+	2772 = {
+		add_province_triggered_modifier = ethiopia_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = ethiopia }
+	}
+	4346 = {
+		add_province_triggered_modifier = gulf_of_aden_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = gulf_of_aden }
+	}
+	1334 = {
+		add_province_triggered_modifier = hormuz_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = hormuz }
+	}
+	1448 = {
+		add_province_triggered_modifier = zanzibar_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = zanzibar }
+	}
+	1460 = {
+		add_province_triggered_modifier = cape_of_good_hope_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = cape_of_good_hope }
+	}
+	1335 = {
+		add_province_triggered_modifier = basra_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = basra }
+	}
+	454 = {
+		add_province_triggered_modifier = samarkand_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = samarkand }
+	}
+	4341 = {
+		add_province_triggered_modifier = persia_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = persia }
+	}
+	377 = {
+		add_province_triggered_modifier = aleppo_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = aleppo }
+	}
+	358 = {
+		add_province_triggered_modifier = alexandria_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = alexandria }
+	}
+	464 = {
+		add_province_triggered_modifier = astrakhan_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = astrakhan }
+	}
+	1322 = {
+		add_province_triggered_modifier = crimea_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = crimea }
+	}
+	1320 = {
+		add_province_triggered_modifier = constantinople_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = constantinople }
+	}
+	280 = {
+		add_province_triggered_modifier = kiev_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = kiev }
+	}
+	1082 = {
+		add_province_triggered_modifier = kazan_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = kazan }
+	}
+	33 = {
+		add_province_triggered_modifier = novgorod_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = novgorod }
+	}
+	1536 = {
+		add_province_triggered_modifier = laplata_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = laplata }
+	}
+	1531 = {
+		add_province_triggered_modifier = brazil_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = brazil }
+	}
+	1132 = {
+		add_province_triggered_modifier = timbuktu_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = timbuktu }
+	}
+	1466 = {
+		add_province_triggered_modifier = ivory_coast_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = ivory_coast }
+	}
+	341 = {
+		add_province_triggered_modifier = tunis_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = tunis }
+	}
+	137 = {
+		add_province_triggered_modifier = ragusa_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = ragusa }
+	}
+	1110 = {
+		add_province_triggered_modifier = safi_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = safi }
+	}
+	153 = {
+		add_province_triggered_modifier = pest_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = pest }
+	}
+	262 = {
+		add_province_triggered_modifier = krakow_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = krakow }
+	}
+	134 = {
+		add_province_triggered_modifier = wien_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = wien }
+	}
+	61 = {
+		add_province_triggered_modifier = saxony_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = saxony }
+	}
+	1926 = {
+		add_province_triggered_modifier = baltic_sea_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = baltic_sea }
+	}
+	1876 = {
+		add_province_triggered_modifier = rheinland_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = rheinland }
+	}
+	835 = {
+		add_province_triggered_modifier = panama_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = panama }
+	}
+	1516 = {
+		add_province_triggered_modifier = carribean_trade_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = carribean_trade }
+	}
+	1500 = {
+		add_province_triggered_modifier = chesapeake_bay_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = chesapeake_bay }
+	}
+	1490 = {
+		add_province_triggered_modifier = st_lawrence_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = st_lawrence }
+	}
+	1652 = {
+		add_province_triggered_modifier = white_sea_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = white_sea }
+	}
+	1975 = {
+		add_province_triggered_modifier = north_sea_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = north_sea }
+	}
+	45 = {
+		add_province_triggered_modifier = lubeck_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = lubeck }
+	}
+	1276 = {
+		add_province_triggered_modifier = bordeaux_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = bordeaux }
+	}
+	1293 = {
+		add_province_triggered_modifier = sevilla_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = sevilla }
+	}
+	186 = {
+		add_province_triggered_modifier = champagne_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = champagne }
+	}
+	1295 = {
+		add_province_triggered_modifier = valencia_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = valencia }
+	}
+	1298 = {
+		add_province_triggered_modifier = genua_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = genua }
+	}
+	1308 = {
+		add_province_triggered_modifier = venice_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = venice }
+	}
+	1269 = {
+		add_province_triggered_modifier = english_channel_node_domestic_merchant_modifier
+		domestic_merchant_effect = { node = english_channel }
+	}
+
+}

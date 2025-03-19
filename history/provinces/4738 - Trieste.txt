@@ -1,0 +1,38 @@
+#4738 - Trieste
+#Area - Frioul
+#Region - Italy
+
+#Core Details
+capital = "Trieste"
+is_city = yes
+owner = TST
+controller = TST
+
+#Demographics
+culture = venetian
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 3
+base_manpower = 2
+trade_goods = naval_supplies
+
+#Cores and Occupation (Alphabetical after current)
+add_core = TST
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+
+#Special Modifiers
+center_of_trade = 1
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

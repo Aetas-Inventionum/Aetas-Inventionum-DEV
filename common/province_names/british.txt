@@ -1,0 +1,416 @@
+##english-british dpn by pleibos
+#Ireland
+373 = { "Dublin" "Dublin" }
+374 = { "Ferns" "Enniscorthy" }
+375 = { "Clare" "Ennis" }
+376 = { "Mayo" "Kilmaine" }
+4120 = { "Kildare" "Kildare" }
+4121 = { "Ulster" "Carrickfergus" }
+4378 = { "Muskerry" "Kinsale" }
+4379 = { "King's County" "Angaile" }
+5146 = { "The Glens" "Armoy" }
+5161 = { "Down" "Downpatrick" }
+5162 = { "Londonberry" "Limavady" }
+5163 = { "Oriel" "Armagh" }
+5166 = { "Breffny" "Cavan" }
+5167 = { "Westmeath" "Trim" }
+5168 = { "Louth" "Drogheda" } #oriel, but louth is exclusive to the Norman half.
+5170 = { "Conemara" "Annaghdown" }
+5171 = { "Galway" "Galway" }
+5172 = { "Athlone" "Atlone" }
+5173 = { "Ely" "Ely" }
+
+##british isles
+##very specific about -shire, as some remain prominent more than others
+##England
+#home counties
+235 = { "Kent" "Canterbury" }
+237 = { "Oxford" "Oxford" }
+244 = { "Lancaster" "Lancaster" }
+3311 = { "Buckingham" "Buckingham" }
+3312 = { "Bedford" "Bedford" }
+3315 = { "Hereford" "Hereford" }
+#wessex
+234 = { "Southampton" "Southampton" }
+239 = { "Gloucester" "Gloucester" }
+#west midlands
+3316 = { "Worcester" "Worcester" } 
+3317 = { "Stafford" "Stafford" }
+3382 = { "Salford" "Salford" } 
+4370 = { "Cambridge" "Cambridge" }
+#4372 = { "Warwick" "Coventry" } #-shire since its not warwick
+4375 = { "Cheshire" "Chester" }
+#east midlands
+#243 = { "Lindsey" "Lincoln" }
+1861 = { "Derby" "Derby" }
+#3314 = { "Northamptonshire" "Northampton" }
+#3318 = { "Nottinghamshire" "Nottingham" }
+#3383 = { "Holland" "Boston" }
+4376 = { "Leicester" "Leicester" }
+#essex
+1860 = { "Norwich" "Norwich" } #same as below for norfolk
+3313 = { "Ipswich" "Ipswich" } #not entirety of suffolk
+#yorkshire
+3328 = { "Skipton" "Skipton" }
+4367 = { "East Riding" "Hull" }
+4368 = { "Richmond" "Richmond" }
+4785 = { "Sheffield" "Sheffield" }
+#5179 = { "Cleveland" "Scarborough" }
+#northumberland
+3327 = { "Newcastle" "Newcastle upon Tyne" }
+
+#Wales
+241 = { "Glamorgan" "Cardiff" }
+3319 = { "Merioneth" "Harlech" }
+3320 = { "Denbigh" "Denbigh" }
+3322 = { "Brecknock" "Brecknock" }
+3323 = { "Gower" "Swansea" }
+3324 = { "Pembroke" "Pembroke" }
+4366 = { "Montgomery" "Montgomery" }
+4369 = { "Cardigan" "Cardigan" }
+
+#Scotland
+250 = { "Gowrie" "Perth" }
+251 = { "Buchan" "Aberdeen" }
+4361 = { "Teviotdale" "Roxburgh" }
+5136 = { "The Machars" "Wigtown" }
+5139= { "Dunbar" "Dunbar" }
+5143 = { "Ayr" "Ayr" }
+5145 = { "Stirling" "Stirling" }
+5150 = { "The Mearns" "Kincardine" }
+5151 = { "Mar" "Kildrummy" }
+
+##France
+#upper normandy
+167 = { "Rone" "Rone" } #or Roan
+3227 = { "Harfleet" "Harfleet" } #fleur is from Norse fleu meaning river. The English toponymic for this is -fleet // another example is Honfleur = Honfleet in English
+3229 = { "Diepe" "Diepe" }    #or Deep, Diep
+#lower normandy
+168 = { "Cane" "Cane" }
+4385 = { "Shearburg" "Shearburg" }  #Or Cherburg/h
+#Picardy
+87 = { "Cales" "Cales" }
+#3254 = { "Cressy" "Cressy" }   #Not the same city
+#Anjou-maine
+177 = { "Mans" "Mans" } #Or Mauns, Manns
+5220 = { "Crayon" "Crayon" }
+#orléanais
+184 = { "Orleans" "Orleans" }
+#Champaigne
+186 = { "Rheims" "Rheims" }
+#Lyonnais
+203 = { "Lyons" "Lyons" }
+#Provence
+3294 = { "Marseilles" "Marseilles" }
+#to sort out 
+169 = { "Saint Mallos" "Saint Mallos" }
+172 = { "Nants" "Nants" }
+173 = { "Bayon" "Bayon" }
+196 = { "Tolous" "Tolous" } #the 'erl of tolous' 14th century book
+199 = { "Claremont" "Claremont" }
+200 = { "Montpillars" "Montpillars" }   #Or Montpeliers
+205 = { "Chamberry" "Chamberry" }
+3190 = { "Kimpier" "Kimpier" }  #Invented
+3192 = { "Morlions" "Morlions" }
+3199 = { "Carhais" "Carhais" }    #Invented - dropped the 'k'
+3212 = { "Rochell" "Rochell" }
+3200 = { "Roddon" "Roddon" }
+3224 = { "Bayes" "Bayes" }
+3235 = { "Boway" "Boway" }  #Or Beeway, Beewayes
+3295 = { "Grace" "Grace" }
+3399 = { "Pempole" "Pempole" }
+4387 = { "Angoulem" "Angoulem" }
+4388 = { "Charters" "Charters" }    #Or Chatters, Charteris, Charterse, etc
+4995 = { "Anncey" "Anncey" }
+
+##iberia 
+#estremadura
+227 = { "Lisbon" "Lisbon" }
+4787 = { "Saint Irene" "Saint Irene" }
+4984 = { "Thomar" "Thomar" }
+4985 = { "Saint Ubes" "Saint Ubes" }
+#tras-o-montes
+232 = { "Braganza" "Braganza" }
+#alentejo
+4150 = { "York" "York" }
+#to sort out 
+206 = { "Grome" "Grome" } #Because The Groyn is upsetting the English speaking people, also Groin or The Groine 
+1745 = { "Saint Ander" "Saint Ander" }
+##South Germany misc
+#Lower Palatinate
+78 = { "Mayence" "Mayence" } #or Mentz
+5022 = { "Lindaw" "Lindaw" }
+5023 = { "Spires" "Spires" }
+#Alsace
+75 = { "Strasburgh" "Strasburgh" }
+3340 = { "Hagenaw" "Hagenaw" }
+#romandie
+4721 = { "Friburgh" "Friburgh" }
+#Switzerland
+165 = { "Berne" "Berne" }
+5033 = { "Basil" "Basil" }
+5035 = { "Lucerne" "Lucerne" }
+5036 = { "Argovia" "Argovia" }
+#west swabia
+4712 = { "Constance" "Constance" }
+5333 = { "Hailbron" "Hailbron" }
+#baden
+72 = { "Brisgow" "Friburgh" }
+4714 = { "Durlack" "Durlack" }
+5339 = { "Lorrack" "Lorrack" }
+##North Germany 
+#anhalt
+52 = { "Maidenburgh" "Maidenburgh" }
+#west Rhineland
+80 = { "Triers" "Triers" } #or Treves
+85 = { "Cologne" "Cologne" }
+1760 = { "Colbence" "Colbence" }
+1878 = { "Aix-la-Chapelle" "Aix-la-Chapelle" }
+4768 = { "Juliers" "Juliers" }
+#Hesse
+81 = { "Marborow" "Marborow" }
+1762 = { "Cassel" "Cassel" }
+#to sort out 
+44 = { "Hamburgh" "Hamburgh" }
+1858 = { "Stelyn" "Stelyn" }
+##Low Countries
+#Hainaut
+1743 = { "Camerick" "Camerick" }
+#Flanders
+90 = { "Bruges" "Bruges" }
+3302 = { "Dunkirk" "Dunkirk" }
+#Artois
+3257 = { "Bethwyn" "Bethwyn" }
+#Guelders
+1742 = { "Upper Guelders" "Roermond" }
+2975 = { "Cleves" "Cleves" }
+#brabant
+5015 = { "Mechlin" "Mechlin" }
+#luxemburg
+94 = { "Luxemburgh" "Luxemburgh" }
+3331 = { "Arlon" "Arlon" }
+#to sort out 
+92 = { "Brussels" "Brussels" }
+1744 = { "Antwerp" "Antwerp" }
+1865 = { "Ghent" "Ghent" }  #Or Gaunt
+4383 = { "The Hague" "The Hague" }
+##SCANDINAVIA 
+30 = { "Wyborough" "Wyborough" }
+ 
+#new world from vanilla
+893 = { "New Orleans" "New Orleans" }
+894 = "Ecore Fabre"
+896 = "Grand River"
+897 = { "Little Rock" "Little Rock" }
+899 = { "Ozarks" "Springfield" }
+900 = { "St. Louis" "St. Louis" }
+905 = { "Council Bluff" "Council Bluff" }
+907 = { "Sioux Post" "Sioux Post" }
+908 = { "Minnesota" "St. Paul" }
+910 = "Red Lake"
+911 = { "Upper Peninsula" "Escanaba" }
+913 = "Prairie du Chien"
+914 = { "Green Bay" "Green Bay" }
+915 = { "Peoria" "Peoria" }
+918 = { "Memphis" "Memphis" }
+921 = "Baton Rouge"
+925 = { "Fort Jackson" "Fort Jackson" }
+929 = { "Savannah" "Savannah" }
+930 = "Gaines"
+931 = "Peachtree"
+932 = { "Charleston" "Charleston" }
+934 = { "Nashborough" "Nashborough" }
+935 = "Watauga"
+936 = { "Overmountain" "Morristown" }
+939 = { "Paducah" "Paducah" }
+940 = { "Louisville" "Louisville" }
+941 = { "Harrodstown" "Harrodstown" }
+944 = { "Detroit" "Detroit" }
+945 = { "Mackinac" "Fort Mackinac" }
+946 = { "Toledo" "Toledo" }
+947 = { "Cleveland" "Cleveland" }
+948 = { "Marietta" "Marietta" }
+949 = "Blue Ridge"
+950 = { "Jamestown" "Jamestown" }
+952 = { "James River" "Richmond" }
+953 = { "Maryland" "Annapolis" }
+956 = { "Philadelphia" "Philadelphia" }
+958 = { "Geneseo" "Geneseo" }
+4872 = { "Buffalo" "Buffalo" }
+959 = { "Rochester" "Rochester" }
+960 = { "Oswego" "Oswego" }
+961 = { "Fort Stanwix" "Fort Stanwix" }
+963 = { "Albany" "Albany" }
+964 = { "Schenectady" "Schenectady" }
+965 = { "New York" "New York City" }
+966 = { "Berkshires" "Springfield" }
+967 = { "Rhode Island" "Providence" }
+968 = { "Massachusetts" "Boston" }
+969 = { "Bennington" "Bennington" }
+970 = { "New Hampshire" "Portsmouth" }
+973 = { "Vancouver" "Vancouver" }
+980 = "Avalon"
+981 = "Cape Ray"
+982 = "Cape Breton"
+983 = "Prince Edward Isl."
+984 = "Fundy"
+985 = { "Moncton" "Moncton" }
+986 = "Gaspe"
+987 = { "Windsor" "Windsor" }
+988 = { "Simcoe" "Midhurst" }
+989 = { "Ontario" "Kingston" }
+990 = "Three Rivers"
+992 = { "Hull" "Hull" }
+993 = { "Montreal" "Montreal" }
+994 = { "Quebec" "Quebec City" }
+996 = "Mecatina"
+998 = { "Fort Richmond" "Fort Richmond" }
+999 = "Eastmain"
+1000 = { "Fort Rupert" "Fort Rupert" }
+1001 = { "Sault Ste. Marie" "Sault Ste. Marie" }
+1003 = { "Moose Factory" "Moose Factory" }
+1004 = { "Fort Albany" "Fort Albany" }
+1005 = "York Factory"
+1006 = { "Churchill" "Churchill" }
+1007 = { "Thunder Bay" "Thunder Bay" }
+1008 = "Red River"
+1009 = "Berens River"
+1010 = "Dauphin"
+1011 = "The Pas"
+1174 = { "Walvis Bay" "Walvis Bay" }
+1177 = { "Cape" "Cape Town" }
+1179 = { "Mossel Bay" "Mossel Bay" }
+1180 = { "East London" "East London" }
+1181 = { "Natal" "Durban" }
+833 = { "Algoa Bay" "Port Elizabeth" }
+4782 = { "Tswana" "Freetown" }
+
+2003 = "Kootenai"
+2007 = "Les Cedres"
+2012 = "Memphremagog"
+2013 = "Casco"
+2016 = "Great Forks"
+2017 = "Edmonton"
+2018 = "Jasper"
+2023 = "Wyoming Valley"
+
+492 = "Porto Rico"
+2512 = "Traverse"
+2513 = { "Fort Madison" "Fort Madison" }
+2514 = { "Cape Girardeau" "Cape Girardeau" }
+2515 = "Fort Smith"
+2517 = "Mille Lacs"
+2520 = { "Little Egypt" "Cairo" }
+2521 = { "Saginaw" "Saginaw" }
+2522 = { "Grand Rapids" "Grand Rapids" }
+2523 = "Vincennes"
+2524 = "Indiana"
+2525 = { "Losantiville" "Losantiville" }
+2526 = { "Lexington" "Lexington" }
+2527 = { "Chattanooga" "Chattanooga" }
+2531 = { "Huntsville" "Huntsville" }
+2538 = "Fidius"
+2539 = { "Frederick" "Frederick" }
+2540 = { "Augusta" "Augusta" }
+2541 = "Keowee"
+2542 = { "Beaufort" "Beaufort" }
+2543 = "Long Bay"
+2544 = { "Charlotte" "Charlotte" }
+2546 = "Cape Fear"
+2548 = "New River"
+2549 = { "Charlottesville" "Charlottesville" }
+2550 = "Rappahannock"
+2552 = "Pearsall"
+2554 = { "Baltimore" "Baltimore" }
+2555 = { "Pittsburgh" "Pittsburgh" }
+2557 = "West Branch"
+2558 = "Catskills"
+2559 = { "Ticonderoga" "Ticonderoga" }
+2560 = { "New Haven" "New Haven" }
+2561 = { "Plymouth" "Plymouth" }
+2562 = { "Keene" "Keene" }
+2563 = { "Vermont" "Montpelier" }
+2564 = "White Mountains"
+2566 = "Castine"
+2568 = "Cape Sable"
+2569 = { "Halifax" "Halifax" }
+2570 = "St. John"
+2572 = "Campbelton"
+2574 = "Nain"
+2577 = "Seven Islands"
+2580 = "Wemotaci"
+2582 = "Rimouski"
+2586 = "Nottawasaga"
+2587 = "Manitoulin"
+2595 = { "English River" "Ile a la Crosse" }
+2597 = "South Branch"
+2588 = "Cloche"
+2592 = "Severn"
+2593 = "Lake of the Woods"
+2600 = "Vermillion"
+2601 = "Dunvegan"
+2603 = { "Fort St. John" "Fort St. John" }
+2604 = "Prince George"
+2605 = "Shuswap"
+2606 = { "Fort Alexandria" "Fort Alexandria" }
+2670 = { "Toronto" "York" }
+2671 = "Ronde"
+4890 = "Ottawa"
+
+#Italy
+104 = { "Milan" "Milan" }
+4729 = { "Padua" "Padua" }
+
+#Germany
+134 = { "Vienna" "Vienna" }
+
+#Balkans
+2746 = { "Widdin" "Widdin" }
+
+#Australia
+1084 = { "Perth" "Perth" }
+1085 = { "Hobart" "Hobart" }
+1086 = { "Adelaide" "Port Adelaide" }
+1087 = { "Melbourne" "Melbourne" }
+1088 = { "Bendigo" "Bendigo" }
+1089 = { "Bathurst" "Orange" }
+1090 = { "Sydney" "Sydney" }
+1091 = { "Orana" "Dubbo City" }
+1092 = { "Port Macquarie" "Port Macquarie" }
+1093 = { "Bulloo" "Thargomindah" }
+1094 = { "Fraser Coast" "Hervey Bay" }
+2726 = { "Gascoyne" "Geraldton" }
+2727 = { "Esperance" "Esperance" }
+2728 = { "Bathurst Island" "Nguiu" }
+2729 = { "Arnhem" "East Arnhem" }
+2730 = { "Weipa" "Weipa Town" }
+2731 = { "Hope Vale" "Cairns" }
+2732 = { "Townsville" "City of Townsville" }
+2733 = { "Mackay" "Mackay" }
+2734 = { "Port Albert" "Port Albert" }
+2735 = { "Mount Gambier" "Mount Gambier" }
+2736 = { "Hopetown" "Hopetown" }
+4846 = { "Palmerston" "Darwin" }
+4847 = { "Barkly" "Tennant Creek" }
+4848 = { "Burke" "Burketown" }
+4849 = { "Carpentaria" "Normanton" }
+4850 = { "Gladstone" "Gladstone" }
+4851 = { "Sunshine Coast" "Sunshine Coast City" }
+4852 = { "Burnett" "Kingaroy" }
+4853 = { "Paroo" "Cunnamulla" }
+4854 = { "Brisbane" "Brisbane" }
+4855 = { "Moree Plains" "Moree" }
+4856 = { "Tamworth" "Tamworth" }
+4857 = { "Newcastle" "Newcastle" }
+4858 = { "Wollongong" "Wollongong" }
+4859 = { "Canberra" "Canberra" }
+4860 = { "Tablelands" "Gouldburn" }
+4861 = { "Bogong" "Wodonga" }
+4862 = { "Taunton" "Taunton" }
+4863 = { "Marmion" "Hampton" }
+4864 = { "Murray" "Moora" }
+4865 = { "Ashburton" "Karratha" }
+4866 = { "Pilbara" "Port Hedland" }
+4867 = { "Kimberley" "Easton" }
+4868 = { "Launceston" "Launceston" }
+4869 = { "Queenstown" "Queenstown" }

@@ -1,0 +1,55 @@
+#RAW - Rawa
+
+#Political Situation
+capital = 256
+
+#Government
+government_rank = 1
+government = monarchy
+add_government_reform = appanage_reform
+
+#Demographics
+primary_culture = masurian
+add_accepted_culture = polish
+religion = catholic
+
+#Tech and Military
+technology_group = eastern
+
+#History
+1381.1.1 = {
+	monarch = {
+		name = "Siemowit IV"
+		dynasty = "Piastów"
+		birth_date = 1356.1.1
+		adm = 2
+		dip = 5
+		mil = 3
+	}
+}
+1387.1.1 = {
+	queen = {
+		country_of_origin = LIT
+		name = "Alexandra"
+		dynasty = "Gediminas"
+		birth_date = 1368.1.1
+		death_date = 1434.1.1
+		female = yes
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+1389.1.1 = {
+	heir = {
+		name = "Siemowit"
+		monarch_name ="Siemowit V"
+		dynasty = "Piastów"
+		birth_date = 1389.1.1
+		death_Date = 1442.1.1
+		claim = 95
+		adm = 3
+		dip = 2
+		mil = 3
+	}
+}

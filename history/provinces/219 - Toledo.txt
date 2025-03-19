@@ -1,0 +1,46 @@
+#219 - Toledo
+#Area - La Mancha
+#Region - Iberia
+
+#Core Details
+capital = "Toledo"
+is_city = yes
+owner = CAS
+controller = CAS
+
+#Demographics
+culture = castillian
+religion = catholic
+
+#Development and Trade
+base_tax = 6
+base_production = 5
+base_manpower = 4
+trade_goods = metallurgy #sword guilds
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = CAS
+add_core = TLD
+
+#Other Political
+hre = no
+seat_in_parliament = yes
+
+#Fort/Other Buildings
+fort_15th = yes
+cathedral = yes 
+
+#Special Modifiers
+center_of_trade = 2
+#add_permanent_province_modifier = { 
+#	name = ai_toledo_swords_guilds
+#	duration = -1
+#}
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

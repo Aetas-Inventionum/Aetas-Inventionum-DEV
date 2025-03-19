@@ -1,0 +1,39 @@
+#5188 - Pola
+#Area - Istria
+#Region - South Germany
+
+#Core Details
+capital = "Pola"
+is_city = yes
+owner = VEN
+controller = VEN
+
+#Demographics
+culture = istriot
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 3
+base_manpower = 2
+trade_goods = salt
+
+#Cores and Occupation (Alphabetical after current)
+add_core = VEN
+add_core = IST
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

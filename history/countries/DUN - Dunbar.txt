@@ -1,0 +1,35 @@
+government = monarchy
+add_government_reform = appanage_reform
+primary_culture = scottish
+add_accepted_culture = highland_scottish
+religion = catholic
+technology_group = western
+government_rank = 1
+capital = 5141 #douglas
+
+
+1350.1.1 = {
+	monarch = {
+		name = "George I"
+		dynasty = "de Dunbar"
+		birth_date = 1340.1.1
+		death_date = 1422.1.1
+		adm = 2
+		dip = 2
+		mil = 4
+	}
+}
+
+1370.1.1 = {
+	heir = {
+		name = "George"
+		monarch_name = "George II"
+		dynasty = "de Dunbar"
+		birth_date = 1370.1.1
+		death_date = 1457.1.1
+		claim = 95
+		adm = 3
+		dip = 2
+		mil = 3
+	}
+}

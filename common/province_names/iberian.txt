@@ -1,0 +1,674 @@
+#AI Update
+# = { "x" "x" }
+
+#Macaronesia - by Math
+366 = { "Gran Canaria" "Las Palmas" }
+367 = { "Azores Orientales" "Villafranca" }    #Invented
+368 = { "Madera" "Funchal" } 
+4565 = { "Tenerife" "Santa Cruz de Tenerife" }
+5708 = { "Azores Occidentales" "Arroyo" }
+5709 = { "Lanzarote" "El Rubicón" }
+5710 = { "Fuerteventura" "Betancuria" }
+5711 = { "La Gomera" "San Sebastián" }
+
+#misc greek islands by pleibos
+320 = { "Rodas" "Rodas" }
+5678 = { "Petronio" "Petronio" }
+##IBERIA
+#asturias-cantabria
+207 = { "Gijón" "Gijón" }
+1745 = { "Santander" "Santander" } #Asturias de Santillana
+4962 = { "Trasmiera" "Laredo" } 
+4963 = { "Llanes" "Llanes" }
+4964 = { "Oviedo" "Oviedo" }
+4965 = { "Castrapol" "Castrapol" }
+#navarre
+210 = { "Pamplona" "Pamplona" }
+2989 = { "Logroño" "Logroño" }
+3266 = { "Ultrapuertos" "San Juan Pie de Puerto" }
+3368 = { "La Ribera" "Tudela" }
+3369 = { "Sangüesa" "Sangüesa" }
+3370 = { "Estella" "Estella" }
+4957 = { "Aranda" "Aranda de Duero" }
+4958 = { "Calahorra" "Calahorra" }
+4959 = { "Miranda" "Miranda de Ebro" }
+4960 = { "Álava" "Vitoria" }
+#leon
+4968 = { "El Bierzo" "Ponferrada" }
+4970 = { "Sahagún" "Sahagún" }
+4971 = { "Medina del Campo" "Medina del Campo" }
+#old castile
+1746 = { "Burgos" "Burgos" } 
+4551 = { "Ávila" "Ávila" }
+4954 = { "Arévalo" "Arévalo" }
+#new castile
+4948 = { "Alcalá" "Alcalá de Henares" } #old suffix
+4951 = { "Molina" "Molina de Aragón" }
+#la mancha
+2751 = { "Cuenca" "Cuenca" }
+2754 = { "Villareal" "Villareal" } #Campo de Calatrava
+4945 = { "Valdepeñas" "Valdepeñas" } #Campo de Montiel
+4946 = { "Alcaraz" "Alcaraz" }
+4947 = { "San Juan" "Alcázar de San Juan" } #Campo de San Juan but San Juan works and is shorter. Only conflict would be Puerto Rico, but San Juan would only be the city name
+4950 = { "Moya" "Moya" } #most of Manchuela here
+4952 = { "Torrijos" "Torrijos" }
+4953 = { "Talavera" "Talavera de la Reina" }
+#upper andalucia
+225 = { "Córdoba" "Córdoba" }
+3409 = { "Lucena" "Lucena" }
+3410 = { "Los Pedroches" "Pedroche" }
+#lower andalucia 
+1749 = { "Cádiz" "Cádiz" }
+3401 = { "Tarifa" "Tarifa" } #old comarca of Algeciras. Confusing
+3402 = { "Medina Sidonia" "Medina Sidonia" }
+3405 = { "Aracena" "Aracena" }
+3406 = { "Utrera" "Utrera" }
+#granada
+222 = { "Almería" "Almería" }
+223 = { "Granada" "Granada" }
+226 = { "Gibraltar" "Gibraltar" }
+3374 = { "Baza" "Baza" }
+3375 = { "Vera" "Vera" }
+3376 = { "Guadix" "Guadix" }
+3377 = { "Motril" "Motril" }
+3378 = { "Ronda" "Ronda" }
+4546 = { "Málaga" "Málaga" }
+#galicia
+206 = { "La Coruña" "La Coruña" }
+4558 = { "Orense" "Orense" }
+4966 = { "Ferrol" "Ferrol" }
+4967 = { "Compostela" "Santiago de Compostela" } #Compostela is definitive toponym thanks to Math's insistence and pleibos's research on it thereafter
+5613 = { "Lemos" "Monforte de Lemos" }
+#murcia
+3371 = { "Villena" "Villena" }
+5032 = { "Caravaca" "Caravaca de la Cruz" }
+5757 = { "Huéscar" "Huéscar" }
+#extremadura
+1747 = { "Cáceres" "Cáceres" }
+3404 = { "Llerena" "Llerena" }
+##portugal
+#estremadura
+227 = { "Lisbona" "Lisbona" }
+4787 = { "Santarén" "Santarén" }
+4985 = { "Setubal" "Setubal" }
+#tras-o-montes
+232 = { "Braganza" "Braganza" }
+#to sort out 
+228 = { "Vicedo" "Vicedo" }
+229 = { "Béja" "Béja" } #Invented
+231 = { "Oporto" "Oporto" }
+1851 = { "Coímbra" "Coímbra" }
+4150 = { "Ébora" "Ébora" }
+4556 = { "Avero" "Avero" }  #Invented
+4787 = { "Santarén" "Santarén" }
+4975 = { "Villarreal" "Villarreal" }
+4976 = { "Chávez" "Chávez" }
+4978 = { "Viana" "Viana del Castillo" }
+4982 = { "Leiría" "Leiría" }
+4990 = { "Cerpa" "Cerpa" }  #invented
+4991 = { "Yelbes" "Yelbes" }
+4992 = { "Marvón" "Marvón" }
+4993 = { "Covillán" "Covillán" }
+6548 = { "Olivenza" "Olivenza" }
+#valencia
+220 = { "Valencia" "Valencia" }
+1750 = { "Alicante" "Alicante" }
+3359 = { "Maestrazgo" "San Mateo" }
+3360 = { "Gandía" "Gandía" }
+3361 = { "Denia" "Denia" }
+4549 = { "Játiva" "Játiva" }
+4550 = { "Castellón" "Castellón de la Plana" }
+#baleares
+333 = { "Majorca" "Palma de Majorca" }
+4560 = { "Ibiza" "Ibiza" }
+#catalonia
+197 = { "Rosellón" "Perpiñán" }
+212 = { "Gerona" "Gerona" }
+3355 = { "Ampurdán" "Figueras" }
+3356 = { "Cerdaña" "Puigcerdá" }
+3357 = { "Lérida" "Lérida" }
+3358 = { "Tortosa" "Tortosa" }
+#aragon
+211 = { "Huesca" "Huesca" }
+214 = { "Zaragoza" "Zaragoza" }
+3362 = { "Albarracín" "Albarracín" }
+3364 = { "Alcañiz" "Alcañiz" }
+3365 = { "Caspe" "Caspe" }
+3366 = { "Ribagorza" "Benabarre" }
+3367 = { "Jaca" "Jaca" }
+4557 = { "Calatayud" "Calatayud" }
+5611 = { "Cariñena" "Cariñena" }
+##italy
+#sardinia
+127 = { "Sácer" "Sácer" }
+2986 = { "Cáller" "Cáller" }
+4735 = { "Oristán" "Oristán" }
+5007 = { "Gallura" "Terranova" }
+5008 = { "Núoro" "Núoro" }
+5010 = { "Iglesiente" "Iglesias" }
+5405 = { "Planargia" "Bosa" }
+#corsica
+1247 = { "Bastia" "Bastia" }
+5003 = { "Calvi" "Calvi" }
+5004 = { "Ayacio" "Ayacio" }
+5005 = { "Bonifacio" "Bonifacio" }
+5006 = { "Corte" "Corte" }
+#sicily
+124 = { "Mesina" "Mesina" }
+125 = { "Palermo" "Palermo" }
+2982 = { "Siracusa" "Siracusa" }
+4736= { "Drépano" "Drépano" }
+4737 = { "Agrigento" "Agrigento" }
+5133 = { "Módica" "Módica" }
+5135 = { "Caltanissetta" "Caltanissetta" }
+#calabria
+123 = { "Ríjoles" "Ríjoles" }
+1934 = { "Potenza" "Potenza" }
+2984 = { "Cosentina" "Cosentina" }
+5128 = { "Rosano" "Rosano" }
+5129 = { "Crotona" "Crotona" }
+5130 = { "Catanzaro" "Catanzaro" }
+#apulia
+122 = { "Tarento" "Tarento" }
+1933 = { "Bari" "Bari" }
+5122 = { "Barletta" "Barletta" }
+5123 = { "Andría" "Andría" }
+5124 = { "Brindis" "Brindis" }
+5125 = { "Lecce" "Lecce" }
+#campania
+121 = { "Nápoles" "Nápoles" }
+2983 = { "Salerno" "Salerno" }
+5111 = { "Capoa" "Capoa" }
+5114 = { "Cilento" "Vallo" }
+#abruzzo
+120 = { "El Águila" "El Águila" }
+4733 = { "Campo Bajo" "Campo Bajo" }
+5115 = { "Téramo" "Téramo" }
+5117 = { "Quieti" "Quieti" }
+5118 = { "Desperdicio de Aimone" "Desperdicio de Aimone" }
+#capitanate
+5119 = { "Santo Severino" "Santo Severino" }
+5120 = { "Tablas" "Lucera" }
+5123 = { "Andría" "Andría" }
+#romagna
+114 = { "Rávena" "Rávena" }
+4730 = { "Bolonia" "Bolonia" }
+#lazio
+118 = { "Roma" "Roma" }
+5089 = { "Ciudad Vieja" "Ciudad Vieja" }
+5090 = { "Tívoli" "Tívoli" }
+#umbria
+2976 = { "Perusa" "Perusa" }
+4731 = { "Espoleto" "Espoleto" }
+5075 = { "Ciudad de Castilla" "Ciudad de Castilla" }
+#northern tuscany
+116 = { "Florencia" "Florencia" }
+5067 = { "Pistoya" "Pistoya" }
+#southern tuscany 
+5072 = { "Grosseto" "Grosseto" }
+5073 = { "Presidios" "Orbetello" }
+#lombardy
+104 = { "Milán" "Milán" }
+4728 = { "Pavía" "Pavía" }
+#eastern lombardy
+109 = { "Mantua" "Mantua" }
+#liguria 
+101 = { "Génova" "Génova" }
+5052 = { "La Especia" "La Especia" }
+#emilia
+5058 = { "Plasencia" "Plasencia" }
+#upper piedmont
+5044 = { "Turín" "Turín" }
+#venetia
+112 = { "Venecia" "Venecia" }
+4729 = { "Padua" "Padua" }
+#aquileia
+111 = { "Údine" "Údine" }
+
+##france region
+#ile de france
+183 = { "París" "París" }
+185 = { "Nemora" "Nemora" }
+#upper normandy
+167 = { "Ruán" "Ruán" }
+#provence
+102 = { "Niza" "Niza" }
+201 = { "Aix en Provenza" "Aix en Provenza" }
+202 = { "Aviñón" "Aviñón" }
+3293 = { "Arlés" "Arlés" }
+3294 = { "Marsella" "Marsella" }
+3295 = { "Grassa" "Grassa" }
+3296 = { "Draguiñán" "Draguiñán" }
+4696 = { "Tolón" "Tolón" }
+5226 = { "Rouocha Enchabanaïa" "Sisteron" }
+#dauphiné
+3288 = { "Valencia" "Valencia" }
+#limousin
+195 = { "Alto Lemosín" "Limoges" }
+3271 = { "Torena" "Briva" }
+3272 = { "Bajo Lemosín" "Tula" }
+4697 = { "Alta Marcha" "Guéret" }
+5221 = { "Baja Marcha" "Bellac" }
+#gascony
+173 = { "Labort" "Bayona" }
+175 = { "Armañac" "Auch" }
+176 = { "Bearne" "Pau" }
+3261 = { "Labrit" "Labrit" }
+3265 = { "Marsan" "La Montaña de Marsan" }
+3267 = { "Bigorra" "Tarbes" }
+3268 = { "Cominges" "San Bertrán" }
+3269 = { "Lomaña" "Letora" }
+#guyenne
+174 = { "Burdeos" "Burdeos" }
+3258 = { "Blaya" "Blaya" }
+3260 = { "Bug" "La Cabeza de Bug" } #Boillo?
+3263 = { "Périgord" "Perigús" }
+3270 = { "Montalban" "Montalban" }
+#upper languedoc
+196 = { "Tolosa" "Tolosa" }
+198 = { "Rodes" "Rodes" }
+3273 = { "Albigense" "Albi" }
+3274 = { "Castro" "Castro" }
+4694 = { "Foix" "Foix" }
+4695 = { "Carcasona" "Carcasona" }
+#lower languedoc
+2753 = { "Narbona" "Narbona" }
+3277 = { "Nimes" "Nimes" }
+#saintonge
+3212 = { "La Rochela" "La Rochela" }
+4387 = { "Angulema" "Angulema" }
+#lorraine 
+4766 = { "Verdún" "Verdún" }
+#champagne
+3239 = { "Isla en Champaña" "Tonnerre" }
+#artois
+88 = { "Arrás" "Arrás" }
+89 = { "Picardía" "Amiens" }
+3256 = { "San Omer" "San Omer" }
+#burgundy
+192 = { "Dijón" "Dijón" }
+1877 = { "Charolesado" "Charoles" }
+#franche comte
+193 = { "Besanzón" "Besanzón" }
+3299 = { "Dola" "Dola" }
+3301 = { "Amont" }
+3394 = { "Alto Saona" "Luxeuil" }
+#lyonnais
+203 = { "Léon de Francia" "Léon de Francia" }
+#lower normandy
+1879 = { "Alenzón" "Alenzón" }
+4385 = { "Cherburgo" "Cherburgo" }
+
+##low countries 
+#flanders 
+90 = { "Brujas" "Brujas" }
+1865 = { "Gante" "Gante" }
+3302 = { "Dunquerque" "Dunquerque" }
+3303 = { "Iprés" "Iprés" }
+4769 = { "Lila" "Lila" }
+5011 = { "Douai" "Douai" }
+5012 = { "Cortrique" "Cortrique" }
+5013 = { "Alost" "Alost" }
+#brabant
+92 = { "Bruselas" "Bruselas" }
+95 = { "Bredá" "Bredá" }
+1744 = { "Amberes" "Amberes" } 
+3347 = { "Lovaina" "Lovaina" }
+4770 = { "Bolduque" "Bolduque" }
+5015 = { "Malinas" "Malinas" }
+5018 = { "Últimos Cascos" "Últimos Cascos" }
+#liège
+93 = { "Lieja" "Lieja" }
+2974 = { "Loon" "Borgloon" }
+3344 = { "Hija del Mosa" "Dinant" } #Hija del Mosa is a nickname for the city in spanish, meaning Daughter of the Meuse
+3346 = { "Limburgo" "Mastrique" }
+#Luxemburg
+94 = { "Luxemburgo" "Luxemburgo" }
+3331 = { "Arlón" "Arlón" }
+3332 = { "Bastoña" "Bastoña" }
+3333 = { "Thionvilla" "Thionvilla" }
+3363 = { "Bitburgo" "Bitburgo" }
+#hainaut
+91 = { "Henao" "Mons" }
+1743 = { "Cambray" "Cambray" }
+3329 = { "Valenciana" "Valenciana" }
+5227 = { "Ciudad de los Gigantes" "Ath" }
+#holland
+96 = { "Zelanda" "Midelburgo" }
+97 = { "Ámsterdam" "Ámsterdam" }
+98 = { "Utreque" "Utreque" }
+3348 = { "Holanda del Sur" "Dordrecht" }
+3349 = { "Frisia Occidental" "Harlem" }
+4383 = { "La Haya" "La Haya" }
+5025 = { "Leida" "Leida" }
+#Guelders
+99 = { "Güeldres" "Arnhem" }
+1742 = { "Alto Güeldres" "Ruremunda" }
+2975 = { "Cléveris" "Cléveris" }
+3351 = { "Nimega" "Nimega" }
+4381 = { "Transisalania" "Zwolle" }
+#Frisia
+100 = { "Oestergo" "Leuvarda" } #fictional Oestergo, based off of French Westergo, but W is transliterated to spanish Oe as in 'Oeste', 'West'
+1931 = { "Frisia Oriental" "Emden" }
+3350 = { "Drente" "Drente" }
+3353 = { "Alrededores" "Delfzijl" }
+4382 = { "Groninga" "Groninga" }
+5027 = { "Estergo" "Dokkum" } #same as Oestergo
+
+##north german region
+#hesse
+81 = { "Marburgo" "Marburgo" }
+1762 = { "Cassel" "Cassel" }
+#westphalia
+69 = { "Tremonia" "Tremonia" }
+86 = { "Muñiste" "Muñiste" }
+#holstein
+44 = { "Hamburgo" "Hamburgo" }
+45 = { "Lubeca" "Lubeca" }
+#eastphalia
+1758 = { "Hánover" "Hánover" }
+4773 = { "Gotinga" "Gotinga" }
+#lower saxony
+53 = { "Luneburgo" "Luneburgo" }
+1851 = { "Lauemburgo" "Lauemburgo" }
+5378 = { "Vendos" "Lüchow" }
+#mittelmark
+50 = { "Berlín" "Berlín" }
+#upper saxony
+61 = { "Dresda" "Dresda" }
+62 = { "Lipsia" "Lipsia" }
+#franconia
+87 = { "Nuremberga" "Nuremberga" }
+4716 = { "Coburgo" "Coburgo" }
+#thuringia
+63 = { "Érfurt" "Érfurt" }
+#west rhineland
+80 = { "Tréveris" "Tréveris" }
+84 = { "Dusseldórfia" "Dusseldórfia" } #por
+85 = { "Colonia" "Colonia" }
+1878 = { "Aquisgrán" "Aquisgrán" }
+3387 = { "Coblenza" "Coblenza" }
+3390 = { "Bona" "Bona" }
+#weser estuary
+1874 = { "Brema" "Brema" }
+#anhalt
+52 = { "Magdeburgo" "Magdeburgo" }
+#lower silesia
+264 = { "Breslavia" "Breslavia" }
+##south germany
+#weser estuary
+55 = { "Oldemburgo" "Oldemburgo" }
+#lower palatinate
+4767 = { "Dos Puentes" "Dos Puentes" }
+5021 = { "Sarrebruck" "Sarrebruck" }
+#main  valley
+78 = { "Maguncia" "Maguncia" }
+79 = { "Wurzburgo" "Wurzburgo" }
+1876 = { "Fráncfort" "Fráncfort" }
+#romandie
+1867 = { "Lausana" "Lausana" }
+4720 = { "Ginebra" "Ginebra" }
+4721 = { "Friburgo" "Friburgo" }
+#switzerland
+165 = { "Berno" "Berno" }
+1869 = { "Zúrich" "Zúrich" }
+5033 = { "Basilea" "Basilea" } 
+5037 = { "Turgovia" "Turgovia" }
+#baden
+72 = { "Brisgovia" "Friburgo de Brisgovia" }
+#west swabia
+4712 = { "Constanza" "Constanza" }
+5335 = { "Tubinga" "Tubinga" }
+#east swabia
+1868 = { "Augsburgo" "Augsburgo" }
+#upper palatinate
+2957 = { "Ratisbona" "Ratisbona" }
+#upper bavara
+65 = { "Mónaco de Baviera" "Mónaco de Baviera" }
+4708 = { "Frisinga" "Frisinga" }
+#upper austria
+133 = { "Lintz" "Lintz" }
+134 = { "Viena" "Viena" }
+#salzburg
+76 = { "Salzburgo" "Salzburgo" }
+##BALKANS
+#epirus
+142 = { "Corfú" "Corfú" }
+#hellas
+146 = { "Atenas" "Atenas" }
+#morea
+4701 = { "Corinto" "Corinto" }
+#thrace
+151 = { "Constantinopla" "Constantinopla" }
+5541 = { "Alejandrópolis" "Alejandrópolis" }
+#hemimont
+149 = { "Adrianópolis" "Adrianópolis" }
+#crete
+163 = { "Candía" "Candía" }
+5585 = { "La Canea" "La Canea" }
+##scandinavia
+#sjealland
+12 = { "Copenhague" "Copenhague" }
+##british isles
+#home counties
+236 = { "Londres" "Londres" }
+#east lowlands
+248 = { "Edimburgo" "Edimburgo" }
+#west lowlands
+249 = { "Glasgow" "Glasgow" }
+##poland
+#pomerelia
+43 = { "Gedán" "Gedán" }
+##anatolia
+#ionia
+318 = { "Esmirna" "Esmirna" }
+
+##magrheb
+#barbary coast
+338 = { "Argel" "Argel" }
+5768 = { "Cherchel" "Cherchel" }
+5771 = { "Tedelles" "Tedelles" }
+#kabylia
+339 = { "Bugía" "Bugía" }
+1882 = { "Bona" "Bona" }
+#tunisia
+341 = { "Túnez" "Túnez" }
+2455 = { "Bizerta" "Bizerta" }
+2473 = { "Susa" "Susa" }
+5797 = { "Tabarca" "Tabarca" }
+5798 = { "Béja" "Béja" }
+5799 = { "Sedjnana" "Sedjnana" }
+5803 = { "La Mahometa" "La Mahometa" }
+5822 = { "Zaguan" "Zaguan" }
+#numidia
+2454 = { "El Kef" "El Kef" }
+5796 = { "La Calle" "La Calle" }
+5800 = { "Tbessa" "Tbessa" }
+#kabylia
+339 = { "Bugía" "Bugía" }
+340 = { "Constantina" "Constantina" }
+5789 = { "Gigeri" "Gigeri" }
+5792 = { "Collo" "Collo" }
+#byzancena
+2453 = { "Sifax" "Sifax" }
+4566 = { "Cairuán" "Cairuán" }
+5817 = { "La Skhira" "La Skhira" }
+5818 = { "Cabo Africa" "Mahdía" }
+5819 = { "Monastir" "Monastir" }
+5821 = { "Cillilana" "Cillilana" }
+#djerba
+353 = { "Talalati" "Talalati" }
+2954 = { "Los Gelves" "Vila de los Gelves" }
+5816 = { "Gabes" "Gabes" }
+#tripolitania
+354 = { "Trípoli de Occidente" "Trípoli" }
+#orania
+337 = { "Orán" "Orán" }
+2461 = { "Mostagán" "Mostagán" }
+4562 = { "Mazalquivir" "Mazalquivir" }
+5763 = { "Hunaín" "Hunaín" }
+#tingitan
+334 = { "Tánger" "Tánger" }
+1751 = { "Ceuta" "Ceuta" }
+4561 = { "Tetuán" "Tetuán" }
+5713 = { "Arcila" "Arcila" }
+5718 = { "Alcazarquivir" "Alcazarquivir" }  #or Alcazarseguir/seguer
+5719 = { "Alarache" "San Antonio de Alarache" }
+#rif
+335 = { "Melilla" "Melilla" }
+5714 = { "Gomera" "Xauen" }
+5715 = { "Peñón de Vélez" "Peñón de Vélez de la Gomera" }
+5716 = { "Gurugú" "Castillo de Tazuda" }
+5717 = { "Taurirt" "Taurirt" }
+5722 = { "Taza" "Taza" }
+5723 = { "Debdú" "Debdú" }
+#gharb
+343 = { "Fez" "Fez" }
+2467 = { "Mequínez" "Mequínez" }
+4563 = { "Salé" "Salé" }
+5720 = { "Uezán" "Uezán" }
+5721 = { "Taunat" "Taunat" }
+5724 = { "Útat" "Útat" }
+5725 = { "Jenifra" "Jenifra" }
+5726 = { "Sefrú" "Sefrú" }
+5727 = { "La Mamora" "La Mamora" }
+#tamesna
+342 = { "Rabat" "Rabat" }
+344 = { "Marruecos" "Marruecos" }
+2468 = { "Tedula" "Tedula" }
+4564 = { "Anfa" "Anfa" }
+4568 = { "Demnat" "Demnat" }
+5728 = { "Ain El Aouda" "Ain El Aouda" }
+5730 = { "Shauía" "Shauía" }
+5731 = { "Daí" "Daí" }
+5732 = { "Benguerir" "Benguerir" }
+#doukkala
+345 = { "Safí" "Safí" }
+2469 = { "Mazagán" "Mazagán" }
+5729 = { "Azamor" "Azamor" }
+5733 = { "Sidi Bennúr" "Sidi Bennúr" }
+5734 = { "Chichaúa" "Chichaúa" }
+#sus
+348 = { "Tarudante" "Tarudante" }
+1110 = { "Cabo Aguer" "Santa Cruz del Cabo Aguer" }
+2470 = { "Mogador" "Mogador" }  #Iles Purpuraires
+5738 = { "Tafraut" "Tafraut" }
+#cape juby
+347 = { "Mar Pequeña" "Santa Cruz de la Mar Pequeña" }
+5739 = { "El Uatia" "El Uatia" }
+5741 = { "Cabo Juby" "Santa Cruz del Cabo Juby" }   #Casa del Mar is 19th-20th century, maybe we should left it aside. Invented name. 
+#to sort out 
+336 = { "Tremecén" "Tremecén" }
+2465 = { "Uxda" "Uxda" }    #or Uchda
+2472 = { "Uargla" "Uargla" }
+
+##EGYPT 
+358 = { "Alejandría" "Alejandría" }
+361 = { "El Cairo" "El Cairo" }
+
+##LEVANT 
+379 = { "Jerusalén" "Jerusalén" }
+2313 = { "Antioquía" "Antioquía" }
+6146 = { "Acre" "San Juan de Acre" }
+
+#new world castillian from vanilla
+488 = "La Sabana"
+490 = "Santo Domingo"
+492 = { "Puerto Rico" "San Juan" }
+836 = "Cartago"
+839 = "San Salvador"
+840 = "Trujillo"
+852 = { "México" "Ciudad de México" }
+854 = "Tepic"
+855 = "Mazatlan"
+857 = "San Luis Potosi"
+860 = "Durango"
+862 = "Sonora"
+863 = "Paso del Norte"
+864 = "Chihuahua"
+865 = { "Baja California" "San Bruno" }
+866 = { "Los Cabos" "San José del Cabo" }
+1101 = "Aceite"
+2614 = "Nuevo Leon"
+2616 = "Cucurpe"
+2618 = "Santa Barbara"
+2619 = "Saltillo"
+2620 = "Ensenada"
+2623 = "Huetamo"
+2626 = "Toluca"
+2628 = "Tepeaca"
+2637 = "Puerto Caballos"
+2640 = "Tegucigalpa"
+2644 = "Puebla"
+2647 = { "Veracruz" "Veracruz" }
+2658 = "Azua"
+2659 = "Puerto Plata"
+2662 = "Comayagua"
+2667 = "Laredo"
+2668 = "Rio Bravo"
+
+
+#USA
+868 = { "Los Angeles" "Los Angeles" }
+869 = { "Monterrey" "Monterrey" }
+877 = { "Tucson" "Tuscon" }
+880 = { "Santa Fe" "Santa Fe" }
+881 = "Socorro"
+883 = { "San Antonio" "San Antonio" }
+884 = "La Bahia"
+885 = "Llano Estacado"
+887 = "Los Tejas"
+888 = { "Isla de Malhado" "Villa Gálvez" }
+897 = "Cadron"
+900 = { "San Luis" "San Luis" }
+902 = "Misuri"
+918 = "Barancas"
+926 = "Mayaca"
+927 = { "San Agustin" "San Agustin" }
+2021 = { "San Francisco" "San Fracisco" }
+2476 = { "San Diego" "San Diego" }
+2498 = { "El Paso" "El Paso" }
+2499 = "Rio Grande"
+2514 = "Nuevo Madrid"
+2516 = "Los Adaes"
+2529 = "Los Nogales"
+2536 = "Tegesta"
+2542 = "Santa Elena"
+2665 = "Los Ais"
+2666 = "San Saba"
+
+4351 = "Negros"
+
+# Caribbean
+487 = "Santiago"
+491 = "Curasao"
+481 = "La Bermuda"
+1881 = "San Martín"
+494 = "San Jorge"
+495 = "St María Antigua"
+496 = "Guadalupe"
+498 = "Martinica"
+499 = "San Luzia"
+500 = "San Vicente"
+501 = "Barbado"
+
+2473 = "Susa"
+1306 = "Santo Tomé"
+1103 = "Santa Apolonia"
+1986 = "Nueva Caledonia"
+1994 = "San Francisco" #seriously
+1997 = "Isla de Pacífico Central"
+1988 = "Isla de Pascua"
+1098 = "Isla Santa Elena"
+2002 = "Islas Galápagos"
+
+1987 = "Islas de la Sociedad"
+1725 = "Archipiélago Tuamotu"
+1238 = "Islas Salomón"
+1991 = "Islas Gilbert"
+1993 = "Los Pintados"
+1096 = "Cabo Verde"
+2025 = "Isla San Pedro"
+1095 = "Islas Malvinas"
+4720 = "Ginebra"
+1177 = { "Cabo" "Ciudad del Cabo" }

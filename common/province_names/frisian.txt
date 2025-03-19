@@ -1,0 +1,77 @@
+#AI Update
+# = { "x" "x" }
+
+#/  means no Frisian name for province known
+# / means no Frisian name for city known
+# in front means neither known
+
+########################################
+#        Low Countries by sim          #
+########################################
+
+## Netherlands/Nederland
+# Gueldres
+99 = { "Arnhim" "Arnhim" }
+#1742 = { "Opper Gelre" "Roermond" }
+#2975 = { "Kleef" "Kleef" }
+3351 = { "Nimwegen" "Nimwegen" }
+3352 = { "Sutfen" "Sutfen" }
+4381 = { "Oerisel" "Swol" }
+5019 = { "Wesel" "Wesel" }
+5026 = { "Twinte" "Ynskedee" }
+
+#frisia
+100  = { "Westergoa" "Ljouwert" } 
+1931 = { "Emden" "Emden" }
+3350 = { "Drinte" "Coevorden" }
+3353 = { "Ommelannen" "Delfsyl" }
+4382 = { "Grins" "Grins" }
+5027 = { "Eastergoa" "Dokkum" } 
+5372 = { "Jever" "Jever" }
+
+#Holland
+96 = { "Seelân" "Middelburch" }
+97 = { "Amsterdam" "Amsterdam" }
+98 = { "Utert" "Utert" }
+3348 = { "Doardt" "Doardt" }
+3349 = { "West-Fryslân" "Haarlim" }
+4383 = { "De Haach" "De Haach"}
+5025 = { "Leien" "Leien" }
+
+## Belgium
+# Flanders
+90 = { "Brêge" "Brêge" } #also Brigge
+1865 = { "Gint" "Gint" }
+3302 = { "Dúntsjerk" "Dúntsjerk" }
+3303 = { "Iper" "Iper" }
+3304 = { "Doarnik" "Doarnik" }
+4769 = { "Risel" "Risel" }
+#5011 = { "Dowaai" "Dowaai" }
+#5012 = { "Kortrijk" "Kortrijk" }
+#5013 = { "Aalst" "Aalst" }
+
+# Hainaut
+91 = { "Bergen" "Bergen" }
+1743 = { "Kameryk" "Kameryk" }
+#3329 = { "Valencijn" "Valencijn" }
+#5016 = { "Malbode" "Malbode" }
+5227 = { "Ath" "Ath" }
+
+
+###Misc. by pleib and sim
+#brabant
+4770 = { "De Bosk" "'De Bosk" }
+# Wallonia
+2974 = { "Loan" "Hasselt" } # /
+3346 = { "Limburch" "Maastricht" } # /
+# Luxemburg
+94 = { "Lúksemboarch" "Lúksemboarch"}
+##North Germany
+#weser estuary
+55 = { "Aldenburch" "Aldenburch" }
+5373 = { "de Wede" "Varel" }
+5384 = { "Hodelerlân" "Otterndorf" }
+##Scandinavia
+#schleswig
+5615 = { "Noardfryslân" "Hâsem" }
+5616 = { "Tuner" "Tuner" }

@@ -1,0 +1,37 @@
+#351 - Biskra
+#Area - Zab
+#Region - Maghreb
+
+#Core Details
+capital = "Biskra"
+is_city = yes
+owner = TUN
+controller = TUN
+
+#Demographics
+culture = shawia
+religion = sunni
+
+#Development and Trade
+base_tax = 3
+base_production = 3
+base_manpower = 3
+trade_goods = cotton
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = TUN
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+center_of_trade = 1
+
+#Discoveries
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

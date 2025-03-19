@@ -1,0 +1,569 @@
+#AI Update
+# = { "x" "x" }
+#organized from here by pleibos
+
+##BALKANS
+#thrace
+151 = { "Konstantinoúpolis" "Konstantinoúpolis" }
+4779 = { "Kallípolis" "Kallípolis" }
+5524 = { "Bizýi" "Bizýi" }
+5525 = { "Selymbría" "Selymbría" }
+5526 = { "Mídeia" "Mídeia" }
+5538 = { "Raidestós" "Raidestós" }
+5539 = { "Charioúpolis" "Charioúpolis" }
+5540 = { "Aínos" "Aínos" }
+#makedonia
+148 = { "Thessaloníki" "Thessaloníki" }
+1853 = { "Kastoría" "Kastoría" }
+4702 = { "Sérres" "Sérres" }
+4705 = { "Komotiní" "Komotiní" }
+4780 = { "Ochrída" "Ochrída" }
+5541 = { "Didymóteicho" "Didymóteicho" }
+5542 = { "Kristoúpolis" "Kristoúpolis" }
+5543 = { "Dráma" "Dráma" }
+5544 = { "Xánthi" "Xánthi" }
+5553 = { "Halkidikí" "Ierissós" }
+5554 = { "Kallikón" "Kallikón" }
+5555 = { "Vodená" "Vodená" }
+5556 = { "Sérvia" "Sérvia" }
+5557 = { "Piería" "Kateríni" }
+5560 = { "Monastíri" "Monastíri" }
+#thessalia
+147 = { "Tríkala" "Tríkala" }
+5558 = { "Magnisía" "Vólos" }
+5559 = { "Fthiótida" "Zetoúnion" }
+5569 = { "Lárisa" "Lárisa" }
+5570 = { "Fársalos" "Fársalos" }
+5571 = { "Patratzíki" "Patratzíki" }
+#Central Greece
+146 = { "Attikí" "Athína" }
+5573 = { "Livadeiá" "Livadeiá" }
+5574 = { "Thíva" "Thíva" }
+5575 = { "Megarídas" "Mégara" }
+#epirus
+142 = { "Koryfó" "Kérkyra" }
+144 = { "Ioánnina" "Ioánnina" }
+4698 = { "Kefaloniá" "Argostóli" }
+5551 = { "Zákynthos" "Zákynthos" }
+5565 = { "Vagenetía" "Párga" } #medieval name of thesprotia
+#Aetolia
+4699 = { "Ártas" "Árta" }
+5566 = { "Váltou" "Amfilochía" }
+5567 = { "Népahtos" "Népahtos" }
+5568 = { "Vrachóri" "Vrachóri" }
+5572 = { "Sálona" "Sálona" }
+5589 = { "Ákarnanía" "Vónitsa" }
+#pelopnnese
+145 = { "Mystrás" "Mystrás" } #or Pentadáktylos
+1773 = { "Makárias" "Kalamáta" }
+4701 = { "Korinthías" "Kórinthos" }
+5515 = { "Kýthira" "Agíos Demítrios" }
+5577 = { "Ílis" "Glaréntza" }
+5578 = { "Arkadía" "Arkadía" }
+5579 = { "Akrítas" "Kóroni" }
+5580 = { "Pátra" "Pátra" }
+5581 = { "Karýtaina" "Karýtaina" }
+5582 = { "Monemvasía" "Monemvasiá" }
+5583 = { "Argolídas" "Naúplion" }
+5584 = { "Kalávryta" "Kalávryta" } #or Azanía province name (not of city), a very old division of Northern Achaea
+#aegean islands
+164 = { "Náxos" "Hóra Náxou" }
+320 = { "Ródos" "Ródos" }
+2348 = { "Chíos" "Chíos" }
+3003 = { "Nevrípos" "Nevrípos" }
+4700 = { "Lésvos" "Mytilíni" }
+5500 = { "Lémnos" "Mýrina" }
+5576 = { "Kárystos" "Kárystos" }
+5588 = { "Ándros" "Ándros" }
+#crete 
+163 = { "Megálo Kástro" "Megálo Kástro" }
+5585 = { "Chaníos" "Chaniá" }
+5586 = { "Rethýmnou" "Réthymno" }
+5587 = { "Lasíthi" "Siteía" }
+#hemimont
+149 = { "Ádrianoúpolis" "Ádrianoúpolis" }
+1764 = { "Pýrgos" "Pýros" }
+5522 = { "Mesembría" "Mesembría" }
+5523 = { "Sozoúpolis" "Sozoúpolis" }
+5534 = { "Karnobát" "Karnobát" }
+5535 = { "Iamboúlis" "Iamvoúlis" }
+5536 = { "Eslíven" "Eslíven" }
+5537 = { "Saránta Ekklisiés" "Saránta Ekklisiés" }
+5546 = { "Irenoúpolis" "Irenoúpolis" }
+#moesia
+150 = { "Pléven" "Pléven" }
+4704 = { "Tírnovo" "Tírnovo" }
+5527 = { "Shoúmen" "Shoúmen" }
+5528 = { "Ioannoúpolis" "Iaannoúpolis" }
+5529 = { "Razikrád" "Razikrád" }
+5530 = { "Kizíl Agáts" "Kizíl Agáts" }
+5531 = { "Roúse" "Roúse" }
+5532 = { "Lóvets" "Lóvets" }
+5533 = { "Nikópolis" "Nikópolis" }
+5547 = { "Krán" "Krán" }
+#Bulgaria
+1765 = { "Sardikí" "Serdonoúpolis" }
+2750 = { "Filippoúpolis" "Filippoúpolis" }
+4703 = { "Beleboúdsa" "Beleboúdsa" }
+5521 = { "Bárnan" "Bárnan" } 
+5545 = { "Mársa" "Mársa" }
+5548 = { "Ánevo" "Ánevo" }
+5549 = { "Sámoko" "Sámoko" }
+5550 = { "Áno Nevrokópi" "Áno Nevrokópi" }
+#iron gates
+2746 = { "Vidína" "Vidína" }
+3000 = { "Naïssós" "Naïssós" }
+5425 = { "Pírot" "Pírot" }
+5503 = { "Koutlóvitsa" "Koutlóvitsa" }
+5504 = { "Vrátsa" "Vrátsa" }
+5552 = { "Pérnik" "Pérnik" }
+#silistria
+159 = { "Silístra" "Silístra" }
+4706 = { "Aigissós" "Aigissós" }
+5516 = { "Isaák" "Isaák" }
+5518 = { "Konstántia" "Konstántia" }
+5519 = { "Kalé Ákra" "Kalé Ákra" }
+5520 = { "Karvoúna" "Karvoúna" }
+#albania
+143 = { "Aulónas" "Aulónas" }
+4174 ={ "Dyrráchion" "Dyrráchion" }
+4750 = { "Kroaí" "Kroaí" }
+5430 = { "Episkopé" "Episkopé" }
+5432 = { "Dipar" "Dipar" }
+5433 = { "Poulcheriópolis" "Poulcheriópolis" }
+5434 = { "Korytsá" "Korytsá" }
+5435 = { "Himárra" "Himárra" }
+5436 = { "Argyrókastron" "Argyrókastron" }
+5437 = { "Bouthrotón" "Bouthrotón" }
+#dioclea
+138 = { "Ríbnitca" "Ríbnitca" }
+1831 = { "Ágios Stéfanos" "Ágios Stéfanos" }
+4175 = { "Lissós" "Lissós" }
+4754 = { "Askrývion" "Askrývion" }
+5284 = { "Skódra" "Skódra" }
+#zachlumia
+137 = { "Ragoúsa" "Ragoúsa" }
+139 = { "Narôna" "Móstar" }
+5410 = { "Mplàgkaï" "Mplàgkaï" }
+5415 = { "Trempínie" "Trempínie" }
+#dalmatia
+136 = { "Aspálathos" "Aspálathos" }
+4753 = { "Ídassa" "Ídassa" }
+5393 = { "Símpenik" "Símpenik" }
+5395 = { "Elafoúsa" "Elafoúsa" }
+5408 = { "Delmínion" "Delmínion" }
+#croatia
+5387 = { "Kýrikon" "Kýrikon" }
+5389 = { "Senía" "Senía" }
+5390 = { "Gátska" "Brínie" }
+5391 = { "Mpíxats" "Mpíxats" }
+#istria
+130 = { "Rygínion" "Rygínion" }
+5188 = { "Poúlai" "Poúlai" }
+#dardania
+1766 = { "Prístina" "Prístina" }
+3001 = { "Skópia" "Skópia" }
+5421 = { "Petrísen" "Petrísen" }
+5423 = { "Epskión" "Espikión" }
+5561 = { "Prílapos" "Prílapos" }
+5562 = { "Estipeón" "Estipeón" }
+5563 = { "Tranátoura" "Tranátoura" }
+#serbia
+141 = { "Semendría" "Semendría" }
+1827 = { "Ársa" "Ársa" }
+4176 = { "Márgos" "Kroúsevats" }
+5426 = { "Komplós" "Komplós" }
+5427 = { "Kapedunum" "Kapedunum" }
+5429 = { "Oruxeío" "Oruxeío" } #means (a) 'mine' as Rudnik does in Serbian
+5431 = { "Koloúmpria" "Koloúmpria" }
+#syrmia
+1767 = { "Vóukovar" "Vóukovar" }
+4239 = { "Lefkó Froúrio" "Lefkó Froúrio" } #white fortress, many languages translated this name during the middle ages for the city
+4126 = { "Bagátsion" "Bagátsion" }
+4173 = { "Sírmio" "Mitróvitsoa tou Srem" }
+4757 = { "Kóloumpara" "Bálievo" }
+5396 = { "Koúkio" "Koúkio" }
+5403 = { "Aimomixía" "Aimomixía" } #from Latin name
+5419 = { "Álata" "Álata" } #from Salts
+5420 = { "Sribreník" "Sribreník" }
+5428 = { "Káto Sírmio" "Sámpats" }
+#bosnia
+4755 = { "Vísegkrant" "Vísegkrant" }
+5416 = { "Sremprénitsoa" "Sremprénitsoa" }
+
+##CARPATHIA 
+#east muntenia
+2998 = { "Mousaíos" "Mousaíos" }
+5510 = { "Boukourésti" "Boukourésti" }
+5511 = { "Prahova" "Târgshor" }
+5513 = { "Proílava" "Proílava" }
+#west muntenia
+161 = { "Tirgkóviste" "Tirgkóviste" }
+4531 = { "Ágios Geórgios" "Ágios Geórgios" }
+5506 = { "Theodorápolis" "Theodorápolis" }
+5507 = { "Ordessoú" "Avlí tis Ordessoú" }
+5509 = { "Pitésti" "Pitésti" }
+#oltenia
+160 = { "Kraïóva" "Kraïóva" }
+4532 = { "Sevíro" "Toúrnou-Sevíro" }
+5459 = { "Bíltsea" "Rámnikou Bíltsea" }
+5498 = { "Tírkgou Zíou" "Tírkgou Zíou" }
+5499 = { "Kalafát" "Kalafát" }
+5501 = { "Karakállas" "Karakállas" }
+#bessarabia
+1756 = { "Ásprokástron" "Ásprokástron" }
+
+##anatolia
+#bithynia
+316 = { "Nikomídeia" "Nikomídeia" }
+317 = { "Proúsa" "Proúsa" }
+5630 = { "Mesothynía" "Skoutárion" }
+5631 = { "Dafnousía" "Dafnousía" }
+5632 = { "Ntoúztze" "Ntoúztze" }
+5633 = { "Pontoherákleia" "Pontoherákleia" }
+5634 = { "Pýlai" "Pýlai" }
+5635 = { "Níkaia" "Níkaia" }
+5636 = { "Vilokóma" "Vilokóma" }
+5637 = { "Thebásion" "Thebásion" }
+#mysia
+2296 = { "Pegaí" "Pegaí" }
+5660 = { "Miletópolis" "Miletópolis" }
+5661 = { "Dardanéllia" "Dardanéllia" }
+5662 = { "Aiolía" "Ádramýttion" }
+5663 = { "Palaiókastron" "Palaiókastron" }
+5664 = { "Pérgamos" "Pérgamos" }
+5665 = { "Pegádos" "Pegádos" }
+5685 = { "Kydoníes" "Kydoníes" }
+#ionia
+318 = { "Smýrni" "Smýrni" }
+2297 = { "Magnisía i prós Sipýlo" "Magnisía i prós Sipýlo" }
+5667 = { "Thyáteira" "Thyáteira" }
+5680 = { "Éphesos" "Ágios Theológios" } 
+5681 = { "Tsesmé" "Tsesmé" }
+5682 = { "Theíra" "Theíra" }
+5683 = { "Filadélfeia" "Filadélfeia" }
+5684 = { "Fókaia" "Fókaia" }
+#Caria
+319 = { "Móvolla" "Móvolla" }
+5676 = { "Marmarís" "Marmarís" }
+5677 = { "Távai" "Távai" } 
+5678 = { "Bóntroum" "Bóntroum" } #or halikarnassos
+5679 = { "Mýlasa" "Mýlasa" }
+#Phyrgia
+322 = { "Kotýaion" "Kotýaion" }
+4311 = { "Polývoton" "Polývoton" }
+4312 = { "Dorýlaiom" "Dorýlaiom" }
+5666 = { "Tiberiópolis" "Tiberiópolis" }
+5668 = { "Ousákeion" "Ousákeion" }
+5669 = { "Nikópolis" "Nikópolis" }
+5686 = { "Ámórion" "Ámórion" }
+5694 = { "Filomílion" "Filomílion" }
+#Pisidia
+1848 = { "Sapórta" "Sapórta" }
+2298 = { "Áttáleia" "Áttáleia" }
+4308 = { "Attoúda" "Attoúda" }
+5670 = { "Polydórion" "Polydórion" }
+5672 = { "Korkoúteli" "Korkoúteli" }
+5673 = { "Foínix" "Foínix" }
+5674 = { "Elmalí" "Elmalí" }
+5675 = { "Mákri" "Mákri" }
+5693 = { "Místheia" "Místheia" }
+#Pamphylia
+2302 = { "Germanikópolis" "Germanikópolis" }
+5671 = { "Síde" "Síde" }
+5687 = { "Korakísion" "Korakísion" }
+5688 = { "Selinoûs" "Selinoûs" } #or Traïonoúpolis
+5689 = { "Seleúkeia" "Seleúkeia" }
+5690 = { "Kórykos" "Kórykos" }
+5691 = { "Aláhan" "Aláhan" }
+#Lycaonia
+323 = { "Íkónion" "Íkónion" }
+324 = { "Láranda" "Láranda" }
+4307 = { "Kolóneia" "Kolóneia" }
+5692 = { "Seïntiosechír" "Seïntiosechír" }
+5695 = { "Irákleia Kyvíostra" "Irákleia Kyvíostra" }
+5698 = { "Soultanchaní" "Soultanchaní" }
+5699 = { "Kocisára" "Kocisára" } #fictional
+#Galatia
+326 = { "Ánkyra" "Ánkyra" }
+2299 = { "Klaudiópolis" "Klaudiópolis" }
+2300 = { "Táovion" "Táovion" }
+4313 = { "Gángra" "Gángra" }
+4314 = { "Íoustinianoúpolis" "Íoustinianoúpolis" }
+5638 = { "Tserkés" "Tserkés" }
+5641 = { "Lagánia" "Lagánia" }
+5647 = { "Górdion" "Górdion" }
+5650 = { "Asklépios" "Asklépios" }
+5651 = { "Eucháneia" "Eucháneia" }
+#Paphlagonia
+325 = { "Kastamoné" "Kastamoné" }
+328 = { "Sinópe" "Sinópe" }
+5639 = { "Krateía" "Krateía" }
+5640 = { "Ámastris" "Ámastris" }
+5642 = { "Eflaní" "Eflaní" }
+5643 = { "Ionópolis" "Ionópolis" }
+5644 = { "Safrámpolis" "Safrámpolis" }
+5645 = { "Dokeía" "Dokeía" }
+#west pontus
+1846 = { "Ámáseia" "Ámáseia" }
+2304 = { "Sampsoúnta" "Sampsoúnta" }
+4315 = { "Eudókeia" "Eudókeia" }
+5646 = { "Mersifón" "Mersifón" }
+5648 = { "Páfra" "Páfra" }
+5649 = { "Laodíkeia" "Laodíkeia" }
+5652 = { "Neokaisáreia" "Neokaisáreia" }
+5653 = { "Polemnónion" "Polemnónion" }
+5654 = { "Milás" "Milás" }
+5659 = { "Kotýora" "Kotýora" }
+#pontus
+330 = { "Trapezoúnta" "Trapezoúnta" }
+#cappadocia
+2301 = { "Kaisáreia" "Kaisáreia" }
+5656 = { "Charkíschla" "Charkíschla" }
+5657 = { "Terzilí" "Terzilí" }
+5658 = { "Bogázligion" "Bogázligion" }
+5696 = { "Magída" "Magída" }
+5697 = { "Neápolis" "Neápolis" } 
+5704 = { "Áblástas" "Áblástas" }
+5705 = { "Kykysós" "Kykysós" }
+5706 = { "Ádriátheia" "Ádriátheia" }
+#little armenia
+329 = { "Sevásteia" "Sevásteia" }
+4310 = { "Tefrikí" "Tefrikí" }
+5655 = { "Aksár" "Aksár" }
+#commagene
+2303 = { "Melitiní" "Melitiní" }
+5701 = { "Samósata" "Samósata" }
+5702 = { "Pérri" "Pérri" }
+5703 = { "Taránda" "Taránda" }
+#cilicia
+327 = { "Ádana" "Ádana" }
+332 = { "Germaníkeia" "Germaníkeia" }
+3215 = { "Sísion" "Sísion" } 
+4298 = { "Antiocheías tou Taúros" "Antiocheías tou Taúros" }
+4999 = { "Myrsíni" "Myrsíni" } #or even Zefýrion, but Myrsini seems more contemporary
+5337 = { "Tarsós" "Tarsós" } 
+5371 = { "Péndosis" "Péndosis" }
+5700 = { "Kilís" "Kilís" }
+5707 = { "Elaioúsa Sevastí" "Elaioúsa Sevastí" }
+#cyprus
+321 = { "Lefkosía" "Lefkosía" }
+4998 = { "Karpasía" "Kerýneia" }
+5000 = { "Lemesós" "Lemesós" }
+5001 = { "Lárnaka" "Lárnaka" }
+5002 = { "Ammóchostos" "Ammóchostos" }
+
+##levant
+#jabal bahra
+2313 = { "Ántiócheia" "Ántiócheia" }
+6162 = { "Markát" "Markát" }
+6163 = { "Marsýas" "Marsýas" }
+6164 = { "Laodíkeia" "Laodíkeia i Páralos" }
+6165 = { "Idlíb" "Idlíb" }
+6166 = { "Ágios Symeón" "Ágios Symeón" }
+6167 = { "Alexandrétta" "Alexandrétta" }
+#thughur
+377 = { "Béroia" "Béroia" }
+407 = { "Kalliníkos" "Kalliníkos" }
+2308 = { "Íoustinoúpolis" "Íoustinoúpolis" }
+6168 = { "Tseneséri" "Tseneséri" }
+6169 = { "Barbalissós" "Barbalissós" } #B is kept due to ancient name
+6170 = { "Ierápolis" "Ierápolis" }
+6171 = { "Bíra" "Bíra" }
+6172 = { "Ellinópolis" "Ellinópolis" }
+#badiya
+405 = { "Palmýra" "Palmýra" }
+1849 = { "Épifáneia" "Épifáneia" }
+4271 = { "Sikné" "Sikné" }
+4297 = { "Émesa" "Émesa" }
+6159 = { "Nabék" "Nabék" }
+6160 = { "Salamías" "Salamías" }
+#al jazira
+2314 = { "Déos" "Déos" } #got from random translation
+6173 = { "Ásdra" "Ásdra" }
+#lebanon
+478 = { "Trípolis" "Trípolis" }
+6148 = { "Verytós" "Verytós" }
+6154 = { "Óros Lívanos" "Vaklín" }
+6155 = { "Ílioúpolis" "Ílioúpolis" }
+6156 = { "Vývlos" "Vývlos" }
+#syria
+381 = { "Atzloún" "Atzloún" }
+382 = { "Damásko" "Damásko" }
+4270 = { "Azrák" "Azrák" }
+6150 = { "Vósra" "Vósra" }
+6151 = { "Ádráa" "Ádráa" }
+#palestine
+364 = { "Gáza" "Gáza" }
+379 = { "Íerosólyma" "Íerosólyma" }
+1854 = { "Flávia Neápolis" "Flávia Neápolis" }
+1855 = { "Sidón" "Sidón" }
+6144 = { "Chevróna" "Chevróna" }
+6145 = { "Iopeía" "Iopeía" }
+6146 = { "Áke" "Áke" }
+6147 = { "Galilaía" "Sefét" }
+6152 = { "Rámla" "Rámla" }
+#balqa
+2327 = { "Máan" "Máan" }
+4268 = { "Áila" "Áila" }
+6149 = { "Saltís" "Saltís" }
+6153 = { "Pétra" "Pétra" } 
+#Sinai
+365 = { "Óros ton Elaión" "Óros ton Elaión" }
+6127 = { "Koskinízo" "Koskinízo" }
+6128 = { "Ágías Aíkaterínis" "Ágías Aíkaterínis" }
+6129 = { "Táva" "Táva" }
+6130 = { "Kátia" "Kátia" }
+6131 = { "Rinokóroura" "Rinokóroura" }
+6132 = { "Eloúsa" "Eloúsa" }
+##egypt
+#east nile delta
+363 = { "Tamíathis" "Tamíathis" }
+2315  = { "Klýsma" "Klýsma" }
+2316 = { "Didoúseya" "Didoúseya" }
+4316 = { "Potamós" "Potamós" }
+6122 = { "Felbés" "Felbés" }
+#west nile delta
+358 = { "Álexándreia" "Álexándreia" }
+362 = { "Volvitíni" "Volvitíni" }
+4317 = { "Ermópolis Mikrá" "Ermópolis Mikrá" }
+6126 = { "Ónouphos" "Ónouphos" }
+6174 = { "Páva" "Páva" }
+#lower egypt
+359 = { "Arsinóë" "Arsinóë" }
+361 = { "Káiro" "Káiro" }
+4318 = { "Afroditópolis" "Afroditópolis" } #or else Atfích
+6120 = { "Filakí" "Filakí" }
+6121 = { "Irakleíoupolis" "Irakleíoupolis" }
+6177 = { "Mémfis" "Mémfis" }
+#middle egypt
+2317 = { "Hermoupólis Mégali" "Hermoupólis Mégali" }
+2319 = { "Panópolis" "Panópolis" }
+6123 = { "Oxýrrhynkhos" "Oxýrrhynkhos" }
+6124 = { "Moní" "Moní" }
+6125 = { "Lykópolis" "Lykópolis" }
+6139 = { "Vompae" "Vompae" }
+6175 = { "Áputhíkí" "Áputhíkí" }
+#upper egypt
+360 = { "Apollonópolis i Mikrá" "Apollonópolis i Mikrá" }
+1231 = { "Suíne" "Suíne" }
+4319 = { "Latópolis" "Latópolis" }
+4320 = { "Ágios Geórgios" "Ágios Geórgios" }
+6140 = { "Kainí" "Kainí" }
+6141 = { "Dióspolis Mikrá" "Dióspolis Mikrá" }
+6142 = { "Apollonópolis Megális" "Apollonópolis Megális" }
+6143 = { "Ómvos" "Ómvos" }
+6176 = { "Dióspolis" "Dióspolis" } #or Thívai
+#red sea hills
+2321 = { "Lefkós Limín" "Lefkós Limín" }
+6135 = { "Filoterída" "Filoterída" }
+#wahat
+1233 = { "to Exoterikó" "to Exoterikó" }
+2318 = { "Tríti Óasi" "Tríti Óasi" }
+4323 = { "to Esoterikó" "to Esoterikó" }
+#marmarica
+2326 = { "Pétras Tagmatárchis" "Pétras Tagmatárchis" }
+6118 = { "Ántífrai" "Ántífrai" }
+6134 = { "Zígra" "Zígra" }
+
+#random dalmatia
+136 = { "Spálathos" "Spálathos" }
+
+#Crimea by math 
+284 = { "Neapolis" "Neapolis" } #Simferopol - Scythian Neapolis
+285 = { "Theodosia" "Theodosia" }
+2410 = { "Theodoró" "Theodoró" }
+6181 = { "Parathalassia" "Symbola" }
+6182 = { "Sougdaia" "Sougdaia" }
+6183 = { "Bosporos" "Bosporos" }
+6184 = { "Cremnoi" "Cremnoi" }
+6185 = { "Karassoúpazári" "Karassoúpazári" }    #Invented - waiting for someone to check it
+6186 = { "Taphros" "Taphros" }
+6187 = { "Kerkinitis" "Kerkinitis" }
+
+##ITALY
+#use Griko when available <3
+#sicily
+124 = { "Messíni" "Messíni" }
+125 = { "Pánormos" "Pánormos" }
+126 = {  "Mélite" "Mntína" }
+2982 = { "Syrakoúses" "Syrakoúses" } #modern
+4736 = { "Drépanon" "Drépanon" }
+4737 = { "Akrágas" "Akrágas" }
+5131 = { "Aítna" "Kátania" }
+5132 = { "Kefaloídion" "Kefaloídion" }
+5133 = { "Mótika" "Mótika" }
+5134 = { "Kaltatziróne" "Kaltatziróne" }
+5135 = { "Kaltanissétta" "Kaltanissétta" }
+#sardinia
+127 = { "Sássari" "Sássari" }
+2986 = { "Káliari" "Káliari" }
+4735 = { "Aristánis" "Aristánis" }
+5007 = { "Galloúra" "Agías Marías Mantalénas" }
+5008 = { "Nouóro" "Nouóro" }
+5009 = { "Oliástra" "Tortolí" }
+5010 = { "Inklésias" "Inklésias" }
+5405 = { "Bóza" "Bóza" } 
+#corsica
+1247 = { "Bastiá" "Bastiá" }
+5003 = { "Kalví" "Kalví" }
+5004 = { "Aiákeio" "Aiákeio" }
+5005 = { "Bonifátsio" "Bonifátsio" }
+5006 = { "Korté" "Korté" }
+#apulia
+122 = { "Tárantas" "Tárantas" }
+1933 = { "Bári" "Bári" }
+5122 = { "Bárdoulos" "Bárdoulos" }
+5123 = { "Ántria" "Ántria" }
+5124 = { "Brentésion" "Brentésion" }
+5125 = { "Luppìu" "Luppìu" }
+#calabria
+123 = { "Rìgi" "Rìgi" }
+1934 = { "Poténtsa" "Poténtsa" }
+2984 = { "Kozéntsa" "Kozéntsa" }
+5126 = { "Matéra" "Matéra" }
+5127 = { "Mélfi" "Mélfi" }
+5128 = { "Rosiánoum" "Rosiánoum" }
+5129 = { "Krótoun" "Krótoun" }
+5130 = { "Katantzárion" "Katantzárion" }
+#campania
+121 = { "Neápolis" "Néapolis" }
+2983 = { "Salérno" "Salérno" }
+4734 = { "Abellíno" "Abellíno" }
+5097 = { "Gaéta" "Gaéta" }
+5110 = { "Sóra" "Sóra" }
+5111 = { "Capouá" "Capouá" }
+5112 = { "Benevénto" "Benevénto" }
+5113 = { "Arían" "Arían" }
+5114 = { "Lefkanía" "Eléa" }
+#capitanate
+2985 = { "Fótza" "Fótza" }
+5119 = { "Ágias Afstirós" "Ágias Afstirós" }
+5120 = { "Loutséra" "Loutséra" }
+5121 = { "Gargáno" "Manfrentónia" }
+#abuzzo-molise`
+120 = { "O Aetós" "O Aetós" }
+4733 = { "Kampompáso" "Kampompáso" }
+5115 = { "Téramo" "Téramo" }
+5116 = { "Avetzáno" "Avetzáno" }
+5117 = { "Kiéti" "Kiéti" }
+5118 = { "Istónion" "Istónion" }
+#lazio
+118 = { "Rómi" "Rómi" }
+4732 = { "Tarrakiní" "Tarrakiní" }
+5088 = { "Vitérbo" "Vitérbo" }
+5089 = { "Paliá Póli" "Paliá Póli" }
+5090 = { "Tívoli" "Tívoli" }
+5091 = { "Vellétrio" "Vellétrio" }
+5092 = { "Alátri" "Alátri" }
+#marche
+119 = { "Agón" "Agón" }
+#friuli
+111 = { "Oúntine" "Oúntine" }
+1769 = { "Gorítsia" "Gorítsia" }
+4738 = { "Tergésti" "Tergésti" }
+5102 = { "Tisáni" "Tisáni" }
+5104 = { "Akyliía" "Akyliía" }
+5105 = { "Krátos tis Afstrías" "Krátos tis Afstrías" }
+#veneto
+112 = { "Venetía" "Venetía" }

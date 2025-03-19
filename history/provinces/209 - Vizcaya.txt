@@ -1,0 +1,40 @@
+#209 - Vizcaya
+#Area - Navarre
+#Region - Iberia
+
+#Core Details
+capital = "Bilbao"
+is_city = yes
+owner = BSC
+controller = BSC
+
+#Demographics
+culture = basque
+religion = catholic
+
+#Development and Trade
+base_tax = 3
+base_production = 4
+base_manpower = 3
+trade_goods = iron
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = BSC
+
+#Other Political
+hre = no
+seat_in_parliament = yes
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+center_of_trade = 2
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

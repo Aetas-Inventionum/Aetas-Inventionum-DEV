@@ -1,0 +1,97 @@
+brb_fights_france = {
+    # desc = brb_fights_france_desc
+    land_morale = -0.10
+    prestige = -1
+}
+brb_duke_of_fighting_burgundy = {
+    # desc = brb_duke_of_fighting_burgundy_desc
+    country_admin_power = -1
+    country_diplomatic_power = -1
+    country_military_power = -1
+}
+brb_weak_parliament = {
+    # desc = brb_weak_parliament_desc
+    parliament_backing_chance = 0.25
+    advisor_pool = 1
+    legitimacy = 1
+}
+brb_brabantine_constitutionalism = {
+    # desc = brb_brabantine_constituionalism
+    num_of_parliament_issues = 1
+    monthly_reform_progress = 0.5
+    diplomatic_reputation = 1
+}
+brb_strong_parliament = {
+    # desc = brb_strong_parliament_desc
+    parliament_effect_duration = 5
+    global_unrest = -2
+    stability_cost_modifier = -0.1
+}
+lbg_dense_fortifications = {
+    local_hostile_attrition = 5
+    local_defensiveness = 0.2
+}
+brb_burgundian_suspicion = {
+    # desc = brb_burgundian_suspicion_desc
+    spy_offence = 0.1
+    global_spy_defence = 0.1
+}
+brb_loyalist_nobility = {
+    nobles_loyalty_modifier = 0.1
+    all_estate_influence_modifier = -0.05
+}
+brb_hooked_in_marriage = { #epic hook and cod pun
+    # desc = brb_hooked_in_marriage_desc
+    diplomatic_upkeep = 2
+    liberty_desire_from_subject_development = -0.25
+}
+brb_independent_diplomacy = {
+    # desc = brb_independent_diplomacy_desc
+    global_spy_defence = 0.1
+    all_estate_influence_modifier = -0.05
+}
+brb_hooks_victorious = { #Hooks in charge modifier but slightly stronger, since they get disabled
+    discipline = 0.05
+	global_manpower_modifier = 0.1
+	nobles_loyalty_modifier = 0.1
+    burghers_influence_modifier = -0.05
+}
+brb_antwerper_banking = {
+    inflation_action_cost = -0.1
+    interest = -0.5
+    global_trade_power = 0.05
+}
+brb_overseas_ventures = {
+    range = 0.2
+    global_colonial_growth = 5
+}
+brb_ended_frisian_freedom = {
+    discipline = 0.05
+    shock_damage_received = -0.1
+}
+brb_count_of_hamaland = {
+    diplomatic_upkeep = 1
+    improve_relation_modifier = 0.1
+    unjustified_demands = -0.1
+}
+brb_dukes_of_lothier = {
+    diplomatic_annexation_cost = -0.2
+    accept_vassalization_reasons = 10
+    ae_impact = -0.1
+}
+utr_lacklustre_control = {
+    # desc = utr_lacklustre_control_desc
+    min_autonomy = 10
+    global_autonomy = 0.05
+}
+utr_schism = {
+    # desc = utr_schism_desc
+    devotion = -1
+    prestige = -2.5
+	global_unrest = 3
+}
+mun_feud = {
+    devotion = -1
+    prestige = -2.5
+	global_unrest = 3
+}

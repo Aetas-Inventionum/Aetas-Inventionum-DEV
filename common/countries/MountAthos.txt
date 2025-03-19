@@ -1,0 +1,141 @@
+#Country Name: Please see filename
+
+graphical_culture = greekgfx
+
+color = { 162 115 139 }
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	maritime_ideas
+	administrative_ideas
+	economic_ideas
+	quality_ideas
+	innovativeness_ideas
+	diplomatic_ideas
+}
+
+historical_units = {
+	eastern_medieval_infantry
+	eastern_knights
+	slavic_stradioti
+	eastern_militia
+	ottoman_sekban
+	ottoman_reformed_spahi
+	ottoman_reformed_janissary
+	ottoman_toprakli_hit_and_run
+	ottoman_nizami_cedid
+	ottoman_toprakli_dragoon
+	eastern_skirmisher
+	eastern_uhlan
+	eastern_carabinier
+	ottoman_new_model
+	ottoman_lancer
+}
+
+monarch_names = {
+	"Íoánnis #1" = 20
+	"Aléxios #0" = 15
+	"Konstantínos #0" = 20
+	"Andrónikos #1" = 15
+	"Manouíl #0" = 20
+	"Romanós #0" = 15
+	"Dimítrios #0" = 15
+	"Theódoros #0" = 15
+	"Michaíl #0" = 20
+	"Andréas #0" = 10
+	"Eléni #0" = -10
+	"Thomás #0" = 10
+	"Isaákios #0" = 10
+	"Basíleios #0" = 10
+	"Léontos #0" = 10
+	"Adrianós #0" = 5
+	"Anastásios #0" = 5
+	"Irákleios #0" = 5
+	"Ioulianós #0" = 5
+	"Ioustinianós #0"= 5
+	"Ioustínos #0" = 5
+	"Konstántios #0" = 5
+	"Márkos #0" = 5
+	"Nikifóros #0" = 5
+	"Theófilos #0" = 5
+	"Theodósios #0" = 5
+	"Tivérios #0" = 5
+	"Traïanós #0" = 5
+	"Aléxandros #0" = 5
+	"Fílippos #0" = 5
+	"Athanásios #0" = 0
+	"Antónios #0" = 0
+	"Bartholomaíos #0" = 0
+	"Christóforos #0" = 0
+	"Diogénis #0" = 0
+	"Dionysios #0" = 0
+	"Eirenaíos #0" = 0
+	"Elpídios #0" = 0
+	"Geórgios #0" = 0
+	"Grigórios #0" = 0
+	"Ektorios #0" = 0
+	"Iáson #0" = 0
+	"Kyrillos #0" = 0
+	"Matthaíos #0" = 0
+	"Nikítas #0" = 0
+	"Nikólaos #0" = 0
+	"Nikódimos #0" = 0
+	"Sérgios #0" = 0
+	"Porfyrios #0" = 0
+	"Pávlos #0" = 0
+	"Panagiótis #0" = 0
+	"Pétros #0" = 0
+	"Filímon #0" = 0
+	"Prokópios #0" = 0
+	"Stéfanos #0" = 0
+	
+	"Eiríni #0" = -20
+	"Theodóra #0" = -20
+	"Zoí #0" = -10
+}
+
+leader_names = { 
+	#notable noble families in byzantine empire, completely redone
+	Aarónios Anemás Apókaukos Argyrópoulos Aspiétes Axoúch
+	Basilákes Bryénnios #b's
+	Chalkakondyles Choúmnos
+	Daimonoïoánnes Dalassenós Diogénis Doúkas Doxapatrîs
+	Euforbenós
+	Gabrás Glabás
+	Agiodeothorítes #h's
+	Kaballários Kabálisas Kallérgis Kalóthetos Kamaterós Kamytzes Karatzás Kastamonítes Katakalón Keroulários Kontóstablos Kontostéfanos Kourkoúas Kourtíkios
+	Láskaros Libadários
+	Makrembolítes Maleînos Maliasenós Melissenós Mesopotmítes Metochítes Monomáchos Mouroúzis Mouzálon
+	Notarás
+	Paraskoutenós Pegonítes Petralífas Filanthropenós Filés Fokás
+	Raoul Rendákis
+	Serblías Sgoúros Sklerós Sfrantzés Synadenós 
+	Tágaris Tarchaneiótes Taronítes Torníkios Tzamplákon Tzanichítes
+	Valátzes
+	#Imperial Dynasties uwu
+	Ángelos
+	Konstantínou
+	Irakleíou Ísauros Ioustinianós
+	Kantakouzenós Komnenós
+	Lekapenós Leonínt
+	Makedonikí
+	Nikiforianós
+	Palaiológos
+	Theodosián
+	Valentinianík
+}
+
+ship_names = {
+	Felves 
+	Laouses 
+	Makronisi
+	Patroklou Petalioi
+	Salamina Styra
+	Ypsili
+	Ydra Lesvos Limnos Mikonos Salamis Samos Themistoklis Evripidis Aischylos Aristofanis Archimedes Demokritos Anaxagoras Diomedes Herakles Atreas Perseas Aigyptos
+	Aiolos Poseidon Athena Zeus Dias Kronos Rea Ouranos Hera Adonis Afroditi Charavgi Orion Iasonas Theseus Achilleas Mermidon Makedon Lakedemon Athineos Xenofon
+	Miltiades Alexandros Megalexandros Gorgona Midia Efterpi Andriantas Demetra Estia Apollon Ermis Gorgopodaros Gorgoplefstos Artemis Aris Theofanis Theochara
+	Filippos Edessa Ionia Korinthos Sparti Athenai Messina Anthosparti Kampos Argolida Argo Hephestos Hephestion Nearchos Parmenion Leonidas Averof Christos
+	Christoforos # Just added a bunch of BYZ ones to make error go away, this is a byzantine appanage not the crusader state so like whatever for now.
+}

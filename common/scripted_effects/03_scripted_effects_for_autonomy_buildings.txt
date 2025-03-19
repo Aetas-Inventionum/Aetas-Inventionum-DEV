@@ -1,0 +1,1444 @@
+# Removes x percent of buildings in the province except forts, canals and roads
+# $percent$ = percent chance for each building to be removed
+remove_destructable_buildings_here_with_x_percent = {
+	random = { 
+		chance = $percent$
+		remove_building = college
+		remove_building = university
+	}
+	random = { 
+		chance = $percent$
+		remove_building = marketplace
+		remove_building = trade_depot
+		remove_building = stock_exchange
+	}
+	random = { 
+		chance = $percent$
+		remove_building = workshop
+		remove_building = counting_house
+	}
+	random = { 
+		chance = $percent$
+		remove_building = temple
+		remove_building = cathedral
+	}
+	random = { 
+		chance = $percent$
+		remove_building = barracks
+		remove_building = training_fields
+	}
+	random = { 
+		chance = $percent$
+		remove_building = shipyard
+		remove_building = grand_shipyard
+	}
+	random = { 
+		chance = $percent$
+		remove_building = coastal_defence
+		remove_building = naval_battery
+	}
+	random = { 
+		chance = $percent$
+		remove_building = courthouse
+		remove_building = town_hall
+	}
+	random = { 
+		chance = $percent$
+		remove_building = dock
+		remove_building = drydock
+	}
+	random = { 
+		chance = $percent$
+		remove_building = regimental_camp
+		remove_building = conscription_center
+	}
+	random = { 
+		chance = $percent$
+		remove_building = wharf
+		remove_building = weapons
+		remove_building = textile
+		remove_building = plantations
+		remove_building = tradecompany
+		remove_building = farm_estate
+		remove_building = mills
+		remove_building = furnace
+		remove_building = mint
+	}
+	random = { 
+		chance = $percent$
+		remove_building = ramparts
+	}
+	random = { 
+		chance = $percent$
+		remove_building = soldier_households
+	}
+	random = { 
+		chance = $percent$
+		remove_building = impressment_offices
+	}
+	random = { 
+		chance = $percent$
+		remove_building = state_house
+	}
+	random = { 
+		chance = $percent$
+		remove_building = armory
+		remove_building = arsenal
+	}
+	random = { 
+		chance = $percent$
+		remove_building = naval_arsenal
+		remove_building = naval_base
+	}
+	random = { 
+		chance = $percent$
+		remove_building = constable
+		remove_building = treasury_office
+	}
+	random = { 
+		chance = $percent$
+		remove_building = grain_depot
+	}
+	random = { 
+		chance = $percent$
+		remove_building = tax_assessor
+	}
+	random = { 
+		chance = $percent$
+		remove_building = grain_depot
+	}
+	random = { 
+		chance = $percent$
+		remove_building = post_office
+		remove_building = customs_house
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+remove_all_courthouse_modifiers_effect = {
+ 	remove_country_modifier = courthouse_1
+ 	remove_country_modifier = courthouse_2
+ 	remove_country_modifier = courthouse_3
+ 	remove_country_modifier = courthouse_4
+ 	remove_country_modifier = courthouse_5
+ 	remove_country_modifier = courthouse_6
+ 	remove_country_modifier = courthouse_7
+ 	remove_country_modifier = courthouse_8
+ 	remove_country_modifier = courthouse_9
+	#######################################
+ 	remove_country_modifier = courthouse_10
+ 	remove_country_modifier = courthouse_11
+ 	remove_country_modifier = courthouse_12
+ 	remove_country_modifier = courthouse_13
+ 	remove_country_modifier = courthouse_14
+ 	remove_country_modifier = courthouse_15
+ 	remove_country_modifier = courthouse_16
+ 	remove_country_modifier = courthouse_17
+ 	remove_country_modifier = courthouse_18
+ 	remove_country_modifier = courthouse_19
+	#######################################
+ 	remove_country_modifier = courthouse_20
+ 	remove_country_modifier = courthouse_21
+ 	remove_country_modifier = courthouse_22
+ 	remove_country_modifier = courthouse_23
+ 	remove_country_modifier = courthouse_24
+ 	remove_country_modifier = courthouse_25
+}
+
+remove_all_town_hall_modifiers_effect = {
+ 	remove_country_modifier = town_hall_1
+ 	remove_country_modifier = town_hall_2
+ 	remove_country_modifier = town_hall_3
+ 	remove_country_modifier = town_hall_4
+ 	remove_country_modifier = town_hall_5
+ 	remove_country_modifier = town_hall_6
+ 	remove_country_modifier = town_hall_7
+ 	remove_country_modifier = town_hall_8
+ 	remove_country_modifier = town_hall_9
+	#######################################
+ 	remove_country_modifier = town_hall_10
+ 	remove_country_modifier = town_hall_11
+ 	remove_country_modifier = town_hall_12
+ 	remove_country_modifier = town_hall_13
+ 	remove_country_modifier = town_hall_14
+ 	remove_country_modifier = town_hall_15
+ 	remove_country_modifier = town_hall_16
+ 	remove_country_modifier = town_hall_17
+ 	remove_country_modifier = town_hall_18
+ 	remove_country_modifier = town_hall_19
+	#######################################
+ 	remove_country_modifier = town_hall_20
+ 	remove_country_modifier = town_hall_21
+ 	remove_country_modifier = town_hall_22
+ 	remove_country_modifier = town_hall_23
+ 	remove_country_modifier = town_hall_24
+ 	remove_country_modifier = town_hall_25
+ 	remove_country_modifier = town_hall_26
+ 	remove_country_modifier = town_hall_27
+ 	remove_country_modifier = town_hall_28
+ 	remove_country_modifier = town_hall_29
+	#######################################
+ 	remove_country_modifier = town_hall_30
+ 	remove_country_modifier = town_hall_31
+ 	remove_country_modifier = town_hall_32
+ 	remove_country_modifier = town_hall_33
+ 	remove_country_modifier = town_hall_34
+ 	remove_country_modifier = town_hall_35
+ 	remove_country_modifier = town_hall_36
+ 	remove_country_modifier = town_hall_37
+ 	remove_country_modifier = town_hall_38
+ 	remove_country_modifier = town_hall_39
+	#######################################
+ 	remove_country_modifier = town_hall_40
+ 	remove_country_modifier = town_hall_41
+ 	remove_country_modifier = town_hall_42
+ 	remove_country_modifier = town_hall_43
+ 	remove_country_modifier = town_hall_44
+ 	remove_country_modifier = town_hall_45
+ 	remove_country_modifier = town_hall_46
+ 	remove_country_modifier = town_hall_47
+ 	remove_country_modifier = town_hall_48
+ 	remove_country_modifier = town_hall_49
+ 	remove_country_modifier = town_hall_50
+
+}
+
+set_courthouse_modifier = {
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = number_of_provinces_with_courthouses
+					value = 4
+				}
+			}
+		}
+		remove_all_courthouse_modifiers_effect = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = number_of_provinces_with_courthouses
+				value = 60
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = number_of_provinces_with_courthouses
+					value = 80
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = number_of_provinces_with_courthouses
+						value = 100
+					}
+				}
+				remove_all_courthouse_modifiers_effect = yes
+				add_country_modifier = { 
+					name = courthouse_25
+					duration = -1  
+					hidden = yes
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = number_of_provinces_with_courthouses
+						value = 96
+					}
+				}
+				remove_all_courthouse_modifiers_effect = yes
+				add_country_modifier = { 
+					name = courthouse_24
+					duration = -1  
+					hidden = yes
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = number_of_provinces_with_courthouses
+						value = 92
+					}
+				}
+				remove_all_courthouse_modifiers_effect = yes
+				add_country_modifier = { 
+					name = courthouse_23
+					duration = -1  
+					hidden = yes
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = number_of_provinces_with_courthouses
+						value = 88
+					}
+				}
+				remove_all_courthouse_modifiers_effect = yes
+				add_country_modifier = { 
+					name = courthouse_22
+					duration = -1  
+					hidden = yes
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = number_of_provinces_with_courthouses
+						value = 84
+					}
+				}
+				remove_all_courthouse_modifiers_effect = yes
+				add_country_modifier = { 
+					name = courthouse_21
+					duration = -1  
+					hidden = yes
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = number_of_provinces_with_courthouses
+						value = 80
+					}
+				}
+				remove_all_courthouse_modifiers_effect = yes
+				add_country_modifier = { 
+					name = courthouse_20
+					duration = -1  
+					hidden = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = number_of_provinces_with_courthouses
+					value = 60
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = number_of_provinces_with_courthouses
+						value = 76
+					}
+				}
+				remove_all_courthouse_modifiers_effect = yes
+				add_country_modifier = { 
+					name = courthouse_19
+					duration = -1  
+					hidden = yes
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = number_of_provinces_with_courthouses
+						value = 72
+					}
+				}
+				remove_all_courthouse_modifiers_effect = yes
+				add_country_modifier = { 
+					name = courthouse_18
+					duration = -1  
+					hidden = yes
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = number_of_provinces_with_courthouses
+						value = 68
+					}
+				}
+				remove_all_courthouse_modifiers_effect = yes
+				add_country_modifier = { 
+					name = courthouse_17
+					duration = -1  
+					hidden = yes
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = number_of_provinces_with_courthouses
+						value = 64
+					}
+				}
+				remove_all_courthouse_modifiers_effect = yes
+				add_country_modifier = { 
+					name = courthouse_16
+					duration = -1  
+					hidden = yes
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = number_of_provinces_with_courthouses
+						value = 60
+					}
+				}
+				remove_all_courthouse_modifiers_effect = yes
+				add_country_modifier = { 
+					name = courthouse_15
+					duration = -1  
+					hidden = yes
+				}
+			}
+		}
+	}
+	else = {
+		if = {
+			limit = {
+				check_variable = {
+					which = number_of_provinces_with_courthouses
+					value = 40
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = number_of_provinces_with_courthouses
+						value = 56
+					}
+				}
+				remove_all_courthouse_modifiers_effect = yes
+				add_country_modifier = { 
+					name = courthouse_14
+					duration = -1  
+					hidden = yes
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = number_of_provinces_with_courthouses
+						value = 52
+					}
+				}
+				remove_all_courthouse_modifiers_effect = yes
+				add_country_modifier = { 
+					name = courthouse_13
+					duration = -1  
+					hidden = yes
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = number_of_provinces_with_courthouses
+						value = 48
+					}
+				}
+				remove_all_courthouse_modifiers_effect = yes
+				add_country_modifier = { 
+					name = courthouse_12
+					duration = -1  
+					hidden = yes
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = number_of_provinces_with_courthouses
+						value = 44
+					}
+				}
+				remove_all_courthouse_modifiers_effect = yes
+				add_country_modifier = { 
+					name = courthouse_11
+					duration = -1  
+					hidden = yes
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = number_of_provinces_with_courthouses
+						value = 40
+					}
+				}
+				remove_all_courthouse_modifiers_effect = yes
+				add_country_modifier = { 
+					name = courthouse_10
+					duration = -1  
+					hidden = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = number_of_provinces_with_courthouses
+					value = 20
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = number_of_provinces_with_courthouses
+						value = 36
+					}
+				}
+				remove_all_courthouse_modifiers_effect = yes
+				add_country_modifier = { 
+					name = courthouse_9
+					duration = -1  
+					hidden = yes
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = number_of_provinces_with_courthouses
+						value = 32
+					}
+				}
+				remove_all_courthouse_modifiers_effect = yes
+				add_country_modifier = { 
+					name = courthouse_8
+					duration = -1  
+					hidden = yes
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = number_of_provinces_with_courthouses
+						value = 28
+					}
+				}
+				remove_all_courthouse_modifiers_effect = yes
+				add_country_modifier = { 
+					name = courthouse_7
+					duration = -1  
+					hidden = yes
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = number_of_provinces_with_courthouses
+						value = 24
+					}
+				}
+				remove_all_courthouse_modifiers_effect = yes
+				add_country_modifier = { 
+					name = courthouse_6
+					duration = -1  
+					hidden = yes
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = number_of_provinces_with_courthouses
+						value = 20
+					}
+				}
+				remove_all_courthouse_modifiers_effect = yes
+				add_country_modifier = { 
+					name = courthouse_5
+					duration = -1  
+					hidden = yes
+				}
+			}
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = number_of_provinces_with_courthouses
+						value = 16
+					}
+				}
+				remove_all_courthouse_modifiers_effect = yes
+				add_country_modifier = { 
+					name = courthouse_4
+					duration = -1  
+					hidden = yes
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = number_of_provinces_with_courthouses
+						value = 12
+					}
+				}
+				remove_all_courthouse_modifiers_effect = yes
+				add_country_modifier = { 
+					name = courthouse_3
+					duration = -1  
+					hidden = yes
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = number_of_provinces_with_courthouses
+						value = 8
+					}
+				}
+				remove_all_courthouse_modifiers_effect = yes
+				add_country_modifier = { 
+					name = courthouse_2
+					duration = -1  
+					hidden = yes
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = number_of_provinces_with_courthouses
+						value = 4
+					}
+				}
+				remove_all_courthouse_modifiers_effect = yes
+				add_country_modifier = { 
+					name = courthouse_1
+					duration = -1  
+					hidden = yes
+				}
+			}
+		}
+	}
+}
+
+########################################################################################
+########################################################################################
+########################################################################################
+
+set_town_hall_modifier = {
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = number_of_provinces_with_townhalls
+					value = 2
+				}
+			}
+		}
+		remove_all_town_hall_modifiers_effect = yes
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = number_of_provinces_with_townhalls
+				value = 50
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = number_of_provinces_with_townhalls
+					value = 74
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = number_of_provinces_with_townhalls
+						value = 88
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = number_of_provinces_with_townhalls
+							value = 100
+						}
+					}
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_50
+						duration = -1  
+						hidden = yes
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = number_of_provinces_with_townhalls
+							value = 98
+						}
+					}
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_49
+						duration = -1  
+						hidden = yes
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = number_of_provinces_with_townhalls
+							value = 96
+						}
+					}
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_48
+						duration = -1  
+						hidden = yes
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = number_of_provinces_with_townhalls
+							value = 94
+						}
+					}
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_47
+						duration = -1  
+						hidden = yes
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = number_of_provinces_with_townhalls
+							value = 92
+						}
+					}
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_46
+						duration = -1  
+						hidden = yes
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = number_of_provinces_with_townhalls
+							value = 90
+						}
+					}
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_45
+						duration = -1 
+						hidden = yes
+					}
+				}
+				else = {
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_44
+						duration = -1  
+						hidden = yes
+					}
+				}
+			}
+			else = {				
+				if = {
+					limit = {
+						check_variable = {
+							which = number_of_provinces_with_townhalls
+							value = 86
+						}
+					}
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_43
+						duration = -1  
+						hidden = yes
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = number_of_provinces_with_townhalls
+							value = 84
+						}
+					}
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_42
+						duration = -1  
+						hidden = yes
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = number_of_provinces_with_townhalls
+							value = 82
+						}
+					}
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_41
+						duration = -1  
+						hidden = yes
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = number_of_provinces_with_townhalls
+							value = 80
+						}
+					}
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_40
+						duration = -1  
+						hidden = yes
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = number_of_provinces_with_townhalls
+							value = 78
+						}
+					}
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_39
+						duration = -1  
+						hidden = yes
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = number_of_provinces_with_townhalls
+							value = 76
+						}
+					}
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_38
+						duration = -1  
+						hidden = yes
+					}
+				}
+				else = {
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_37
+						duration = -1  
+						hidden = yes
+					}
+				}
+			}
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = number_of_provinces_with_townhalls
+						value = 62
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = number_of_provinces_with_townhalls
+							value = 72
+						}
+					}
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_36
+						duration = -1  
+						hidden = yes
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = number_of_provinces_with_townhalls
+							value = 70
+						}
+					}
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_35
+						duration = -1  
+						hidden = yes
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = number_of_provinces_with_townhalls
+							value = 68
+						}
+					}
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_34
+						duration = -1  
+						hidden = yes
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = number_of_provinces_with_townhalls
+							value = 66
+						}
+					}
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_33
+						duration = -1  
+						hidden = yes
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = number_of_provinces_with_townhalls
+							value = 64
+						}
+					}
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_32
+						duration = -1  
+						hidden = yes
+					}
+				}
+				else = {
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_31
+						duration = -1  
+						hidden = yes
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						check_variable = {
+							which = number_of_provinces_with_townhalls
+							value = 60
+						}
+					}
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_30
+						duration = -1  
+						hidden = yes
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = number_of_provinces_with_townhalls
+							value = 58
+						}
+					}
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_29
+						duration = -1  
+						hidden = yes
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = number_of_provinces_with_townhalls
+							value = 56
+						}
+					}
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_28
+						duration = -1  
+						hidden = yes
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = number_of_provinces_with_townhalls
+							value = 54
+						}
+					}
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_27
+						duration = -1  
+						hidden = yes
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = number_of_provinces_with_townhalls
+							value = 52
+						}
+					}
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_26
+						duration = -1  
+						hidden = yes
+					}
+				}
+				else = {
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_25
+						duration = -1  
+						hidden = yes
+					}
+				}
+			}
+		}
+	}
+	else = {	#############	
+		if = {
+			limit = {
+				check_variable = {
+					which = number_of_provinces_with_townhalls
+					value = 26
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = number_of_provinces_with_townhalls
+						value = 38
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = number_of_provinces_with_townhalls
+							value = 48
+						}
+					}
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_24
+						duration = -1  
+						hidden = yes
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = number_of_provinces_with_townhalls
+							value = 46
+						}
+					}
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_23
+						duration = -1  
+						hidden = yes
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = number_of_provinces_with_townhalls
+							value = 44
+						}
+					}
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_22
+						duration = -1  
+						hidden = yes
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = number_of_provinces_with_townhalls
+							value = 42
+						}
+					}
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_21
+						duration = -1  
+						hidden = yes
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = number_of_provinces_with_townhalls
+							value = 40
+						}
+					}
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_20
+						duration = -1  
+						hidden = yes
+					}
+				}
+				else = {
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_19
+						duration = -1  
+						hidden = yes
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						check_variable = {
+							which = number_of_provinces_with_townhalls
+							value = 36
+						}
+					}
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_18
+						duration = -1  
+						hidden = yes
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = number_of_provinces_with_townhalls
+							value = 34
+						}
+					}
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_17
+						duration = -1  
+						hidden = yes
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = number_of_provinces_with_townhalls
+							value = 32
+						}
+					}
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_16
+						duration = -1  
+						hidden = yes
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = number_of_provinces_with_townhalls
+							value = 30
+						}
+					}
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_15
+						duration = -1  
+						hidden = yes
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = number_of_provinces_with_townhalls
+							value = 28
+						}
+					}
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_14
+						duration = -1  
+						hidden = yes
+					}
+				}
+				else = {
+				remove_all_town_hall_modifiers_effect = yes
+				add_country_modifier = { 
+					name = town_hall_13
+					duration = -1  
+					hidden = yes
+				}
+			}
+			}
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = number_of_provinces_with_townhalls
+						value = 14
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							which = number_of_provinces_with_townhalls
+							value = 24
+						}
+					}
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_12
+						duration = -1  
+						hidden = yes
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = number_of_provinces_with_townhalls
+							value = 22
+						}
+					}
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_11
+						duration = -1  
+						hidden = yes
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = number_of_provinces_with_townhalls
+							value = 20
+						}
+					}
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_10
+						duration = -1  
+						hidden = yes
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = number_of_provinces_with_townhalls
+							value = 18
+						}
+					}
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_9
+						duration = -1  
+						hidden = yes
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = number_of_provinces_with_townhalls
+							value = 16
+						}
+					}
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_8
+						duration = -1  
+						hidden = yes
+					}
+				}
+				else = {
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_7
+						duration = -1  
+						hidden = yes
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						check_variable = {
+							which = number_of_provinces_with_townhalls
+							value = 12
+						}
+					}
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_6
+						duration = -1  
+						hidden = yes
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = number_of_provinces_with_townhalls
+							value = 10
+						}
+					}
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_5
+						duration = -1  
+						hidden = yes
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = number_of_provinces_with_townhalls
+							value = 8
+						}
+					}
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_4
+						duration = -1  
+						hidden = yes
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = number_of_provinces_with_townhalls
+							value = 6
+						}
+					}
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_3
+						duration = -1  
+						hidden = yes
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							which = number_of_provinces_with_townhalls
+							value = 4
+						}
+					}
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_2
+						duration = -1  
+						hidden = yes
+					}
+				}
+				else = {
+					remove_all_town_hall_modifiers_effect = yes
+					add_country_modifier = { 
+						name = town_hall_1
+						duration = -1  
+						hidden = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+record_buildings_here = {
+	if = {
+		limit = {
+			has_building = courthouse
+		}
+		set_variable = {
+			which = number_of_provinces_with_courthouses
+			value = 1
+		}	
+		PREV = {				#Adds up all the dev points from provinces
+			change_variable = {
+				which = number_of_provinces_with_courthouses
+				which = PREV
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_building = town_hall
+		}
+		set_variable = {
+			which = number_of_provinces_with_townhalls
+			value = 1
+		}	
+		PREV = {				#Adds up all the dev points from provinces
+			change_variable = {
+				which = number_of_provinces_with_townhalls
+				which = PREV
+			}
+		}		
+	}
+	if = {
+		limit = {
+			is_state = yes
+		}
+		set_variable = {
+			which = number_of_provinces_in_states
+			value = 1
+		}	
+		PREV = {				#Adds up all the dev points from provinces
+			change_variable = {
+				which = number_of_provinces_in_states
+				which = PREV
+			}
+		}
+	}
+}
+
+calculate_autonomy_buildings_built_and_apply_modifier = {
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {				#
+					which = number_of_provinces_in_states
+					value = 1
+				}
+			}
+		}
+		set_variable = {				#
+			which = number_of_provinces_in_states
+			value = 1
+		}
+	}
+	divide_variable = {				#
+		which = number_of_provinces_with_courthouses
+		which = number_of_provinces_in_states
+	}
+	multiply_variable = {			#
+		which = number_of_provinces_with_courthouses
+		value = 100
+	}
+	set_courthouse_modifier = yes
+	divide_variable = {				#
+		which = number_of_provinces_with_townhalls
+		which = number_of_provinces_in_states
+	}
+	multiply_variable = {			#
+		which = number_of_provinces_with_townhalls
+		value = 100
+	}
+	set_town_hall_modifier = yes
+}

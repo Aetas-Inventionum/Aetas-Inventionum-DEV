@@ -1,0 +1,36 @@
+#6489 - Klepiki
+#Area - Rudnya
+#Region - Russia 
+
+#Core Details
+capital = "Klepiki" 
+is_city = yes
+owner = MOS
+controller = MOS
+
+#Demographics
+culture = meshchera
+religion = tengri_pagan_reformed
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = naval_supplies
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = MOS
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = nomad_group
+
+#Histories

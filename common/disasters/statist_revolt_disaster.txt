@@ -1,0 +1,92 @@
+statist_revolt_disaster = {
+	potential = {
+		#tag = NED ##only disabled for testing
+		#was_tag = HOL ##only disabled for testing
+		tag = HOL #only enabled for testing
+		NOT = { has_reform = dutch_republic }
+	}
+	
+	
+	can_start = {
+		NOT = { has_reform = dutch_republic }
+	}
+	
+	can_stop = {
+		is_lesser_in_union = yes 
+	}
+	
+	progress = {
+		modifier = {
+			factor = 1
+			NOT = { government = republic }
+		}
+		modifier = { 
+			factor = 2
+			NOT = { has_reform = dutch_republic }
+		}
+		modifier = { 
+			factor = 1
+			NOT = { legitimacy = 100 } 
+		}
+		modifier = {
+			factor = 2
+			estate_influence = {
+				estate = estate_burghers
+				influence = 50
+			}
+		}
+		modifier = {
+			factor = 5
+			estate_influence = {
+				estate = estate_burghers
+				influence = 60
+			}
+		}
+	}
+	
+	can_end = {
+		OR = { 
+			AND = { 
+				is_orangists_in_power = yes 
+				statists_vs_orangists = 1
+			}
+			AND = { 
+				is_statists_in_power = yes 
+				statists_vs_orangists = 0
+			}
+		}
+	}
+	
+	modifier = {
+		global_unrest = 4
+		legitimacy = -1
+		stability_cost_modifier = 0.25
+		trade_efficiency = -0.1
+	}	
+	
+	on_start = aetas_ned.20 #Ultimatum of the States General to install a Dutch Republic or else face the consequences
+	on_end = aetas_ned.21 #resolution found within the netherlands
+
+	on_monthly = {
+		events = {
+			flavor_lxa.1
+			flavor_lxa.2
+			flavor_lxa.3
+		}
+		random_events = { 
+			1000 = 0
+			100 = civil_war.2
+			100 = civil_war.3
+			100 = civil_war.5
+			100 = civil_war.6
+			100 = civil_war.7
+			100 = civil_war.8
+			100 = civil_war.9
+			100 = civil_war.10
+			100 = civil_war.11
+			100 = civil_war.12
+			100 = civil_war.13
+		
+		}
+	}
+}

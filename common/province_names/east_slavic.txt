@@ -1,0 +1,153 @@
+#AI Update
+# = { "x" "x" }
+#Please use standard east-slavic or Russian orthography. G's over H's, as it was an ancestral trait
+##ruthenia region in standard ukrainian slavic
+#podlasie
+277 = { "Bierashcie" "Bierashcie" }
+5895 = { "Vaukavysk" "Vaukavysk" }
+5897 = { "Kobrin" "Kobrin" }
+5899 = { "Dorohychin" "Dorohychin" }
+#red ruthenia
+5876 = { "Grubeshiv" "Grubeshiv" }
+5877 = { "Liubachiv" "Liubachiv" }
+5878 = { "Yaroslav" "Yaroslav" }
+5879 = { "Rashiv" "Rashiv" }
+5880 = { "Sianik" "Sianik" }
+#volhynnia
+279 = { "Volodymyr" "Volodymyr" }
+2962 = { "Rivne" "Rivne" }
+5874 = { "Ratne" "Ratne" }
+5934 = { "Kovel'" "Kovel'" } 
+5935 = { "Chortoryisk" "Staryi Chortoryisk" }
+5936 = { "Luts'k" "Luts'k" }
+5937 = { "Ostrog" "Ostrog" }
+5938 = { "Iziaslav" "Iziaslav" }
+#polesia 
+1942 = { "Zhytomyr" "Zhytomyr" }
+4247 = { "Ovruch" "Ovruch" }
+4545 = { "Slutsk" "Slutsk" }
+5900 = { "Davydhorodok" "Davydhorodok" }
+5905 = { "Astravets" "Astravets" }
+5911 = { "Kapyl'" "Kapyl'" }
+5923 = { "Pietrykav" "Pietrykav" } 
+5957 = { "Korosten'" "Korosten'" }
+6356 = { "Dubrovitsya" "Dubrovistya" }
+#podolia
+281 = { "Kam'yanets" "Kam'yanets" }
+4540 = { "Vinnitsya" "Vinnytsya" }
+5939 = { "Medzhybizh" "Medzhybizh" }
+5940 = { "Khmil'nyk" "Khmil'nyk" }
+5943 = { "Skala" "Skala" }
+5944 = { "Shargorod" "Shargorod" }
+5946 = { "Savran" "Savran" }
+5947 = { "Karavul" "Karavul" }
+#dnieper
+280 = { "Kyïv" "Kyïv" }
+2407 = { "Pereiaslav" "Pereiaslav" }
+5950 = { "Chornobyl" "Chornobyl" }
+5951 = { "Bila Tserkva" "Bila Tserkva" }
+5952 = { "Oster" "Oster" }
+5954 = { "Bragin" "Bragin" }
+5956 = { "Berdychiv" "Berdychiv" }
+#zaporizhia
+283 = { "Khortitsya" "Khortitsya" }
+4542 = { "Lubny" "Lubny" }
+6197 = { "Mykytyn Rig" "Mykytyn Rig" }
+6198 = { "Tomakivs'ka Sich" "Tomakivs'ka Sich" }
+6200 = { "Kremenchuk" "Kremenchuk" }
+6201 = { "Yelysavetgrad" "Yelysavetgrad" }
+6202 = { "Novomyrgorod" "Zlatopol" }
+#east dnieper
+5948 = { "Myrgorod" "Myrgorod" }
+6205 = { "Saltiv" "Saltiv" }
+6206 = { "Glyns'k" "Glyns'k" }
+6208 = { "Bogodukhiv" "Bogodukhiv" }
+#severia
+289 = { "Chernigiv" "Chernigiv" }
+1945 = { "Novgorod-Sivers'kyi" "Novgorod-Sivers'kyi" }
+4244 = { "Trubchevsk" "Trubchevsk" }
+4543 = { "Rylsk" "Rylsk" }
+5945 = { "Zvenygorodka" "Zvenygorodka" }
+5953 = { "Romen" "Romen" } 
+5958 = { "Starodub" "Starodub" }
+5959 = { "Putyvl'" "Putyvl'" }
+5960 = { "Pochep" "Pochep" }
+6353 = { "Glukhiv" "Glukhiv" }
+6354 = { "Sosnitsya" "Sosnitsya" }
+#kursk
+4543 = { "Ryl'sk" "Ryl'sk" }
+#white ruthenia
+292 = { "Mogilyëv" "Mogilyëv" }
+4246 = { "Mstsislav" "Mstsislav" }
+5926 = { "Roslavl'" "Roslavl'" }
+5927 = { "Gomiel" "Gomiel" }
+5928 = { "Rechytsa" "Rechytsa" }
+5929 = { "Ragachev" "Ragachev" }
+#minsk
+276 = { "Miensk" "Miensk" }
+4536 = { "Lida" "Lida" }
+4537 = { "Navagrudak" "Navagrudak" }
+4544 = { "Barisau" "Barisau" }
+5909 = { "Lahoijsk" "Lahoijsk" }
+5910 = { "Zaslaye" "Zaslauye" }
+5933 = { "Svisloch" "Svisloch" }
+#daugava valley
+275 = { "Polack" "Polack" }
+771 = { "Viciebsk" "Viciebsk" }
+5913 = { "Sebezh" "Sebezh" }
+5915 = { "Chashniki" "Chashniki" }
+5917 = { "Orsha" "Orsha" }
+5919 = { "Garadok" "Garadok" }
+5920 = { "Glybokaye" "Glybokaye" }
+
+##baltic region
+#sudovia
+270 = { "Treki" "Treki" }
+1936 = { "Kovno" "Kovno" }
+1937 = { "Grodna" "Grodna" }
+5892 = { "Olita" "Olita" }
+5901 = { "Eishyshki" "Eishyshki" }
+#lithuania
+272 = { "Vilnia" "Vilnia" }
+770 = { "Braslau" "Braslau" }
+4534 = { "Upite" "Upite" }
+4535 = { "Vilkomir" "Vilkomir" }
+5902 = { "Utena" "Utena" }
+5903 = { "Svianciany" "Svianciany" }
+5908 = { "Miadziel" "Miadziel" }
+
+##russia region
+#tver
+4243 = { "Toropets" "Toropets" }
+#smolensk
+5924 = { "Dorogobuzh" "Dorogobuzh" }
+##tatary
+#yedisan
+282 = { "Kotsyubiev" "Kotsyubiev" }
+2406 = { "Bilikhovichi" "Bilikhovichi" }
+6189 = { "Vitovd Brod" "Vitovd Brod" }
+6190 = { "Ochakiv" "Ochakiv" }
+6191 = { "Beryslav" "Beryslav" }
+#zaparizhia
+6199 = { "Kodak" "Kodak" }
+##carpathia
+#bukovina
+268 = { "Suchava" "Suchava" }
+5596 = { "Khotyn" "Khotyn" }
+5600 = { "Dorokhoi" "Dorokhoi" }
+5604 = { "Radovtsi" "Radovtsi" }
+5606 = { "Pokuttya" "Kolomiya" }
+5605 = { "Bukovyna" "Chernivtsi" }
+#moldavia
+4529 = { "Yasy" "Yasy" }
+4530 = { "Byrlad" "Byrlad" }
+5593 = { "Orgiïv" "Orgiïv" }
+5594 = { "Soroky" "Soroky" }
+5595 = { "Bel'tsy" "Bel'tsy" }
+5601 = { "Fokshany" "Fokshany" }
+5602 = { "Bakeu" "Bakeu" }
+5603 = { "Nyamts" "Nyamts" }
+#bessarabia
+5591 = { "Izmaïl" "Izmaïl" }
+5592 = { "Tigech" "Tigech" }
+5597 = { "Galac" "Galac" }

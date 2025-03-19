@@ -1,0 +1,38 @@
+#5309 - Arnstadt
+#Area - Thuringia
+#Region - North Germany
+
+#Core Details
+capital = "Arnstadt"
+is_city = yes
+owner = SCW
+controller = SCW
+
+#Demographics
+culture = saxon
+religion = catholic
+
+#Development and Trade
+base_tax = 3
+base_production = 3
+base_manpower = 2
+trade_goods = dyes
+
+#Cores and Occupation (Alphabetical after current)
+add_core = SCW
+#add_core = GTH
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

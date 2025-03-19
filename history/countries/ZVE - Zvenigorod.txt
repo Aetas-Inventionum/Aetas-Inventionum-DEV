@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = principality
+government_rank = 1
+primary_culture = russian
+add_accepted_culture = vologdan
+religion = orthodox
+technology_group = eastern
+capital = 6475 # Zvenigorod
+fixed_capital = 6475 # Cannot move capital away from this province & no power cost to move to it
+
+1389.1.1 = { 
+	monarch = { 
+		name = "Yury I"
+		dynasty = "Rurikovich"
+		birth_date = 1374.1.1 
+		death_date = 1434.1.1 
+		adm = 5
+		dip = 5
+		mil = 5
+	}
+}

@@ -1,0 +1,19 @@
+capital = 5166 #Breifne
+
+technology_group = western
+
+government = monarchy
+add_government_reform = tanistry_reform
+government_rank = 1
+religion = catholic
+primary_culture = irish
+
+1376.1.1 = {
+	monarch = {
+		name = "Tigernán mór"
+		dynasty = "Ó Ruairc"
+		adm = 2
+		dip = 1
+		mil = 1
+	}
+}

@@ -1,0 +1,1562 @@
+ai_sic_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = SIC 
+			AND = { 
+				tag = TTS 
+				was_tag = SIC
+			}
+		}
+	} 
+
+	sic_tradehalls = {
+		icon = mission_colonial
+		position = 1
+		provinces_to_highlight = {  
+			area = sicily_area 
+			owned_by = ROOT 
+			has_trade_building_trigger = no 
+		} 
+
+		trigger = {  
+			num_of_owned_provinces_with = { 
+				area = sicily_area
+				has_trade_building_trigger = yes 
+				value = 4
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = sic_trade
+				duration = 7300
+			}
+		} 
+	}
+
+	sic_messari = {
+		icon = prosperity_for_all
+		position = 2
+		required_missions = { sic_tradehalls } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			reform_level = 3
+			num_of_owned_provinces_with = {
+				area = sicily_area
+				num_of_times_improved = 4
+				OR = { 
+					trade_goods = grain 
+					trade_goods = sugar 
+					trade_goods = wine 
+					trade_goods = cotton 
+				}
+				value = 4
+			}
+		} 
+
+		effect = { add_government_reform = sic_masserie_reform } 
+	}
+
+	sic_wool = {
+		icon = mission_lit_harness_steppes
+		position = 3
+		required_missions = { sic_workshops } 
+		provinces_to_highlight = {  
+			trade_goods = wool
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		} 
+
+		trigger = {  
+			any_province = { 
+				trade_goods = wool 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+		} 
+
+		effect = {  
+			country_event = { id = aetas_sic.1 }
+		} 
+	}
+
+	sic_cloth = {
+		icon = mission_son_own_develop_clothes_and_salt
+		position = 4
+		required_missions = {
+			sic_wool
+			sic_messina
+		}
+		provinces_to_highlight = {  
+			area = sicily_area
+			trade_goods = wool 
+			owned_by = ROOT 
+			NOT = { 
+				AND = { 
+					has_manufactory_trigger = yes 
+					base_production = 10
+				}
+			}
+		} 
+
+		trigger = {  
+			any_owned_province = { 
+				area = sicily_area 
+				trade_goods = wool 
+				has_manufactory_trigger = yes 
+				base_production = 10
+			}
+		} 
+
+		effect = { country_event = { id = aetas_sic.2 } } 
+	}
+}
+ai_sic_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = SIC 
+			AND = { 
+				tag = TTS 
+				was_tag = SIC
+			}
+		}
+	} 
+
+	sic_workshops = {
+		icon = mission_have_manufactories
+		position = 2
+		required_missions = { sic_tradehalls } 
+		provinces_to_highlight = {  
+			area = sicily_area
+			NOT = { has_production_building_trigger = yes }
+		} 
+
+		trigger = {  
+
+			num_of_owned_provinces_with = { 
+				area = sicily_area
+				has_production_building_trigger = yes 
+				value = 4
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = sic_workshops_mod #missing loc
+				duration = 7300
+			}
+		} 
+	}
+
+	sic_messina = {
+		icon = mission_messina
+		position = 3
+		required_missions = { sic_workshops } 
+		provinces_to_highlight = {  
+			province_id = 124
+			NOT = { 
+				AND = { 
+					owned_by = ROOT 
+					is_core = ROOT 
+					num_of_times_improved = 10
+					has_production_building_trigger = yes 
+				}
+			}
+		} 
+
+		trigger = { 
+			owns_core_province = 124 
+			124 = { 
+				num_of_times_improved = 10
+				has_production_building_trigger = yes 
+			}
+		} 
+
+		effect = { country_event = { id = aetas_sic.3 } } 
+	}
+
+	sic_trade_hub = {
+		icon = secure_the_republic
+		position = 4
+		required_missions = {
+			sic_messina
+			sic_siracusa
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			num_of_owned_provinces_with = { 
+				province_has_center_of_trade_of_level = 3
+				development = 30
+				value = 3
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = sic_trade_hub.tt
+			hidden_effect = { 
+				every_owned_province = { 
+					limit = { 
+						area = sicily_area
+						province_has_center_of_trade_of_level = 3
+						development = 3
+					}
+					add_province_modifier = { 
+						name = sic_trade_boom
+						duration = 18250
+					}
+				}
+			}
+		} 
+	}
+}
+ai_sic_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = SIC 
+			AND = { 
+				tag = TTS 
+				was_tag = SIC
+			}
+		}
+	} 
+
+	sic_irrigation = {
+		icon = austria_prospers
+		position = 1
+		provinces_to_highlight = {  
+			province_id = 125
+			NOT = {
+				AND = { 
+					owned_by = ROOT 
+					is_core = ROOT 
+					num_of_times_improved = 10
+				}
+			}
+		} 
+
+		trigger = {  
+			owns_core_province = 125
+			125 = {
+				num_of_times_improved = 10
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = sic_prevent_drought.tt
+			set_country_flag = palermo_irrigated_flag
+			125 = { 
+				add_permanent_province_modifier = { 
+					name = palermo_irrigation
+					duration = -1
+				}
+			}
+		} 
+	}
+
+	sic_palermo = {
+		icon = mission_palermo
+		position = 2
+		required_missions = {
+			sic_irrigation
+			sic_tradehalls
+		}
+		provinces_to_highlight = {  
+			province_id = 125
+			NOT = { 
+				AND = { 
+					owned_by = ROOT 
+					is_core = ROOT 
+					is_capital_of = ROOT
+					development = 30
+					province_has_center_of_trade_of_level = 3
+					has_tax_building_trigger = yes 
+					has_trade_building_trigger = yes 
+					has_production_building_trigger = yes 
+				}
+			}
+		} 
+
+		trigger = {  
+			owns_core_province = 125
+			125 = { 
+				is_capital_of = ROOT
+				development = 25
+				province_has_center_of_trade_of_level = 3
+				has_tax_building_trigger = yes 
+				has_trade_building_trigger = yes 
+				has_production_building_trigger = yes 
+			}
+		} 
+
+		effect = {  
+			125 = { 
+				add_province_modifier = { 
+					name = palermu_riale
+					duration = -1
+				}
+			}
+		} 
+	}
+
+	sic_siracusa = {
+		icon = mission_siracusa
+		position = 3
+		required_missions = {
+			sic_palermo
+			sic_workshops
+		}
+		provinces_to_highlight = {  
+			province_id = 2982
+			NOT = { 
+				AND = { 
+					owned_by = ROOT 
+					is_core = ROOT 
+					num_of_times_improved = 5
+					has_trade_building_trigger = yes 
+					has_tax_building_trigger = yes 
+				}
+			}
+		} 
+
+		trigger = {  
+			2982 = {
+				num_of_times_improved = 5
+				has_trade_building_trigger = yes 
+				has_tax_building_trigger = yes 
+			}
+		} 
+
+		effect = { 2982 = { center_of_trade = 1 } } 
+	}
+}
+ai_sic_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = SIC 
+			AND = { 
+				tag = TTS 
+				was_tag = SIC
+			}
+		}
+	} 
+
+	sic_catania = {
+		icon = standardize_relazioni
+		position = 2
+		required_missions = { sic_ties } 
+		provinces_to_highlight = {  
+			province_id = 5131
+			NOT = { 
+				AND = { 
+					owned_by = ROOT 
+					is_core = ROOT 
+					num_of_times_improved = 5
+					renaissance = 100 
+				}
+			}
+		} 
+
+		trigger = {  
+			owns_core_province = 5131
+			5131 = { num_of_times_improved = 5 }
+			OR = { 
+				5131 = { renaissance = 100 }
+				AND = { 
+					employed_advisor = { 
+						category = adm 
+						skill = 3
+					}
+					employed_advisor = {
+						category = dip
+						skill = 3
+					}
+				}
+			}
+		} 
+
+		effect = { country_event = { id = aetas_sic.5 } } 
+	}
+
+	sic_norman_palace = {
+		icon = mission_palermo2
+		position = 3
+		required_missions = {
+			sic_catania
+			sic_palermo
+		}
+		provinces_to_highlight = {  
+			province_id = 125
+			NOT = { 
+				AND = { 
+					owned_by = ROOT 
+					is_core = ROOT 
+					is_capital_of = ROOT 
+					has_great_project = {
+						type = ai_norman_palace
+						tier = 2
+					}
+				}
+			}
+		} 
+
+		trigger = {  
+			owns_core_province = 125
+			125 = { 
+				is_capital_of = ROOT 
+				has_great_project = {
+					type = ai_norman_palace
+					tier = 2
+				}
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = sic_vibrant_norman_palace
+				duration = 18250
+			}
+		} 
+	}
+
+	sic_parliament = {
+		icon = subiaco_press
+		position = 4
+		required_missions = {
+			sic_norman_palace
+			sic_independence
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			current_size_of_parliament = 6
+			check_variable = {
+				which = issues_passed
+				value = 10
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = sic_historic_parliament
+				duration = -1
+			}
+		} 
+	}
+}
+ai_sic_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = SIC 
+			AND = { 
+				tag = TTS 
+				was_tag = SIC
+			}
+		}
+	} 
+
+	sic_ties = {
+		icon = spa_infantes_aragon
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			ARA = { 
+				senior_union_with = ROOT 
+				has_opinion = { 
+					who = ROOT 
+					value = 125
+				}
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = catalan_connections #missing loc
+				duration = 7300
+			}
+		} 
+	}
+
+	sic_prince = {
+		icon = mission_chuan_ii
+		position = 2
+		required_missions = { sic_ties } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			is_at_war = no
+			prestige = 25
+			liberty_desire = 50
+		} 
+
+		effect = { country_event = { id = aetas_sic.6 } } 
+	}
+
+	sic_independence = {
+		icon = mission_vespers
+		position = 3
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			hidden_trigger = { NOT = { has_country_flag = sic_trastamara_temp_flag } }
+			is_free_or_tributary_trigger = yes
+			is_at_war = no 
+		} 
+
+		effect = {  
+			if = { 
+				limit = { 
+					exists = NAP 
+					NOT = { senior_union_with = NAP }
+				}
+				add_casus_belli = {
+					target = NAP 
+					type = cb_restore_personal_union
+					months = 480
+				}
+			}
+			else_if = {
+				limit = { 
+					exists = NPO 
+					NOT = { exists = NAP }
+					NOT = { senior_union_with = NPO }
+				}
+				add_casus_belli = {
+					target = NPO
+					type = cb_restore_personal_union
+					months = 480
+				}
+			}
+			else = { 
+				set_country_flag = sic_nap_perma_claims
+				calabria_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		} 
+	}
+
+	sic_cross = {
+		icon = union_with_naples
+		position = 4
+		required_missions = { sic_independence } 
+		provinces_to_highlight = {  
+			area = calabria_area
+			NOT = { controlled_by = ROOT }
+		} 
+
+		trigger = {  
+			calabria_area = { 
+				controller = { 
+					OR = { 
+						tag = ROOT 
+						alliance_with = ROOT 
+						is_subject_of = ROOT
+					}
+				}
+			}
+		} 
+
+		effect = {  
+			if = { 
+				limit = { NOT = { has_country_flag = sic_nap_perma_claims } }
+				calabria_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+				apulia_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+				naples_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+				capitanate_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+				abruzzo_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			else = { 
+				apulia_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+				naples_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+				capitanate_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+				abruzzo_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		} 
+	}
+
+	sic_tts = {
+		icon = unite_the_two_sicilies
+		position = 5
+		required_missions = { sic_cross } 
+		provinces_to_highlight = {  
+			OR = { 
+				area = calabria_area
+				area = apulia_area
+				area = naples_area
+				area = capitanate_area
+				area = abruzzo_area
+			}
+			NOT = { 
+				OR = { 
+					province_id = 5112
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		} 
+
+		trigger = {  
+			tag = TTS 
+			calabria_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+			apulia_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+			naples_area = { 
+				OR = { 
+					country_or_non_sovereign_subject_holds = ROOT 
+					province_id = 5112
+				}
+				type = all 
+			}
+			capitanate_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+			abruzzo_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = nap_tts_mod
+				duration = -1
+			}
+		} 
+	}
+}
+ai_sic_naval_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = SIC 
+			AND = { 
+				tag = TTS 
+				was_tag = SIC
+			}
+		}
+	} 
+
+	sic_djerba = {
+		icon = crusader_fleet
+		position = 5
+		required_missions = { sic_fleet } 
+		provinces_to_highlight = {  
+			province_id = 2954
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			2954 = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		effect = {  
+			djerba_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			byzancena_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			tripolitania_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	sic_mahdia = {
+		icon = mission_combat_barbary_piracy
+		position = 6
+		required_missions = { sic_djerba } 
+		provinces_to_highlight = {  
+			area = byzancena_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = { 
+			5818 = { country_or_non_sovereign_subject_holds = ROOT } 
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { 
+				OR = { 
+					area = byzancena_area
+					area = djerba_area
+				}
+				value = 8
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = africa_foothold
+				duration = 7300
+			}
+			tunisia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	sic_africa = {
+		icon = mission_conquer_tunisia
+		position = 7
+		required_missions = {
+			sic_mahdia
+			sic_trp
+		}
+		provinces_to_highlight = {  
+			any_province = { 
+				OR = { 
+					area = tunisia_area
+					area = byzancena_area
+					area = djerba_area
+					area = tripolitania_area
+				}
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+		} 
+
+		trigger = {  
+			341 = { country_or_non_sovereign_subject_holds = ROOT }
+			5818 = { country_or_non_sovereign_subject_holds = ROOT }
+			354 = { country_or_non_sovereign_subject_holds = ROOT }
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { 
+				OR = { 
+					area = tunisia_area
+					area = byzancena_area
+					area = djerba_area
+					area = tripolitania_area
+				}
+				value = 20
+			}
+		} 
+
+		effect = { country_event = { id = aetas_ara.11 } } 
+	}
+}
+ai_sic_naval_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = SIC 
+			AND = { 
+				tag = TTS 
+				was_tag = SIC
+			}
+		}
+	} 
+
+	sic_gen = {
+		icon = dominant_economy
+		position = 5
+		required_missions = { sic_fleet } 
+		provinces_to_highlight = { is_capital_of = GEN } 
+
+		trigger = {  
+			exists = GEN 
+			GEN = { 
+				has_opinion = { 
+					who = ROOT 
+					value = 175
+				}
+			}
+		} 
+
+		effect = {  
+			add_mercantilism = 25
+			add_country_modifier = {
+				name = gen_contracts
+				duration = 18250
+			}
+		} 
+	}
+
+	sic_trp = {
+		icon = mission_into_persia_1
+		position = 6
+		required_missions = { sic_djerba } 
+		provinces_to_highlight = {  
+			area = tripolitania_area 
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			354 = { country_or_non_sovereign_subject_holds = ROOT } 
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { 
+				area = tripolitania_area
+				value = 4
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = trp_landing
+				duration = 7300
+			}
+			jufra_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			cyrenaica_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+}
+ai_sic_naval_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = SIC 
+			AND = { 
+				tag = TTS 
+				was_tag = SIC
+			}
+		}
+	} 
+
+	sic_fleet = {
+		icon = mission_spanish_armada
+		position = 4
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			navy_size_percentage = 1
+			navy_size = 20
+		} 
+
+		effect = {  
+			2954 = { add_permanent_claim = ROOT }
+			corsica_sardinia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	sic_sar = {
+		icon = unite_with_sardinia
+		position = 5
+		required_missions = { sic_fleet } 
+		provinces_to_highlight = {  
+			area = corsica_sardinia_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			corsica_sardinia_area = { 
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all 
+			}
+		} 
+
+		effect = {  
+			corsica_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			baleares_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	sic_western_isles = {
+		icon = mission_seize_the_isles
+		position = 6
+		required_missions = { sic_sar } 
+		provinces_to_highlight = {  
+			OR = { 
+				area = sicily_area
+				area = corsica_sardinia_area
+				area = corsica_area
+				area = baleares_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			sicily_area = { 
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all 
+			}
+			corsica_sardinia_area = { 
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all 
+			}
+			corsica_area = { 
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all 
+			}
+			baleares_area = { 
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all 
+			}
+		} 
+
+		effect = {  
+			override_country_name = WESTERN_ISLES
+			add_country_modifier = { 
+				name = kow_mod
+				duration = -1
+			}
+		} 
+	}
+}
+ai_sic_tts_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		tag = TTS 
+		was_tag = SIC 
+	} 
+
+	sic_tts_reform = {
+		icon = a_real_roman_empire
+		position = 6
+		required_missions = { sic_tts } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			has_reform = liber_augustalis_reform
+			adm_tech = 10
+		} 
+
+		effect = {  
+			remove_government_reform = liber_augustalis_reform
+			add_government_reform = upgraded_liber_augustalis_reform
+		} 
+	}
+
+	sic_tts_melfi = {
+		icon = hungarian_union
+		position = 7
+		required_missions = {
+			sic_tts_reform
+			sic_tts_cohesion
+		}
+		provinces_to_highlight = {  
+			OR = { 
+				area = sicily_area
+				area = calabria_area
+				area = apulia_area
+				area = naples_area
+				area = capitanate_area
+				area = abruzzo_area
+			}
+			owned_by = ROOT 
+			unrest = 1
+			local_autonomy = 1
+		} 
+
+		trigger = {  
+			sicily_area = { 
+				NOT = { 
+					OR = { 
+						unrest = 1
+						local_autonomy = 1
+					}
+				}
+				type = all 
+			}
+			calabria_area = { 
+				NOT = { 
+					OR = { 
+						unrest = 1
+						local_autonomy = 1
+					}
+				}
+				type = all 
+			}
+			apulia_area = { 
+				NOT = { 
+					OR = { 
+						unrest = 1
+						local_autonomy = 1
+					}
+				}
+				type = all 
+			}
+			naples_area = { 
+				OR = { 
+					province_id = 5112
+					NOT = { 
+						OR = { 
+							unrest = 1
+							local_autonomy = 1
+						}
+					}
+				}
+				type = all 
+			}
+			capitanate_area = { 
+				NOT = { 
+					OR = { 
+						unrest = 1
+						local_autonomy = 1
+					}
+				}
+				type = all 
+			}
+			abruzzo_area = { 
+				NOT = { 
+					OR = { 
+						unrest = 1
+						local_autonomy = 1
+					}
+				}
+				type = all 
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = tts_united_gov
+				duration = -1
+			}
+		} 
+	}
+
+	sic_tts_transatlantic = {
+		icon = mission_naval_kingdom
+		position = 8
+		required_missions = { sic_tts_palermo } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			any_province = {
+				OR = { 
+					continent = north_america
+					continent = south_america
+				}
+				has_discovered = ROOT 
+			}
+			OR = {
+				num_of_explorers = 1 
+				num_of_conquistadors = 1
+			}
+			navy_tradition = 50
+		} 
+
+		effect = { country_event = { id = aetas_sic.8 } } 
+	}
+}
+ai_sic_tts_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		tag = TTS 
+		was_tag = SIC 
+	} 
+
+	sic_tts_cohesion = {
+		icon = king_of_naples
+		position = 6
+		required_missions = { sic_tts } 
+		provinces_to_highlight = {  
+			owned_by = ROOT 
+			OR = { 
+				culture = neapolitan
+				culture = calabrian 
+			}
+		} 
+
+		trigger = {  
+			OR = { 
+				NOT = { any_province = { culture = neapolitan } }
+				accepted_culture = neapolitan 
+			}
+			OR = { 
+				NOT = { any_province = { culture = calabrian } }
+				accepted_culture = calabrian
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = tts_internal_cohesion
+				duration = 18250
+			}
+		} 
+	}
+
+	sic_tts_palermo = {
+		icon = fortify_malta
+		position = 7
+		provinces_to_highlight = {  
+			province_id = 125
+			NOT = { 
+				AND = { 
+					owned_by = ROOT 
+					is_core = ROOT 
+					development = 45
+					has_shipyard_building_trigger = yes 
+					has_dock_building_trigger = yes 
+					province_has_center_of_trade_of_level = 5 #False positive as we have new tiers
+				}
+			}
+		} 
+
+		trigger = {  
+			owns_core_province = 125
+			125 = { 
+				development = 45
+				has_shipyard_building_trigger = yes 
+				has_dock_building_trigger = yes 
+				province_has_center_of_trade_of_level = 5 #False positive as we have new tiers
+			}
+		} 
+
+		effect = {  
+			125 = { 
+				add_permanent_province_modifier = { 
+					name = port_of_palermo #missing loc
+					duration = -1
+				}
+			}
+		} 
+	}
+
+	sic_tts_urbanization = {
+		icon = reclaim_the_ducal_lands
+		position = 8
+		required_missions = { sic_tts_palermo } 
+		provinces_to_highlight = {  
+			area = sicily_area
+			NOT = { 
+				AND = { 
+					owned_by = ROOT 
+					is_core = ROOT 
+					development = 30
+					has_manufactory_trigger = yes 
+				}
+			}
+		} 
+
+		trigger = {  
+			sicily_area = { 
+				owned_by = ROOT 
+				is_core = ROOT 
+				development = 30
+				has_manufactory_trigger = yes 
+				type = all 
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = sic_industry
+				duration = -1
+			}
+		} 
+	}
+}
+
+ai_sic_tts_branching_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		tag = SIC
+	} 
+
+	sic_tts_branching_4a = {
+		icon = mission_locked_mission
+		position = 6
+		required_missions = { sic_tts } 
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no
+			} 
+			has_reform = liber_augustalis_reform
+			adm_tech = 10
+		} 
+
+		effect = {  
+			custom_tooltip = tts_unlock_mission.tt
+			remove_government_reform = liber_augustalis_reform
+			add_government_reform = upgraded_liber_augustalis_reform
+		} 
+	}
+
+	sic_tts_branching_4b = {
+		icon = mission_locked_mission
+		position = 7
+		required_missions = {
+			sic_tts_branching_4a
+			sic_tts_branching_5a
+		}
+		provinces_to_highlight = {  
+			OR = { 
+				area = sicily_area
+				area = calabria_area
+				area = apulia_area
+				area = naples_area
+				area = capitanate_area
+				area = abruzzo_area
+			}
+			owned_by = ROOT 
+			unrest = 1
+			local_autonomy = 1
+		} 
+
+		trigger = {  
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no
+			}
+			sicily_area = { 
+				NOT = { 
+					OR = { 
+						unrest = 1
+						local_autonomy = 1
+					}
+				}
+				type = all 
+			}
+			calabria_area = { 
+				NOT = { 
+					OR = { 
+						unrest = 1
+						local_autonomy = 1
+					}
+				}
+				type = all 
+			}
+			apulia_area = { 
+				NOT = { 
+					OR = { 
+						unrest = 1
+						local_autonomy = 1
+					}
+				}
+				type = all 
+			}
+			naples_area = { 
+				OR = { 
+					province_id = 5112
+					NOT = { 
+						OR = { 
+							unrest = 1
+							local_autonomy = 1
+						}
+					}
+				}
+				type = all 
+			}
+			capitanate_area = { 
+				NOT = { 
+					OR = { 
+						unrest = 1
+						local_autonomy = 1
+					}
+				}
+				type = all 
+			}
+			abruzzo_area = { 
+				NOT = { 
+					OR = { 
+						unrest = 1
+						local_autonomy = 1
+					}
+				}
+				type = all 
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = tts_unlock_mission.tt
+			add_country_modifier = { 
+				name = tts_united_gov
+				duration = -1
+			}
+		} 
+	}
+
+	sic_tts_branching_4c = {
+		icon = mission_locked_mission
+		position = 8
+		required_missions = { sic_tts_branching_5b } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no
+			}
+			any_province = {
+				OR = { 
+					continent = north_america
+					continent = south_america
+				}
+				has_discovered = ROOT 
+			}
+			OR = {
+				num_of_explorers = 1 
+				num_of_conquistadors = 1
+			}
+			navy_tradition = 50
+		} 
+
+		effect = { 
+			custom_tooltip = tts_unlock_mission.tt
+			country_event = { id = aetas_sic.8 } 
+		} 
+	}
+}
+ai_sic_tts_branching_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		tag = SIC
+	} 
+
+	sic_tts_branching_5a = {
+		icon = mission_locked_mission
+		position = 6
+		required_missions = { sic_tts } 
+		provinces_to_highlight = {  
+			owned_by = ROOT 
+			OR = { 
+				culture = neapolitan
+				culture = calabrian 
+			}
+		} 
+
+		trigger = {  
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no
+			}
+			OR = { 
+				NOT = { any_province = { culture = neapolitan } }
+				accepted_culture = neapolitan 
+			}
+			OR = { 
+				NOT = { any_province = { culture = calabrian } }
+				accepted_culture = calabrian
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = tts_unlock_mission.tt
+			add_country_modifier = { 
+				name = tts_internal_cohesion
+				duration = 18250
+			}
+		} 
+	}
+
+	sic_tts_branching_5b = {
+		icon = mission_locked_mission
+		position = 7
+		provinces_to_highlight = {  
+			province_id = 125
+			NOT = { 
+				AND = { 
+					owned_by = ROOT 
+					is_core = ROOT 
+					development = 45
+					has_shipyard_building_trigger = yes 
+					has_dock_building_trigger = yes 
+					province_has_center_of_trade_of_level = 5 #False positive as we have new tiers
+				}
+			}
+		} 
+
+		trigger = {  
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no
+			}
+			owns_core_province = 125
+			125 = { 
+				development = 45
+				has_shipyard_building_trigger = yes 
+				has_dock_building_trigger = yes 
+				province_has_center_of_trade_of_level = 5 #False positive as we have new tiers
+			}
+		} 
+
+		effect = { 
+			custom_tooltip = tts_unlock_mission.tt
+			125 = { 
+				add_permanent_province_modifier = { 
+					name = port_of_palermo #missing loc
+					duration = -1
+				}
+			}
+		} 
+	}
+
+	sic_tts_branching_5c = {
+		icon = mission_locked_mission
+		position = 8
+		required_missions = { sic_tts_branching_5b } 
+		provinces_to_highlight = {  
+			area = sicily_area
+			NOT = { 
+				AND = { 
+					owned_by = ROOT 
+					is_core = ROOT 
+					development = 30
+					has_manufactory_trigger = yes 
+				}
+			}
+		} 
+
+		trigger = {  
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no
+			}
+			sicily_area = { 
+				owned_by = ROOT 
+				is_core = ROOT 
+				development = 30
+				has_manufactory_trigger = yes 
+				type = all 
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = tts_unlock_mission.tt
+			add_country_modifier = { 
+				name = sic_industry
+				duration = -1
+			}
+		} 
+	}
+}

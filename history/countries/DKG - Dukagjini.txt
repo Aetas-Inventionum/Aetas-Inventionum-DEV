@@ -1,0 +1,18 @@
+government = monarchy
+add_government_reform = albanian_lordship_reform
+government_rank = 1
+primary_culture = gheg
+religion = orthodox
+technology_group = eastern
+capital = 4175 #lezhë
+
+
+1415.1.1 = {
+	monarch = {
+		name = "Nikollë"
+		dynasty = "Dukagjini"	
+		adm = 1
+		dip = 3
+		mil = 1
+	}
+}

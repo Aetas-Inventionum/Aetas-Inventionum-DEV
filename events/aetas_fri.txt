@@ -1,0 +1,222 @@
+namespace = aetas_fri
+normal_or_historical_nations = yes
+
+#Introduction to the Great Frisian War
+country_event = {
+	id = aetas_fri.1
+	title = aetas_fri.1.t
+	desc = aetas_fri.1.d
+	picture = BATTLE_VISTULA_LAGOON_eventPicture
+	
+	is_triggered_only = yes
+
+	immediate = { 
+		hidden_effect = { set_global_flag = gfw_flag }
+	}
+
+	option = { 
+		name = aetas_fri.1.a #oh boy...
+		trigger = { tag = EFR }
+		add_country_modifier = {
+			name = fri_great_war
+			duration = 3650
+		}
+		custom_tooltip = gfw.tt
+		change_statists_vs_monarchists = 0.25
+	}
+	option = { 
+		name = aetas_fri.1.b #oh boy...
+		trigger = { NOT = { tag = EFR } }
+		if = { 
+			limit = { tag = OMM }
+			custom_tooltip = gfw.tt
+		}
+		else = { custom_tooltip = gfw.2.tt }
+	}
+}
+#victory at groningen
+country_event = {
+	id = aetas_fri.2
+	title = aetas_fri.2.t
+	desc = aetas_fri.2.d
+	picture = SIEGE_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes 
+	major = yes 
+	major_trigger = { 
+		primary_culture = frisian
+	}
+
+	option = { 
+		name = aetas_fri.2.a #yes!
+		4382 = { 
+			add_devastation = 10
+		}
+		add_prestige = 10
+	}
+}
+#the fetkeaper alliance wins the great frisian war
+country_event = {
+	id = aetas_fri.3
+	title = aetas_fri.3.t
+	desc = aetas_fri.3.d
+	picture = REVOLT_HUNGARIAN_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes 
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			primary_culture = frisian
+			tag = HOL 
+			tag = UTR 
+		}
+	}
+
+	option = { 
+		name = aetas_fri.3.a #we knew we'd win anyway
+		white_peace = FRI
+		change_mil = 1
+		add_treasury = 250
+		if = { 
+			limit = { alliance_with = OMM }
+			OMM = { add_treasury = 100 }
+		}
+	}
+	after = { 
+		hidden_effect = { clr_global_flag = gfw_flag }
+	}
+}
+#skieringers win the great frisian war
+country_event = {
+	id = aetas_fri.4
+	title = aetas_fri.4.t
+	desc = aetas_fri.4.d
+	picture = STREET_SPEECH_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes 
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			primary_culture = frisian
+			tag = HOL 
+			tag = UTR 
+		}
+	}
+
+	option = { 
+		name = aetas_fri.4.a #we knew we'd win anyway
+		if = { 
+			limit = { 
+				offensive_war_with = EFR
+			}
+			every_country = { 
+				limit = { defensive_war_with = ROOT }
+				white_peace = ROOT 
+			}
+			every_ally = { 
+				limit = { offensive_war_with = EFR }
+				white_peace = EFR
+			}
+		}
+		EFR = {
+			kill_ruler = yes 
+			change_government = republic
+			add_government_reform = frisian_freedom_reform
+			add_treasury = -250
+		}
+		add_treasury = 125
+		if = { 
+			limit = { alliance_with = GRN }
+			add_treasury = 125
+		}
+	}
+	after = { 
+		hidden_effect = { clr_global_flag = gfw_flag }
+	}
+}
+#draw
+country_event = {
+	id = aetas_fri.5
+	title = aetas_fri.5.t
+	desc = aetas_fri.5.d
+	picture = WOUNDED_SOLDIERS_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes 
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			primary_culture = frisian
+			tag = HOL 
+			tag = UTR 
+		}
+	}
+
+	trigger = { 
+		tag = EFR 
+		defensive_war_with = FRI 
+		has_global_flag = gfw_flag 
+		is_year = 1423
+	}
+
+	#no MTTH for triggered only
+
+	option = { 
+		name = aetas_fri.5.a 
+		every_country = { 
+			limit = { 
+				OR = { 
+					tag = FRI 
+					alliance_with = FRI 
+				}
+				offensive_war_with = ROOT
+			}
+			white_peace = ROOT 
+		}
+	}
+	after = { 
+		hidden_effect = { clr_global_flag = gfw_flag }
+	}
+}
+#rise of the sirksena
+country_event = {
+	id = aetas_fri.6
+	title = aetas_fri.6.t
+	desc = aetas_fri.6.d
+	picture = PROTESTANT_RELIGIOUS_DOUBTS_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes 
+
+	option = { 
+		name = aetas_fri.6.a #sirksena rule
+		ai_chance = { factor = 2 } #historical
+		change_government = monarchy
+		add_government_reform = frisian_chiefdom_reform
+		define_ruler = { 
+			name = "Ulrik I"
+			dynasty = "Sirksena"
+			adm = 5
+			dip = 5
+			mil = 4
+			age = 29
+		}
+		add_stability = 1
+	}
+	option = { 
+		name = aetas_fri.6.b #no to the sirksenas
+		ai_chance = { factor = 1 } 
+		add_stability = -1
+		capital_scope = { 
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 2
+				leader = "Ulrich I"
+				leader_dynasty = "Sirksena"
+			}
+		}
+	}
+}

@@ -1,0 +1,43 @@
+#4240 - Fejer
+#Area - Alföld
+#Region - Carpathia
+
+#Core Details
+capital = "Székesfehérvár"
+is_city = yes
+owner = HUN
+controller = HUN
+
+#Demographics
+culture = hungarian
+religion = catholic
+
+#Development and Trade
+base_tax = 3
+base_production = 3
+base_manpower = 2
+trade_goods = alum
+
+#Cores and Occupation (Alphabetical after current)
+add_core = HUN
+
+#Other Political
+hre = no
+seat_in_parliament = yes
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = KAZ
+discovered_by = CRI
+discovered_by = GOL
+discovered_by = AST
+discovered_by = QAS
+
+#Histories

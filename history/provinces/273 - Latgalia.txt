@@ -1,0 +1,40 @@
+#273 - Latgalia
+#Area - Latgale
+#Region - Baltica 
+
+#Core Details
+capital = "Daugavpils"
+is_city = yes
+owner = LIV
+controller = LIV
+
+#Demographics
+culture = prussian
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 1
+base_manpower = 2
+trade_goods = apiculture
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = LIV
+add_core = LTG
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+center_of_trade = 1
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

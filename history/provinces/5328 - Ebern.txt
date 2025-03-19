@@ -1,0 +1,37 @@
+#5328 - Ebern
+#Area - Main Valley
+#Region - South Germany
+
+#Core Details
+capital = "Ebern"
+is_city = yes
+owner = WBG
+controller = WBG
+
+#Demographics
+culture = franconian
+religion = catholic
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = livestock
+
+#Cores and Occupation (Alphabetical after current)
+add_core = WBG
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

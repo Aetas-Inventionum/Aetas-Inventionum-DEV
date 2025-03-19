@@ -1,0 +1,46 @@
+l_french:
+
+#Bookmarks
+ CONQUEST_OF_CEUTA:0 "Conquête de Ceuta"
+ CONQUEST_OF_CEUTA_DESC:0 "//////"
+ 
+#National ideas
+ CHP_ideas:0 "Doctrines champenoises"
+ CHP_ideas_start:0 "traditions champenoises"
+ CHP_ideas_bonus:0 "ambitions champenoises"
+ chp_fairs:0 "Foires de Champagne"
+ chp_fairs_desc:0 "Les foires de Champagne avaient lieu au Moyen Âge et ont fait de la région la plus prospère de son temps. Leur rayonnement international et leur succès sont dus à sa situation géographique, au cœur des routes commerciales et fluviales venant d'Italie, de Flandre, de Paris et d'Allemagne ; mais aussi par la gestion éclairée des comtes de Champagne. Elles se déroulaient principalement dans les villes de Lagny, Troyes, Provins et Bar-sur-Aube et les comtes protégeaient également la communauté juive, qui participait activement au développement commercial de ces villes. Les foires préfigurent par leur fonctionnement économique et leur influence à travers l'Europe, les premières places financières internationales. Nos foires nous permettent une reconnaissance internationale et font de notre pays l'une des plus grandes puissances économiques du monde, nous devons les faire pérenniser afin d'apporter richesse à notre terre."
+ chp_chretien_de_troyes:0 "Chrétien de Troyes"
+ chp_chretien_de_troyes_desc:0 "Né vers 1130 et mort entre 1180 et 1190, Chrétien de Troyes est un poète considéré comme le fondateur de la littérature arthurienne en ancien français ainsi que l'un des premiers auteurs de romans chevaleresques. Au service de la cour de Champagne, ses romans reflètent les idées politiques, culturelles et religieuses de son temps. Honorons notre héritage !"
+ chp_reims_city_of_crownings:0 "Reims, cité des sacres"
+ chp_reims_city_of_crownings_desc:0 "C'est en 496 sur le futur site de la cathédrale Notre-Dame de Reims que Clovis est baptisé. Plus tard, beaucoup de rois de France, à commencer par Louis le Pieux en 816 jusque Louis XVI en 1775, seront sacrés dans la ville. Nous devrions récupérer ce prestige pour nos dirigeants actuels."
+ chp_rose_of_provins:0 "Rose de Provins"
+ chp_rose_of_provins_desc:0 "La légende veut que vers 1240 Thibault IV de Champagne et de Navarre ait ramené de Terre Sainte une rose d'excellente qualité dans la région et dont il fit d'importantes plantations dans les terres de la ville de Provins. Les roseraies de Provins devinrent bientôt célèbres et l'utilisation de la rose était extrêmement courante en médecine et dans les cérémonies religieuses. Ainsi, la fleur devint le symbole du raffinement de la cour champenoise et il est dit que l'emblème de rose de la maison de Lancastre représente la rose de Provins."
+ chp_the_paraclete:0 "Le Paraclet"
+ chp_the_paraclete_desc:0 "Le Paraclet était une prestigieuse abbaye bénédictine de femmes fondée par Abélard et Héloïse au XIIe siècle dans l'évêché de Troyes et fut le premier ordre uniquement féminin. L'abbaye illustra un modèle monastique basé sur l'érudition et apparaît comme une tentative de reconnaître l'égalité intellectuelle des femmes."
+ chp_wine:0 "Vin de Champagne"
+ chp_wine_desc:0 "Produits depuis le VIIème siècle dans la région, les vins de Champagne ont vraiment commencé à être reconnus au XVIIème siècle sous l'impulsion de familles parisiennes locales. Vieillissant très mal dans les tonneaux, le vin fut ensuite conservé dans des bouteilles en verre avec bouchons de liège, une nouvelle manière de conserver le vin alors développé par les Anglais, mais il devient en retour, naturellement pétillant. Ce caractère pétillant causa bien des soucis aux vignerons, à tel point qu'il était surnommé le 'vin du diable' puisque les bouteilles explosaient sous la pression. Cependant, le vin devint populaire en Angleterre, ce qui a permit de pérenniser sa production. Nous devrions exploiter le champagne en vue d'établir des relations amicales avec les puissances étrangères."
+ chp_fortify:0 "Fortifier la Champagne"
+ chp_fortify_desc:0 "Notre pays, situé entre la France et l'Allemagne, est vulnérable aux agressions étrangères. Il nous faut fortifier la Champagne, à la manière des remparts des villes de Provins ou de Langres."
+ 
+ BOU_ideas:0 "Doctrines bourbonnaises"
+ BOU_ideas_start:0 "traditions bourbonnaises"
+ BOU_ideas_bonus:0 "ambitions bourbonnaises"
+ bou_frontier_area:0 "Territoire frontière"
+ bou_frontier_area_desc:0 "Notre pays est situé à la frontière entre les deux grandes zones linguistiques qui occupent la majeure partie de la France : la langue d'oc au sud et la langue d'oïl au nord. Nous avons appris à régner sur deux peuples culturellement et linguistiquement différents, et nous devrions poursuivre notre politique de tolérance."
+ bou_bath_bourbon:0 "Bains de Bourbon"
+ bou_bath_bourbon_desc:0 "Les bains de Bourbon, connus depuis l'époque romaine dans la ville éponyme, étaient particulièrement célèbres au Moyen Âge et à l'époque moderne et plusieurs personnalités importantes les visitèrent. Nous devons nous assurer que leur reconnaissance durera."
+ bou_holdings:0 "Possessions bourbonnaises"
+ bou_holdings_desc:0 "Au fil du temps, les ducs de Bourbon ont réussi, grâce aux mariages et à la diplomatie, à étendre leurs possessions sur la quasi-totalité du Massif Central. Ainsi, la principauté a acquis une telle ampleur qu'elle suscite les convoitises, à une époque où la monarchie française est en train d'imposer son autorité exclusive sur tout le royaume. Notre duché en expansion devrait poursuivre sa diplomatie efficace à plus grande échelle !"
+ bou_loyalty_crown:0 "Loyauté à la couronne"
+ bou_loyalty_crown_desc:0 "Nos ducs ont toujours soutenu la couronne française et ont réussi à gagner sa confiance en plus d'occuper de nombreux postes importants à la cour. Nous sommes un pays de confiance qui saura, sans soucis, trouver des alliés solides."
+ bou_castles:0 "Châteaux du Bourbonnais"
+ bou_castles_desc:0 "Notre territoire est parsemé de nombreux châteaux importants comme ceux de la ville de Bourbon, Montluçon ou Moulins. Nous devrions continuer leur entretien afin de protéger notre nation des agressions étrangères."
+ bou_good_geography:0 "Géographie avantageuse"
+ bou_good_geography_desc:0 "Nos terres sont un mélange parfait de terres agricoles, forêts et collines, ce qui nous permet d'avoir une gamme extrêmement diversifiée de produits dans nos terres riches et fertiles."
+ bou_kings_france:0 "Rois de France"
+ bou_kings_france_desc:0 "Le règne de la dynastie de Bourbon, originaire du Bourbonnais, correspond à l'apogée de la monarchie absolue en France et à l'affirmation de la puissance du royaume en Europe. Les différents rois de cette période ont réussi à réduire le pouvoir de la noblesse, à étendre le territoire français et également à intégrer les dernières possessions féodales. Comme ces rois, nous devons affirmer notre glorieuse autorité sur notre nation."
+
+nederlandic:0 = "
+ 
+ 

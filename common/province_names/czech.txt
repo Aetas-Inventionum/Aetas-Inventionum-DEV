@@ -1,0 +1,41 @@
+#moved to west_slavic.txt
+##only use if there are significant differences between West Slavic languages
+
+##poland region
+#lower silesia
+264 = { "Vratislav" "Vratislav" }
+2966 = { "Hlohov" "Hlohov" }
+4238 = { "Lehnice" "Lehnice" }
+5258 = { "Breh" "Breh" }
+5259 = { "Svídnice" "Svídnice" }
+5260 = { "Javor" "Javor" }
+5261 = { "Zahán" "Zahán" }
+#upper silesian
+263 = { "Ratibor" "Ratibor" }
+4723 = { "Opolí" "Opolí" }
+5235 = { "Opava" "Opava" }
+5253 = { "Teshín" "Teshín" }
+5254 = { "Osvetim" "Osvetim" }
+5255 = { "Hlivice" "Hlivice" }
+5257 = { "Nisa" "Nisa" }
+#lesser poland
+262 = { "Krakov" "Krakov" }
+2959 = { "Tarnov" "Tarnov" }
+2960 = { "Nový Sad" "Nový Sad" }
+5861 = { "Mistov" "Mistov" }
+5863 = { "Nový Trh" "Nový Trh" }
+5867 = { "Vislice" "Vislice" }
+#polish lowlands
+4533 = { "Velun" "Velun" }
+5852 = { "Volborice" "Volborice" }
+5853 = { "Petrkov" "Petrkov" }
+##german region
+#styria
+1863 = { "Stýrský Hradec" "Stýrský Hradec" }
+#carinthia
+128 = { "Zelanec" "Zelanec" }
+#upper austria
+133 = { "Linec" "Linec" }
+##BALKANS
+#carniola
+129 = { "Lublan" "Lublan" }

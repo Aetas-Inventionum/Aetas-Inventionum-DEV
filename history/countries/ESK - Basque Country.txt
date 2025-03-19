@@ -1,0 +1,6 @@
+government = monarchy
+add_government_reform = courts_of_navarra
+primary_culture = basque
+religion = catholic
+technology_group = western
+capital = 209 #Bilbao

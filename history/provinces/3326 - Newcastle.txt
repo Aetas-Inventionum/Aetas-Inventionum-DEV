@@ -1,0 +1,38 @@
+#3326 - Newcastle
+#Area - Northern England
+#Region - British Isles
+
+#Core Details
+capital = "Hexham"
+is_city = yes
+owner = HEX
+controller = HEX 
+
+#Demographics
+culture = northumbrian
+religion = catholic
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = leather   #tanning, calf skins, etc
+
+#Cores and Occupation (Alphabetical after current)
+add_core = HEX
+add_core = NBL
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

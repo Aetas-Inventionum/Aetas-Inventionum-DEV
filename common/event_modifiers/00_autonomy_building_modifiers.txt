@@ -1,0 +1,384 @@
+# Modifiers for percentage of states with governing buildings
+
+#################################################
+#		Courthouse
+#################################################
+
+courthouse_1 = {
+	governing_capacity_modifier = 0.01	
+	yearly_absolutism = 0.04
+}
+
+courthouse_2 = {
+	governing_capacity_modifier = 0.02	
+	yearly_absolutism = 0.08
+}
+
+courthouse_3 = {
+	governing_capacity_modifier = 0.03	
+	yearly_absolutism = 0.12
+}
+
+courthouse_4 = {
+	governing_capacity_modifier = 0.04	
+	yearly_absolutism = 0.16
+}
+
+courthouse_5 = {
+	governing_capacity_modifier = 0.05	
+	yearly_absolutism = 0.20
+}
+
+courthouse_6 = {
+	governing_capacity_modifier = 0.06
+	yearly_absolutism = 0.24
+}
+
+courthouse_7 = {
+	governing_capacity_modifier = 0.07
+	yearly_absolutism = 0.28
+}
+
+courthouse_8 = {
+	governing_capacity_modifier = 0.08
+	yearly_absolutism = 0.32
+}
+
+courthouse_9 = {
+	governing_capacity_modifier = 0.09
+	yearly_absolutism = 0.36
+}
+
+courthouse_10 = {
+	governing_capacity_modifier = 0.10
+	yearly_absolutism = 0.40
+}
+
+courthouse_11 = {
+	governing_capacity_modifier = 0.11
+	yearly_absolutism = 0.44
+}
+
+courthouse_12 = {
+	governing_capacity_modifier = 0.12
+	yearly_absolutism = 0.48
+}
+
+courthouse_13 = {
+	governing_capacity_modifier = 0.13
+	yearly_absolutism = 0.52
+}
+
+courthouse_14 = {
+	governing_capacity_modifier = 0.14
+	yearly_absolutism = 0.56
+}
+
+courthouse_15 = {
+	governing_capacity_modifier = 0.15
+	yearly_absolutism = 0.60
+}
+
+courthouse_16 = {
+	governing_capacity_modifier = 0.16
+	yearly_absolutism = 0.64
+}
+
+courthouse_17 = {
+	governing_capacity_modifier = 0.17
+	yearly_absolutism = 0.68
+}
+
+courthouse_18 = {
+	governing_capacity_modifier = 0.18
+	yearly_absolutism = 0.72
+}
+
+courthouse_19 = {
+	governing_capacity_modifier = 0.19
+	yearly_absolutism = 0.76
+}
+
+courthouse_20 = {
+	governing_capacity_modifier = 0.20
+	yearly_absolutism = 0.80
+}
+
+courthouse_21 = {
+	governing_capacity_modifier = 0.21
+	yearly_absolutism = 0.84
+}
+
+courthouse_22 = {
+	governing_capacity_modifier = 0.22
+	yearly_absolutism = 0.88
+}
+
+courthouse_23 = {
+	governing_capacity_modifier = 0.23
+	yearly_absolutism = 0.92
+}
+
+courthouse_24 = {
+	governing_capacity_modifier = 0.24
+	yearly_absolutism = 0.96
+}
+
+courthouse_25 = {
+	governing_capacity_modifier = 0.25
+	yearly_absolutism = 1
+}
+
+#################################################
+#		Town Hall
+#################################################
+
+town_hall_1 = {
+	governing_capacity_modifier = 0.01	
+	yearly_absolutism = 0.04
+}
+
+town_hall_2 = {
+	governing_capacity_modifier = 0.02	
+	yearly_absolutism = 0.08
+}
+
+town_hall_3 = {
+	governing_capacity_modifier = 0.03	
+	yearly_absolutism = 0.12
+}
+
+town_hall_4 = {
+	governing_capacity_modifier = 0.04	
+	yearly_absolutism = 0.16
+}
+
+town_hall_5 = {
+	governing_capacity_modifier = 0.05	
+	yearly_absolutism = 0.20
+}
+
+town_hall_6 = {
+	governing_capacity_modifier = 0.06
+	yearly_absolutism = 0.24
+}
+
+town_hall_7 = {
+	governing_capacity_modifier = 0.07
+	yearly_absolutism = 0.28
+}
+
+town_hall_8 = {
+	governing_capacity_modifier = 0.08
+	yearly_absolutism = 0.32
+}
+
+town_hall_9 = {
+	governing_capacity_modifier = 0.09
+	yearly_absolutism = 0.36
+}
+
+town_hall_10 = {
+	governing_capacity_modifier = 0.10
+	yearly_absolutism = 0.40
+}
+
+town_hall_11 = {
+	governing_capacity_modifier = 0.11
+	yearly_absolutism = 0.44
+}
+
+town_hall_12 = {
+	governing_capacity_modifier = 0.12
+	yearly_absolutism = 0.48
+}
+
+town_hall_13 = {
+	governing_capacity_modifier = 0.13
+	yearly_absolutism = 0.52
+}
+
+town_hall_14 = {
+	governing_capacity_modifier = 0.14
+	yearly_absolutism = 0.56
+}
+
+town_hall_15 = {
+	governing_capacity_modifier = 0.15
+	yearly_absolutism = 0.60
+}
+
+town_hall_16 = {
+	governing_capacity_modifier = 0.16
+	yearly_absolutism = 0.64
+}
+
+town_hall_17 = {
+	governing_capacity_modifier = 0.17
+	yearly_absolutism = 0.68
+}
+
+town_hall_18 = {
+	governing_capacity_modifier = 0.18
+	yearly_absolutism = 0.72
+}
+
+town_hall_19 = {
+	governing_capacity_modifier = 0.19
+	yearly_absolutism = 0.76
+}
+
+town_hall_20 = {
+	governing_capacity_modifier = 0.20
+	yearly_absolutism = 0.80
+}
+
+town_hall_21 = {
+	governing_capacity_modifier = 0.21
+	yearly_absolutism = 0.84
+}
+
+town_hall_22 = {
+	governing_capacity_modifier = 0.22
+	yearly_absolutism = 0.88
+}
+
+town_hall_23 = {
+	governing_capacity_modifier = 0.23
+	yearly_absolutism = 0.92
+}
+
+town_hall_24 = {
+	governing_capacity_modifier = 0.24
+	yearly_absolutism = 0.96
+}
+
+town_hall_25 = {
+	governing_capacity_modifier = 0.25
+	yearly_absolutism = 1
+}
+
+town_hall_26 = {
+	governing_capacity_modifier = 0.26
+	yearly_absolutism = 1.04
+}
+
+town_hall_27 = {
+	governing_capacity_modifier = 0.27
+	yearly_absolutism = 1.08
+}
+
+town_hall_28 = {
+	governing_capacity_modifier = 0.28
+	yearly_absolutism = 1.12
+}
+
+town_hall_29 = {
+	governing_capacity_modifier = 0.29
+	yearly_absolutism = 1.16
+}
+
+town_hall_30 = {
+	governing_capacity_modifier = 0.30
+	yearly_absolutism = 1.20
+}
+
+town_hall_31 = {
+	governing_capacity_modifier = 0.31
+	yearly_absolutism = 1.24
+}
+
+town_hall_32 = {
+	governing_capacity_modifier = 0.32
+	yearly_absolutism = 1.28
+}
+
+town_hall_33 = {
+	governing_capacity_modifier = 0.33
+	yearly_absolutism = 1.32
+}
+
+town_hall_34 = {
+	governing_capacity_modifier = 0.34
+	yearly_absolutism = 1.36
+}
+
+town_hall_35 = {
+	governing_capacity_modifier = 0.35
+	yearly_absolutism = 1.40
+}
+
+town_hall_36 = {
+	governing_capacity_modifier = 0.36
+	yearly_absolutism = 1.44
+}
+
+town_hall_37 = {
+	governing_capacity_modifier = 0.37
+	yearly_absolutism = 1.48
+}
+
+town_hall_38 = {
+	governing_capacity_modifier = 0.38
+	yearly_absolutism = 1.52
+}
+
+town_hall_39 = {
+	governing_capacity_modifier = 0.39
+	yearly_absolutism = 1.56
+}
+
+town_hall_40 = {
+	governing_capacity_modifier = 0.40
+	yearly_absolutism = 1.60
+}
+
+town_hall_41 = {
+	governing_capacity_modifier = 0.41
+	yearly_absolutism = 1.64
+}
+
+town_hall_42 = {
+	governing_capacity_modifier = 0.42
+	yearly_absolutism = 1.68
+}
+
+town_hall_43 = {
+	governing_capacity_modifier = 0.43
+	yearly_absolutism = 1.72
+}
+
+town_hall_44 = {
+	governing_capacity_modifier = 0.44
+	yearly_absolutism = 1.76
+}
+
+town_hall_45 = {
+	governing_capacity_modifier = 0.45
+	yearly_absolutism = 1.80
+}
+
+town_hall_46 = {
+	governing_capacity_modifier = 0.46
+	yearly_absolutism = 1.84
+}
+
+town_hall_47 = {
+	governing_capacity_modifier = 0.47
+	yearly_absolutism = 1.88
+}
+
+town_hall_48 = {
+	governing_capacity_modifier = 0.48
+	yearly_absolutism = 1.92
+}
+
+town_hall_49 = {
+	governing_capacity_modifier = 0.49
+	yearly_absolutism = 1.96
+}
+
+town_hall_50 = {
+	governing_capacity_modifier = 0.50
+	yearly_absolutism = 2
+}

@@ -1,0 +1,45 @@
+#258 - Lodz
+#Area - Polish Lowlands
+#Region - Poland 
+
+#Core Details
+capital = "Sieradz"
+is_city = yes
+owner = POL
+controller = POL
+
+#Demographics
+culture = polish
+religion = catholic
+
+#Development and Trade
+base_tax = 4
+base_production = 4
+base_manpower = 4
+trade_goods = cloth
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = POL
+add_core = SIZ
+
+#Other Political
+hre = no
+seat_in_parliament = yes
+
+#Fort/Other Buildings
+
+#Special Modifiers
+center_of_trade = 2
+
+#Discoveries
+discovered_by = KAZ
+discovered_by = CRI
+discovered_by = GOL
+discovered_by = AST
+discovered_by = QAS
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = eastern
+
+#Histories

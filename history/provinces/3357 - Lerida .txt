@@ -1,0 +1,39 @@
+#3357 - Lerida
+#Area - Catalonia
+#Region - Iberia
+
+#Core Details
+capital = "Lerida"
+is_city = yes
+owner = ARA
+controller = ARA
+
+#Demographics
+culture = mudejar   #11% of the population of aragon by the 15th century, important community in Lerida
+religion = sunni
+
+#Development and Trade
+base_tax = 2
+base_production = 3
+base_manpower = 2
+trade_goods = fruit      #figs, dates, nuts and almonds, etc big thing in catalonia as a whole and a main export
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = ARA
+add_core = CAT
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

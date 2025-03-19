@@ -1,0 +1,38 @@
+#110 - Trent
+#Area - Trentino
+#Region - Italy
+
+#Core Details
+capital = "Trento"
+is_city = yes
+owner = TNT
+controller = TNT
+
+#Demographics
+culture = venetian
+religion = catholic
+
+#Development and Trade
+base_tax = 4
+base_production = 4
+base_manpower = 4
+trade_goods = paper #14th century paper mill
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = TNT
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

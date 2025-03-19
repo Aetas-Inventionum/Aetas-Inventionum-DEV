@@ -1,0 +1,1225 @@
+ai_lan_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		#has_dlc = "Emperor"
+		OR = {
+			tag = TUS
+			tag = LAN
+			was_tag = LAN 
+			was_tag = TUS
+		}
+		NOT = { map_setup = map_setup_random } 
+	}
+
+	lan_medici = {
+		icon = mission_medici
+		position = 2
+		required_missions = { lan_guilds } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			has_ruler = "Cosimo de' Medici"
+		} 
+
+		effect = {  
+			add_stability = 1
+		} 
+	}
+
+	lan_donatello = {
+		icon = mission_donatello
+		position = 3
+		required_missions = { lan_medici } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			stability  = 2
+			adm_power = 100
+			treasury = 200
+		} 
+
+		effect = {  
+			add_treasury = -200
+			add_adm_power = -100
+			country_event = { id = aetas_lan.7 }
+		} 
+	}
+
+	lan_machiavelli = {
+		icon = mission_machiavelli
+		position = 4
+		required_missions = { lan_donatello } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			stability = 3
+			adm_power = 200
+		} 
+
+		effect = {  
+			add_adm_power = -100
+			country_event = { id = aetas_lan.10 }
+		} 
+	}
+
+	lan_leonardo = {
+		icon = florentine_renaissance
+		position = 5
+		required_missions = { lan_machiavelli } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			stability = 3
+			adm_power = 100
+			dip_power = 100 
+			mil_power = 100
+		} 
+
+		effect = {  
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			country_event = { id = aetas_lan.11 }
+		} 
+	}
+
+	ren_sans_limit = {
+		icon = mission_david
+		position = 7
+		required_missions = {
+			lan_leonardo
+			lan_uffizi
+			emp_lan_academy_of_the_bran
+		}
+		provinces_to_highlight = {  
+			province_id = 116
+			NOT = { 
+				AND = { 
+					has_great_project = { 
+						type = ai_uffizi 
+						tier = 3
+					}
+					has_great_project = { 
+						type = ai_pv
+						tier = 3
+					}
+					has_great_project = { 
+						type = santa_maria_del_fiore
+						tier = 3
+					}
+					development = 50
+				}
+			}
+		} 
+
+		trigger = {  
+			116 = { 
+				has_great_project = { 
+					type = ai_uffizi 
+					tier = 3
+				}
+				has_great_project = { 
+					type = ai_pv
+					tier = 3
+				}
+				has_great_project = { 
+					type = santa_maria_del_fiore
+					tier = 3
+				}
+				development = 50
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = ai_lan_ren
+				duration = -1
+			}
+		} 
+	}
+}
+ai_lan_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		#has_dlc = "Emperor"
+		OR = {
+			tag = TUS
+			tag = LAN
+			was_tag = LAN 
+			was_tag = TUS
+		}
+		NOT = { map_setup = map_setup_random } 
+	}
+
+	lan_guilds = {
+		icon = immaculate_government
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			OR = { 
+				custom_trigger_tooltip = { 
+					tooltip = arti_mag.tt
+					has_country_modifier = royal_council_meeting_mod
+				}
+				custom_trigger_tooltip = { 
+					tooltip = arti_med.tt
+					has_country_modifier = state_council_meeting_mod
+				}
+				custom_trigger_tooltip = { 
+					tooltip = arti_min.tt
+					has_country_modifier = war_council_meeting_mod 
+				}
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = lan_guilds_mod
+				duration = 3650
+			}
+		} 
+	}
+
+	emp_lan_reliable_mints = {
+		icon = medici_bank_ledgers
+		position = 2
+		required_missions = { lan_guilds } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = emp_lan_reliable_mints_tt
+				OR = {
+					all_neighbor_country = { inflation = ROOT } 
+					NOT = { inflation = 0.1 } 
+				}
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "lan_medici_banking"
+				duration = -1
+			}
+		}
+	}
+
+	emp_lan_influence_the_church = {
+		icon = influence_the_church
+		position = 3
+		required_missions = { lan_medici } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			if = {
+				limit = { religion = catholic } 
+				any_owned_province = { has_cardinal = yes } 
+			}
+			else_if = {
+				limit = {
+					religion = protestant
+					has_dlc = "Common Sense"
+				}
+				church_power = 100
+			}
+			else_if = {
+				limit = {
+					has_dlc = "Wealth of Nations"
+					religion = reformed
+				}
+				fervor = 100
+			}
+			else_if = {
+				limit = { has_estate = estate_church } 
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 60
+				}
+			}
+			else = {
+				any_owned_province = {
+					OR = {
+						has_building = temple
+						has_building = cathedral
+					}
+				}
+			}
+		}
+
+		effect = { add_prestige = 20 } 
+	}
+
+	emp_lan_control_the_church = {
+		icon = control_the_church
+		position = 4
+		required_missions = { emp_lan_influence_the_church } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			if = {
+				limit = {
+					religion = catholic
+					has_dlc = "Emperor"
+				}
+				is_papal_controller = yes
+				custom_trigger_tooltip = {
+					tooltip = passed_golden_bull_tt
+					has_country_flag = enacted_golden_bull
+				}
+			}
+			else_if = {
+				limit = {
+					religion = protestant
+					has_dlc = "Common Sense"
+				}
+				num_of_aspects = 3
+			}
+			else_if = {
+				limit = { religion = orthodox } 
+				patriarch_authority = 1
+			}
+			else_if = {
+				limit = {
+					religion = reformed
+					has_dlc = "Wealth of Nations"
+				}
+				fervor = 100
+			}
+			else = { religious_unity = 1 } 
+		}
+
+		effect = {
+			if = {
+				limit = {
+					religion = catholic
+					NOT = { has_global_flag = had_a_medici_pope } 
+				}
+				custom_tooltip = emp_lan_next_pope_medici_tt
+				set_global_flag = had_a_medici_pope
+				set_country_flag = our_medici_pope
+				PAP = { set_country_flag = medici_pope_next } 
+			}
+			else = { add_prestige = 25 } 
+		}
+	}
+
+	emp_lan_make_haste_slowly = {
+		icon = make_haste_slowly
+		position = 5
+		required_missions = {
+			lan_sie
+			lan_dev
+			emp_lan_control_the_church
+			lan_machiavelli
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			crown_land_share = 50
+			if = {
+				limit = { has_estate = estate_nobles } 
+				NOT = {
+					estate_influence = {
+						estate = estate_nobles
+						influence = 50
+					}
+				}
+			}
+			if = {
+				limit = { has_estate = estate_burghers } 
+				NOT = {
+					estate_influence = {
+						estate = estate_burghers
+						influence = 50
+					}
+				}
+			}
+			if = {
+				limit = { has_estate = estate_church } 
+				NOT = {
+					estate_influence = {
+						estate = estate_church
+						influence = 50
+					}
+				}
+			}
+			if = {
+				limit = { has_reform = merchants_reform } 
+				NOT = {
+					faction_influence = {
+						faction = mr_aristocrats
+						influence = 50
+					}
+				}
+				NOT = {
+					faction_influence = {
+						faction = mr_traders
+						influence = 50
+					}
+				}
+				NOT = {
+					faction_influence = {
+						faction = mr_guilds
+						influence = 50
+					}
+				}
+			}
+			if = {
+				limit = { is_revolutionary_republic_trigger = yes } 
+				NOT = {
+					faction_influence = {
+						faction = rr_jacobins
+						influence = 50
+					}
+				}
+				NOT = {
+					faction_influence = {
+						faction = rr_royalists
+						influence = 50
+					}
+				}
+				NOT = {
+					faction_influence = {
+						faction = rr_girondists
+						influence = 50
+					}
+				}
+			}
+		}
+
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							is_emperor_of_china = yes
+							has_dlc = "Mandate of Heaven"
+						}
+						has_reform = shogunate
+					}
+				}
+				add_legitimacy = 25
+				add_mandate = 25
+				if = {
+					limit = {
+						stability = 2
+						NOT = { stability = 3 } 
+					}
+					add_stability = 1
+				}
+				else_if = {
+					limit = { NOT = { stability = 2 }  } 
+					add_stability = 2
+				}
+				else = { add_adm_power = 100 } 
+			}
+			else = { country_event = { id = flavor_tus.21 }  } 
+		}
+	}
+
+	lan_uffizi = {
+		icon = mission_uffizi
+		position = 6
+		required_missions = { emp_lan_make_haste_slowly } 
+		provinces_to_highlight = {  
+			province_id = 116
+			NOT = { 
+				AND = { 
+					has_province_modifier = donatello_mod
+					has_province_modifier = machiavelli_mod 
+					has_province_modifier = davinci_mod
+					base_tax = 20
+				}
+			}
+		} 
+
+		trigger = {  
+			treasury = 2000
+			116 = { 
+				has_province_modifier = donatello_mod
+				has_province_modifier = machiavelli_mod 
+				has_province_modifier = davinci_mod
+				base_tax = 20
+			}
+			NOT = { current_age = age_of_discovery }
+		} 
+
+		effect = {  
+			add_treasury = -2000
+			116 = { 
+				add_great_project_tier = { 
+					type = ai_uffizi
+					tier = 2
+				}
+			}
+		} 
+	}
+}
+ai_lan_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		#has_dlc = "Emperor"
+		OR = {
+			tag = TUS
+			tag = LAN
+			was_tag = LAN 
+			was_tag = TUS
+		}
+		NOT = { map_setup = map_setup_random } 
+	}
+
+	lan_dome = {
+		icon = public_works
+		position = 2
+		required_missions = { lan_guilds } 
+		provinces_to_highlight = {  
+			province_id = 116
+			NOT = { 
+				num_of_times_improved = 10
+			}
+		} 
+
+		trigger = {  
+			116 = { 
+				num_of_times_improved = 10
+			}
+		} 
+
+		effect = {  
+			116 = { 
+				add_great_project_tier = {
+					type = santa_maria_del_fiore
+					tier = 2
+				}
+				if = { 
+					limit = { NOT = { is_institution_enabled = renaissance } }
+					set_province_flag = ai_ren_start 
+				}
+				custom_tooltip = lan_ren_start
+			}
+		} 
+	}
+
+	emp_lan_levee_the_arno = {
+		icon = levee_the_arno
+		position = 3
+		required_missions = { lan_dome } 
+		provinces_to_highlight = { 
+			province_id = 116 
+			NOT = { grown_by_development = 20 }
+		} 
+
+		trigger = {
+			owns = 116
+			116 = { grown_by_development = 20 } 
+		}
+
+		effect = {
+			116 = {
+				add_province_modifier = {
+					name = "lan_arno_flood_controls"
+					duration = -1
+				}
+			}
+		}
+	}
+
+	lan_dev = {
+		icon = conquer_tuscany
+		position = 4
+		required_missions = { emp_lan_levee_the_arno } 
+		provinces_to_highlight = {  
+			province_id = 116
+			NOT = { 
+				AND = { 
+					grown_by_development = 30 
+					has_tax_building_trigger = yes 
+					has_trade_building_trigger = yes 
+					has_production_building_trigger = yes
+				}
+			}
+		} 
+
+		trigger = {  
+			116 = { 
+				grown_by_development = 30 
+				has_tax_building_trigger = yes 
+				has_trade_building_trigger = yes 
+				has_production_building_trigger = yes
+			}
+		} 
+
+		effect = {  
+			116 = { 
+				add_province_modifier = { 
+					name = lan_dev_mod
+					duration = -1
+				}
+			}
+		} 
+	}
+
+	lan_msa = {
+		icon = fra_golden_march
+		position = 5
+		required_missions = { lan_sie } 
+		provinces_to_highlight = {  
+			province_id = 5066
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			5066 = { 
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
+
+		effect = {  
+			emilia_romagna_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	emp_lan_academy_of_the_bran = {
+		icon = academy_of_the_bran
+		position = 6
+		required_missions = { emp_lan_make_haste_slowly } 
+		provinces_to_highlight = {  } 
+
+		trigger = { prestige = 90 } 
+
+		effect = {
+			add_country_modifier = {
+				name = "lan_la_crusca"
+				duration = -1
+			}
+			add_dip_power = 100
+		}
+	}
+}
+ai_lan_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		#has_dlc = "Emperor"
+		OR = {
+			tag = TUS
+			tag = LAN
+			was_tag = LAN 
+			was_tag = TUS
+		}
+		NOT = { map_setup = map_setup_random } 
+	}
+
+	lan_condottieri = {
+		icon = mission_fran_sforza
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			num_of_generals = 1
+			army_size_percentage = 0.9
+			manpower_percentage = 0.75
+		} 
+
+		effect = {  
+			define_general = {
+				name = "Francesco Sforza"
+				shock = 3
+				fire = 3
+				manuever = 3
+				siege = 4
+			}
+		} 
+	}
+
+	emp_lan_italian_league = {
+		icon = the_italian_league
+		position = 2
+		required_missions = {
+			lan_condottieri
+		}
+		provinces_to_highlight = {
+			is_capital = yes
+			owner = {
+				is_subject = no
+				capital_scope = { region = italy_region } 
+				NOT = { tag = ROOT } 
+			}
+		}
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = emp_lan_italian_league_tt
+				calc_true_if = {
+					all_ally = { capital_scope = { region = italy_region }  } 
+					amount = 2
+				}
+			}
+		}
+
+		effect = {
+			tuscany_area = {
+				limit = {
+					NOT = { is_core = ROOT } 
+					NOT = { is_permanent_claim = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	lan_luc = {
+		icon = ansbach_succession
+		position = 3
+		required_missions = { emp_lan_italian_league } 
+		provinces_to_highlight = {  
+			province_id = 2980
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			OR = { 
+				offensive_war_with = LUC 
+				2980 = { 
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = {
+				name = luc_campaign #missing loc
+				duration = 3650
+			}
+			116 = { add_permanent_claim = ROOT }
+			5072 = { add_permanent_claim = ROOT }
+			5073 = { add_permanent_claim = ROOT }
+			5074 = { add_permanent_claim = ROOT }
+		} 
+	}
+
+	lan_sie = {
+		icon = a_question_of_spain
+		position = 4
+		required_missions = { lan_luc } 
+		provinces_to_highlight = {  
+			OR = { 
+				province_id = 117
+				province_id = 5072
+				province_id = 5073
+				province_id = 5074
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			117 = { country_or_non_sovereign_subject_holds = ROOT }
+			5072 = { country_or_non_sovereign_subject_holds = ROOT }
+			5073 = { country_or_non_sovereign_subject_holds = ROOT }
+			5074 = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		effect = {  
+			117 = { 
+				add_province_modifier = { 
+					name = lan_sie_city
+					duration = -1
+				}
+			}
+			south_tuscany_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	lan_pio = {
+		icon = mercenary_companies
+		position = 5
+		required_missions = { lan_sie } 
+		provinces_to_highlight = {  
+			province_id = 5071
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			5071 = { 
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = fall_of_pio
+				duration = 3650
+			}
+		} 
+	}
+}
+ai_lan_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		#has_dlc = "Emperor"
+		OR = {
+			tag = TUS
+			tag = LAN
+			was_tag = LAN 
+			was_tag = TUS
+		}
+		NOT = { map_setup = map_setup_random } 
+	}
+
+	lan_pisa = {
+		icon = mission_pisa
+		position = 1
+		provinces_to_highlight = {  
+			province_id = 115
+			NOT = { 
+				AND = { 
+					num_of_times_improved = 10 
+					has_tax_building_trigger = yes 
+					has_trade_building_trigger = yes 
+				}
+			}
+		} 
+
+		trigger = {  
+			115 = { 
+				num_of_times_improved = 10 
+				has_tax_building_trigger = yes 
+				has_trade_building_trigger = yes 
+			}
+		} 
+
+		effect = {  
+			115 = { 
+				add_province_modifier = { 
+					name = porto_pisano 
+					duration = -1
+				}
+			}
+		} 
+	}
+
+	lan_porto = {
+		icon = mission_russian_navy
+		position = 2
+		required_missions = { lan_pisa } 
+		provinces_to_highlight = {  
+			province_id = 6217
+			NOT = { num_of_times_improved = 5 }
+		} 
+
+		trigger = {  
+			6217 = { 
+				num_of_times_improved = 5
+			}
+			navy_size_percentage = 0.9
+		} 
+
+		effect = {  
+			6217 = { 
+				center_of_trade = 1
+				add_province_modifier = { 
+					name = lan_prt_mod
+					duration = -1
+				}
+			}
+			6216 = { add_permanent_claim = ROOT }
+			6183 = { add_permanent_claim = ROOT }
+			285 = { add_permanent_claim = ROOT }
+			6182 = { add_permanent_claim = ROOT }
+			6181 = { add_permanent_claim = ROOT }
+		} 
+	}
+
+	lan_bs = {
+		icon = mission_control_the_black_sea
+		position = 3
+		required_missions = { lan_porto } 
+		provinces_to_highlight = {  
+			OR = { 
+				province_id = 6216
+				province_id = 6183
+				province_id = 285
+				province_id = 6182
+				province_id = 6181
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			6216 = { country_or_non_sovereign_subject_holds = ROOT }
+			6183 = { country_or_non_sovereign_subject_holds = ROOT }
+			285 = { country_or_non_sovereign_subject_holds = ROOT }
+			6182 = { country_or_non_sovereign_subject_holds = ROOT }
+			6181 = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = lan_bs_mod
+				duration = -1
+			}
+			339 = { add_core = ROOT }
+			5590 = { add_permanent_claim = ROOT }
+			6222 = { add_permanent_claim = ROOT }
+			6223 = { add_permanent_claim = ROOT }
+			6226 = { add_permanent_claim = ROOT }
+			5640 = { add_permanent_claim = ROOT }
+			5633 = { add_permanent_claim = ROOT }
+		} 
+	}
+
+	lan_bugia = {
+		icon = invest_in_the_rich_trades
+		position = 4
+		required_missions = { lan_bs } 
+		provinces_to_highlight = {  
+			province_id = 339
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			339 = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		effect = {  
+			339 = { 
+				add_province_modifier = { 
+					name = pisan_houses
+					duration = -1
+				}
+			}
+			corsica_sardinia_area = {
+				add_core = ROOT
+			}
+		} 
+	}
+
+	lan_sar = {
+		icon = seize_sardinia
+		position = 5
+		required_missions = {
+			lan_bugia
+			lan_sie
+		}
+		provinces_to_highlight = {  
+			area = corsica_sardinia_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			corsica_sardinia_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+		} 
+
+		effect = {  
+			corsica_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			liguria_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	lan_gen = {
+		icon = reclaim_the_ducal_lands
+		position = 6
+		required_missions = { lan_sar } 
+		provinces_to_highlight = {  
+			OR = { 
+				area = liguria_area 
+				area = corsica_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			101 = { country_or_non_sovereign_subject_holds = ROOT }
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { 
+				OR = { 
+					area = liguria_area 
+					area = corsica_area 
+				}
+				value = 5
+			}
+		} 
+
+		effect = {  
+			101 = { 
+				add_province_modifier = { 
+					name = lan_gen_mod
+					duration = -1
+				}
+			}			
+		} 
+	}
+
+	lan_mare = {
+		icon = mission_consulate_of_the_sea
+		position = 7
+		required_missions = { lan_gen } 
+		provinces_to_highlight = {  
+			OR = { 
+				province_id = 101
+				province_id = 121 
+				province_id = 339
+				province_id = 341
+				province_id = 285
+			}
+			NOT = { is_strongest_trade_power = ROOT }
+		} 
+
+		trigger = {  
+			101 = { is_strongest_trade_power = ROOT } #yes?
+			121 = { is_strongest_trade_power = ROOT }
+			339 = { is_strongest_trade_power = ROOT }
+			341 = { is_strongest_trade_power = ROOT }
+			285 = { is_strongest_trade_power = ROOT }
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = lan_trade
+				duration = -1
+			}
+		} 
+	}
+}
+lan_hre_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		#has_dlc = "Emperor"
+		OR = {
+			tag = TUS
+			tag = LAN
+			was_tag = LAN 
+			was_tag = TUS
+		}
+		is_part_of_hre = yes
+		NOT = { map_setup = map_setup_random } 
+	}
+
+	lan_fc = {
+		icon = lead_the_empire
+		position = 7
+		required_missions = {
+			lan_hre
+			lan_uffizi
+		}
+		provinces_to_highlight = {  
+			OR = { 
+				province_id = 116
+				province_id = 115
+				province_id = 117
+			}
+			NOT = { development = 25 }
+		} 
+
+		trigger = {  
+			115 = { 
+				is_part_of_hre = yes
+				development = 35 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+			116 = { 
+				is_part_of_hre = yes
+				development = 35 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+			117 = { 
+				is_part_of_hre = yes
+				development = 35 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+			emperor = { 
+				has_opinion = { 
+					who = ROOT 
+					value = 150
+				}
+			}
+			num_of_allies = 4
+		} 
+
+		effect = {  
+			115 = { 
+				add_province_modifier = { 
+					name = lan_fc_mod 
+					duration = -1
+				}
+			}
+			116 = { 
+				add_province_modifier = { 
+					name = lan_fc_mod 
+					duration = -1
+				}
+			}
+			117 = { 
+				add_province_modifier = { 
+					name = lan_fc_mod 
+					duration = -1
+				}
+			}
+		} 
+	}
+}
+lan_hre_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		#has_dlc = "Emperor"
+		OR = {
+			tag = TUS
+			tag = LAN
+			was_tag = LAN 
+			was_tag = TUS
+		}
+		is_part_of_hre = yes
+		NOT = { map_setup = map_setup_random } 
+	} 
+
+	tus_mark = {
+		icon = tuscan_birthright
+		position = 7
+		required_missions = { lan_hre } 
+		provinces_to_highlight = {  
+			OR = { 
+				area = tuscany_area
+				area = south_tuscany_area 
+				province_id = 5089
+				province_id = 5088
+				province_id = 5087
+				province_id = 5084
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			tuscany_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+			south_tuscany_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+			5084 = { country_or_non_sovereign_subject_holds = ROOT }
+			5087 = { country_or_non_sovereign_subject_holds = ROOT }
+			5088 = { country_or_non_sovereign_subject_holds = ROOT }
+			5089 = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		effect = {  
+			set_government_rank = 2
+			add_country_modifier = { 
+				name = mark_tus
+				duration = -1
+			}
+		} 
+	}
+}
+lan_hre_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		#has_dlc = "Emperor"
+		OR = {
+			tag = TUS
+			tag = LAN
+			was_tag = LAN 
+			was_tag = TUS
+		}
+		is_part_of_hre = yes
+		NOT = { map_setup = map_setup_random } 
+	} 
+
+	lan_hre = {
+		icon = shift_the_balance
+		position = 6
+		provinces_to_highlight = {  
+			owner = { is_emperor = yes }
+		} 
+
+		trigger = {  
+			emperor =  {
+				has_opinion = { 
+					who = ROOT 
+					value = 100
+				}
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = lan_imp
+				duration = 7300
+			}
+		} 
+	}
+
+	lan_sk = {
+		icon = interfere_in_germany
+		position = 7
+		required_missions = { lan_hre } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = {
+				tooltip = mlo_shad.tt
+				has_global_flag = italians_leave_hre
+			}
+			is_part_of_hre = yes
+		} 
+
+		effect = {  
+			add_stability = 1
+			add_country_modifier = { 
+				name = lan_sk_mod
+				duration = 7300
+			}
+		} 
+	}
+}

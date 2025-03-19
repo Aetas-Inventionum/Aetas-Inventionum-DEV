@@ -1,0 +1,16 @@
+# change_estate_land_share = {
+    # estate = estate_nobles
+    # share = -5
+# }
+# change_estate_land_share = {
+    # estate = estate_burghers
+    # share = -7
+# }
+# change_estate_land_share = {
+    # estate = estate_church
+    # share = -7
+# }
+# change_estate_land_share = {
+    # estate = estate_peasants
+    # share = 19 #From my reading on Norway, which was mostly a bunch of tiny villages all over the place, resulted in a very decentralized society where villages ruled themselves in a type of self-rule. This is meant to represent that.
+# }

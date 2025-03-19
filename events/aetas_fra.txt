@@ -1,0 +1,1226 @@
+namespace = aetas_fra
+normal_or_historical_nations = yes
+
+# Death of the Duke of Berry
+country_event = {
+	id = aetas_fra.1
+	title = aetas_fra.1.t
+	desc = aetas_fra.1.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	fire_only_once = yes
+	major = yes 
+	major_trigger = { 
+		is_neighbor_of = ROOT
+	}
+
+	trigger = { 
+		tag = FRA 
+		is_year = 1416
+		BER = { is_subject_of = ROOT }
+	}
+
+	option = { #oops!
+		name = "aetas_fra.1.a"
+		set_country_flag = duc_berry_inheritance
+		massif_central_area = { 
+			limit = { owned_by = BER }
+			cede_province = BOU 
+			add_core = BOU
+			remove_core = BER 
+		}
+		if = { 
+			limit = { 3216 = { owned_by = BER } }
+			3216 = { cede_province = SNC }
+			SNC = { 
+				define_ruler = { 
+					name = "Jean V"
+					dynasty = "de Bueil"
+					age = 15
+					adm = 2
+					dip = 2
+					mil = 4
+				}
+			}
+			create_subject = { 
+				who = SNC 
+				subject_type = fief 
+			}
+			SNC = { 
+				join_all_offensive_wars_of = ROOT 
+				join_all_defensive_wars_of = ROOT
+			}
+		}
+
+		if = { 
+			limit = { 
+				exists = TRN 
+				TRN = { has_ruler = "Jean I" }
+			}
+			TRN = { inherit = BER }
+		}
+		else = { inherit = BER }
+		hidden_effect = { 
+			every_province = { 
+				limit = { 
+					area = poitou_area 
+					is_core = BER 
+				}
+				remove_core = BER
+			}
+		}
+	}
+}
+# Royal Residency of the Kings of France
+country_event = {
+	id = aetas_fra.2
+	title = aetas_fra.2.t
+	desc = aetas_fra.2.d
+	picture = CASTLE_eventPicture
+	
+	is_triggered_only = yes 
+
+	immediate = { 
+		hidden_effect =  {
+			every_province = { 
+				limit = { has_province_modifier = fra_royal_presence }
+				remove_province_modifier = fra_royal_presence
+			}
+			every_province = { 
+				limit = { has_province_modifier = fra_roy_court }
+				remove_province_modifier = fra_roy_court
+			}
+		}
+	}
+
+	option = { #Tours
+		name = "aetas_fra.2.a"
+		ai_chance = { factor = 5 }
+		custom_tooltip = aetas_fra.2.a.tt #tours will become seat of our royal court
+		4389 = { 
+			add_province_modifier = {
+				name = fra_roy_court
+				duration = -1
+			}
+			random_list = { 
+				1 = { add_base_tax = 1 }
+				1 = { add_base_production = 1 }
+				1 = { add_base_manpower = 1 }
+			}
+		}
+		if = { 
+			limit = { 
+				NOT = { 
+					4389 = { owned_by = FRA }
+				}
+			}
+			4389 = {
+				owner = { 
+					add_opinion = {
+						who = FRA
+						modifier = fra_royal_court_opinion
+					}
+				}
+			}
+		}
+		orleans_area = { 
+			limit = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+			add_province_modifier = {
+				name = fra_royal_presence
+				duration = -1
+			}
+		}
+	}
+
+	option = { #Paris
+		name = "aetas_fra.2.b"
+		ai_chance = { factor = 1 }
+		custom_tooltip = aetas_fra.2.b.tt  #paris will become seat of our royal court
+		183 = { 
+			add_province_modifier = {
+				name = fra_roy_court
+				duration = -1
+			}
+			random_list = { 
+				1 = { add_base_tax = 1 }
+				1 = { add_base_production = 1 }
+				1 = { add_base_manpower = 1 }
+			}
+		}
+		ile_de_france_area = { 
+			limit = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+			}
+			add_province_modifier = {
+				name = fra_royal_presence
+				duration = -1
+			}
+		}
+	}
+}
+#Parlement de Languedoc
+country_event = {
+	id = aetas_fra.3
+	title = aetas_fra.3.t
+	desc = aetas_fra.3.d
+	picture = COUNCIL_TRENT_eventPicture
+
+	fire_only_once = yes 
+
+	trigger = { 
+		tag = FRA 
+		owns = 196 #toulouse
+		owns = 3273 #alba
+		owns = 2753 #narbonne
+		owns = 200 #montpellier
+		owns = 3277 #nimes
+		is_year = 1440
+	}
+
+	mean_time_to_happen = { 
+		months = 60
+	}
+
+	option = { 
+		name = aetas_fra.3.a #we accept the creation of this parlement
+		ai_chance = { factor = 5 }
+		custom_tooltip = aetas_fra.3.a.tt
+		languedoc_area = { 
+			limit = { owned_by = ROOT }
+			add_province_modifier = { 
+				name = parl_lang
+				duration = -1
+			}
+		}
+		lower_languedoc_area = { 
+			limit = { owned_by = ROOT }
+			add_province_modifier = { 
+				name = parl_lang
+				duration = -1
+			}
+		}
+	}
+
+	option = { 
+		name = aetas_fra.3.b #we refuse
+		ai_chance = { factor = 1 }
+		languedoc_area = { 
+			limit = { owned_by = ROOT }
+			add_province_modifier = { 
+				name = parl_lang_refused
+				duration = 7300
+			}
+		}
+		lower_languedoc_area = { 
+			limit = { owned_by = ROOT }
+			add_province_modifier = { 
+				name = parl_lang_refused
+				duration = 7300
+			}
+		}
+	}
+}
+#Great fire of toulouse
+country_event = {
+	id = aetas_fra.4
+	title = aetas_fra.4.t
+	desc = aetas_fra.4.d
+	picture = muslimgfx_COUNTRY_COLLAPSE_eventPicture
+
+	fire_only_once = yes 
+
+	trigger = { 
+		tag = FRA 
+		owns = 196 #toulouse
+		is_year = 1458
+	}
+
+	mean_time_to_happen = { 
+		months = 60
+	}
+
+	option = { 
+		name = aetas_fra.4.a #aid toulouse
+		ai_chance = { 
+			factor = 5
+		}
+		add_treasury = -250
+		196 = { 
+			add_devastation = 10
+			add_province_modifier = { 
+				name = toulouse_recovery
+				duration = 3650
+			}
+		}
+	}
+	option = { 
+		name = aetas_fra.4.b #no can do
+		ai_chance = { factor = 0
+		}
+		196 = { 
+			add_devastation = 50
+		}
+	}
+}
+#golden age of toulouse
+country_event = {
+	id = aetas_fra.5
+	title = aetas_fra.5.t
+	desc = aetas_fra.5.d
+	picture = GREAT_BUILDING_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes
+
+	option = { 
+		name = aetas_fra.5.a #wonderful
+		196 = { 
+			add_base_tax = 1
+			add_base_production = 1
+			add_province_modifier = {
+				name = toulouse_golden_age
+				duration = 73000 #200 years
+			}
+		}
+	}
+}
+#gathering of literary minds at lyon
+country_event = {
+	id = aetas_fra.6
+	title = aetas_fra.6.t
+	desc = aetas_fra.6.d
+	picture = UNIVERSITY_eventPicture
+
+	fire_only_once = yes 
+
+	trigger = { 
+		tag = FRA 
+		owns = 203 #lyon
+		is_year = 1520
+		has_institution = renaissance
+	}
+
+	mean_time_to_happen = { 
+		months = 200
+	}
+
+	option = { 
+		name = aetas_fra.6.a #very cool
+		203 = { 
+			add_province_modifier = { 
+				name = lyon_lit
+				duration = -1
+			}
+		}
+		define_advisor = {
+			type = philosopher
+			name = "Louise Labé"
+			skill = 3
+			culture = arpitan
+			religion = catholic
+			female = yes 
+			discount = yes 
+		}
+		define_advisor = {
+			type = philosopher
+			name = "Maurice Scève"
+			skill = 3
+			culture = arpitan
+			religion = catholic
+			discount = yes 
+		}
+	}
+}
+#development of le marais, paris
+country_event = {
+	id = aetas_fra.7
+	title = aetas_fra.7.t
+	desc = aetas_fra.7.d
+	picture = CITY_VIEW_eventPicture
+
+	fire_only_once = yes 
+
+	trigger = { 
+		tag = FRA 
+		owns = 183
+	}
+
+	mean_time_to_happen = { 
+		months = 20
+	}
+
+	option = { 
+		name = aetas_fra.7.a #an intriguing development
+		183 = { 
+			add_province_modifier = {
+				name = paris_marais
+				duration = 7300
+			}
+		}
+	}
+}
+#collapse of the Pont Notre-Dame, Paris
+country_event = {
+	id = aetas_fra.8
+	title = aetas_fra.8.t
+	desc = aetas_fra.8.d
+	picture = OVEREXTENSION_eventPicture
+
+	fire_only_once = yes 
+
+	trigger = { 
+		tag = FRA 
+		owns = 183
+		is_year = 1499
+	}
+
+	mean_time_to_happen = { 
+		months = 20
+	}
+
+	option = { 
+		name = aetas_fra.8.a #we will help
+		add_treasury = -250
+		set_country_flag = support_pont 
+		custom_tooltip = aetas_fra.8.a.tt
+		define_advisor = {
+			type = natural_scientist
+			name = "Giovanni Giocondo"
+			skill = 2
+			culture = venetian
+			religion = catholic
+			discount = yes 
+		}
+	}
+	option = { 
+		name = aetas_fra.8.b #we cannot afford it
+		183 = { 
+			add_province_modifier = { 
+				name = pont_collapse 
+				duration = 3650
+			}
+		}
+	}
+}
+#success of the pont
+country_event = {
+	id = aetas_fra.9
+	title = aetas_fra.9.t
+	desc = aetas_fra.9.d
+	picture = GREAT_BUILDING_eventPicture
+
+	fire_only_once = yes 
+
+	trigger = { 
+		tag = FRA 
+		owns = 183
+		has_country_flag = support_pont
+	}
+
+	mean_time_to_happen = { 
+		months = 40
+	}
+
+	option = { 
+		name = aetas_fra.9.a #we will help
+		183 = { 
+			add_province_modifier = { 
+				name = pont_notre_dame 
+				duration = -1
+			}
+		}
+	}
+}
+# Death of the Duke of Touraine
+country_event = {
+	id = aetas_fra.10
+	title = aetas_fra.10.t
+	desc = aetas_fra.10.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	fire_only_once = yes
+	major = yes 
+	major_trigger = { 
+		is_neighbor_of = ROOT
+	}
+
+	trigger = { 
+		tag = FRA 
+		TRN = { 
+			is_subject_of = ROOT 
+			has_ruler = "Jean I"
+		}
+		is_year = 1417
+	}
+
+	mean_time_to_happen = { 
+		months = 6
+	}
+
+	option = { #oops!
+		name = "aetas_fra.10.a" #missed loc
+		set_country_flag = duc_touraine_inheritance
+		inherit = TRN
+		if = { 
+			limit = { 
+				has_heir_flag = jean_heir_flag
+			}
+			kill_heir = { allow_new_heir = no }
+			define_heir = {
+				name = "Charles"
+				dynasty = "de Valois"
+				birth_date = 1403.2.22
+				claim = 95
+				adm = 5
+				dip = 3
+				mil = 4
+			}
+			set_heir_flag = charles_vii_heir_flag
+		}
+		hidden_effect = { 
+			every_province = { 
+				limit = { 
+					NOT = { 
+						OR = { 
+							province_id = 4389
+							province_id = 3206
+							province_id = 3207
+						}
+					}
+					is_core = TRN 
+				}
+				remove_core = TRN 
+			}
+		}
+	}
+}
+# Ascent of Charles
+country_event = {
+	id = aetas_fra.11
+	title = aetas_fra.11.t
+	desc = aetas_fra.11.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = { 
+		is_year = 1420
+		has_ruler = "Charles VI"
+		has_heir_flag = charles_vii_heir_flag
+	}
+
+	mean_time_to_happen = { 
+		months = 40
+	}
+
+	immediate = { 
+		hidden_effect = { 
+			kill_ruler = yes 
+		}
+	}
+
+	option = { #interesting
+		name = "aetas_fra.11.a"
+		set_country_flag = charles_king 
+	}
+}
+#coronation at reims
+country_event = {
+	id = aetas_fra.12
+	title = aetas_fra.12.t
+	desc = aetas_fra.12.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { #hooray!
+		name = "aetas_fra.12.a"
+		add_ruler_modifier = { 
+			name = coronated_at_reims #missed loc
+			duration = -1
+		}
+	}
+}
+#louis dauphin dies riparoni to that dude
+country_event = {
+	id = aetas_fra.13
+	title = aetas_fra.13.t
+	desc = aetas_fra.13.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	fire_only_once = yes
+	trigger = { 
+		always = no #disabled and replaced
+	}
+
+	mean_time_to_happen = { 
+		months = 5
+	}
+
+	immediate = { 
+		hidden_effect = { 
+			set_country_flag = dauphin_death_1
+		}
+	}
+
+	option = { 
+		name = aetas_fra.13.a
+		kill_heir = { }
+		define_heir = {
+			name = "Jean"
+			dynasty = "de Valois"
+			birth_date = 1398.8.31
+			claim = 95
+			adm = 2
+			dip = 2
+			mil = 2
+		}
+	}
+}
+#nemours passes to france
+country_event = {
+	id = aetas_fra.14
+	title = aetas_fra.14.t
+	desc = aetas_fra.14.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	major = yes 
+	major_trigger = {
+		tag = NAV
+	}
+
+	option = { #certainly
+		name = aetas_fra.14.a
+		ai_chance = { factor = 100 }
+		185 = { 
+			cede_province = FRA 
+			add_core = FRA
+		}
+	}
+	option = { 
+		name = aetas_fra.14.b
+	}
+}
+#seizing the three bishoprics
+country_event = {
+	id = aetas_fra.15
+	title = aetas_fra.15.t
+	desc = aetas_fra.15.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	major = yes 
+	major_trigger = {
+		OR = { 
+			is_emperor = yes 
+			AND = { 
+				is_neighbor_of = FRA 
+				is_part_of_hre = yes
+			}
+		}
+	}
+
+	option = { #fuck yeah
+		name = aetas_fra.15.a
+		4766 = { 
+			cede_province = FRA 
+			add_core = FRA 
+		}
+		3338 = { 
+			cede_province = FRA 
+			add_core = FRA 
+		}
+		188 = { 
+			cede_province = FRA 
+			add_core = FRA 
+		}
+		3334 = { 
+			cede_province = FRA 
+			add_core = FRA
+		}
+		every_country = { 
+			limit = { is_part_of_hre = yes }
+			add_opinion = { 
+				who = ROOT 
+				modifier = fra_bishoprics
+			}
+		}
+	}
+}
+#ascension of the bourbons
+country_event = {
+	id = aetas_fra.16
+	title = aetas_fra.16.t
+	desc = aetas_fra.16.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	major = yes 
+	major_trigger = {
+		is_neighbor_of = FRA 
+	}
+
+	option = { #accept the bourbons
+		name = aetas_fra.16.a
+		define_ruler = { 
+			name = Henri
+			dynasty = "de Bourbon"
+			adm = 6
+			dip = 6 
+			mil = 4
+			age = 36
+		}
+		define_heir = { 
+			name = Louis 
+			dynasty = "de Bourbon"
+			adm = 4
+			dip = 4
+			mil = 4
+			age = 0
+			claim = 95
+		}
+		add_country_modifier = { 
+			name = bou_monarchy
+			duration = -1
+		}
+	}
+}
+#edict of nantes
+country_event = {
+	id = aetas_fra.17 #missed loc
+	title = aetas_fra.17.t
+	desc = aetas_fra.17.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { #edict of nantes -- Event has no loc, modifier doesnt exist...
+		name = aetas_fra.17.a 
+		add_country_modifier = { 
+			name = edict_de_nantes
+			duration = -1 #Felis guessing
+		}
+	}
+}
+country_event = {
+	id = aetas_fra.18
+	title = aetas_fra.18.t
+	desc = aetas_fra.18.d
+	picture = GREAT_BUILDING_eventPicture
+
+	fire_only_once = yes 
+	
+	trigger = { 
+		tag = FRA 
+		mission_completed = fra_champagne
+		NOT = { 
+			any_owned_province = { 
+				has_province_modifier = hosts_cloth_fairs #missed loc
+			}
+		}
+	}
+
+	mean_time_to_happen = { 
+		months = 24
+	}
+
+	option = { 
+		name = aetas_fra.18.a #wonderful
+		random_owned_province = { 
+			limit = { 
+				OR = { 
+					area = champagne_area
+					province_id = 3246
+					province_id = 3247
+					province_id = 5338
+					province_id = 186
+					province_id = 3249
+				}
+			}
+			add_province_modifier = { 
+				name = hosts_cloth_fairs #missed loc
+				duration = 3650
+			}
+		}
+	}
+}
+country_event = {
+	id = aetas_fra.19
+	title = aetas_fra.19.t
+	desc = aetas_fra.19.d
+	picture = GREAT_BUILDING_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes 
+	
+	option = { 
+		name = aetas_fra.19.a
+		add_country_modifier = { 
+			name = fra_concordat
+			duration = -1 
+		}
+		118 = { 
+			add_devastation = 30
+			add_base_tax = -2
+			add_base_production = -2 
+			add_base_manpower = -3
+		}
+	}
+}
+# Death of Louis of Guyenne
+country_event = {
+	id = aetas_fra.20
+	title = aetas_fra.20.t
+	desc = aetas_fra.20.d
+	picture = DEATH_OF_HEIR_eventPicture
+	
+	fire_only_once = yes
+	major = yes 
+	major_trigger = { 
+		is_neighbor_of = ROOT
+	}
+
+	trigger = { 
+		tag = FRA 
+		has_heir_flag = louis_de_guyenne_flag
+	}
+
+	mean_time_to_happen = { 
+		months = 4
+	}
+
+	option = { #fuck.
+		name = aetas_fra.20.a
+		kill_heir = { allow_new_heir = no }
+		if = { 
+			limit = { 
+				exists = TRN 
+				TRN = { has_ruler = "Jean I" }
+			}
+			define_heir = { 
+				name = "Jean"
+				monarch_name = "Jean III"
+				dynasty = "de Valois"
+				birth_date = 1398.8.31
+				#death_date = 1417.6.5 -- Cant do this, I think
+				claim = 95
+				adm = 2
+				dip = 2
+				mil = 1
+			}
+			set_heir_flag = jean_heir_flag
+		}
+		else = { 
+			define_heir = { 
+				name = "Charles"
+				monarch_name = "Charles VII"
+				dynasty = "de Valois"
+				birth_date = 1403.2.22
+				#death_date = 1461.7.22 -- Cant do this, I think
+				claim = 95
+				adm = 4
+				dip = 4
+				mil = 4
+			}
+			set_heir_flag = charles_vii_heir_flag
+		}
+	}
+}
+#Inheritance of Valentinois
+country_event = {
+	id = aetas_fra.21
+	title = aetas_fra.21.t
+	desc = aetas_fra.21.d
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	major = yes 
+	major_trigger = { 
+		is_neighbor_of = ROOT
+	}
+
+	trigger = { 
+		tag = FRA 
+		VLN = { 
+			is_subject_of = ROOT 
+			OR = { 
+				has_ruler = "Louis II"
+				dynasty = "de Poitiers"
+				NOT = { has_global_flag = fra_inherited_vln_flag } #modifier??
+			}
+		}
+	}
+
+	mean_time_to_happen = { 
+		months = 55
+	}
+
+	option = { 
+		name = aetas_fra.21.a
+		inherit = VLN
+	}
+}
+# Loss of La Marche for Bourbon
+country_event = {
+	id = aetas_fra.22
+	title = aetas_fra.22.t
+	desc = aetas_fra.22.d
+	picture = BANKRUPTCY_eventPicture
+	
+	fire_only_once = yes
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			is_neighbor_of = ROOT
+			tag = AMG
+		}
+	}
+
+	mean_time_to_happen = { 
+		months = 48
+	}
+
+	trigger = { 
+		tag = BOU 
+		OR = { 
+			4697 = { country_or_non_sovereign_subject_holds = ROOT }
+			5221 = { country_or_non_sovereign_subject_holds = ROOT }
+			3274 = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		exists = AMG 
+		is_at_war = no 
+		AMG = { 
+			is_lesser_in_union = no 
+			is_at_war = no
+		}
+		is_year = 1438
+	}
+
+	option = { #not fair!
+		name = aetas_fra.22.a
+		if = { 
+			limit = { 4697 = { country_or_non_sovereign_subject_holds = ROOT } }
+			4697 = { 
+				cede_province = AMG 
+				add_core = AMG 
+				remove_core = ROOT 
+			}
+		}
+		if = { 
+			limit = { 5221 = { country_or_non_sovereign_subject_holds = ROOT } }
+			5221 = { 
+				cede_province = AMG 
+				add_core = AMG 
+				remove_core = ROOT 
+			}
+		}
+		if = { 
+			limit = { 3274 = { country_or_non_sovereign_subject_holds = ROOT } }
+			3274 = { 
+				cede_province = AMG 
+				add_core = AMG 
+				remove_core = ROOT 
+			}
+		}
+		add_truce_with = AMG 
+	}
+}
+#Limousin inherited by Albret
+country_event = {
+	id = aetas_fra.23
+	title = aetas_fra.23.t
+	desc = aetas_fra.23.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	major = yes 
+	major_trigger = { 
+		is_neighbor_of = ROOT
+	}
+
+	trigger = { 
+		tag = ABT 
+		is_lesser_in_union = no 
+		exists = yes 
+	}
+
+	option = { #neat!
+		name = aetas_fra.23.a
+		inherit = LIM
+	}
+}
+#release of jean of angoulême
+country_event = {
+	id = aetas_fra.24
+	title = aetas_fra.24.t
+	desc = aetas_fra.24.d
+	picture = CONQUEST_eventPicture
+	
+	fire_only_once = yes
+	major = yes 
+	major_trigger = { 
+		is_neighbor_of = ROOT
+	}
+
+	trigger = { 
+		is_year = 1440
+		tag = FRA 
+		4387 = { country_or_non_sovereign_subject_holds = ROOT }
+		is_at_war = no 
+	}
+
+	mean_time_to_happen = { months = 48 }
+
+	option = { #neat!
+		name = aetas_fra.24.a
+		4387 = { 
+			cede_province = AGL 
+			remove_core = ORL 
+		}
+		AGL = { 
+			define_ruler = { 
+				name = "Jean I"
+				dynasty = "de Valois"
+				culture = cosmopolitan_french
+				adm = 5
+				dip = 2
+				mil = 1
+				age = 30 
+			}
+			add_government_reform = appanage_reform
+		}
+		create_subject = { 
+			who = AGL 
+			subject_type = appanage 
+		}
+	}
+}
+#bastard of orléans
+country_event = {
+	id = aetas_fra.25
+	title = aetas_fra.25.t
+	desc = aetas_fra.25.d
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	major = yes 
+	major_trigger = { 
+		is_neighbor_of = ROOT
+	}
+
+	trigger = { 
+		is_year = 1439
+		tag = FRA 
+		3219 = { country_or_non_sovereign_subject_holds = ROOT }
+		is_at_war = no 
+	}
+
+	mean_time_to_happen = { months = 12 }
+
+	option = { 
+		name = aetas_fra.25.a #sure
+		ai_chance = { factor = 1 }
+		3219 = { 
+			cede_province = DNO 
+			remove_core = ORL 
+		}
+		DNO = { 
+			define_ruler = { 
+				name = "Jean I"
+				dynasty = "de Valois"
+				age = 33
+				adm = 2
+				dip = 2
+				mil = 5
+			}
+			add_government_reform = appanage_reform
+		}
+		create_subject = { 
+			who = DNO 
+			subject_type = appanage 
+		}
+	}
+	option = { 
+		name = aetas_fra.25.b #no
+		add_stability = -1
+	}
+}
+#Remarriage of the Countess of Comminges
+country_event = {
+	id = aetas_fra.26
+	title = aetas_fra.26.t
+	desc = aetas_fra.26.d
+	picture = wihgfx_FEMALE_RULER_eventPicture
+	
+	fire_only_once = yes
+	major = yes 
+	major_trigger = { 
+		is_neighbor_of = ROOT
+	}
+
+	trigger = { 
+		tag = AMG 
+		senior_union_with = CMG 
+	}
+
+	mean_time_to_happen = { months = 48 }
+
+	option = { 
+		name = aetas_fra.26.a #she wasnt worth it anyway.
+		FOI = { create_union = CMG }
+		add_truce_with = FOI 
+	}
+}
+#death of the countess of comminges
+country_event = {
+	id = aetas_fra.27
+	title = aetas_fra.27.t
+	desc = aetas_fra.27.d
+	picture = DEATH_OF_HEIR_eventPicture
+	
+	fire_only_once = yes
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			is_neighbor_of = ROOT 
+			tag = FRA 
+		}
+	}
+
+	trigger = { 
+		OR = { 
+			tag = FOI 
+			dynasty = "de Fois"
+		}
+		senior_union_with = CMG 
+		is_year = 1440
+	}
+
+	mean_time_to_happen = { months = 60 }
+
+	option = { 
+		name = aetas_fra.26.a #well, that's that.
+		FRA = { inherit = CMG }
+	}
+}
+#inheritance of bigorre
+country_event = {
+	id = aetas_fra.28
+	title = aetas_fra.28.t
+	desc = aetas_fra.28.d
+	picture = DEBATE_REPUBLICAN_eventPicture
+	
+	fire_only_once = yes
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			tag = BEA
+			tag = AMG 
+		}
+	}
+
+	trigger = { 
+		tag = FRA 
+		owns_core_province = 3267
+		is_year = 1420
+		exists = AMG 
+		exists = BEA 
+	}
+
+	mean_time_to_happen = { 
+		months = 60
+	}
+
+	option = { 
+		name = aetas_fra.28.a #give bigorre to the foix
+		ai_chance = { factor = 10 }
+		3267 = { 
+			cede_province = BEA 
+			remove_core = ROOT 
+		}
+		add_truce_with = BEA 
+	}
+
+	option = { 
+		name = aetas_fra.28.b #it belongs to armagnac
+		ai_chance = { factor = 1 }
+		3267 = { 
+			cede_province = AMG 
+			remove_core = ROOT 
+		}
+		add_truce_with = AMG
+	}
+}
+#Become Toulouse or Occitania for testing lol not meant for any other use besides testing
+country_event = {
+	id = aetas_fra.120
+	title = aetas_fra.120.t
+	desc = aetas_fra.120.d
+	picture = DEBATE_REPUBLICAN_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_fra.120.a #become Toulouse
+		release = TOU
+		hidden_effect = { 
+			every_province = { 
+				limit = { 
+					is_core = TOU 
+					NOT = { owned_by = TOU }
+				}
+				cede_province = TOU 
+			}
+		}
+		TOU = { 
+			add_government_reform = feudalism_reform
+			define_ruler = { dynasty = "de Tolosa" }
+		}
+		switch_tag = TOU 
+	}
+	option = { 
+		name = aetas_fra.120.b #become Occitania
+		hidden_effect = { 
+			every_province = { 
+				limit = { 
+					OR = { 
+						area = guyenne_area
+						area = pyrenees_area
+						area = languedoc_area
+						area = lower_languedoc_area
+						area = provence_area
+						area = dauphine_area
+						area = massif_central_area
+						area = limousin_area
+						province_id = 102
+					}
+					NOT = { 
+						OR = { 
+							province_id = 190
+							province_id = 3287
+							province_id = 204
+						}
+					}
+				}
+				cede_province = OCC
+				add_core = OCC 
+			}
+		}
+		OCC = { 
+			add_government_reform = feudalism_reform
+			set_government_rank = 2 
+			define_ruler = { dynasty = "de Tolosa" }
+		}
+		switch_tag = OCC
+	}
+}

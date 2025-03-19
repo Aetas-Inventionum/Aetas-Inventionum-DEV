@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = palatinehessian
+religion = catholic
+capital = 5353
+fixed_capital = 5353
+historical_friend = HES
+historical_rival = WIE 
+
+1415.1.1 = {
+	monarch = {
+		name = "Johann IV"
+		dynasty = "von Katzenelnbogen"
+		birth_date = 1368.1.1
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+	heir = { 
+		name = "Philipp"
+		monarch_name = "Philipp I"
+		dynasty = "von Kazenelnbogen"
+		birth_date = 1402.1.1
+		death_date = 1479.1.1
+		adm = 4
+		dip = 2
+		mil = 2
+		claim = 95
+	}
+}

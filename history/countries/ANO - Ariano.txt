@@ -1,0 +1,21 @@
+government = monarchy
+government_rank = 1
+add_government_reform = fief_reform
+technology_group = western
+religion = catholic
+primary_culture = neapolitan
+capital = 5113 #Ariano
+fixed_capital = 5113
+
+1415.1.1 = { 
+	monarch = { 
+		name = "Francesco I"
+		dynasty = "Sforza"
+		birth_date = 1401.7.23
+		death_date = 1466.3.8
+		culture = tuscan
+		adm = 2
+		dip = 5
+		mil = 5
+	}
+}

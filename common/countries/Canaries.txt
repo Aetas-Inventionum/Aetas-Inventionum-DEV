@@ -1,0 +1,118 @@
+#Country Name: Please see filename.
+
+graphical_culture = latingfx
+
+color = { 33 116 215 } 
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	religious_ideas
+	diplomatic_ideas
+	economic_ideas
+	innovativeness_ideas
+	maritime_ideas
+	spy_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	chevauchee
+	western_men_at_arms
+	swiss_landsknechten
+	dutch_maurician
+	french_caracolle
+	anglofrench_line
+	french_dragoon
+	french_bluecoat
+	french_cuirassier
+	french_impulse
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {	
+	"Jean #1" = 60
+	"Maciot #0" = 40
+	"Philippe #0" = 40
+	"Gadifer #0" = 30
+	"Pierre #0" = 30
+	"Renaud #0" = 30
+	"Guillaume #0" = 20
+	"Hannibal #0" = 15
+	"Robert #0" = 15
+	"Geoffroy #0" = 10
+	"Richard #0" = 10
+	"Henri #0" = 10
+	"Berthin #0" = 5
+	"Georges #0" = 5
+
+	"Augier #0" = 0
+	"Ferrand #0" = 0
+	"Thomas #0" = 0
+	"Jamet #0" = 0
+	"Hannequin #0" = 0
+	"Bernard #0" = 0
+	
+	"Jeanne #0" = -10
+	"Marie #0" = -10
+	"Nicole #0" = -5
+	"Isabelle #0" = -5
+	"Marguerite #0" = -1
+}
+
+leader_names = {
+	#Specific naming for the Canaries: a mix of Norman and Gascon family names:
+	"de La Salle" "de Béthencourt" "du Fayel" "de Bracquemont" "de Berneval" "Bontier" "Le Verrier"
+	"de Grainville" "de Liens" "de Lavedan" "de Barège" "de Rieux" "d'Auberbosc" "de Montignac"
+	"de Lartigue" "de Castelnau" "de Nau" "de Mauléon" "de Salerne" "de Courrouge" "de Vidouville"
+	"de Hornay" "de Montauban" "Lalieu" "d'Auzouville" "de Bosville" "du Plessis" "du Hanouard"
+	"de Beuzeville" "de Caux" "Le Courtois" "Le Chevalier" "de Sonbray" "de Rouvray" "de Saint-Martin"
+	"d'Auxy" "de Glatigny" Boutier
+}
+
+ship_names = {
+	#Specific new naming:
+	"la Morelle" "le Tranchemar" "le Saint-Jean" "la Normande" "le Pèlerin" 
+	"le Dauphin" "l'Africain" "l'Océane" "le Notre-Dame"
+	
+	#Vanilla French names:
+	"l'Actif" "l'Adroit" "l'Aigrette" "l'Alouette" "l'Amarante"
+	"l'Angélique" "l'Ardent" "l'Aréthuse" "l'Arrogant" "l'Alcyon"
+	"l'Atalante" "l'Aurore" "la Balance" "la Blanche" "la Blonde"
+	"le Brave" "la Brune" "la Bricolle" "la Carpe"
+	"la Charente" "le Chariot-Royal" "la Chasse" "la Corneille" "la Coulisse"
+	"la Cruelle" "la Curieuse" "le Danaé" "la Danuble" "la Dauphiné"
+	"la Digue" "la Diligente" "la Dryade" "l'Écluse" "l'Écueil"
+	"l'Embuscade" "l'Émeraude" "l'Enjouée" "l'Entendue" "l'Éole"
+	"l'Étoile" "la Favorite" "la Fée" "la Félicité" "la Fidèle"
+	"la Fine" "la Flatteuse" "la Flore" "le François" "le Gaillard"
+	"la Galatée" "la Garonne" "la Gazelle" "la Gentille" "la Gironde"
+	"la Gloire" "la Grâce" "la Gracieuse" "le Grand-Ponton" "la Grive"
+	"l'Harmonie" "l'Hébé" "l'Heureux" "l'Inconstante" "l'Infidèle"
+	"le Jason" "la Jolie" "la Joyeuse" "la Junon" "le Juste"
+	"le Léger" "le Havre" "la Levrette" "le Lion" "la Marie-Françoise"
+	"le Marin" "la Martiale" "la Menaçante" "la Nayade" "la Normande"
+	"l'Orage" "l'Oriflamme" "le Palmier" "la Palombe"
+	"le Petit-Ponton" "le Petit Saint-François" "la Pintade" "le Précieux" "le Prompte"
+	"le Résolu" "la Rocheloise" "le Rubis" "le Saint-Louis" "le Saint-Michel"
+	"le Sans-Pareil" "la Somme" "la Subtile" "la Trompeuse" "la Turquoise"
+}
+
+army_names = {
+	#Some simple army names adapted to Canaries:
+	"Armée des Canaries" "Armée de Barbarie" "Armée de Guinée"
+	
+	#Generic placeholder for when above runs out:
+	"Armée de $PROVINCE$" 
+} 
+
+fleet_names = {
+	#Some simple fleet names adapted to Canaries:
+	"Escadre des Barbaresques" "Escadre de la Mer Océane" "Escadre de la Mer des Ténèbres"
+
+	#Generic placeholder for when above runs out:
+	"Escadre de $PROVINCE$"
+}

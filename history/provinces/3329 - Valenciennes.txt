@@ -1,0 +1,38 @@
+#3329 - Valenciennes
+#Area - Hainaut
+#Region - Low Countries
+
+#Core Details
+capital = "Valenciennes"
+is_city = yes
+owner = HAI
+controller = HAI
+
+#Demographics
+culture = picard
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 3
+base_manpower = 3
+trade_goods = wine
+latent_trade_goods = { coal }
+
+#Cores and Occupation (Alphabetical after current)
+add_core = HAI
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

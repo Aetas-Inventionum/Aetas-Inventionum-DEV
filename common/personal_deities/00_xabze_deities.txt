@@ -1,0 +1,148 @@
+# Do not change tags in here without changing every other reference to them.
+# If adding new dieties, make sure they are uniquely named.
+
+deity_seteney = {
+	heir_chance = 0.5
+	female_advisor_chance = 0.5
+	
+	potential = { religion = xabzist }
+	trigger = {}
+	sprite = 7
+	
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_balanced
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}
+	}
+}
+
+deity_lepsh = {
+	production_efficiency = 0.15
+	infantry_power = 0.1
+	
+	potential = { religion = xabzist }
+	trigger = {}
+	sprite = 8
+	
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_militarist
+		}	
+	}
+}
+
+deity_txeshxue = {
+	idea_cost = -0.025
+	global_unrest = -1
+	
+	potential = { religion = xabzist }
+	trigger = {}
+	sprite = 9
+	
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			NOT = { num_of_cities = 5 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { num_of_cities = 10 }
+		}
+		modifier = {
+			factor = 0.5
+			num_of_cities = 30
+		}
+		modifier = {
+			factor = 2
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_capitalist
+		}		
+	}
+}
+
+deity_kodes = {
+	land_attrition = -0.1
+	discipline = 0.05
+	
+	potential = { religion = xabzist }
+	trigger = {}
+	sprite = 10
+	
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_militarist
+		}		
+	}
+}
+
+deity_xantseguash = {
+	development_cost_in_primary_culture = -0.075
+	
+	potential = { religion = xabzist }
+	trigger = {}
+	sprite = 11
+	
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_capitalist
+		}	
+		modifier = {
+			factor = 2
+			personality = ai_colonialist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_militarist
+		}		
+	}
+}
+
+
+deity_hedrixe = {
+	stability_cost_modifier = -0.1
+	land_morale = 0.075
+	
+	potential = { religion = xabzist }
+	trigger = {}
+	sprite = 12
+	
+	effect = {}
+	removed_effect = {}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_diplomat
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_militarist
+		}		
+	}
+}

@@ -1,0 +1,23 @@
+government = republic
+add_government_reform = frisian_freedom_reform
+government_rank = 1
+mercantilism = 10 #was 0.1, im guessing thats 10?mercantilism = 10 #was 0.1, im guessing thats 10?
+primary_culture = frisian
+add_accepted_culture = hannoverian
+religion = catholic
+technology_group = western
+capital = 4382	# Groningen
+fixed_capital = 4382
+
+
+1413.1.1 = { #very limited info
+	monarch = {
+		name = "Koppen"
+		dynasty = "Jarges"
+		birth_date = 1390.1.1
+		death_date = 1417.1.1
+		adm = 2 #nothin' known bout him in this category
+		dip = 1 #signed a treaty that turned out more detrimental (that's all known bout him in this category)
+		mil = 3 #got in control by coup, legend has it he murdered his predecessor in 1v1, loses control Groningen 1 month after start
+	}
+}

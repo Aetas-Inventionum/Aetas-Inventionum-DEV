@@ -1,0 +1,17 @@
+government = monarchy
+add_government_reform = appanage_reform
+government_rank = 1
+religion = catholic
+primary_culture = catalan
+technology_group = western
+capital = 3354
+
+1415.1.1 = {
+	monarch = {
+		name = "Roger Bernat I"
+		dynasty = "de Mataplana"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

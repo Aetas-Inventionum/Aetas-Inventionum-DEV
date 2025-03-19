@@ -1,0 +1,41 @@
+#232 - Braganca
+#Area - Trás-os-Montes
+#Region - Iberia
+
+#Core Details
+capital = "Bragança"
+is_city = yes
+owner = POR
+controller = POR
+
+#Demographics
+culture = galician
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 3
+base_manpower = 2
+trade_goods = silk  #very old silk production starting in 13-15th century, amongst the first region tras os montes
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = POR
+add_core = BGZ
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+add_province_triggered_modifier = braganca_castle
+center_of_trade = 1
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

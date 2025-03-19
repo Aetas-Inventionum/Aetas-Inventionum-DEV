@@ -1,0 +1,38 @@
+#2965 - Vogtland
+#Area - Vogtland
+#Region - South Germany
+
+#Core Details
+capital = "Plauen"
+is_city = yes
+owner = VOG
+controller = VOG
+
+#Demographics
+culture = franconian
+religion = catholic
+
+#Development and Trade
+base_tax = 1
+base_production = 2
+base_manpower = 2
+trade_goods = wool
+
+#Cores and Occupation (Alphabetical after current)
+add_core = VOG
+
+#Other Political
+hre = yes
+
+#Fort/Other Building
+fort_15th = yes
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

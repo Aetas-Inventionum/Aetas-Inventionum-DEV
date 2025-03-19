@@ -1,0 +1,21 @@
+#Actually a scripted effect: not used so far
+#check_culture_modifiers = {
+#    if = {
+#        limit = {
+#            has_country_modifier = accepted_juden
+#            NOT = {
+#                accepted_culture = askhenazic
+#            }
+#        }
+#        remove_country_modifier = accepted_juden
+#    }
+#    if = {
+#        limit = {
+#            has_country_modifier = gaelic_sync
+#            NOT = {
+#                accepted_culture = irish
+#            }
+#        }
+#        remove_country_modifier = gaelic_sync
+#    }
+#}

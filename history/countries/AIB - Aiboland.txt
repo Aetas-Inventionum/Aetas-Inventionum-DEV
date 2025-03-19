@@ -1,0 +1,9 @@
+government = monarchy
+government_rank = 1
+add_government_reform = feudalism_reform
+technology_group = western
+unit_type = western
+primary_culture = aibolander
+religion = catholic
+add_accepted_culture = estonian
+capital = 5989 #hapsal

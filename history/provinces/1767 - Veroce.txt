@@ -1,0 +1,43 @@
+#1767 - Veroce
+#Area - Syrmia
+#Region - Balkans
+
+#Core Details
+capital = "Vukovar"
+is_city = yes
+owner = HUN
+controller = HUN
+
+#Demographics
+culture = hungarian
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 3
+base_manpower = 2
+trade_goods = wine
+
+#Cores and Occupation (Alphabetical after current)
+add_core = HUN
+add_core = SLV
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = KAZ
+discovered_by = CRI
+discovered_by = GOL
+discovered_by = AST
+discovered_by = QAS
+
+#Histories

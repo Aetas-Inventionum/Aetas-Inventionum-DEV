@@ -1,0 +1,36 @@
+government = monarchy
+add_government_reform = fief_reform
+government_rank = 1
+primary_culture = angevin
+religion = catholic
+technology_group = western
+capital = 3202 #Laval
+fixed_capital = 3202
+historical_friend = BRI
+
+1412.1.1 = { 
+	monarch = { 
+		name = "Anne I"
+		dynasty = "de Laval"
+		female = yes
+		birth_date = 1385.1.1
+		#regent = yes #pretty much ruled in her own power
+		adm = 4
+		dip = 3
+		mil = 1
+	}
+}
+
+1412.1.1 = { 
+	heir = { 
+		name = "Guy"
+		monarch_name = "Guy XIV"
+		dynasty = "de Laval"
+		birth_date = 1406.1.1
+		death_date = 1486.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 5
+	}
+}

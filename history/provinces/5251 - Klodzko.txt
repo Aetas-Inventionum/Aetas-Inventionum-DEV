@@ -1,0 +1,38 @@
+#5251 - Klodzko
+#Area - Sudetes
+#Region - South Germany
+
+#Core Details
+capital = "Kladsko"
+is_city = yes
+owner = BOH
+controller = BOH
+
+#Demographics
+culture = silesian #yet notable center of slavic culture so its 50/50
+religion = catholic
+
+#Development and Trade
+base_tax = 3
+base_production = 3
+base_manpower = 4
+trade_goods = beer
+
+#Cores and Occupation (Alphabetical after current)
+add_core = BOH
+add_core = GTZ
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

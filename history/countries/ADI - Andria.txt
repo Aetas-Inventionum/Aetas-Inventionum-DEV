@@ -1,0 +1,31 @@
+government = monarchy
+government_rank = 1
+add_government_reform = appanage_reform
+technology_group = western
+religion = catholic
+primary_culture = neapolitan
+capital = 5123 #Andria
+fixed_capital = 5123
+
+1373.1.1 = {
+	monarch = { 
+		name = "Francesco I"
+		dynasty = "del Balzo"
+		birth_date = 1332.1.1
+		death_date = 1420.1.1
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+	heir = { 
+		name = "Guglielmo"
+		monarch_name = "Guglielmo I"
+		dynasty = "del Balzo"
+		birth_date = 1360.1.1
+		death_date = 1444.1.1
+		claim = 95
+		adm = 2
+		dip = 1
+		mil = 1
+	}
+}

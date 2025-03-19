@@ -1,0 +1,38 @@
+#1083 - Zavolochye
+#Area - Povetluzhye
+#Region - Russia 
+
+#Core Details
+capital = "Yur"
+is_city = yes
+owner = RIA
+controller = RIA
+
+#Demographics
+culture = mari
+religion = tengri_pagan_reformed
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 2
+trade_goods = fur
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = RIA
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+center_of_trade = 1
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = nomad_group
+
+#Histories

@@ -1,0 +1,37 @@
+#5074 - Chiusi
+#Area - Southern Tuscany
+#Region - Italy
+
+#Core Details
+capital = "Chiusi"
+is_city = yes
+owner = SIE
+controller = SIE
+
+#Demographics
+culture = tuscan
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 2
+base_manpower = 2
+trade_goods = mercury
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = SIE
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

@@ -1,0 +1,39 @@
+#5723 - Debdou
+#Area - ???
+#Region - Maghreb
+
+#Core Details
+capital = "Debdou"
+is_city = yes
+owner = FEZ
+controller = FEZ
+
+#Demographics
+culture = riffian
+religion = sunni
+
+#Development and Trade
+base_tax = 2
+base_production = 2
+base_manpower = 2
+trade_goods = naval_supplies
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = FEZ
+add_core = DBD
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

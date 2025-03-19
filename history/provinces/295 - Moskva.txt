@@ -1,0 +1,38 @@
+#295 - Moskva
+#Area - Muscovy
+#Region - Russia 
+
+#Core Details
+capital = "Moskva"   
+is_city = yes
+owner = MOS
+controller = MOS
+
+#Demographics
+culture = russian
+religion = orthodox
+
+#Development and Trade
+base_tax = 4
+base_production = 4
+base_manpower = 4
+trade_goods = metallurgy
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = MOS
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+center_of_trade = 2
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = nomad_group
+
+#Histories

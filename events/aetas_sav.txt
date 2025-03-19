@@ -1,0 +1,462 @@
+namespace = aetas_sav
+normal_or_historical_nations = yes
+
+#Kingdom of Sardinia or Sicily test cheat event
+country_event = {
+	id = aetas_sav.100
+	title = aetas_sav.100.t
+	desc = aetas_sav.100.d
+	picture = ITALIAN_wars_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	immediate = { 
+		hidden_effect = { 
+			inherit = PIE 
+			inherit = SZO 
+			inherit = ATI 
+			inherit = MFA
+			4719 = { 
+				cede_province = FRA 
+				add_core = FRA 
+				remove_core = ROOT 
+			}
+			4994 = { 
+				cede_province = FRA 
+				add_core = FRA 
+				remove_core = ROOT 
+			}
+			3297 = { 
+				cede_province = FRA 
+				add_core = FRA 
+				remove_core = ROOT 
+			}
+			5028 = { 
+				cede_province = SWI 
+				add_core = SWI
+				remove_core = ROOT 
+			}
+			1867 = { 
+				cede_province = SWI 
+				add_core = SWI
+				remove_core = ROOT 
+			}
+			5031 = { 
+				cede_province = SWI 
+				add_core = SWI
+				remove_core = ROOT 
+			}
+			5029 = { 
+				cede_province = SWI 
+				add_core = SWI
+				remove_core = ROOT 
+			}
+			1871 = { 
+				cede_province = SWI 
+				add_core = SWI
+				remove_core = ROOT 
+			}
+			5039 = { 
+				cede_province = SWI 
+				add_core = SWI
+				remove_core = ROOT 
+			}
+		}
+	}
+
+	option = { 
+		name = aetas_sav.100.a #Sardinia-Piedmont
+		inherit = SAR 
+		inherit = ORS 
+		127 = {
+			cede_province = ROOT
+			add_core = ROOT 
+		}
+		103 = {
+			move_capital_effect = yes
+		}
+		change_tag = SPI
+		on_change_tag_effect = yes
+		remove_non_electors_emperors_from_empire_effect = yes
+		if = {
+			limit = {
+				NOT = {
+					government_rank = 2
+				}
+			}
+			set_government_rank = 2
+		}
+		set_country_flag = formed_sardinia_piedmont_flag
+		add_prestige = 10
+		change_primary_culture = piedmontese
+		add_accepted_culture = arpitan
+		add_accepted_culture = sardinian 
+		if = {
+			limit = { has_custom_ideas = no }
+			country_event = { id = ideagroups.1 } #Swap Ideas
+		}
+		swap_non_generic_missions = yes 
+	}
+	option = {
+		name = aetas_sav.100.b
+		inherit = SIC
+		103 = {
+			move_capital_effect = yes
+		}
+		change_tag = SCI
+		on_change_tag_effect = yes
+		remove_non_electors_emperors_from_empire_effect = yes
+		if = {
+			limit = {
+				NOT = {
+					government_rank = 2
+				}
+			}
+			set_government_rank = 2
+		}
+		set_country_flag = formed_sardinia_piedmont_flag
+		add_prestige = 10
+		change_primary_culture = piedmontese
+		add_accepted_culture = arpitan
+		add_accepted_culture = sardinian 
+		if = {
+			limit = { has_custom_ideas = no }
+			country_event = { id = ideagroups.1 } #Swap Ideas
+		}
+		swap_non_generic_missions = yes 
+	}
+	option = {
+		name = aetas_sav.100.c
+		hidden_effect = { 
+			inherit = SIC
+			inherit = SAR 
+			inherit = ORS 
+			127 = {
+				cede_province = ROOT
+				add_core = ROOT 
+			}
+			inherit = NAP 
+			inherit = RAN 
+			inherit = LCC 
+			inherit = ADI 
+			inherit = PAP 
+			inherit = VLT 
+			inherit = CVC 
+			inherit = PGA 
+			inherit = TNI 
+			inherit = ORV 
+			inherit = FLG 
+			inherit = CMR 
+			inherit = ANC 
+			inherit = CDC 
+			inherit = SIE 
+			inherit = LAN 
+			inherit = MOD 
+			inherit = FER 
+			inherit = PIA 
+			inherit = CRM 
+			inherit = GEN 
+			inherit = BRC 
+			inherit = MAN 
+			inherit = VEN 
+			inherit = AQU 
+			inherit = RAV 
+			inherit = BLG 
+			inherit = FNZ 
+			inherit = FRL 
+			inherit = URB 
+			inherit = CMO
+			inherit = BDI 
+			inherit = MSS 
+			inherit = LUC
+			inherit = PIO
+			inherit = MLO
+			inherit = SVO 
+			inherit = SRA 
+			inherit = MTS 
+			inherit = PSR
+		}
+		103 = {
+			move_capital_effect = yes
+		}
+		change_tag = ITA #Was ITL, doesnt exist
+		on_change_tag_effect = yes
+		remove_non_electors_emperors_from_empire_effect = yes
+		if = {
+			limit = {
+				NOT = {
+					government_rank = 2
+				}
+			}
+			set_government_rank = 2
+		}
+		set_country_flag = formed_sardinia_piedmont_flag
+		add_prestige = 10
+		change_primary_culture = piedmontese
+		add_accepted_culture = arpitan
+		add_accepted_culture = sardinian 
+		if = {
+			limit = { has_custom_ideas = no }
+			country_event = { id = ideagroups.1 } #Swap Ideas
+		}
+	}
+}
+#Ducal Elevation of Savoy
+country_event = {
+	id = aetas_sav.1
+	title = aetas_sav.1.t
+	desc = aetas_sav.1.d
+	picture = HRE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = { 
+		is_year = 1416
+		tag = SAV 
+		NOT = { has_country_flag = sav_duchy }
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = { 
+		name = aetas_sav.1.a #hooray!
+		set_country_flag = sav_duchy
+		add_prestige = 15
+		add_country_modifier = { 
+			name = sav_duke_mod
+			duration = 7300
+		}
+		add_stability = 1
+	}
+}
+#inheritance of piedmont
+country_event = {
+	id = aetas_sav.2
+	title = aetas_sav.2.t
+	desc = aetas_sav.2.d
+	picture = KING_SICK_IN_BED_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_sav.2.a #very slay
+		inherit = PIE
+	}
+}
+
+#Early Retirement of Amadeus
+country_event = {
+	id = aetas_sav.3
+	title = aetas_sav.3.t
+	desc = aetas_sav.3.d
+	picture = PRAYING_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = { 
+		is_year = 1430
+		has_ruler = "Amédée VIII"
+		has_heir = yes
+	}
+
+	option = { 
+		name = aetas_sav.3.a #Enjoy your rest, well desereved Monarch.
+		ai_chance = { factor =  50 }
+		custom_tooltip = amedee.tt #He will become heavily involved in the clerical community...
+		hidden_effect = { kill_ruler = yes }
+		add_stability = 1
+		set_country_flag = amedee_electable
+	}
+	option = { 
+		name = aetas_sav.3.b #On second thought, maybe he has a few years left in him.
+		ai_chance = { factor = 50 }
+	}
+}
+#Elected as Antipope
+country_event = {
+	id = aetas_sav.4
+	title = aetas_sav.4.t
+	desc = aetas_sav.4.d
+	picture = POPE_PREACHING_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = { 
+		has_country_flag = amedee_electable
+	}
+	mean_time_to_happen = { 
+		months = 120
+	}
+	
+	immediate = { 
+		hidden_effect = { set_country_flag = felix_antipope_flag }
+	}
+
+	option = { 
+		name = aetas_sav.4.a #and will we be the very last of antipopes too!
+		ai_chance = { factor = 90 }
+		reverse_add_opinion = { 
+			who = PAP 
+			modifier = ended_schism
+		}
+		add_country_modifier = { 
+			name = sav_church_mod
+			duration = -1
+		}
+	}
+	option = {
+		name = aetas_sav.4.b #Felix is the true pope!
+		add_prestige = 25
+		reverse_add_opinion = { 
+			who = PAP 
+			modifier = refused_to_end_schism
+		}
+	}
+}
+#Peace for Vercelli #Milan POV
+country_event = {
+	id = aetas_sav.5
+	title = aetas_sav.5.t
+	desc = aetas_sav.5.d
+	picture = DIPLOMACY_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	major = yes 
+	major_trigger = { is_neighbor_of = ROOT }
+
+	option = { 
+		name = aetas_sav.5.a #sure
+		ai_chance = { factor = 1 } 
+		5048 = { 
+			cede_province = SAV
+			add_core = SAV 
+			remove_core = ROOT 
+		}
+		define_consort = { 
+			name = "Marie"
+			dynasty = "de Savoie"
+			culture = arpitan 
+			country_of_origin = SAV
+			age = 16
+			adm = 2
+			dip = 3
+			mil = 1 
+		}
+		add_truce_with = SAV
+	}
+	option = { 
+		name = aetas_sav.5.b #no thx
+		5048 = { add_core = SAV }
+		every_owned_province = { 
+			limit = { 
+				is_neighbor_of = SAV 
+				NOT = { is_core = SAV }
+			}
+			add_permanent_claim = SAV 
+		}
+	}
+}
+#Anne of Cyprus
+country_event = {
+	id = aetas_sav.6
+	title = aetas_sav.6.t
+	desc = aetas_sav.6.d
+	picture = wihgfx_FEMALE_RULER_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	major = yes 
+	major_trigger = { tag = CYP }
+
+	option = {
+		name = aetas_sav.6.a #hell yeah! marry her!
+		ai_chance = { factor = 9 } 
+		define_consort = { 
+			name = "Anne"
+			dynasty = "de Lusignan"
+			age = 20
+			female = yes 
+			adm = 3
+			dip = 4
+			mil = 2
+			country_of_origin = CYP 
+		}
+		if = { 
+			limit = { exists = CYP }
+			create_marriage = CYP 
+		}
+		else = { 
+			cyprus_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+#pursuit of a crown
+country_event = {
+	id = aetas_sav.7
+	title = aetas_sav.7.t
+	desc = aetas_sav.7.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_sav.7.a #target sardinia
+		ai_chance = { factor = 9 }
+		custom_tooltip = sav_sar.tt
+		set_country_flag = sav_sar_missions
+		swap_non_generic_missions = yes 
+		corsica_sardinia_area = {
+			add_core = ROOT 
+		}
+	}
+	option = { 
+		name = aetas_sav.7.b #target sicily
+		ai_chance = { factor = 2 }
+		custom_tooltip = sav_sic.tt
+		set_country_flag = sav_sic_missions
+		swap_non_generic_missions = yes 
+		sicily_area = { add_core = ROOT }
+	}
+}
+#palermo capital??!!
+#pursuit of a crown
+country_event = {
+	id = aetas_sav.8
+	title = aetas_sav.8.t
+	desc = aetas_sav.8.d
+	picture = CITY_VIEW_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_sav.7.a #palermo is now home indeed
+		ai_chance = { factor = 9 }
+		add_stability = -1 #quite a power shuffle
+		set_capital = 125
+		change_primary_culture = sicilian 
+		add_accepted_culture = piedmontese
+		125 = { add_province_triggered_modifier = sav_palermo_mod }
+	}
+	option = { 
+		name = aetas_sav.7.b #how fun! but piedmont is the righteous capital
+		ai_chance = { factor = 2 }
+		add_stability = 1
+		capital_scope = { 
+			add_base_tax = 2
+			add_base_production = 1
+		}
+	}
+}

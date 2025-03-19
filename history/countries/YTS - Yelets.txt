@@ -1,0 +1,19 @@
+#Represents the various small Upper Oka Principalities
+government_rank = 1
+government = monarchy
+add_government_reform = principality
+primary_culture = ryazanian
+religion = orthodox
+technology_group = eastern
+capital = 2408
+fixed_capital = 2408 # Cannot move capital away from this province & no power cost to move to it
+
+1415.1.1 = { #invented :(
+	monarch = {
+		name = "Feodor I"
+		dynasty = "Rurikovich"
+		adm = 1
+		dip = 1
+		mil = 2
+	}
+}

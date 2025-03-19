@@ -1,0 +1,21 @@
+government = republic
+add_government_reform = noble_elite_reform
+government_rank = 1
+technology_group = eastern
+religion = orthodox
+primary_culture = volhynian
+add_accepted_culture = ruthenian
+capital = 281	# Kamienec
+fixed_capital = 281 # Cannot move capital away from this province & no power cost to move to it
+
+1404.1.1 = {
+	monarch = {
+		name = "Jurgis"
+		dynasty = "Gedgaugaitis"
+		culture = lithuanian
+		adm = 3
+		dip = 4
+		mil = 2
+		birth_date = 1365.1.1	#???
+	}
+}

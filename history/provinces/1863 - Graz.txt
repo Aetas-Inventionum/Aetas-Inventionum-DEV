@@ -1,0 +1,39 @@
+#1863 - Graz
+#Area - Upper Styria
+#Region - South Germany
+
+#Core Details
+capital = "Graz"
+is_city = yes
+owner = STY
+controller = STY
+
+#Demographics
+culture = austrian
+religion = catholic
+
+#Development and Trade
+base_tax = 4
+base_production = 3
+base_manpower = 3
+trade_goods = cloth
+
+#Cores and Occupation (Alphabetical after current)
+add_core = STY
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+center_of_trade = 2
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

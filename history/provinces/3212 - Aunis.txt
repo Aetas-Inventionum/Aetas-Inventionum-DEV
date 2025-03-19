@@ -1,0 +1,41 @@
+#3212 - Aunis
+#Area - Poitou
+#Region - France
+
+#Core Details
+capital = "La Rochelle"
+is_city = yes
+owner = FRA
+controller = FRA
+
+#Demographics
+culture = poitevin
+religion = catholic
+
+#Development and Trade
+base_tax = 4
+base_production = 4
+base_manpower = 4
+trade_goods = naval_supplies
+
+#Cores and Occupation (Alphabetical after current)
+add_core = FRA
+add_core = AUN
+add_core = ENG
+add_core = GYN
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+center_of_trade = 2
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

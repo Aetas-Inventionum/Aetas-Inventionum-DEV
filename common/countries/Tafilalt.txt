@@ -1,0 +1,79 @@
+#Country Name: Please see filename.
+
+graphical_culture = muslimgfx
+
+color = { 150 60 95 } 
+revolutionary_colors = { 5  0  5 }
+
+historical_score = 100
+
+historical_idea_groups = {
+	offensive_ideas
+	religious_ideas
+	maritime_ideas
+	defensive_ideas
+	expansion_ideas
+	administrative_ideas
+	trade_ideas
+	economic_ideas
+}
+
+historical_units = {
+	mamluk_archer
+	mamluk_cavalry_charge
+	mamluk_duel
+	mamluk_musket_charge
+	muslim_mass_infantry
+	muslim_dragoon
+	ali_bey_reformed_infantry
+}
+
+monarch_names = {
+	"Sharif #0" = 30
+	"'Ali #0" = 30
+	"Muhammad #0" = 40
+	"'Isma'il #0" = 20
+	"'Ahmad #0" = 10
+	"'Abd al-Malik #0" = 10
+	"'Abdallah #0" = 20
+	"al-Mostadi #0" = 10
+	"Yazid #0" = 5
+	"Sulayman #0" = 10
+	
+	"Thamina #0" = -1
+	"Widad #0" = -1
+	"Aisha #0" = -1
+	"Zaidana #0" = -5
+	"Khnata #0" = -5
+	"Bilqis #0" = -1
+	"Halima #0" = -1
+	"Alwa #0" = -1
+}
+
+leader_names = {
+	Abda "Banu Ahsen" "Banu 'Alawi" "Banu 'Amir" "Banu Atta" Azwafit
+	Chiadma
+	"'Awlad Dalim"
+	"Banu Galga'iya" "Banu Guil"
+	Haha Hakimi "Banu Hassan" "Banu Hayyan" "Banu Hilal" "Banu Hudhayl" "Hin Tata"
+	"Banu Khirane"
+	"Banu Lamazdur"
+	"Banu Marin" Masmuda "al-Maqil" Mazala "Banu Musa" "al-Mutairi"
+	"Banu Rashid" Rahamma Riyah
+	"Banu Sa'adi"
+	Tajakant "Banu Tamim" "Banu Targutant" "Banu Taklawwuh-tin" "Banu Talwuh-rit" "'Awlad Tidrain" "Banu Tumsidin"
+	"Banu Walishak" "Banu Waryaghar" "al-Wattasiyun" "Banu Wawazgit"
+	"Banu Yigaz"
+	Zaër "'Awlad Ziyan" "Banu Zemmur" Zyayda
+}
+
+ship_names = {
+	Tawwab Muntaqim Afuww Fa'uf "Malik Mulk"
+	"Jalal Ikram" Muqsit Jami Ghani Mughni
+	Mani Darr Nafi Nur Hadi Badi Baqi Warith
+	Rashid Sabur "Fazl Azim"
+}
+
+army_names = { 
+	"Jaysh al-$PROVINCE$"
+}

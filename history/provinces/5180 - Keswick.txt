@@ -1,0 +1,39 @@
+#5180 - Keswick
+#Area - North West
+#Region - British Isles
+
+#Core Details
+capital = "Keswick"
+is_city = yes
+owner = NBL 
+controller = NBL
+
+#Demographics
+culture = northumbrian
+religion = catholic
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = beer
+latent_trade_goods = { coal }
+
+#Cores and Occupation (Alphabetical after current)
+add_core = NBL
+
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

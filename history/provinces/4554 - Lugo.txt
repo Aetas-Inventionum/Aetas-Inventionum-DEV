@@ -1,0 +1,39 @@
+#4554 - Lugo
+#Area - Galicia
+#Region - Iberia
+
+#Core Details
+capital = "Lugo"
+is_city = yes
+owner = CAS
+controller = CAS
+
+#Demographics
+culture = galician
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 1
+base_manpower = 1
+trade_goods = leather
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = CAS
+add_core = GAL
+
+#Other Political
+hre = no
+seat_in_parliament = yes
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

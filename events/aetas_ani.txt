@@ -1,0 +1,237 @@
+namespace = aetas_ani
+normal_or_historical_nations = yes
+
+# Royal Charters of Cork and Waterford
+country_event = {
+	id = aetas_ani.1
+	title = aetas_ani.1.t
+	desc = aetas_ani.1.d
+	picture = CITY_VIEW_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = DMS 
+		AND = { 
+			owns_core_province = 5178
+			owns_core_province = 4377
+		}
+	}
+
+	mean_time_to_happen = { 
+		months = 12
+	}
+
+	option = { #Grant them their privileges
+		name = aetas_ani.1.a
+		ai_chance = { factor = 75 }
+		5178 = {
+			add_province_triggered_modifier = cork_city
+		}
+		4377 = { 
+			add_province_triggered_modifier = cork_city
+		}
+	}
+	option = { #Grant them their privileges
+		name = aetas_ani.1.b
+		ai_chance = { factor = 25 }
+		5178 = {
+			add_province_modifier = { 
+				name = cork_unhappy
+				duration = 7300
+			}
+		}
+		4377 = { 
+			add_province_modifier = { 
+				name = cork_unhappy
+				duration = 7300
+			}
+		}
+		complete_mission = dms_eng_ports
+		complete_mission = dms_limerick
+		complete_mission = dms_revise
+	}
+}
+
+#TEST EVENT: insta form Lordship
+country_event = {
+	id = aetas_ani.100 
+	title = aetas_ani.100.t
+	desc = aetas_ani.100.d
+	picture = CITY_VIEW_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	immediate = { 
+		grant_independence = yes 
+		create_subject = { 
+			subject = ORD 
+			subject_type = fief 
+		}
+		inherit = KID 
+		every_province = {
+			limit = { 
+				area = leinster_area
+				OR = { 
+					owned_by = ENG
+					owned_by = WLM
+				}
+			}
+			cede_province = ROOT 
+			add_core = ROOT 
+		}
+	}
+
+	option = { 
+		name = aetas_ani.100.a 
+		change_tag = ANI
+		on_change_tag_effect = yes
+		remove_non_electors_emperors_from_empire_effect = yes
+		swap_non_generic_missions = yes
+		# should grant cores on all ireland
+		add_government_reform = lordship_ireland_reform
+		set_capital = 373
+		add_country_modifier = {
+			name = "centralization_modifier"
+			duration = 7300
+		}
+		hidden_effect = { 
+			if = { 
+				limit = { 
+					ai = yes 
+					is_subject = yes 
+				}
+				change_country_color = {
+					color = { 165  45  41 }
+				}
+			}
+			else = { 
+				every_subject_country = { 
+					limit = {  
+						OR = { 
+							is_subject_of_type = march 
+							is_subject_of_type = vassal
+							is_subject_of_type = fief
+						}
+					}
+					random_list = { 
+						1 = { 
+							change_country_color = { 
+								color = { 100  132  170 }
+							}
+						}
+						1 = { 
+							change_country_color = { 
+								color = { 60  92  130 }
+							}
+						}
+						1 = { 
+							change_country_color = { 
+								color = { 80  122  146 }
+							}
+						}
+						1 = { 
+							change_country_color = { 
+								color = { 90  112  150 }
+							}
+						}
+					}
+				}
+			}
+		}
+		add_prestige = 10
+	}
+}
+#ill-fated romance and rise of the usurper
+country_event = {
+	id = aetas_ani.2
+	title = aetas_ani.2.t
+	desc = aetas_ani.2.d
+	picture = CITY_VIEW_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = DMS 
+		has_ruler = "Thomas I"
+		dynasty = "FitzGerald"
+	}
+
+	mean_time_to_happen = { 
+		months = 60
+	}
+
+	option = { 
+		name = aetas_ani.2.a #we will not let this man steal away what is ours
+		add_stability = -1
+		set_country_flag = kilk_flag
+		capital_scope = { 
+			spawn_rebels = { 
+				type = pretender_rebels 
+				leader = "James"
+				leader_dynasty = "FitzGerald"
+				culture = hiberno_norman 
+				size = 1
+			}
+		}
+		5175 = { 
+			if = { 
+				limit = { owned_by = ROOT }
+				spawn_rebels = { 
+					type = pretender_rebels 
+					leader = "James"
+					leader_dynasty = "FitzGerald"
+					culture = hiberno_norman 
+					size = 2 #supported by neighboring ormond
+				}
+			}
+		}
+		every_neighbor_country = { 
+			limit = { culture_group = british }
+			add_opinion = { 
+				who = ROOT 
+				modifier = ignored_kilkenny
+			}
+		}
+		every_neighbor_country = { 
+			limit = { culture_group = gaelic }
+			add_opinion = { 
+				who = ROOT 
+				modifier = spouse_gael
+			}
+		}
+	}
+
+	option = { 
+		name = aetas_ani.2.b 
+		define_ruler = {
+			name = "James I"
+			dynasty = "FitzGerald"
+			culture = hiberno_norman
+			age = 41
+			adm = 1
+			dip = 3
+			mil = 3
+		}
+		add_ruler_modifier = { 
+			name = kilkenny_loyalist
+			duration = -1
+		}
+		hidden_effect = { remove_heir = {} }
+		every_neighbor_country = { 
+			limit = { culture_group = gaelic }
+			add_opinion = { 
+				who = ROOT 
+				modifier = spouse_scorned
+			}
+		}
+		every_neighbor_country = { 
+			limit = { culture_group = british }
+			add_opinion = { 
+				who = ROOT 
+				modifier = respected_kilkenny
+			}
+		}
+	}
+}

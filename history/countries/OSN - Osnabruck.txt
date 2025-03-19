@@ -1,0 +1,19 @@
+government = theocracy
+add_government_reform = hre_bishopric_reform
+government_rank = 1
+primary_culture = hannoverian
+religion = catholic
+technology_group = western
+capital = 56	# Osnabruck
+fixed_capital = 56 # Cannot move capital away from this province & no power cost to move to it
+
+1410.1.1 = {
+	monarch = {
+		name = "Otto I"
+		dynasty = "von Hoya"
+		birth_date = 1370.1.1
+		adm = 4
+		dip = 3
+		mil = 2
+	}
+}

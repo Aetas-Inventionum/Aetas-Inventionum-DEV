@@ -1,0 +1,23 @@
+government = monarchy
+add_government_reform = frankokratic_reform
+government_rank = 1
+mercantilism = 10 #was 0.1, im guessing thats 10?
+primary_culture = ligurian
+add_accepted_culture = greek
+religion = catholic
+technology_group = western
+capital = 2348
+fixed_capital = 2348 # Cannot move capital away from this province & no power cost to move to it
+
+
+1408.1.1 = {
+	monarch = {
+		name = "Giovanni"
+		dynasty = "Gustiniani"
+		adm = 1
+		dip = 2
+		mil = 2
+	}
+}
+
+

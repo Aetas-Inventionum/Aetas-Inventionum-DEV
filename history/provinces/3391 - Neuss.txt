@@ -1,0 +1,38 @@
+#3391 - Neuss
+#Area - West Rhineland
+#Region - North Germany
+
+#Core Details
+capital = "Neuss"
+is_city = yes
+owner = KOL
+controller = KOL
+
+#Demographics
+culture = meuse_rhenish
+religion = catholic
+
+#Development and Trade
+base_tax = 4
+base_production = 4
+base_manpower = 3
+trade_goods = cloth
+
+#Cores and Occupation (Alphabetical after current)
+add_core = KOL
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+fort_15th = yes 
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

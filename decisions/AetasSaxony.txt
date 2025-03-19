@@ -1,0 +1,87 @@
+country_decisions = {
+	saxon_electorate_decision = {
+		major = yes
+		potential = {
+			tag = SAX 
+			exists = SWB 
+			has_country_flag = sax_partition_flag
+			is_part_of_hre = yes 
+			dynasty = "von Wettin"
+			is_elector = no
+		}
+		allow = {
+			OR = { 
+				is_emperor = yes 
+				emperor = {
+					alliance_with = ROOT
+					has_opinion = { 
+						who = ROOT 
+						value = 150
+					}
+				}
+			}
+			OR = {
+				AND = { 
+					is_at_war = yes 
+					war_with = SWB 
+					59 = {
+						is_capital_of = SWB 
+						controlled_by = ROOT 
+					}
+				}
+				AND = { 
+					owns_core_province = 59
+					owns_core_province = 5299
+					owns_core_province = 5297
+					total_development = SWB 
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = sax_swb_war.tt
+			hidden_effect = { 
+				if = { 
+					limit = { is_at_war = yes }
+					if = { 
+						limit = { 59 = { owned_by = SWB } }
+						59 = { 
+							cede_province = ROOT 
+							add_core = ROOT 
+						}
+					}
+					if = { 
+						limit = { 5299 = { owned_by = SWB } }
+						5299 = { 
+							cede_province = ROOT 
+							add_core = ROOT 
+						}
+					}
+					if = { 
+						limit = { 5297 = { owned_by = SWB } }
+						5297 = { 
+							cede_province = ROOT 
+							add_core = ROOT 
+						}
+					}
+					if = { 
+						limit = { NOT = { capital = 61 } }
+						set_capital = 59
+					}
+					white_peace = SWB 
+				}
+			}
+			SWB = {
+				elector = no 
+				if = { 
+					limit = { owns = 4743 }
+					set_capital = 4743
+				}
+				change_tag = THU 
+			}
+			elector = yes 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}

@@ -1,0 +1,287 @@
+#brabant and luxembourg. Antoine as co-ruler
+dependency = {
+	subject_type = lithuania_union
+	first = BRB 
+	second = LUX 
+	start_date = 1411.1.1
+	end_date = 1415.10.1 #when antoine dies
+}
+
+#East Frisia and Ommelanden
+guarantee = {
+	first = EFR
+	second = OMM
+	start_date = 1363.1.1
+	end_date = 1477.1.5
+}
+
+#Utrecht, Groningen and Guelders
+dependency = {
+	subject_type =fief
+	first = UTR
+	second = GRN
+	start_date = 1407.1.1
+	end_date = 1430.1.1
+}
+
+alliance = { #duke and prince-bishop were nephews, and bishop was indebt to the duke
+	first = GEL
+	second = UTR
+	start_date = 1393.4.23
+	end_date = 1423.10.11
+}
+
+#brabant-breda
+dependency = {
+	subject_type = appanage
+	first = BRB
+	second = BRD 
+	start_date = 1406.1.1
+	end_date = 1419.1.1 #not actual date of end but temp
+}
+
+#Dutch states
+union = {
+	first = BUR
+	second = FLA
+	start_date = 1405.8.26
+	end_date = 1493.1.1
+}
+
+#cleves-mark
+union = {
+	first = KLE 
+	second = MKK
+	start_date = 1398.1.1
+	end_date = 1521.1.1
+}
+
+#Holland-Zeeland
+dependency = {
+	subject_type = crownland_subject
+	first = HOL
+	second = ZEE
+	start_date = 1323.1.1
+	end_date = 1572.1.1
+}
+#Guelders-Zutphen
+dependency = {
+	subject_type = crownland_subject
+	first = GEL
+	second = ZUT
+	start_date = 1339.1.1
+	end_date = 1581.1.1
+}
+#Guelders-Julich
+union = {
+	first = GEL
+	second = JUL
+	start_date = 1393.1.1
+	end_date = 1423.1.1
+}
+
+#Brabant - Limburg
+union = {
+	first = BRB
+	second = LBG
+	start_date = 1288.1.1
+	end_date = 1430.8.14
+}
+
+#Brabant - Luxembourg
+royal_marriage = {
+	first = BRB
+	second = LUX
+	start_date = 1402.2.21
+	end_date = 1415.8.25
+}
+
+# Burgundy-Brabant
+alliance = {
+	first = BUR
+	second = BRB
+	start_date = 1406.1.1
+	end_date = 1430.8.14
+}
+
+royal_marriage = {
+	first = BUR
+	second = BRB
+	start_date = 1406.1.1
+	end_date = 1430.8.14
+}
+
+union = {
+	first = BUR 
+	second = BRB
+	start_date = 1430.8.14
+	end_date = 1493.1.1 #I copied flanders thingie here, might not be accurate
+}
+
+# Burgundy-Artois
+union = {
+	first = BUR
+	second = ATS
+	start_date = 1384.1.30
+	end_date = 1477.1.5
+}
+
+# Burgundy-Besancon
+guarantee = {
+	first = BUR
+	second = BSA
+	start_date = 1363.1.1
+	end_date = 1477.1.5
+}
+
+union = {
+	first = BUR
+	second = BRB
+	start_date = 1444.1.1
+	end_date = 1477.1.5
+}
+union = {
+	first = BUR
+	second = HOL
+	start_date = 1444.1.1
+	end_date = 1477.1.5
+}
+#vassal = {
+#	first = HAB
+#	second = NED
+#	start_date = 1477.1.5
+#	end_date = 1519.1.12
+#}
+vassal = {
+	first = SPA
+	second = NED
+	start_date = 1549.11.4
+	end_date = 1579.1.23
+}
+
+#union = {
+#	first = BUR
+#	second = HAI
+#	start_date = 1444.1.1
+#	end_date = 1477.1.5
+#}
+#Burgundy-Nevers
+dependency = {
+	subject_type = appanage
+	first = BUR 
+	second = NEV
+	start_date = 1406.1.1
+	end_date = 1419.1.1 #when jean I dies, philippe enacts union
+}
+
+# Maria I/Marie I
+union = {
+	first = BUR
+	second = GEL
+	start_date = 1477.6.27
+	end_date = 1477.8.1
+}
+
+# Duke of Kleves/Gelre
+union = {
+	first = KLE
+	second = GEL
+	start_date = 1539.2.6
+	end_date = 1543.1.1
+}
+
+# The Grand Duchy of Luxembourg
+union = {
+	first = NED
+	second = LUX
+	start_date = 1815.6.9 
+	end_date = 1890.11.23
+}
+
+# Lodewijk II of Netherlands
+union = {
+	first = NED
+	second = KLE
+	start_date = 1810.7.1
+	end_date = 1810.7.10
+}
+
+# Lodewijk II of Netherlands
+alliance = {
+	first = NED
+	second = KLE
+	start_date = 1810.7.1
+	end_date = 1810.7.10
+}
+
+# The Grand Duchy of Luxembourg
+alliance = {
+	first = NED
+	second = LUX
+	start_date = 1815.6.9 
+	end_date = 1890.11.23
+}
+
+# Burgundy and Savoy
+alliance = {
+	first = BUR
+	second = SAV
+	start_date = 1473.1.1
+	end_date = 1476.4.14
+}
+
+# Maria I/Marie I
+alliance = {
+	first = BUR
+	second = GEL
+	start_date = 1477.6.27
+	end_date = 1477.8.1
+}
+
+# Burgundy and Gelre
+alliance = {
+	first = HAB
+	second = GEL
+	start_date = 1477.8.2
+	end_date = 1492.1.1
+}
+
+# Duke of Kleves/Gelre
+alliance = {
+	first = KLE
+	second = GEL
+	start_date = 1539.2.6
+	end_date = 1543.1.1
+}
+
+# Netherlands and Brandenburg
+alliance = {
+	first = NED
+	second = BRA
+	start_date = 1672.5.6
+	end_date = 1678.8.10
+}
+
+# Netherlands and Denmark
+alliance = {
+	first = NED
+	second = DAN
+	start_date = 1673.7.11
+	end_date = 1678.8.10
+}
+
+# Charles the Bold and Margaret of York 
+royal_marriage = {
+	first = BUR
+	second = ENG
+	start_date = 1468.7.9
+	end_date = 1477.1.5
+}
+
+# William II and Mary Henrietta Stuart 
+royal_marriage = {
+	first = NED
+	second = ENG
+	start_date = 1641.5.2
+	end_date = 1650.11.6
+}

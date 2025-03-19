@@ -1,0 +1,398 @@
+namespace = aetas_maghrebi
+normal_or_historical_nations = yes
+
+#Nomadic Raid
+country_event = {
+	id = aetas_maghrebi.1
+	title = aetas_maghrebi.1.t
+	desc = aetas_maghrebi.1.d
+	picture = muslimgfx_SIEGE_eventPicture
+	
+	trigger = {
+		any_owned_province = { 
+			NOT = { has_province_modifier = ai_nomad_raid }
+		}
+		any_neighbor_province = {
+			OR = { 
+				is_city = no 
+				owner = {
+					NOT = { is_subject_of = ROOT }
+					government = tribal
+				}
+			}
+			OR = {
+				region = maghreb_region
+				region = egypt_region 
+			}
+		}
+	}
+
+	mean_time_to_happen = { 
+		months = 142
+	}
+
+	option = { #damned nomads
+		name = "aetas_maghrebi.1.a"
+		random_owned_province = { 
+			limit = { 
+				any_neighbor_province = {
+					OR = { 
+						is_city = no 
+						owner = {
+							NOT = { is_subject_of = ROOT }
+							government = tribal
+						}
+					}
+				}
+				NOT = { has_province_modifier = ai_nomad_raid }
+				OR = { 
+					region = maghreb_region
+					region = egypt_region
+				}
+			}
+			add_devastation = 20
+			add_province_modifier = {
+				name = "ai_nomad_raid"
+				duration = 1825
+			}
+			random_list = {
+				25 = {
+					add_base_tax = -1
+				}
+				25 = {
+					add_base_production = -1
+				}
+				25 = {
+					add_base_manpower = -1
+				}
+				25 = {}
+			}
+		}
+	}
+}
+#Support Saharan Caravans
+country_event = {
+	id = aetas_maghrebi.2
+	title = aetas_maghrebi.2.t
+	desc = aetas_maghrebi.2.d
+	picture = muslimgfx_TRADEGOODS_eventPicture
+
+	trigger = {
+		capital_scope = {
+			region = maghreb_region
+			region = egypt_region
+		}
+		NOT = { 
+			OR = {
+				has_country_modifier = caravan_support
+				has_country_modifier = caravan_decline
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 30
+	}
+
+	option = { #yes we will support them
+		name = "aetas_maghrebi.2.a"
+		add_years_of_income = -0.75
+		add_country_modifier = {
+			name = "caravan_support"
+			duration = 3650
+		}
+	}
+	option = { #no we dont have the money right now
+		name = "aetas_maghrebi.2.b"
+		add_country_modifier = { 
+			name = "caravan_decline"
+			duration = 5475
+		}
+	}
+}
+#European Merchants request Trade Privilege
+province_event = {
+	id = aetas_maghrebi.3
+	title = aetas_maghrebi.3.t
+	desc = aetas_maghrebi.3.d
+	picture = muslimgfx_MERCHANTS_TALKING_eventPicture
+
+	trigger = {
+		OR = { 
+			region = maghreb_region
+			area = cyrenaica_area
+			area = marmarica_area 
+			area = bahari_area
+			area = palestine_area
+			area = syria_area
+			area = aleppo_area
+			area = cukurova_area
+			area = pamphylia_area
+			area = pisidia_area
+			area = caria_area
+			area = syrmia_area
+			area = mysia_area
+		}
+		owner = { 
+			OR = { 
+				religion_group = muslim 
+				religion = orthodox
+			}
+		}
+		has_port = yes 
+		province_has_center_of_trade_of_level = 2
+		NOT = { 
+			OR = {
+				has_province_modifier = latin_quarter 
+				has_province_flag = latins_denied
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	option = { #yes
+		name = "aetas_maghrebi.3.a"
+		add_province_modifier = { 
+			name = "latin_quarter"
+			duration = -1
+		}
+	}
+	option = {
+		name = "aetas_maghrebi.3.b"
+		set_province_flag = latins_denied
+	}
+}
+#Arrival of jews
+country_event = {
+	id = aetas_maghrebi.4
+	title = aetas_maghrebi.4.t
+	desc = aetas_maghrebi.4.d
+	picture = muslimgfx_STREET_SPEECH_eventPicture
+
+	fire_only_once = yes 
+
+	trigger = { 
+		OR = { 
+			culture_group = berber_group
+			culture_group = maghrebi
+		}
+		any_known_country = { has_country_flag = end_of_granada }
+		total_development = 50
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	option = { 
+		name = "aetas_maghrebi.4.a"
+		ai_chance = { factor = 100 }
+		random_owned_province = {
+			limit = { 
+				NOT = { 
+					AND = {
+						is_capital = yes 
+						province_id = 4566
+					} 
+				} 
+			}
+			change_religion = jewish
+			add_province_modifier = {
+				name = "jewish_quarter"
+				duration = -1
+			}
+			random_list = {
+				25 = {
+					add_base_tax = 1
+				}
+				25 = { add_base_production = 1 }
+				25 = { add_base_manpower = 1 }
+				25 = { 
+					add_base_production = 1
+					add_base_tax = 1
+				}
+			}
+		}
+	}
+	option = { #no thx
+		name = "aetas_maghrebi.4.b"
+	}
+}
+#Pay sum to prevent Nomadic Raid
+country_event = {
+	id = aetas_maghrebi.5
+	title = aetas_maghrebi.5.t
+	desc = aetas_maghrebi.5.d
+	picture = muslimgfx_SIEGE_eventPicture
+	
+	trigger = {
+		NOT = { government = tribal } #no tribal raids for tribes
+		NOT = { has_country_modifier = tribes_secured_borders } 
+		NOT = { has_country_modifier = not_tribes_secured_borders }
+		any_owned_province = { 
+			NOT = { has_province_modifier = ai_nomad_raid }
+		}
+		any_neighbor_province = {
+			OR = { 
+				is_city = no 
+				owner = {
+					NOT = { is_subject_of = ROOT }
+					government = tribal
+				}
+			}
+			OR = {
+				region = maghreb_region
+				region = egypt_region 
+			}
+		}
+	}
+
+	mean_time_to_happen = { 
+		months = 120
+	}
+
+	option = { #we will secure our borders
+		name = "aetas_maghrebi.5.a"
+		ai_chance = { factor = 50 }
+		add_years_of_income = -0.5
+		add_yearly_manpower = -0.5
+		add_country_modifier = { 
+			name = "tribes_secured_borders"
+			duration = 7300
+		}
+	}
+	option = { #we cant afford this shit.
+		name = "aetas_maghrebi.5.b"
+		ai_chance = { factor = 50 }
+		add_country_modifier = { 
+			name = "not_tribes_secured_borders"
+			duration = 7300
+		}
+	}
+}
+#Tribe settles down
+province_event = {
+	id = aetas_maghrebi.6
+	title = aetas_maghrebi.6.t
+	desc = aetas_maghrebi.6.d
+	picture = muslimgfx_SIEGE_eventPicture
+	
+	trigger = {
+		any_neighbor_province = {
+			OR = { 
+				is_city = no 
+				owner = {
+					NOT = { is_subject_of = ROOT }
+					government = tribal
+				}
+			}
+			OR = {
+				region = maghreb_region
+				region = egypt_region 
+			}
+		}
+	}
+
+	mean_time_to_happen = { 
+		months = 200
+	}
+
+	option = { #okay
+		name = "aetas_maghrebi.6.a"
+		ai_chance = { factor = 75 }
+		random_list = {
+			25 = {
+				add_base_tax = 1
+			}
+			25 = { 
+				add_base_production = 1
+			}
+			25 = {
+				add_base_manpower = 1
+			}
+			25 = { 
+				add_devastation = 10
+			}
+		}
+		add_province_modifier = { 
+			name = "ai_tribal_activity" #missing loc
+			duration = 7300
+		}
+	}
+	option = { #not on my watch
+		name = "aetas_maghrebi.6.b"
+		ai_chance = { factor = 25 }
+		spawn_rebels = {
+			type = tribal_rebels
+			size = 1
+		}
+	}
+}
+#sephardic refugees seek a new home
+country_event = {
+	id = aetas_maghrebi.7
+	title = aetas_maghrebi.7.t
+	desc = aetas_maghrebi.7.d
+	picture = muslimgfx_PILGRIMAGE_eventPicture
+
+	trigger = { 
+		any_known_country = { has_country_flag = end_of_granada }
+		any_owned_province = { has_port = yes }
+		is_subject = no
+		religion_group = muslim 
+		NOT = { 
+			OR = { 
+				has_country_flag = maghrebi_sephardic_flag
+				any_owned_province = { 
+					culture = sephardic 
+				}
+			}
+		}
+		OR = {
+			any_owned_province = {
+				has_terrain = highlands
+				has_terrain = mountain 
+				has_terrain = hills
+			}
+		}
+	} 
+
+	mean_time_to_happen = { 
+		months = 20
+	}
+
+	immediate = { 
+		hidden_effect = { 
+			set_country_flag = maghrebi_sephardic_flag
+		}
+	}
+
+	option = { 
+		name = aetas_maghrebi.7.a #welcome them!
+		ai_chance = { factor = 75 } #historical
+		random_owned_province = { 
+			limit = { 
+				OR = { 
+					has_terrain = highlands
+					has_terrain = mountain 
+					has_terrain = hills
+				}
+				NOT = {
+					OR = { 
+						religion = jewish 
+						culture = sephardic
+					}
+				}
+			}
+			change_religion = jewish 
+			change_culture = sephardic 
+			add_province_triggered_modifier = sephardic_jews_mod
+		}
+	}
+	option = { 
+		name = aetas_maghrebi.7.b #no thx
+	}
+}

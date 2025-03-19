@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = appanage_reform
+primary_culture = scottish
+add_accepted_culture = highland_scottish
+religion = catholic
+technology_group = western
+government_rank = 1
+capital = 5149 #angus
+
+1402.1.1 = {
+	monarch = {
+		name = "William"
+		dynasty = "Douglas"
+		birth_date = 1398.1.1
+		death_date = 1437.1.1
+		adm = 3
+		dip = 2
+		mil = 5
+	}
+}
+

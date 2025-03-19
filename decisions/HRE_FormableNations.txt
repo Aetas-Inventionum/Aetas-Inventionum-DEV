@@ -1,0 +1,1683 @@
+country_decisions = {
+	bavaria_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			was_never_german_regional_tag_trigger = yes
+			NOT = { has_country_flag = formed_bavaria_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = BAV }
+			primary_culture = bavarian
+		}
+		provinces_to_highlight = {
+			OR = {
+				#other claimants are gone
+				AND = {
+					ROOT = { NOT = { tag = LBV } }
+					LBV = {
+						OR = {
+							num_of_cities = 5
+							NOT = { is_subject_of = ROOT }
+						}
+					}
+					owned_by = LBV
+				}
+				AND = {
+					ROOT = { NOT = { tag = ING } }
+					ING = {
+						OR = {
+							num_of_cities = 5
+							NOT = { is_subject_of = ROOT }
+						}
+					}
+					owned_by = ING
+				}
+				AND = {
+					ROOT = { NOT = { tag = UBV } }
+					UBV = {
+						OR = {
+							num_of_cities = 5
+							NOT = { is_subject_of = ROOT }
+						}
+					}
+					owned_by = UBV
+				}
+				#make sure you are not benefitting from others' conquests
+				AND = {
+					province_id = 65
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				AND = {
+					province_id = 64
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				AND = {
+					province_id = 2955
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+
+			if = {
+				limit = { NOT = { tag = UBV } }
+				OR = {
+					NOT = { exists = UBV }
+					UBV = {
+						NOT = { num_of_cities = 5 }
+						is_subject_of = ROOT
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { tag = LBV } }
+				OR = {
+					NOT = { exists = LBV }
+					LBV = {
+						NOT = { num_of_cities = 5 }
+						is_subject_of = ROOT
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { tag = ING } }
+				OR = {
+					NOT = { exists = ING }
+					ING = {
+						NOT = { num_of_cities = 5 }
+						is_subject_of = ROOT
+					}
+				}
+			}
+
+			owns_or_non_sovereign_subject_of = 65			#Munich
+			owns_or_non_sovereign_subject_of = 64			#Landshut
+			owns_or_non_sovereign_subject_of = 2955			#Ingolstadt
+		}
+		effect = {
+			change_tag = BAV
+			on_change_tag_effect = yes
+			restore_country_name_effect = yes
+			if = {
+				limit = {
+					UBV = { is_subject_of = ROOT }
+				}
+				inherit = UBV
+			}
+			if = {
+				limit = {
+					LBV = { is_subject_of = ROOT }
+				}
+				inherit = LBV
+			}
+			if = {
+				limit = {
+					ING = { is_subject_of = ROOT }
+				}
+				inherit = ING
+			}
+			lower_bavaria_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			upper_bavaria_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			east_bavaria_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			set_capital = 65
+			65 = { add_base_tax = 2 }
+			set_country_flag = formed_bavaria_flag
+			if = {
+				limit = { 
+					has_custom_ideas = no
+					NOT = { 
+						OR = {
+							has_idea_group = BAV_ideas 
+							has_idea_group = UBV_ideas
+							has_idea_group = ING_ideas
+							has_idea_group = STB_ideas
+							has_idea_group = LBV_ideas
+						}
+					}
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			if = {
+				limit = {
+					NOT = { tag = UBV }
+					NOT = { tag = LBV }
+					NOT = { tag = ING }
+					NOT = { was_tag = UBV }
+					NOT = { was_tag = LBV }
+					NOT = { was_tag = ING }
+				}
+				swap_non_generic_missions = yes
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		ai_importance = 400
+	}
+
+	pomerania_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			was_never_german_regional_tag_trigger = yes
+			NOT = { has_country_flag = formed_pomerania_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = POM }
+			primary_culture = pommeranian
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						area = vorpommern_area
+						area = hinter_pommern_area
+					}
+					OR = {
+						NOT = { owned_by = root }
+						NOT = { is_core = root }
+					}
+				}
+				AND = {
+					ROOT = { NOT = { tag = WOL } }
+					WOL = {
+						OR = {
+							num_of_cities = 5
+							NOT = { is_subject_of = ROOT }
+						}
+					}
+					owned_by = WOL
+				}
+				AND = {
+					ROOT = { NOT = { tag = STE } }
+					STE = {
+						OR = {
+							num_of_cities = 5
+							NOT = { is_subject_of = ROOT }
+						}
+					}
+					owned_by = STE
+				}
+				AND = {
+					ROOT = { NOT = { tag = RUG } }
+					RUG = {
+						OR = {
+							num_of_cities = 5
+							NOT = { is_subject_of = ROOT }
+						}
+					}
+					owned_by = RUG
+				}
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+
+			if = {
+				limit = { NOT = { tag = WOL } }
+				OR = {
+					NOT = { exists = WOL }
+					WOL = {
+						NOT = { num_of_cities = 5 }
+						is_subject_of = ROOT
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { tag = STE } }
+				OR = {
+					NOT = { exists = STE }
+					STE = {
+						NOT = { num_of_cities = 5 }
+						is_subject_of = ROOT
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { tag = RUG } }
+				OR = {
+					NOT = { exists = RUG }
+					RUG = {
+						NOT = { num_of_cities = 5 }
+						is_subject_of = ROOT
+					}
+				}
+			}
+			
+			vorpommern_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = root
+			}
+			hinter_pommern_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = root
+			}
+		}
+		effect = {
+			change_tag = POM
+			on_change_tag_effect = yes
+			restore_country_name_effect = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			
+			if = {
+				limit = {
+					NOT = { tag = WOL }
+					NOT = { tag = STE }
+					NOT = { tag = RUG }
+					NOT = { was_tag = WOL }
+					NOT = { was_tag = STE }
+					NOT = { was_tag = RUG }
+				}
+				swap_non_generic_missions = yes
+			}
+
+			if = {
+				limit = {
+					WOL = { is_subject_of = ROOT }
+				}
+				inherit = WOL
+			}
+			if = {
+				limit = {
+					STE = { is_subject_of = ROOT }
+				}
+				inherit = STE
+			}
+			if = {
+				limit = {
+					RUG = {
+						is_subject_of = ROOT
+						NOT = { has_government_attribute = is_pirate_republic_reform }
+					}
+				}
+				inherit = RUG
+			}
+
+			if = { #need to have some reason for doing it
+				limit = {
+					any_owned_province = {
+						OR = {
+							area = vorpommern_area
+							area = hinter_pommern_area
+						}
+						OR = {
+							nationalism = 1
+							local_autonomy = 26
+						}
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = vorpommern_area
+							area = hinter_pommern_area
+						}
+						OR = {
+							nationalism = 1
+							local_autonomy = 26
+						}
+					}
+					add_nationalism = -10
+					add_local_autonomy = -15
+				}
+			}
+			else = {
+				capital_scope = { add_base_tax = 2 }
+			}
+			set_country_flag = formed_pomerania_flag
+			
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = POM_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+	franconia_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			was_never_german_regional_tag_trigger = yes
+			NOT = { has_country_flag = formed_franconia_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = FKN }
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+			primary_culture = franconian
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 79
+				AND = {
+					NOT = { ROOT = { owns_core_province = 71 } }
+					province_id = 67
+				}
+				AND = {
+					NOT = { ROOT = { owns_core_province = 67 } }
+					province_id = 71
+				}
+				AND = {
+					ROOT = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								value = 6
+								culture = franconian
+								continent = europe
+								is_core = root
+							}
+						}
+						owns_core_province = 79
+						OR = {
+							owns_core_province = 71
+							owns_core_province = 67
+						}
+					}
+					culture = franconian
+				}
+				AND = {
+					owned_by = WBG
+					ROOT = {
+						NOT = { tag = WBG }
+						owns_core_province = 79
+						OR = {
+							owns_core_province = 71
+							owns_core_province = 67
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			#adm_tech = 10
+			OR = { #Wurzburg was the theoretical holder of the title
+				tag = WBG
+				NOT = { exists = WBG }
+			}
+			owns_core_province = 79			#Wurzburg
+			OR = {
+				owns_core_province = 71			#Ansbach
+				owns_core_province = 67			#Nurnberg
+			}
+			num_of_owned_provinces_with = {
+				value = 6
+				culture = franconian
+				continent = europe
+				is_core = root
+			}
+			OR = { #just to make it not so easy (owning 6 provinces is really not so hard; Franconia is 70 development at start, so this is that +5)
+				total_development = 75
+				is_elector = yes
+			}
+		}
+		effect = {
+			change_tag = FKN
+			on_change_tag_effect = yes
+			restore_country_name_effect = yes
+			franconia_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			upper_franconia_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			set_country_flag = formed_franconia_flag
+
+			if = {
+				limit = {
+					total_development = 100
+					OR = {
+						is_elector = yes
+						is_part_of_hre = no
+					}
+				}
+				set_government_rank = 2
+			}
+
+			swap_non_generic_missions = yes
+			
+			if = {
+				limit = {
+					is_playing_custom_nation = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+	swabia_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			was_never_german_regional_tag_trigger = yes
+			NOT = { has_country_flag = formed_swabia_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = SWA }
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+			primary_culture = swabian
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 70 #stuttgart
+				province_id = 5335 #tübbingen
+				province_id = 4713 #urach
+				AND = {
+					ROOT = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								value = 10
+								culture = swabian
+								continent = europe
+								is_core = root
+							}
+						}
+						owns_core_province = 70
+						owns_core_province = 1872
+					}
+					culture = swabian
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			#adm_tech = 10
+			owns_core_province = 70 #Wurttemberg
+			owns_core_province = 1872 #Ulm
+			num_of_owned_provinces_with = {
+				value = 10
+				culture = swabian
+				continent = europe
+				is_core = root
+			}
+			NOT = { 
+				any_province = { 
+					OR = { 
+						culture = swabian 
+						culture = alsatian 
+					}
+					owner = { dynasty = "von Habsburg" }
+				}
+			}
+		}
+		effect = {
+			change_tag = SWA
+			on_change_tag_effect = yes
+			restore_country_name_effect = yes
+			lower_swabia_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			upper_swabia_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			upper_rhineland_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			#These were also historical territories of the Duchy
+			switzerland_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			romandie_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			4710 = {
+				if = {
+					limit = {
+						NOT = { owned_by = root }
+						NOT = { is_permanent_claim = root }
+					}
+					add_permanent_claim = root
+				}
+			}
+
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			set_country_flag = formed_swabia_flag
+
+			swap_non_generic_missions = yes
+
+			if = {
+				limit = {
+					is_playing_custom_nation = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+	saxony_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			was_never_german_regional_tag_trigger = yes
+			NOT = { has_country_flag = formed_franconia_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			OR = {
+				ai = no
+				NOT = { exists = SAX }
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+			OR = {
+				primary_culture = saxon
+				tag = LAU
+			}
+			NOT = { tag = BRA }
+			NOT = { tag = SAX }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 59
+				AND = {
+					NOT = { ROOT = { owns_core_province = 61 } }
+					province_id = 62
+				}
+				AND = {
+					NOT = { ROOT = { owns_core_province = 62 } }
+					province_id = 61
+				}
+				AND = {
+					ROOT = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								value = 6
+								OR = {
+									area = south_saxony_area
+									area = thuringia_area
+									area = northern_saxony_area
+								}
+								is_core = root
+							}
+						}
+						owns_core_province = 59
+						OR = {
+							owns_core_province = 61
+							owns_core_province = 62
+						}
+					}
+					OR = {
+						area = south_saxony_area
+						area = thuringia_area
+						area = northern_saxony_area
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			NOT = { exists = SAX }
+			owns_core_province = 59			#Wittenberg
+			OR = {
+				owns_core_province = 61			#Dresden
+				owns_core_province = 62			#Leipzig
+			}
+			num_of_owned_provinces_with = {
+				value = 6
+				OR = {
+					area = south_saxony_area
+					area = thuringia_area
+					area = northern_saxony_area
+				}
+				is_core = root
+			}
+		}
+		effect = {
+			change_tag = SAX
+			on_change_tag_effect = yes
+			restore_country_name_effect = yes
+			south_saxony_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			thuringia_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			northern_saxony_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			set_country_flag = formed_saxony_flag
+
+			if = {
+				limit = {
+					is_playing_custom_nation = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			if = {
+				limit = {
+					NOT = { tag = THU }
+					NOT = { was_tag = THU }
+				}
+				swap_non_generic_missions = yes
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	hannoverian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			was_never_german_regional_tag_trigger = yes
+			NOT = { has_country_flag = formed_hannover_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { tag = HLR }
+			NOT = { tag = PAP }
+			NOT = { tag = GER }
+			NOT = { tag = PRU }
+			NOT = { tag = HSA }
+			NOT = { tag = SAX } #Saxe-Lauenburg should form either Saxony or Hannover, not both
+			NOT = { exists = HAN }
+			OR = { 
+				tag = LUN 
+				tag = CLB 
+				tag = BRU 
+				tag = BRL 
+				tag = GTT
+			}
+			is_colonial_nation = no		
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = { 
+				province_id = 57 #brunswick
+				province_id = 4772 #celle
+				province_id = 1758 #hannover
+				province_id = 4773 #gottingen
+				province_id = 53 #luneberg
+				province_id = 5379 #uelzen
+			}
+			NOT = { 
+				AND = { 
+					owned_by = ROOT
+					is_core = ROOT
+				}
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			OR = { 
+				is_elector = yes 
+				AND = { 
+					is_elector = no 
+					has_reform = han_primogeniture_reform
+					NOT = { num_of_electors = 8 }
+				}
+			}
+			owns_core_province = 1758 #Hannover
+			num_of_owned_provinces_with = { 
+				OR = { 
+					province_id = 4772 #owns_core_province = 4772 #Celle -- owns_core_province wasn't working, couldnt correct scope
+					province_id = 5379 #owns_core_province = 5379 #Uelzen
+					province_id = 57 #Brunswick
+					province_id = 53 #Lüneburg
+					province_id = 4773 #Göttingen
+				}
+				is_core = ROOT
+				value = 4
+			}
+		}
+		effect = {
+			1758 = {
+				change_province_name = "Hannover"
+				move_capital_effect = yes
+			}
+			change_tag = HAN
+			on_change_tag_effect = yes
+			restore_country_name_effect = yes
+			1758 = {
+				add_base_tax = 2
+				if = { 
+					limit = { 
+						NOT = { 
+							has_great_project = { 
+								type = any
+								tier = 0
+							}
+						}
+					}
+					add_great_project = {
+						type = ai_leine_palace
+						instant = yes
+					}
+				}
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			braunschweig_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			lower_saxony_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			weser_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			set_country_flag = formed_hannover_flag
+			add_prestige = 25
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+					is_part_of_hre = no
+				}
+				set_government_rank = 2
+			}
+			add_government_reform = hanoverian_reform
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = ai_HAN_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			swap_non_generic_missions = yes
+			if = { 
+				limit = { NOT = { mission_completed = brl_brl } }
+				complete_mission = brl_brl
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	welf_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			was_never_german_regional_tag_trigger = yes
+			NOT = { has_country_flag = formed_brunswick_luneburg_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { tag = HLR }
+			NOT = { tag = PAP }
+			NOT = { tag = GER }
+			NOT = { tag = PRU }
+			NOT = { tag = HSA }
+			NOT = { tag = SAX } #Saxe-Lauenburg should form either Saxony or Hannover, not both
+			NOT = { tag = HAN } #electoral equivalent
+			NOT = { exists = BRL }
+			primary_culture = eastphalian
+			is_colonial_nation = no		
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = { 
+				AND = { 
+					OR = { 
+						province_id = 57 #brunswick
+						province_id = 4772 #celle
+						province_id = 1758 #hannover
+						province_id = 4773 #gottingen
+					}
+					NOT = { 
+						AND = { 
+							owned_by = ROOT
+							is_core = ROOT 
+						}
+					}
+				}
+				AND = { 
+					OR = {
+						province_id = 2971 #hoya
+						province_id = 56 #osnabruck
+						province_id = 53 #luneberg
+						province_id = 5379 #uelzen
+						province_id = 5378 #wendland
+					}
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				OR = { 
+					province_id = 57 #brunswick
+					province_id = 4772 #celle
+					province_id = 1758 #hannover
+					province_id = 4773 #gottingen
+				}
+				value = 3
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				OR = { 
+					province_id = 2971 #hoya
+					province_id = 56 #osnabruck
+					province_id = 53 #luneberg
+					province_id = 5379 #uelzen
+					province_id = 5378 #wendland
+				}
+				value = 4
+			}
+		}
+		effect = {
+			change_tag = BRL
+			on_change_tag_effect = yes
+			restore_country_name_effect = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			set_country_flag = formed_brunswick_luneburg_flag
+			add_prestige = 15
+			add_government_reform = welf_duchy_reform
+			swap_non_generic_missions = yes
+			braunschweig_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			lower_saxony_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	westfalian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			was_never_german_regional_tag_trigger = yes
+			NOT = { has_country_flag = formed_westphalia_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { tag = HLR }
+			NOT = { tag = HAN }
+			NOT = { tag = PAP }
+			NOT = { tag = GER }
+			NOT = { tag = PRU }
+			NOT = { tag = SWI }
+			NOT = { exists = WES }
+			NOT = { has_reform = celestial_empire }
+			OR = {
+				primary_culture = hannoverian #Westphalian
+				primary_culture = hessian
+			}
+			is_colonial_nation = no
+			OR = {
+				ai = no
+				AND = {
+					owns_core_province = 82	# Westfalen
+					owns_core_province = 1762	# Kassel
+					OR = {
+						owns_core_province = 85	# Cologne
+						owns_core_province = 80	# Trier
+						owns_core_province = 78	# Mainz
+						owns_core_province = 86	# Munster
+					}
+				}
+			}			
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 82	# Westfalen
+				province_id = 1762	# Kassel
+				AND = {
+					OR = {
+						province_id = 85	# Cologne
+						province_id = 80	# Trier
+						province_id = 78	# Mainz
+						province_id = 86	# Munster
+					}
+					ROOT = {
+						NOT = { owns_core_province = 85 }
+						NOT = { owns_core_province = 80 }
+						NOT = { owns_core_province = 78 }
+						NOT = { owns_core_province = 86 }
+					}
+				}
+				AND = {
+					OR = {
+						culture = hannoverian
+						culture = hessian
+					}
+					region = north_german_region
+					ROOT = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								value = 12 #out of 22
+								OR = {
+									culture = hannoverian
+									culture = hessian
+								}
+								region = north_german_region
+								is_core = root
+							}
+						}
+						owns_core_province = 82
+						owns_core_province = 1762
+						OR = {
+							owns_core_province = 85
+							owns_core_province = 80
+							owns_core_province = 78
+							owns_core_province = 86
+						}
+					}
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			AND = {
+				owns_core_province = 82	# Westfalen
+				owns_core_province = 1762	# Kassel
+				OR = {
+					owns_core_province = 85	# Cologne
+					owns_core_province = 80	# Trier
+					owns_core_province = 78	# Mainz
+					owns_core_province = 86	# Munster
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 12 #out of 22
+				OR = {
+					culture = hannoverian
+					culture = hessian
+				}
+				region = north_german_region
+				is_core = root
+			}
+		}
+		effect = {
+			change_tag = WES
+			on_change_tag_effect = yes
+			restore_country_name_effect = yes
+			set_country_flag = formed_westphalia_flag
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+					OR = {
+						is_elector = yes
+						is_part_of_hre = no
+					}
+				}
+				set_government_rank = 2
+			}
+			if = {
+				limit = {
+					NOT = { primary_culture = hessian }
+					NOT = { accepted_culture = hessian }
+				}
+				add_accepted_culture = hessian
+			}
+			if = {
+				limit = {
+					NOT = { primary_culture = hannoverian }
+					NOT = { accepted_culture = hannoverian }
+				}
+				add_accepted_culture = hannoverian
+			}
+			add_country_modifier = {
+				name = "decentralization_modifier"
+				duration = 7300
+			}
+			westphalia_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = WES
+			}
+			north_westphalia_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = WES
+			}
+			hesse_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = WES
+			}
+			palatinate_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = WES
+			}
+			north_rhine_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = WES
+			}
+			lower_rhineland_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = WES
+			}
+			every_province = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					OR = {
+						culture = hessian
+						culture = hannoverian
+					}
+					NOT = { area = westphalia_area }
+					NOT = { area = north_westphalia_area }
+					NOT = { area = hesse_area }
+					NOT = { area = palatinate_area }
+					NOT = { area = north_rhine_area }
+					NOT = { area = lower_rhineland_area }
+					continent = europe
+				}
+				add_permanent_claim = WES
+			}
+			swap_non_generic_missions = yes
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	low_saxon_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			was_never_german_regional_tag_trigger = yes
+			NOT = { has_country_flag = formed_lower_saxony_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { tag = HLR }
+			NOT = { tag = PAP }
+			NOT = { tag = GER }
+			NOT = { tag = PRU }
+			NOT = { tag = HSA }
+			NOT = { tag = SAX } #Saxe-Lauenburg should form either Saxony or Hannover, not both
+			NOT = { exists = LWS }
+			primary_culture = lower_saxon
+			is_colonial_nation = no			
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 44 #Hamburg
+				province_id = 5383 #vordt
+				province_id = 55 #oldenburg
+				province_id = 1775 #kiel
+				province_id = 53
+				AND = {
+					culture = lower_saxon
+					region = north_german_region
+					ROOT = {
+						NOT = {
+							num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+								value = 15 #out of 20
+								culture = lower_saxon
+								region = north_german_region
+							}
+						}
+						owns_core_province = 44
+						owns_core_province = 5383
+						owns_core_province = 55
+						owns_core_province = 1775
+						owns_core_province = 53
+						owns_core_province = 1857
+					}
+				}
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		allow = {
+			OR = { 
+				is_elector = yes 
+				AND = { 
+					is_part_of_hre = no 
+					adm_tech = 10
+				}
+			}
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			num_of_owned_provinces_with = { 
+				OR = { 
+					province_id = 44 #Hamburg
+					province_id = 5383 #vordt
+					province_id = 55 #oldenburg
+					province_id = 1775 #kiel
+					province_id = 53 #luneberg
+					province_id = 1857 #lauenburg
+				}
+				is_core = ROOT 
+				value = 3
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 15 #out of 20
+				culture = lower_saxon
+				region = north_german_region
+			}
+			total_development = 100
+		}
+		effect = {
+			change_tag = LWS
+			on_change_tag_effect = yes
+			restore_country_name_effect = yes
+			capital_scope = {
+				add_base_tax = 1
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			weser_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			holstein_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			lower_saxony_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			braunschweig_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			northern_saxony_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			set_country_flag = formed_lower_saxony_flag
+			add_prestige = 25
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+					is_part_of_hre = no
+				}
+				set_government_rank = 2
+			}
+			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					is_playing_custom_nation = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	nassau_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			was_never_german_regional_tag_trigger = yes
+			NOT = { has_country_flag = formed_nassau_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { tag = HLR }
+			NOT = { tag = PAP }
+			NOT = { tag = GER }
+			NOT = { tag = PRU }
+			NOT = { tag = HSA }
+			NOT = { tag = NSA } 
+			NOT = { exists = NSA }
+			OR = { 
+				tag = WEL
+				tag = WIE
+			}
+			is_colonial_nation = no		
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = { 
+				province_id = 5350 #nassau proper
+				province_id = 5351 #siegen
+				province_id = 83 #wiesbaden
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			owns_core_province = 5350
+			owns_core_province = 5351
+			owns_core_province = 83
+		}
+		effect = {
+			5350 = {
+				move_capital_effect = yes
+			}
+			change_tag = NSA
+			on_change_tag_effect = yes
+			restore_country_name_effect = yes
+			5350 = {
+				add_base_tax = 1
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			lower_rhineland_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			set_country_flag = formed_nassau_flag
+			add_prestige = 15
+			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					is_playing_custom_nation = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	hesse_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			was_never_german_regional_tag_trigger = yes
+			NOT = { has_country_flag = formed_hesse_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { tag = HLR }
+			NOT = { tag = PAP }
+			NOT = { tag = GER }
+			NOT = { tag = PRU }
+			NOT = { tag = HSA }
+			NOT = { tag = HES } 
+			NOT = { exists = HES }
+			primary_culture = palatinehessian
+			NOT = { 
+				OR = { 
+					tag = WIE
+					tag = DLL
+					tag = NSA 
+				}
+			}
+			is_colonial_nation = no		
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = { 
+				AND = { 
+					OR = { 
+						province_id = 1762 #kassel
+						province_id = 81 #marburg
+						province_id = 5331 #darmstadt
+					}
+					NOT = { 
+						AND = { 
+							owned_by = ROOT
+							is_core = ROOT 
+						}
+					}
+				}
+				AND = { 
+					OR = { 
+						province_id = 5363 #ziegenhain
+						province_id = 5366 #nidda
+						province_id = 5364 #waldeck
+					}
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			num_of_owned_provinces_with = { 
+				OR = { 
+					province_id = 1762 #kassel
+					province_id = 81 #marburg
+					province_id = 5331 #darmstadt
+				}
+				value = 2
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { 
+				OR = { 
+					province_id = 5363 #ziegenhain
+					province_id = 5366 #nidda
+					province_id = 5364 #waldeck
+				}
+				value = 2
+			}
+		}
+		effect = {
+			1762 = {
+				move_capital_effect = yes
+			}
+			change_tag = HES
+			on_change_tag_effect = yes
+			restore_country_name_effect = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			hesse_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			set_country_flag = formed_hesse_flag
+			add_prestige = 15
+			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = ai_HES_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			if = { 
+				limit = { NOT = { has_reform = landgraviate_reform } }
+				add_government_reform = landgraviate_reform
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,44 @@
+#3258 - Blaye
+#Area - Guyenne
+#Region - France
+
+#Core Details
+capital = "Blaye"
+is_city = yes
+owner = ENG
+controller = ENG
+
+#Demographics
+culture = gascon
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 3
+base_manpower = 2
+trade_goods = wine
+
+#Cores and Occupation (Alphabetical after current)
+add_core = ENG
+add_core = FRA
+add_core = GYN
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+add_permanent_province_modifier = {
+	name = gironde_estuary_modifier
+	duration = -1
+}
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

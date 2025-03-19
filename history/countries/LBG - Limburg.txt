@@ -1,0 +1,8 @@
+government = monarchy
+add_government_reform = low_countries_monarchy_reform
+government_rank = 1
+technology_group = western
+religion = catholic
+primary_culture = meuse_rhenish
+
+capital = 3346

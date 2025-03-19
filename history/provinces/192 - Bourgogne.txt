@@ -1,0 +1,39 @@
+#192 - Bourgogne
+#Area - Burgundy
+#Region - France
+
+#Core Details
+capital = "Dijon"
+is_city = yes
+owner = BUR
+controller = BUR
+
+#Demographics
+culture = burgundian
+religion = catholic
+
+#Development and Trade
+base_tax = 6
+base_production = 6
+base_manpower = 6
+trade_goods = cloth
+
+#Cores and Occupation (Alphabetical after current)
+add_core = BUR
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+center_of_trade = 2
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

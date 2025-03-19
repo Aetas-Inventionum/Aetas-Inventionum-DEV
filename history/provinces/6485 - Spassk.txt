@@ -1,0 +1,36 @@
+#6485 - Spassk
+#Area - Ryazan
+#Region - Russia 
+
+#Core Details
+capital = "Spassk" 
+is_city = yes
+owner = RYA
+controller = RYA
+
+#Demographics
+culture = meshchera
+religion = tengri_pagan_reformed
+
+#Development and Trade
+base_tax = 1
+base_production = 2
+base_manpower = 1
+trade_goods = apiculture
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = RYA
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = nomad_group
+
+#Histories

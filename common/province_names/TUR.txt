@@ -1,0 +1,3 @@
+#please put all turkish dpn in oghuz. thank you - pleibos
+#282 = "Özü"
+#360 = "Circe"

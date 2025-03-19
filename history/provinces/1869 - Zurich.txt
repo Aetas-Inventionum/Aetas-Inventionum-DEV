@@ -1,0 +1,41 @@
+#1869 - Zurich
+#Area - Switzerland
+#Region - South Germany
+
+#Core Details
+capital = "Zürich"
+is_city = yes
+owner = SWI
+controller = SWI
+
+#Demographics
+culture = swiss
+religion = catholic
+
+#Development and Trade
+base_tax = 6
+base_production = 6
+base_manpower = 5
+trade_goods = cloth
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = SWI
+add_core = ZUR
+
+#Other Political
+hre = yes
+seat_in_parliament = yes
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+center_of_trade = 3
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

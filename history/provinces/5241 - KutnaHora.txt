@@ -1,0 +1,41 @@
+#5241 - KutnaHora
+#Area - Central Bohemia
+#Region - South Germany
+
+#Core Details
+capital = "Kutna Hora"
+is_city = yes
+owner = BOH
+controller = BOH
+
+#Demographics
+culture = czech
+religion = hussite #catholic minority heavily persecuted hussites especially at Kutna Hora
+
+#Development and Trade
+base_tax = 4
+base_production = 4
+base_manpower = 4
+trade_goods = silver #silver mines of kutna hora were the most important of all the kingdom
+add_permanent_province_modifier = {
+	name = ai_kutna_hora_modifier
+	duration = -1
+}
+
+#Cores and Occupation (Alphabetical after current)
+add_core = BOH
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

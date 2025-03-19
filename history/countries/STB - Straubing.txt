@@ -1,0 +1,74 @@
+government = monarchy
+add_government_reform = wittelsbach_prince_reform
+government_rank = 1
+technology_group = western
+primary_culture = bavarian
+religion = catholic
+capital = 2956
+fixed_capital = 2956
+
+#1349.9.12 = { # Landsberger Vertrag
+	# Wilhelm I rules Holland, Hainaut, etc. 
+	# Albrecht I rule Lower Bavaria
+	# Stephan II rule Lower Bavaria
+#}
+
+1353.6.3 = { # Regensburger Vertrag - Lower Bavaria Splits
+	# Wilhelm I rules Holland, Hainaut, etc. 
+	# Albrecht I rules Straubing
+	# Stephan II rules Landshut
+	
+	monarch = { 
+		name = "Albrecht I"
+		dynasty = "von Wittelsbach"
+        culture = bavarian
+		birth_date = 1336.6.25
+		death_date = 1404.12.16
+		adm = 4
+		dip = 3
+		mil = 1
+        #regency = yes
+	}
+}
+
+# 1358.3.7 = Albrecht I becomes Regent of Holland, Hainaut, etc. after Wilhelm I has a stroke
+
+# 1389.4.1 = Wilhelm I dies and Albrecht I takes his titles
+# -> Straubing is now in PU under Holland
+
+1387.1.1 = {
+	monarch = { # vassal of Holland
+		name = "Albrecht II"
+		dynasty = "von Wittelsbach"
+        culture = bavarian
+		birth_date = 1368.1.1 # month/day unknown
+		death_date = 1397.1.21
+		adm = 6
+		dip = 5
+		mil = 5
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = patron_of_arts_personality
+}
+
+1397.1.21 = {
+	monarch = { # vassal of Holland
+		name = "Johann III"
+		# Bishop of Liege 1390-1417
+		# Regent and Heir of Straubing 1397 - 1417
+		# Duke of Straubing 1417 - 1425
+		# Heir of Ingolstadt after 1410.12.27
+		dynasty = "von Wittelsbach"
+        culture = bavarian
+		birth_date = 1374.1.1 # month/day unknown
+		death_date = 1425.1.6
+		adm = 4
+		dip = 6
+		mil = 4
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = fierce_negotiator_personality
+}
+
+#1420 = PU under Holland, as Johann won Unification war
+

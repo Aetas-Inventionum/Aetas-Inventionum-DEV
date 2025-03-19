@@ -1,0 +1,33 @@
+government = monarchy
+add_government_reform = albanian_lordship_reform
+government_rank = 1
+primary_culture = albanian
+religion = catholic
+technology_group = eastern
+capital = 4174
+fixed_capital = 4174
+
+
+1415.3.4 = {
+	monarch = {
+		name = "Andrea I"
+		dynasty = "Topia"	
+		adm = 3
+		dip = 5
+		mil = 3
+	}
+}
+
+1415.3.4 = {
+	heir = {
+		name = "Tanush"
+		monarch_name = "Tanush"
+		dynasty = "Topia"
+		birth_date = 1415.1.1
+		death_date = 1467.1.1
+		claim = 75
+		adm = 4
+		dip = 4
+		mil = 4
+	}
+}

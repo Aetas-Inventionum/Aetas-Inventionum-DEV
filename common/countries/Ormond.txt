@@ -1,0 +1,91 @@
+# Country name see file name.
+
+graphical_culture = westerngfx
+
+color = { 100 157 203 }
+
+historical_idea_groups = {
+	maritime_ideas
+	aristocracy_ideas
+	trade_ideas
+	diplomatic_ideas
+	economic_ideas
+	spy_ideas
+	innovativeness_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	gaelic_galloglaigh
+	gaelic_mercenary
+	gaelic_free_shooter
+	irish_charge
+	anglofrench_line
+	british_redcoat
+	british_hussar
+	british_square
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"James #4" = 80
+	"John #0" = 20
+	"Thomas #0" = 40
+	"Piers #0" = 20
+	"Walter #0" = 20
+	"Charles #0" = 20
+	"Henry #0" = 1
+	"Edmund #0" = 0
+	"Richard #0" = 0
+	"Huge #0" = 5 #hugh
+	"Willame #0" = 5 #william
+	"Gilibert #0" = 5
+	"Richard #0" = 5
+	"Jocelyn #0" = 5
+	"Geffrei #0" = 5
+	"Adam #0" = 5
+	"Laurence #0" = 5
+	"Meiler #0" = 5
+	"Dermod #0" = 5
+	
+	"Margeret #0" = -1
+	"Elisabeth #0" = -1
+	"Margery #0" = -1
+	"Maud #0" = -1
+	"Alice #0" = -1
+	"Joan #0" = -1
+	"Anne #0" = -1
+	"Hermoine #0" = -1
+}
+
+ship_names = {
+	Clare Cork
+	"Deas Mhuman" 
+	Kerry 
+	"Lar Mumhan" Limerick
+	Tipperary "Tuad Mhuman"
+	"Urh Mumhan"  
+	Waterford
+}  
+
+leader_names = {
+	"de Berry" Bigod "de Braosc" "de Burgh" Butler
+	Cantwell Comerford
+	"d'Earley" Eustace Everard
+	Keating 
+	FitzAnthony FitzGerald FitzNorman Forrestall "de la Freyne" Flood Fleming
+	Gore Grant Grace "le Gros"
+	Howlin
+	"de Lacy" Laffan Lindsay
+	Marshall
+	Raggett Roche Rochford Rockett
+	"le Poer" Purcell Prendergast
+	Sanford Sweetman "O'Shea" Shortall
+	Troy Tobin
+	Walsh Wall
+}

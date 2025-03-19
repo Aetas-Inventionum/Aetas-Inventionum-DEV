@@ -1,0 +1,20 @@
+capital = 5165 #Fermanagh, Enniskillen
+
+technology_group = western
+
+government = monarchy
+add_government_reform = tanistry_reform
+government_rank = 1
+
+religion = catholic
+primary_culture = irish
+
+1395.1.1 = {
+	monarch = {
+		name = "Tomás"
+		dynasty = "Mag Uidhir"
+		adm = 3
+		dip = 2
+		mil = 3
+	}
+}

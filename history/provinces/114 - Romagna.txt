@@ -1,0 +1,41 @@
+#114 - Romagna
+#Area - Romagna
+#Region - Italy
+
+#Core Details
+capital = "Ravenna"
+is_city = yes
+owner = RAV
+controller = RAV
+
+#Demographics
+culture = romagnan
+religion = catholic
+
+#Development and Trade
+base_tax = 5
+base_production = 5
+base_manpower = 5
+trade_goods = salt
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = RAV
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+cathedral = yes
+
+#Special Modifiers
+center_of_trade = 2
+add_province_triggered_modifier = basilica_san_vitale
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

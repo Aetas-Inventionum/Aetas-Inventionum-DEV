@@ -1,0 +1,41 @@
+#1763 - Niederlausitz
+#Area - Lusatia
+#Region - North Germany
+
+#Core Details
+capital = "Cottbus"
+is_city = yes
+owner = LWW
+controller = LWW 
+
+#Demographics
+culture = sorbian
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 3
+base_manpower = 2
+trade_goods = wool
+latent_trade_goods = { coal }
+
+#Cores and Occupation (Alphabetical after current)
+add_core = LWW
+add_core = SOR
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+center_of_trade = 1
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

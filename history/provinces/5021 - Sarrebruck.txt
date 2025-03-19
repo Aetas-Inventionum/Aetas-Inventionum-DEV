@@ -1,0 +1,38 @@
+#5021 - Sarrebruck
+#Area - Lower Palatinate
+#Region - North Germany
+
+#Core Details
+capital = "Sarrebruck"
+is_city = yes
+owner = SAA
+controller = SAA 
+
+#Demographics
+culture = palatinish
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 2
+base_manpower = 2
+trade_goods = iron
+latent_trade_goods = { coal }
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = SAA
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

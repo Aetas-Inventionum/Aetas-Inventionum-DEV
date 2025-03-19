@@ -1,0 +1,88 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+color = { 157 37 15 } #173 176 113
+revolutionary_colors = { 8 5 8 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	religious_ideas
+	economic_ideas
+	diplomatic_ideas
+	innovativeness_ideas
+	spy_ideas
+	offensive_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	dutch_maurician
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	prussian_frederickian
+	prussian_uhlan
+	prussian_drill
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Diederik #4" = 5
+	"Adolf #1" = 50
+	"Johan #0" = 25
+	"Willem #0" = 15
+	"Johan Willem #0" = 10
+	"Otto #1" = 1
+	"Engelbert #0" = 20
+	"Gerard #0" = 10
+	"Karel #0" = 5
+	"Lodewijk #0" = 5
+	"Maurits #0" = 5
+	"Johan Maurits #0" = 5
+	"Mathias #0" = 5
+	"Jacob #0" = 0
+	"Eberhard #0" = 0
+	"Filips #0" = 5
+	
+	"Anna #0" = -10
+	"Margaretha #0" = -1
+	"Marie #0" = -1
+	"Katharina #0" = -1
+	"Elisabeth #0" = -1
+	"Agnes #0" = -1
+	"Helen #0" = -1
+	"Marie #0" = -1
+	"Sibylla #0" = -1
+}
+
+leader_names = { 
+	Birnbaum
+	"van den Corput"
+	"van Egmond"
+	"van Gelre"
+	"von Jülich"
+	"van Kleef"
+	"van der Mark" "van Meurs"
+	Olisleger
+	"van Rheinberg"
+	"van Wassenberg" "van Wezel"
+}
+
+ship_names = {
+	"Arnold I von Kleve" "Arnold II von Kleve"
+	"Adolf von Kleve" "Johann I von Kleve"
+	"Johann II von Kleve" Margarete Agnes Elisabeth
+	Mathilde "Dietrich von Kleve" "Gerhard von Kleve"
+}
+
+army_names = {
+	"Armee von $PROVINCE$" 
+}

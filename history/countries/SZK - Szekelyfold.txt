@@ -1,0 +1,20 @@
+government = republic
+add_government_reform = noble_elite_reform
+government_rank = 1
+technology_group = eastern
+primary_culture = szekely
+add_accepted_culture = transylvanian
+add_accepted_culture = transylvanian_saxon
+religion = catholic
+capital = 158
+
+1405.1.1 = {
+	monarch = {
+		name = "Mihály"
+		dynasty = "Nádasi"
+		culture = hungarian
+		adm = 1
+		dip = 2
+		mil = 2
+	}
+}

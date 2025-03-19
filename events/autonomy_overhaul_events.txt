@@ -1,0 +1,946 @@
+namespace = autonomy_overhaul
+
+country_event = {                         #Event to give nations negative for being over gov cap
+	id = autonomy_overhaul.1
+	desc = autonomy_overhaul.1.desc
+	title = autonomy_overhaul.1.title
+	picture = CONQUEST_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+		NOT = {
+			has_country_modifier = bt_over_gov_cap_modifier
+		}
+		governing_capacity_percentage = 1
+	}
+
+	mean_time_to_happen = {
+		days = 1 #needed??
+    }
+	
+	option = {
+		name = autonomy_overhaul.1.opt
+		ai_chance = {
+			factor = 1
+		}
+		add_country_modifier = {
+			name = bt_over_gov_cap_modifier
+			hidden = yes
+			duration = -1
+		}
+	}
+}
+
+country_event = {                         #Event to give nations negative for being over gov cap
+	id = autonomy_overhaul.2
+	desc = autonomy_overhaul.2.desc
+	title = autonomy_overhaul.2.title
+	picture = CONQUEST_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+		has_country_modifier = bt_over_gov_cap_modifier
+		NOT = {
+			governing_capacity_percentage = 1
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1 #needed??
+    }
+	
+	option = {
+		name = autonomy_overhaul.2.opt
+		ai_chance = {
+			factor = 1
+		}
+		remove_country_modifier = bt_over_gov_cap_modifier
+	}
+}
+
+country_event = {                         #Event to give nations negative autonomy for being over gov cap
+	id = autonomy_overhaul.3
+	desc = autonomy_overhaul.3.desc
+	title = autonomy_overhaul.3.title
+	picture = CONQUEST_eventPicture
+	
+	hidden = yes
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	option = {
+		name = autonomy_overhaul.3.opt
+		ai_chance = {
+			factor = 1
+		}
+		set_country_flag = gov_cap_usuage_set
+		# This massive if_else chain increases the autonomy of provinces in a nation over 85% of overextension until their gov cap use is below 85%
+		if = {
+			limit = {
+				governing_capacity_percentage = 0.90
+				NOT = {
+					governing_capacity_percentage = 0.925
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 2.7
+			}
+			add_country_modifier = { 
+				name = bt_first_month_0p925_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 0.950
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 5.3
+			}
+			add_country_modifier = { 
+				name = bt_first_month_0p950_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 0.975
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 7.7
+			}
+			add_country_modifier = { 
+				name = bt_first_month_0p975_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 1.000
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 10
+			}
+			add_country_modifier = { 
+				name = bt_first_month_1p000_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 1.025
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 12.2
+			}
+			add_country_modifier = { 
+				name = bt_first_month_1p025_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 1.050
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 14.3
+			}
+			add_country_modifier = { 
+				name = bt_first_month_1p050_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 1.075
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 16.3
+			}
+			add_country_modifier = { 
+				name = bt_first_month_1p075_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 1.100
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 18.2
+			}
+			add_country_modifier = { 
+				name = bt_first_month_1p000_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 1.125
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 20
+			}
+			add_country_modifier = { 
+				name = bt_first_month_1p125_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 1.150
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 21.7
+			}
+			add_country_modifier = { 
+				name = bt_first_month_1p150_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 1.175
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 23.4
+			}
+			add_country_modifier = { 
+				name = bt_first_month_1p175_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 1.200
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 25
+			}
+			add_country_modifier = { 
+				name = bt_first_month_1p200_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 1.250
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 28
+			}
+			add_country_modifier = { 
+				name = bt_first_month_1p250_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 1.300
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 30.8
+			}
+			add_country_modifier = { 
+				name = bt_first_month_1p300_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 1.350########################
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 33.3
+			}
+			add_country_modifier = { 
+				name = bt_first_month_1p350_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 1.400
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 35.7
+			}
+			add_country_modifier = { 
+				name = bt_first_month_1p400_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 1.450
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 37.9
+			}
+			add_country_modifier = { 
+				name = bt_first_month_1p450_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 1.500
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 40
+			}
+			add_country_modifier = { 
+				name = bt_first_month_1p550_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 1.550
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 41.9
+			}
+			add_country_modifier = { 
+				name = bt_first_month_1p550_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 1.600
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 43.8
+			}
+			add_country_modifier = { 
+				name = bt_first_month_1p600_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 1.650
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 45.5
+			}
+			add_country_modifier = { 
+				name = bt_first_month_1p650_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 1.700
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 47.1
+			}
+			add_country_modifier = { 
+				name = bt_first_month_1p700_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 1.800
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 50
+			}
+			add_country_modifier = { 
+				name = bt_first_month_1p800_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 1.900
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 52.6
+			}
+			add_country_modifier = { 
+				name = bt_first_month_1p900_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 2.000
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 55
+			}
+			add_country_modifier = { 
+				name = bt_first_month_2p000_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 2.100
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 57.1
+			}
+			add_country_modifier = { 
+				name = bt_first_month_2p100_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 2.200
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 59.1
+			}
+			add_country_modifier = { 
+				name = bt_first_month_2p200_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 2.300
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 60.9
+			}
+			add_country_modifier = { 
+				name = bt_first_month_2p300_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 2.400
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 62.5
+			}
+			add_country_modifier = { 
+				name = bt_first_month_2p400_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 2.500
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 64
+			}
+			add_country_modifier = { 
+				name = bt_first_month_2p500_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 2.600
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 65.4
+			}
+			add_country_modifier = { 
+				name = bt_first_month_2p600_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 2.700
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 66.7
+			}
+			add_country_modifier = { 
+				name = bt_first_month_2p700_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 2.800
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 67.9
+			}
+			add_country_modifier = { 
+				name = bt_first_month_2p800_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 2.900
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 69
+			}
+			add_country_modifier = { 
+				name = bt_first_month_2p900_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 3.000
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 70
+			}
+			add_country_modifier = { 
+				name = bt_first_month_3p000_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 3.200
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 71.9
+			}
+			add_country_modifier = { 
+				name = bt_first_month_3p200_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 3.400
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 73.5
+			}
+			add_country_modifier = { 
+				name = bt_first_month_3p400_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 3.600
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 75
+			}
+			add_country_modifier = { 
+				name = bt_first_month_3p600_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 3.800
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 76.3
+			}
+			add_country_modifier = { 
+				name = bt_first_month_3p800_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 4.000
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 77.5
+			}
+			add_country_modifier = { 
+				name = bt_first_month_4p000_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 4.500
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 80
+			}
+			add_country_modifier = { 
+				name = bt_first_month_4p500_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 5.000
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 82
+			}
+			add_country_modifier = { 
+				name = bt_first_month_5p000_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 5.500
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 83
+			}
+			add_country_modifier = { 
+				name = bt_first_month_5p500_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 6.000
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 85
+			}
+			add_country_modifier = { 
+				name = bt_first_month_6p000_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 6.500
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 86.2
+			}
+			add_country_modifier = { 
+				name = bt_first_month_6p500_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 7.000
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 87.1
+			}
+			add_country_modifier = { 
+				name = bt_first_month_7p000_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					governing_capacity_percentage = 8.000
+				}
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 88
+			}
+			add_country_modifier = { 
+				name = bt_first_month_8p000_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				governing_capacity_percentage = 8.000
+			}
+			every_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				add_local_autonomy = 90
+			}
+			add_country_modifier = { 
+				name = bt_first_month_more_than_8p000_gov_cap
+				duration = 1
+				hidden = yes
+			}
+		}
+	}
+}

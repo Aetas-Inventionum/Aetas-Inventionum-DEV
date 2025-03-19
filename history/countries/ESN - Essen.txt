@@ -1,0 +1,23 @@
+government = republic
+add_government_reform = free_city
+government_rank = 1
+mercantilism = 10 #was 0.1, im guessing thats 10?
+technology_group = western
+religion = catholic
+primary_culture = hannoverian
+capital = 5356
+fixed_capital = 5356
+
+1399.1.1 = {
+	monarch = {
+		name = "Stadtrat"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}
+
+1563.1.1 = { religion = protestant }
+
+1624.1.1 = { religion = catholic }

@@ -1,0 +1,145 @@
+#Country Name: Please see filename.
+
+graphical_culture = greekgfx #easterngfx
+
+color = { 206 145 55 } #old blackish was 96 87 120
+
+historical_idea_groups = {
+	defensive_ideas
+	offensive_ideas
+	religious_ideas
+	spy_ideas
+	trade_ideas
+	diplomatic_ideas
+	economic_ideas
+	quality_ideas
+}
+
+historical_units = {
+	eastern_medieval_infantry
+	eastern_knights
+	slavic_stradioti
+	eastern_militia
+	ottoman_sekban
+	ottoman_reformed_spahi
+	ottoman_reformed_janissary
+	ottoman_toprakli_hit_and_run
+	ottoman_nizami_cedid
+	ottoman_toprakli_dragoon
+	eastern_skirmisher
+	eastern_uhlan
+	eastern_carabinier
+	ottoman_new_model
+	ottoman_lancer
+}
+
+monarch_names = {
+	##house of krum
+	"Krum #1" = 10
+	"Dukum #1" = 1
+	"Ditzeng #1" = 1
+	"Omurtag #1" = 1
+	"Malamir #1" = 1
+	#regnal numbers first officially appear
+	"Presian #1" = 1
+	"Boris #2" = 20
+	"Vladimir #1" = 1
+	"Simeon #1" = 20
+	"Petar #2" = 30
+	#house of asen
+	"Ivan Asen #5" = 50 #double name
+	"Ivan #3" = 20
+	"Boril #1" = 5
+	"Kaliman Asen #2" = 1
+	"Mico Asen #4" = 30
+	"Konstantin #2" = 10
+	"Kaloyan #1" = 5
+	"Desislava #1" = 5
+	#terter
+	"Georgi #1" = 1
+	"Todor #1" = 10
+	"Todor Sveteslav #1" = 10
+	#shishman
+	"Ivan Stephan #1" = 5
+	#sratsimir
+	"Ivan Aleksandar #1" = 30
+	"Ivan Shishman #1" = 10
+	"Belaur #0" = 5 #1 in vidin
+	"Aleksandar #0" = 5
+	"Fruzhin #0" = 5
+	"Stoyan #0" = 5
+	"Stoyko #0" = 5
+	"Vladislav Shishman #0" = 1
+	"Yoan #0" = 5
+	#misc
+	"Rostislav #0" = 1
+	"Mihail #0" = 1
+	"Smilets #0" = 1
+	"Tihomir #0" = 1
+	"Aldimir #0" = 1
+	"Ivan Dragushin #0" = 1
+	"Dobrotitsa #0" = 1
+	"Ivanko #0" = 1
+	"David #0" = 1
+	"Aleksius Slav #1" = 0
+	"Balik #0" = 1
+	"Grigorij #0" = 5
+	"Evtimy #0" = 0
+	"Hranislav #0" = 1
+	"Momchil #0" = 1
+	"Rusko #0" = 1 
+	"Yanuka #0" = 1
+	"Ykov Svetoslav #0" = 1
+	"Krakra #0" = 1
+	"Aron #0" = 1
+	"Gavril #0" = 5
+	"Hristofor #0" = 5
+	#patriarchs
+	"Joakim #0" = 0
+	"Visarion #0" = 0
+	"Ignatiuj #0" = 0
+	"Macariuj #0" = 0
+	"Dorotej #0" = 0
+	"Vasilij #0" = 0
+	
+	"Ana #0" = -1
+	"Teodora #0" = -1
+	"Kira Maria #0" = -1
+	"Maria #0" = -1
+	"Irena #0" = -1
+	"Sofia #0" = -1
+	"Krasimira #0" = -1
+	"Keratsa Petritsa #0" = -1
+	"Dorotea #0" = -1
+}
+
+leader_names = {
+	Asen
+	Dimitrov Dulo
+	Kavkhanov Knesovich Komitopul Kosan Kozlek Krastevich Krumov
+	Lomek
+	Macedonski
+	Parchevich Peychinovich Pernishki
+	Shishman Smilets Soymirovich Sratsimir 
+	Tih Tihanek Terter Tsamblak
+	Vidinski Vladislavov Voyteh
+	Zhefarovich
+}
+
+ship_names = {
+	Alhtpolo
+	Kiten Kraymorie
+	Lozenets
+	Promorsko
+	Rezovo
+	Sarafovo Sinemorets Sozopol
+	Varara
+}
+
+army_names = { 
+	"Tsarski armiya" "$PROVINCE$ armiya"
+}
+
+fleet_names = { 
+	"$PROVINCE$ flota"
+}

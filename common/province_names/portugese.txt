@@ -1,0 +1,193 @@
+#AI Update
+# = { "x" "x" }
+##iberia
+#Macaronesia - by Math
+366 = { "Grã Canária" "As Palmas" }
+367 = { "Açores Orientais" "Vila Franca" }
+368 = { "Madeira" "Funchal" } 
+4565 = { "Tenerife" "Cruz Sagrada" }    #Invented
+5708 = { "Açores Ocidentais" "Angra" }
+5709 = { "Lançarote" "Rubicão" }    #Invented
+5710 = { "Forteventura" "Betamcúria" }  #Invented
+5711 = { "Gomeira" "São Sebastião de Gomeira" }
+#algarve
+230 = { "Faro" "Santa Maria de Faro" }    
+4988 = { "Castro Verde" "Castro Verde" }
+4989 = { "Lagos" "Lagos" }
+#estremadura
+4787 = { "Ribatejo" "Santarém" }
+4984 = { "Tomar" "Tomar" }
+4985 = { "Setúbal" "Setúbal" }
+#beira
+1851 = { "Coimbra" "Coimbra" }
+#tras-os-montes
+232 = { "Bragança" "Bragança" }
+4973 = { "Terras de Miranda" "Miranda do Douro" }
+4974 = { "Pinhel" "Pinhel" }
+4975 = { "Vila Real" "Vila Real de Panóias" }
+4976 = { "Chaves" "Chaves" }
+4977 = { "Braga" "Braga" }
+4978 = { "Viana" "Viana da Foz do Lima" }
+#to sort out 
+206 = { "Corunha" "Corunha" }
+208 = { "Leão" "Leão" }
+209 = { "Biscaia" "Bilbau" }
+214 = { "Saragoça" "Saragoça" }
+215 = { "Valhadolide" "Valhadolide" }
+217 = { "Madri" "Madri" }
+218 = { "Badalhouce" "Badalhouce" }
+220 = { "Valência" "Valência" }
+221 = { "Múrcia" "Múrcia" }
+222 = { "Almeria" "Almeria" }
+224 = { "Sevilha" "Sevilha" }
+225 = { "Córdova" "Córdova" }
+227 = { "Lisboa" "Lisboa" }
+228 = { "Viseu" "Viseu" }
+229 = { "Beja" "Beja" }
+231 = { "Porto" "Porto" }
+1748 = { "Xaém" "Xaém" }
+1749 = { "Cádis" "Cádis" }
+1851 = { "Coimbra" "Coimbra" }
+2989 = { "Logronho" "Logronho" }
+3374 = { "Basa" "Basa" }    #Invented
+3403 = { "Xerez" "Xerez" }
+4150 = { "Évora" "Évora" }
+4552 = { "Palença" "Palença" }  #or Palência
+4553 = { "Samora" "Samora" }
+4556 = { "Aveiro" "Aveiro" } 
+4558 = { "Ourense" "Ourense" }
+4787 = { "Ribatejo" "Santarém" }
+4949 = { "Guadalaxara" "Guadalaxara" }
+4972 = { "Cidade Rodrigo" "Cidade Rodrigo" }
+4982 = { "Leiria" "Leiria" }
+4990 = { "Serpa" "Serpa" }
+4991 = { "Elvas" "Elvas" }
+4992 = { "Marvão" "Marvão" }
+4993 = { "Covilhã" "Covilhã" }
+6548 = { "Olivença" "Olivença" }
+6549 = { "Mondonhedo" "Mondonhedo" }
+##morocco
+#tingitan
+334 = { "Tânger" "Tânger" }
+1751 = { "Ceuta" "Ceuta" }
+4561 = { "Tetuão" "Tetuão" }
+5713 = { "Arzila" "Arzila" }
+5718 = { "Alcácer-Quibir" "Alcácer-Quibir" }
+5719 = { "Laraxe" "Laraxe" }
+#rif
+335 = { "Melilha" "Melilha" }
+5714 = { "Xexuão" "Xexuão" }
+5715 = { "Ilhote de Vélez" "Ilhote de Vélez de la Gomera" }
+5716 = { "Tazuda" "Castelo de Tazuda" }
+5717 = { "Taourirt" "Taourirt" }
+5722 = { "Taza" "Taza" }
+5723 = { "Debdu" "Debdu" }
+#gharbia
+343 = { "Fez" "Fez" }
+2467 = { "Mequinez" "Mequinez" }
+4563 = { "Salé" "Salé" }
+5720 = { "Ouezzane" "Ouezzane" }
+5721 = { "Taunate" "Taunate" }
+5724 = { "Outat" "Outat" }
+5725 = { "Quenifra" "Quenifra" }
+5726 = { "Sefru" "Sefru" }
+5727 = { "São João da Mamora" "São João da Mamora" }
+#tamesna
+342 = { "Rebate" "Rebate" }
+344 = { "Marraquexe" "Marraquexe" }
+2468 = { "Tédula" "Tédula" }
+4564 = { "Anafé" "Anafé" }
+4568 = { "Demnat" "Demnat" }
+5728 = { "Ain El Aouda" "Ain El Aouda" }
+5731 = { "Dai" "Dai" }
+5732 = { "Benguerir" "Benguerir" }
+#doukkala
+345 = { "Safim" "Safim" }
+2469 = { "Mazagão" "Mazagão" }
+5729 = { "Azamor" "Azamor" }
+5733 = { "Sidi bin-Nur" "Sidi bin-Nur" }
+5734 = { "Xixaua" "Xixaua" }
+5735 = { "Aguz" "Aguz" }
+#sus area 
+348 = { "Pequena Marráquexe" "Tarudante" }
+1110 = { "Cabo de Gué" "Santa Cruz do Cabo de Gué" }
+2470 = { "Mogador" "Mogador" }
+5737 = { "Messa" "Messa" }
+5738 = { "Tafraout" "Tafraout" }
+#cape juby
+347 = { "Santa Cruz do Mar Pequeno" "Santa Cruz do Mar Pequeno" }
+5739 = { "Tan-Tan" "Tan-Tan" }
+5741 = { "Cabo Juby" "Casa do Mar" }
+##global misc
+#Guinea
+1096 = { "Ilhas de Sotavento" "Praia" }
+1097 = { "Fernando Pó" "Concepción" }
+1111 = { "Arguim" "Arguim" }
+1113 = { "Cabo Verde" "Cayor" }
+1114 = { "Gabu" "Nova Lamego" }
+1118 = { "Serra Leoa" "Cidade Livre" }
+1119 = { "Cabo Mesurado" "Monróvia" }
+1139 = { "Costa do Ouro" "Forte de Santo António de Axim" }
+1147 = { "Benim" "Cidade do Benim" }
+1167 = { "São Paulo da Assumpção de Loanda" "São Paulo da Assumpção de Loanda" }
+1171 = { "Caculo Cabaça" "Caculo Cabaça" }
+1172 = { "São Felipe de Benguela" "São Felipe de Benguela" }
+1174 = { "Cabo da Cruz" "Cabo de Santa Maria" }
+1177 = { "Cabo da Boa Esperança" "Cidade do Cabo" }
+1306 = { "São Tomé" "São Tomé" }
+2241 = { "Boqué" "Boqué" }
+2258 = { "São Jorge da Mina" "São Jorge da Mina" }
+4079 = { "Zaire" "Ngoyo" }
+4080 = { "Soio" "Santo António do Zaire" }
+5712 = { "Ilhas de Barlavento" "Ribeira Grande" }
+#east coast of africa misc
+788 = { "Parapato" "Parapato" }
+1102 = { "Maurícia" "Porto Luís" }
+1103 = { "Santa Apolónia" "Santa Apolónia" }
+1182 = { "Lourenço Marques" "Matolo" }
+1183 = { "Terra de Boa Gente" "Terra de Boa Gente" }
+1192 = { "Rio dos Bons Sinais" "Quelimane" }
+1195 = { "Moçambique" "Moçambique" }
+1196 = { "Quilua Quisiuani" "Quilua Quisiuani" }
+1197 = { "Casa da Paz" "Casa da Paz" }
+1203 = { "Melinde" "Melinde" }
+1205 = { "Mogadíscio" "Mogadíscio" }
+4020 = { "Comores" "Moroni" }
+4049 = { "Cabo Delgado" "Pemba" }
+#arabia misc
+387 = { "Moca" "Moca" }
+396 = { "Barém" "Manama" }
+400 = { "Mascate" "Mascate" }
+1099 = { "Socotorá" "Socotorá" }
+2999 = { "Ormuz" "Ormuz" }
+#india misc
+517 = { "Surrate" "Surrate" }
+529 = { "Bom Bahia" "Bombaim" }
+534 = { "Calecute" "Calecute" }
+535 = { "Cochim" "Cochim" }
+537 = { "Coulão" "Coulão" }
+539 = { "Paliacate" "Paliacate" }
+543 = { "Masulipatão" "Masulipatão" }
+572 = { "Colombo" "Colombo" }
+1248 = { "Maldivas" "Malé" }
+2089 = { "Morro de Chaul" "Morro de Chaul" }
+2099 = { "Cândia" "Cândia" }
+2100 = { "Jafanapatão" "Jafanapatão" }
+4409 = { "Triquinimale" "Triquinimale" }
+4413 = { "Cananor" "Cananor" }
+4430 = { "Damão" "Damão" }
+4455 = { "Dio" "Dio" }
+#southeast asia
+586 = { "Pegu" "Pegu" }
+596 = { "Malaca" "Malaca" }
+#east indies
+641 = { "Macáçar" "Borrobos" }
+#japan
+4182 = { "Nagasáqui" "Nagasáqui" }
+##new world random until we get there
+756 = { "Bahia de Todos os Santos" "São Salvador da Bahia de Todos os Santos" }
+763 = { "Rio" "São Sebastião do Rio de Janeiro" }
+980 = { "Bahia da Conceição" "São Filipe" }
+981 = { "Cabo Ray" "Porto dos Bascos" }
+2573 = { "Prazer" "Argentia" }
+2575 = { "Lavrador" "Bahia de Lavrador" }

@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = appanage_reform
+government_rank = 1
+primary_culture = catalan
+add_accepted_culture = aragonese 
+religion = catholic
+technology_group = western
+capital = 6561 #Segorbe
+fixed_capital = 6561
+
+1407.1.1 = { 
+	monarch = { 
+		name = "Frederic" #Fadrique de Aragon, conde de Luna
+		dynasty = "de Barcelona"
+		birth_date = 1400.1.1
+		death_date = 1438.5.29
+		adm = 3
+		dip = 2
+		mil = 4
+	}
+}

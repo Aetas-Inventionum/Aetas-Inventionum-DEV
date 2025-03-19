@@ -1,0 +1,35 @@
+#6091 - Zawila
+#Area - Fezzan
+#Region - Maghreb
+
+#Core Details
+capital = "Tajarhi"
+is_city = yes
+owner = FZA
+controller = FZA
+
+#Demographics
+culture = fezzan
+religion = sunni
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = slaves
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = FZA
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = muslim
+discovered_by = sub_saharan
+
+#Histories

@@ -1,0 +1,14 @@
+bookmark =
+{
+	name = "UNION_HRODNO"
+	desc = "UNION_HRODNO_DESC"
+	date = 1415.8.22
+	
+	center = 5899
+	
+	country = POL 
+	country = LIT 
+	country = KIE
+	country = TEU 
+	country = LIV
+}

@@ -1,0 +1,41 @@
+#TCK - Tecklenburg
+
+#Political Situation
+capital = 5370
+
+#Government
+government_rank = 1
+government = monarchy
+add_government_reform = feudalism_reform
+
+#Demographics
+primary_culture = hannoverian
+religion = catholic
+
+#Tech and Military
+technology_group = western
+
+#History
+1388.1.1 = {
+	monarch = {
+		name = "Nikolaus II"
+		dynasty = "von Schwerin"
+		birth_date = 1380.1.1 #guess. dies 1426
+		adm = 2
+		dip = 1
+		mil = 1
+	}
+}
+1444.1.1 = {
+	heir = {
+		name = "Nikolaus"
+		monarch_name ="Nikolaus III"
+		dynasty = "von Helfenstein"
+		birth_date = 1434.1.1
+		death_Date = 1508.1.1
+		claim = 95
+		adm = 1
+		dip = 2
+		mil = 1
+	}
+}

@@ -1,0 +1,110 @@
+#Country Name: Please see filename.
+
+graphical_culture = mongolgfx #muslimgfx
+
+color = { 189  189  189 } #prev was 220 152 3, 190 132 13
+
+historical_idea_groups = {
+	expansion_ideas
+	offensive_ideas
+	administrative_ideas
+	trade_ideas
+	economic_ideas
+	defensive_ideas
+	diplomatic_ideas
+	innovativeness_ideas
+}
+
+historical_units = {
+	steppe_riders
+	steppe_lancers
+	steppe_mounted_raiders
+	steppe_cavalry
+	steppe_uhlans
+	steppe_raiders
+	steppe_footmen
+	steppe_musketeers
+	steppe_infantry
+	steppe_rifles
+	reformed_steppe_rifles
+}
+
+monarch_names = {
+	"Batu #1" = 5
+	"Orda #1" = 5
+	"Sartaq #1" = 5
+	"Qun Quran #1" = 0
+	"Ulagçi #1" = 5
+	"Berke #1" = 5
+	"Mönxtömör #1" = 7
+	"Todmönx #1" = 5
+	"Köchü #1" = 5
+	"Tölebuqa #1" = 5
+	"Toqta #1" = 5
+	"Bayan #1" = 5
+	"Öz Bäg #1" = 8
+	"Satibuxa #1" = 3
+	"Erzen #1" = 0
+	"Tini Bäg #1" = 5
+	"Jani Bäg #1" = 5
+	"Çimtay #1" = 5
+	"Berdi Bäg #1" = 5
+	"Qulpa #1" = 5
+	"Nauruz #1" = 5
+	"Xidr #1" = 5
+	"Tömör Xuaja #1" = 5
+	"Urdu Malik #1" = 5
+	"Kildi Bäg #1" = 5
+	"'Abdallah #1" = 0
+	"Murad #1" = 0
+	"Uljay Tömör #1" = 5
+	"Hasan Bäg #1" = 5
+	"Urus #1" = 5
+	"Tulun Bäg #1" = 5
+	"Möxemmet #1" = 40
+	"Haji Çerkes #1" = 5
+	"Il Bäg #1" = 5
+	"Xaan Bäg #1" = 1
+	"Arab Shah #1" = 1
+	"Toqtaqiya #1" = 1
+	"Tömör Malik #1" = 1
+	"Tuxtamish #1" = 15
+	"Quyurçuq #1" = 15
+	"Tömör Qutluq #1" = 15
+	"Shadi Bäg #1" = 5
+	"Pulad #1" = 5
+	"Kärimbirde #1" = 20
+	"Tömör #1" = 15
+	"Cäläletdin #1" = 15
+	"Cäbbärbirde #1" = 15
+	"Cögrä #1" = 15
+	"Därwish #0" = 15
+	"Qäderbirde #0" = 15
+	"Xaci Möxemmet #0" = 15
+	"Baraq #0" = 10
+	"Mäxmüd #0" = 20
+	"Edigü #0" = 15
+	
+	"Fatima #0" = -1
+	"Ibtisam #0" = -1
+	"Jalila #0" = -1
+	"Janan #0" = -1
+	"Layla #0" = -1
+	"Sakina #0" = -1
+	"Sharifa #0" = -1
+}
+
+leader_names = {
+	"Boke Temur" "Qutlugh Vachir" "Suren Chinua" "Delger Bayar"
+	"Shria Gan" "Bora Chinua" Nasange Temur-chi Chinuagene Toluilun
+	Qutughqan "Koke Burilgi" Surenchar Bayangge
+}
+
+ship_names = {
+	Batu Sartaq Ulaghchi Berke "Mengu-Timur" "Tuda-Mengu"
+	Talabuga "Nogai Khan" Tokhta "Öz Beg" "Tini Beg" "Jani Beg" 
+	"Berdi Beg" Qulpa "Nawruz Beg" Khidr "Timur Khwaja" Abdallah
+	"Muhammad Bolak" "Mamai Khan" Toqtamish "Temür Qutlugh" Ediguh
+	"Shadi Beg" "Polad Khan" Temür "Jalal ad-Din" "Karim Berdi" Kebek
+	"Jabbar Berdi" "Ulugh Muhammad" "Dawlat Berdi" Baraq "Sayud Ahmad"
+}

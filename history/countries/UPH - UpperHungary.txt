@@ -1,0 +1,9 @@
+government = republic
+add_government_reform = noble_elite_reform
+government_rank = 1
+technology_group = eastern
+primary_culture = hungarian
+add_accepted_culture = slovak 
+add_accepted_culture = carpathian_german
+religion = catholic
+capital = 5470 #kassa

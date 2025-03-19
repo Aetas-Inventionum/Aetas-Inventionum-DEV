@@ -1,0 +1,91 @@
+country_decisions = {
+	iberia_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { tag = IBE }
+			OR = {
+				ai = no
+				AND = {
+					NOT = { exists = IBE }
+					num_of_cities = 3 #Carnage
+				}
+			}
+			NOT = { tag = HLR }
+			NOT = { tag = PAP }
+			primary_culture = portugese 
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = { 
+				province_id = 227
+				province_id = 231
+				province_id = 4989
+				province_id = 206
+				province_id = 208
+				province_id = 215
+				province_id = 219
+				province_id = 225
+				province_id = 220
+				province_id = 214
+				province_id = 213
+				province_id = 333
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = IBE }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			owns_core_province = 227 #lisboa
+			owns_core_province = 231 #porto
+			owns_core_province = 4989 #lagos
+			owns_core_province = 206 #la coruna
+			owns_core_province = 208 #leon
+			owns_core_province = 215 #valladolid
+			owns_core_province = 219 #toledo
+			owns_core_province = 225 #cordoba
+			owns_core_province = 220 #valencia
+			owns_core_province = 214 #saragossa
+			owns_core_province = 213 #barcelona
+			owns_core_province = 333 #majorca
+			religion_group = christian
+		}
+		effect = {
+			change_tag = IBE
+			set_government_rank = 3
+			iberia_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400 #
+	}
+	
+}

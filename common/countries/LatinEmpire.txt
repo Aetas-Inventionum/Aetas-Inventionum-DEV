@@ -1,0 +1,187 @@
+#Country Name: Please see filename.
+
+graphical_culture = latingfx
+
+#Some yellow colour found online. We'll see how this looks in-game.
+color = { 200 200 124 }
+
+historical_idea_groups = {
+	maritime_ideas
+	religious_ideas
+	defensive_ideas
+	administrative_ideas
+	trade_ideas
+	quality_ideas
+	innovativeness_ideas
+	diplomatic_ideas
+}
+
+historical_units = {
+	eastern_medieval_infantry
+	eastern_knights
+	slavic_stradioti
+	eastern_militia
+	ottoman_spahi
+	ottoman_sekban
+	ottoman_reformed_spahi
+	ottoman_reformed_janissary
+	ottoman_toprakli_hit_and_run
+	ottoman_nizami_cedid
+	ottoman_toprakli_dragoon
+	eastern_skirmisher
+	eastern_uhlan
+	eastern_carabinier
+	ottoman_new_model
+	ottoman_lancer
+}
+
+monarch_names = {
+	#Latin Empire
+	"Baudouin #2" = 40
+	"Henri #1" = 30
+	"Pierre #1" = 30
+	"Robert #2" = 30
+	"Jean #1" = 20
+	"Philippe #3" = 10
+	"Charles #1" = 10
+	"James #1" = 10 
+	"Catherine #2" = -30
+	"Yolande #1" = -30
+	"Joan #0" = -15
+	"Gislebert #0" = 1
+	"Umberto #0" = 5
+	"Elisabeth #0" = -10
+	"Agnes #0" = -5
+	"Geoffrey #0" = 10
+	"Eudoxie #0" = -5
+
+	#princes of achaea
+	"Guillaume #0" = 10
+	"Florent #0" = 10 
+	"Ferdinand #0" = 5
+	"Matilda #0" = -15
+	"Maria #0" = -30
+	"Louis #0" = 10
+	"Joanna #0" = -5
+	"Centurione #0" = 5
+	#Cyprus
+	"Hugh #0" = 10 
+	"Aimery #0" = 5
+	"Janus #0" = 5
+	"Charlotte #0" = -5
+	#Epirus 
+	"Nicholas #0" = 5
+	"Carlo #0" = 5
+	"Giorgio #0" = 5
+	"Essau #0" = 5
+	"Leonardo #0" = 5
+	#Athens
+	"Odo #0" = 5
+	"Guy #0" = 15
+	"Gautier #0" = 5
+	"Isabella #0" = -10
+	"Federico #0" = 5
+	"Manfred #0" = 5
+	"Roger #0" = 5
+	"Matthieu #0" = 10
+	"Bernard #0" = 5
+	"Nerio #0" = 5
+	"Antonio #0" = 5
+	"Claire #0" = -10
+	"Francis #0" = 1
+	#Thessalonica (Kingdom)
+	"Boniface #0" = 5
+	"Demetrius #0" = 5
+	#Philippopolis
+	"Renier #0" = 5
+	"Gerard #0" = 5
+	#Salona
+	"Alfonso #0" = 5
+	"Thomas #0" = 5
+	#Negroponte
+	"Ravona #0" = 1
+	"Narzatto #0" = 1
+	"Marino #0" = 1
+	"Othon #0" = 1
+	"Gaspar #0" = 5
+	#Jerusalem
+	"Melisende #0" = -5
+	"Foulque #0" = 5
+	"Sibylla #0" = -5
+	"Conrad #0" = 5
+	#Tripoli
+	"Raymond #0" = 5
+	"Lucia #0" = -5
+	"Bohemond #0" = 5
+	"Pons #0" = 5
+	"Tancred #0" = 5
+
+	
+	#misc names 
+	"Wédric #0" = 5
+	"Thiérry #0" = 5
+	"Ladislaus #0" = 0
+	"Conan #0" = 0
+	"Giovanni #0" = 0
+	"Sara #0" = -5
+}
+
+
+leader_names = { #notable families from the histories of LTE and other frankos and crusaders
+	Acciaiuoli Aleramici "d'Anjou" "d'Avesnes" "de Auria" "d'Autremencourt"
+	"des Baux" "de Barcelona" "de Blois" "de Boulogne" "de Bourbon" "de Bourgogne" "de Brienne" "de' Buondelmonti"
+	"dalle Carceri" "de Cicon" "de Cortenay" Crispo
+	Fadrique "de Fauquembergues" "de Flandre"
+	Gattilusio Giustiniani
+	"de Hainaut" "de Hauteville"
+	"de Lusignan"
+	"de Montfort"
+	Orsini 
+	"de Rethel" "de la Roche"
+	Sanudo
+	Tocco "de Toulouse" "de Triethe-Saint-Léger"
+	"da Verona" "de Villehardouin"
+	Zaccaria
+}
+
+ship_names = {
+	#Knights
+	"The Blessed Gerard"
+	"Raymond du Puy de Provence"
+	"Auger de Balben"
+	"Arnaud de Comps"
+	"Gilbert d'Aissailly"
+	"Gastone de Murols"
+	"Gilbert of Syria"
+	"Roger de Moulins"
+	"H�lion de Villeneuve"
+	"Hermangard d'Asp"
+	"Garnier de Naplous"
+	"Geoffroy de Donjon"
+	"Alfonse of Portugal"
+	"Geoffrey le Rat"
+	
+	#Jerusalem
+	"The Holy Cross"
+	"The Grail"
+	"The Faithful"
+	"Hammer of God"
+	"True Believer"
+	"The Cleansing"
+	"Baldwin's Gate"
+	"The Rapture"
+	"God Will Know His Own"
+	Paladin
+	Purifier
+	Crusader
+	Guardian
+	Pilgrim
+	Absolution
+	Avenger
+	Vindicator
+	"The Scourge"
+}
+
+army_names = {
+	"Armée de $PROVINCE$"
+}

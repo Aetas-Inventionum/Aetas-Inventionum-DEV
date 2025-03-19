@@ -1,0 +1,38 @@
+#3318 - Nottingham
+#Area - Midlands
+#Region - British Isles
+
+#Core Details
+capital = "Nottingham"
+is_city = yes
+owner = ENG
+controller = ENG
+
+#Demographics
+culture = english
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 1
+base_manpower = 2
+trade_goods = glass
+latent_trade_goods = { coal }
+
+#Cores and Occupation (Alphabetical after current)
+add_core = ENG
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

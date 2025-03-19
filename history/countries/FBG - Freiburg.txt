@@ -1,0 +1,19 @@
+#FST - Furstenburg
+
+#Political Situation
+capital = 72
+fixed_capital = 72
+
+#Government
+government_rank = 1
+government = monarchy
+add_government_reform = feudalism_reform
+
+#Demographics
+primary_culture = alsatian
+religion = catholic
+
+#Tech and Military
+technology_group = western
+
+#History

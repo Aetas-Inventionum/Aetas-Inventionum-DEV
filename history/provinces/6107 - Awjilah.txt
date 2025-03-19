@@ -1,0 +1,40 @@
+#6107 - Awjilah
+#Area - Cyrenaica
+#Region - Egypt
+
+#Core Details
+capital = "Awjilah"
+is_city = yes
+owner = BQA
+controller = BQA
+
+#Demographics
+culture = tawjilit
+religion = sunni
+
+#Development and Trade
+base_tax = 2
+base_production = 3
+base_manpower = 2
+trade_goods = slaves
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = BQA
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+center_of_trade = 2
+
+#Discoveries
+discovered_by = muslim
+discovered_by = western
+discovered_by = eastern
+discovered_by = ottoman
+
+
+#Histories

@@ -1,0 +1,40 @@
+#5020 - Neustadt
+#Area - Lower Palatinate
+#Region - North Germany
+
+#Core Details
+capital = "Neustadt"
+is_city = yes
+owner = PAL
+controller = PAL
+
+#Demographics
+culture = palatinish
+religion = catholic
+
+#Development and Trade
+base_tax = 3
+base_production = 4
+base_manpower = 3
+trade_goods = wine 
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = PAL
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+
+#Special Modifiers
+#add_permanent_province_modifier = {
+#	name = ai_durkheim_modifier
+#	duration = -1
+#}
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

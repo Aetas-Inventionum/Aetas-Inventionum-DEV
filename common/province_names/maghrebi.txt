@@ -1,0 +1,494 @@
+#BE SURE TO UPDATE BOTH MAGREBI & TURKO_SEMITIC
+
+#AI Update
+# = { "x" "x" }
+#use maghrebi arabic when possible or available
+#maghreb by pleibos
+#Tunis
+341 = { "Tunus" "Tunus" }
+2455 = { "Binzart" "Binzart" }
+2473 = { "Susa" "Susa" }
+5803 = { "Ras ad-Dar" "al-Hamamat" }
+5822 = { "Zagwan" "Zagwan" }
+5797 = { "Tbarqa" "Tbarqa" }
+5798 = { "Baja" "Baja" }
+5799 = { "Sijnan" "Sijnan" }
+#byzancena
+2453 = { "Safaqis" "Safaqis" }
+4566 = { "Qeirwan" "Qeirwan" }
+5817 = { "as-Shira" "as-Shira" }
+5818 = { "al-Madiyya" "al-Madiyya" }
+5819 = { "Mestir" "Monastir" }
+5820 = { "Jamunis" "Jamunis as-Sabun" }
+5821 = { "Gasrin" "Gasrin" } #tunisian maghrebi arabic
+#jerba
+353 = { "Fum Tatawin" "Fum Tatawin" }
+2954 = { "Jirba" "Jirba" }
+5815 = { "Mednin" "Mednin" }
+5816 = { "Gabis" "Gabis" }
+#numidia
+1882 = { "Balad al-'Unnab" "'Unnab" }
+2454 = { "al-Kaf" "al-Kaf" }
+5794 = { "Qalima" "Qalima" }
+5796 = { "al-Qala" "al-Qala" }
+5800 = { "Tibissa" "Tibissa" }
+#kabylia
+339 = { "Bijaya" "Bijaya" }
+340 = { "Qusantina" "Qusantina" }
+5772 = { "Kuku" "Kuku" }
+5792 = { "aq-Qoll" "aq-Qoll"}
+#zab
+351 = { "Bisukra" "Bisukra" }
+2459 = { "Hodna" "Musila" }
+5773 = { "al-Qalaha" "al-Qalaha" }
+5802 = { "Bu S'ada" "Bu S'ada" }
+5801 = { "Najawis" "Najawis" }
+#suf-djerid
+352 = { "Qafsa" "Qafsa" }
+2456 = { "Taqart" "Taqart" }
+5807 = { "Najrin" "Najrin" }
+5809 = { "Tuzir" "Tuzir" }
+5811 = { "al-Hamma" "al-Hamma" }
+#dara mitdja
+338 = { "al-Jaza'ir" "al-Jaza'ir" }
+5766 = { "Tins" "Tins" }
+5767 = { "Barashk" "Barashk" }
+5768 = { "Shirshal" "Shirshal" }
+5771 = { "Dallys" "Dallys" }
+5774 = { "al-Madya" "al-Madya" }
+5775 = { "Milyana" "Milyana" }
+5776 = { "al-Shalaf" "al-Shalaf" }
+5781 = { "al-Bukhari" "Qasr al-Bukhari" }
+5782 = { "al-Taytari" "Tubirit" }
+#orania
+337 = { "Waran" "Waran" }
+2461 = { "Mustaganim" "Mustaganim" }
+2462 = { "Tayart" "Tayart" }
+4562  = { "al-Marsa al-Kabir" "al-Marsa al-Kabir" }
+5764 = { "Rashqon" "Rashqon" }
+5765 = { "Mu'askar" "Mu'askar" }
+5769 = { "Sa'ida" "Sa'ida" }
+5770 = { "Tasala" "Tasala" }
+5780 = { "Tisamsilt" "Tasamsilt" }
+5788 = { "Ferenda" "Ferenda" }
+#tlemcen
+336 = { "Tilimsan" "Tilimsan" }
+2465 = { "Wajda" "Wajda" }
+5761 = { "Magniyya" "Magniyya" }
+5762 = { "Nidruma" "Nidruma" }
+5763 = { "Hanin" "Hanin" }
+#saharan atlas
+349 = { "Fijij" "Fijij" }
+2463 = { "Mishiriyya" "Mishiriyya" }
+5779 = { "'Aflu" "'Aflu" }
+5760 = { "Aïn al-Safra" "Aïn al-Safra" }
+5784 = { "Buwarfa" "Buwarfa" }
+#rif
+335 = { "Maliliyya" "Maliliyya" }
+5714 = { "Ghamra" "Ghamra" }
+5716 = { "Jabal Gurugu" "Qasr al-Tazuda" }
+5717 = { "Ta'urirt" "Ta'urirt" }
+5722 = { "Taza" "Ribat Taza" }
+5723= { "Dabdu" "Dabdu" }
+#tingitan
+334 = { "Tanja" "Tanja" }
+1751 = { "Sabta" "Sabta" }
+4561 = { "Titwan" "Titwan" }
+5713 = { "'Asila" "'Asila" }
+5718 = { "Qasr al-Rif" "Qasr al-Rif" }
+5719 = { "al-'Araysh" "al-'Araysh" }
+#gharb
+343 = { "Fas" "Fas" }
+2467 = { "Maknas" "Maknas" }
+4563 = { "Sala" "Sala" }
+5726 = { "Safru" "Safru" }
+5720 = { "Wazzan" "Wazzan" }
+5721 = { "Mazata" "Tawnat" }
+5724 = { "'Utat i-Hajj" "'Utat i-Hajj" }
+5725 = { "Khinifra" "Murirt" }
+5727 = { "al-Madiyya" "al-Madiyya" }
+#tamesna
+342 = { "Ribat" "Ribat al-Fatih" }
+344 = { "Murrakesh" "Murrakesh" }
+2468 = { "Tadla" "Qasbat Tadla" }
+4564 = { "'Anfa" "'Anfa" } 
+4568 = { "Dimnat" "Dimnat" }
+5728 = { "'Aïn al-'Awda" "'Aïn al-'Awda" }
+5730 = { "ash-Shawiyya" "Sittat" }
+5731 ={ "Daï" "Hisn Daï" }
+5732 = { "Bin Grayr" "Bin Grayr" }
+#doukkala
+345 = { "'Asafi" "'Asafi" }
+2469 = { "al-Jadida" "al-Jadida" }
+5729 = { "'Azammur" "'Azammur" }
+5733 = { "Sayidi Banur" "Sayidi Banur" }
+5734 = { "Shishawa" "Shishawa" }
+5735 = { "Sail Hadid" "Aguz" }
+#sus 
+348 = { "Tarudant" "Tarudant" }
+1110 = { "'Agadir" "'Agadir" }
+2470 = { "Haha" "Mukadur" }
+5736 = { "'Amzamiz" "'Amzamiz" }
+5737 = { "Masa" "Masa" }
+5738 = { "Tafrawat" "Tafrawat" }
+#cape juby
+347 = { "Sidi 'Ifni" "Sidi 'Ifni" }
+5739 = { "al-Watiya" "Tantan" }
+5740 = { "Tagamarat" "Tagamarat" }
+5742 = { "'Asa" "'Asa" }
+5743 = { "az-Zag" "az-Zag" }
+#draa valley
+2464 = { "Warzazat" "Warzazat" }
+2466 = { "Tagmadirt" "Tagmadirt" } 
+5745 = { "Tamdult" "Tamdult" }
+5746 = { "Taysint" "Taysint" }
+5747 = { "Targala" "Targala" }
+5748 = { "Zagura" "Zagura" }
+#tafilalt
+5750 = { "Squra" "Squra" }
+5751 = { "Tanghir" "Tanghir" }
+5752 = { "Sijilmasa" "Sijilmasa" }
+5787 = { "Kinadsa" "Kinadsa" }
+#tripolitania
+354 = { "Trablus al-Gharb" "Trablus" } #libyan maghrebi arabic
+5813 = { "Jabal Nafusa" "Nalut" }
+#mzab
+350 = { "Laghuwat" "Laghuwat" }
+2457 = { "Mzab" "Ghardaya" }
+2472 = { "Waraqla" "Waraqla" }
+5804 = { "Sufisr" "Sufisr" }
+5806 = { "Jimar" "Jimar" }
+##iberia
+#granada
+222 = { "al-Mariyya" "Madinat al-Mariyya" }
+223 = { "Garnata" "Garnata" }
+226 = { "Jabal Tariq" "Jabal Tariq" }
+3374 = { "Batza" "Batza" } #or Medina Bastha
+3375 = { "Bayra" "Bayra" }
+3376 = { "Wadi-'Ash" "Wadi-'Ash" }
+3377 = { "Mutrayil" "Mutrayil" }
+3378 = { "Runda" "Runda" }
+3379 = { "Istabba" "Istabba" }
+4546 = { "Malaqa" "Malaqa" }
+#murcia
+221 = { "Mursiyya" "Mursiyya" }
+3371 = { "Medina Bilyana" "Medina Bilyana" }
+3372 = { "Qartayannat" "Qartayannat al-Halfa" }
+3373 = { "Lurqa" "Lurqa" }
+4547 = { "al-Basit" "al-Basit" }
+5032 = { "Qaravaqa" "Qaravaqa" }
+5757 = { "'Uwysqar" "'Uwysqar" }
+#upper andalucia
+225 = { "Qurtuba" "Qurtuba" }
+1748 = { "Jayyan" "Jayyan" }
+3409 = { "al-Yasana" "al-Yasana" }
+3410 = { "Andushar" "Andushar" }
+3411 = { "Bayyasa" "Bayyasa" }
+3412 = { "Ubbadha" "Ubbadha" }
+#lower andalucia
+224 = { "Isbiliyya" "Isbiliyya" }
+1749 = { "Qadis" "Qadis" }
+3401 = { "Tarif" "Tarif" }
+3402 = { "Shadhuna" "Shadhuna" }
+3403 = { "Sharish" "Sharish" }
+3405 = { "Zulema" "Zulema" }
+3406 = { "Urshuna" "Urshuna" }
+3407 = { "Qarmuna" "Qarmuna" }
+3408  ={ "Istija" "Istija" }
+4548 = { "Walba" "Walba" }
+#algarve
+230 = { "Santamariyyat ibn Harun" "Santamariyyat ibn Harun" }
+4987 = { "Martula" "Martula" }
+4988 = { "Awriq" "Awriq" }
+4989 = { "Zawayya" "Zawayya" }
+#alentejo
+229 = { "Baja" "Baja" }
+4150 = { "Ebora" "Ebora" }
+4990 = { "Sayripa" "Sayripa" }
+4991 = { "al-Bash" "al-Bash" }
+4992 = { "Marwan" "Marwan" }
+#estremadura
+227 = { "Lisbuna" "Lisbuna" }
+4787 = { "Shantarin" "Shantarin" }
+4982 = { "Liriyya" "Liriyya" }
+4984 = { "Seliyaym" "Seliyaym" } #from Sellium
+4985  = { "Shatubar" "Shatubar" }
+4986 = { "Sinis" "Sinis" }
+#beiras
+228 = { "Fisyu" "Fisyu" }
+1851 = { "Qulumriyya" "Qulumriyya" }
+4556 = { "'Afiru" "'Afiru" }
+4979 = { "Quwarda" "Quwarda" }
+4981 = { "Lamyju" "Lamyju" }
+4993 = { "Kufilha" "Kufilha" }
+#tras os montes
+231 = { "Burtuqal" "Burtuqal" }
+232 = { "Bragansa" "Bragansa" }
+4973 = { "Mir Handul" "Mir Handul" }
+4974 = { "Ribakwa" "Ribakwa" }
+4975 = { "Banurama" "Banurama" }
+4976 = { "Shafis" "Shafis" }
+4977 = { "Baraqa" "Baraqa" } 
+4978 = { "Fiyana" "Fiyana" }
+#extremadura
+218 = { "Batalyaws" "Batalyaws" }
+1747 = { "Qasr al-Azad" "Qasr al-Azad" }
+3404 = { "Lerina" "Lerina" }
+3413 = { "Marida" "Marida" }
+3414 = { "Madalin" "Madalin" }
+4788 = { "Bilasinsiyya" "Bilasinsiyya"}
+4942 = { "al-Qantara" "al-Qantara" }
+4943 = { "Trukhyu" "Trukhyu" }
+#la mancha
+2751 = { "Qunqa" "Madina Qunqa" }
+2754 = { "Qal'at Raba" "Qal'at Raba" }
+4944 = { "Hisn al-Madin" "Hisn al-Madin" }
+4945 = { "Faldybynas" "Faldybynas" } 
+4946 = { "al-Qaras" "al-Qaras" }
+4947 = { "al-Qasr" "al-Qasr" }
+4950 = { "Mwya" "Mwya" }
+#new castile
+217 = { "Majrit" "Majrit" }
+219 = { "Tulaytula" "Tulaytula" }
+4948 = { "Udhin" "Udhin" }
+4949 = { "Wadi al-Hijara" "Wadi al-Hijara" }
+4952 = { "Turiqus" "Turiqus" }
+4953 = { "Talabira" "Talabira" }
+4951 = { "Shantabariyya" "Shantabariyya" }
+#old castile
+1746 = { "Burghus" "Burghus" }
+2755 = { "Suriyya" "Suriyya" }
+4551  = { "'Afila" "'Afila" }
+4789 = { "Shiqubiyya" "Shiqubiyya" }
+4954 = { "'Arifalu" "'Arifalu" }
+4955 = { "Quylar" "Quylar" }
+4956 = { "al-Makhzan" "al-Makhzan" }
+4957 = { "'Aranda" "'Aranda" }
+#leon
+208 = { "Liun" "Liun" }
+215 = { "Balad al-Walid" "Balad al-Walid"}
+216 = { "Salamanqa" "Salamanqa" }
+4552 = { "Balantiyya" "Balantiyya" }
+4553 = { "Sammura" "Sammura" }
+4968 = { "Bunfirada" "Bunfirada" }
+4969 = { "Binafinti" "Binafinti" }
+4970 = { "Sahaghun" "Sahaghun" }
+4971 = { "Madinat dil Qambu" "Madinat dil Qambu" }
+4972 = { "Madinat Rudriju" "Madinat Rudriju" }
+#galicia
+206 = { "al-Qaranya" "al-Qaranya" }
+4554 = { "Lwghw" "Lwghw" }
+4555 = { "Buntifirida" "Buntifirida" }
+4558 = { "'Uwrins" "'Uwrins" }
+4966 = { "Firul" "Firul" }
+4967 = { "Shant Yaqub" "Shant Yaqub" }
+5613 = { "Lymus" "Lymus" }
+#asturias-cantabria
+207 = { "Kikhun" "Kikhun" }
+1745 = { "Santandir" "Santandir" }
+4962 = { "Larydu" "Larydu" }
+4963 = { "Yanys" "Yanys" }
+4964 = { "'Uwfyidu" "'Uwfyidu" }
+4965 = { "Nafiyya" "Nafiyya" }
+#navarre
+209 = { "Fisqaya" "Fisqaya" }
+210 = { "Balat al-Bashqans" "Balat al-Bashqans" }
+2989 = { "Rywja" "Rywja" }
+3368 = { "Tawdila" "Tawdila" }
+3369 = { "Sanjisa" "Sanjisa" }
+3370 = { "'Iistila" "'Iistila" }
+4958 = { "an-Najarra" "an-Najarra" }
+4959 = { "Mirandat al-Ebro" "Mirandat al-Ebro" }
+4960 = { "Yilafa" "Yilafa" }
+4961 = { "Juybuzquwa" "Juybuzwua" }
+#valencia
+220 = { "Balansiyya" "Balansiyya" }
+1750 = { "Laqant" "Laqant" }
+3359 = { "Madrasat al-Qadib" "Madrasat al-Qadib" }
+3360 = { "Gandiyya" "Gandiyya" }
+3361 = { "Daniyya" "Daniyya" }
+4549 = { "Shatiba" "Shatiba" }
+4550 = { "Qashtilyun" "Qashtilyun" }
+#aragon
+211 = { "Washqa" "Washqa" }
+214 = { "Saraqusta" "Saraqusta" }
+2990 = { "Tirwal" "Tirwal" }
+3362 = { "Bani Razin" "Bani Razin" }
+3364 = { "al-Qanais" "al-Qanais" }
+3365 = { "Qashb" "Qashb" }
+3366 = { "Ribaghurza" "Ribaghurza" }
+3367 = { "'Arajun" "'Arajun" }
+4557 = { "Qala'at 'Ayyub" "Qala'at 'Ayyub" }
+5611 = { "Karnina" "Karnina" }
+#catalonia
+212 = { "Jarunda" "Jarunda" }
+213 = { "Barshiluna" "Barshiluna" }
+2987 = { "'Uwrijil" "'Uwrijil" }
+2988 = { "Tarraquna" "Tarraquna" }
+3355 = { "'Iimburis" "'Iimburis" }
+3356 = { "Sirdana" "Sirdana" }
+3357 = { "Larida" "Larida" }
+3358 = { "Turtusha" "Turtusha" }
+3392 = { "Manrisa" "Manrisa" }
+#majorca
+333 = { "Mayurqa" "Madina al-Mayurqa" }
+4559 = { "Minurqa" "Maun" }
+4560 = { "Yabisa" "Yabisa" }
+#canaries 
+366 = { "Hisn al-Nakhl" "Hisn al-Nakhl" } #arabic palm
+4565 = { "al-'Achinet" "'Aniyatsa" } #based from berber
+5709 = { "al-Jaza'ir al-Khalida" "ar-Rubiqun" } 
+5710 = { "al-Erbaniyya" "al-Betanquriyya" } #based from berber
+5711 = { "al-Ghomura" "al-Ghomura" } #invented
+#azores and friends
+367 = { "al-'Azur ash-Sharq" "Madinat al-Firinja" }
+368 = { "Madayra" "al-Funshal" }
+5708 = { "al-'Azur al-Gharb" "'Angra" }
+##franceh
+#upper languedoc
+197 = { "Rwsywn" "Rwsywn" }
+200 = { "Jabal al-Khashab" "Jabal al-Khashab" } #mountain of woad, same etymology as montpellier
+2753 = { "Arbona" "Arbona" }
+3276 = { "Bezir" "Bezir" }
+3277 = { "Nima" "Nima" }
+##italy
+#sardinia
+127 = { "Sayara" "Sayara" }
+2986 = { "Kaliari" "Kaliari" }
+4735 = { "Arburiyya" "Uwristanu" }
+5007 = { "al-Madalyna" "al-Madalyna" }
+5008 = { "Nuwuruh" "Nuwuruh" }
+5009 = { "Turtuli" "Turtuli" }
+5010 = { "'Iijlisyas" "'Iijlisyas" }
+5405 = { "Bossa" "Bossa" }
+#sicily
+124 = { "Masina" "Masina" }
+125 = { "Balarm" "Balarm" }
+126 = { "Malta" "Madina" }
+2982 = { "Saruqusa" "Saruqusa" }
+4736 = { "Tarabinch" "Tarabinch" }
+4737 = { "Qirqant" "Qirqant" }
+5131 = { "Balad al-Fil" "Madinat al-Fil" }
+5132 = { "Gafludi" "Gafludi" }
+5133 = { "Mudiqa" "Mudiqa" }
+5134 = { "Qal'at al-Jirar" "Qal'at al-Jirar" }
+5135 = { "Maqluba" "Qal'at al-Nisa" }
+#Libya - by Math
+6084 = { "Mesda" "Mesda" }
+6088 = { "al-Uqayla" "al-Uqayla" }
+
+#turkosemetic below
+##Egypt by Pleibos
+#marmarica
+2325 = { "al-Baritun" "al-Baritun" }   #Old name of Mersa Mutra
+2326 = { "al-Bardiyya" "al-Bardiyya" }
+6115 = { "as-Sallum" "as-Sallum" }
+6118 = { "al-'Alamayn" "al-'Alamayn" }
+6134 = { "Zighira" "Zighira" }
+#west nile delta 
+358 = { "al-Iskandariyya" "al-Iskandariyya" }
+362 = { "Rashid" "Rashid" }
+4317 = { "al-Behera" "Damanhur" }
+6126 = { "al-Gharbiyya" "Minuf" } #older location of mamluk province 'al-gharbiyya'
+6174 = { " al-Muzahamiyatayn" "Fuwwa" } #older name of the province fuwwa was capital of
+#east nile delta
+363 = { "Dumyat" "Dumyat" }
+2315 = { "as-Suways" "as-Suways" }
+2316 = { "al-Murtaiyya" "al-Mahalla" } #Tandata is older name of Tanta - the city is meant to be al-Mahalla /Math // older province of al-gharbiyya is further west, hence the name
+4316 = { "al-Daqaliyya" "al-Mansura" }
+6122 = { "ash-Sharqiyya" "Belbeis" }
+#lower egypt
+359 = { "al-Fayyum" "Madinat al-Fayyum" }
+361 = { "al-Qaira" "al-Qaira" }
+4318 = { "al-Iftihiyya" "Atfih" }
+6121 = { "Baniswef" "Baniswef" } #also transliterated as one word sometimes? // Banmisuaykh
+6177 = { "al-Manfiyya" "Manf" }
+#middle egypt
+2317 = { "al-'Ashmunayn" "al-'Ashmunayn" }
+2319 = { "al-Ikhmimiyya" "Akhmim" }
+6123 = { "al-Banasawiyya" "al-Banasa" }
+6139 = { "Suhaj" "Suhaj" }
+#upper egypt
+360 = { "al-Qusiyya" "Qus" }
+1231 = { "'Aswan" "'Aswan" }
+4319 = { "'Iisna" "'Iisna" }
+4320 = { "Jirja" "Jirja" }
+6124 = { "Munyat ibn Khasib" "al-Minya" }
+6125 = { "'Asyut" "'Asyut" }
+6140 = { "Qina" "Qina" }
+6141 = { "Huw" "Huw" }
+6142 = { "'Iidfu" "'Iidfu" }
+6143 = { "Kum 'Ambu" "Kum 'Ambu" }
+6175 = { "'Abu Tij" "'Abu Tij" }
+6176 = { "al-'Uqsur" "al-'Uqsur" }
+#al-wahat
+1233 = { "al-Kharija" "al-Kharija" }
+2318 = { "al-Bariyya" "al-Wahat al-Banasa" } #older islamic name meaning oasis of banasa // Baariyya just means the north
+4323 = { "al-Dakla" "al-Dakla" }
+6180 = { "al-Moghra" "al-Wahat al-Moghra" }
+#red sea hills
+1232 = { "Sawakin" "Sawakin" }
+2320 = { "Ras Gareb" "Ras Gareb" }
+2321 = { "al-Qoser" "al-Qoser" }
+2324 = { "'Aydhab" "'Aydhab" }
+6135 = { "as-Safaja" "as-Safaja" }
+6136 = { "Birnis" "Birnis" }
+6137 = { "ash-Shalatayn" "ash-Shalatayn" }
+
+##Levant by Pleibos
+#sinai 
+365 = { "at-Tur" "at-Tur" }
+6127 = { "an-Nakhl" "an-Nakhl" }    #Old name of the mamluk fortress
+6130 = { "Qatiya" "Qatiya" }
+6132 = { "al-Khalus" "al-Khalus" }
+#palestine
+364 = { "Gazza" "Gazza" }
+379 = { "al-Quds" "al-Quds" }
+1854 = { "Nabalus" "Nabalus" }
+1855 = { "Sayda" "Sayda" }
+6145 = { "Yafa" "Yafa" }
+6146 = { "'Akka" "'Akka" }
+6147 = { "Safad" "Safad" } #al-Jalil al-A'ahala
+6152 = { "ar-Ramleh" "ar-Ramleh" }
+#balqa
+380 = { "al-Karak" "al-Karak" }
+2327 = { "Ma'an" "Ma'an" }
+4268 = { "al-'Aqaba" "al-'Aqaba" } #late medieval
+6144 = { "Khalil al-Raman" "Khalil al-Raman" }
+6149 = { "as-Salt" "as-Salt" }
+6153 = { "ash-Shobak" "ash-Shobak" }
+6157 = { "al-Qatraneh" "al-Qatraneh" }
+6158 = { "Kaf" "Kaf" }
+#syria
+381 = { "'Ajlun" "'Ajlun" }
+382 = { "Dimashq" "Dimashq" }
+6150 = { "Busra" "Busra" }
+6151 = { "Dar'a" "Dar'a" }
+6159 = { "al-Nabk" "al-Nabk" }
+#lebanon
+378 = { "Tarabalus ash-Sham" "Tarabalus" }
+6148 = { "Bayrut" "Bayrut" }
+6154 = { "Jabal ash-Shouf" "Bahakline" } 
+6155 = { "Ba'labak" "Ba'labak" }
+6156 = { "Jubayl" "Jubayl" }
+#jabal bara
+2313 = { "'Antakiyya" "'Antakiyya" }
+6162 = { "al-Marqab" "al-Marqab" }
+6163 = { "Misyaf" "Misyaf" }
+6164 = { "al-Ladhiqiyya" "al-Ladhiqiyya" }
+6165 = { "'Idlib" "'Idlib" }
+6166 = { "as-Siwidiyya" "as-Siwidiyya" }
+6167 = { "al-Iskandarita" "al-Iskandarita" } #less turkish`
+#badiya
+405  = { "Tadmur" "Tadmur" }
+1849 = { "Hama" "Hama" }
+4297 = { "Homs" "Homs" }
+6160 = { "Salamiyya" "Salamiyya" }
+#thughur
+377 = { "Halab" "Halab" }
+407 = { "ar-Raqqa" "ar-Raqqa" }
+2308 = { "ar-Ruha" "ar-Ruha" }
+2314 = { "al-Raba" "al-Raba" }
+6168 = { "Khanasir" "Khanasir" }
+6169 = { "Qala'at Balis" "Qala'at Balis" }
+6173 = { "Dayr" "Dayr al-Rumman" }

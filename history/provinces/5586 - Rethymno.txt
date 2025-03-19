@@ -1,0 +1,39 @@
+#5586 - Rethymno
+#Area - Crete
+#Region - Balkans
+
+#Core Details
+capital = "Rethymno"
+is_city = yes
+owner = CDA
+controller = CDA
+
+#Demographics
+culture = greek
+religion = orthodox
+
+#Development and Trade
+base_tax = 2
+base_production = 2
+base_manpower = 2
+trade_goods = oils
+
+#Cores and Occupation (Alphabetical after current)
+add_core = CDA
+add_core = CRT
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = nomad_group
+
+#Histories

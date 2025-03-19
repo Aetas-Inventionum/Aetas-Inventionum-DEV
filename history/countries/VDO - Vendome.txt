@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = appanage_reform
+government_rank = 1
+primary_culture = cosmopolitan_french
+religion = catholic
+technology_group = western
+capital = 4387
+
+1372.1.1 = {
+	monarch = {
+		name = "Catherine I"
+		dynasty = "de Vendôme"
+		female = yes 
+		adm = 3
+		dip = 3
+		mil = 0
+	}
+}
+
+1403.1.1 = {
+	monarch = {
+		name = "Louis I"
+		dynasty = "de Bourbon"
+		culture = auvergnat
+		birth_date = 1376.1.1
+		adm = 1
+		dip = 2
+		mil = 1
+	}
+}
+
+###

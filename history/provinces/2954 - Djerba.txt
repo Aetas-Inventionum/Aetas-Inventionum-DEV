@@ -1,0 +1,38 @@
+#2954 - Djerba
+#Area - Djerba
+#Region - Maghreb
+
+#Core Details
+capital = "Borj El Kebir"
+is_city = yes
+owner = TUN
+controller = TUN
+
+#Demographics
+culture = nafusi
+religion = ibadi
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = naval_supplies
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = TUN
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = eastern
+
+#Histories

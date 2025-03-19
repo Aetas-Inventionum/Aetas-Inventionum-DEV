@@ -1,0 +1,29 @@
+government = monarchy
+add_government_reform = appanage_reform
+government_rank = 1
+technology_group = western
+primary_culture = schlesian
+religion = catholic
+capital = 4723
+
+1399.1.1 = {
+	monarch = {
+		name = "Bolko IV"
+		dynasty = "Piastów"
+		birth_date = 1389.1.1
+		dip = 2
+		adm = 2
+		mil = 2
+	}
+}
+
+1437.1.1 = {
+	monarch = {
+		name = "Mikolaj I"
+		dynasty = "Piast"
+		birth_date = 1424.1.1
+		adm = 3
+		dip = 4
+		mil = 3
+	}
+}

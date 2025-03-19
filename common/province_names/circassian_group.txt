@@ -1,0 +1,12 @@
+#organized by region//area
+#taman
+2447 = { "Taman" "Matrega" }
+#circassia
+463 = { "K'emguy" "Karayitona" }
+2195 = { "Nidjepsixo" "Nidjepsixo" }
+6226 = { "Ubix" "Soçe" }
+#6228 = { "Abazeher" "Humara" }
+6229 = { "Maurolaxo" "Maurolaxo" }
+6230 = { "Siba" "Siba" }
+6231 = { "Shagwaje" "Shagwaje" }
+6232 = { "Labezjy" "Labezjy" }

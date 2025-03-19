@@ -1,0 +1,134 @@
+country_decisions = {
+
+	romanian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_romania_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { tag = HLR }
+			NOT = { tag = PAP }
+			NOT = { exists = RMN }
+			culture_group = dacian
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		
+		provinces_to_highlight = {
+			OR = {
+				area = east_muntenia_area
+				area = wallachia_area
+				area = oltenia_area
+				area = bessarabia_area
+				area = moldavia_area
+				area = bukovina_pokuttia_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			OR = { 
+				AND = { 
+					east_muntenia_area = { 
+						country_or_non_sovereign_subject_holds = ROOT 
+						type = all 
+					}
+					wallachia_area = { 
+						country_or_non_sovereign_subject_holds = ROOT 
+						type = all 
+					}
+					oltenia_area = { 
+						country_or_non_sovereign_subject_holds = ROOT 
+						type = all 
+					}
+					bessarabia_area = { 
+						country_or_non_sovereign_subject_holds = ROOT 
+						type = all 
+					}
+					moldavia_area = { 
+						country_or_non_sovereign_subject_holds = ROOT 
+						type = all 
+					}
+					bukovina_pokuttia_area = { 
+						country_or_non_sovereign_subject_holds = ROOT 
+						type = all 
+					}
+				}
+				OR = { 
+					AND = { 
+						tag = WAL 
+						senior_union_with = MOL 
+					}
+					AND = { 
+						tag = MOL 
+						senior_union_with = WAL
+					}
+				}
+			}
+		}
+		effect = {
+			if = { 
+				limit = { tag = WAL }
+				tooltip = { 
+					ROOT = { inherit = MOL }
+				}
+			}
+			if = { 
+				limit = { tag = MOL }
+				tooltip = { 
+					ROOT = { inherit = WAL }
+				}
+			}
+			hidden_effect = { 
+				if = { 
+					limit = { senior_union_with = MOL }
+					inherit = MOL 
+				}
+				if = { 
+					limit = { senior_union_with = WAL }
+					inherit = WAL
+				}
+			}
+			change_tag = RMN
+			on_change_tag_effect = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			swap_non_generic_missions = yes
+			random_owned_province = {
+				add_base_tax = 1
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_romania_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}

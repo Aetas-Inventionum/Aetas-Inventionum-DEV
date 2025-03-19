@@ -1,0 +1,723 @@
+namespace = aetas_mor
+normal_or_historical_nations = yes
+
+# Wattasid Viziers
+country_event = {
+	id = aetas_mor.1
+	title = aetas_mor.1.t
+	desc = aetas_mor.1.d
+	picture = muslimgfx_BAD_WITH_MONARCH_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = { 
+		tag = FEZ 
+		NOT = { 
+			OR = { 
+				has_reform = wattasid_vizier_reform
+				have_had_reform = wattasid_vizier_reform
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	option = { #shit
+		name = "aetas_mor.1.a"
+		add_government_reform = wattasid_vizier_reform
+
+	}
+}
+#Scheme to overthrow wattasid control
+country_event = {
+	id = aetas_mor.2
+	title = aetas_mor.2.t
+	desc = aetas_mor.2.d
+	picture = muslimgfx_BANKRUPTCY_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	
+	trigger = { 
+		tag = FEZ 
+		OR = { 
+			has_reform = wattasid_vizier_reform
+			have_had_reform = wattasid_vizier_reform
+		}
+	}
+
+	option = { #lets try to rid ourselves
+		name = "aetas_mor.2.a"
+		set_country_flag = fez_attempt_flag
+		random_list = { 
+			2 = {  
+				country_event = { id = aetas_mor.3 }
+			}
+			1 = {  
+				country_event = { id = aetas_mor.4 }
+			}
+		}
+	}
+	option = { #we do nothing
+		name = "aetas_mor.2.b"
+		set_country_flag = fez_nothing_flag
+	}
+	option = { #allow the wattasids full rule and end this nonsense
+		name ="aetas_mor.2.c"
+		set_country_flag = fez_accept_wattasids_flag
+		define_ruler = { 
+			name = "Yahya I"
+			dynasty = "Iwttasn"
+			adm = 3
+			dip = 1
+			mil = 1
+		}
+		add_stability = -5
+		remove_government_reform = wattasid_vizier_reform
+		set_country_flag = wattasid_resolution
+		hidden_effect = { 
+			if = {
+				limit = { exists = RIF }
+				inherit = RIF
+			}
+		}
+	}
+}
+#scheme fails and sultan is executed 
+country_event = {
+	id = aetas_mor.3
+	title = aetas_mor.3.t
+	desc = aetas_mor.3.d
+	picture = muslimgfx_ANGRY_MOB_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { 
+		name = "aetas_mor.3.a"
+		kill_ruler = yes
+	}
+}
+#scheme succeeds and the wattasids are removed
+country_event = {
+	id = aetas_mor.4
+	title = aetas_mor.4.t
+	desc = aetas_mor.4.d
+	picture = muslimgfx_GOOD_WITH_MONARCH_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { 
+		name = "aetas_mor.4.a"
+		remove_government_reform = wattasid_vizier_reform
+		set_country_flag = wattasids_removed
+		add_stability = 1
+	}
+}
+#Fall of Marrakesh
+country_event = {
+	id = aetas_mor.5
+	title = aetas_mor.5.t
+	desc = aetas_mor.5.d
+	picture = muslimgfx_CONQUEST_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes 
+
+	option = {
+		name = "aetas_mor.5.a" #clear out these bastards!
+		white_peace = MRK 
+		inherit = MRK 
+	}
+}
+#move capital to marrakesh
+country_event = {
+	id = aetas_mor.6
+	title = aetas_mor.6.t
+	desc = aetas_mor.6.d
+	picture = muslimgfx_GREAT_BUILDING_eventPicture
+
+	is_triggered_only = yes 
+	fire_only_once = yes 
+
+	option = { 
+		name = "aetas_mor.6.a"
+		set_capital = 344
+		change_primary_culture = moroccan 
+		add_accepted_culture = hassanya
+	}
+
+	option = { 
+		name = "aetas_mor.6.b"
+	}
+}
+#Fall of Fez
+country_event = {
+	id = aetas_mor.7
+	title = aetas_mor.7.t
+	desc = aetas_mor.7.d
+	picture = muslimgfx_CITY_VIEW_eventPicture
+
+	fire_only_once = yes 
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			tag = FEZ
+			is_neighbor_of = FEZ 
+			is_neighbor_of = ROOT 
+		}
+	}
+
+	trigger = { 
+		OR = { 
+			tag = DRA 
+			was_tag = DRA 
+			tag = TFL 
+			was_tag = TFL 
+		}
+		exists = FEZ
+		343 = {
+			owned_by = FEZ
+			controller = {
+				OR = { 
+					tag = DRA 
+					was_tag = DRA 
+					tag = TFL 
+					was_tag = TFL
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "aetas_mor.7.a" #fez will be ours!
+		every_province = { 
+			limit = { is_core = FEZ }
+			hidden_effect = { 
+				remove_claim = ROOT 
+			}
+			add_core = ROOT 
+		}
+	}
+}
+#morocco cheat
+country_event = {
+	id = aetas_mor.100
+	title = aetas_mor.100.t
+	desc = aetas_mor.100.d
+	picture = muslimgfx_BAD_WITH_MONARCH_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { #slay
+		name = aetas_mor.100.a
+		change_tag = MOR
+		add_government_reform = moroccan_sultanate_reform
+		inherit = RIF 
+		inherit = MRK
+		set_capital = 344
+		if = {
+			limit = {
+				NOT = { has_idea_group = ai_MOR_ideas }
+			}
+			country_event = { id = ideagroups.1 } #Swap Ideas
+		}
+		swap_non_generic_missions = yes 
+	}
+	option = { 
+		name = aetas_mor.100.b
+		change_tag = MOR
+		if = { 
+			limit = { government = tribal }
+			change_government = monarchy
+			add_government_reform = shurafa_reform
+		}
+		if = { 
+			limit = { NOT = { government_rank = 2 } }
+			set_government_rank = 2
+		}
+		hidden_effect = { 
+			inherit = MRK
+			inherit = FEZ 
+			inherit = TFL 
+			create_subject = { 
+				who = TZA 
+				subject_type = fief 
+			}
+			TZA = { 
+				every_owned_province = { 
+					limit = { 
+						NOT = { 
+							OR = { 
+								is_capital = yes
+								province_id = 5740
+							} 
+						} 
+					}
+					cede_province = MOR 
+					add_core = MOR 
+				}
+				hidden_effect = { 
+					change_country_color = { color = { 187  60  30 } }
+				}
+			}
+			5723 = { 
+				cede_province = DBD 
+				remove_core = ROOT 
+			}
+			5717 = { cede_province = DBD }
+			create_march = DBD 
+			hidden_effect = { 
+				DBD = { change_country_color = { color = { 167  30  10 } } }
+			}
+			4563 = { 
+				cede_province = ROOT 
+				add_core = ROOT 
+				remove_core = RIF 
+			}
+			create_subject = {
+				who = RIF 
+				subject_type = fief 
+			}
+			hidden_effect = { 
+				RIF = { change_country_color = { color = { 177  40  10 } } }
+			}
+			4561 = {
+				change_culture = andalusi 
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 1
+				cede_province = TET 
+				remove_core = ROOT 
+			}
+			TET = { 
+				hidden_effect = { 
+					change_primary_culture = andalusi 
+				}
+				define_ruler = { 
+					name = "'Ali al-Mandri I"
+					dynasty = "al-Jayyan"
+					age = 36
+					adm = 3
+					dip = 2
+					mil = 3
+				}
+			}
+			create_subject = { 
+				who = TET 
+				subject_type = fief
+			}
+			5750 = { 
+				cede_province = AMZ 
+				remove_core = ROOT 
+			}
+			create_subject = { 
+				who = AMZ 
+				subject_type = fief
+			}
+		}
+		set_capital = 344
+		if = {
+			limit = {
+				NOT = { has_idea_group = ai_MOR_ideas }
+			}
+			country_event = { id = ideagroups.1 } #Swap Ideas
+		}
+		swap_non_generic_missions = yes 
+		complete_mission = unite_morocco
+	}
+}
+#sijilmasa into the sands of time
+country_event = {
+	id = aetas_mor.8
+	title = aetas_mor.8.t
+	desc = aetas_mor.8.d
+	picture = muslimgfx_CONQUEST_eventPicture
+	
+	fire_only_once = yes
+	major = yes 
+	major_trigger = { 
+		culture_group = maghrebi
+	}
+
+	trigger = {
+		always = no #disabled for now
+	}
+
+	option = { 
+		name = aetas_mor.8.a 
+		5752 = { 
+			add_base_tax = -1
+			add_base_production = -2
+			add_base_manpower = -1
+			rename_capital = "al-Raysani"
+			add_center_of_trade_level = -3 #False positive as we have extra tiers.
+		}
+		override_country_name  = TAFILALT
+	}
+}
+#andalusians flee to tetouan
+country_event = {
+	id = aetas_mor.9
+	title = aetas_mor.9.t
+	desc = aetas_mor.9.d
+	picture = muslimgfx_CITY_DEVELOPMENT_eventPicture
+	
+	fire_only_once = yes
+	trigger = { 
+		primary_culture = moroccan 
+		owns = 4561
+		OR = { 
+			is_year = 1492
+			any_known_country = { has_country_flag = end_of_granada }
+			NOT = { exists = GRA }
+		}
+		NOT = { exists = TET }
+	}
+
+	option = { 
+		name = aetas_mor.9.a 
+		4561 = {
+			change_culture = andalusi 
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 1
+			cede_province = TET 
+			remove_core = ROOT 
+		}
+		TET = { 
+			hidden_effect = { 
+				change_primary_culture = andalusi 
+			}
+			define_ruler = { 
+				name = "'Ali al-Mandri I"
+				dynasty = "al-Jayyan"
+				age = 36
+				adm = 3
+				dip = 2
+				mil = 3
+			}
+		}
+		create_subject = { 
+			who = TET 
+			subject_type = fief
+		}
+	}
+}
+#debdou
+country_event = {
+	id = aetas_mor.10
+	title = aetas_mor.10.t
+	desc = aetas_mor.10.d
+	picture = muslimgfx_CONQUEST_eventPicture
+	
+	fire_only_once = yes
+	trigger = { 
+		primary_culture = moroccan 
+		owns = 5723
+		NOT = { exists = DBD }
+	}
+
+	option = { 
+		name = aetas_mor.10.a
+		5723 = { 
+			cede_province = DBD 
+			add_core = DBD 
+			remove_core = ROOT 
+		}
+		5717 = { 
+			cede_province = DBD 
+			add_core = DBD 
+		}
+		DBD = { define_ruler = { dynasty = "Wartajin" } }
+		create_march = DBD 
+	}
+}
+#chefchaouen
+country_event = {
+	id = aetas_mor.11
+	title = aetas_mor.11.t
+	desc = aetas_mor.11.d
+	picture = muslimgfx_REFORM_eventPicture
+	
+	fire_only_once = yes
+	trigger = { 
+		primary_culture = moroccan 
+		owns = 5714
+		NOT = { exists = CHF }
+	}
+
+	option = { 
+		name = aetas_mor.11.a 
+		ai_chance = { factor = 1 }
+		5714 = { 
+			rename_capital = "Shafshawan"
+			change_province_name = "Shafshawan"
+			change_culture = moroccan 
+			add_base_tax = 1 
+			add_base_production = 1
+			add_base_manpower = 1 
+			cede_province = CHF 
+			add_core = CHF 
+			remove_core = ROOT 
+		}
+		create_subject = { 
+			who = CHF 
+			subject_type = fief
+		}
+	}
+	option = { 
+		name = aetas_mor.11.b
+		ai_chance = { factor = 0 }
+	}
+}
+#tazerwalt bends knee
+country_event = {
+	id = aetas_mor.12
+	title = aetas_mor.12.t
+	desc = aetas_mor.12.d
+	picture = muslimgfx_PRAYING_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_mor.12.a 
+		TZA = { 
+			every_owned_province = { 
+				limit = { NOT = { is_capital = yes } }
+				cede_province = ROOT 
+				add_core = ROOT 
+				remove_core = TZA 
+			}
+			hidden_effect = { 
+				if = { 
+					limit = { ROOT = { tag = DRA } }
+					change_country_color = { color = { 74 147 99 } }
+				}
+				else = { change_country_color = { color = { 170 80 115 } } }
+			}
+		}
+		create_subject = { 
+			who = TZA 
+			subject_type = fief 
+		}
+	}
+}
+#formation of sus 
+country_event = {
+	id = aetas_mor.13
+	title = aetas_mor.13.t
+	desc = aetas_mor.13.d
+	picture = muslimgfx_SIEGE_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	major = yes 
+	major_trigger = { 
+		OR = {
+			primary_culture = moroccan 
+			primary_culture = riffian 
+			primary_culture = atlasic 
+			primary_culture = shilha
+		}
+	}
+	
+	option = { 
+		name = aetas_mor.13.a 
+		348 = { 
+			cede_province = ROOT 
+			add_core = ROOT 
+		}
+		2464 = { 
+			if = { 
+				limit = { 
+					NOT = { 
+						OR = { 
+							owned_by = ROOT 
+							country_or_non_sovereign_subject_holds = ROOT 
+							any_country = { #owned by any ally of ROOT
+								alliance_with = ROOT
+								owns = PREV 
+							}
+						}
+					}
+				}
+				cede_province = ROOT 
+				add_core = ROOT 
+			}
+		}
+		change_tag = SOS 
+		set_capital = 348
+		if = { 
+			limit = { government = tribal }
+			change_government = monarchy 
+			add_government_reform = shurafa_reform
+		}
+		sus_area = { 
+			limit = { NOT = { owned_by = ROOT } }
+			add_core = ROOT
+		}
+		hidden_effect = { 
+			every_subject_country = { 
+				random_list = { 
+					1 = { change_country_color = { color = { 230 220 195 } } }
+					1 = { change_country_color = { color = { 190 180 155 } } }
+					1 = { change_country_color = { color = { 200 170 175 } } }
+				}
+			}
+		}
+	}
+}
+#culling the hin tata
+country_event = {
+	id = aetas_mor.14
+	title = aetas_mor.14.t
+	desc = aetas_mor.14.d
+	picture = muslimgfx_SIEGE_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_mor.14.a
+		white_peace = MRK 
+		western_morocco_area = { 
+			limit = { owned_by = MRK }
+			cede_province = ROOT 
+			add_core = ROOT 
+			remove_core = MRK 
+		}
+		5732 = { 
+			if = { 
+				limit = { owned_by = MRK }
+				cede_province = ROOT 
+				add_core = ROOT 
+			}
+		}
+		4568 = { 
+			if = { 
+				limit = { owned_by = MRK }
+				cede_province = ROOT 
+				add_core = ROOT 
+			}
+		}
+		create_subject = { 
+			who = MRK 
+			subject_type = fief 
+		}
+		hidden_effect = { 
+			MRK = {
+				change_country_color = { color = { 195 55 45 } }
+			}
+		}
+	}
+}
+#adopt almohad identity 
+country_event = {
+	id = aetas_mor.15
+	title = aetas_mor.15.t
+	desc = aetas_mor.15.d
+	picture = muslimgfx_GOOD_WITH_MONARCH_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_mor.15.a #yes 
+		ai_chance = { factor = 0 } #intended only for player
+		set_dynasty = "al-Muwahiddun" #is not a dynasty_name
+		hidden_effect = { 
+			remove_heir = {}
+			define_heir = { 
+				dynasty = "al-Muwahiddun"
+				age = 15
+			}
+		}
+		if = { 
+			limit = { NOT = { government = monarchy } }
+			change_government = monarchy 
+		}
+		add_government_reform = maghrebi_caliphate_reform
+	}
+	option = { 
+		name = aetas_mor.15.b #no
+		ai_chance = { factor = 1 }
+		if = { 
+			limit = { NOT = { government = monarchy } }
+			change_government = monarchy 
+		}
+		add_government_reform = iqta
+	}
+}
+#royal capital 
+country_event = {
+	id = aetas_mor.16
+	title = aetas_mor.16.t
+	desc = aetas_mor.16.d
+	picture = muslimgfx_GREAT_BUILDING_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes 
+	
+	option = { 
+		name = aetas_mor.16.a #murrakesh will become our capital
+		if = { 
+			limit = { NOT = { capital = 344 } }
+			set_capital = 344
+		}
+		344 = { 
+			add_base_tax = 1 
+			add_base_production = 1 
+			add_base_manpower = 1 
+		}
+		set_country_flag = mor_marrakesh_flag 
+		swap_non_generic_missions = yes 
+	}
+	option = { 
+		name = aetas_mor.16.b #ribat will shine bright as our capital
+		if = { 
+			limit = { NOT = { capital = 342 } }
+			set_capital = 342
+		}
+		342 = { 
+			add_base_tax = 1 
+			add_base_production = 1 
+			add_base_manpower = 1 
+		}
+		set_country_flag = mor_ribat_flag 
+		swap_non_generic_missions = yes 
+	}
+	option = { 
+		name = aetas_mor.16.c #fas is a natural capital of morocco 
+		if = { 
+			limit = { NOT = { capital = 343 } }
+			set_capital = 343
+		}
+		343 = { 
+			add_base_tax = 1 
+			add_base_production = 1 
+			add_base_manpower = 1 
+		}
+		set_country_flag = mor_fas_flag 
+		swap_non_generic_missions = yes 
+	}
+	option = { 
+		name = aetas_mor.16.dd #maknas will be our capital
+		if = { 
+			limit = { NOT = { capital = 2467 } }
+			set_capital = 2467
+		}
+		2467 = { 
+			add_base_tax = 1 
+			add_base_production = 1 
+			add_base_manpower = 1 
+		}
+		set_country_flag = mor_maknas_flag 
+		swap_non_generic_missions = yes 
+	}
+}

@@ -1,0 +1,9 @@
+government = theocracy
+add_government_reform = iberian_military_order_reform
+government_rank = 1
+technology_group = western
+primary_culture = andalucian
+religion = catholic
+capital = 2754
+add_army_professionalism = 0.1
+

@@ -1,0 +1,41 @@
+#5027 - Ostergo
+#Area - Frisia
+#Region - Lowlands
+
+#Core Details
+capital = "Dokkum"
+is_city = yes
+owner = FRI
+controller = FRI
+
+#Demographics
+culture = frisian
+religion = catholic
+
+#Development and Trade
+base_tax = 3
+base_production = 3
+base_manpower = 3
+trade_goods = wool
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = FRI
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes 
+
+#Special Modifiers
+set_province_flag = aetas_nodam
+add_province_triggered_modifier = low_countries_nodam
+add_province_triggered_modifier = low_countries_yesdam
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

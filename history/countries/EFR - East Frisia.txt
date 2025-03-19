@@ -1,0 +1,52 @@
+government = republic
+add_government_reform = frisian_freedom_reform
+government_rank = 1
+primary_culture = frisian
+religion = catholic
+technology_group = western
+historical_rival = OLD 
+capital = 1931	# Emden
+historical_friend = OMM
+
+1413.1.1 = {
+	monarch = {
+		name = "Keno II"
+		dynasty = "tom Brok"
+		birth_date = 1380.1.1
+		death_date = 1417.8.16
+		adm = 3
+		dip = 2
+		mil = 4
+	}
+}
+
+1413.1.1 = {
+	heir = {
+		name = "Okko"
+		monarch_name = "Okko II"
+		dynasty = "tom Brok"
+		birth_date = 1407.1.1
+		death_date = 1435.1.1
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 4
+	}
+}
+
+1391.1.1 = { 
+	leader = {	
+		name = "Fokko Ukena"	
+		type = general	
+		fire = 1	
+		shock = 3	
+		manuever = 3	
+		siege = 1	
+		death_date = 1426.1.1 
+	} 
+}
+
+add_faction_influence = {
+    faction = aetas_fetkeapers
+    influence = 50
+}

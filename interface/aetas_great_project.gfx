@@ -1,0 +1,950 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_great_projects_name_bg_overlay"
+		texturefile = "gfx//interface//great_projects//great_projects_name_bg_overlay.dds"
+	}
+	spriteType = {
+		name = "GFX_great_projects_image_frame"
+		texturefile = "gfx//interface//great_projects//great_projects_image_frame.dds"
+		allwaystransparent = yes
+	}
+	
+	#Iberia
+    spriteType = {
+        name = "GFX_great_project_ai_faro"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_faro.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_madrid"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_madrid.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_toledo"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_toledo.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_bom_jesus"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_bom_jesus.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_batalha"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_batalha.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_seville"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_seville.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_zahra"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_zahra.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_cordoba"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_cordoba.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_alcala"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_alcala.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_corral"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_corral.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_salamanca"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_salamanca.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_palace_olite"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_palace_olite.dds"
+    }
+	spriteType = {
+        name = "GFX_great_project_ai_valencia_exchange"
+        texturefile = "gfx//interface//great_projects//great_project_ai_valencia_exchange.dds"
+    }
+	spriteType = {
+        name = "GFX_great_project_ai_braganca_castle"
+        texturefile = "gfx//interface//great_projects//great_project_ai_braganca_castle.dds"
+    }
+	spriteType = {
+        name = "GFX_great_project_ai_ribiera_palace"
+        texturefile = "gfx//interface//great_projects//great_project_ai_ribiera_palace.dds"
+    }
+	spriteType = {
+        name = "GFX_great_project_ai_cathedral_maria"
+        texturefile = "gfx//interface//great_projects//great_project_ai_cathedral_maria.dds"
+    }
+	spriteType = {
+        name = "GFX_great_project_ai_barcelona_market"
+        texturefile = "gfx//interface//great_projects//great_project_ai_barcelona_market.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_compostela"
+        texturefile = "gfx//interface//great_projects//great_project_ai_compostela.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_pamplona"
+        texturefile = "gfx//interface//great_projects//great_project_ai_pamplona.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_palau"
+        texturefile = "gfx//interface//great_projects//great_project_ai_palau.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_miraflores"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_miraflores.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_segovia"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_segovia.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_lonja"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_lonja.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_albaicin"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_albaicin.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_vazquez"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_vazquez.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_alcantara"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_alcantara.dds"
+    }
+	
+	
+	#Italy
+    spriteType = {
+        name = "GFX_great_project_ai_castel_del_monte"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_castel_del_monte.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_venaria"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_venaria.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_castello_estense"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_castello_estense.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_scuola_grande"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_scuola_grande.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_grand_canal"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_grand_canal.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_san_vitale"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_san_vitale.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_venetian_arsenal"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_venetian_arsenal.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_porta_palatina"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_porta_palatina.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_uffizi"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_uffizi.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_pv"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_pv.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_pavia"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_pavia.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_vat"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_vat.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_sistine_chapel"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_sistine_chapel.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_lanterna"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_lanterna.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_st_george_bank"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_st_george_bank.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_norman_palace"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_norman_palace.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_gardens_padua"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_gardens_padua.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_montecassino"
+        texturefile = "gfx//interface//great_projects//great_project_ai_montecassino.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_castel_nuovo"
+        texturefile = "gfx//interface//great_projects//great_project_ai_castel_nuovo.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_salerno"
+        texturefile = "gfx//interface//great_projects//great_project_ai_salerno.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_bari"
+        texturefile = "gfx//interface//great_projects//great_project_ai_bari.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_urbino"
+        texturefile = "gfx//interface//great_projects//great_project_ai_urbino.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_pisa"
+        texturefile = "gfx//interface//great_projects//great_project_ai_pisa.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_bologna"
+        texturefile = "gfx//interface//great_projects//great_project_ai_bologna.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_venice"
+        texturefile = "gfx//interface//great_projects//great_project_ai_venice.dds"
+    }
+	
+	#France
+    spriteType = {
+        name = "GFX_great_project_ai_tarascon"
+        texturefile = "gfx//interface//great_projects//great_project_ai_tarascon.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_carcassonne"
+        texturefile = "gfx//interface//great_projects//great_project_ai_carcassonne.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_tours"
+        texturefile = "gfx//interface//great_projects//great_project_ai_tours.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_fontainebleu"
+        texturefile = "gfx//interface//great_projects//great_project_ai_fontainebleu.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_hotel_toulouse"
+        texturefile = "gfx//interface//great_projects//great_project_ai_hotel_toulouse.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_pau"
+        texturefile = "gfx//interface//great_projects//great_project_ai_pau.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_capitole"
+        texturefile = "gfx//interface//great_projects//great_project_ai_capitole.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_chenonceau"
+        texturefile = "gfx//interface//great_projects//great_project_ai_chenonceau.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_angers"
+        texturefile = "gfx//interface//great_projects//great_project_ai_angers.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_enclos"
+        texturefile = "gfx//interface//great_projects//great_project_ai_enclos.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_loire_docks"
+        texturefile = "gfx//interface//great_projects//great_project_ai_loire_docks.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_mont_st_michel"
+        texturefile = "gfx//interface//great_projects//great_project_ai_mont_st_michel.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_sorbonne"
+        texturefile = "gfx//interface//great_projects//great_project_ai_sorbonne.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_louvre"
+        texturefile = "gfx//interface//great_projects//great_project_ai_louvre.dds"
+    }
+	spriteType = {
+        name = "GFX_great_project_ai_brest_arsenal"
+        texturefile = "gfx//interface//great_projects//great_project_ai_brest_arsenal.dds"
+    }
+	spriteType = {
+        name = "GFX_great_project_ai_fougeres_castle"
+        texturefile = "gfx//interface//great_projects//great_project_ai_fougeres_castle.dds"
+    }
+	spriteType = {
+        name = "GFX_great_project_ai_cluny_abbey"
+        texturefile = "gfx//interface//great_projects//great_project_ai_cluny_abbey.dds"
+    }
+	spriteType = {
+        name = "GFX_great_project_ai_dijon_palace"
+        texturefile = "gfx//interface//great_projects//great_project_ai_dijon_palace.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_reims"
+        texturefile = "gfx//interface//great_projects//great_project_ai_reims.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_nantes"
+        texturefile = "gfx//interface//great_projects//great_project_ai_nantes.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_toulon"
+        texturefile = "gfx//interface//great_projects//great_project_ai_toulon.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_chambery"
+        texturefile = "gfx//interface//great_projects//great_project_ai_chambery.dds"
+    }
+	
+	#Britain
+    spriteType = {
+        name = "GFX_great_project_ai_cashel"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_cashel.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_kells"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_kells.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_canterbury"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_canterbury.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_holyrood"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_holyrood.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_scone"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_scone.dds"
+    }
+	spriteType = {
+        name = "GFX_great_project_ai_patricks_cathedral"
+        texturefile = "gfx//interface//great_projects//great_project_ai_patricks_cathedral.dds"
+    }
+	spriteType = {
+        name = "GFX_great_project_ai_hill_tara"
+        texturefile = "gfx//interface//great_projects//great_project_ai_hill_tara.dds"
+    }
+	spriteType = {
+        name = "GFX_great_project_ai_cornwall_mines"
+        texturefile = "gfx//interface//great_projects//great_project_ai_cornwall_mines.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_westminster_abbey"
+        texturefile = "gfx//interface//great_projects//great_project_ai_westminster_abbey.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_fountain_abbey"
+        texturefile = "gfx//interface//great_projects//great_project_ai_fountain_abbey.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_caernafon"
+        texturefile = "gfx//interface//great_projects//great_project_ai_caernafon.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_oxford"
+        texturefile = "gfx//interface//great_projects//great_project_ai_oxford.dds"
+    }
+	
+	#Germany
+    spriteType = {
+        name = "GFX_great_project_ai_bonn_minster"
+        texturefile = "gfx//interface//great_projects//great_project_ai_bonn_minster.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_leine_palace"
+        texturefile = "gfx//interface//great_projects//great_project_ai_leine_palace.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_hildesheim"
+        texturefile = "gfx//interface//great_projects//great_project_ai_hildesheim.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_spiessturm"
+        texturefile = "gfx//interface//great_projects//great_project_ai_spiessturm.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_ludwigsburg"
+        texturefile = "gfx//interface//great_projects//great_project_ai_ludwigsburg.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_leipzig"
+        texturefile = "gfx//interface//great_projects//great_project_ai_leipzig.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_basel"
+        texturefile = "gfx//interface//great_projects//great_project_ai_basel.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_ehrenbreitstein"
+        texturefile = "gfx//interface//great_projects//great_project_ai_ehrenbreitstein.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_bonn"
+        texturefile = "gfx//interface//great_projects//great_project_ai_bonn.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_trier"
+        texturefile = "gfx//interface//great_projects//great_project_ai_trier.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_johannisburg"
+        texturefile = "gfx//interface//great_projects//great_project_ai_johannisburg.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_kramerbrucke"
+        texturefile = "gfx//interface//great_projects//great_project_ai_kramerbrucke.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_ingolstadt"
+        texturefile = "gfx//interface//great_projects//great_project_ai_ingolstadt.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_munich"
+        texturefile = "gfx//interface//great_projects//great_project_ai_munich.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_aachen"
+        texturefile = "gfx//interface//great_projects//great_project_ai_aachen.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_charles_bridge"
+        texturefile = "gfx//interface//great_projects//great_project_ai_charles_bridge.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_karlstejn"
+        texturefile = "gfx//interface//great_projects//great_project_ai_karlstejn.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_karolinum"
+        texturefile = "gfx//interface//great_projects//great_project_ai_karolinum.dds"
+    }
+	spriteType = {
+        name = "GFX_great_project_ai_heidelberg_university"
+        texturefile = "gfx//interface//great_projects//great_project_ai_heidelberg_university.dds"
+    }
+	spriteType = {
+        name = "GFX_great_project_ai_nuremberg_hospital"
+        texturefile = "gfx//interface//great_projects//great_project_ai_nuremberg_hospital.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_munchen_residenz"
+        texturefile = "gfx//interface//great_projects//great_project_ai_munchen_residenz.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_prague_hall"
+        texturefile = "gfx//interface//great_projects//great_project_ai_prague_hall.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_hofburg"
+        texturefile = "gfx//interface//great_projects//great_project_ai_hofburg.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_schlossberg"
+        texturefile = "gfx//interface//great_projects//great_project_ai_schlossberg.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_nonnberg"
+        texturefile = "gfx//interface//great_projects//great_project_ai_nonnberg.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_holstentor"
+        texturefile = "gfx//interface//great_projects//great_project_ai_holstentor.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_lubeck"
+        texturefile = "gfx//interface//great_projects//great_project_ai_lubeck.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_bremen"
+        texturefile = "gfx//interface//great_projects//great_project_ai_bremen.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_berlin"
+        texturefile = "gfx//interface//great_projects//great_project_ai_berlin.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_wittenberg"
+        texturefile = "gfx//interface//great_projects//great_project_ai_wittenberg.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_prague_castle"
+        texturefile = "gfx//interface//great_projects//great_project_ai_prague_castle.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_nurnberg_castle"
+        texturefile = "gfx//interface//great_projects//great_project_ai_nurnberg_castle.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_heidelberger_schloss"
+        texturefile = "gfx//interface//great_projects//great_project_ai_heidelberger_schloss.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_sanssouci"
+        texturefile = "gfx//interface//great_projects//great_project_ai_sanssouci.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_dresden"
+        texturefile = "gfx//interface//great_projects//great_project_ai_dresden.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_juleum"
+        texturefile = "gfx//interface//great_projects//great_project_ai_juleum.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_hannover_rathaus"
+        texturefile = "gfx//interface//great_projects//great_project_ai_hannover_rathaus.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_regensburg_bridge"
+        texturefile = "gfx//interface//great_projects//great_project_ai_regensburg_bridge.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_mainz"
+        texturefile = "gfx//interface//great_projects//great_project_ai_mainz.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_romerberg"
+        texturefile = "gfx//interface//great_projects//great_project_ai_romerberg.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_durkheim"
+        texturefile = "gfx//interface//great_projects//great_project_ai_durkheim.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_zytglogge"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_zytglogge.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_grossmunster"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_grossmunster.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_wien_university"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_wien_university.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_zeughaus"
+        texturefile = "gfx//interface//great_projects//great_project_ai_zeughaus.dds"
+    }
+
+
+    #Low Countries
+    spriteType = {
+        name = "GFX_great_project_ai_gravensteen"
+        texturefile = "gfx//interface//great_projects//great_project_ai_gravensteen.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_wisselbank"
+        texturefile = "gfx//interface//great_projects//great_project_ai_wisselbank.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_schepenhuis"
+        texturefile = "gfx//interface//great_projects//great_project_ai_schepenhuis.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_ypres"
+        texturefile = "gfx//interface//great_projects//great_project_ai_ypres.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_fortress_luxembourg"
+        texturefile = "gfx//interface//great_projects//great_project_ai_fortress_luxembourg.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_binnenhof"
+        texturefile = "gfx//interface//great_projects//great_project_ai_binnenhof.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_amsterdam_canals"
+        texturefile = "gfx//interface//great_projects//great_project_ai_amsterdam_canals.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_domtoren"
+        texturefile = "gfx//interface//great_projects//great_project_ai_domtoren.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_amsterdam_se"
+        texturefile = "gfx//interface//great_projects//great_project_ai_amsterdam_se.dds"
+    }
+
+
+    #Baltics
+    spriteType = {
+        name = "GFX_great_project_ai_konigsberg"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_konigsberg.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_wawel_complex"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_wawel_complex.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_crane"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_crane.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_kulm"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_kulm.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_artushof"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_artushof.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_warsaw"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_warsaw.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_vilnius"
+        texturefile = "gfx//interface//great_projects//great_project_ai_vilnius.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_kamianets"
+        texturefile = "gfx//interface//great_projects//great_project_ai_kamianets.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_jagiellon_university"
+        texturefile = "gfx//interface//great_projects//great_project_ai_jagiellon_university.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_poznan"
+        texturefile = "gfx//interface//great_projects//great_project_ai_poznan.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_gniezno"
+        texturefile = "gfx//interface//great_projects//great_project_ai_gniezno.dds"
+    }
+
+    #Scandies
+    spriteType = {
+        name = "GFX_great_project_ai_frederiksborg"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_frederiksborg.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_bryggen"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_bryggen.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_akershus"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_akershus.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_lund"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_lund.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_turku_castle"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_turku_castle.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_tre_kronor"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_tre_kronor.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_roskilde"	
+        texturefile = "gfx//interface//great_projects//great_project_ai_roskilde.dds"
+    }
+
+    #balkans
+    spriteType = {
+        name = "GFX_great_project_ai_rhodes"
+        texturefile = "gfx//interface//great_projects//great_project_ai_rhodes.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_baba_vida"
+        texturefile = "gfx//interface//great_projects//great_project_ai_baba_vida.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_tarnovo"
+        texturefile = "gfx//interface//great_projects//great_project_ai_tarnovo.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_knin"
+        texturefile = "gfx//interface//great_projects//great_project_ai_knin.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_zagreb"
+        texturefile = "gfx//interface//great_projects//great_project_ai_zagreb.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_shibenik"
+        texturefile = "gfx//interface//great_projects//great_project_ai_shibenik.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_milesava"
+        texturefile = "gfx//interface//great_projects//great_project_ai_milesava.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_visoki"
+        texturefile = "gfx//interface//great_projects//great_project_ai_visoki.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_durres"
+        texturefile = "gfx//interface//great_projects//great_project_ai_durres.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_berat"
+        texturefile = "gfx//interface//great_projects//great_project_ai_berat.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_kruje"
+        texturefile = "gfx//interface//great_projects//great_project_ai_kruje.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_gazi_husrev_beg_mosque"
+        texturefile = "gfx//interface//great_projects//great_project_ai_gazi_husrev_beg_mosque.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_rotunda"
+        texturefile = "gfx//interface//great_projects//great_project_ai_rotunda.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_argesh"
+        texturefile = "gfx//interface//great_projects//great_project_ai_argesh.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_putna"
+        texturefile = "gfx//interface//great_projects//great_project_ai_putna.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_mystras"
+        texturefile = "gfx//interface//great_projects//great_project_ai_mystras.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_hagios_demetrios"
+        texturefile = "gfx//interface//great_projects//great_project_ai_hagios_demetrios.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_blacharnae"
+        texturefile = "gfx//interface//great_projects//great_project_ai_blacharnae.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_pannonhalma"
+        texturefile = "gfx//interface//great_projects//great_project_ai_pannonhalma.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_corvin"
+        texturefile = "gfx//interface//great_projects//great_project_ai_corvin.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_fejer_basilica"
+        texturefile = "gfx//interface//great_projects//great_project_ai_fejer_basilica.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_topkapi"
+        texturefile = "gfx//interface//great_projects//great_project_ai_topkapi.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_white_tower"
+        texturefile = "gfx//interface//great_projects//great_project_ai_white_tower.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_theodosian_walls"
+        texturefile = "gfx//interface//great_projects//great_project_ai_theodosian_walls.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_uzunkopru"
+        texturefile = "gfx//interface//great_projects//great_project_ai_uzunkopru.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_stari_most"
+        texturefile = "gfx//interface//great_projects//great_project_ai_stari_most.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_smederevo"
+        texturefile = "gfx//interface//great_projects//great_project_ai_smederevo.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_targoviste"
+        texturefile = "gfx//interface//great_projects//great_project_ai_targoviste.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_tsarevets"
+        texturefile = "gfx//interface//great_projects//great_project_ai_tsarevets.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_pec"
+        texturefile = "gfx//interface//great_projects//great_project_ai_pec.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_stecak"
+        texturefile = "gfx//interface//great_projects//great_project_ai_stecak.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_rettore_palace"
+        texturefile = "gfx//interface//great_projects//great_project_ai_rettore_palace.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_diocletians_palace"
+        texturefile = "gfx//interface//great_projects//great_project_ai_diocletians_palace.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_athos"
+        texturefile = "gfx//interface//great_projects//great_project_ai_athos.dds"
+    }
+
+    #Anatolia
+    spriteType = {
+        name = "GFX_great_project_ai_st_sophia"
+        texturefile = "gfx//interface//great_projects//great_project_ai_st_sophia.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_fairy_chimneys"
+        texturefile = "gfx//interface//great_projects//great_project_ai_fairy_chimneys.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_bodrum"
+        texturefile = "gfx//interface//great_projects//great_project_ai_bodrum.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_bursa_bedestan"
+        texturefile = "gfx//interface//great_projects//great_project_ai_bursa_bedestan.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_tashkopru"
+        texturefile = "gfx//interface//great_projects//great_project_ai_tashkopru.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_sultan_han"
+        texturefile = "gfx//interface//great_projects//great_project_ai_sultan_han.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_hadrians_gate"
+        texturefile = "gfx//interface//great_projects//great_project_ai_hadrians_gate.dds"
+    }
+
+    #North Africa
+    spriteType = {
+        name = "GFX_great_project_ai_mzab"
+        texturefile = "gfx//interface//great_projects//great_project_ai_mzab.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_udayas"
+        texturefile = "gfx//interface//great_projects//great_project_ai_udayas.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_fez"
+        texturefile = "gfx//interface//great_projects//great_project_ai_fez.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_meshwar"
+        texturefile = "gfx//interface//great_projects//great_project_ai_meshwar.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_white_monastery"
+        texturefile = "gfx//interface//great_projects//great_project_ai_white_monastery.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_al_qarafa"
+        texturefile = "gfx//interface//great_projects//great_project_ai_al_qarafa.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_madrasa_qarawiyyin"
+        texturefile = "gfx//interface//great_projects//great_project_ai_madrasa_qarawiyyin.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_olive_mosque"
+        texturefile = "gfx//interface//great_projects//great_project_ai_olive_mosque.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_hassan_complex"
+        texturefile = "gfx//interface//great_projects//great_project_ai_hassan_complex.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_marrakesh_kasbah"
+        texturefile = "gfx//interface//great_projects//great_project_ai_marrakesh_kasbah.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_jemaa"
+        texturefile = "gfx//interface//great_projects//great_project_ai_jemaa.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_ksars_tafilalt"
+        texturefile = "gfx//interface//great_projects//great_project_ai_ksars_tafilalt.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_algiers"
+        texturefile = "gfx//interface//great_projects//great_project_ai_algiers.dds"
+    }
+
+    #levant
+    spriteType = {
+        name = "GFX_great_project_ai_st_hilarion"
+        texturefile = "gfx//interface//great_projects//great_project_ai_st_hilarion.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_pharos"
+        texturefile = "gfx//interface//great_projects//great_project_ai_pharos.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_madina_souq"
+        texturefile = "gfx//interface//great_projects//great_project_ai_madina_souq.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_famagusta"
+        texturefile = "gfx//interface//great_projects//great_project_ai_famagusta.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_hama"
+        texturefile = "gfx//interface//great_projects//great_project_ai_hama.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_damascus"
+        texturefile = "gfx//interface//great_projects//great_project_ai_damascus.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_qalawun"
+        texturefile = "gfx//interface//great_projects//great_project_ai_qalawun.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_cairo"
+        texturefile = "gfx//interface//great_projects//great_project_ai_cairo.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_qaitbay"
+        texturefile = "gfx//interface//great_projects//great_project_ai_qaitbay.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_zahiriyya"
+        texturefile = "gfx//interface//great_projects//great_project_ai_zahiriyya.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_sinai"
+        texturefile = "gfx//interface//great_projects//great_project_ai_sinai.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_jerusalem"
+        texturefile = "gfx//interface//great_projects//great_project_ai_jerusalem.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_bahr_yussef"
+        texturefile = "gfx//interface//great_projects//great_project_ai_bahr_yussef.dds"
+    }
+
+    #steppes
+    spriteType = {
+        name = "GFX_great_project_ai_hansaray"
+        texturefile = "gfx//interface//great_projects//great_project_ai_hansaray.dds"
+    }
+    spriteType = {
+        name = "GFX_great_project_ai_cufut_kale"
+        texturefile = "gfx//interface//great_projects//great_project_ai_cufut_kale.dds"
+    }
+
+    #russia
+    spriteType = {
+        name = "GFX_great_project_ai_novgorod_kremlin"
+        texturefile = "gfx//interface//great_projects//great_project_ai_novgorod_kremlin.dds"
+    }
+}

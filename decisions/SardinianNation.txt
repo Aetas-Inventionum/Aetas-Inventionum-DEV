@@ -1,0 +1,74 @@
+country_decisions = {
+	sardinian_nation_decision = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			was_never_german_regional_tag_trigger = yes
+			NOT = { has_country_flag = formed_sic_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			primary_culture = sardinian 
+			NOT = { 
+				tag =  SAR
+			}
+		}
+		provinces_to_highlight = {
+			area = corsica_sardinia_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 2986
+			owns_core_province = 127
+			corsica_sardinia_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+			NOT = { exists = SAR }
+		}
+		effect = {
+			change_tag = SAR
+			on_change_tag_effect = yes
+			restore_country_name_effect = yes
+			if = { 
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = { 
+				limit = {
+					NOT = {
+						2986 = {
+							is_capital = yes
+						}
+					}
+				}
+				set_capital = 2986
+			}
+			set_country_flag = formed_sar_flag
+			if = {
+				limit = { 
+					has_custom_ideas = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			swap_non_generic_missions = yes
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		ai_importance = 400
+	}
+}

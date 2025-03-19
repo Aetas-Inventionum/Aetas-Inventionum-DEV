@@ -1,0 +1,87 @@
+namespace = aetas_estate_privilege_events
+
+# estate_church_strong_bishops_austria
+province_event = {
+	id = aetas_estate_privilege_events.1
+	is_triggered_only = yes
+    hidden = yes
+    
+    trigger = {
+		OR = { 
+			area = lower_styria_area
+			area = carinthia_area
+			area = real_carinthia_area
+		}
+    }
+    
+    option = {
+        if = {
+            limit = {
+                strong_bishops_austria_trigger = yes
+            }
+            lower_styria_area = {
+                if = {
+                    limit = {
+                        owner = {
+                            has_estate_privilege = estate_church_strong_bishops_austria
+                        }
+                    }
+			        add_province_modifier = {
+			        	name = hab_bishops
+			        	duration = -1
+			        }  
+                }
+                else = {
+                    remove_province_modifier = hab_bishops
+                } 
+            }
+            carinthia_area = {
+                if = {
+                    limit = {
+                        owner = {
+                            has_estate_privilege = estate_church_strong_bishops_austria
+                        }
+                    }
+			        add_province_modifier = {
+			        	name = hab_bishops
+			        	duration = -1
+			        }  
+                }
+                else = {
+                    remove_province_modifier = hab_bishops
+                }
+            }
+            real_carinthia_area = {
+                if = {
+                    limit = {
+                        owner = {
+                            has_estate_privilege = estate_church_strong_bishops_austria
+                        }
+                    }
+			        add_province_modifier = {
+			        	name = hab_bishops
+			        	duration = -1
+			        }  
+                }
+                else = {
+                    remove_province_modifier = hab_bishops
+                } 
+            }
+        }
+        else = {
+            lower_styria_area = {
+                remove_province_modifier = hab_bishops
+            }
+            carinthia_area = {
+                remove_province_modifier = hab_bishops
+            }
+            real_carinthia_area = {
+                remove_province_modifier = hab_bishops
+            }
+        }
+        
+        ai_chance = {
+            factor = 1
+        }
+    }
+}

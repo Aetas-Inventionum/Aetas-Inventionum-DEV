@@ -1,0 +1,40 @@
+#214 - Aragon
+#Area - Aragon
+#Region - Iberia
+
+#Core Details
+capital = "Zaragoza"
+is_city = yes
+owner = ARA
+controller = ARA
+
+#Demographics
+culture = aragonese
+religion = catholic
+
+#Development and Trade
+base_tax = 4
+base_production = 4
+base_manpower = 3
+trade_goods = metallurgy     #saragossa's workshops reached high level of specialization in the crown for manufacturing weapons, and it was organized at an institutional level through trade associations, etc. starting in the 13th century.
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = ARA
+
+#Other Political
+hre = no
+seat_in_parliament = yes
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+center_of_trade = 2
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

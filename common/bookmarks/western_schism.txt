@@ -1,0 +1,16 @@
+bookmark =
+{
+	name = "WESTERN_SCHISM"
+	desc = "WESTERN_SCHISM_DESC"
+	date = 1415.8.22
+	
+	center = 118
+	
+	country = PAP
+	country = NAP
+	country = MLO
+	country = VEN
+	country = GEN
+	country = LAN
+	country = SAV
+}

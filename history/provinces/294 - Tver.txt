@@ -1,0 +1,38 @@
+#294 - Tver
+#Area - Tver
+#Region - Russia 
+
+#Core Details
+capital = "Tver"
+is_city = yes
+owner = TVE
+controller = TVE
+
+#Demographics
+culture = russian
+religion = orthodox
+
+#Development and Trade
+base_tax = 5
+base_production = 5
+base_manpower = 5
+trade_goods = books	#very developped literature, but could be metallurgy too
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = TVE
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+center_of_trade = 2
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = nomad_group
+
+#Histories

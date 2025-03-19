@@ -1,0 +1,642 @@
+ai_tlc_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = TLC } 
+
+	tlc_debdu = {
+		icon = pacify_the_albanian_lands
+		position = 2
+		required_missions = { tlc_army } 
+		provinces_to_highlight = {  
+			province_id = 5723
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = { 5723 = { country_or_non_sovereign_subject_holds = ROOT } } 
+
+		effect = {  
+			marrekesh_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			rif_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	tlc_fez = {
+		icon = mission_develop_alhambra
+		position = 3
+		required_missions = { tlc_debdu } 
+		provinces_to_highlight = {  
+			area = marrekesh_area 
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			marrekesh_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = tlc_champ_fez
+				duration = -1 
+			}
+			tamesna_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			western_morocco_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	tlc_mrk = {
+		icon = mission_el_badi_palace
+		position = 4
+		required_missions = { tlc_fez } 
+		provinces_to_highlight = {  
+			area = tamesna_area 
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			tamesna_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = tlc_mrk_mod
+				duration = -1
+			}
+			draa_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			tafilalt_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			southern_morocco_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+}
+ai_tlc_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = TLC } 
+
+	tlc_army = {
+		icon = mission_conquer_timbuktu
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			army_size = 1
+			manpower_percentage = 0.9
+		} 
+
+		effect = {  
+			5716 = { add_permanent_claim = ROOT }
+			5717 = { add_permanent_claim = ROOT }
+			5723 = { add_permanent_claim = ROOT }
+			kabylia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	tlc_lgh = {
+		icon = mission_pacify_the_berbers
+		position = 2
+		required_missions = { tlc_army } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			calc_true_if = { 
+				all_subject_country = { 
+					OR = { 
+						tag = LGH 
+						tag = MZB 
+						tag = CAA 
+						tag = OGL 
+						tag = TGT 
+						culture_group = berber_group 
+					}
+				}
+				amount = 5
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = tlc_tribs
+				duration = -1
+			}
+		} 
+	}
+
+	tlc_rif = {
+		icon = mission_southern_frontier_lotn
+		position = 3
+		required_missions = { tlc_debdu } 
+		provinces_to_highlight = {  
+			area = rif_area 
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			rif_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = tlc_rif_mod
+				duration = 18250
+			}
+			northern_morocco_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	tlc_tng = {
+		icon = mission_levantine_restoration
+		position = 4
+		required_missions = { tlc_rif } 
+		provinces_to_highlight = {  
+			area = northern_morocco_area 
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			northern_morocco_area = { 
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all 
+			}
+		} 
+
+		effect = {  
+			lower_andalucia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			granada_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	tlc_hegemon = {
+		icon = mission_restore_faith_in_the_throne
+		position = 5
+		required_missions = {
+			tlc_mrk
+			tlc_tng
+			tlc_dje
+			tlc_tun
+		}
+		provinces_to_highlight = {  
+			OR = { 
+				area = marrekesh_area
+				area = tamesna_area
+				area = tlemcen_area 
+				area = kabylia_area
+				area = tunisia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			marrekesh_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+			tamesna_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+			tlemcen_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+			kabylia_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+			tunisia_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = tlc_hegemon_mod
+				duration = -1
+			}
+			set_government_rank = 3
+			maghreb_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+}
+ai_tlc_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = TLC } 
+
+	tlc_trade = {
+		icon = mam_harness_spice_trade
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = { has_country_modifier = caravan_support } 
+
+		effect = { add_mercantilism = 5 } 
+	}
+
+	tlc_kby = {
+		icon = mission_reconquer_ceuta
+		position = 2
+		required_missions = { tlc_army } 
+		provinces_to_highlight = {  
+			area = kabylia_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			kabylia_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = tlc_tribes
+				duration = 18250
+			}
+			zab_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			numidia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	tlc_ait_abbas = {
+		icon = mission_conquer_air
+		position = 3
+		required_missions = { tlc_kby } 
+		provinces_to_highlight = { 
+			area = zab_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			zab_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+		} 
+
+		effect = {  
+			ouled_nail_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	tlc_dje = {
+		icon = claim_the_borderlands
+		position = 4
+		required_missions = { tlc_ait_abbas } 
+		provinces_to_highlight = {  
+			area = ouled_nail_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			ouled_nail_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+		} 
+
+		effect = {  
+			djerba_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			tripolitania_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+}
+ai_tlc_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = TLC } 
+
+	tlc_zay = {
+		icon = mission_mosque
+		position = 1
+		provinces_to_highlight = {  
+			owned_by = ROOT 
+			has_tax_building_trigger = no 
+		} 
+
+		trigger = {  
+			num_of_owned_provinces_with = { 
+				has_tax_building_trigger = yes 
+				is_core = ROOT 
+				value = 7
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = zay_mod
+				duration = -1
+			}
+		} 
+	}
+
+	tlc_tlc = {
+		icon = mam_yemen
+		position = 2
+		required_missions = {
+			tlc_gra
+			tlc_zay
+			tlc_trade
+		}
+		provinces_to_highlight = {  
+			province_id = 336
+			NOT = { 
+				AND = { 
+					num_of_times_improved = 10
+					has_tax_building_trigger = yes 
+					has_trade_building_trigger = yes 
+					has_great_project = { 
+						type = ai_meshwar
+						tier = 2 
+					}
+				}
+			}
+		} 
+
+		trigger = {  
+			336 = { 
+				num_of_times_improved = 10
+				has_tax_building_trigger = yes 
+				has_trade_building_trigger = yes 
+				has_great_project = { 
+					type = ai_meshwar
+					tier = 2 
+				}
+			}
+		} 
+
+		effect = {  
+			336 = { add_province_triggered_modifier = tlc_tlc_mod }
+		} 
+	}
+
+	tlc_ann = {
+		icon = mission_raid_on_venice
+		position = 3
+		required_missions = { tlc_kby } 
+		provinces_to_highlight = {  
+			area = numidia_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			numidia_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+		} 
+
+		effect = {  
+			tunisia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	tlc_tun = {
+		icon = mission_patronize_art_and_religion
+		position = 4
+		required_missions = { tlc_ann } 
+		provinces_to_highlight = {  
+			area = tunisia_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			tunisia_area = { 
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all 
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = tlc_tun_mod
+				duration = -1
+			}
+			byzancena_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+}
+ai_tlc_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = TLC } 
+
+	tlc_gra = {
+		icon = mission_the_roman_sultan
+		position = 1
+		provinces_to_highlight = { is_capital_of = GRA } 
+
+		trigger = {  
+			OR = { 
+				GRA = { 
+					has_opinion = { 
+						who = ROOT 
+						value = 100
+					}
+				}
+				employed_advisor = { 
+					culture = andalusi
+				}
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = tlc_gra_mod
+				duration = -1
+			}
+		} 
+	}
+
+	tlc_gra2 = {
+		icon = mission_expel_the_moriscos
+		position = 2
+		required_missions = { tlc_gra } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			any_owned_province = { 
+				OR = { 
+					culture = algerian 
+					culture = sephardic 
+					religion = jewish 
+				}
+			}
+		} 
+
+		effect = {  
+			random_owned_province = { add_base_tax = 1 }
+			add_stability = 1
+		} 
+	}
+
+	tlc_alg = {
+		icon = mission_conquer_algiers
+		position = 3
+		required_missions = {
+			tlc_tlc
+			tlc_gra2
+		}
+		provinces_to_highlight = {  
+			province_id = 338
+			NOT = { 
+				AND = { 
+					num_of_times_improved = 10 
+					has_tax_building_trigger = yes 
+					has_trade_building_trigger = yes 
+					has_great_project = { 
+						type = ai_algiers 
+						tier = 2
+					}
+				}
+			}
+		} 
+
+		trigger = {  
+			338 = { 
+				num_of_times_improved = 10 
+				has_tax_building_trigger = yes 
+				has_trade_building_trigger = yes 
+				has_great_project = { 
+					type = ai_algiers 
+					tier = 2
+				}
+			}
+		} 
+
+		effect = { country_event = { id = aetas_alg.2 } } 
+	}
+}

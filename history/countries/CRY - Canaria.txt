@@ -1,0 +1,29 @@
+government = tribal
+add_government_reform = tribal_kingdom
+government_rank = 2
+primary_culture = guanche
+religion = animism
+technology_group = sub_saharan
+capital = 366 #Gran Canaria
+
+1415.1.1 = {
+	monarch = { 
+		name = "Atidamama I"
+		dynasty = "Semidán"
+		female = yes
+		birth_date = 1385.1.1
+		death_date = 1435.1.1
+		adm = 4
+		dip = 5
+		mil = 1
+	}
+	queen = {
+		name = "Gumidafe"
+		dynasty = "Gáldar"
+		birth_date = 1390.1.1
+		death_date = 1435.1.1
+		adm = 1
+		dip = 1
+		mil = 6
+	}
+}

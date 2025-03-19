@@ -1,0 +1,18 @@
+government_rank = 1
+government = tribal
+add_government_reform = stateless_society
+technology_group = muslim
+primary_culture = fezzan
+religion = sunni
+capital = 6086	#Hun
+religious_school = maliki_school
+
+1415.1.1 = {
+	monarch = {
+		name = "Tribal Council"
+		adm = 2
+		dip = 2
+		mil = 2
+		regent = yes
+	}
+}

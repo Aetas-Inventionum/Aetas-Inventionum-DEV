@@ -1,0 +1,8 @@
+government = tribal
+add_government_reform = tribal_federation 
+government_rank = 1
+mercantilism = 10 #was 0.1, im guessing thats 10?
+primary_culture = mountain_turk
+religion = sunni 
+technology_group = muslim
+capital = 6237

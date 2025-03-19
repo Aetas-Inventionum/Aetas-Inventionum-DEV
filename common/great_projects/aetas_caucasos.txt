@@ -1,0 +1,220 @@
+narikala_fortress = {
+	start = 423 #Tbilisi 
+	date = 1415.01.01 #358.5.3 #4th century 
+	time = { months = 0	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 10
+	starting_tier = 1
+	type = monument
+	build_trigger = {
+	}
+	on_built = {
+	}
+	on_destroyed = {
+	}
+	can_use_modifiers_trigger = {
+		AND = {
+			custom_trigger_tooltip = {
+				tooltip = is_georgian_culture_tt
+				OR = {
+					culture = georgian_new
+					culture = georgian
+				}
+			}
+			province_is_or_accepts_culture = yes
+		}
+	}
+	can_upgrade_trigger = {
+		AND = {
+			custom_trigger_tooltip = {
+				tooltip = is_georgian_culture_tt
+				OR = {
+					culture = georgian_new
+					culture = georgian
+				}
+			}
+			province_is_or_accepts_culture = yes
+		}
+	}
+	keep_trigger = {
+		
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = {
+			local_fort_maintenance_modifier = -1
+			local_assault_fort_ability = -0.75
+			local_defensiveness = 0.5
+		}
+		area_modifier = {
+			
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = {
+			
+		}
+		area_modifier = {
+			local_fort_maintenance_modifier = -1
+			local_assault_fort_ability = -0.75
+			local_defensiveness = 0.5
+		}
+		region_modifier = { 
+			
+		}
+		country_modifiers = {
+		}	
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = {
+		}
+		area_modifier = {
+			
+		}
+		region_modifier = {
+			local_fort_maintenance_modifier = -1
+			local_assault_fort_ability = -0.75
+			local_defensiveness = 0.5
+		}
+		country_modifiers = {
+			
+		}
+		on_upgraded = {
+			
+		}
+	}
+}
+etchimiadzin_cathedral = {
+	start = 419 #Yerevan
+	date = 1415.01.01
+	time = { months = 0	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 10
+	starting_tier = 1
+	type = monument
+
+	build_trigger = {		
+	}
+
+	on_built = {
+	}
+
+	on_destroyed = {
+	}
+
+	can_use_modifiers_trigger = {
+		province_is_or_accepts_religion = {
+			religion = coptic
+		}
+	}
+
+	can_upgrade_trigger = {
+		province_is_or_accepts_religion = {
+			religion = coptic
+		}
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = {
+		}
+		area_modifier = {
+			local_monthly_devastation = -0.05
+		}
+		country_modifiers = {
+			tolerance_own = 0.5
+			global_missionary_strength = 0.005
+			prestige_per_development_from_conversion = 0.1
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = {
+		}
+		area_modifier = {
+			local_monthly_devastation = -0.1
+		}
+		country_modifiers = {
+			tolerance_own = 1
+			global_missionary_strength = 0.01
+			prestige_per_development_from_conversion = 0.2
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = {
+		}
+		area_modifier = {
+			local_monthly_devastation = -0.25
+		}
+		country_modifiers = {
+			tolerance_own = 2
+			global_missionary_strength = 0.02
+			prestige_per_development_from_conversion = 0.3
+		}
+		on_upgraded = {
+		}
+	}
+}

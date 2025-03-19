@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = frankokratic_reform
+government_rank = 1
+mercantilism = 25
+primary_culture = venetian
+add_accepted_culture = greek
+religion = catholic
+technology_group = western #eastern
+capital = 3003 # Euboea
+historical_friend = CDA
+
+1383.1.1 = {
+	monarch = {
+		name = "Gaspare I"
+		dynasty = "Sommarippa"
+		birth_date = 1360.1.1
+		adm = 1
+		dip = 1
+		mil = 3
+	}
+}

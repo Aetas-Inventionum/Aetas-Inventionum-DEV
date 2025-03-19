@@ -1,0 +1,37 @@
+#5828 - Putzig
+#Area - Pomerelia
+#Region - Baltic
+
+#Core Details
+capital = "Putzig"
+is_city = yes
+owner = TEU
+controller = TEU
+
+#Demographics
+culture = kashubian
+religion = catholic
+
+#Development and Trade
+base_tax = 1
+base_production = 2
+base_manpower = 1
+trade_goods = fish
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = TEU
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = eastern
+
+#Histories

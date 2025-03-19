@@ -1,0 +1,9 @@
+government = monarchy
+add_government_reform = beylik_government
+government_rank = 1
+primary_culture = turkish
+add_accepted_culture = tunisian
+religion = sunni
+technology_group = ottoman
+capital = 341 #tunis
+religious_school = hanafi_school

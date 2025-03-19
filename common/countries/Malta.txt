@@ -1,0 +1,127 @@
+#Country Name: Please see filename.
+
+graphical_culture = latingfx #westerngfx
+
+color = { 210 123 105 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	religious_ideas
+	offensive_ideas
+	maritime_ideas
+	innovativeness_ideas
+	spy_ideas
+	quality_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	french_caracolle
+	anglofrench_line
+	french_dragoon
+	prussian_frederickian
+	prussian_uhlan
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	#contemporary noble maltese names
+	"Niculachi #0" = 5
+	"Busitinu #0" = 5
+	"Thumeu #0" = 5
+	"Cola #0" = 5
+	"Grigori #0" = 5
+	"Chullu #0" = 5
+	"Demetru #0" = 5
+	"Nardu #0" = 5
+	"Pinu #0" = 5
+	"Petruzzu #0" = 5
+	"Nuzu #0" = 5
+	"Gullielmu #0" = 5
+	"Perru #0" = 5
+	"Perrisun #0" = 5
+	"Marcu #0" = 5
+	"Luca #0" = 5
+	"Matrice #0" = 5
+	"Frankinu #0" = 5
+	"Arrigu #0" = 5
+	"Julianu #0" = 5
+	"Nundu Nuccio #0" = 5
+	"Bernardu #0" = 5
+	"Giliu #0" = 5
+	"Lanza #0" = 5
+	"Orlandu #0" = 5
+	"Marinu #0" = 5
+	"Dardu #0" = 5
+	"Zaccaru #0" = 5
+	"Perellu #0" = 5
+	"Walid #0" = 5
+	"Czulu #0" = 5
+	"Johanni #0" = 5
+	"Tomaso #0" = 5
+	"Jacubinu #0" = 5
+	"Alduynu #0" = 5
+	"Hakim #0" = 5
+	"Albano #0" = 5
+	#misc writers, culture etc
+	"Pietru #0" = 5
+	"Ljuni #0" = 5 
+
+	"Orsola #0" = -1
+	"Agnesa #0" = -1
+	"Natale #0" = -1
+	"Giulu #0" = -1
+	"Tonna #0" = -1
+	"Elena #0" = -1
+	"Agata #0" = -1
+	"Muna #0" = -1
+}
+
+leader_names = {
+	#priority for Siculo-Arabic rooted families
+	Abdilla Abejer "de Abela" Agius Amaira Assant Axxac
+	Bezzina Buhagiar
+	"de Calafato" Caxaro Chiumi
+	dell'Episcopo
+	Farrug Fenec Frendu
+	Gutaje
+	Kerchop Kitcuci
+	Hakem Hellul
+	Mahallif Mahanuc Maniuni Mifsud
+	Samud Sayd Seykil Stafrag
+	Tunne
+	Xebirasi Xerri Xiklune Xiriha Xuerib
+	Zamit Zarbu Zayro Zurafe
+}
+
+ship_names = {
+	"The Blessed Gerard"
+	"Raymond du Puy de Provence"
+	"Auger de Balben"
+	"Arnaud de Comps"
+	"Gilbert d'Aissailly"
+	"Gastone de Murols"
+	"Gilbert of Syria"
+	"Roger de Moulins"
+	"Hélion de Villeneuve"
+	"Hermangard d'Asp"
+	"Garnier de Naplous"
+	"Geoffroy de Donjon"
+	"Alfonse of Portugal"
+	"Geoffrey le Rat"
+}
+
+army_names = { 
+	"Armata ta' Malta" "Armata ta' Gozo" "Armata ta' $PROVINCE$"
+}
+
+fleet_names = { 
+	"Flotta tal-kuruna" "Flotta ta' $PROVINCE$"
+}

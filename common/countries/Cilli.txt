@@ -1,0 +1,107 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+color = { 159 174 96 } #63 93 122
+
+revolutionary_colors = { 0 13 5 }
+
+historical_idea_groups = {	
+	diplomatic_ideas
+	economic_ideas
+	defensive_ideas
+	influence_ideas
+	offensive_ideas
+	trade_ideas
+	administrative_ideas
+	quality_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	dutch_maurician
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	#names of the celjski
+	"Friedrich #1" = 25 #Friderik
+	"Ulrich #1" = 25 #Ulrik
+	"Wilhelm #0" = 10 #Viljem
+	"Hans #0" = 10 #Hans
+	"Hermann #2" = 30 #Herman
+	"Ludwig #0" = 5 #lutvik
+	"Johann #0" = 5
+	"Conrad #0" = 5 #Konrad
+	"Liutpold #0" = 5 #Liutpold
+	"Gebhard #0" = 5 #Gebhard
+	"Georg #0" = 0 #Jorij
+
+	#local nobility
+	"Reinprecht #0" = 0
+	"Wolfgang #0" = 0
+	"Julius #0" = 0
+	"Poppo #0" = 0
+	"Bartholomäus #0" = 0
+	"Jobst #0" = 0
+	"Balthasar #0" = 0
+	"Berthold #0" = 0
+	"Erasm #0" = 0
+	"Andree #0" = 0
+	
+	"Anna #0" = -5 #Ana
+	"Barbara #0" = -5 #Barbara
+	"Agnes #0" = -1
+	"Elisabeth #0" = -1 #Elizabeta
+	"Jozefa #0" = -1
+	"Katarina #0" = -1
+	"Margareta #0" = -1
+	"Marija #0" = -1
+	"Terezija #0" = -1
+}
+
+leader_names = { #with slovenian equivalent when those appear
+	"von Ainöd" "von Andrian" "von Attems" "von Auersperg" #ainöd = Soteški, auersperg = Turjaski
+	"von Cilli" "von Cobenzl" #cill = celjski, cobenzl = Kobenzlové,
+	Frankapani
+	"von Graben"
+	"von Hopfenbach" #Hopfenbach = Hmeljniški
+	"von Khisl"
+	"von Lamberg" "von Lengheimb" "von Locatelli"
+	"von Manndorff" "von Moscon"
+	"von Schärffenberg" Steinbeiß "von Stubenberg"
+	"von Pettau" "von Pfannberg" "von Podwein"
+	Wagen "von Walsee"
+	Zwickel
+}
+
+ship_names = {
+	Aesontius
+	Carnia
+	Istra Ilirija
+	Jalovec
+	Kranjska
+	Ljubljana
+	Mangart
+	Prlekija Ptuj Pazin
+	Ribnica
+	Stajerska Sava Sitik
+	Triglav
+	Vrba Vinica
+	Zdravljica
+}
+
+army_names = {
+	"Armee von Sanneck"
+}

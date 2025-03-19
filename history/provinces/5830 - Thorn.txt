@@ -1,0 +1,39 @@
+#5830 - Thorn
+#Area - Kuyavia
+#Region - Poland
+
+#Core Details
+capital = "Thorn"
+is_city = yes
+owner = TEU
+controller = TEU
+
+#Demographics
+culture = polish
+religion = catholic
+
+#Development and Trade
+base_tax = 3
+base_production = 4
+base_manpower = 3
+trade_goods = cloth
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = TEU
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+center_of_trade = 2
+
+#Discoveries
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = eastern
+
+#Histories

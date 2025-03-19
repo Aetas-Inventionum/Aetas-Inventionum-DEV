@@ -1,0 +1,38 @@
+#1957 - Galich
+#Area - Galich
+#Region - Russia 
+
+#Core Details
+capital = "Galich"
+is_city = yes
+owner = ZVE
+controller = ZVE
+
+#Demographics
+culture = vologdan
+religion = orthodox
+
+#Development and Trade
+base_tax = 2
+base_production = 4
+base_manpower = 3
+trade_goods = salt  #Huge Salt Mine
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = ZVE
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+center_of_trade = 2
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = nomad_group
+
+#Histories

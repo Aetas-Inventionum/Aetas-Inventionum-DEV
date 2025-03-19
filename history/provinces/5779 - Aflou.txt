@@ -1,0 +1,30 @@
+#5779 - Aflou
+#Area - Saharan Atlas
+#Region - Maghreb
+
+#Core Details
+capital = "Aflou"
+
+#Demographics
+culture = berber
+religion = sunni
+
+#Development and Trade
+base_tax = 1
+base_production = 2
+base_manpower = 1
+trade_goods = unknown
+
+#Cores and Occupation (Alphabetical after current) 
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = muslim
+
+#Histories

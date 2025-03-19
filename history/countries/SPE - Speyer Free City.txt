@@ -1,0 +1,28 @@
+#SPY - Speyer
+
+#Political Situation
+capital = 5023 #speyer
+fixed_capital = 5023
+
+#Government
+government_rank = 1
+government = republic
+add_government_reform = free_city
+
+#Demographics
+primary_culture = palatinish
+religion = catholic
+
+#Tech and Military
+technology_group = western
+
+#History
+1415.1.1 = {
+	monarch = {
+		name = "Stadtrat"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}

@@ -1,0 +1,683 @@
+namespace = aetas_lw
+normal_or_historical_nations = yes
+
+# Custody of Forli
+country_event = {
+	id = aetas_lw.1
+	title = aetas_lw.1.t
+	desc = aetas_lw.1.d
+	picture = CONQUEST_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #we will take custody of Forli, as Giorgio willed it.
+		name = aetas_lw.1.a
+		ai_chance = { 
+			factor = 75
+		}
+		create_subject = { 
+			subject = FRL 
+			subject_type = fief
+		}
+		set_country_flag = accepted_frl
+		hidden_effect = { 
+			FRL = { 
+				change_country_color = { 
+					color = {
+						200  184  74
+					}
+				}
+			}
+		}
+		if = { 
+			limit = { 
+				NOT = { alliance_with = LAN }
+			}
+			LAN = { 
+				country_event = { id = aetas_lw.2 } #notification and florence choice
+			}
+		}
+	}
+	option = { 
+		name = aetas_lw.1.b #none of our business
+		ai_chance = {
+			factor = 25
+		}
+		set_country_flag = no_to_frl
+	}
+}
+#florence's reactoin to milanese advance in romagna
+country_event = {
+	id = aetas_lw.2	
+	title = aetas_lw.2.t
+	desc = aetas_lw.2.d
+	picture = DEBATE_REPUBLICAN_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			culture_group = latin 
+			tag = SAV
+			tag = SAR
+		}
+	}
+
+	option = { #visconti expansion ends here
+		name = aetas_lw.2.a
+		ai_chance = { 
+			factor = 50
+			modifier ={ 
+				factor = 0
+				AND = { 
+					is_at_war = yes 
+					num_of_loans = 1
+				}
+			}
+			modifier ={ 
+				factor = 15
+				OR = { 
+					NOT = { is_rival = MLO }
+					has_opinion = { 
+						who = MLO 
+						value = 25
+					}
+				}
+			}
+			modifier = { 
+				factor = 100 
+				is_rival = MLO
+			}
+		}
+		set_global_flag = lombard_wars
+		declare_war_with_cb = {
+			who = MLO 
+			casus_belli = cb_super_badboy
+		}
+		custom_tooltip = lw_wars.1.tt
+		custom_tooltip = lw_allies.tt
+		every_country = { 
+			limit = { alliance_with = LAN }
+			join_all_offensive_wars_of = LAN
+		}
+	}
+	option = { #it is lawful and we will not take any action
+		name = aetas_lw.2.a
+		ai_chance = { 
+			factor = 50
+		}
+	}
+}
+#[blank] called to participate in wars in lombardy
+country_event = {
+	id = aetas_lw.3
+	title = aetas_lw.3.t
+	desc = aetas_lw.3.d
+	picture = CIVIL_WAR_eventPicture
+	
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			culture_group = latin 
+			tag = SAV
+			tag = SAR
+		}
+	}
+
+	trigger = { 
+		has_global_flag = lombard_wars
+		OR = { 
+			tag = NAP 
+			tag = GEN 
+			tag = VEN 
+			tag = MAN 
+			tag = SIE 
+			tag = LUC 
+			tag = SAV 
+			tag = MFA 
+		}
+		NOT = { 
+			OR = { 
+				offensive_war_with = MLO 
+				defensive_war_with = LAN 
+			}
+		}
+	}
+
+	mean_time_to_happen = { 
+		months = 40
+	}
+
+	option = { 
+		name = aetas_lw.3.a #join on the side of florence
+		trigger = { 
+			OR = { #historical florentine allies
+				tag = NAP 
+				tag = SAV 
+				tag = VEN 
+				tag = MFA 
+			}
+		}
+		ai_chance = { 
+			factor = 50 
+			modifier = { 
+				factor = 100 
+				is_rival = MLO 
+			}
+			modifier = { 
+				factor = 100 
+				tag = VEN 
+			}
+			modifier = { 
+				factor = 25 
+				num_of_loans = 1
+			}
+			modifier = { 
+				factor = 10
+				is_at_war = yes 
+			}
+		}
+		join_all_offensive_wars_of = LAN 
+		if = { 
+			limit = { tag = VEN }
+			107 = { 
+				add_core = VEN 
+			}
+			5061 = { 
+				add_core = VEN 
+			}
+			4739 = { 
+				add_core = VEN
+			}
+		}
+		set_country_flag = lw_wars
+	}
+	
+	option = { 
+		name = aetas_lw.3.b #join on the side of milan #missing loc
+		trigger = {
+			OR = { 
+				tag = GEN 
+				tag = LUC 
+				tag = SIE 
+				tag = MAN
+			}
+		}
+		ai_chance = { 
+			factor = 50 
+			modifier = { 
+				factor = 100 
+				is_rival = LAN 
+			}
+			modifier = { 
+				factor = 75
+				has_opinion = { 
+					who = MLO 
+					value = 25
+				}
+			}
+			modifier = { 
+				factor = 25 
+				num_of_loans = 1
+			}
+			modifier = { 
+				factor = 10
+				is_at_war = yes 
+			}
+		}
+		join_all_defensive_wars_of = MLO 
+		set_country_flag = lw_wars
+	}
+	option = { #remain neutral
+		name = aetas_lw.3.c
+		ai_chance = { 
+			factor = 15
+			modifier = { 
+				factor = 75
+				is_at_war = yes 
+			}
+			modifier = { 
+				factor = 50
+				num_of_loans = 1
+			}
+		}
+	}
+}
+#pope calls for peace
+country_event = {
+	id = aetas_lw.4
+	title = aetas_lw.4.t
+	desc = aetas_lw.4.d
+	picture = CHURCH_ESTATE_1_eventPicture
+	
+	fire_only_once = yes 
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			culture_group = latin 
+			tag = SAV
+			tag = SAR
+		}
+	}
+
+	trigger = { 
+		tag = MLO 
+		had_global_flag = { 
+			flag = lombard_wars
+			days = 1825 #5 years
+		}
+	}
+
+	option = { 
+		name = aetas_lw.4.a #accept
+		ai_chance = { 
+			factor = 25
+			modifier = { 
+				factor = 75
+				war_exhaustion = 10
+			}
+		}
+		if = {
+			limit = {
+				is_in_war = {
+					attacker_leader = ROOT
+					defender_leader = LAN
+				}
+			}
+			white_peace = LAN
+		}
+		if = {
+			limit = {
+				is_in_war = {
+					attacker_leader = LAN
+					defender_leader = ROOT
+				}
+			}
+			white_peace = LAN
+		}
+		PAP = { 
+			inherit = FRL 
+		}
+		if = { 
+			limit = { 
+				BLG = { is_subject_of = MLO }
+			}
+			PAP = { 
+				create_subject = { 
+					subject = BLG 
+					subject_type = papal_subject_bt
+				}
+			}
+			hidden_effect = { 
+				BLG = { 
+					change_country_color = { 
+						country = TUC
+					}
+				}
+			}
+		}
+		107 = { 
+			cede_province = VEN 
+			add_core = VEN 
+		}
+		5061 = { 
+			cede_province = VEN 
+			add_core = VEN 
+		}
+		4739 = { 
+			cede_province = VEN 
+			add_core = VEN
+		}
+		every_country = { 
+			limit = {
+				OR = { 
+					capital_scope = { region = italy_region }
+					tag = SAV 
+				}
+			}
+			add_country_modifier = { 
+				name = peace_of_lodi 
+				duration = 18250
+			}
+		}
+		hidden_effect = { 
+			clr_global_flag = lombard_wars 
+			every_country = { 
+				limit = { has_country_flag = lw_wars }
+				clr_country_flag = lw_wars
+			}
+		}
+	}
+	option = { 
+		name = aetas_lw.4.b #never gonna give u up
+		ai_chance = { 
+			factor = 75
+			modifier = { 
+				factor = 15
+				war_exhaustion = 10
+			}
+		}
+	}
+}
+#anti visconti league wins
+country_event = {
+	id = aetas_lw.5
+	title = aetas_lw.5.t
+	desc = aetas_lw.5.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	fire_only_once = yes 
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			culture_group = latin 
+			tag = SAV
+			tag = SAR
+		}
+	}
+
+	trigger = { 
+		has_global_flag = lombard_wars
+		tag = LAN
+		MLO = { 
+			capital_scope = {
+				OR = {
+					controlled_by = LAN 
+					AND = { 
+						controlled_by = SAV 
+						SAV = { has_country_flag = lw_wars }
+					}
+					AND = { 
+						controlled_by = VEN
+						VEN = { has_country_flag = lw_wars }
+					}
+					AND = { 
+						controlled_by = NAP
+						NAP = { has_country_flag = lw_wars }
+					}
+					AND = { 
+						controlled_by = MFA
+						MFA = { has_country_flag = lw_wars }
+					}
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = { 
+		days = 1
+	}
+
+	option = { 
+		name = aetas_lw.5.a #victory has been won!
+		if = {
+			limit = {
+				is_in_war = {
+					attacker_leader = ROOT
+					defender_leader = LAN
+				}
+			}
+			white_peace = LAN
+		}
+		if = {
+			limit = {
+				is_in_war = {
+					attacker_leader = LAN
+					defender_leader = ROOT
+				}
+			}
+			white_peace = LAN
+		}
+		add_treasury = 500
+		PAP = { 
+			inherit = FRL 
+		}
+		if = { 
+			limit = { 
+				BLG = { is_subject_of = MLO }
+			}
+			PAP = { 
+				create_subject = { 
+					subject = BLG 
+					subject_type = papal_subject_bt
+				}
+			}
+			hidden_effect = { 
+				BLG = { 
+					change_country_color = { 
+						country = TUC
+					}
+				}
+			}
+		}
+		if = { 
+			limit = { 
+				5055 = { 
+					owned_by = MLO 
+				}
+			}
+			5055 = { 
+				cede_province = SAV 
+				add_core = SAV 
+				remove_core = MLO
+			}
+		}
+		else_if = { 
+			limit = {  
+				5055 = { 
+					owned_by = SAV 
+				}
+			}
+			5055 = { 
+				remove_core = MLO 
+			}
+		}
+		if = { 
+			limit = { 
+				5047 = { 
+					owned_by = MLO 
+				}
+			}
+			5047 = { 
+				cede_province = SAV 
+				add_core = SAV 
+				remove_core = MLO
+			}
+		}
+		else_if = { 
+			limit = {  
+				5047 = { 
+					owned_by = SAV 
+				}
+			}
+			5047 = { 
+				remove_core = MLO 
+			}
+		}
+		if = { 
+			limit = { 
+				5048 = { 
+					owned_by = MLO 
+				}
+			}
+			5048 = { 
+				cede_province = SAV 
+				add_core = SAV 
+				remove_core = MLO
+			}
+		}
+		else_if = { 
+			limit = {  
+				5048 = { 
+					owned_by = SAV 
+				}
+			}
+			5048 = { 
+				remove_core = MLO 
+			}
+		}
+		107 = { 
+			cede_province = VEN 
+			add_core = VEN 
+		}
+		5061 = { 
+			cede_province = VEN 
+			add_core = VEN 
+		}
+		4739 = { 
+			cede_province = VEN 
+			add_core = VEN
+		}
+		every_country = { 
+			limit = {
+				OR = { 
+					capital_scope = { region = italy_region }
+					tag = SAV 
+				}
+			}
+			add_country_modifier = { 
+				name = peace_of_lodi 
+				duration = 18250
+			}
+		}
+	}
+	after = { 
+		clr_global_flag = lombard_wars 
+		every_country = { 
+			limit = { has_country_flag = lw_wars }
+			clr_country_flag = lw_wars
+		}
+	}
+}
+#viscontis win
+country_event = {
+	id = aetas_lw.6
+	title = aetas_lw.6.t
+	desc = aetas_lw.6.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	fire_only_once = yes 
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			culture_group = latin 
+			tag = SAV
+			tag = SAR
+		}
+	}
+
+	trigger = { 
+		has_global_flag = lombard_wars
+		tag = MLO
+		LAN = { 
+			capital_scope = {
+				OR = {
+					controlled_by = MLO
+					AND = { 
+						controlled_by = GEN
+						GEN = { has_country_flag = lw_wars }
+					}
+					AND = { 
+						controlled_by = SIE
+						SIE = { has_country_flag = lw_wars }
+					}
+					AND = { 
+						controlled_by = LUC
+						LUC = { has_country_flag = lw_wars }
+					}
+					AND = { 
+						controlled_by = MAN
+						MAN = { has_country_flag = lw_wars }
+					}
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = { 
+		days = 1
+	}
+
+	option = { 
+		name = aetas_lw.6.a #victory has been won!
+		if = {
+			limit = {
+				is_in_war = {
+					attacker_leader = ROOT
+					defender_leader = LAN
+				}
+			}
+			white_peace = LAN
+		}
+		if = {
+			limit = {
+				is_in_war = {
+					attacker_leader = LAN
+					defender_leader = ROOT
+				}
+			}
+			white_peace = LAN
+		}
+		add_treasury = 500
+		if = { 
+			limit = { SAV = { has_country_flag = lw_wars } }
+			5055 = { 
+				cede_province = MLO 
+				remove_core = SAV 
+			}
+			5047 = { 
+				cede_province = MLO 
+				remove_core = SAV
+			}
+		}
+		if = { 
+			limit = { MFA = { has_country_flag = lw_wars } }
+			5048 = { 
+				cede_province = MLO 
+				remove_core = MFA
+			}
+		}
+	}
+	after = { 
+		clr_global_flag = lombard_wars 
+		every_country = { 
+			limit = { has_country_flag = lw_wars }
+			clr_country_flag = lw_wars
+		}
+	}
+}
+#if white peace happens without event
+country_event = {
+	id = aetas_lw.7
+	title = aetas_lw.7.t
+	desc = aetas_lw.7.d
+	picture = BORDER_TENSION_eventPicture
+	
+	fire_only_once = yes 
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			culture_group = latin 
+			tag = SAV
+			tag = SAR
+		}
+	}
+
+	trigger = { 
+		has_global_flag = lombard_wars 
+		tag = MLO 
+		NOT = { defensive_war_with = LAN }
+	}
+	option = { 
+		name = aetas_lw.7.a #glad thats over
+	}
+	after = { 
+		clr_global_flag = lombard_wars 
+		every_country = { 
+			limit = { has_country_flag = lw_wars }
+			clr_country_flag = lw_wars
+		}
+	}
+}

@@ -1,0 +1,40 @@
+#340 - Bone
+#Area - Numidia
+#Region - Maghreb
+
+#Core Details
+capital = "Annaba"
+is_city = yes
+owner = TUN
+controller = TUN
+
+#Demographics
+culture = tunisian
+religion = sunni
+
+#Development and Trade
+base_tax = 2
+base_production = 3
+base_manpower = 2
+trade_goods = fruit #dates, lit. called the Land of the Jujubes
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = TUN
+add_core = CST
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+center_of_trade = 1
+
+#Discoveries
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = eastern
+
+#Histories

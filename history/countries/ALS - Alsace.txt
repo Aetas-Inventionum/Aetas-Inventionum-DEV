@@ -1,0 +1,19 @@
+government = theocracy
+add_government_reform = hre_bishopric_reform
+government_rank = 1
+primary_culture = alsatian
+religion = catholic
+technology_group = western
+capital = 75	# Strasbourg
+fixed_capital = 75 # Cannot move capital away from this province & no power cost to move to it
+mercantilism = 25
+
+1411.1.1 = {
+	monarch = {
+		name = "Wilhelm II"
+		dynasty = "von Diest"
+		adm = 3
+		dip = 0
+		mil = 2
+	}
+}

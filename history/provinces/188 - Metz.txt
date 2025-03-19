@@ -1,0 +1,41 @@
+#188 - Metz
+#Area - Lorraine
+#Region - France
+
+#Core Details
+capital = "Metz"
+is_city = yes
+owner = MSN
+controller = MSN 
+
+#Demographics
+culture = lorrain
+religion = catholic
+
+#Development and Trade
+base_tax = 5
+base_production = 5
+base_manpower = 5
+trade_goods = cloth
+latent_trade_goods = { coal }
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = MSN
+add_core = MTZ
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+center_of_trade = 3
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

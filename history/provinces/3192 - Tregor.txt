@@ -1,0 +1,38 @@
+#3192 - Tregor
+#Area - Lower Brittany
+#Region - France
+
+#Core Details
+capital = "Morlaix"
+is_city = yes
+owner = BRI
+controller = BRI
+
+#Demographics
+culture = celtic_breton
+religion = catholic
+
+#Development and Trade
+base_tax = 3
+base_production = 3
+base_manpower = 3
+trade_goods = cloth
+
+#Cores and Occupation (Alphabetical after current)
+add_core = BRI 
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+center_of_trade = 1
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

@@ -1,0 +1,15 @@
+bookmark =
+{
+	name = "FRAGILITY_OF_MAGHREB"
+	desc = "FRAGILITY_OF_MAGHREB_DESC"
+	date = 1415.8.22
+	
+	center = 338 #algiers, seems like a good central spot
+	
+	country = FEZ 
+	country = TUN 
+	country = TLC  
+	country = DRA
+	country = TFL 
+	country = RIF
+}

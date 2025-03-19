@@ -1,0 +1,7 @@
+government = monarchy
+add_government_reform = iqta
+primary_culture = siqilian
+religion = sunni
+technology_group = muslim
+government_rank = 1
+capital = 125 #palermo

@@ -1,0 +1,171 @@
+namespace = aetas_swi
+normal_or_historical_nations = yes
+
+#Become a protectorate and associate of Switzerland? 
+country_event = {
+	id = aetas_swi.1
+	title = aetas_swi.1.t
+	desc = aetas_swi.1.d
+	picture = BURGHER_ESTATE_eventPicture
+	
+	is_triggered_only = yes 
+
+	major = yes 
+	major_trigger = { tag = SWI }
+
+	option = { #become a fief
+		name = aetas_swi.1.a
+		ai_chance = {
+			factor = 50
+			modifier = { 
+				FROM = { ai = no }
+				factor = 100
+			}
+			modifier = { 
+				FROM = { total_development = ROOT }
+				factor = 0
+			}
+		}
+		FROM = {
+			create_subject = { 
+				who = ROOT
+				subject_type = fief 
+			}
+		}
+		if = { 
+			limit = { tag = GLL }
+			hidden_effect = { change_country_color = { color = { 185 30 30 } } }
+		}
+		else_if = { 
+			limit = { tag = GRU }
+			hidden_effect = { change_country_color = { color = { 150 43 43 } } }
+		}
+		else_if = { 
+			limit = { tag = FRB }
+			hidden_effect = { change_country_color = { color = { 195 27 27 } } }
+		}
+		else_if = { 
+			limit = { tag = MLH }
+			hidden_effect = { change_country_color = { color = { 220 45 30 } } }
+		}
+		else_if = { 
+			limit = { tag = GNV }
+			hidden_effect = { change_country_color = { color = { 220 85 70 } } }
+		}
+	}
+	option = { #no!
+		name = aetas_swi.1.b
+		ai_chance = {
+			factor = 50
+			modifier = { 
+				FROM = { ai = no }
+				factor = 0
+			}
+			modifier = { 
+				FROM = { total_development = ROOT }
+				factor = 100
+			}
+		}
+	}
+}
+#ask the grey leagues//seven tithings to become an autonomous union
+country_event = {
+	id = aetas_swi.2
+	title = aetas_swi.2.t
+	desc = aetas_swi.2.d
+	picture = BURGHER_ESTATE_eventPicture
+	
+	is_triggered_only = yes 
+
+	major = yes 
+	major_trigger = { tag = SWI }
+
+	option = { #become a union of switzerland
+		name = aetas_swi.2.a
+		ai_chance = {
+			factor = 50
+			modifier = { 
+				FROM = { ai = no }
+				factor = 100
+			}
+			modifier = { 
+				FROM = { NOT = { total_development = ROOT } }
+				factor = 0
+			}
+		}
+		FROM = {
+			create_subject = { 
+				who = ROOT
+				subject_type = lithuania_union
+			}
+		}
+		if = { 
+			limit = { tag = GHB }
+			5060 = { add_core = ROOT }
+		}
+	}
+	option = { #no!
+		name = aetas_swi.2.b
+		ai_chance = {
+			factor = 50
+			modifier = { 
+				FROM = { ai = no }
+				factor = 0
+			}
+			modifier = { 
+				tag = ZDN
+				factor = 0
+			}
+			modifier = { 
+				FROM = { NOT = { total_development = ROOT } }
+				factor = 100
+			}
+		}
+	}
+}
+#zwingli
+country_event = {
+	id = aetas_swi.3
+	title = aetas_swi.3.t
+	desc = aetas_swi.3.d
+	picture = ADULT_BAPTISME_eventPicture
+	
+	fire_only_once = yes 
+	is_triggered_only = yes 
+
+	major = yes 
+	major_trigger = { 
+		is_neighbor_of = ROOT
+	}
+
+	option = { 
+		name = aetas_swi.3.a #convert to reformed
+		ai_chance = { factor = 1 } #historical
+		1869 = { 
+			change_religion = reformed 
+			add_reform_center = reformed 
+		}
+		change_religion = reformed 
+		define_advisor = { 
+			type = theologian 
+			name = "Ulrich Zwingli"
+			religion = reformed 
+			culture = swiss 
+			skill = 3
+			discount = yes 
+		}
+		set_country_flag = swi_zwingli_flag
+		swap_non_generic_missions = yes 
+	}
+	option = {
+		name = aetas_swi.3.b #do not convert to reformed
+		ai_chance = { factor = 0 }
+		add_stability = -2
+		1869 = { 
+			change_religion = reformed 
+			add_reform_center = reformed 
+		}
+		set_country_flag = swi_cath_flag
+		swap_non_generic_missions = yes 
+	}
+}

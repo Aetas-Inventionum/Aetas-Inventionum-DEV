@@ -1,0 +1,20 @@
+government = theocracy
+add_government_reform = imperial_abbey_reform
+government_rank = 1
+primary_culture = palatinehessian
+religion = catholic
+technology_group = western
+capital = 4774
+fixed_capital = 4774
+
+
+1395.1.1 = {
+	monarch = {
+		name = "Johann I"
+		dynasty = "von Merlau"
+		birth_date = 1350.1.1 #guess
+		adm = 3
+		dip = 3
+		mil = 1
+	}
+}

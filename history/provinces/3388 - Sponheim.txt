@@ -1,0 +1,38 @@
+#3388 - Sponheim
+#Area - Lower Palatinate
+#Region - North Germany
+
+#Core Details
+capital = "Sponheim"
+is_city = yes
+owner = SPH
+controller = SPH
+
+#Demographics
+culture = hessian
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 1
+base_manpower = 1
+trade_goods = grain
+
+#Cores and Occupation (Alphabetical after current)
+add_core = SPH
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

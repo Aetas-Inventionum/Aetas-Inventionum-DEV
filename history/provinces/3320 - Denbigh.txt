@@ -1,0 +1,39 @@
+#3320 - Denbigh
+#Area - Wales
+#Region - British Isles
+
+#Core Details
+capital = "Denbigh"
+is_city = yes
+owner = WLM
+controller = WLM
+
+#Demographics
+culture = welsh
+religion = catholic
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = grain
+latent_trade_goods = { coal }
+
+#Cores and Occupation (Alphabetical after current)
+add_core = WLM
+add_core = WLS
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

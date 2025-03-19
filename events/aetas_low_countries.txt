@@ -1,0 +1,382 @@
+namespace = aetas_low_countries
+
+##### FILE FOR MINOR EVENTS, DO NOT PUT EVENT CHAINS IN HERE #####
+
+##################################
+### MAARTEN VAN ROSSUM RETURNS ###
+##################################
+
+country_event = { #Maarten van Rossum returns to Gelre/Zutphen, after being a Frisian Stadtholder. 
+	id = aetas_low_countries.1
+	title = aetas_low_countries.1.t
+	desc = aetas_low_countries.1.d
+	picture = GENERALS_DISCUSSING_eventPicture
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 12
+
+		modifier = {
+			factor = 0.8
+			NOT = {
+				AND = {
+					exists = FRI
+					exists = EFR
+					exists = GRN
+					exists = MFR
+				}
+			}
+		}
+	}
+	
+	trigger = {
+		tag = GEL
+		is_year = 1518
+		NOT = { is_year = 1553 }
+	}
+	
+	option = {
+		name = aetas_low_countries.1.a #Generate a general
+		ai_chance = {
+			factor = 80
+		}
+		define_general = {
+			fire = 4
+			shock = 5
+			manuever = 4
+			siege = 2
+			name = "Maarten van Rossum"
+			trait = ruthless_personality
+		}
+	}
+
+	option = {
+		name = aetas_low_countries.1.b #No effect
+		ai_chance = {
+			factor = 20
+		}
+		custom_tooltip = aetas_low_countries.1.b.tt #Omnious wonder about never knowing his impact
+	}
+}
+
+########################################
+### ZUIDERZEE and WADDENZEE FLOODING ###
+########################################
+
+country_event = { #Flooding in the non-Frisian Zuiderzee provinces.
+	id = aetas_low_countries.2 
+	title = aetas_low_countries.2.t
+	desc = aetas_low_countries.2.d
+	picture = LOW_COUNTRIES_DAMS_eventPicture
+	goto = alc_2_target
+	
+	mean_time_to_happen = {
+		months = 140
+	}
+	
+	trigger = {
+		any_owned_province = {
+				AND = {
+					has_province_flag = aetas_nodam
+					NOT = {
+						OR = {
+							province_id = 100 # Fryslan
+							province_id = 5027 # Ostergo
+							province_id = 3353 # Ommelanden
+							province_id = 1931 # Emden
+							province_id = 5372 # Jever
+						}
+					}
+				}
+			}
+		}
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					AND = {
+						has_province_flag = aetas_nodam
+						NOT = {
+							OR = {
+								province_id = 100 # Fryslan
+								province_id = 5027 # Ostergo
+								province_id = 3353 # Ommelanden
+								province_id = 1931 # Emden
+								province_id = 5372 # Jever
+							}
+						}
+					}
+				}
+				save_event_target_as = alc_2_target
+			}
+			
+		}
+	}
+
+	option = {
+		name = aetas_low_countries.2.a #Dam the province, preventing floods ever again.
+		event_target:alc_2_target = {
+			add_base_tax = -1
+			add_base_manpower = -1
+			add_base_production = 1
+			clr_province_flag = aetas_nodam
+			set_province_flag = aetas_yesdam
+		}
+		add_years_of_income = -0.33
+		custom_tooltip = aetas_flooding_dams
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				treasury = 30
+			}
+		}
+    }
+
+	option = {
+		name = aetas_low_countries.2.b #Do nothing, get maluses
+		add_treasury = -25
+		custom_tooltip = aetas_random_dev_loss_2
+		hidden_effect = {
+			event_target:alc_2_target = {
+				random_list = {
+					33 = {
+						add_base_manpower = -1
+					}
+					33 = {
+						add_base_production = -1
+					}
+					33 = {
+						add_base_tax = -1
+					}
+				}
+				random_list = {
+					33 = {
+						add_base_manpower = -1
+					}
+					33 = {
+						add_base_production = -1
+					}
+					33 = {
+						add_base_tax = -1
+					}
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				NOT = {
+					treasury = 30
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Flooding in the Friesland province.
+	id = aetas_low_countries.3
+	title = aetas_low_countries.3.t
+	desc = aetas_low_countries.3.d
+	picture = LOW_COUNTRIES_DAMS_eventPicture
+	goto = alc_3_target
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	trigger = {
+		any_owned_province = {
+				has_province_flag = aetas_nodam
+				province_id = 100 # Fryslan
+			}
+		}
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					has_province_flag = aetas_nodam
+					province_id = 100 # Fryslan
+				}
+				save_event_target_as = alc_3_target
+			}
+			
+		}
+	}
+
+	option = {
+		name = aetas_low_countries.3.a #Dam the province, preventing floods ever again.
+		event_target:alc_3_target = {
+			custom_tooltip = aetas_random_dev_loss_3
+			hidden_effect = {
+				random_list = {
+					50 = {
+						add_base_manpower = -1
+					}
+					50 = {
+						add_base_tax = -1
+					}
+				}
+			}
+			add_base_production = 1
+			clr_province_flag = aetas_nodam
+			set_province_flag = aetas_yesdam
+		}
+		add_years_of_income = -0.33
+		custom_tooltip = aetas_flooding_dams
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				treasury = 30
+			}
+		}
+    }
+
+	option = {
+		name = aetas_low_countries.3.b #Retreat to the terps, get maluses
+		add_treasury = -25
+		custom_tooltip = aetas_random_dev_loss_3
+		hidden_effect = {
+			event_target:alc_3_target = {
+				random_list = {
+					33 = {
+						add_base_manpower = -1
+					}
+					33 = {
+						add_base_production = -1
+					}
+					33 = {
+						add_base_tax = -1
+					}
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				NOT = {
+					treasury = 30
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Flooding in the non-PROVID 100 Waddenzee provinces.
+	id = aetas_low_countries.4
+	title = aetas_low_countries.4.t
+	desc = aetas_low_countries.4.d
+	picture = LOW_COUNTRIES_DAMS_eventPicture
+	goto = alc_4_target
+	
+	mean_time_to_happen = {
+		months = 180
+	}
+	
+	trigger = {
+		any_owned_province = {
+				AND = {
+					has_province_flag = aetas_nodam
+					NOT = {
+						OR = {
+							province_id = 100 # Fryslan
+							province_id = 3349 # Haarlem
+							province_id = 97 # Amsterdam
+							province_id = 98 # Utrecht
+							province_id = 99 # Gelre
+							province_id = 4381 # Oversticht
+						}
+					}
+				}
+			}
+		}
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					AND = {
+						has_province_flag = aetas_nodam
+						NOT = {
+							OR = {
+								province_id = 100 # Fryslan
+								province_id = 3349 # Haarlem
+								province_id = 97 # Amsterdam
+								province_id = 98 # Utrecht
+								province_id = 99 # Gelre
+								province_id = 4381 # Oversticht
+							}
+						}
+					}
+				}
+				save_event_target_as = alc_4_target
+			}
+			
+		}
+	}
+
+	option = {
+		name = aetas_low_countries.4.a #Dam the province, preventing floods ever again.
+		event_target:alc_4_target = {
+			custom_tooltip = aetas_random_dev_loss_4
+			hidden_effect = {
+				random_list = {
+					50 = {
+						add_base_manpower = -1
+					}
+					50 = {
+						add_base_tax = -1
+					}
+				}
+			}
+			add_base_production = 1
+			clr_province_flag = aetas_nodam
+			set_province_flag = aetas_yesdam
+		}
+		add_years_of_income = -0.33
+		custom_tooltip = aetas_flooding_dams
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				treasury = 30
+			}
+		}
+    }
+
+	option = {
+		name = aetas_low_countries.4.b #Retreat to the terps, get maluses
+		add_treasury = -25
+		custom_tooltip = aetas_random_dev_loss_4
+		hidden_effect = {
+			event_target:alc_4_target = {
+				random_list = {
+					33 = {
+						add_base_manpower = -1
+					}
+					33 = {
+						add_base_production = -1
+					}
+					33 = {
+						add_base_tax = -1
+					}
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				NOT = {
+					treasury = 30
+				}
+			}
+		}
+	}
+}

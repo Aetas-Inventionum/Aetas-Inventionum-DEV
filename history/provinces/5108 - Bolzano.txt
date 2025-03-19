@@ -1,0 +1,39 @@
+#5108 - Bolzano
+#Area - Trentino
+#Region - Italy
+
+#Core Details
+capital = "Bolzano"
+is_city = yes
+owner = TIR
+controller = TIR
+
+#Demographics
+culture = tyrolean
+religion = catholic
+
+#Development and Trade
+base_tax = 3
+base_production = 3
+base_manpower = 3
+trade_goods = cloth
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = TIR
+add_core = TNT
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+
+#Special Modifiers
+center_of_trade = 2
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

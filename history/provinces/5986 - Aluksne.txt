@@ -1,0 +1,38 @@
+#5986 - Aluksne
+#Area - Livonia
+#Region - Baltica 
+
+#Core Details
+capital = "Aluksne"
+is_city = yes
+owner = LIV
+controller = LIV
+
+#Demographics
+culture = latgalian
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 2
+base_manpower = 1
+trade_goods = naval_supplies
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = LIV
+add_core = LTG
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

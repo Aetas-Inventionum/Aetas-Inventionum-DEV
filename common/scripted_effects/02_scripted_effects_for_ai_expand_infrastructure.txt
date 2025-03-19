@@ -1,0 +1,127 @@
+remove_all_expanded_infrastructure_modifiers_effect = {
+ 	remove_province_modifier = expanded_infrastructure_1
+ 	remove_province_modifier = expanded_infrastructure_2
+ 	remove_province_modifier = expanded_infrastructure_3
+ 	remove_province_modifier = expanded_infrastructure_4
+ 	remove_province_modifier = expanded_infrastructure_5
+ 	remove_province_modifier = expanded_infrastructure_6
+ 	remove_province_modifier = expanded_infrastructure_7
+ 	remove_province_modifier = expanded_infrastructure_8
+ 	remove_province_modifier = expanded_infrastructure_9
+ 	remove_province_modifier = expanded_infrastructure_10
+}
+
+simulate_expanding_infrastructure_effect = {
+	if = {
+		limit = {
+			can_expand_infrastructure_0_to_1 = yes
+		}
+		remove_all_expanded_infrastructure_modifiers_effect = yes
+		add_province_modifier = { 
+			name = expanded_infrastructure_1
+			duration = -1  
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			can_expand_infrastructure_1_to_2 = yes
+		}
+		remove_all_expanded_infrastructure_modifiers_effect = yes
+		add_province_modifier = { 
+			name = expanded_infrastructure_2
+			duration = -1  
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			can_expand_infrastructure_2_to_3 = yes
+		}
+		remove_all_expanded_infrastructure_modifiers_effect = yes
+		add_province_modifier = { 
+			name = expanded_infrastructure_3
+			duration = -1  
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			can_expand_infrastructure_3_to_4 = yes
+		}
+		remove_all_expanded_infrastructure_modifiers_effect = yes
+		add_province_modifier = { 
+			name = expanded_infrastructure_4
+			duration = -1  
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			can_expand_infrastructure_4_to_5 = yes
+		}
+		remove_all_expanded_infrastructure_modifiers_effect = yes
+		add_province_modifier = { 
+			name = expanded_infrastructure_5
+			duration = -1  
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			can_expand_infrastructure_5_to_6 = yes
+		}
+		remove_all_expanded_infrastructure_modifiers_effect = yes
+		add_province_modifier = { 
+			name = expanded_infrastructure_6
+			duration = -1  
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			can_expand_infrastructure_6_to_7 = yes
+		}
+		remove_all_expanded_infrastructure_modifiers_effect = yes
+		add_province_modifier = { 
+			name = expanded_infrastructure_7
+			duration = -1  
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			can_expand_infrastructure_7_to_8 = yes
+		}
+		remove_all_expanded_infrastructure_modifiers_effect = yes
+		add_province_modifier = { 
+			name = expanded_infrastructure_8
+			duration = -1  
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			can_expand_infrastructure_8_to_9 = yes
+		}
+		remove_all_expanded_infrastructure_modifiers_effect = yes
+		add_province_modifier = { 
+			name = expanded_infrastructure_9
+			duration = -1  
+			hidden = yes
+		}
+	}
+	else_if = {
+		limit = {
+			can_expand_infrastructure_9_to_10 = yes
+		}
+		remove_all_expanded_infrastructure_modifiers_effect = yes
+		add_province_modifier = {
+			name = expanded_infrastructure_10
+			duration = -1  
+			hidden = yes
+		}
+	}
+}
+
+

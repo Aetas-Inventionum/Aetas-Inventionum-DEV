@@ -1,0 +1,38 @@
+#6499 - YuryevPovolzhsky
+#Area - Nizhny Novgorod
+#Region - Russia 
+
+#Core Details
+capital = "Yuryev Povolzhsky" 
+is_city = yes
+owner = MOS
+controller = MOS
+
+#Demographics
+culture = russian
+religion = orthodox
+
+#Development and Trade
+base_tax = 2
+base_production = 2
+base_manpower = 1
+trade_goods = iron
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = MOS
+add_core = NZH
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+center_of_trade = 1
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = nomad_group
+
+#Histories

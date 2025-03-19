@@ -1,0 +1,18 @@
+bookmark =
+{
+	name = "WEALTH_OF_HANSA"
+	desc = "WEALTH_OF_HANSA_DESC"
+	date = 1415.8.22
+	
+	center = 44 #hamburg due to nice central position
+	
+	country = HSA 
+	country = HAM 
+	country = BRE  
+	country = OLD 
+	country = LUN 
+	country = BRU 
+	country = LAU
+	country = MAG
+	country = SHL
+}

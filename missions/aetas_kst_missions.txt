@@ -1,0 +1,1999 @@
+ai_kst_tur_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = KST 
+			was_tag = KST 
+			tag = ALB 
+		}
+	} 
+
+	kst_pro = {
+		icon = moravian_arms
+		position = 2
+		required_missions = { kst_enderun } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			army_size_percentage = 1
+			army_tradition = 25
+			army_professionalism = 0.1
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = kst_pro_army
+				duration = -1
+			}
+		} 
+	}
+
+	kst_kruje = {
+		icon = pacify_the_albanian_lands
+		position = 3
+		required_missions = { kst_skander } 
+		provinces_to_highlight = {  
+			province_id = 4750
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			OR = { 
+				4750 = { country_or_non_sovereign_subject_holds = ROOT }
+				AND = { 
+					TUR = { 
+						has_opinion = { 
+							who = ROOT 
+							value = 100 
+						}
+					}
+					4750 = { owned_by = TUR }
+				}
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = kst_kruje.tt
+			hidden_effect = { 
+				if = {
+					limit = { NOT = { 4750 = { country_or_non_sovereign_subject_holds = ROOT } } } 
+					TUR = { country_event = { id = aetas_alb.10 } }
+				} 
+				else = { add_prestige = 10 }
+			}
+		} 
+	}
+
+	kst_kruje_kalaja = {
+		icon = mission_kruje
+		position = 4
+		required_missions = { kst_kruje } 
+		provinces_to_highlight = {  
+			province_id = 4750
+			NOT = { 
+				AND = { 
+					owned_by = ROOT 
+					base_manpower = 5
+					has_manpower_building_trigger = yes 
+					has_fort_building_trigger = yes 
+				}
+			}
+		} 
+
+		trigger = {  
+			4750 = { 
+				owned_by = ROOT 
+				base_manpower = 5
+				has_manpower_building_trigger = yes 
+				has_fort_building_trigger = yes 
+			}
+		} 
+
+		effect = {  
+			set_capital = 4750
+			4750 = { 
+				add_great_project_tier = { 
+					type = ai_kruje 
+					tier = 2
+				}
+			}
+		} 
+	}
+
+	kst_castle_system = {
+		icon = mission_white_tower
+		position = 5
+		required_missions = { kst_kruje_kalaja } 
+		provinces_to_highlight = {  
+			owned_by = ROOT 
+			OR = { #replaces is_neighbor_of = 4750
+				province_id = 4174
+				province_id = 5430
+				province_id = 5432
+				province_id = 6322
+				province_id = 6323
+			}
+			NOT = { has_fort_building_trigger = yes }
+		} 
+
+		trigger = {  
+			num_of_owned_provinces_with = { 
+				OR = { #replaces is_neighbor_of = 4750
+					province_id = 4174
+					province_id = 5430
+					province_id = 5432
+					province_id = 6322
+					province_id = 6323
+				}
+				has_fort_building_trigger = yes 
+				value = 3
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = nuclear_castles.tt
+			hidden_effect = { 
+				every_owned_province = { 
+					limit = { 
+						OR = { #replaces is_neighbor_of = 4750
+							province_id = 4174
+							province_id = 5430
+							province_id = 5432
+							province_id = 6322
+							province_id = 6323
+						}
+						has_fort_building_trigger = yes 
+					}
+					add_province_triggered_modifier = nuclear_castles_mod
+				}
+			}
+		} 
+	}
+}
+ai_kst_tur_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = KST 
+			was_tag = KST 
+			tag = ALB 
+		}
+	} 
+
+	kst_enderun = {
+		icon = mission_devshirme_system
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			OR = { 
+				AND = { 
+					is_subject_of = TUR 
+					dip_power = 25
+				}
+				NOT = { is_subject_of = TUR }
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = kst_enderun.tt
+			hidden_effect = { 
+				if = { 
+					limit = { is_subject_of = TUR }
+					country_event = { id = aetas_alb.7 }
+				}
+			}
+		} 
+	}
+
+	kst_skander = {
+		icon = mission_skanderberg
+		position = 2
+		required_missions = {
+			kst_enderun
+			kst_faith
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = kst_skander.tt
+				has_country_modifier = alb_gjergj_mod
+			}
+		} 
+
+		effect = {  
+			add_army_tradition = 15
+		} 
+	}
+
+	kst_dibra = {
+		icon = claim_the_borderlands
+		position = 3
+		required_missions = { kst_skander } 
+		provinces_to_highlight = {  
+			province_id = 5432
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			OR = { 
+				5432 = { country_or_non_sovereign_subject_holds = ROOT }
+				AND = { 
+					TUR = { 
+						has_opinion = { 
+							who = ROOT 
+							value = 125 
+						}
+					}
+					5432 = { owned_by = TUR }
+				}
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = kst_diber.tt
+			hidden_effect = { 
+				if = {
+					limit = { NOT = { 5432 = { country_or_non_sovereign_subject_holds = ROOT } } } 
+					TUR = { country_event = { id = aetas_alb.11 } }
+				} 
+				else = { add_prestige = 10 }
+			}
+		} 
+	}
+
+	kst_alb_revolt = {
+		icon = mission_arianiti
+		position = 4
+		required_missions = {
+			kst_dibra
+			kst_kruje
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			OR = { 
+				custom_trigger_tooltip = { 
+					tooltip = kst_aia.tt
+					TUR = { has_country_flag = aia_revolt_flag }
+				}
+				is_year = 1435
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = kst_ambitions
+				duration = 7300
+			}
+		} 
+	}
+
+	kst_lol = {
+		icon = mission_lezhe
+		position = 5
+		required_missions = {
+			kst_kruje_kalaja
+			kst_alb_revolt
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			OR = { 
+				AND = { 
+					is_year = 1435
+					dip = 6
+					mil = 6
+					has_country_modifier = alb_gjergj_mod
+				}
+				AND = { 
+					is_subject = no 
+					albania_area = { 
+						country_or_non_sovereign_subject_holds = ROOT 
+						type = all 
+					}
+				}
+			}
+		} 
+
+		effect = {  
+			country_event = { id = aetas_alb.2 }
+		} 
+	}
+}
+ai_kst_orthodox_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = KST
+			tag = ALB
+		}
+		religion = orthodox
+		has_country_flag = kst_faith_flag
+	}
+
+	kst_patriarch = {
+		icon = promote_the_patriarchate
+		position = 2
+		required_missions = { kst_faith } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			patriarch_authority = 0.25
+			stability = 1 
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = kst_pa_support
+				duration = 7300
+			}
+		} 
+	}
+
+	kst_rites = {
+		icon = chivalry_is_not_dead
+		position = 3
+		required_missions = { kst_patriarch } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			patriarch_authority = 0.9
+			stability = 3 
+		} 
+
+		effect = {  
+			custom_tooltip = kst_stay_ortho.tt
+			set_country_flag = kst_stay_ortho_flag
+			add_country_modifier = { 
+				name = kst_rites_mod
+				duration = -1
+			}
+		} 
+	}
+
+	kst_ortho_friends = {
+		icon = mission_thessalonica
+		position = 4
+		required_missions = { kst_rites } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			calc_true_if = { 
+				all_ally = { 
+					religion = orthodox 
+				}
+				amount = 4
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = alb_orth_mod #missed loc
+				duration = -1
+			}
+		} 
+	}
+}
+kst_catholic_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = KST
+			tag = ALB
+		}
+		religion = catholic
+		has_country_flag = kst_faith_flag
+	}
+
+	kst_cath_churches = {
+		icon = mission_ctitor
+		position = 2
+		required_missions = { kst_faith } 
+		provinces_to_highlight = {  
+			owned_by = ROOT 
+			has_tax_building_trigger = no 
+		} 
+
+		trigger = {  
+			num_of_owned_provinces_with = { 
+				has_tax_building_trigger = yes 
+				value = 3
+			}
+		} 
+
+		effect = {  
+			random_owned_province = {
+				limit = { NOT = { religion = catholic } }
+				change_religion = catholic 
+			}
+			add_ruler_modifier = { 
+				name = kst_church_builder
+				duration = -1
+			}
+		} 
+	}
+
+	kst_pap = {
+		icon = mission_paulii
+		position = 3
+		required_missions = { kst_cath_churches } 
+		provinces_to_highlight = {  
+			is_capital_of = PAP 
+		} 
+
+		trigger = {  
+			PAP = { 
+				has_opinion = { 
+					who = ROOT 
+					value = 125
+				}
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = kst_stay_ortho.tt
+			set_country_flag = kst_stay_cath_flag
+			add_country_modifier = { 
+				name = kst_papal_delegation
+				duration = -1 
+			}
+			swap_non_generic_missions = yes 
+		} 
+	}
+}
+kst_sunni_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = KST
+			tag = ALB
+		}
+		religion = sunni
+		has_country_flag = kst_faith_flag
+	}
+
+	kst_sunni_relations = {
+		icon = mission_pasha
+		position = 2
+		required_missions = { kst_faith } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			calc_true_if = { 
+				all_country = { 
+					NOT = { tag = TUR }
+					religion_group = muslim
+					has_opinion = { 
+						who = ROOT 
+						value = 50
+					}
+				}
+				amount = 2
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = kst_sunni_intro
+				duration = 7300
+			}
+		} 
+	}
+
+	kst_sufis = {
+		icon = mission_sufism
+		position = 3
+		required_missions = { kst_sunni_relations } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			piety = -0.5
+		} 
+
+		effect = {  
+			custom_tooltip = kst_stay_ortho.tt
+			set_country_flag = kst_stay_sunni_flag
+			custom_tooltip = kst_sufis.tt
+			add_country_modifier = { 
+				name = kst_sufis_mod
+				duration = -1
+			}
+			random_owned_province = { 
+				limit = { NOT = { religion = sunni } }
+				change_religion = sunni 
+			}
+		} 
+	}
+}
+kst_religion_locked_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = KST
+			tag = ALB
+		}
+		NOT = {
+			has_country_flag = kst_faith_flag
+		}
+	}
+
+	kst_religion_locked_3a = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { kst_faith } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = kst_religious_locked.tt
+				always = no
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = kst_religious_locked.tt
+		} 
+	}
+
+	kst_religion_locked_3b = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { kst_religion_locked_3a } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = kst_religious_locked.tt
+				always = no
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = kst_religious_locked.tt
+		} 
+	}
+
+	kst_religion_locked_3c = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = { kst_religion_locked_3b } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = kst_religious_locked.tt
+				always = no
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = kst_religious_locked.tt
+		} 
+	}
+}
+kst_cath2_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = { 
+			tag = KST 
+			was_tag = KST 
+		}
+		AND = { 
+			religion = catholic 
+			has_country_flag = kst_stay_cath_flag
+		}
+	}
+
+	kst_cath_tech = {
+		icon = mission_plc_edict_education
+		position = 4
+		required_missions = { kst_pap } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			has_institution = renaissance 
+			calc_true_if = { 
+				all_ally = { 
+					technology_group = western 
+				}
+				amount = 3
+			}
+		} 
+
+		effect = {  
+			change_technology_group = western
+		} 
+	}
+}
+kst_cath2_locked_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = { 
+			tag = KST 
+			was_tag = KST 
+		}
+		has_country_flag = kst_faith_flag
+		religion = catholic 
+		NOT = { has_country_flag = kst_stay_cath_flag }
+	}
+
+	kst_cath2_locked_3c = {
+		icon = mission_locked_mission
+		position = 4
+		required_missions = { kst_pap } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = kst_cath_locked.tt
+				always = no
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = kst_cath_locked.tt
+		} 
+	}
+}
+kst_sunni2_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = { 
+			tag = KST 
+			was_tag = KST 
+		}
+		AND = { 
+			religion = sunni 
+			has_country_flag = kst_stay_sunni_flag
+		}
+	}
+
+	kst_tur_tech = {
+		icon = mission_islamic_golden_age
+		position = 4
+		required_missions = { kst_sufis } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			has_institution = renaissance 
+			num_of_owned_provinces_with = { 
+				religion = sunni 
+				value = 4
+			}
+		} 
+
+		effect = {  
+			change_technology_group = ottoman
+		} 
+	}
+}
+kst_sunni2_locked_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = { 
+			tag = KST 
+			was_tag = KST 
+		}
+		religion = sunni
+		NOT = { has_country_flag = kst_stay_sunni_flag }
+	}
+
+	kst_sunni2_locked_3c = {
+		icon = mission_locked_mission
+		position = 4
+		required_missions = { kst_sufis } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = kst_sunni_locked.tt
+				always = no
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = kst_sunni_locked.tt
+		} 
+	}
+}
+ai_kst_ven_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = KST 
+			was_tag = KST 
+			tag = ALB 
+		}
+	} 
+
+	kst_faith = {
+		icon = spread_piety
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = kst_faith_event.tt
+				OR = { 
+					has_country_flag = kst_cath_flag
+					has_country_flag = kst_orthodox_flag
+				}
+			}
+		} 
+
+		effect = {  
+			add_stability = 1
+		} 
+	}
+
+	kst_ven = {
+		icon = nuova_promissione_ducale
+		position = 2
+		required_missions = { kst_faith } 
+		provinces_to_highlight = { is_capital_of = VEN } 
+
+		trigger = {  
+			VEN = { 
+				OR = {
+					alliance_with = ROOT
+					is_rival = ROOT
+					is_subject_of = ROOT
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = insulted
+					}
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = scornfully_insulted
+					}
+				}
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = kst_ven_missions.tt
+			hidden_effect = { 
+				if = { 
+					limit = { 
+						OR = { 
+							alliance_with = VEN 
+							is_subject_of = VEN 
+						}
+					}
+					set_country_flag = kst_ven_good_flag
+				}
+				else = { set_country_flag = kst_ven_bad_flag }
+				swap_non_generic_missions = yes 
+			}
+		} 
+	}
+}
+kst_ven_good_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = KST
+			tag = ALB
+		}
+		has_country_flag = kst_ven_good_flag
+	}
+
+	kst_shufada = {
+		icon = reform_the_state
+		position = 3
+		required_missions = { kst_ven } 
+		provinces_to_highlight = {  
+			OR = { 
+				province_id = 5430
+				province_id = 6322
+			}
+			has_trade_building_trigger = no 
+		} 
+
+		trigger = {  
+			VEN = { 
+				has_opinion = { 
+					who = ROOT 
+					value = 125
+				}
+			}
+			5430 = { has_trade_building_trigger = yes }
+			6322 = { has_trade_building_trigger = yes }
+		} 
+
+		effect = {  
+			5430 = { add_province_triggered_modifier = kst_trade_mod }
+			6322 = { add_province_triggered_modifier = kst_trade_mod }
+		} 
+	}
+
+	kst_salt_dur = {
+		icon = reform_the_monte
+		position = 4
+		required_missions = { kst_shufada } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			OR = { 
+				AND = {
+					treasury = 200
+					VEN = { 
+						owns_core_province = 4174
+						has_opinion = { 
+							who = ROOT 
+							value = 200
+						}
+					}
+				}
+				owns_core_province = 4174
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = kst_ven_durres.tt
+			hidden_effect = { 
+				if = { 
+					limit = { NOT = { owns_core_province = 4174 } }
+					VEN = { country_event = { id = aetas_alb.12 } }
+				}
+				else = { 
+					5174 = { 
+						add_province_modifier = { 
+							name = durres_salt
+							duration = -1
+						}
+					}
+				}
+			}
+		} 
+	}
+}
+kst_ven_bad_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = KST
+			tag = ALB
+		}
+		has_country_flag = kst_ven_bad_flag
+	}
+
+	kst_shufada_salt = {
+		icon = dominant_economy
+		position = 3
+		required_missions = { kst_ven } 
+		provinces_to_highlight = {  
+			province_id = 6322
+			NOT = { 
+				AND = { 
+					has_production_building_trigger = yes 
+					base_production = 5
+				}
+			}
+		} 
+
+		trigger = {  
+			6322 = { 
+				has_production_building_trigger = yes 
+				base_production = 5
+			}
+		} 
+
+		effect = {  
+			6322 = { 
+				change_trade_goods = salt
+				add_province_modifier = { 
+					name = kst_salt_ponds
+					duration = -1
+				}
+			}
+		} 
+	}
+
+	kst_ven_albania = {
+		icon = assert_our_sovereignty
+		position = 4
+		required_missions = { kst_shufada_salt } 
+		provinces_to_highlight = {  
+			OR = { 
+				province_id = 4175
+				province_id = 5284
+				province_id = 4174
+			}
+			NOT = { owned_by = ROOT }
+		} 
+
+		trigger = {  
+			owns = 4175
+			owns = 5284
+			owns = 4174
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = kst_ven_bad_mod
+				duration = -1
+			}
+		} 
+	}
+}
+ai_kst_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = KST 
+			was_tag = KST 
+			tag = ALB 
+		}
+	} 
+
+	kst_ser = {
+		icon = emperor_and_autocrat
+		position = 2
+		required_missions = { kst_faith } 
+		provinces_to_highlight = { is_capital_of = SER } 
+
+		trigger = {  
+			SER = { 
+				OR = {
+					alliance_with = ROOT
+					is_rival = ROOT
+					is_subject_of = ROOT
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = insulted
+					}
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = scornfully_insulted
+					}
+				}
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = kst_ven_missions.tt
+			hidden_effect = { 
+				if = { 
+					limit = { 
+						OR = { 
+							alliance_with = SER 
+							is_subject_of = SER 
+						}
+					}
+					set_country_flag = kst_ser_good_flag
+				}
+				else = { set_country_flag = kst_ser_bad_flag }
+				swap_non_generic_missions = yes 
+			}
+		}  
+	}
+}
+kst_ser_good_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = KST
+			tag = ALB
+		}
+		has_country_flag = kst_ser_good_flag
+	}
+
+	kst_ser_mon = {
+		icon = tame_the_magnates
+		position = 3
+		required_missions = { kst_ser } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			OR = { 
+				is_in_war = { attacker_leader = SER }
+				is_in_war = { defender_leader = SER }
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = kst_ser_coop
+				duration = 7300
+			}
+		} 
+	}
+}
+kst_ser_bad_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = KST
+			tag = ALB
+		}
+		has_country_flag = kst_ser_bad_flag
+	}
+
+	kst_ser_priz = {
+		icon = fortress_of_belgrade
+		position = 3
+		required_missions = { kst_ser } 
+		provinces_to_highlight = {  
+			province_id = 5421
+			NOT = { owned_by = ROOT }
+		} 
+
+		trigger = {  
+			owns = 5421
+		} 
+
+		effect = {  
+			5421 = { 
+				add_core = ROOT 
+				change_religion = ROOT 
+			}
+			dardania_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+}
+kst_ven_locked = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = KST
+			tag = ALB
+		}
+		NOT = {
+			OR = {
+				has_country_flag = kst_ven_good_flag
+				has_country_flag = kst_ven_bad_flag
+			}
+		}
+	}
+
+	kst_ven_locked_4a = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { kst_ven } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = kst_ven_locked.tt
+				always = no
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = kst_ven_locked.tt
+		} 
+	}
+
+	kst_ven_locked_4b = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = { kst_ven_locked_4a } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = kst_ven_locked.tt
+				always = no
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = kst_ven_locked.tt
+		} 
+	}
+}
+kst_ser_locked = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = KST
+			tag = ALB
+		}
+		NOT = {
+			OR = {
+				has_country_flag = kst_ser_good_flag
+				has_country_flag = kst_ser_bad_flag
+			}
+		}
+	}
+
+	kst_ser_locked_5a = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { kst_ser } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = kst_ser_locked.tt
+				always = no
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = kst_ser_locked.tt
+		} 
+	}
+}
+ai_kst_branch_4b = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = KST 
+			was_tag = KST 
+			tag = ALB 
+		}
+	} 
+
+	kst_maritime = {
+		icon = overshadow_venice
+		position = 5
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			num_of_light_ship = 5
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = kst_light_ships
+				duration = 18250
+			}
+		} 
+	}
+}
+ai_kst_branch_5b = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = KST 
+			was_tag = KST 
+			tag = ALB 
+		}
+	} 
+
+	kst_rag = {
+		icon = adjust_the_general_means
+		position = 5
+		provinces_to_highlight = {  
+			is_capital_of = RAG 
+		} 
+
+		trigger = {  
+			alliance_with = RAG 
+		} 
+
+		effect = {  
+			custom_tooltip = kst_rag.tt
+			hidden_effect = { 
+				RAG = { 
+					add_country_modifier = { 
+						name = kst_rag_mod
+						duration = -1 
+					}
+				}
+				ROOT = { 
+					add_country_modifier = { 
+						name = kst_rag_mod
+						duration = -1 
+					}
+				}
+			}
+		} 
+	}
+
+	kst_rag2 = {
+		icon = medici_bank_ledgers
+		position = 6
+		required_missions = {
+			kst_rag
+			kst_maritime
+		}
+		provinces_to_highlight = {  
+			is_capital_of = RAG 
+		} 
+
+		trigger = {  
+			alliance_with = RAG
+			RAG = { 
+				has_opinion = { 
+					who = ROOT 
+					value = 200 
+				}
+			}
+			mercantilism = 30
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = rag_kst2_mod
+				duration = -1
+			}
+			RAG = { 
+				add_country_modifier = { 
+					name = rag_kst2_mod
+					duration = -1
+				}
+			}
+		} 
+	}
+}
+ai_alb_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = ALB } 
+
+	alb_greater = {
+		icon = mission_hessian_jaeger_corps
+		position = 8
+		required_missions = { alb_free } 
+		provinces_to_highlight = {  
+			OR = { 
+				area = dardania_area
+				area = macedonia_area
+				area = dioclea_area
+				area = northern_greece_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			dardania_area = { 
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all 
+			}
+			macedonia_area = { 
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all 
+			}
+			dioclea_area = { 
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all 
+			}
+			northern_greece_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = alb_expansion
+				duration = -1
+			}
+		} 
+	}
+}
+ai_alb_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = ALB } 
+
+	alb_independence = {
+		icon = support_the_orders
+		position = 6
+		required_missions = { kst_lol } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			is_at_war = no 
+			NOT = { is_subject = yes }
+		} 
+
+		effect = {  
+			add_country_modifier = {
+				name = "legacy_of_skanderbeg"
+				duration = -1
+			}
+		} 
+	}
+
+	alb_free = {
+		icon = jageillonian_union
+		position = 7
+		required_missions = {
+			alb_independence
+			alb_ven
+		}
+		provinces_to_highlight = {  
+			OR = { 
+				area = albania_area 
+				province_id = 4175
+				province_id = 5284
+				province_id = 4174
+				province_id = 5434
+				province_id = 5436
+				province_id = 5437
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			albania_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+			4175 = { country_or_non_sovereign_subject_holds = ROOT }
+			5284 = { country_or_non_sovereign_subject_holds = ROOT }
+			4174 = { country_or_non_sovereign_subject_holds = ROOT }
+			5434 = { country_or_non_sovereign_subject_holds = ROOT }
+			5436 = { country_or_non_sovereign_subject_holds = ROOT }
+			5437 = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		effect = {  
+			custom_tooltip = alb_prosperity.tt
+			hidden_effect = { 
+				every_owned_province = { 
+					limit = { culture_group = illyrian }
+					add_province_triggered_modifier = alb_prosperity
+				}
+			}
+			dardania_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			macedonia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			northern_greece_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			dioclea_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	alb_future_of_lol = {
+		icon = law_of_the_pious
+		position = 8
+		required_missions = { alb_free } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			government_reform_progress = 250
+			has_institution = renaissance 
+		} 
+
+		effect = { country_event = { id = aetas_alb.13 } } 
+	}
+}
+ai_alb_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = ALB } 
+
+	alb_gp_ally = {
+		icon = catholic_confraternity
+		position = 6
+		required_missions = { kst_lol } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			any_ally = { 
+				is_great_power = yes 
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = alb_allies
+				duration = -1
+			}
+		} 
+	}
+
+	alb_vlore = {
+		icon = dalmatian_conquest
+		position = 8
+		required_missions = { alb_free } 
+		provinces_to_highlight = {  
+			province_id = 143
+			NOT = { 
+				AND = { 
+					country_or_non_sovereign_subject_holds = ROOT 
+					num_of_times_improved = 10
+					has_production_building_trigger = yes 
+				}
+			}
+		} 
+
+		trigger = {  
+			143 = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				num_of_times_improved = 10
+				has_production_building_trigger = yes 
+			}
+		} 
+
+		effect = {  
+			143 = { 
+				add_province_modifier = { 
+					name = alb_vlore_mod
+					duration = -1
+				}
+			}
+		} 
+	}
+
+	alb_capital = {
+		icon = mission_empire
+		position = 9
+		required_missions = {
+			alb_future_of_lol
+			alb_vlore
+			alb_shkoder
+		}
+		provinces_to_highlight = {  
+			OR = { 
+				province_id = 4750
+				province_id = 143
+				province_id = 4174
+				province_id = 5284
+			}
+			NOT = { 
+				AND = { 
+					owned_by = ROOT 
+					is_core = ROOT 
+				}
+			}
+		}  
+
+		trigger = {  
+			owns_core_province = 4750
+			owns_core_province = 4174
+			owns_core_province = 5284
+			owns_core_province = 143
+		} 
+
+		effect = { country_event = { id = aetas_alb.14 } } 
+	}
+}
+ai_alb_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = ALB } 
+
+	alb_ven = {
+		icon = spa_tercios_system
+		position = 6
+		required_missions = {
+			kst_lol
+			kst_maritime
+		}
+		provinces_to_highlight = {  
+			OR = { 
+				province_id = 4175
+				province_id = 5284
+				province_id = 4174
+			}
+			NOT = { owned_by = ROOT }
+		} 
+
+		trigger = {  
+			owns = 4175
+			owns = 5284
+			owns = 4174
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = alb_ven_mod
+				duration = -1
+			}
+		} 
+	}
+
+	alb_durres = {
+		icon = capture_adriatic_ports
+		position = 7
+		required_missions = { alb_ven } 
+		provinces_to_highlight = {  
+			province_id = 4174
+			NOT = { 
+				AND = { 
+					owned_by = ROOT 
+					is_core = ROOT 
+					has_tax_building_trigger = yes 
+					has_trade_building_trigger = yes
+					has_production_building_trigger = yes 
+					num_of_times_improved = 10  
+				}
+			}
+		} 
+
+		trigger = {  
+			4174 = { 
+				owned_by = ROOT 
+				is_core = ROOT 
+				has_tax_building_trigger = yes 
+				has_trade_building_trigger = yes
+				has_production_building_trigger = yes 
+				num_of_times_improved = 10  
+			}
+		} 
+
+		effect = {  
+			4174 = { 
+				change_culture = ROOT 
+				change_religion = ROOT 
+				add_province_modifier = { 
+					name = durres_mod
+					duration = -1
+				}
+			}
+		} 
+	}
+
+	alb_shkoder = {
+		icon = eastern_catholicization
+		position = 8
+		required_missions = { alb_durres } 
+		provinces_to_highlight = {  
+			province_id = 5284
+			NOT = { 
+				AND = { 
+					owned_by = ROOT 
+					is_core = ROOT 
+					has_tax_building_trigger = yes 
+					has_trade_building_trigger = yes
+					has_production_building_trigger = yes 
+					num_of_times_improved = 10  
+				}
+			}
+		} 
+
+		trigger = {  
+			5284 = { 
+				owned_by = ROOT 
+				is_core = ROOT 
+				has_tax_building_trigger = yes 
+				has_trade_building_trigger = yes
+				has_production_building_trigger = yes 
+				num_of_times_improved = 10  
+			}
+		} 
+
+		effect = {  
+			5284 = { 
+				change_culture = ROOT 
+				change_religion = ROOT 
+				add_province_modifier = { 
+					name = shkoder_mod
+					duration = -1
+				}
+			}
+		} 
+	}
+}
+ai_alb_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = ALB } 
+
+	alb_corfu = {
+		icon = adriatic_access
+		position = 7
+		required_missions = { alb_ven } 
+		provinces_to_highlight = {  
+			province_id = 142
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			142 = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		effect = {  
+			5125 = { add_core = ROOT }
+		} 
+	}
+
+	alb_nap = {
+		icon = union_with_naples
+		position = 8
+		required_missions = { alb_corfu } 
+		provinces_to_highlight = { owned_by = NAP } 
+
+		trigger = { 
+			owns_core_province = 5125
+		} 
+
+		effect = {  
+			5125 = { 
+				change_culture = ROOT 
+				change_religion = ROOT 
+			}
+			add_country_modifier = { 
+				name = alb_durazzo
+				duration = -1
+			}
+			121 = { add_core = ROOT }
+			if = { 
+				limit = { exists = NAP }
+				add_casus_belli = {
+					target = NAP 
+					type = cb_restore_personal_union
+					months = 480
+				}
+			}
+			else_if = { 
+				limit = { exists = NPO }
+				add_casus_belli = {
+					target = NPO
+					type = cb_restore_personal_union
+					months = 480
+				}
+			}
+			else = { 
+				apulia_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+				capitanate_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+				calabria_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+				naples_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+				abruzzo_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		} 
+	}
+}
+alb_locked_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = KST } 
+
+	alb_locked_1c = {
+		icon = mission_locked_mission
+		position = 8
+		required_missions = { alb_locked_2b } 
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = kst_alb_locked.tt
+				always = no
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = kst_alb_locked.tt
+		} 
+	}
+}
+alb_locked_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = KST } 
+
+	alb_locked_2a = {
+		icon = mission_locked_mission
+		position = 6
+		required_missions = { kst_lol } 
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = kst_alb_locked.tt
+				always = no
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = kst_alb_locked.tt
+		} 
+	}
+
+	alb_locked_2b = {
+		icon = mission_locked_mission
+		position = 7
+		required_missions = {
+			alb_locked_2a
+			alb_locked_4a
+		}
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = kst_alb_locked.tt
+				always = no
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = kst_alb_locked.tt
+		} 
+	}
+
+	alb_locked_2c = {
+		icon = mission_locked_mission
+		position = 8
+		required_missions = { alb_locked_2b } 
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = kst_alb_locked.tt
+				always = no
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = kst_alb_locked.tt
+		} 
+	}
+}
+alb_locked_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = KST } 
+
+	alb_locked_3a = {
+		icon = mission_locked_mission
+		position = 6
+		required_missions = { kst_lol } 
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = kst_alb_locked.tt
+				always = no
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = kst_alb_locked.tt
+		} 
+	}
+
+	alb_locked_3c = {
+		icon = mission_locked_mission
+		position = 8
+		required_missions = { alb_locked_2b } 
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = kst_alb_locked.tt
+				always = no
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = kst_alb_locked.tt
+		} 
+	}
+
+	alb_locked_3d = {
+		icon = mission_locked_mission
+		position = 9
+		required_missions = {
+			alb_locked_2c
+			alb_locked_3c
+			alb_locked_4c
+		}
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = kst_alb_locked.tt
+				always = no
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = kst_alb_locked.tt
+		}  
+	}
+}
+alb_locked_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = KST } 
+
+	alb_locked_4a = {
+		icon = mission_locked_mission
+		position = 6
+		required_missions = {
+			kst_lol
+			kst_maritime
+		}
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = kst_alb_locked.tt
+				always = no
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = kst_alb_locked.tt
+		} 
+	}
+
+	alb_locked_4b = {
+		icon = mission_locked_mission
+		position = 7
+		required_missions = { alb_locked_4a } 
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = kst_alb_locked.tt
+				always = no
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = kst_alb_locked.tt
+		} 
+	}
+
+	alb_locked_4c = {
+		icon = mission_locked_mission
+		position = 8
+		required_missions = { alb_locked_4b } 
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = kst_alb_locked.tt
+				always = no
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = kst_alb_locked.tt
+		} 
+	}
+}
+alb_locked_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = KST } 
+
+	alb_locked_5b = {
+		icon = mission_locked_mission
+		position = 7
+		required_missions = { alb_locked_4a } 
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = kst_alb_locked.tt
+				always = no
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = kst_alb_locked.tt
+		} 
+	}
+
+	alb_locked_5c = {
+		icon = mission_locked_mission
+		position = 8
+		required_missions = { alb_locked_5b } 
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = kst_alb_locked.tt
+				always = no
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = kst_alb_locked.tt
+		} 
+	}
+}

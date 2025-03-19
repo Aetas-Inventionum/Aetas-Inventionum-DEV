@@ -1,0 +1,123 @@
+#Country Name: Please see filename.
+
+graphical_culture = latingfx #westerngfx
+
+color = { 172  85  92 }
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	religious_ideas
+	diplomatic_ideas
+	economic_ideas
+	innovativeness_ideas
+	offensive_ideas
+	spy_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	dutch_maurician
+	french_caracolle
+	anglofrench_line
+	french_dragoon
+	french_bluecoat
+	french_cuirassier
+	french_impulse
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Guilhèm #3" = 40
+	"Bernat #1" = 20
+	"Raimon #7" = 120
+	"Audoïn #1" = 10
+	"Uc #1" = 5
+	"Ponç #1" = 30
+	"Bertran #1" = 10
+	"Anfós #1" = 20
+	"Simon #1" = 1
+	"Loís #1" = 40
+	"Raimon #0 Ponç" = 5
+	"Raimon #0 Bernat" = 5
+	"Rogièr #0" = 15
+	"Pèire #0" = 10
+	"Pèire Raimon #0" = 5
+	"Arnaut #0" = 5
+	"Aimar #0" = 15
+	"Aimeric #0" = 10
+	"Folco #0" = 5
+	"Enric #0" = 20
+	"Joan #0" = 15
+	"Loís Armand #0" = 1
+	"Jacòb #0" = 5
+	"Armand #0" = 5
+	"Carles #0" = 1
+	"Centolh #0" = 0
+	"Matieu #0" = 10
+	#integrated from Occitan Renaissance
+	"Felip #0" = 1
+	"Gui #0" = 1
+	"Jaufré #0" = 1
+	"Francés #0" = 1
+	"Edoard #0" = 1
+	"Lop #0" = 1
+
+	"Aliç #0" = -1
+	"Emma #0" = -1
+	"Adelaïda #0" = -1
+	"Matilda #0" = -1
+	"Felipa #0" = -1
+	"Joana #1" = -20
+	"Sança #0" = -5
+	"Maria #0" = -5
+	#integrated from Occitan Renaissance
+	"Ermessenda #0" = -1
+	"Almòdis #0" = -1
+	"Alpaís #0" = -1
+	"Emilda #0" = -1
+	"Margarida #0" = -1
+}
+
+leader_names = {
+	d'Albi 
+	"de Bearn" "de Besièrs" "de Bigòrra"
+	"de Fois"
+	"de Gellona"
+	"de Labrit" "de Lara"  "de Lom d'Arce"
+	"de Montpelhièr" "de Montpesat" "de Montreal"
+	"de Niòrt"
+	"de Provença"
+	"de Septimània"
+	"de Tolosa" Trencavel
+	d'Usès
+}
+
+ship_names = {
+	"l'Aucamville" "l'Auzeville-Tolosane" "le Balma" "le Beauzelle" "le Busca"
+	"le Blagnac" "le Capitole" "le Castanet-Tolosan" "le Colomiers" "le Cugneaux"
+	"l'Île-du-Ramier" "le Labège" "le Labruc" "le La Cépière" "le La Pasquière"
+	"le Laran" "le Lardenne" "le Launaguet" "le Grand-Rond" "le Mirail"
+	"le Demoiselles" "le Minimes" "le Paradous" "l'Union" "le Marquisat"
+	"le Montaudran" "le Montrabé" "le Muret" "le Pechbonnieu" "le Pechbusque"
+	"le Pech David" "le Pibrac" "le Plaisance-du-Touch" "le Portet-sur-Garonne" "le Quint-Fonsegrives"
+	"la Patte-d'Oie" "le Ramonville-Saintt-Agne" "le Rangueil" "le Tournefeuille" "le Saint-Aubin"
+	"le Saint-Geniès-Bellevue" "le Saint-Martin-du-Touch" "le Saint-Orens" "le Saint-Sernin" "le Saint-Simon"
+	"le Salvetat-Saint-Gilles" "le Soulé" "le Stade-Toulousain" "la Vieille-Toulouse" "le Villeneuve-Tolosane"
+}
+
+army_names = {
+	 "Armée du Lauragais"  "Armée du Minervois"  "Armée du Cabardès" 
+	 "Armée des Corbières" "Armée du Carcassès"  "Armée de la Montagne Noire"
+	 "Armée du Quercob"    "Armée du Razès"      "Armée du Pays de Sault"
+	 "Armée de Foix"       "Armée du Couserans"  "Armée de Comminges"
+	 "Armée de Gascogne"   "Armée de Savès"      "Armée du Pays d'Aure"
+	 "Armée de Bigorre"    "Armée des Capitouls" "Armée de l'Albigeois"
+	 "Armée de $PROVINCE$" 
+}

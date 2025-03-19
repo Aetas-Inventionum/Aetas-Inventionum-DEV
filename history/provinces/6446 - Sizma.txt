@@ -1,0 +1,36 @@
+#6446 - Sizma
+#Area - Mitropolye
+#Region - Russia 
+
+#Core Details
+capital = "Sizma" 
+is_city = yes
+owner = RSO
+controller = RSO
+
+#Demographics
+culture = vologdan
+religion = orthodox
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = apiculture
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = RSO
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = nomad_group
+
+#Histories

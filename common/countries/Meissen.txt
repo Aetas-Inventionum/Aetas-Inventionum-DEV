@@ -1,0 +1,96 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+color = { 170 157 120 } #114 114 57
+revolutionary_colors = { 5 8 1 }
+
+historical_idea_groups = {
+	trade_ideas
+	religious_ideas
+	economic_ideas
+	defensive_ideas
+	diplomatic_ideas
+	innovativeness_ideas
+	spy_ideas
+	offensive_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	dutch_maurician
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Ekkehard #2" = 0
+	"Gunzelin #1" = 0
+	"Hermann #2" = 5
+	"Otto #2" = 10
+	"Ekbert #2" = 2
+	"Heinrich #3" = 20
+	"Wiprecht #1" = 2
+	"Konrad #1" = 5
+	"Albrecht #3" = 25
+	"Dietrich #1" = 5
+	"Friedrich #1" = 50
+	"Adolf #1" = 10
+	"Balthasar #1" = 5
+	"Wilhelm #2" = 15
+	"Georg #1" = 15
+	"Rudolf #0" = 10
+	"Johann #0" = 5
+	"Moritz #0" = 0
+	"Ernst #0" = 5
+	"Erich #0" = 0
+
+	"Margareta #0" = -1
+	"Annegret #0" = -1
+	"Beata #0" = -1
+	"Elise #0" = -1
+}
+
+leader_names = {
+	#upper-saxon noble families, especially from the Meissen area and Thuringia
+	Alnpeck "von Altenburg" "von Ammendorf" "von Arnim"
+	"von Ballenhausen" "von Barby" "von Baudissin" "von Behren" "von Beichlingen" "von Bendeleben" "von Beneckendorff" "von Bennewitz" "von Berbisdorf" "von Beust" "von Bissing" "von Bock" "von Balgstedt"
+	"von Carlowitz" Charpentier "von Colditz"
+	"von Delitz" "von Dieskau" "von Drachstedt" "von Draschwitz" "von Dyhern"
+	"von Eckersberg" "von Egidy" "von Einsiedel" "von Elterlein" "am Ende" "von Erdmannsdorff"
+	"von Fabrice" "von Falkenstein" "von Flanß" "von Freiburg" "von Friesen" "von Fritsch"
+	"vonn der Gabelentz" "von Gaudlitz" "von Gehler" "von Gößnitz"
+	"von Haugwitz" "von Helldorff" "von Hohnstein" "zur Horst"
+	"von Kaltenborn"  "von Kannewurff" "von Caraz" Klüchtzner Köhler Könneritz
+	"von Landwüst" Leipziger "von Lüttichau"
+	Maltitz "von Mansfeld" "von Metzradt"
+	"von Nesselröden" "von Nißmitz" "von Nostitz"
+	"O'Byrn" "von der Oelsnitz"
+	"von Plauen" "von Pölnitz" "von Ponickau" "von Posern"
+	"von Rauchhaupt" "von Reibold" "von Rex" Römer
+	"von Saalhausen" "von Sahr" "von Schleinitz" "von Schwartzburg" "von Schönfeld" "von Stammer" "zu Stolberg"
+	"von Tettau" Theler "von Torgau" "von Trebis" "de Trote" "von Trützschler"
+	"von Werthern" "von Wettin" "von Wild" "aus dem Winkel"
+	"von Zedlitz" "von Zehman" "von Ziegler und Klipphausen"
+}
+
+ship_names = {
+	"Albrecht der Bär" Aschersleben "Hermann Orlamünde"
+	"Bischof Siegfried" "Dietrich Werben" "Albrecht Ballenstedt"
+	"Bernhard Wittenberg" "Heinrich I" Zerbst Coswig Dessau Köthen
+	Bernburg Brocken Hartz Plötzkau Ramberg Rosslau
+}
+
+army_names = {
+	"Armee von $PROVINCE$" 
+}

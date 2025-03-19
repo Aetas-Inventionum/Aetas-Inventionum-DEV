@@ -1,0 +1,59 @@
+government = monarchy
+government_rank = 1
+add_government_reform = fief_reform
+technology_group = western
+religion = catholic
+primary_culture = calabrian
+add_accepted_culture = griko
+capital = 5125 #Lecce
+fixed_capital = 5125
+
+1386.1.1 = { 
+	monarch = { 
+		name = "Raimondello I"
+		dynasty = "Orsini del Balzo"
+		birth_date = 1355.1.1
+		death_date = 1406.1.1
+		adm = 2
+		dip = 3
+		mil = 5
+	}
+}
+
+1399.1.1 = { 
+	queen = { 
+		name = "Maria"
+		dynasty = "d'Enghien"
+		adm = 4
+		dip = 4
+		mil = 1
+		female = yes 
+		birth_date = 1367.1.1
+		death_date = 1446.5.9
+	}
+}
+
+1406.1.1 = { 
+	monarch = { 
+		name = "Maria"
+		dynasty = "d'Enghien"
+		adm = 4
+		dip = 4
+		mil = 1
+		female = yes 
+		birth_date = 1367.1.1
+		death_date = 1446.5.9
+	}
+	heir = { 
+		name = "Giovanni Antonio"
+		monarch_name = "Giovanni Antonio I"
+		dynasty = "Orsini del Balzo"
+		claim = 95
+		adm = 3
+		dip = 5
+		mil = 5
+		birth_date = 1401.1.1
+		death_date = 1463.11.15
+	}
+}
+

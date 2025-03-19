@@ -1,0 +1,151 @@
+country_decisions = {
+
+	illyrian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_croatia_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { tag = HLR }
+			NOT = { tag = SER }
+			NOT = { tag = PAP }
+			NOT = { tag = ILY }
+			NOT = { tag = YGS }
+			OR = {
+				NOT = { exists = ILY }
+				NOT = { exists = YGS }
+				ai = no
+			}
+			culture_group = south_slavic
+			NOT = { primary_culture = bulgarian }
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 5
+				}
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				OR = { 
+					area = carinthia_area
+					area = istria_area
+					area = croatia_area
+					area = slavonia_area
+					area = east_adriatic_coast_area
+					area = donji_kraji_area
+					area = bosnia_area
+					area = herzegovina_area
+					area = syrmia_area 
+					area = dioclea_area
+					area = serbia_area
+					area = dardania_area
+				}
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+		}
+		allow = {
+			NOT = { 
+				OR = { 
+					exists = ILY 
+					exists = YGS 
+				}
+			}
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			croatia_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+			slavonia_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+			east_adriatic_coast_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+			donji_kraji_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+			bosnia_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+			herzegovina_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+			syrmia_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+			dioclea_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+			serbia_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+			dardania_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+			OR = { 
+				istria_area = { 
+					country_or_non_sovereign_subject_holds = ROOT 
+					type = all 
+				}
+				carinthia_area = { 
+					country_or_non_sovereign_subject_holds = ROOT 
+					type = all 
+				}
+			}
+		}
+		effect = {
+			add_prestige = 25
+			change_tag = ILY 
+			on_change_tag_effect = yes 
+			set_government_rank = 3
+			add_government_reform = illyrian_reform
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = ILY_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			balkan_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}

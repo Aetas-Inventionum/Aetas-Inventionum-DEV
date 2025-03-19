@@ -1,0 +1,1006 @@
+ai_loi_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = LOI 
+			was_tag = LOI 
+		}
+	} 
+
+	loi_anr = {
+		icon = mission_rb_irish_america
+		position = 2
+		required_missions = { loi_tales } 
+		provinces_to_highlight = {
+			province_id = 5146
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			OR = {
+				5146 = { country_or_non_sovereign_subject_holds = ROOT } 
+				AND = {
+					alliance_with = ANR
+					ANR = {
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+						dynasty = ROOT
+					}
+				}
+			}
+		}
+
+		effect = {
+			custom_tooltip = anr_donald.tt
+			hidden_effect = {
+				if = {
+					limit = { NOT = { 5146 = { country_or_non_sovereign_subject_holds = ROOT }  }  } 
+					country_event = { id = aetas_sco.27 } 
+				}
+			}
+			4121 = { add_permanent_claim = ROOT } 
+		}
+	}
+
+	loi_clandeboye = {
+		icon = mission_rb_conquer_ulster
+		position = 3
+		required_missions = { loi_anr } 
+		provinces_to_highlight = {
+			province_id = 4121
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = { 4121 = { country_or_non_sovereign_subject_holds = ROOT }  } 
+
+		effect = {
+			ulster_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+ai_loi_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = LOI 
+			was_tag = LOI 
+		}
+	} 
+
+	loi_allies = {
+		icon = mission_the_finns
+		position = 2
+		required_missions = { loi_tales } 
+		provinces_to_highlight = {  } 
+
+		trigger = { num_of_allies = 3 } 
+
+		effect = {
+			add_country_modifier = {
+				name = "loi_dip"
+				duration = 7300
+			}
+		}
+	}
+}
+ai_loi_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = LOI 
+			was_tag = LOI 
+		}
+	} 
+
+	loi_tales = {
+		icon = mission_rb_conquer_the_isles
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = loi_intro.tt
+				has_country_flag = loi_intro_flag
+			}
+		}
+
+		effect = {
+			add_stability = 1
+			clr_country_flag = loi_intro_flag
+		}
+	}
+
+	loi_new_lord = {
+		icon = assert_our_sovereignty
+		position = 2
+		required_missions = { loi_tales } 
+		provinces_to_highlight = {  } 
+
+		trigger = { has_ruler = Alasdair } 
+
+		effect = {
+			add_ruler_modifier = {
+				name = "alasdair_mod"
+				duration = -1
+			}
+			highlands_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			kingdom_of_the_isles_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	loi_highland_revolt = {
+		icon = mission_rb_unite_the_clans
+		position = 3
+		required_missions = {
+			loi_allies
+			loi_anr
+			loi_new_lord
+			loi_army
+			loi_navy
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = highlands_area
+				area = kingdom_of_the_isles_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			OR = {
+				AND = {
+					highlands_area = {
+						country_or_non_sovereign_subject_holds = ROOT
+						type = all
+					}
+					kingdom_of_the_isles_area = {
+						country_or_non_sovereign_subject_holds = ROOT
+						type = all
+					}
+				}
+				has_spy_network_in = {
+					who = SCO
+					value = 30
+				}
+			}
+		}
+
+		effect = {
+			custom_tooltip = highlands_revolt.tt
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							AND = {
+								highlands_area = {
+									country_or_non_sovereign_subject_holds = ROOT
+									type = all
+								}
+								kingdom_of_the_isles_area = {
+									country_or_non_sovereign_subject_holds = ROOT
+									type = all
+								}
+								ai = no
+							}
+						}
+					}
+					SCO = { country_event = { id = aetas_sco.29 }  } 
+				}
+			}
+			highlands_area = { add_core = ROOT } 
+			250 = { add_core = ROOT } 
+		}
+	}
+
+	loi_hsc = {
+		icon = mission_rb_conquer_the_highlands
+		position = 4
+		required_missions = { loi_highland_revolt } 
+		provinces_to_highlight = {
+			OR = {
+				area = highlands_area
+				province_id = 250
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			highlands_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			owns_core_province = 250
+		}
+
+		effect = {
+			change_tag = HSC
+			set_capital = 250
+			if = {
+				limit = { NOT = { primary_culture = highland_scottish }  } 
+				change_primary_culture = highland_scottish
+			}
+			on_change_tag_effect = yes
+			restore_country_name = "yes"
+			swap_non_generic_missions = yes
+			if = {
+				limit = { NOT = { government_rank = 2 }  } 
+				set_government_rank = 2
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = HSC_ideas } 
+				}
+				country_event = { id = ideagroups.1 } 
+			}
+		}
+	}
+}
+ai_loi_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = LOI 
+			was_tag = LOI 
+		}
+	}  
+
+	loi_army = {
+		icon = mission_rb_rein_in_the_highland_clans
+		position = 2
+		required_missions = {
+			loi_tales
+			loi_finlaggan
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			army_size_percentage = 0.9
+			manpower_percentage = 0.75
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "loi_army_mod"
+				duration = 18250
+			}
+		}
+	}
+}
+ai_loi_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = LOI 
+			was_tag = LOI 
+		}
+	} 
+
+	loi_finlaggan = {
+		icon = defeat_the_english
+		position = 1
+		provinces_to_highlight = {
+			province_id = 5160
+			NOT = {
+				AND = {
+					num_of_times_improved = 5
+					base_manpower = 4
+				}
+			}
+		}
+
+		trigger = {
+			5160 = {
+				num_of_times_improved = 5
+				base_manpower = 4
+			}
+		}
+
+		effect = {
+			5160 = {
+				add_province_modifier = {
+					name = "donald_seat"
+					duration = -1
+				}
+			}
+		}
+	}
+
+	loi_navy = {
+		icon = mission_russian_navy
+		position = 2
+		required_missions = {
+			loi_tales
+			loi_finlaggan
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = { navy_size_percentage = 1 } 
+
+		effect = {
+			add_country_modifier = {
+				name = "isles_galleys"
+				duration = 18250
+			}
+		}
+	}
+}
+ai_hsc_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		tag = HSC
+		was_tag = LOI 
+	} 
+
+	hsc_clan_colla = {
+		icon = mission_rb_into_ireland
+		position = 4
+		required_missions = { loi_clandeboye } 
+		provinces_to_highlight = {
+			area = ulster_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			ulster_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+
+		effect = {
+			connacht_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			leinster_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			munster_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	hsc_ireland = {
+		icon = mission_rb_conquer_leinster
+		position = 5
+		required_missions = { hsc_clan_colla } 
+		provinces_to_highlight = {
+			OR = {
+				area = leinster_area
+				area = connacht_area
+				area = munster_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				OR = {
+					area = leinster_area
+					area = connacht_area
+					area = munster_area
+				}
+				value = 15
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "kings_ireland"
+				duration = -1
+			}
+		}
+	}
+}
+ai_hsc_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		tag = HSC
+		was_tag = LOI 
+	} 
+
+	hsc_auld_allliance = {
+		icon = fra_appease_the_princes
+		position = 3
+		required_missions = { loi_allies } 
+		provinces_to_highlight = { is_capital_of = FRA } 
+
+		trigger = { alliance_with = FRA } 
+
+		effect = {
+			custom_tooltip = auld.tt
+			hidden_effect = {
+				# add_country_modifier = { #nonexisting modifier
+				# 	name = "auld_alliance"
+				# 	duration = -1
+				# }
+				# FRA = {
+				# 	add_country_modifier = {
+				# 		name = "auld_alliance"
+				# 		duration = -1
+				# 	}
+				# }
+			}
+		}
+	}
+
+	hsc_dev_hsc = {
+		icon = up_the_adige
+		position = 4
+		required_missions = { loi_highland_revolt } 
+		provinces_to_highlight = {
+			area = highlands_area
+			NOT = { num_of_times_improved = 3 } 
+		}
+
+		trigger = {
+			highlands_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				num_of_times_improved = 3
+				type = all
+			}
+		}
+
+		effect = {
+			highlands_area = {
+				add_province_modifier = {
+					name = "hsc_baile"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+ai_hsc_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		tag = HSC
+		was_tag = LOI 
+	} 
+
+	hsc_scone = {
+		icon = mission_perth
+		position = 5
+		required_missions = {
+			loi_hsc
+			hsc_dev_hsc
+		}
+		provinces_to_highlight = {
+			province_id = 250
+			NOT = {
+				AND = {
+					owned_by = ROOT
+					is_capital_of = ROOT
+					num_of_times_improved = 10
+					has_tax_building_trigger = yes
+					has_trade_building_trigger = yes
+				}
+			}
+		}
+
+		trigger = {
+			250 = {
+				owned_by = ROOT
+				is_capital_of = ROOT
+				num_of_times_improved = 10
+				has_tax_building_trigger = yes
+				has_trade_building_trigger = yes
+			}
+		}
+
+		effect = {
+			250 = {
+				add_province_modifier = {
+					name = "royal_scone"
+					duration = -1
+				}
+			}
+		}
+	}
+
+	hsc_stone = {
+		icon = mission_rb_scottish_conquer_london
+		position = 6
+		required_missions = {
+			hsc_scone
+			hsc_cumbria
+		}
+		provinces_to_highlight = { has_province_modifier = ai_stone_scone } 
+
+		trigger = { capital_scope = { has_province_modifier = ai_stone_scone }  } 
+
+		effect = {
+			add_country_modifier = {
+				name = "stone_returned"
+				duration = -1
+			}
+		}
+	}
+}
+ai_hsc_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		tag = HSC
+		was_tag = LOI 
+	} 
+
+	loi_galloway = {
+		icon = claim_the_borderlands
+		position = 3
+		provinces_to_highlight = {
+			area = west_lowlands_area
+			NOT = {
+				OR = {
+					owned_by = KOI
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+
+		trigger = {
+			west_lowlands_area = {
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					is_capital_of = KOI
+				}
+				type = all
+			}
+		}
+
+		effect = {
+			scottish_marches_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	hsc_mann = {
+		icon = support_the_orders
+		position = 4
+		required_missions = { loi_galloway } 
+		provinces_to_highlight = {
+			province_id = 4365
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = { 4365 = { country_or_non_sovereign_subject_holds = ROOT }  } 
+
+		effect = {
+			add_prestige = 10
+			wales_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	hsc_ren = {
+		icon = geneva_conventions
+		position = 5
+		required_missions = {
+			loi_hsc
+			hsc_east_lowlands
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			has_institution = renaissance
+			primary_culture = highland_scottish
+		}
+
+		effect = {
+			custom_tooltip = gaelic_ren.tt
+			set_country_flag = gaelic_ren_flag
+		}
+	}
+}
+ai_hsc_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		tag = HSC
+		was_tag = LOI 
+	} 
+
+	hsc_grampians = {
+		icon = prosper_in_piedmont
+		position = 3
+		provinces_to_highlight = {
+			area = grampians_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			grampians_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+
+		effect = {
+			lowlands_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	hsc_east_lowlands = {
+		icon = mission_rb_conquer_scotland
+		position = 4
+		required_missions = {
+			hsc_grampians
+			loi_galloway
+		}
+		provinces_to_highlight = {
+			area = lowlands_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			lowlands_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+
+		effect = {
+			northumberland_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	hsc_cumbria = {
+		icon = mission_develop_the_scandes
+		position = 5
+		required_missions = { hsc_east_lowlands } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 247
+				province_id = 5180
+				province_id = 3325
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			247 = { country_or_non_sovereign_subject_holds = ROOT } 
+			5180 = { country_or_non_sovereign_subject_holds = ROOT } 
+			3325 = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		effect = {
+			yorkshire_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+loi_locked_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = LOI } 
+
+	loi_locked_1c = {
+		icon = mission_locked_mission
+		position = 3
+		required_missions = { loi_clandeboye } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = form_alba.tt
+				always = no
+			}
+		} 
+
+		effect = {  } 
+	}
+
+	loi_locked_1d = {
+		icon = mission_locked_mission
+		position = 4
+		required_missions = { loi_locked_1c } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = form_alba.tt
+				always = no
+			}
+		} 
+
+		effect = {  } 
+	}
+
+	loi_locked_1e = {
+		icon = mission_locked_mission
+		position = 5
+		required_missions = { loi_locked_1d } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = form_alba.tt
+				always = no
+			}
+		} 
+
+		effect = {  } 
+	}
+}
+loi_locked_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = LOI } 
+
+	loi_locked_2c = {
+		icon = mission_locked_mission
+		position = 3
+		required_missions = { loi_allies } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = form_alba.tt
+				always = no
+			}
+		} 
+
+		effect = {  } 
+	}
+
+	loi_locked_2d = {
+		icon = mission_locked_mission
+		position = 4
+		required_missions = { loi_highland_revolt } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = form_alba.tt
+				always = no
+			}
+		} 
+
+		effect = {  } 
+	}
+}
+loi_locked_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = LOI } 
+
+	loi_locked_3e = {
+		icon = mission_locked_mission
+		position = 5
+		required_missions = { loi_hsc } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = form_alba.tt
+				always = no
+			}
+		} 
+
+		effect = {  } 
+	}
+
+	loi_locked_3f = {
+		icon = mission_locked_mission
+		position = 6
+		required_missions = {
+			loi_locked_3e
+			loi_locked_5e
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = form_alba.tt
+				always = no
+			}
+		} 
+
+		effect = {  } 
+	}
+}
+loi_locked_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = LOI } 
+
+	loi_locked_4c = {
+		icon = mission_locked_mission
+		position = 3
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = form_alba.tt
+				always = no
+			}
+		} 
+
+		effect = {  } 
+	}
+
+	loi_locked_4d = {
+		icon = mission_locked_mission
+		position = 4
+		required_missions = { loi_locked_4c } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = form_alba.tt
+				always = no
+			}
+		} 
+
+		effect = {  } 
+	}
+
+	loi_locked_4e = {
+		icon = mission_locked_mission
+		position = 5
+		required_missions = {
+			loi_hsc
+			loi_locked_5d
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = form_alba.tt
+				always = no
+			}
+		} 
+
+		effect = {  } 
+	}
+}
+loi_locked_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = LOI } 
+
+	loi_locked_5c = {
+		icon = mission_locked_mission
+		position = 3
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = form_alba.tt
+				always = no
+			}
+		} 
+
+		effect = {  } 
+	}
+
+	loi_locked_5d = {
+		icon = mission_locked_mission
+		position = 4
+		required_missions = { loi_locked_5c } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = form_alba.tt
+				always = no
+			}
+		} 
+
+		effect = {  } 
+	}
+
+	loi_locked_5e = {
+		icon = mission_locked_mission
+		position = 5
+		required_missions = { loi_locked_5d } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = form_alba.tt
+				always = no
+			}
+		} 
+
+		effect = {  } 
+	}
+}

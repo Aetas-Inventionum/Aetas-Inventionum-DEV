@@ -1,0 +1,39 @@
+#4563 - Sale
+#Area - Gharb
+#Region - Maghreb
+
+#Core Details
+capital = "Sale"
+is_city = yes
+owner = RIF 
+controller = RIF
+
+#Demographics
+culture = moroccan
+religion = sunni
+
+#Development and Trade
+base_tax = 4
+base_production = 5
+base_manpower = 5
+trade_goods = books
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = RIF 
+add_core = SLE
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+center_of_trade = 2
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

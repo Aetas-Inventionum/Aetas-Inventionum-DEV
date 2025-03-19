@@ -1,0 +1,31 @@
+government = monarchy
+add_government_reform = appanage_reform
+government_rank = 1
+technology_group = eastern
+religion = orthodox
+primary_culture = volhynian
+add_accepted_culture = ruthenian
+capital = 4539
+
+1404.1.1 = {
+	monarch = {
+		name = "Ivan I"
+		dynasty = "Zbarasky"
+		culture = lithuanian 
+		adm = 1
+		dip = 1
+		mil = 2
+		birth_date = 1360.1.1
+	}
+	heir = { 
+		name = "Fëdor"
+		monarch_name = "Fëdor I"
+		dynasty = "Zbarasky"
+		culture = volhynian
+		adm = 3
+		dip = 3
+		mil = 2
+		birth_date = 1375.1.1
+		death_date = 1435.1.1 #guess
+	}
+}

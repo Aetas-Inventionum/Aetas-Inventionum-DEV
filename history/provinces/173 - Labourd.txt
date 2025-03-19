@@ -1,0 +1,42 @@
+#173 - Labourd
+#Area - Gascony
+#Region - France
+
+#Core Details
+capital = "Bayonne"
+is_city = yes
+owner = ENG
+controller = ENG
+
+#Demographics
+culture = basque
+religion = catholic
+
+#Development and Trade
+base_tax = 3
+base_production = 4
+base_manpower = 3
+trade_goods = whaling
+
+#Cores and Occupation (Alphabetical after current)
+add_core = ENG
+add_core = FRA
+add_core = GUY
+add_core = LBD
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+center_of_trade = 2
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

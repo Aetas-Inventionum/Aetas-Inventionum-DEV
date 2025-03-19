@@ -1,0 +1,38 @@
+#106 - Modena
+#Area - Emilia
+#Region - Italy
+
+#Core Details
+capital = "Modena"
+is_city = yes
+owner = FER
+controller = FER
+
+#Demographics
+culture = romagnan
+religion = catholic
+
+#Development and Trade
+base_tax = 4
+base_production = 4
+base_manpower = 4
+trade_goods = wine
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = FER
+add_core = MOD
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

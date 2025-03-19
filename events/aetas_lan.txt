@@ -1,0 +1,424 @@
+namespace = aetas_lan
+normal_or_historical_nations = yes
+
+#Summon Arti Maggiore
+country_event = {
+	id = aetas_lan.1
+	title = aetas_lan.1.t
+	desc = aetas_lan.1.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+
+	option = { #Sadge... anyways
+		name = "aetas_lan.1.a"
+		add_country_modifier = { 
+			name = arte_giudici
+			duration = 3650
+		}
+	}
+	option = { #Sadge... anyways
+		name = "aetas_lan.1.b"
+		add_country_modifier = { 
+			name = arte_calamata 
+			duration = 3650
+		}
+	}
+	option = { #Sadge... anyways
+		name = "aetas_lan.1.c"
+		add_country_modifier = { 
+			name = arte_lana
+			duration = 3650
+		}
+	}
+}
+
+#Summon the Arti Mediane
+country_event = {
+	id = aetas_lan.2
+	title = aetas_lan.2.t
+	desc = aetas_lan.2.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+
+	option = { #butchers
+		name = "aetas_lan.2.a"
+		add_country_modifier = { 
+			name = arte_beccai
+			duration = 3650
+		}
+	}
+	option = { #smiths
+		name = "aetas_lan.2.b"
+		add_country_modifier = { 
+			name = arte_fabbri
+			duration = 3650
+		}
+	}
+	option = { #stonemasons
+		name = "aetas_lan.2.c"
+		add_country_modifier = { 
+			name = arte_maestri
+			duration = 3650
+		}
+	}
+}
+
+#summon the arti minore 
+country_event = {
+	id = aetas_lan.3
+	title = aetas_lan.3.t
+	desc = aetas_lan.3.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+
+	option = { #vintners
+		name = "aetas_lan.3.a"
+		add_country_modifier = { 
+			name = arte_vinattieri
+			duration = 3650
+		}
+	}
+	option = { #innkeepers
+		name = "aetas_lan.3.b"
+		add_country_modifier = { 
+			name = arte_albergatori
+			duration = 3650
+		}
+	}
+	option = { #tanners
+		name = "aetas_lan.3.c"
+		add_country_modifier = { 
+			name = arte_cuoiai
+			duration = 3650
+		}
+	}
+}
+
+#Catastro reforms
+country_event = {
+	id = aetas_lan.4
+	title = aetas_lan.4.t
+	desc = aetas_lan.4.d
+	picture = BANKRUPTCY_eventPicture
+
+	fire_only_once = yes 
+
+	trigger = { 
+		tag = LAN 
+		is_year = 1420
+	}
+
+	mean_time_to_happen = { 
+		months = 12
+	}
+
+	option = { 
+		name = aetas_lan.4.a #yes, by god, make them happen!
+		add_stability = -1
+		add_country_modifier = {
+			name = catastro
+			duration = -1
+		}
+	}
+	option = { 
+		name = aetas_lan.4.b #not worth damaging public opinion over
+		add_country_modifier = { 
+			name = lan_poor
+			duration = 7300
+		}
+	}
+}
+
+#niccolò de' niccoli humanist event
+country_event = {
+	id = aetas_lan.5
+	title = aetas_lan.5.t
+	desc = aetas_lan.5.d
+	picture = BIG_BOOK_eventPicture
+
+	fire_only_once = yes 
+
+	trigger = { 
+		tag = LAN 
+		is_year = 1430
+	}
+
+	mean_time_to_happen = { 
+		months = 40
+	}
+
+	option = { 
+		name = aetas_lan.5.a
+		add_prestige = 10
+		add_country_modifier = { 
+			name = niccolo_mod
+			duration = 14600
+		}
+		define_advisor = { 
+			name = "Niccolò de' Niccoli"
+			type = philosopher
+			skill = 2 #mainly a translator, but an important one indeed
+			discount = yes 
+		}
+	}
+}
+#rise of cosimo
+country_event = {
+	id = aetas_lan.6
+	title = aetas_lan.6.t
+	desc = aetas_lan.6.d
+	picture = WESTERNISATION_eventPicture
+
+	fire_only_once = yes 
+
+	trigger = { 
+		tag = LAN 
+		is_year = 1430
+	}
+
+	mean_time_to_happen = { 
+		months = 48
+	}
+
+	option = { 
+		name = aetas_lan.6.a 
+		define_ruler = { 
+			name = "Cosimo de' Medici"
+			#dynasty = "de' Medici"
+			age = 40
+			adm = 6
+			dip = 5
+			mil = 3
+		}
+		set_country_flag = medici_lan
+		add_ruler_modifier = { 
+			name = cosimo_medici
+			duration = -1
+		}
+		add_country_modifier = { 
+			name = lan_mad_families
+			duration = 7300
+		}
+	}
+	option = { 
+		name = aetas_lan.6.b
+		add_stability = 1
+	}
+}
+#donatello
+country_event = {
+	id = aetas_lan.7
+	title = aetas_lan.7.t
+	desc = aetas_lan.7.d
+	picture = WESTERNISATION_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes
+
+	option = { 
+		name = aetas_lan.7.a 
+		define_advisor = { 
+			name = "Donato di Niccolò di Betto Bardi"
+			skill = 3
+			type = artist 
+			discount = yes 
+		}
+		117 = { 
+			add_province_modifier = { #Was add_country_modifier but like.. huh? Maybe it wanted to add a country one to whoever owned this, but then idk why
+				name = donatello_mod
+				duration = -1
+			}
+		}
+		custom_tooltip = donatello_captured.tt #missing loc
+	}
+}
+country_event = {
+	id = aetas_lan.8
+	title = aetas_lan.8.t
+	desc = aetas_lan.8.d
+	picture = muslimgfx_RELIGIOUS_WARS_eventPicture
+	
+	is_triggered_only = yes
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			is_neighbor_of = ROOT 
+			is_neighbor_of = PREV
+		}
+	}
+	
+	trigger = {
+		religion_group = christian
+		FROM = {
+			OR = {
+				has_province_modifier = donatello_mod
+				has_province_modifier = machiavelli_mod
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+			NOT = {
+				owner = {
+					OR = {
+						is_in_war = {
+							defenders = PREV
+							defenders = ROOT
+						}
+						is_in_war = {
+							attackers = PREV
+							attackers = ROOT
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			FROM = {
+				if = { 
+					limit = { has_province_modifier = donatello_mod }
+					save_global_event_target_as = ai_donatello_province
+					set_global_flag = donatello_captured
+					remove_province_modifier = donatello_mod
+				}
+				if = { 
+					limit = { has_province_modifier = machiavelli_mod }
+					set_global_flag = machiavelli_taken
+					remove_province_modifier = machiavelli_mod
+				}
+				if = { 
+					limit = { has_province_modifier = davinci_mod }
+					set_global_flag = davinci_taken
+					remove_province_modifier = davinci_mod
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = aetas.lan.8.a #missing loc
+		add_prestige = 10
+		hidden_effect = {
+			FROM = {
+				owner = {
+					country_event = {
+						id = aetas_lan.9
+					}
+				}
+			}
+		}
+		capital_scope = {
+			if = { 
+				limit = { has_global_flag = donatello_captured }
+				add_permanent_province_modifier = {
+					name = donatello_mod
+					duration = -1
+				}
+			}
+			if = { 
+				limit = { has_global_flag = machiavelli_taken }
+				add_permanent_province_modifier = { 
+					name = machiavelli_mod 
+					duration = -1
+				}
+			}
+			if = { 
+				limit = { has_global_flag = davinci_taken }
+				add_permanent_province_modifier = { 
+					name = davinci_mod 
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+# Donatello's works lost
+country_event = {
+	id = aetas_lan.9
+	title = aetas_lan.9.t
+	desc = aetas_lan.9.d
+	picture = muslimgfx_RELIGIOUS_WARS_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = aetas_lan.9.a
+		add_prestige = -10
+	}
+	
+	after = {
+		clear_global_event_target = ai_donatello_province
+		if = {
+			limit = { has_global_flag = donatello_captured }
+			clr_global_flag = donatello_captured
+		}
+		if = { 
+			limit = { has_global_flag = machiavelli_taken }
+			clr_global_flag = machiavelli_taken
+		}
+		if = { 
+			limit = { has_global_flag = davinci_taken }
+			clr_global_flag = davinci_taken
+		}
+	}
+}
+#machiavelli
+country_event = {
+	id = aetas_lan.10
+	title = aetas_lan.10.t
+	desc = aetas_lan.10.d
+	picture = WESTERNISATION_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes
+
+	option = { 
+		name = aetas_lan.10.a 
+		define_advisor = { 
+			name = "Niccolò di Bernardo dei Machiavelli"
+			skill = 3
+			type = statesman
+			discount = yes 
+		}
+		117 = { 
+			add_province_modifier = { #Was add_country_modifier but like.. huh? Maybe it wanted to add a country one to whoever owned this, but then idk why
+				name = machiavelli_mod
+				duration = -1
+			}
+		}
+		custom_tooltip = donatello_captured.tt #missing loc
+	}
+}
+#davinci
+country_event = {
+	id = aetas_lan.11
+	title = aetas_lan.11.t
+	desc = aetas_lan.11.d
+	picture = WESTERNISATION_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes
+
+	option = { 
+		name = aetas_lan.11.a 
+		define_advisor = { 
+			name = "Leonardo DaVinci"
+			skill = 3
+			type = natural_scientist
+			discount = yes 
+		}
+		117 = { 
+			add_province_modifier = { #Was add_country_modifier but like.. huh? Maybe it wanted to add a country one to whoever owned this, but then idk why
+				name = davinci_mod
+				duration = -1
+			}
+		}
+		custom_tooltip = donatello_captured.tt
+	}
+}

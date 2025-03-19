@@ -1,0 +1,39 @@
+#6494 - Kurmysh
+#Area - Nizhny Novgorod
+#Region - Russia 
+
+#Core Details
+capital = "Kurmysh" 
+is_city = yes
+owner = MOS
+controller = MOS
+
+#Demographics
+culture = chuvash
+religion = sunni
+
+#Development and Trade
+base_tax = 1
+base_production = 2
+base_manpower = 1
+trade_goods = livestock
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = MOS
+add_core = NZH
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = nomad_group
+
+#Histories
+1415.1.1 = { revolt = { type = pretender_rebels size = 2 leader = "Ivan Borisovich" culture = russian religion = orthodox } controller = REB } 

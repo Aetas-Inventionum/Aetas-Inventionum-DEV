@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = appanage_reform
+technology_group = western
+government_rank = 1
+religion = catholic
+primary_culture = sardinian
+capital = 4735	# Oristano
+fixed_capital = 4735 # Cannot move capital away from this province & no power cost to move to it
+
+1410.1.1 = { 
+	monarch = { 
+		name = "Lenardu I"
+		dynasty = "Cubeddu"
+		adm = 2
+		dip = 4
+		mil = 2
+		birth_date = 1362.1.1
+	}
+	heir = { 
+		name = "Antoni"
+		monarch_name = "Antoni I"
+		dynasty = "Cubeddu"
+		claim = 95
+		adm = 2
+		dip = 3
+		mil = 1
+		birth_date = 1396.1.1
+		death_date = 1463.1.1
+	}
+}

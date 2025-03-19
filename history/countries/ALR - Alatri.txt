@@ -1,0 +1,9 @@
+# changed from ALT
+government = monarchy
+add_government_reform = signoria_monarchy_reform
+government_rank = 1
+primary_culture = umbrian
+religion = catholic
+technology_group = western
+capital = 5092
+fixed_capital = 5092

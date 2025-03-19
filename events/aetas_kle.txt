@@ -1,0 +1,25 @@
+namespace = aetas_kle
+normal_or_historical_nations = yes
+
+#Demands of Gerhard
+country_event = {
+	id = aetas_kle.1
+	title = aetas_kle.1.t
+	desc = aetas_kle.1.d
+	picture = CITY_VIEW_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	major = yes 
+	major_trigger = { 
+		is_neighbor_of = ROOT
+	}
+
+	option = { 
+		name = aetas_kle.1.a #give gerhard what he wants
+	}
+	option = { 
+		name = aetas_kle.1.b #like hell i will!
+		ai_chance = { factor = 1 }
+	}
+}

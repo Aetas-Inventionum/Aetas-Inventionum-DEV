@@ -1,0 +1,36 @@
+#4122 - Shenkursk
+#Area - Ustyug
+#Region - Russia 
+
+#Core Details
+capital = "Shenkursk"
+is_city = yes
+owner = UTG   
+controller = UTG
+
+#Demographics
+culture = ustyugian
+religion = orthodox
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = tar
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = UTG
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = nomad_group
+
+#Histories

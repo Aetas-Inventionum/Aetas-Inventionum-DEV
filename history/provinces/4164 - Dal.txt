@@ -1,0 +1,38 @@
+#4164 - Dal
+#Area - Götaland
+#Region - Scandinavia 
+
+#Core Details
+capital = "Dalaborg"
+is_city = yes
+owner = SWE 
+controller = SWE 
+
+#Demographics
+culture = geatish
+religion = catholic
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = naval_supplies
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = SWE
+add_core = GTA
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

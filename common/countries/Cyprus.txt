@@ -1,0 +1,134 @@
+#Country Name: Please see filename.
+
+graphical_culture = latingfx
+
+color = { 205 172 162 }	#previous 255 174 160, previous pink 209 160 173
+
+revolutionary_colors = { 8 0 16 }
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	offensive_ideas
+	spy_ideas
+	trade_ideas
+	maritime_ideas
+	economic_ideas
+	diplomatic_ideas
+}
+
+historical_units = {
+	eastern_medieval_infantry
+	eastern_knights
+	slavic_stradioti
+	eastern_militia
+	ottoman_spahi
+	ottoman_sekban
+	ottoman_reformed_spahi
+	ottoman_reformed_janissary
+	ottoman_toprakli_hit_and_run
+	ottoman_nizami_cedid
+	ottoman_toprakli_dragoon
+	eastern_skirmisher
+	eastern_uhlan
+	eastern_carabinier
+	ottoman_new_model
+	ottoman_lancer
+}
+
+monarch_names = {
+	"Jacques #1" = 50
+	"Jean #1" = 50
+	"Henri #2" = 25
+	"Pierre #2" = 20
+	"Amaury #2" = 20
+	"Hugues #4" = 20
+	"Janus #1" = 10
+	"Eudes #0" = 5
+	"Guy #1" = 15
+	"Philippe #0" = 5
+	"Baudouin #0" = 10
+	"Louis #0" = 0
+	"Thomas #0" = 0
+	"Marc #0" = 0
+	"Onfroy #0" = 0
+	"Nicolas #0" = 0
+	"Gautier #0" = 0
+	"Léon #0" = 0
+	"Balian #0" = 0
+	"Rainier #0" = 0
+	"Renaud #0" = 0
+	"Godefroy #0" = 10
+
+	#misc
+	"Eustache #0" = 0
+	"Guillaume #0" = 5
+	"Raymond #0" = 5
+	"Gauthier #0" = 5
+	"Tancrède #0" = 5
+	"Gervaise #0" = 0
+	"Josselin #0" = 5
+	"Elinard #0" = 2
+	"Odo #0" = 3
+	"Raoul #0" = 0
+	"Hamo #0" = 0
+	"Onfroy #0" = 3
+	"Galdemar #0" = 0
+	"Gilles #0" = 0
+	"Julien #0" = 0
+	"Romain #0" = 0
+	"Adhémar #0" = 0
+	"Maurice #0" = 0
+	"Miles #0" = 0
+	"Payen #0" = 0
+	"Geoffroy #0" = 0
+	"Daniel #0" = 0
+	"Guermond #0" = 0
+	"Thibaut #0" = 5
+	
+	"Charlotte #0" = -15
+	"Sybille #0" = -10
+	"Marie #0" = -10
+	"Alix #0" = -5
+	"Isabelle #0" = -5
+	"Jacqueline	#0" = -1
+	"Agnès #0" = -1
+	"Alice #0" = -1
+	"Anne #0" = -1
+	"Cléophée #0" = -1
+	"Mélisende #0" = -1
+}
+
+ship_names = {
+	#Religious names
+	"l'Ave-Maria" "le Bienheureux" "le Catholique" "la Cordelière" "la Dieu-Donnée" 
+	"la Dieu-la-Garde" "la Notre-Dame" "le Paradis" "le Sainte-Anne" "la Sainte-Croix"
+	"le Saint-Esprit" "le Saint-Guillaume" "le Saint-Pierre" "le Saint-Sauveur" 
+	"le Saint-Jacques" "le Saint-Jean" "la Sainte-Marie"
+	"le Saint-Michel" "la Sainte-Nonne" "le Saint-Nicolas"
+
+	#Vanilla
+	"l'Aimable" "l'Alliance" "l'Audacieux" "l'Avenant" "la Barbue" "le Belliqueux"
+	"le Bien-Aimé" "le Bienfaisant" "le Bon" "la Bretonne" "la Bretagne" "le Brillant"
+	"le Célèbre" "le Comte" "le Courage" "le Défenseur" "le Diadème" "le Diligent" "le Duc"
+	"le Fleuron" "le Formidable" "le Fortuné" "le Fougueux" "le Furieux" "le Glorieux"
+	"la Grande Hermine" "l'Impétueux" "l'Idomptable" "la Loire" "la Petite Hermine"
+	"le Sévère" "le Solide" "le Solitaire" "le Souverain" "le Superbe" "le Téméraire"
+	"le Terrible" "l'Union" "le Vaillant" "le Vengeur"  "la Victoire" "le Vigilant"
+	"la Volante"
+}
+
+leader_names = { 
+	"d'Ibelin" "de Caffran" "de Norès" "de Lusignan" "de Gourri" "d'Hortalls" "de Milly" Berlais
+	"du Morf" "de Gibelet" "de Dampierre" "de Brunswick" "de Montfort" "de la Roche" "de Montbéliard"
+	"de Courtenay" "d'Arsouf" "de Cayphas" "de Lampron" "de Bethsan" "de Courc" "Le Thor" "de Chappes"
+	"du Plessis" "de Hanouse" "de Sagette" "de Saint-Omer" "de Brisebarre" "de Césarée" "de Bures"
+}
+
+army_names = { 
+	"Armée de l'Île" "Armée de Cilicie" "Armée de $PROVINCE$"
+}
+
+fleet_names = { 
+	"Escadre du Saint-Laidre"
+}

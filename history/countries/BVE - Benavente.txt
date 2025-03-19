@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = appanage_reform
+government_rank = 1
+primary_culture = leonese
+religion = catholic
+technology_group = western
+capital = 4969 #Benavente
+
+1398.1.1 = { 
+	monarch = { 
+		name = "Juan Alonso I"
+		dynasty = "Pimentel"
+		birth_date = 1355.1.1
+		death_date = 1419.12.1
+		adm = 2
+		dip = 4
+		mil = 1
+	}
+}

@@ -1,0 +1,9 @@
+government = tribal
+add_government_reform = tribal_despotism
+government_rank = 1
+primary_culture = moroccan 
+add_accepted_culture = atlasic
+religion = sunni
+technology_group = muslim
+capital = 345
+religious_school = maliki_school

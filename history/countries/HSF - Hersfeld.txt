@@ -1,0 +1,8 @@
+government = theocracy
+add_government_reform = imperial_abbey_reform
+government_rank = 1
+primary_culture = palatinehessian
+religion = catholic
+technology_group = western
+capital = 5362
+fixed_capital = 5362

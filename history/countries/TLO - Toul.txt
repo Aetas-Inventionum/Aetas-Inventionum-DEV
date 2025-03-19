@@ -1,0 +1,19 @@
+government = theocracy
+add_government_reform = hre_bishopric_reform
+government_rank = 1
+primary_culture = lorrain
+religion = catholic
+technology_group = western
+capital = 3338 # Toul
+fixed_capital = 3338 # Cannot move capital away from this province & no power cost to move to it
+
+1409.3.20 = {
+	monarch = {
+		name = "Henri II"
+		dynasty = "de Ville-sur-Illon"
+		birth_date = 1395.1.1
+		adm = 1
+		dip = 3
+		mil = 3
+	}
+}

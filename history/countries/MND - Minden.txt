@@ -1,0 +1,20 @@
+government = theocracy
+add_government_reform = hre_bishopric_reform
+government_rank = 1
+primary_culture = hannoverian
+religion = catholic
+technology_group = western
+capital = 5377
+fixed_capital = 5377
+
+
+1406.1.1 = {
+	monarch = {
+		name = "Wilbrand I"
+		dynasty = "von Hallermund"
+		birth_date = 1360.1.1
+		adm = 4
+		dip = 3
+		mil = 2
+	}
+}

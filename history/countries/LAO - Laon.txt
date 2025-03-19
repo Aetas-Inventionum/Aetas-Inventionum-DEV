@@ -1,0 +1,9 @@
+government = theocracy
+add_government_reform = leading_clergy_reform
+government_rank = 1
+primary_culture = picard
+religion = catholic
+technology_group = western
+capital = 3237 # Laon
+fixed_capital = 3237 # Cannot move capital away from this province & no power cost to move to it
+

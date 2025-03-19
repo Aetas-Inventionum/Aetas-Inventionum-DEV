@@ -1,0 +1,89 @@
+government = monarchy
+add_government_reform = low_countries_monarchy_reform
+government_rank = 1
+technology_group = western
+religion = catholic
+primary_culture = brabantian
+
+capital = 92
+
+
+1355.1.1 = {
+	monarch = {
+		name = "Jeanne"
+		dynasty = "de Reginar"
+		adm = 2
+		dip = 2
+		mil = 2
+		female = yes
+	}
+}
+
+1384.8.1 = {
+	heir = {
+		name = "Antoine"
+		monarch_name = "Antoine"
+		dynasty = "de Valois-Bourgogne"
+		birth_date = 1384.1.1
+		death_date = 1415.10.25
+		claim = 70
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+
+1406.11.1 = {
+	monarch = {
+		name = "Anton I"
+		dynasty = "de Valois-Bourgogne"
+		birth_date = 1384.8.1
+		death_date = 1415.10.25
+		adm = 4 #reformed Brabants financial situation
+		dip = 5 #aqcuired Brabant diplomatically much to the dismay of the Duke of Gueldres
+		mil = 2 #saved the Burgundian army once, but also died due to a strategical blunder
+	}
+}
+
+1406.11.1 = {
+	heir = {
+		name = "Jan"
+		monarch_name = "Jan IV"
+		dynasty = "de Valois-Bourgogne"
+		birth_date = 1403.6.11
+		death_date = 1427.4.17
+		claim = 95
+		adm = 0 #tried to end the Hooks and Cods factionalism by banning those words
+		dip = 1 #was easily influenced by foreign powers
+		mil = 2 #not much known about his military accomplishments
+	}
+}
+
+1415.10.25 = {
+	monarch = {
+		name = "Jan IV"
+		dynasty = "de Valois-Bourgogne"
+		culture = burgundian
+		birth_date = 1403.7.11
+		death_date = 1423.4.17
+		adm = 0
+		dip = 1
+		mil = 2
+	}
+}
+
+1415.10.26 = {
+	heir = {
+		name = "Filip"
+		monarch_name = "Filip I"
+		dynasty = "de Valois-Bourgogne"
+		culture = burgundian
+		birth_date = 1404.7.25
+		death_date = 1430.8.14
+		claim = 95
+		adm = 3
+		dip = 4
+		mil = 2
+	}
+}
+

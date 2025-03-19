@@ -1,0 +1,37 @@
+#54 - Stade
+#Area - Weser Estuary
+#Region - North Germany
+
+#Core Details
+capital = "Stade"
+is_city = yes
+owner = BRV 
+controller = BRV
+
+#Demographics
+culture = lower_saxon
+religion = catholic
+
+#Development and Trade
+base_tax = 3
+base_production = 3
+base_manpower = 3
+trade_goods = fish
+
+#Cores and Occupation (Alphabetical after current)
+add_core = BRV
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

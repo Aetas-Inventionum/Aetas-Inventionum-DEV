@@ -1,0 +1,37 @@
+#5379 - Uezel
+#Area - Lower Saxony
+#Region - North Germany
+
+#Core Details
+capital = "Uezel"
+is_city = yes
+owner = LUN
+controller = LUN
+
+#Demographics
+culture = eastphalian
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 2
+base_manpower = 1
+trade_goods = apiculture
+
+#Cores and Occupation (Alphabetical after current)
+add_core = LUN
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

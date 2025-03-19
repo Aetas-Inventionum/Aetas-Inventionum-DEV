@@ -1,0 +1,41 @@
+#1751 - Ceuta
+#Area - Rif
+#Region - Maghreb
+
+#Core Details
+capital = "Ceuta"
+is_city = yes
+owner = POR
+controller = POR
+
+#Demographics
+culture = moroccan
+religion = sunni
+
+#Development and Trade
+base_tax = 2
+base_production = 3
+base_manpower = 1
+trade_goods = grain
+
+#Cores and Occupation (Alphabetical after current) 
+#add_core = POR (they conquered it a day ago)
+add_core = FEZ
+add_core = GRA
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+add_province_triggered_modifier = african_terminus_disunity 
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

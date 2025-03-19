@@ -1,0 +1,46 @@
+#5470 - Kosice
+#Area - Upper Hungary
+#Region - Carpathia
+
+#Core Details
+capital = "Kosice"
+is_city = yes
+owner = HUN
+controller = HUN
+
+#Demographics
+culture = carpathian_german
+religion = catholic
+
+#Development and Trade
+base_tax = 3
+base_production = 4
+base_manpower = 3
+trade_goods = glass
+
+#Cores and Occupation (Alphabetical after current)
+add_core = HUN
+add_core = UPH 
+
+#Other Political
+hre = no
+seat_in_parliament = yes
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+center_of_trade = 2
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = KAZ
+discovered_by = CRI
+discovered_by = GOL
+discovered_by = AST
+discovered_by = QAS
+
+#Histories

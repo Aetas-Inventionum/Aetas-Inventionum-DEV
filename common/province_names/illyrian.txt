@@ -1,0 +1,44 @@
+#ai albanian by pleibos <3
+
+#Albania
+143 = { "Vlorë" "Vlorë" }
+4174 = { "Durrës" "Durrës" }
+4175 = { "Lezhë" "Lezhë" }
+4750 = { "Krujë" "Krujë" }
+5284 = { "Shkodër" "Shkodër" }
+5430 = { "Peshkopi" "Peshkopi" } #Dibra e Poshtme
+5432 = { "Dibër" "Dibër" } #Dibra e Madhe
+5433 = { "Belegrat" "Belegrat" } #derivative of older, medieval name before berat (late-ottoman era)
+5434 = { "Korçë" "Korçë" }
+5435 = { "Labëria" "Himarë" }
+6322 = { "Shufadë" "Shufadë" } #variant of shufada/shufaday. seen both, but put into modern form
+6323 = { "Shkumbin" "Strugë" }
+#dardania
+1766 = { "Kosova" "Prishtinë" }
+3001 = { "Shkup" "Shkup" }
+5421 = { "Prizreni" "Prizren" }
+5422 = { "Novobërda" "Novobërda" }
+5423 = { "Metohija" "Pejë" }
+5424 = { "Vranjë" "Vranjë" }
+5561 = { "Përlep" "Përlep" }
+5562 = { "Shtip" "Shtip" }
+5563 = { "Kratovë" "Kratovë" }
+#montenegro
+5352 = { "Beranë" "Beranë" }
+#macedonia
+148 = { "Selenik" "Selenik" }
+1853 = { "Kosturi" "Kosturi" }
+4702 = { "Siar" "Siar" }
+4780 = { "Ohër" "Ohër" }
+5555 = { "Vodenë" "Vodenë" }
+5556 = { "Selfixhe" "Selfixhe" }
+5557 = { "Pieria" "Katerini" }
+5560 = { "Manastir" "Manastir" }
+#epirus
+142 = { "Kortuz" "Kortuz" }
+144 = { "Janinë" "Janinë" }
+4699 = { "Artës" "Artës" }
+5437 = { "Butrint" "Butrint" }
+#Greece
+147 = { "Trikolj" "Trikolj" }
+5564 = { "Amciu" "Amciu" }

@@ -1,0 +1,37 @@
+#3195 - Guerande
+#Area - Upper Brittany
+#Region - France
+
+#Core Details
+capital = "Guérande"
+is_city = yes
+owner = BRI
+controller = BRI
+
+#Demographics
+culture = celtic_breton
+religion = catholic
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = salt
+
+#Cores and Occupation (Alphabetical after current)
+add_core = BRI 
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

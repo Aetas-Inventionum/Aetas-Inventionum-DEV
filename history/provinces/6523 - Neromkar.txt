@@ -1,0 +1,37 @@
+#6523 - Neromkar
+#Area - Permia
+#Region - Russia 
+
+#Core Details
+capital = "Neromkar" 
+is_city = yes
+owner = VGU
+controller = VGU
+
+#Demographics
+culture = mansi
+religion = tengri_pagan_reformed
+
+#Development and Trade
+base_tax = 2
+base_production = 2
+base_manpower = 1
+trade_goods = fur
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = VGU
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+center_of_trade = 1
+
+#Discoveries
+discovered_by = eastern
+discovered_by = nomad_group
+
+#Histories

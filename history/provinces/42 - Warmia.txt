@@ -1,0 +1,38 @@
+#42 - Warmia
+#Area - Pomesania
+#Region - Baltic
+
+#Core Details
+capital = "Heilsberg"
+is_city = yes
+owner = WRM
+controller = WRM
+
+#Demographics
+culture = prussian
+religion = catholic
+
+#Development and Trade
+base_tax = 3
+base_production = 4
+base_manpower = 3
+trade_goods = books
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = WRM
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = eastern
+
+#Histories

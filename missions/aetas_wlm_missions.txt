@@ -1,0 +1,260 @@
+wlm_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = WLM } 
+
+	wlm_pembroke = {
+		icon = defeat_the_english
+		position = 2
+		required_missions = { wlm_ruin } 
+		provinces_to_highlight = {  
+			province_id = 4369
+			NOT = { num_of_times_improved = 5 }
+		} 
+
+		trigger = {  
+			4369 = { 
+				owned_by = ROOT 
+				num_of_times_improved = 5
+			}
+		} 
+
+		effect = {  
+			4369 = { 
+				change_culture = english
+			}
+		} 
+	}
+}
+wlm_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = WLM } 
+
+	wlm_glamorgan = {
+		icon = mission_holyrood
+		position = 2
+		required_missions = { wlm_ruin } 
+		provinces_to_highlight = {  
+			province_id = 241
+			NOT = { 
+				AND = {
+					num_of_times_improved = 3
+					has_fort_building_trigger = yes 
+				}
+			}
+		} 
+
+		trigger = {  
+			241 = { 
+				num_of_times_improved = 3
+				has_fort_building_trigger = yes 
+			}
+		} 
+
+		effect = {  
+			241 = { 
+				add_province_modifier = { 
+					name = castles_glamorgan
+					duration = -1
+				}
+			}
+		} 
+	}
+
+	wlm_cardiff = {
+		icon = sway_cologne
+		position = 3
+		required_missions = { wlm_glamorgan } 
+		provinces_to_highlight = {  
+			province_id = 241
+			NOT = { 
+				AND = { 
+					num_of_times_improved = 10
+					is_capital = yes 
+					has_tax_building_trigger = yes 
+					has_trade_building_trigger = yes 
+				}
+			}
+		} 
+
+		trigger = {  
+			241 = { 
+				num_of_times_improved = 10
+				is_capital = yes 
+				has_tax_building_trigger = yes 
+				has_trade_building_trigger = yes 
+			}
+		} 
+
+		effect = {  
+			if = { 
+				limit = { is_subject = yes }
+				overlord = { country_event = { id = aetas_eng.25 } }
+			}
+			else = { 
+				241 = { 
+					add_province_modifier = { 
+						name = royal_cardiff
+						duration = -1 
+					}
+					change_culture = ROOT
+				}
+			}
+		} 
+	}
+}
+wlm_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = WLM } 
+
+	wlm_ruin = {
+		icon = take_the_littoral
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = welsh_revolt.tt
+				has_global_flag = wr_flag 
+			}
+		} 
+
+		effect = {  
+			clr_global_flag = wr_flag
+			add_stability = 1
+		} 
+	}
+
+	wlm_welsh = {
+		icon = mission_peasantry
+		position = 2
+		required_missions = { wlm_ruin } 
+		provinces_to_highlight = {  
+			culture = welsh
+			owned_by = ROOT 
+		} 
+
+		trigger = {  
+			accepted_culture = welsh 
+		} 
+
+		effect = {  
+			add_stability = 1
+			add_country_modifier = { 
+				name = welsh_wlm
+				duration = 18250
+			}
+		} 
+	}
+
+	wlm_pieces = {
+		icon = mission_rb_conquer_wales
+		position = 3
+		required_missions = {
+			wlm_welsh
+			wlm_glamorgan
+			wlm_pembroke
+		}
+		provinces_to_highlight = {  
+			owned_by = ROOT 
+			NOT = { devastation = 1 }
+		} 
+
+		trigger = {  
+			stability = 3
+			all_owned_province = { 
+				NOT = { devastation = 1 }
+			}
+		} 
+
+		effect = {  
+			every_owned_province = { 
+				limit = { has_province_modifier = welsh_revolt }
+				remove_province_modifier = welsh_revolt 
+			}
+			wales_area = { 
+				add_province_modifier = { 
+					name = rebuild_wales
+					duration = 36500
+				}
+			}
+		} 
+	}
+}
+wlm_branch_3b = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		tag = WLM 
+		is_subject = yes 
+	} 
+	
+	wlm_eng_law = {
+		icon = mission_eng_london_icon
+		position = 4
+		required_missions = { wlm_pieces } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			overlord = {
+				mission_completed = eng_union_roses 
+			}
+		} 
+
+		effect = {  
+			overlord = { 
+				country_event = { id = aetas_eng.26 }
+			}
+		} 
+	}
+}
+wlm_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = WLM } 
+
+	wlm_trim = {
+		icon = mission_rb_the_education_acts
+		position = 2
+		required_missions = { wlm_ruin } 
+		provinces_to_highlight = {  
+			province_id = 5167
+			NOT = { 
+				AND = { 
+					base_manpower = 5
+					has_fort_building_trigger = yes 
+					has_manpower_building_trigger = yes 
+				}
+			}
+		} 
+
+		trigger = {  
+			5167 = { 
+				base_manpower = 5
+				has_fort_building_trigger = yes 
+				has_manpower_building_trigger = yes 
+			}
+		} 
+
+		effect = {  
+			5167 = { 
+				add_province_modifier = { 
+					name = trim_mod
+					duration = -1
+				}
+			}
+		} 
+	}
+}

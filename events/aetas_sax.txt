@@ -1,0 +1,546 @@
+namespace = aetas_sax
+normal_or_historical_nations = yes
+
+# von Wettin inheritance
+country_event = {
+	id = aetas_sax.1
+	title = aetas_sax.1.t
+	desc = aetas_sax.1.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	immediate = {
+		hidden_effect = { 
+			if = {
+				limit = {
+					NOT = {
+						has_ruler = "Friedrich"
+					}
+				}
+				define_ruler = { 
+				name = "Friedrich I"
+				dynasty = "von Wettin"
+				adm = 2
+				dip = 4
+				mil = 1
+				}
+				remove_heir = {}
+			}
+			clr_country_flag = sax_friedrich_destiny
+			set_country_flag = sax_von_wettin
+		}
+	}
+
+	option = { #rise, friedrich
+		name = "aetas_sax.1.a"
+		inherit = MEI 
+		set_capital = 5305
+	}
+}
+country_event = { #heir of destiny aka friedrich o'clock
+	id = aetas_sax.2
+	title = aetas_sax.2.t
+	desc = aetas_sax.2.d
+	picture = NEW_HEIR_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = { 
+		tag = SAX 
+		has_ruler = "Albrecht"
+	}
+
+	mean_time_to_happen= {
+		months = 1
+	}
+
+	option = { #it is friedrich's destiny to unite meissen and saxony
+		name = "aetas_sax.2.a"
+		define_heir = { 
+			name = "Friedrich"
+			dynasty = "von Wettin"
+			birth_date = 1370.4.11
+			adm = 2
+			dip = 4
+			mil = 1
+			block_disinherit = yes 
+		}
+		set_country_flag = sax_friedrich_destiny
+		custom_tooltip = aetas_sax.2.a.tt
+	}
+	option = { 
+		name = "aetas_sax.2.b"
+		custom_tooltip = aetas_sax.2.b.tt #missing loc
+	}
+
+}
+#bugraves of meissen?
+country_event = {
+	id = aetas_sax.3
+	title = aetas_sax.3.t
+	desc = aetas_sax.3.d
+	picture = DEBATE_REPUBLICAN_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_sax.3.a #eh why not
+		5305 = { 
+			add_core = VOG
+		}
+		VOG = { 
+			override_country_name = MEISSEN
+		}
+		create_march = VOG 
+		add_prestige = 15
+		VOG = {
+			reverse_add_opinion = { 
+				who = ROOT
+				modifier = allowed_meissen
+			}
+		}
+	}
+	option = { 
+		name = aetas_sax.3.b #no thank you
+		add_prestige = -15
+		every_neighbor_country = {
+			limit = { is_part_of_hre = yes }
+			reverse_add_opinion = { 
+				who = ROOT
+				modifier = denied_meissen
+			}
+		}
+	}
+}
+#Division of Altenburg
+country_event = {
+	id = aetas_sax.4
+	title = aetas_sax.4.t
+	desc = aetas_sax.4.d
+	picture = CIVIL_WAR_eventPicture
+	
+	fire_only_once = yes
+	major = yes 
+	major_trigger = { 
+		is_neighbor_of = ROOT 
+		is_part_of_hre = yes 
+	}
+
+	trigger = { 
+		OR = { 
+			SAX = { 
+				was_tag = MEI 
+				NOT = { 
+					OR = { 
+						has_ruler = "Friedrich I"
+						has_ruler = "Friedrich IV"
+					}
+				}
+				senior_union_with = THU 
+			}
+			MEI = { 
+				NOT = { 
+					OR = { 
+						has_ruler = "Friedrich I"
+						has_ruler = "Friedrich IV"
+					}
+				}
+				senior_union_with = THU 
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 20
+	}
+
+	option = { 
+		name = aetas_sax.4.a #concede to Wilhelm III's demands
+		ai_chance = { factor = 1 }
+		THU = {
+			grant_independence = yes 
+			define_ruler = {
+				name = "Wilhelm III"
+				dynasty = "von Wettin"
+				age = 20
+				adm = 2
+				dip = 1
+				mil = 3
+			}
+			add_casus_belli = {
+				target = ROOT 
+				type = cb_restore_personal_union
+				months = 480
+			}
+		}
+		5300 = { 
+			cede_province = THU
+			add_core = THU 
+		}
+		add_truce_with = THU 
+		add_casus_belli = {
+			target = THU
+			type = cb_restore_personal_union
+			months = 480
+		}
+	}
+
+	option = {
+		name = aetas_sax.4.b #there can only be one brother on the thrones!
+		ai_chance = { factor = 4 } #far more likely
+		THU = {
+			declare_war_with_cb = {
+				who = ROOT
+				casus_belli = cb_independence_war
+			}
+			define_ruler = {
+				name = "Wilhelm III"
+				dynasty = "von Wettin"
+				age = 20
+				adm = 2
+				dip = 1
+				mil = 3
+			}
+		}
+		5300 = { add_core = THU }
+	}
+}
+#assumption of the electorate of saxony
+country_event = {
+	id = aetas_sax.5
+	title = aetas_sax.5.t
+	desc = aetas_sax.5.d
+	picture = HRE_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes 
+
+	major = yes 
+	major_trigger = {
+		OR = { 
+			culture_group = germanic
+			is_part_of_hre = yes 
+		}
+	}
+
+	option = { 
+		name = aetas_sax.5.a #it is an honor. 
+		inherit = SWB 
+		change_tag = SAX 
+		if = {
+			limit = {
+				has_custom_ideas = no
+				NOT = { has_idea_group = ai_SAX_ideas }
+			}
+			country_event = { id = ideagroups.1 } #Swap Ideas
+		}
+		swap_non_generic_missions = yes
+		add_government_reform = ai_sax_reform 
+		elector = yes 
+		set_capital = 59
+		hidden_effect = { 
+			if = { 
+				limit = { VOG = { is_subject_of = ROOT } }
+				VOG = { change_country_color = { color = { 205 205 105 } } }
+			}
+		}
+		set_country_flag = sax_formed_flag
+		complete_mission = mei_sax
+	}
+}
+#treaty of leipzig
+country_event = {
+	id = aetas_sax.6
+	title = aetas_sax.6.t
+	desc = aetas_sax.6.d
+	picture = LIBERUM_VETO_eventPicture
+
+	fire_only_once = yes 
+
+	major = yes 
+	major_trigger = {
+		is_neighbor_of = ROOT 
+	}
+
+	trigger = { 
+		is_year = 1475
+		tag = SAX 
+		is_elector = yes 
+		dynasty = "von Wettin"
+		government = monarchy 
+		NOT = { mission_completed = sax_succession }
+	}
+
+	mean_time_to_happen = { 
+		months = 120
+	}
+
+	option = { 
+		name = aetas_sax.6.a #damn.
+		elector = no 
+		hidden_effect = { 
+			if = { 
+				limit = { 59 = { NOT = { is_core = SWB } } }
+				59 = { add_core = SWB }
+			}
+			if = { 
+				limit = { 5299 = { NOT = { is_core = SWB } } }
+				5299 = { add_core = SWB }
+			}
+			if = { 
+				limit = { 5297 = { NOT = { is_core = SWB } } }
+				5297 = { add_core = SWB }
+			}
+		}
+		release = SWB 
+		SWB = { 
+			define_ruler = { 
+				name = "Ernst I"
+				dynasty = "von Wettin"
+				age = 35
+				adm = 2
+				dip = 5
+				mil = 2
+			}
+			elector = yes 
+			add_government_reform = ai_sax_reform
+		}
+		if = { 
+			limit = { owns = 5301 }
+			5301 = { 
+				cede_province = SWB 
+				add_core = SWB 
+			}
+		}
+		if = { 
+			limit = { owns = 4744 }
+			4744 = { 
+				cede_province = SWB 
+				add_core = SWB 
+			}
+		}
+		if = { 
+			limit = { owns = 5300 }
+			5300 = { 
+				cede_province = SWB 
+				add_core = SWB 
+			}
+		}
+		if = { 
+			limit = { owns = 2956 }
+			2956 = { 
+				cede_province = SWB 
+				add_core = SWB 
+			}
+		}
+		if = { 
+			limit = { owns = 5302 }
+			5302 = { 
+				cede_province = SWB 
+				add_core = SWB 
+			}
+		}
+		if = { 
+			limit = { THU = { is_subject_of = ROOT } }
+			SWB = { inherit = THU }
+		}
+		add_truce_with = SWB 
+		custom_tooltip = sax_reclaim.tt
+		set_country_flag = sax_partition_flag
+	}
+	option = { 
+		name = aetas_sax.6.b #play as saxe-wittenberg 
+		elector = no 
+		hidden_effect = { 
+			if = { 
+				limit = { 59 = { NOT = { is_core = SWB } } }
+				59 = { add_core = SWB }
+			}
+			if = { 
+				limit = { 5299 = { NOT = { is_core = SWB } } }
+				5299 = { add_core = SWB }
+			}
+			if = { 
+				limit = { 5297 = { NOT = { is_core = SWB } } }
+				5297 = { add_core = SWB }
+			}
+		}
+		release = SWB 
+		SWB = { 
+			define_ruler = { 
+				name = "Ernst I"
+				dynasty = "von Wettin"
+				age = 35
+				adm = 2
+				dip = 5
+				mil = 2
+			}
+			elector = yes 
+			add_government_reform = ai_sax_reform
+		}
+		if = { 
+			limit = { owns = 4744 }
+			4744 = { 
+				cede_province = SWB 
+				add_core = SWB 
+			}
+		}
+		if = { 
+			limit = { owns = 5300 }
+			5300 = { 
+				cede_province = SWB 
+				add_core = SWB 
+			}
+		}
+		if = { 
+			limit = { owns = 2956 }
+			2956 = { 
+				cede_province = SWB 
+				add_core = SWB 
+			}
+		}
+		if = { 
+			limit = { owns = 5302 }
+			5302 = { 
+				cede_province = SWB 
+				add_core = SWB 
+			}
+		}
+		if = { 
+			limit = { THU = { is_subject_of = ROOT } }
+			SWB = { inherit = THU }
+		}
+		add_truce_with = SWB 
+		set_country_flag = sax_partition_flag
+		switch_tag = SWB 
+	}
+}
+#sale of sagan's inheritance
+country_event = {
+	id = aetas_sax.7
+	title = aetas_sax.7.t
+	desc = aetas_sax.7.d
+	picture = OVEREXTENSION_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes 
+
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			tag = SAX
+			tag = MEI 
+			was_tag = MEI
+		}
+	}
+
+	option = { 
+		name = aetas_sax.7.a #accept
+		ai_chance = { factor = 3 }
+		FROM = { add_treasury = -150 }
+		add_treasury = 100
+		5261 = { 
+			cede_province = FROM 
+			add_core = FROM 
+			if = { 
+				limit = { is_core = ROOT }
+				remove_core = ROOT 
+			}
+		}
+		5262 = { 
+			cede_province = BRA 
+			add_core = BRA 
+			if = { 
+				limit = { is_core = ROOT }
+				remove_core = ROOT 
+			}
+		}
+	}
+	option = { 
+		name = aetas_sax.7.b #decline
+		ai_chance = { factor = 1 }
+		5261 = { add_core = FROM }
+		5262 = { add_core = BRA }
+	}
+}
+#martin luther
+country_event = {
+	id = aetas_sax.8
+	title = aetas_sax.8.t
+	desc = aetas_sax.8.d
+	picture = LIBERUM_VETO_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes 
+
+	major = yes 
+	major_trigger = {
+		religion_group = christian 
+	}
+
+	option = { 
+		name = aetas_sax.8.a #we will shelter him in his pursuit of a better christianity
+		ai_chance = { factor = 1 }
+		59 = { 
+			change_religion = protestant
+			add_reform_center = protestant
+			add_great_project_tier = { 
+				type = ai_wittenberg
+				tier = 2
+			}
+		}
+		define_advisor = { 
+			type = theologian 
+			name = "Martin Luther"
+			culture = saxon 
+			religion = protestant 
+			skill = 3
+			discount = yes 
+		}
+		reverse_add_opinion = {
+			who = emperor 
+			modifier = sheltered_ml
+		}
+	}
+}
+#dresden :O
+country_event = {
+	id = aetas_sax.9
+	title = aetas_sax.9.t
+	desc = aetas_sax.9.d
+	picture = GREAT_BUILDING_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_sax.9.a #yes!
+		ai_chance = { factor = 1 } #we enjoy historical capitals!
+		set_capital = 61
+		61 = { 
+			add_province_triggered_modifier = dresden_mod1 
+			add_great_project_tier = { 
+				type = ai_dresden
+				tier = 1
+			}
+		}
+	}
+	option = {
+		name = aetas_sax.9.b #no
+		ai_chance = { factor = 0 }
+		capital_scope = { 
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+		61 = { 
+			add_great_project_tier = { 
+				type = ai_dresden
+				tier = 1
+			}
+		}
+	}
+}

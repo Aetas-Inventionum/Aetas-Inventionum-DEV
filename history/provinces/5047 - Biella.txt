@@ -1,0 +1,39 @@
+#5047 - Biella
+#Area - Northern Piedmont
+#Region - Italy
+
+#Core Details
+capital = "Biella"
+is_city = yes
+owner = SAV
+controller = SAV
+
+#Demographics
+culture = piedmontese
+religion = catholic
+
+#Development and Trade
+base_tax = 3
+base_production = 3
+base_manpower = 2
+trade_goods = wool
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = SAV
+add_core = MLO
+add_core = VLI
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

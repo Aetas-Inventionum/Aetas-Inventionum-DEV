@@ -1,0 +1,38 @@
+#5011 - Douai
+#Area - Flanders
+#Region - France
+
+#Core Details
+capital = "Douai"
+is_city = yes
+owner = FLA
+controller = FLA
+
+#Demographics
+culture = picard
+religion = catholic
+
+#Development and Trade
+base_tax = 3
+base_production = 3
+base_manpower = 3
+trade_goods = grain
+latent_trade_goods = { coal }
+
+#Cores and Occupation (Alphabetical after current)
+add_core = FLA
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

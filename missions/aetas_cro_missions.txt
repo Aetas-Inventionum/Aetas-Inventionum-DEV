@@ -1,0 +1,816 @@
+ai_cro_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = CRO 
+			was_tag = CRO 
+		}
+	} 
+
+	cro_bihacs = {
+		icon = mission_bihac
+		position = 1
+		provinces_to_highlight = {  
+			province_id = 5391
+			NOT = { 
+				AND = { 
+					num_of_times_improved = 7
+					has_tax_building_trigger = yes 
+					has_trade_building_trigger = yes 
+				}
+			}
+		} 
+
+		trigger = {  
+			5391 = { 
+				num_of_times_improved = 7
+				has_tax_building_trigger = yes 
+				has_trade_building_trigger = yes 
+			}
+		} 
+
+		effect = {  
+			5391 = { add_province_triggered_modifier = cro_bihacs_mod }
+		} 
+	}
+
+	cro_zagreb = {
+		icon = mission_zagreb
+		position = 2
+		required_missions = {
+			cro_bihacs
+			cro_knin
+		}
+		provinces_to_highlight = {  
+			province_id = 131
+			NOT = { 
+				AND = { 
+					num_of_times_improved = 10
+					has_tax_building_trigger = yes 
+					has_trade_building_trigger = yes 
+				}
+			}
+		} 
+
+		trigger = {  
+			131 = { 
+				num_of_times_improved = 10
+				has_tax_building_trigger = yes 
+				has_trade_building_trigger = yes 
+			}
+		} 
+
+		effect = {  
+			131 = { add_province_triggered_modifier = cro_zag_mod }
+		} 
+	}
+
+	cro_granary = {
+		icon = develop_the_po_valley
+		position = 4
+		required_missions = { cro_zagreb } 
+		provinces_to_highlight = {  
+			area = slavonia_area 
+			has_terrain = farmlands
+			NOT = { num_of_times_improved = 5 }
+		} 
+
+		trigger = {  
+			num_of_owned_provinces_with = { 
+				area = slavonia_area
+				has_terrain = farmlands
+				num_of_times_improved = 6
+				value = 5
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = cro_gran.tt
+			hidden_effect = { 
+				every_owned_province = { 
+					limit = { 
+						area = slavonia_area
+						has_terrain = farmlands
+						num_of_times_improved = 6
+					}
+					add_province_modifier = {
+						name = cro_gran_mod #missed loc
+						duration = -1
+					}
+				}
+			}
+		} 
+	}
+}
+ai_cro_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = CRO 
+			was_tag = CRO 
+		}
+	} 
+
+	cro_knin = {
+		icon = mission_knin_old
+		position = 1
+		provinces_to_highlight = {  
+			province_id = 1826
+			NOT = { 
+				AND = {
+					num_of_times_improved = 6
+					has_tax_building_trigger = yes 
+					has_trade_building_trigger = yes 
+				}
+			}
+		} 
+
+		trigger = {  
+			1826 = {
+				num_of_times_improved = 6
+				has_tax_building_trigger = yes 
+				has_trade_building_trigger = yes 
+			}
+		} 
+
+		effect = {  
+			1826 = { add_province_triggered_modifier = cro_knin_mod }
+		} 
+	}
+
+	cro_knin_fortress = {
+		icon = mission_knin_fort
+		position = 2
+		required_missions = { cro_knin } 
+		provinces_to_highlight = {  
+			province_id = 1826
+			NOT = { 
+				AND = { 
+					has_fort_building_trigger = yes 
+					has_manpower_building_trigger = yes 
+					base_manpower = 8
+				}
+			}
+		} 
+
+		trigger = {  
+			1826 = { 
+				has_fort_building_trigger = yes 
+				has_manpower_building_trigger = yes 
+				base_manpower = 8
+			}
+		} 
+
+		effect = {  
+			1826 = { 
+				add_province_triggered_modifier = knin_fortress
+			}
+		} 
+	}
+
+	cro_dal_cities = {
+		icon = adriatic_access
+		position = 3
+		required_missions = {
+			cro_dal
+			cro_knin_fortress
+		}
+		provinces_to_highlight = {  
+			OR = { 
+				province_id = 4753
+				province_id = 5393
+				province_id = 136
+			}
+			NOT = { 
+				AND = { 
+					num_of_times_improved = 10 
+					has_trade_building_trigger = yes 
+					has_shipyard_building_trigger = yes 
+				}
+			}
+		} 
+
+		trigger = {  
+			4753 = { 
+				owned_by = ROOT 
+				is_core = ROOT 
+				num_of_times_improved = 10 
+				has_trade_building_trigger = yes 
+				has_shipyard_building_trigger = yes 
+			}
+			5393 = { 
+				owned_by = ROOT 
+				is_core = ROOT 
+				num_of_times_improved = 10 
+				has_trade_building_trigger = yes 
+				has_shipyard_building_trigger = yes 
+			}
+			136 = { 
+				owned_by = ROOT 
+				is_core = ROOT 
+				num_of_times_improved = 10 
+				has_trade_building_trigger = yes 
+				has_shipyard_building_trigger = yes 
+			}
+		} 
+
+		effect = {  
+			4753 = { add_province_triggered_modifier = dal_city }
+			5393 = { add_province_triggered_modifier = dal_city }
+			136 = { add_province_triggered_modifier = dal_city }
+		} 
+	}
+
+	cro_capital = {
+		icon = mission_empire
+		position = 5
+		required_missions = {
+			cro_granary
+			cro_dal_cities
+			cro_dub
+		}
+		provinces_to_highlight = {  
+			OR = { 
+				province_id = 1826
+				province_id = 4753
+				province_id = 136
+				province_id = 131
+				province_id = 137
+			}
+			NOT = { 
+				AND = { 
+					owned_by = ROOT 
+					is_core = ROOT 
+					development = 25
+				}
+			}
+		} 
+
+		trigger = {  
+			1826 = { 
+				owned_by = ROOT 
+				is_core = ROOT 
+				development = 25
+			}
+			4753 = { 
+				owned_by = ROOT 
+				is_core = ROOT 
+				development = 25
+			}
+			136 = { 
+				owned_by = ROOT 
+				is_core = ROOT 
+				development = 25
+			}
+			131 = { 
+				owned_by = ROOT 
+				is_core = ROOT 
+				development = 25
+			}
+			137 = { 
+				owned_by = ROOT 
+				is_core = ROOT 
+				development = 25
+			}
+		} 
+
+		effect = { country_event = { id = aetas_cro.2 } } 
+	}
+}
+ai_cro_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = CRO 
+			was_tag = CRO 
+		}
+	} 
+
+	cro_frk = {
+		icon = mission_frk
+		position = 1
+		provinces_to_highlight = { is_core = FRK } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = cro_frk.tt
+				has_country_flag = frk_flag
+			}
+		} 
+
+		effect = {  
+			add_stability = 1
+		} 
+	}
+
+	cro_dal = {
+		icon = dalmatian_conquest
+		position = 2
+		required_missions = { cro_frk } 
+		provinces_to_highlight = {  
+			area = east_adriatic_coast_area 
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			east_adriatic_coast_area = { 
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = cro_dal_mod
+				duration = 7300
+			}
+			137 = { add_core = ROOT }
+		} 
+	}
+
+	cro_rag = {
+		icon = capture_adriatic_ports
+		position = 3
+		required_missions = { cro_dal } 
+		provinces_to_highlight = {  
+			province_id = 137
+			NOT = { 
+				AND = {
+					owned_by = ROOT 
+					is_core = ROOT 
+				}
+			}
+		} 
+
+		trigger = {  
+			owns_core_province = 137
+		} 
+
+		effect = {  
+			137 = { 
+				add_province_modifier = {
+					name = cro_rag_mod
+					duration = -1
+				}
+			}
+		} 
+	}
+
+	cro_dub = {
+		icon = mission_ragusa
+		position = 4
+		required_missions = { cro_rag } 
+		provinces_to_highlight = {  
+			province_id = 137
+			NOT = { 
+				AND = { 
+					owned_by = ROOT 
+					is_core = ROOT 
+					num_of_times_improved = 10 
+					has_tax_building_trigger = yes 
+					has_trade_building_trigger = yes 
+				}
+			}
+		} 
+
+		trigger = {  
+			137 = { 
+				owned_by = ROOT 
+				is_core = ROOT 
+				num_of_times_improved = 10 
+				has_tax_building_trigger = yes 
+				has_trade_building_trigger = yes 
+			}
+		} 
+
+		effect = {  
+			137 = { add_province_triggered_modifier = cro_rag2 }
+		} 
+	}
+}
+ai_cro_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = CRO 
+			was_tag = CRO 
+		}
+	}  
+
+	cro_ren = {
+		icon = mission_cro_ren
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = { has_institution = renaissance } 
+
+		effect = {  
+			add_prestige = 15
+			add_country_modifier = { 
+				name = cro_ren_mod
+				duration = 18250
+			}
+		} 
+	}
+
+	cro_hussars = {
+		icon = mission_recruit_the_cossacks
+		position = 2
+		required_missions = {
+			cro_frk
+			cro_ren
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			army_tradition = 50
+			mil_power = 400
+		} 
+
+		effect = {  
+			add_mil_power = -400
+			add_country_modifier = {
+				name = cro_hussars_mod
+				duration = -1
+			}
+		} 
+	}
+
+	cro_bos = {
+		icon = mission_kotromanic
+		position = 3
+		required_missions = { cro_djk } 
+		provinces_to_highlight = {  
+			area = bosnia_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			bosnia_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+		} 
+
+		effect = {  
+			bosnia_area = { 
+				add_province_modifier = { 
+					name = cro_inquisition
+					duration = 18250
+				}
+			}
+			herzegovina_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			dioclea_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	cro_mon = {
+		icon = take_the_littoral
+		position = 4
+		required_missions = {
+			cro_bos
+			cro_rag
+		}
+		provinces_to_highlight = {  
+			OR = { 
+				area = herzegovina_area
+				area = dioclea_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			herzegovina_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+			dioclea_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+		} 
+
+		effect = {  
+			herzegovina_area = { 
+				add_province_modifier = { 
+					name = cro_inquisition
+					duration = 18250
+				}
+			}
+			dioclea_area = { 
+				add_province_modifier = { 
+					name = cro_inquisition
+					duration = 18250
+				}
+			}
+			dardania_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	cro_ily = {
+		icon = mission_illyria
+		position = 5
+		required_missions = {
+			cro_mon
+			cro_ser
+		}
+		provinces_to_highlight = {  
+			OR = { 
+				area = carinthia_area
+				area = istria_area
+				area = croatia_area
+				area = slavonia_area
+				area = east_adriatic_coast_area
+				area = donji_kraji_area
+				area = bosnia_area
+				area = herzegovina_area
+				area = syrmia_area 
+				area = dioclea_area
+				area = serbia_area
+				area = dardania_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			croatia_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+			slavonia_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+			east_adriatic_coast_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+			donji_kraji_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+			bosnia_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+			herzegovina_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+			syrmia_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+			dioclea_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+			serbia_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+			dardania_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+			OR = { 
+				istria_area = { 
+					country_or_non_sovereign_subject_holds = ROOT 
+					type = all 
+				}
+				carinthia_area = { 
+					country_or_non_sovereign_subject_holds = ROOT 
+					type = all 
+				}
+			}
+		} 
+
+		effect = {  
+			change_tag = ILY 
+			set_government_rank = 3
+			add_government_reform = illyrian_reform
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			balkan_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+}
+ai_cro_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = CRO 
+			was_tag = CRO 
+		}
+	} 
+
+	cro_null = {
+		icon = mission_cro_tomi
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = { is_subject = no } 
+
+		effect = {  
+			add_country_modifier = { 
+				name = cro_independence
+				duration = 18250
+			}
+			istria_area = { 
+				limit = { 
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					culture = croatian 
+				}
+				add_core = ROOT 
+			}
+			istria_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			carinthia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			donji_kraji_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	cro_djk = {
+		icon = mission_hrvoje
+		position = 2
+		required_missions = {
+			cro_ren
+			cro_null
+		}
+		provinces_to_highlight = {  
+			area = donji_kraji_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			donji_kraji_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+		} 
+
+		effect = {  
+			1828 = { 
+				change_province_name = "Pliva"
+				rename_capital = "Pliva Grad"
+				if = { 
+					limit = { NOT = { religion = ROOT } }
+					change_religion = ROOT 
+				}
+				add_base_tax = 1
+				add_base_production = 1
+			}
+			bosnia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			syrmia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	cro_syrmia = {
+		icon = the_italian_league
+		position = 3
+		required_missions = { cro_djk } 
+		provinces_to_highlight = {  
+			area = syrmia_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			syrmia_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+		} 
+
+		effect = {  
+			random_province = { 
+				limit = {  
+					area = syrmia_area
+					NOT = { culture = ROOT } 
+				}
+				change_culture = ROOT 
+			}
+			banat_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			serbia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	cro_ser = {
+		icon = mission_ctitor
+		position = 4
+		required_missions = { cro_syrmia } 
+		provinces_to_highlight = {  
+			area = serbia_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			serbia_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = cro_serbs
+				duration = -1
+			}
+			rascia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			dardania_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+}

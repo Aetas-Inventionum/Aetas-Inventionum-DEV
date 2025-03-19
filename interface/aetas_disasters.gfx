@@ -1,0 +1,53 @@
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_disaster_conspiracy_of_the_barons"
+		texturefile = "gfx//interface//disasters//conspiracy_of_the_barons.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}		
+	spriteType = {
+		name = "GFX_disaster_catalan_civil_war"
+		texturefile = "gfx//interface//disasters//catalan_civil_war.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}					
+	spriteType = {
+		name = "GFX_disaster_colognian_war"
+		texturefile = "gfx//interface//disasters//colognian_war.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_disaster_koln_disaster"
+		texturefile = "gfx//interface//disasters//koln_disaster.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_disaster_statist_revolt_disaster"
+		texturefile = "gfx//interface//disasters//statist_revolt_disaster.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+}
+
+spriteTypes = {
+    spriteType = {
+        name = "GFX_faction_bg_aetas_skieringers"	
+        texturefile = "gfx//interface//faction_blue_frame.tga"
+        transparencecheck = yes
+    }
+    spriteType = {
+        name = "GFX_faction_aetas_skieringers"	
+        texturefile = "gfx//interface//aetas_skieringers.dds"
+    }
+	spriteType = {
+        name = "GFX_faction_bg_aetas_fetkeapers"	
+        texturefile = "gfx//interface//faction_red_frame.tga"
+        transparencecheck = yes
+    }
+    spriteType = {
+        name = "GFX_faction_aetas_fetkeapers"	
+        texturefile = "gfx//interface//aetas_fetkeapers.dds"
+    }
+}

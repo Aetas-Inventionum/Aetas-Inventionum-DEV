@@ -1,0 +1,16 @@
+government = republic
+add_government_reform = althing_reform
+primary_culture = icelandic
+religion = catholic
+technology_group = western
+capital = 6003 #Thingvellir
+
+1399.1.1 = {
+	monarch = {
+		name = "Lögmenn"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}

@@ -1,0 +1,171 @@
+government = monarchy
+add_government_reform = low_countries_monarchy_reform
+government_rank = 1
+technology_group = western
+religion = catholic
+primary_culture = dutch
+capital = 4383 #Haag
+
+1337.6.7 = { # leet 
+	monarch = {
+		name = "Willem IV"
+		dynasty = "d'Avesnes"
+        culture = dutch
+		birth_date = 1307.1.1 # estimated
+	    death_date = 1345.9.26
+		adm = 3 
+		dip = 2
+		mil = 2
+	}
+}
+
+1345.9.26 = { # Wilhelm Avesnes dies
+    # Marguerite only arrived on 1346.4.18 in Middelburg, on 1346.4.30 in Dordrecht, on 1346. in Den Haag, on 1346. in Leiden, on 1346. in Haarlem, on 1346. in Aelbrechtsberge, on 1346. in Geertruidenberg.
+	monarch = {
+		name = "Marguerite I"
+		dynasty = "d'Avesnes"
+        culture = picard
+		birth_date = 1310.1.1 # month/day unknown
+		death_date = 1356.6.23
+		adm = 3 # todo
+		dip = 4 # todo
+		mil = 2 # todo
+		
+        female = yes
+	}
+}
+
+1346.9.7 = {
+	heir = {
+		name = "Willem"
+		monarch_name = "Willem V"
+		dynasty = "von Wittelsbach"
+        culture = bavarian
+		birth_date = 1330.5.12
+		death_date = 1389.4.1 # day unknown
+		adm = 2 # todo
+		dip = 2 # todo
+		mil = 2 # todo
+	}
+}
+
+1348.1.5 = {
+    # estates do not recognize her and demand a male ruler
+    # Apparently not correct? She herself just did it out of her own volition? - whetever, he's ruler now
+	monarch = {
+		name = "Willem V"
+		dynasty = "von Wittelsbach"
+        culture = bavarian
+		birth_date = 1330.5.12
+		death_date = 1389.4.1 # day unknown
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+# 1350 = Wilhelm rebels agains Marguerite
+
+# 1354.12.7 = rebellion ends with Wilhelm's Independence and Monetary compensation to Marguerite. He also stays Heir of Hainaut.
+
+1358.3.7 = {
+    # Wilhelm has a stroke
+	#heir = {
+	#	name = "Wilhelm"
+	#	monarch_name = "Wilhelm V"
+	#	dynasty = "von Wittelsbach"
+    #   culture = bavarian
+	#	birth_date = 1330.5.12
+	#	death_date = 1389.4.1 # day unknown
+	#	adm = 3
+	#	dip = 3
+	#	mil = 3
+	#}
+	monarch = { 
+        # personal union under Straubing???
+        # he was only regent tho, does that still count? - yes i will count it
+		name = "Albrecht I"
+		dynasty = "von Wittelsbach"
+        culture = bavarian
+		birth_date = 1336.6.25
+		death_date = 1404.12.16
+		adm = 4
+		dip = 3
+		mil = 1
+        #regency = yes
+	}
+    
+}
+
+1389.4.1 = {
+    # Albrecht takes on the title of Count (he only used Regent until now)
+    # personal union under Straubing
+    # actually no he resided in den haag since he took the regency
+	heir = {
+		name = "Willem"
+		monarch_name = "Willem VI"
+		dynasty = "von Wittelsbach"
+        culture = bavarian
+		birth_date = 1365.4.5
+		death_date = 1417.5.31
+		adm = 2
+		dip = 5
+		mil = 1
+	}
+}
+
+1404.12.16 = {
+	monarch = {
+		name = "Willem VI"
+		dynasty = "von Wittelsbach"
+        culture = bavarian
+		birth_date = 1365.4.5
+		death_date = 1417.5.31
+		adm = 2
+		dip = 5
+		mil = 1
+	}
+}
+
+1404.12.16 = { # behind "#" because they now pick via event instead
+	heir = {
+		name = "Jacoba"
+		monarch_name = "Jacoba I"
+		dynasty = "von Wittelsbach"
+       culture = bavarian
+		birth_date = 1401.7.15
+		adm = 2
+		dip = 1
+		mil = 1
+		female = yes
+	}
+}
+
+1417.5.31 = {
+	monarch = {
+		name = "Jacoba I"
+		dynasty = "von Wittelsbach"
+        culture = bavarian
+		adm = 2
+		dip = 1
+		mil = 1
+		female = yes
+	}
+}
+
+1420.1.1 = {
+	monarch = {
+		name = "Johann III"
+		dynasty = "von Wittelsbach"
+        culture = bavarian
+		birth_date = 1374.1.1 # month/day unknown
+		death_date = 1425.1.6
+		adm = 4
+		dip = 6
+		mil = 4
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = fierce_negotiator_personality
+}
+
+1580.1.1 = { set_legacy_government = administrative_republic } # Constitutionalism and the General Estates

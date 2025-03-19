@@ -1,0 +1,460 @@
+namespace = aetas_cortes
+normal_or_historical_nations = yes
+
+# Cortes Convenes in Blank
+province_event = {
+	id = aetas_cortes.1
+	title = aetas_cortes.1.t
+	desc = aetas_cortes.1.d
+	picture = REFORM_eventPicture
+	
+	is_triggered_only = yes 
+
+	option = { #address the cortes
+		name = aetas_cortes.1.a
+		random_list = { 
+			1 = { 
+				trigger = { 
+					ROOT = { 
+						NOT = { any_country = { has_country_flag = end_of_granada } } 
+						NOT = { has_province_modifier = ai_jews_flee }
+					}
+				}
+				ROOT = { province_event = { id = aetas_cortes.2 } } #estates demand expulsion of local jews
+			}
+			1 = { 
+				trigger = { 
+					NOT = { 
+						owner = {
+							OR = { 
+								any_owned_province = { has_province_modifier = cortes_city_rights }
+								any_owned_province = { has_province_modifier = cortes_rights_squandered } #missed loc
+							}
+						} 
+					}
+				}
+				owner = { 
+					country_event = { id = aetas_cortes.3 } #cities demand recognition of privileges
+				}
+			}
+			1 = { 
+				trigger = {
+					NOT = { 
+						owner = { 
+							has_country_modifier = cortes_tax_codes
+						}
+					}
+				}
+				owner = { 
+					country_event = { id = aetas_cortes.4 } #improve tax provisions in kingdom
+				}
+			}
+			1 = { 
+				trigger = {
+					ROOT = { 
+						NOT = { 
+							has_province_modifier = cortes_royal_jurisdiction
+						}
+					}
+				}
+				ROOT = { province_event = { id = aetas_cortes.5 } } #increase royal jurisdiction in area  
+			}
+			1 = { 
+				trigger = { 
+					owner = { 
+						any_owned_province = { 
+							NOT = { 
+								has_province_modifier = cortes_cloth
+							}
+						}
+					}
+				}
+				owner = { 
+					country_event = { id = aetas_cortes.6 } #regulate production of cloth and wool
+				}
+			}
+			1 = { 
+				trigger = { 
+					owner = { 
+						any_owned_province = { 
+							NOT = { 
+								has_province_modifier = cortes_wine
+							}
+						}
+					}
+				}
+				owner = { 
+					country_event = { id = aetas_cortes.7 } #regulate production of wine
+				}
+			}
+			1 = { 
+				trigger = { 
+					ROOT = { NOT = { has_province_modifier = cortes_order } }
+				}
+				ROOT = { province_event = { id = aetas_cortes.8 } }
+			}
+			1 = { 
+				trigger = { 
+					ROOT = { 
+						NOT = { 
+							OR = { 
+								has_province_modifier = cortes_artisans
+								has_province_modifier = cortes_industry_stifled
+							}
+						}
+					}
+				}
+				ROOT = { 
+					province_event = { id = aetas_cortes.9 } #ordinance to improve artisan production in area
+				}
+			}
+			1 = { 
+				trigger = { 
+					ROOT = { 
+						NOT = { 
+							OR = { 
+								has_province_modifier = cortes_criminals_ousted
+								has_province_modifier = cortes_criminals_overlooked
+							}
+						}
+					}
+				}
+				ROOT = { province_event = { id = aetas_cortes.10 } } #the issue of criminals being harbored in blank
+			}
+		}
+	}
+}
+# Estates demand Expulsion of Jews in province
+province_event = {
+	id = aetas_cortes.2
+	title = aetas_cortes.2.t
+	desc = aetas_cortes.2.d
+	picture = RELIGIOUS_TURMOIL_eventPicture
+
+	is_triggered_only = yes 
+
+	option = { #fine
+		name = aetas_cortes.2.a
+		ai_chance = { factor = 2 }
+		add_province_modifier = {
+			name = ai_jews_flee
+			duration = 3650
+		}
+		random_list = { 
+			1 = { add_base_tax = -1 }
+			1 = { add_base_production = -1 }
+			1 = { add_base_manpower = -1 }
+		}
+	}
+	option = { #no way josé!
+		name = aetas_cortes.2.b
+		ai_chance = { factor = 0 }
+		random_list = { 
+			1= {
+				owner = { 
+					add_estate_loyalty = {
+						estate = estate_nobles
+						loyalty = -5
+					}
+				}
+			}
+			1 = { 
+				owner = { 
+					add_estate_loyalty = {
+						estate = estate_church
+						loyalty = -5
+					}
+				}
+			}
+			1 = { 
+				owner = { 
+					add_estate_loyalty = {
+						estate = estate_burghers
+						loyalty = -5
+					}
+				}
+			}
+		}
+	}
+}
+#cities demand recognition of privileges 
+country_event = {
+	id = aetas_cortes.3
+	title = aetas_cortes.3.t
+	desc = aetas_cortes.3.d
+	picture = LIBERUM_VETO_eventPicture
+
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_cortes.3.a #yes
+		ai_chance = { factor = 2 }
+		every_owned_province = { 
+			limit = { province_has_center_of_trade_of_level = 1 }
+			add_local_autonomy = 10
+			add_province_modifier = { 
+				name = cortes_city_rights
+				duration = 3650
+			}
+		}
+	}
+	option = { 
+		name = aetas_cortes.3.b #no
+		ai_chance = { factor = 1 }
+		every_owned_province = { 
+			limit = { province_has_center_of_trade_of_level = 1 }
+			add_local_autonomy = -5
+			add_province_modifier = { 
+				name = cortes_rights_squandered #missed loc
+				duration = 3650
+			}
+		}
+	}
+}
+#Cortes decides to improve national tax codes
+country_event = {
+	id = aetas_cortes.4
+	title = aetas_cortes.4.t
+	desc = aetas_cortes.4.d
+	picture = ECONOMY_eventPicture
+
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_cortes.4.a
+		add_country_modifier = { 
+			name = cortes_tax_codes
+			duration = 3650
+		}
+	}
+}
+#Improving Royal jurisdiction in local area 
+province_event = {
+	id = aetas_cortes.5
+	title = aetas_cortes.5.t
+	desc = aetas_cortes.5.d
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes 
+
+	option = { #push it through!
+		name = aetas_cortes.5.a
+		area =  { 
+			add_province_modifier = {
+				name = cortes_royal_jurisdiction
+				duration = 3650
+			}
+		}
+		owner = { 
+			random_list = { 
+				1= {
+					add_estate_loyalty = {
+						estate = estate_nobles
+						loyalty = -5
+					}
+				}
+				1 = { 
+					add_estate_loyalty = {
+						estate = estate_church
+						loyalty = -5
+					}
+				}
+				1 = { 
+					add_estate_loyalty = {
+						estate = estate_burghers
+						loyalty = -5
+					}
+				}
+			}
+		}
+	}
+	option = { 
+		name = aetas_cortes.5.b #nope
+		owner = { 
+			random_list = { 
+				1= {
+					add_estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 5
+					}
+				}
+				1 = { 
+					add_estate_loyalty = {
+						estate = estate_church
+						loyalty = 5
+					}
+				}
+				1 = { 
+					add_estate_loyalty = {
+						estate = estate_burghers
+						loyalty = 5
+					}
+				}
+			}
+		}
+	}
+}
+#production of cloth and wool regulated
+country_event = {
+	id = aetas_cortes.6
+	title = aetas_cortes.6.t
+	desc = aetas_cortes.6.d
+	picture = TRADEGOODS_eventPicture
+
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_cortes.6.a #excellent
+		custom_tooltip = aetas_cortes.6.tt
+		tooltip = { 
+			add_province_modifier = { 
+				name = cortes_cloth 
+				duration = 3650
+			}
+		}
+		hidden_effect = { 
+			every_owned_province = { 
+				limit = { 
+					OR = { 
+						trade_goods = cloth 
+						trade_goods = wool
+						trade_goods = silk
+					}
+				}
+				add_province_modifier = { 
+					name = cortes_cloth 
+					duration = 3650
+				}
+			}
+		}
+	}	
+}
+#production of wine regulated
+country_event = {
+	id = aetas_cortes.7
+	title = aetas_cortes.7.t
+	desc = aetas_cortes.7.d
+	picture = TRADEGOODS_eventPicture
+
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_cortes.7.a #excellent
+		custom_tooltip = aetas_cortes.7.tt
+		tooltip = { 
+			add_province_modifier = { 
+				name = cortes_wine
+				duration = 3650
+			}
+		}
+		hidden_effect = { 
+			every_owned_province = { 
+				limit = { 
+					trade_goods = wine
+				}
+				add_province_modifier = { 
+					name = cortes_wine
+					duration = 3650
+				}
+			}
+		}
+	}	
+}
+#approval for new holy brotherhood
+province_event = {
+	id = aetas_cortes.8
+	title = aetas_cortes.8.t
+	desc = aetas_cortes.8.d
+	picture = RELIGIOUS_CONVERSION_eventPicture
+
+	is_triggered_only = yes 
+
+	option = { #yes!
+		name = aetas_cortes.8.a
+		owner = { 
+			add_treasury = -100
+		}
+		area =  { 
+			add_province_modifier = {
+				name = cortes_order
+				duration = 3650
+			}
+		}
+	}
+	option = { 
+		name = aetas_cortes.8.b #nope
+	}
+}
+#ordinance to improve artisan production in area 
+province_event = {
+	id = aetas_cortes.9
+	title = aetas_cortes.9.t
+	desc = aetas_cortes.9.d
+	picture = PAINTER_ARTIST_eventPicture
+
+	is_triggered_only = yes 
+
+	option = { #yes!
+		name = aetas_cortes.9.a
+		owner = { 
+			add_treasury = -100
+		}
+		area =  { 
+			random_province = { 
+				add_base_production = 2
+			}
+			add_province_modifier = {
+				name = cortes_artisans
+				duration = 3650
+			}
+		}
+	}
+	option = { 
+		name = aetas_cortes.9.b #nope
+		area = { 
+			add_province_modifier = { 
+				name = cortes_industry_stifled
+				duration = 3650
+			}
+		}
+	}
+}
+#criminals being harbored 
+province_event = {
+	id = aetas_cortes.10
+	title = aetas_cortes.10.t
+	desc = aetas_cortes.10.d
+	picture = PAINTER_ARTIST_eventPicture
+
+	is_triggered_only = yes 
+
+	option = { #rout the criminals
+		name = aetas_cortes.10.a
+		add_province_modifier = { 
+			name = cortes_criminals_ousted
+			duration = 3650
+		}
+		owner = {
+			add_estate_loyalty = {
+				estate = estate_nobles
+				loyalty = -10
+			}
+		}
+	}
+	option = { #overlook the criminals
+		name = aetas_cortes.10.b
+		add_province_modifier = { 
+			name = cortes_criminals_overlooked
+			duration = 3650
+		}
+		owner = { 
+			add_treasury = 100
+		}
+		owner = { 
+			add_estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 10
+			}
+		}
+	}
+}

@@ -1,0 +1,38 @@
+#6562 - Orihuela
+#Area - Valencia
+#Region - Iberia
+
+#Core Details
+capital = "Orihuela"
+is_city = yes
+owner = ARA
+controller = ARA
+
+#Demographics
+culture = murcian
+religion = catholic
+
+#Development and Trade 
+base_tax = 3
+base_production = 3
+base_manpower = 3
+trade_goods = oils  
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = ARA
+add_core = VAL
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

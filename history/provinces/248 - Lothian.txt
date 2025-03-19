@@ -1,0 +1,41 @@
+#248 - Lothian
+#Area - East Lowlands
+#Region - British Isles
+
+#Core Details
+capital = "Edinburgh"
+is_city = yes
+owner = SCO
+controller = SCO
+
+#Demographics
+culture = scottish
+religion = catholic
+
+#Development and Trade
+base_tax = 4
+base_production = 4
+base_manpower = 4
+trade_goods = beer  #major industry
+latent_trade_goods = { coal }
+
+#Cores and Occupation (Alphabetical after current)
+add_core = SCO
+
+#Other Political
+hre = no
+seat_in_parliament = yes
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+center_of_trade = 2
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

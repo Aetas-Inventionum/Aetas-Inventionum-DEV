@@ -1,0 +1,17 @@
+government = monarchy
+add_government_reform = principality
+government_rank = 1
+technology_group = eastern
+religion = orthodox
+primary_culture = russian
+capital = 6438
+
+1380.1.1 = {
+	monarch = {
+		name = "Fedor"
+		dynasty = "Kubensky"
+		dip = 1
+		adm = 2
+		mil = 2
+	}
+}

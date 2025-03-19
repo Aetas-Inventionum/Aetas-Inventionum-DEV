@@ -1,0 +1,23 @@
+government = monarchy
+add_government_reform = aragonese_infantado_reform
+government_rank = 1
+primary_culture = castillian
+add_accepted_culture = leonese
+religion = catholic
+technology_group = western
+capital = 4942 #alburquerque
+fixed_capital = 4942
+historical_friend = ARA
+historical_rival = PNF
+
+1415.1.1 = { 
+	monarch = {
+		name = "Enrique I"
+		dynasty = "de Trastámara"
+		birth_date = 1400.1.1
+		culture = castillian
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}

@@ -1,0 +1,78 @@
+#Country Name: Please see filename.
+
+graphical_culture = muslimgfx
+
+color = { 210 195 55 } 
+
+revolutionary_colors = { 9 16 1 }
+
+historical_score = 100
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	religious_ideas
+	naval_ideas	
+	administrative_ideas
+	offensive_ideas
+	economic_ideas
+	expansion_ideas
+}
+
+historical_units = {
+	mamluk_archer
+	muslim_cavalry_archers
+	mamluk_duel
+	mamluk_musket_charge
+	muslim_mass_infantry
+	muslim_dragoon
+	ali_bey_reformed_infantry
+}
+
+monarch_names = {
+	#governors of algiers. arabicized when available
+	"Oruç #0" = 5
+	"Khayr #0" = 30
+	"Hasan #0" = 50
+	"Muhammad #0" = 30
+	"Hadji #0" = 10
+	"Mustafa #0" = 20
+	"Yusuf #0" = 20
+	"Daly #0" = 5
+	"Somiman #0" = 5
+	"Redwan #0" = 5
+	"Kussa #0" = 5
+	"'Ahmed #0" = 20
+	"'Ibrahim #0" = 20
+	"Khalil #0" = 10
+	"Hussein #0" = 5
+	"'Omar #0" = 5
+	"'Ali #0" = 5
+	"Salim #0" = 20
+	"Abd al-Rahman #0" = 20
+	
+	"Randa #0" = -1
+	"Tabassum #0" = -1
+	"Daïkra #0" = -1
+}
+
+leader_names = {
+	"Banu 'Amir"
+	"'Awlad Djerir"
+	Ghenanma
+	"Banu Hafs" Hamyanv "Banu Hassan" "Banu Hilal" "Banu Hudhayl"
+	"Dawi-Mani"
+	"'Awlad Naïl"
+	"Banu Rashid" Riyah
+	"Banu Sulaym"
+	"Banu Tamim" "al-Tha'alabi"
+	Zughba
+}
+
+ship_names = {
+	Barr Muta'al Wali Batin Zahir Akhir Awwal
+	Mu'akhkhir Muqaddim Muqtadir Qadir Samad
+	Wahid Majid Wajed Qayyum Hayy Mumit Muhyi
+	Mu'id Mubdi Muhsi Hamid Waliyy Matin Qawiyy
+	Wakil Haqq Shahid Ba'ith
+}

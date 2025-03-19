@@ -1,0 +1,8 @@
+government = monarchy
+government_rank = 1
+add_government_reform = feudalism_reform
+technology_group = western
+unit_type = western
+primary_culture = faroese
+religion = catholic
+capital = 1979 #faroes

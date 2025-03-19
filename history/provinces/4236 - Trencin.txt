@@ -1,0 +1,44 @@
+#4236 - Trencin
+#Area - Lower Hungary
+#Region - Carpathia
+
+#Core Details
+capital = "Trencin"
+is_city = yes
+owner = HUN
+controller = HUN
+
+#Demographics
+culture = slovak
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 3
+base_manpower = 2
+trade_goods = beer
+
+#Cores and Occupation (Alphabetical after current)
+add_core = HUN
+add_core = SLO
+
+#Other Political
+hre = no
+seat_in_parliament = yes
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = KAZ
+discovered_by = CRI
+discovered_by = GOL
+discovered_by = AST
+discovered_by = QAS
+
+#Histories

@@ -1,0 +1,35 @@
+#GTT - Gottingen
+
+#Political Situation
+capital = 4773
+fixed_capital = 4773 #Cannot move capital away from this province & no power cost to move to it
+
+#Government
+government_rank = 1
+government = monarchy
+add_government_reform = welf_principality_reform
+
+#Demographics
+primary_culture = eastphalian
+religion = catholic
+
+#Tech and Military
+
+#History
+technology_group = western
+historical_friend = BRU
+historical_friend = CLB
+historical_friend = LUN
+
+1415.1.1 = {
+	monarch = {
+		name = "Otto II"
+		dynasty = "von Welf"
+		birth_date = 1380.1.1
+		adm = 3
+		dip = 1
+		mil = 1
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = infertile_personality
+}

@@ -1,0 +1,166 @@
+# Scripted triggers for simulating AI expanding infrastructure
+
+can_expand_infrastructure_0_to_1 = {
+	AND = {
+		development = 20
+		NOT = {
+			has_province_modifier = expanded_infrastructure_1
+			has_province_modifier = expanded_infrastructure_2
+			has_province_modifier = expanded_infrastructure_3
+			has_province_modifier = expanded_infrastructure_4
+			has_province_modifier = expanded_infrastructure_5
+			has_province_modifier = expanded_infrastructure_6
+			has_province_modifier = expanded_infrastructure_7
+			has_province_modifier = expanded_infrastructure_8
+			has_province_modifier = expanded_infrastructure_9
+			has_province_modifier = expanded_infrastructure_10
+		}
+	}
+}
+		
+can_expand_infrastructure_1_to_2 = {
+	AND = {
+		development = 40
+		NOT = {
+			has_province_modifier = expanded_infrastructure_2
+			has_province_modifier = expanded_infrastructure_3
+			has_province_modifier = expanded_infrastructure_4
+			has_province_modifier = expanded_infrastructure_5
+			has_province_modifier = expanded_infrastructure_6
+			has_province_modifier = expanded_infrastructure_7
+			has_province_modifier = expanded_infrastructure_8
+			has_province_modifier = expanded_infrastructure_9
+			has_province_modifier = expanded_infrastructure_10
+		}
+	}
+}
+		
+can_expand_infrastructure_2_to_3 = {
+	AND = {
+		development = 60
+		NOT = {
+			has_province_modifier = expanded_infrastructure_3
+			has_province_modifier = expanded_infrastructure_4
+			has_province_modifier = expanded_infrastructure_5
+			has_province_modifier = expanded_infrastructure_6
+			has_province_modifier = expanded_infrastructure_7
+			has_province_modifier = expanded_infrastructure_8
+			has_province_modifier = expanded_infrastructure_9
+			has_province_modifier = expanded_infrastructure_10
+		}
+	}
+}
+		
+can_expand_infrastructure_3_to_4 = {
+	AND = {
+		development = 80
+		NOT = {
+			has_province_modifier = expanded_infrastructure_4
+			has_province_modifier = expanded_infrastructure_5
+			has_province_modifier = expanded_infrastructure_6
+			has_province_modifier = expanded_infrastructure_7
+			has_province_modifier = expanded_infrastructure_8
+			has_province_modifier = expanded_infrastructure_9
+			has_province_modifier = expanded_infrastructure_10
+		}
+	}
+}
+		
+can_expand_infrastructure_4_to_5 = {
+	AND = {
+		development = 100
+		NOT = {
+			has_province_modifier = expanded_infrastructure_5
+			has_province_modifier = expanded_infrastructure_6
+			has_province_modifier = expanded_infrastructure_7
+			has_province_modifier = expanded_infrastructure_8
+			has_province_modifier = expanded_infrastructure_9
+			has_province_modifier = expanded_infrastructure_10
+		}
+	}
+}
+		
+can_expand_infrastructure_5_to_6 = {
+	AND = {
+		development = 120
+		NOT = {
+			has_province_modifier = expanded_infrastructure_6
+			has_province_modifier = expanded_infrastructure_7
+			has_province_modifier = expanded_infrastructure_8
+			has_province_modifier = expanded_infrastructure_9
+			has_province_modifier = expanded_infrastructure_10
+		}
+	}
+}
+		
+can_expand_infrastructure_6_to_7 = {
+	AND = {
+		development = 140
+		NOT = {
+			has_province_modifier = expanded_infrastructure_7
+			has_province_modifier = expanded_infrastructure_8
+			has_province_modifier = expanded_infrastructure_9
+			has_province_modifier = expanded_infrastructure_10
+		}
+	}
+}
+		
+can_expand_infrastructure_7_to_8 = {
+	AND = {
+		development = 160
+		NOT = {
+			has_province_modifier = expanded_infrastructure_8
+			has_province_modifier = expanded_infrastructure_9
+			has_province_modifier = expanded_infrastructure_10
+		}
+	}
+}
+		
+can_expand_infrastructure_8_to_9 = {
+	AND = {
+		development = 180
+		NOT = {
+			has_province_modifier = expanded_infrastructure_9
+			has_province_modifier = expanded_infrastructure_10
+		}
+	}
+}
+		
+can_expand_infrastructure_9_to_10 = {
+	AND = {
+		development = 200
+		NOT = {
+			has_province_modifier = expanded_infrastructure_10
+		}
+	}
+}
+
+can_expand_infrastructure_at_least_once_here_trigger = {
+	OR = {
+		can_expand_infrastructure_0_to_1 = yes
+		can_expand_infrastructure_1_to_2 = yes
+		can_expand_infrastructure_2_to_3 = yes
+		can_expand_infrastructure_3_to_4 = yes
+		can_expand_infrastructure_4_to_5 = yes
+		can_expand_infrastructure_5_to_6 = yes
+		can_expand_infrastructure_6_to_7 = yes
+		can_expand_infrastructure_7_to_8 = yes
+		can_expand_infrastructure_8_to_9 = yes
+		can_expand_infrastructure_9_to_10 = yes
+	}
+}
+
+has_expanded_infrastructure_here_at_least_once_trigger = {
+	OR = {
+		has_province_modifier = expanded_infrastructure_1
+		has_province_modifier = expanded_infrastructure_2
+		has_province_modifier = expanded_infrastructure_3
+		has_province_modifier = expanded_infrastructure_4
+		has_province_modifier = expanded_infrastructure_5
+		has_province_modifier = expanded_infrastructure_6
+		has_province_modifier = expanded_infrastructure_7
+		has_province_modifier = expanded_infrastructure_8
+		has_province_modifier = expanded_infrastructure_9
+		has_province_modifier = expanded_infrastructure_10
+	}
+}

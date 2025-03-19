@@ -1,0 +1,31 @@
+government = monarchy
+add_government_reform = appanage_reform
+government_rank = 1
+technology_group = eastern
+primary_culture = byelorussian
+add_accepted_culture = ruthenian
+religion = orthodox
+capital = 278 #pinsk
+
+
+1412.1.1 = {
+	monarch = {
+		name = "Oleksandr I"
+		dynasty = "Narimuntovich"
+		birth_date = 1390.1.1 #approx
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+	heir = {
+		name = "Semen"
+		monarch_name = "Semen I"
+		dynasty = "Narimuntovich"
+		birth_date = 1400.1.1 #approx
+		death_date = 1462.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	clear_scripted_personalities = yes
+}

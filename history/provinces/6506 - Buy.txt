@@ -1,0 +1,36 @@
+#6506 - Buy
+#Area - Galich
+#Region - Russia 
+
+#Core Details
+capital = "Buy"
+is_city = yes
+owner = MOS
+controller = MOS
+
+#Demographics
+culture = meryan    #probably lived on to the 18th century
+religion = tengri_pagan_reformed    #some pagans left in the 14th century
+
+#Development and Trade
+base_tax = 2
+base_production = 2
+base_manpower = 1
+trade_goods = naval_supplies
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = MOS
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = nomad_group
+
+#Histories

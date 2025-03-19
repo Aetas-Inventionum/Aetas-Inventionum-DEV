@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = pommeranian
+religion = catholic
+capital = 5286
+fixed_capital = 5286
+
+1394.1.1 = {
+	monarch = {
+		name = "Balthasar I"
+		dynasty = "von Mecklenburg"
+		birth_date = 1375.1.1
+		adm = 1
+		dip = 2
+		mil = 2
+	}
+	heir = { 
+		name = "Wilhelm"
+		monarch_name = "Wilhelm I" 
+		dynasty = "von Mecklenburg"
+		birth_date = 1393.1.1
+		death_date = 1435.1.1
+		adm = 3
+		dip = 2
+		mil = 2
+		claim = 95
+	}
+}

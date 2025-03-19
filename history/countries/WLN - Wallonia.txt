@@ -1,0 +1,185 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+religion = catholic
+primary_culture = wallonian
+capital = 93
+
+1337.6.7 = { # leet 
+	monarch = {
+		name = "Wilhelm II"
+		dynasty = "d'Avesnes"
+        culture = dutch
+		birth_date = 1307.1.1 # estimated
+		death_date = 1345.9.26
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+
+1345.9.26 = { # Wilhelm Avesnes dies
+    # Marguerite only arrived on 1346.3.14 in Mons, on 1346.3.23 in Valenciennes. Then returns to Mons in 1346.9.24 after visiting cities in Holland.
+    
+    # 1346.3.21 anti_tax_rebels revolt in Valenciennes, is resolved until she arrives, but she has to give certain privileges.
+    
+    
+	monarch = {
+		name = "Marguerite II"
+		dynasty = "d'Avesnes"
+        culture = picard
+		birth_date = 1310.1.1 # month/day unknown
+		death_date = 1356.6.23
+		adm = 3 # todo
+		dip = 4 # todo
+		mil = 2 # todo
+        female = yes
+	}
+}
+
+1346.9.7 = {
+	heir = {
+		name = "Wilhelm"
+		monarch_name = "Wilhelm III"
+		dynasty = "von Wittelsbach"
+        culture = bavarian
+		birth_date = 1330.5.12
+		death_date = 1389.4.1 # day unknown
+		adm = 2 # todo
+		dip = 2 # todo
+		mil = 2 # todo
+	}
+}
+
+# 1348.1.5 = Personal union with Holland transitions into vassalage under Hainaut when she makes her heir Wilhelm Ruler there. Zeeland stays vassal under Hainaut.
+
+# early 1350 = Wilhelm withdraws Vassalage fees
+# 1350.5.25 = Wilhelm secures support of local factions against Marguerite
+# 1350.5.27 = Marguerite demands him to step down and turn over the lands
+# 1350.9.27 = Wilhelm Pretends? to step down
+# between 1350.9.27 and 1351.1.20 = A rebellion under Wilhelm breaks out (independence war in game terms)
+# he explicitly stays heir tho
+# 1351.1.20 - Marguerite offers to sell Zeeland to Wilhelm for peace
+
+# 1351.?.? = Marguerite becomes excommunicated
+# 1351.6.30 = Not longer excommunicated, in turn renounces her right to use the title of Empress and Queen. (-Prestige ?)
+# Also England and Bavaria Support her now against Wilhelm
+
+# 1354.12.7 = rebellion ends with Wilhelm's Independence and Monetary compensation to Marguerite. He also stays Heir of Hainaut.
+
+1356.6.23 = { # Marguerite dies
+	monarch = { # personal union under Holland
+		name = "Wilhelm III"
+		dynasty = "von Wittelsbach"
+        culture = bavarian
+		birth_date = 1330.5.12
+		death_date = 1389.4.1 # day unknown
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1358.3.7 = {
+    # Wilhelm has a stroke
+	#heir = {
+	#	name = "Wilhelm"
+	#	monarch_name = "Wilhelm III"
+	#	dynasty = "von Wittelsbach"
+	#	birth_date = 1330.5.12
+	#	death_date = 1389.4.1 # day unknown
+	#	adm = 3
+	#	dip = 3
+	#	mil = 3
+	#}
+	monarch = { 
+        # personal union under Straubing???
+        # he was only regent tho, does that still count? - yes i will count it
+		name = "Albrecht I"
+		dynasty = "von Wittelsbach"
+        culture = bavarian
+		birth_date = 1336.6.25
+		death_date = 1404.12.16
+		adm = 4
+		dip = 3
+		mil = 1
+        #regency = yes
+	}
+    
+}
+
+1389.4.1 = {
+    # Albrecht takes on the title of Count (he only used Regent until now)
+    # personal union under Straubing
+    # actually no he resided in den haag since he took the regency -> personal union under Holland
+    # actually actually Hainaut was given to his heir Wilhelm IV as a vassal
+	#heir = {
+	#	name = "Wilhelm"
+	#	monarch_name = "Wilhelm IV"
+    monarch = { # vassal of Holland
+		name = "Wilhelm IV"
+		dynasty = "von Wittelsbach"
+        culture = bavarian
+		birth_date = 1365.4.5
+		death_date = 1417.5.31
+		adm = 2
+		dip = 5
+		mil = 1
+	}
+}
+
+
+1392.1.1 = { # Wilhelm is in conflict with Albrecht, flees to england. He returns after.
+	monarch = { # personal union under Holland
+		name = "Albrecht I"
+		dynasty = "von Wittelsbach"
+        culture = bavarian
+		birth_date = 1336.6.25
+		death_date = 1404.12.16
+		adm = 4
+		dip = 3
+		mil = 1
+	}
+}
+1394.1.1 = {
+    monarch = { # vassal of Holland
+		name = "Wilhelm IV"
+		dynasty = "von Wittelsbach"
+        culture = bavarian
+		birth_date = 1365.4.5
+		death_date = 1417.5.31
+		adm = 2
+		dip = 5
+		mil = 1
+	}
+}
+
+#1404.12.16 = Wilhelm IV inherits Holland; PU under Holland
+
+1401.5.30 = {
+	heir = {
+		name = "Jacobäa"
+		monarch_name = "Jacoba I"
+		dynasty = "von Wittelsbach"
+        culture = bavarian
+		birth_date = 1401.8.16
+		death_date = 1436.10.8
+		adm = 2
+		dip = 1
+		mil = 1
+		female = yes
+	}
+}
+
+1417.5.31 = {
+	monarch = {
+		name = "Jacobäa I"
+		dynasty = "von Wittelsbach"
+        culture = bavarian
+		adm = 2
+		dip = 1
+		mil = 1
+		female = yes
+	}
+}

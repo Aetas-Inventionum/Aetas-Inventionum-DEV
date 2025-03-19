@@ -1,0 +1,39 @@
+#5004 - Cinarca
+#Area - Corsica
+#Region - Italy
+
+#Core Details
+capital = "Ajaccio"
+is_city = yes
+owner = COR
+controller = COR
+
+#Demographics
+culture = corsican
+religion = catholic
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = oils
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = COR
+add_core = GEN
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

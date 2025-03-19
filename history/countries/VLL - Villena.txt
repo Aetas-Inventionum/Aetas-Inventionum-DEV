@@ -1,0 +1,31 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+primary_culture = murcian
+religion = catholic
+technology_group = western
+capital = 3371 #Villena
+
+1415.1.1 = { 
+	monarch = { 
+		name = "María I de Castilla"
+		dynasty = "de Trastámara"
+		female = yes 
+		birth_date = 1401.1.1
+		culture = castillian
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+	queen = { 
+		name = "Alifonso"
+		dynasty = "de Trastámara"
+		country_of_origin = ARA 
+		birth_date = 1396.1.1
+		death_date = 1458.6.27
+		culture = castillian
+		adm = 2
+		dip = 5
+		mil = 5
+	}
+}

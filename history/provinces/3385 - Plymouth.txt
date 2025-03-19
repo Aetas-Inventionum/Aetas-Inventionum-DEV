@@ -1,0 +1,38 @@
+#3385 - Plymouth
+#Area - Cornwall
+#Region - British Isles
+
+#Core Details
+capital = "Plymouth"
+is_city = yes
+owner = ENG
+controller = ENG
+
+#Demographics
+culture = wessexian
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 1
+base_manpower = 1
+trade_goods = naval_supplies 
+
+#Cores and Occupation (Alphabetical after current)
+add_core = ENG
+add_core = DEV
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

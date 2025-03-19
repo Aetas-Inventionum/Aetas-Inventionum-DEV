@@ -1,0 +1,9 @@
+government = monarchy
+add_government_reform = frankokratic_reform
+government_rank = 1
+technology_group = western
+primary_culture = neapolitan
+add_accepted_culture = greek
+religion = catholic
+capital = 4698
+fixed_capital = 4698

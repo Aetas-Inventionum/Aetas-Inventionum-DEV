@@ -1,0 +1,34 @@
+#5753 - Taghit
+#Area - Tafilalt
+#Region - Maghreb
+
+#Core Details
+capital = "Taghit"
+
+#Demographics
+culture = berber
+religion = sunni
+native_size = 5
+native_ferocity = 2
+native_hostileness = 3
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = unknown   #livestock
+
+#Cores and Occupation (Alphabetical after current) 
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = muslim
+discovered_by = sub_saharan
+
+#Histories

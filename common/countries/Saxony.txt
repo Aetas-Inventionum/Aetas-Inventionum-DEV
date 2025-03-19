@@ -1,0 +1,103 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+color = { 179 175 75 } #155 147 180 #meissen swap color was 114 114 57 #neos color 35 101 72
+revolutionary_colors = { 0 9 0 }
+
+historical_score = 300
+
+preferred_religion = protestant
+
+historical_idea_groups = {
+	diplomatic_ideas
+	defensive_ideas
+	innovativeness_ideas
+	offensive_ideas
+	economic_ideas
+	trade_ideas
+	quality_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	dutch_maurician
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	prussian_uhlan
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Bernhard #2" = 5
+	"Albrecht #2" = 50
+	"Johann #0" = 30
+	"Erich #5" = 15
+	"Rudolf #3" = 15
+	"Wenzel #1" = 5
+	"Friedrich #0" = 80
+	"Ernst #0" = 50
+	"Johann Friedrich #0" = 25
+	"Heinrich #3" = 25
+	"Moritz #0" = 15
+	"August #0" = 15
+	"Christian #0" = 10
+	"Johann Georg #0" = 10
+	"Friedrich Christian #0" = 5
+	"Otto #0" = 5
+	"Ekbert #0" = 0
+	"Konrad #0" = 5
+	
+	"Margareta #1" = -5
+	"Amalia #0" = -1
+	"Bianka #0" = -1
+	"Eleonora #0" = -1
+}
+
+leader_names = {
+	#upper-saxon noble families, especially from the Meissen area and Thuringia
+	Alnpeck "von Altenburg" "von Ammendorf" "von Arnim"
+	"von Ballenhausen" "von Barby" "von Baudissin" "von Behren" "von Beichlingen" "von Bendeleben" "von Beneckendorff" "von Bennewitz" "von Berbisdorf" "von Beust" "von Bissing" "von Bock" "von Balgstedt"
+	"von Carlowitz" Charpentier "von Colditz"
+	"von Delitz" "von Dieskau" "von Drachstedt" "von Draschwitz" "von Dyhern"
+	"von Eckersberg" "von Egidy" "von Einsiedel" "von Elterlein" "am Ende" "von Erdmannsdorff"
+	"von Fabrice" "von Falkenstein" "von Flanß" "von Freiburg" "von Friesen" "von Fritsch"
+	"vonn der Gabelentz" "von Gaudlitz" "von Gehler" "von Gößnitz"
+	"von Haugwitz" "von Helldorff" "von Hohnstein" "zur Horst"
+	"von Kaltenborn"  "von Kannewurff" "von Caraz" Klüchtzner Köhler Könneritz
+	"von Landwüst" Leipziger "von Lüttichau"
+	Maltitz "von Mansfeld" "von Metzradt"
+	"von Nesselröden" "von Nißmitz" "von Nostitz"
+	"O'Byrn" "von der Oelsnitz"
+	"von Plauen" "von Pölnitz" "von Ponickau" "von Posern"
+	"von Rauchhaupt" "von Reibold" "von Rex" Römer
+	"von Saalhausen" "von Sahr" "von Schleinitz" "von Schwartzburg" "von Schönfeld" "von Stammer" "zu Stolberg"
+	"von Tettau" Theler "von Torgau" "von Trebis" "de Trote" "von Trützschler"
+	"von Werthern" "von Wettin" "von Wild" "aus dem Winkel"
+	"von Zedlitz" "von Zehman" "von Ziegler und Klipphausen"
+}
+
+ship_names = {
+	Widukind Edberg Wichman Billing Liedolf
+	Brun "Otto I" "Heinrich I" "Bernhard I"
+	Ordulf Manus Lothar "Heinrich II"
+}
+
+
+army_names = {
+	"Kurfürstliche Garde" "Armee von $PROVINCE$" 
+}
+
+fleet_names = {
+	"Kurfürstliche Flotte"
+}

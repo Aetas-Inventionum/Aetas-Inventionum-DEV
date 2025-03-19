@@ -1,0 +1,39 @@
+#4731 - Spoleto
+#Area - Umbria
+#Region - Italy
+
+#Core Details
+capital = "Spoleto"
+is_city = yes
+owner = PAP
+controller = PAP
+
+#Demographics
+culture = umbrian
+religion = catholic
+
+#Development and Trade
+base_tax = 4
+base_production = 3
+base_manpower = 3
+trade_goods = cloth
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = PAP
+add_core = SPT
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

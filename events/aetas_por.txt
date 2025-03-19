@@ -1,0 +1,570 @@
+namespace = aetas_por
+normal_or_historical_nations = yes
+
+# Aftermath of Ceuta part 1 designed by Inferno written by pleib
+country_event = {
+	id = aetas_por.1
+	title = aetas_por.1.t
+	desc = aetas_por.1.d
+	picture = RELIGIOUS_WARS_eventPicture
+
+	fire_only_once = yes
+	
+	mean_time_to_happen = { 
+		days = 1
+	}
+
+	trigger = { 
+			tag = POR 
+			owns = 1751
+	}
+
+	option = {
+		name = "aetas_por.1.a"
+		PAP = {
+			country_event = { id = aetas_por.2 }
+		}
+		custom_tooltip = aetas_por.1.a.tt
+	}
+}
+
+country_event = {
+	id = aetas_por.2
+	title = aetas_por.2.t
+	desc = aetas_por.2.d
+	picture = RELIGIOUS_WARS_eventPicture # I had to add a random image to stop an error breaking the line below, sorry! Love, Felis
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	major = yes 
+		
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "aetas_por.2.a" #yasss
+		ai_chance = {
+			factor = 75
+		}
+		add_opinion = {
+			WHO = POR
+			modifier = por_bull_enacted
+		}
+		POR = {
+			custom_tooltip = aetas_por.2.a.tt
+			add_country_modifier = {
+				name = "por_moorish_crusade"
+				duration = 3650
+			}
+		}
+		hidden_effect = {
+			northern_morocco_area = {
+				limit = {
+					NOT = { is_permanent_claim = POR	}
+					NOT = { is_core = POR	} 
+					has_port = yes
+				}
+				add_permanent_claim = POR
+			}
+			marrekesh_area = {
+				limit = {
+					NOT = { is_permanent_claim = POR	}
+					NOT = { is_core = POR	} 
+					has_port = yes
+				}
+				add_permanent_claim = POR
+			}
+			tamesna_area = {
+				limit = {
+					NOT = { is_permanent_claim = POR	}
+					NOT = { is_core = POR	} 
+					has_port = yes
+				}
+				add_permanent_claim = POR
+			}
+			western_morocco_area = {
+				limit = {
+					NOT = { is_permanent_claim = POR	}
+					NOT = { is_core = POR	} 
+					has_port = yes
+				}
+				add_permanent_claim = POR
+			}
+		}
+		every_province = {
+			if = {
+				limit = {
+					region = maghreb_region
+					owned_by = POR 
+				}
+				add_province_modifier = {
+					name = "por_pious_slave_trade"
+					duration = 3650
+				}
+			}
+		}
+	}
+	option = {
+		name = "aetas_por.2.b" #hell nah fuck dat bitchass portugal
+		add_prestige = 10
+		add_devotion = 10
+		ai_chance = {
+			factor = 25
+		}
+		every_country = {
+			limit = {
+				OR = {
+					tag = FEZ 
+					tag = TFL 
+					tag = MRK
+				}
+			}
+			add_opinion = {
+				WHO = PAP
+				modifier = por_spared_crusade
+			}
+		}
+	}
+}
+#Infante Henrique's Ambitions
+country_event = {
+	id = aetas_por.3
+	title = aetas_por.3.t
+	desc = aetas_por.3.d
+	picture = HENRIQUE_eventPicture
+
+	fire_only_once = yes
+
+
+	mean_time_to_happen = { 
+		years = 1
+	}
+
+	option = { 
+		name = "aetas_por.3.a"
+		add_country_modifier = { 
+			name = "por_henrique_ambition"
+			duration = 7300
+		}
+		set_country_flag = henrique_event 
+	}
+}
+#Capture of Ceuta
+country_event = {
+	id = aetas_por.4
+	title = aetas_por.4.t
+	desc = aetas_por.4.d
+	picture = COUNTRY_COLLAPSE_eventPicture
+
+	fire_only_once = yes
+
+
+	mean_time_to_happen = { 
+		days = 1
+	}
+
+	option = { 
+		name = "aetas_por.4.a"
+		add_prestige = 25
+		set_country_flag = capture_of_ceuta
+	}
+}
+#Terçanabal
+country_event = {
+	id = aetas_por.5
+	title = aetas_por.5.t
+	desc = aetas_por.5.d
+	picture = FARMING_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { 
+		name = "aetas_por.5.a"
+		ai_chance = { factor = 50 }
+		4989 = { 
+			rename_capital = "Terçanabal"
+			change_province_name = "Terçanabal"
+			add_province_modifier = { 
+				name = "henrique_city"
+				duration = -1
+			}
+		}
+	}
+	option = { 
+		name = aetas_por.5.b #same as above just without rename
+		ai_chance = { factor = 50 }
+		4989 = { 
+			add_province_modifier = { 
+				name = "henrique_city"
+				duration = -1
+			}
+		}
+	}
+}
+#Portuguese Renaissance
+country_event = {
+	id = aetas_por.6
+	title = aetas_por.6.t
+	desc = aetas_por.6.d
+	picture = EXPLORERS_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { 
+		name = "aetas_por.5.a"
+		add_country_modifier = { 
+			name = "por_renaissance_happening"
+			duration = 18250
+		}
+	}
+}
+#Expedition to Tangiers
+country_event = {
+	id = aetas_por.7
+	title = aetas_por.7.t
+	desc = aetas_por.7.d
+	picture = MILITARY_CAMP_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { 
+		name = "aetas_por.7.a"
+		custom_tooltip = aetas_por.7.tt
+		set_country_flag = tangiers_invasion
+	}
+}
+#Expedition to Tangiers morocco's action
+country_event = {
+	id = aetas_por.8
+	title = aetas_por.8.t
+	desc = aetas_por.8.d
+	picture = HORDE_ON_HORSEBACK_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	trigger = { 
+		tag = MOR 
+		POR = { 
+			has_country_flag = tangiers_invasion
+		}
+	}
+
+	mean_time_to_happen = { 
+		days = 1 #Was 4
+	}
+
+	immediate = { 
+		clr_country_flag = tangiers_invasion
+	}
+
+	option = { 
+		name = "aetas_por.8.a" #fail 
+		ai_chance = { factor = 2 }
+		POR = { country_event = { id = aetas_por.9 } }
+	}
+	option = { 
+		name = "aetas_por.8.b" #success for por 
+		ai_chance = { factor = 1 }
+		POR = { country_event = { id = aetas_por.10 } }
+	}
+}
+#Tangiers FAIL for por
+country_event = {
+	id = aetas_por.9
+	title = aetas_por.9.t
+	desc = aetas_por.9.d
+	picture = CIVIL_WAR_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	immediate = { 
+		hidden_effect = { set_country_flag = tangiers_fail }
+	}
+
+	option = { 
+		name = "aetas_por.9.a" #aw man
+		ai_chance = { factor = 1 }
+		1751 = { 
+			cede_province = MOR 
+			remove_core = POR 
+		}
+		add_truce_with = MOR
+	}
+	option = { 
+		name = aetas_por.9.b #we dont care about the infante
+		ai_chance = { factor = 99 }
+		add_stability = -1 
+	}
+}
+#Tangiers SUCCESS for por
+country_event = {
+	id = aetas_por.10 
+	title = aetas_por.10.t
+	desc = aetas_por.10.d
+	picture = SIEGE_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { 
+		name = "aetas_por.10.a" #tangiers is won
+		334 = { 
+			cede_province = POR
+		}
+		add_prestige = 10
+		add_truce_with = MOR 
+	}
+}
+#Joao I
+country_event = {
+	id = aetas_por.11
+	title = aetas_por.11.t
+	desc = aetas_por.11.d
+	picture = COURT_eventPicture
+
+	fire_only_once = yes
+
+
+	mean_time_to_happen = { 
+		months = 1
+	}
+
+	option = { 
+		name = "aetas_por.11.a"
+		add_ruler_modifier = { 
+			name = "renado_do_bem"
+			duration = -1
+		}
+		add_stability = 1
+	}
+}
+#Purchase of Surat
+country_event = {
+	id = aetas_por.12
+	title = aetas_por.12.t
+	desc = aetas_por.12.d
+	picture = CORRUPTION_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { 
+		name = "aetas_por.12.a"
+		add_treasury = -500
+		517 = { 
+			owner = { 
+				add_country_modifier = { 
+					name = "por_arms_trade"
+					duration = -1
+				}
+			}
+			cede_province = POR 
+		}
+	}
+}
+#Purchase of Gabu
+country_event = {
+	id = aetas_por.13
+	title = aetas_por.13.t
+	desc = aetas_por.13.d
+	picture = CORRUPTION_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { 
+		name = "aetas_por.13.a"
+		add_treasury = -500
+		1114 = { 
+			owner = { 
+				add_country_modifier = { 
+					name = "por_arms_trade"
+					duration = -1
+				}
+			}
+			cede_province = POR 
+		}
+	}
+}
+#Purchase of Macau
+country_event = {
+	id = aetas_por.14
+	title = aetas_por.14.t
+	desc = aetas_por.14.d
+	picture = CORRUPTION_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { 
+		name = "aetas_por.14.a"
+		add_country_modifier = { 
+			name = "por_arms_trade"
+			duration = -1
+		}
+		POR = { add_treasury = -500 }
+		add_treasury = 500
+		668 = { 
+			cede_province = POR 
+			add_core = POR 
+			remove_core = ROOT 
+			add_province_triggered_modifier = por_feitoria
+		}
+		add_truce_with = POR 
+	}
+	option = { 
+		name = aetas_por.14.b
+		ai_chance = { factor = 0 }
+		668 = {
+			add_core = POR 
+			add_province_triggered_modifier = por_feitoria
+		}
+	}
+}
+#Purchase of Nagasaki
+country_event = {
+	id = aetas_por.15
+	title = aetas_por.15.t
+	desc = aetas_por.15.d
+	picture = CORRUPTION_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { 
+		name = "aetas_por.15.a"
+		ai_chance = { factor = 1 }
+		add_treasury = -500
+		add_country_modifier = { 
+			name = "por_arms_trade"
+			duration = -1
+		}
+		POR = { add_treasury = -500 }
+		add_treasury = 500
+		4182 = { 
+			cede_province = POR 
+			add_core = POR 
+			remove_core = ROOT 
+			add_province_triggered_modifier = por_feitoria
+		}
+		add_truce_with = POR
+	}
+	option = { 
+		name = aetas_por.15.b
+		ai_chance = { factor = 1 }
+		4182 = { 
+			add_core = POR 
+			add_province_triggered_modifier = por_feitoria
+		}
+	}
+}
+#discovery of madeiras 
+country_event = {
+	id = aetas_por.16
+	title = aetas_por.16.t
+	desc = aetas_por.16.d
+	picture = EXPLORERS_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_por.16.a
+		368 = { 
+			discover_country = ROOT 
+			if = { 
+				limit = { is_city = no }
+				create_colony = 400
+			}
+		}
+	}
+}
+#treaty of tordesillas
+country_event = {
+	id = aetas_por.17
+	title = aetas_por.17.t
+	desc = aetas_por.17.d
+	picture = BIG_BOOK_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_por.17.a
+		add_country_modifier = { 
+			name = tot_mod
+			duration = -1 
+		}
+		if = { 
+			limit = { exists = SPA }
+			SPA = { 
+				add_country_modifier = { 
+					name = tot_mod 
+					duration = -1 
+				}
+			}
+		}
+		else_if = { 
+			limit = { exists = SPN }
+			SPN = { 
+				add_country_modifier = { 
+					name = tot_mod 
+					duration = -1 
+				}
+			}
+		}
+		else = { 
+			CAS = { 
+				add_country_modifier = { 
+					name = tot_mod
+					duration = -1
+				}
+			}
+		}
+	}
+}
+#purchase of bombay
+country_event = {
+	id = aetas_por.18
+	title = aetas_por.18.t
+	desc = aetas_por.18.d
+	picture = WESTERNISATION_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes 
+	major = yes 
+	major_trigger = { tag = POR }
+
+	option = { 
+		name = aetas_por.18.a #accept
+		ai_chance = { factor = 1 }
+		add_country_modifier = { 
+			name = por_arms_trade
+			duration = -1 
+		}
+		POR = { add_treasury = -500 }
+		add_treasury = 500
+		529 = { 
+			cede_province = POR 
+			add_core = POR 
+			remove_core = ROOT 
+			add_province_triggered_modifier = por_feitoria
+		}
+		add_truce_with = POR 
+	}
+	option = { 
+		name = aetas_por.18.b #no thank you
+		ai_chance = { factor = 0 }
+		529 = { 
+			add_core = POR 
+			add_province_triggered_modifier = por_feitoria
+		}
+	}
+}

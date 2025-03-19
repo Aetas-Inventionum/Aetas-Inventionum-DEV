@@ -1,0 +1,85 @@
+spriteTypes = {
+    spriteType = {
+		name = "GFX_icon_autonomous_union_relation"
+		texturefile = "gfx/interface/icon_autonomous_union_relation.dds"
+	}
+    spriteType = {
+		name = "GFX_icon_autonomous_union_overlord"
+		texturefile = "gfx/interface/icon_autonomous_union_overlord.dds"
+	}
+    spriteType = {
+		name = "GFX_icon_autonomous_union_subject"
+		texturefile = "gfx/interface/icon_autonomous_union_subject.dds"
+	}
+
+    # custom icon for lithuania
+    spriteType = {
+		name = "GFX_icon_lithuanian_union_relation"
+		texturefile = "gfx/interface/icon_lithuanian_union_relation.dds"
+	}
+    spriteType = {
+		name = "GFX_icon_lithuanian_union_overlord"
+		texturefile = "gfx/interface/icon_lithuanian_union_overlord.dds"
+	}
+    spriteType = {
+		name = "GFX_icon_lithuanian_union_subject"
+		texturefile = "gfx/interface/icon_lithuanian_union_subject.dds"
+	}
+
+	#crown dependencies
+	spriteType = {
+		name = "GFX_icon_crown_subject_type"
+		texturefile = "gfx/interface/crown_subject_type.dds"
+	}
+    spriteType = {
+		name = "GFX_icon_crown_overlord"
+		texturefile = "gfx/interface/crown_overlord.dds"
+	}
+    spriteType = {
+		name = "GFX_icon_crown_subject"
+		texturefile = "gfx/interface/crown_subject.dds"
+	}
+
+
+	#fief
+	spriteType = {
+		name = "GFX_icon_fief1"
+		texturefile = "gfx/interface/icon_fief1.dds"
+	}
+    spriteType = {
+		name = "GFX_icon_diplomacy_lead_fief1"
+		texturefile = "gfx/interface/lead_fief1.dds"
+	}
+    spriteType = {
+		name = "GFX_icon_diplomacy_is_fief1"
+		texturefile = "gfx/interface/is_fief1.dds"
+	}
+
+	 # papal state
+	 spriteType = {
+		name = "GFX_icon_papal_relation"
+		texturefile = "gfx/interface/icon_papal_relation.dds"
+	}
+    spriteType = {
+		name = "GFX_icon_papal_overlord"
+		texturefile = "gfx/interface/icon_papal_overlord.dds"
+	}
+    spriteType = {
+		name = "GFX_icon_papal_subject"
+		texturefile = "gfx/interface/icon_papal_subject.dds"
+	}
+
+	# hanseatic league member
+    spriteType = {
+		name = "GFX_icon_hanseatic_relation"
+		texturefile = "gfx/interface/icon_hanseatic_relation.dds"
+	}
+    spriteType = {
+		name = "GFX_icon_hanseatic_overlord"
+		texturefile = "gfx/interface/icon_hanseatic_overlord.dds"
+	}
+    spriteType = {
+		name = "GFX_icon_hanseatic_subject"
+		texturefile = "gfx/interface/icon_hanseatic_subject.dds"
+	}
+}

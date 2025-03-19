@@ -1,0 +1,10 @@
+
+government_rank = 1
+government = tribal
+add_government_reform = tribal_kingdom
+technology_group = muslim
+religion = sunni
+primary_culture = kabylian
+capital = 2459
+religious_school = maliki_school
+

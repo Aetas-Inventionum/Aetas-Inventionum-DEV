@@ -1,0 +1,39 @@
+#5005 - Bonifacio
+#Area - Corsica
+#Region - Italy
+
+#Core Details
+capital = "Bonifacio"
+is_city = yes
+owner = GEN
+controller = GEN
+
+#Demographics
+culture = ligurian #large concentration of ligurian ethnic colonies
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 1
+base_manpower = 2
+trade_goods = naval_supplies #nearby cork forest
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = GEN
+add_core = COR
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes #important genoese stronghold
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

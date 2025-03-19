@@ -1,0 +1,7 @@
+government = tribal
+add_government_reform = steppe_horde
+government_rank = 1
+primary_culture = mari
+religion = tengri_pagan_reformed
+technology_group = eastern
+capital = 1083	# Yur

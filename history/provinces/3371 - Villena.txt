@@ -1,0 +1,39 @@
+#3371 - Villena
+#Area - Murcia
+#Region - Iberia
+
+#Core Details
+capital = "Villena"
+is_city = yes
+owner = CAS
+controller = CAS
+
+#Demographics
+culture = manchego
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 1
+base_manpower = 1
+trade_goods = wine
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = CAS
+add_core = MUR
+add_core = VLL
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

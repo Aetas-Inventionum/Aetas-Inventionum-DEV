@@ -1,0 +1,41 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+primary_culture = wallonian
+religion = catholic
+technology_group = western
+capital = 1866 # Namur
+fixed_capital = 1866 # Cannot move capital away from this province & no power cost to move to it
+
+1391.1.1 = {
+	monarch = {
+		name = "Guillaume II"
+		dynasty = "de Dampierre"
+		birth_date = 1355.1.22
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+	queen = {
+		country_of_origin = FRA
+		name = "Jeanne"	
+		dynasty = "d'Harcourt"
+		birth_date = 1372.1.1
+		death_date = 1456.10.13
+		female = yes
+		adm = 2		
+		dip = 2
+		mil = 1	
+	}
+	heir = {
+		name = "Jean"
+		monarch_name = "Jean III"
+		dynasty = "de Dampierre"
+		birth_date = 1365.1.1		#???
+		death_date = 1429.3.1
+		claim = 95
+		adm = 3			
+		dip = 2			
+		mil = 2			
+	}
+}

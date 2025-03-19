@@ -1,0 +1,38 @@
+#36 - Estland
+#Area - Estonia
+#Region - Baltica 
+
+#Core Details
+capital = "Reval"
+is_city = yes
+owner = REV
+controller = REV
+
+#Demographics
+culture = estonian #strong ethnic population
+religion = catholic
+
+#Development and Trade
+base_tax = 3
+base_production = 4
+base_manpower = 3
+trade_goods = naval_supplies
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = REV 
+add_core = EST
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+center_of_trade = 2
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+
+#Histories

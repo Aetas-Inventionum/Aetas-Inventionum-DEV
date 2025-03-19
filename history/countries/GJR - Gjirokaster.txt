@@ -1,0 +1,18 @@
+government = monarchy
+add_government_reform = albanian_lordship_reform
+government_rank = 1
+primary_culture = albanian
+religion = orthodox
+technology_group = eastern
+capital = 5436
+
+1407.1.1 = {
+	monarch = {
+		name = "Gjon I"
+		dynasty = "Zenebishi"
+		birth_date = 1380.1.1		
+		adm = 2
+		dip = 4
+		mil = 3
+	}
+}

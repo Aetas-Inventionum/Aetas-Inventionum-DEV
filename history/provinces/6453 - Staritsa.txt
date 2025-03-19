@@ -1,0 +1,36 @@
+#6453 - Staritsa
+#Area - Tver
+#Region - Russia 
+
+#Core Details
+capital = "Staritsa"
+is_city = yes
+owner = TVE
+controller = TVE
+
+#Demographics
+culture = russian
+religion = orthodox
+
+#Development and Trade
+base_tax = 3
+base_production = 3
+base_manpower = 2
+trade_goods = stone #Staritsa marble (limestone)
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = TVE
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = nomad_group
+
+#Histories

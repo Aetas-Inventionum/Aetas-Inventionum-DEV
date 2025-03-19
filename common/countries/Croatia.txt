@@ -1,0 +1,127 @@
+#Country Name: Please see filename.
+
+graphical_culture = latingfx
+
+color = { 128 115 210 } # 104 94 247 for original.
+
+revolutionary_colors = { 5 0 13 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	diplomatic_ideas
+	innovativeness_ideas
+	religious_ideas
+	quality_ideas
+}
+
+historical_units = {
+	eastern_medieval_infantry
+	eastern_knights
+	slavic_stradioti
+	eastern_militia
+	ottoman_sekban
+	ottoman_reformed_spahi
+	ottoman_reformed_janissary
+	ottoman_toprakli_hit_and_run
+	ottoman_nizami_cedid
+	ottoman_toprakli_dragoon
+	eastern_skirmisher
+	eastern_uhlan
+	eastern_carabinier
+	ottoman_new_model
+	ottoman_lancer
+}
+
+monarch_names = {
+	#historical kings of croatia
+	"Tomislav #1" = 20
+	"Trpimir #2" = 20
+	"Kreshimir #4" = 20
+	"Miroslav #1" = 10 
+	"Stjepan #4" = 50  #including banate counts
+	"Svetoslav #1" = 5
+	"Gojslav #1" = 5
+	"Dmitar #1" = 10 #zvonimir
+	"Petar #1" = 10 #technical king
+	#bans of croatia and dalmatia and slavonia
+	"Pavao #1" = 10 #typically given number
+	"Mladen #2" = 10
+	"Ivan #5" = 45
+	"Karlo #1" = 10
+	"Nikola #4" = 45
+	"Juraj #2" = 10
+	"Vuk #0" = 5
+	##misc. nobles
+	#frankopan
+	"Dujam #2" = 5
+	"Bernardin #0" = 5
+	#kurjakovic
+	"Budislav #0" = 10
+	"Toma #0" = 10 
+	"Franko #0" = 1
+	"Fredul #0" = 5
+	"Butko #0" = 5
+	"Grgur #0" = 10
+
+	"Urshula #0" = -1
+	"Katarina #0" = -1
+	"Jelena #1" = -15
+	"Marija #0" = -1
+	"Petra #0" = -1
+	"Klara #0" = -1
+	"Ivanka #0" = -1
+	"Vladislava #0" = -1
+}
+
+leader_names = {
+	#1/12 marking is a symbol meaning that this family is among the 12 noble tribes of croatia
+	Chudomiric #1/12
+	Jamometovic #1/12
+	Kachic #1/12
+	Krujakovic Posedarski #Gusic (1/12) branches
+	Kulishic Mirogerutic Budachic Cvitojevic Hatezevic #Kukar (1/12) branches
+	Lapchani Karinjani #Lapchani (1/12) branches
+	Mogorovic #1/12
+	Nelipic #Snachic, 1/12
+	Poletchic #1/12
+	Shubic Zrinski #1/12 + cadet
+	Tugomiric #1/12
+	Tolshic #surviving branch of Lasnichic (1/12)
+	##non 12 tribes list
+	Beshlagic
+	Crnkovic
+	Drashkovic Domagojevic
+	Feshtetic Frankopani
+	Gorjanski
+	Karlovic
+	Lackovic
+	Mlinaric
+	Novosel
+	Pejachevic
+	Radojchic
+	Trpimirovi
+}
+
+ship_names = {
+	Cres
+	"Dugi Otok"
+	Goli
+	Krl
+	Pag Plavnik
+	Susak "Sveti Grgur"
+	Tijat
+	Unije
+	"Vele Srankane"
+	Zlarin Zmajan
+}
+
+army_names = { 
+	"Hrvatska vojska" "Slavonska vojska" "$PROVINCE$ vojska"
+}
+
+fleet_names = { 
+	"$PROVINCE$ flota"
+}

@@ -1,0 +1,36 @@
+#6514 - Orlov
+#Area - Vyatka Land
+#Region - Russia 
+
+#Core Details
+capital = "Orlov" 
+is_city = yes
+owner = VYA
+controller = VYA
+
+#Demographics
+culture = ustyugian
+religion = orthodox
+
+#Development and Trade
+base_tax = 2
+base_production = 1
+base_manpower = 1
+trade_goods = fur
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = VYA
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = nomad_group
+
+#Histories

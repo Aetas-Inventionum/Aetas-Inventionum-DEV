@@ -1,0 +1,37 @@
+#5279 - Barth
+#Area - Fore Pomerania
+#Region - North Germany
+
+#Core Details
+capital = "Barth"
+is_city = yes
+owner = BAT
+controller = BAT
+
+#Demographics
+culture = pommeranian
+religion = catholic
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = beer
+
+#Cores and Occupation (Alphabetical after current)
+add_core = BAT
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

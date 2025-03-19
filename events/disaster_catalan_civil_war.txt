@@ -1,0 +1,901 @@
+namespace = catalan_civil_war
+normal_or_historical_nations = yes
+
+#Catalan Civil War Errupts into Bloodshed
+country_event = {
+	id = catalan_civil_war.1
+	title = catalan_civil_war.1.t
+	desc = catalan_civil_war.1.d
+	picture = CIVIL_WAR_eventPicture
+	is_triggered_only = yes 
+	fire_only_once = yes
+	major = yes 
+
+	immediate = { 
+		hidden_effect = { 
+			set_country_flag = catalan_civil_war_start_event
+			random_owned_province = { 
+				limit = { 
+					area = catalonia_area
+					AND = { 
+						NOT = { units_in_province = 1 }
+						is_capital = no
+					}
+				}
+				set_province_flag = CAT_cw_spawn_rebels_here
+			}
+			random_owned_province = { 
+				limit = { 
+					area = catalonia_area
+					AND = { 
+						NOT = { units_in_province = 1 }
+						is_capital = no 
+						NOT = { has_province_flag = CAT_cw_spawn_rebels_here }
+					}
+				}
+				set_province_flag = CAT_cw_spawn_more_rebels_here
+			}
+		}
+	}
+
+	option = { 
+		name = catalan_civil_war.1.a #Royalists
+		ai_chance = { factor = 50 }
+		set_country_flag = ara_supports_royalists
+		add_yearly_manpower = -2.5
+		random_owned_province = {
+			limit = {
+				has_province_flag = CAT_cw_spawn_rebels_here
+			}
+			spawn_rebels = {
+				type = parliamentarians_rebels
+				size = 3
+				leader = "Joan"
+				leader_dynasty = "de Copons"
+			}
+			clr_province_flag = CAT_cw_spawn_rebels_here
+		}
+		random_owned_province = {
+			limit = {
+				has_province_flag = CAT_cw_spawn_more_rebels_here
+			}
+			spawn_rebels = {
+				type = parliamentarians_rebels
+				size = 2
+			}
+			clr_province_flag = CAT_cw_spawn_more_rebels_here
+		}
+	}
+	option = { 
+		name = catalan_civil_war.1.b #we can adopt some of their demands
+		ai_chance = { factor = 50 }
+		set_country_flag = ara_supports_pactists
+		add_government_reform = pactist_aragonese_monarchy_reform
+		if = { 
+			limit = { has_reform = remenca_reform }
+			remove_government_reform = remenca_reform
+		}
+		set_capital = 213
+		random_owned_province = {
+			limit = {
+				has_province_flag = CAT_cw_spawn_rebels_here
+			}
+			spawn_rebels = {
+				type = pretender_rebels
+				leader_dynasty = "de Trastámara"
+				culture = castillian
+				size = 3
+			}
+			clr_province_flag = CAT_cw_spawn_rebels_here
+		}
+		if = {
+			limit = {
+				any_owned_province = {
+					has_province_flag = CAT_cw_spawn_more_rebels_here
+				}
+			}
+			random_owned_province = {
+				limit = {
+					has_province_flag = CAT_cw_spawn_more_rebels_here
+				}
+				spawn_rebels = {
+					type = anti_tax_rebels
+					size = 2
+				}
+				clr_province_flag = CAT_cw_spawn_more_rebels_here
+			}
+		}
+	}
+	after =  { hidden_effect = { clr_country_flag = catalan_civil_war_start_event } }
+}
+#council of the principality established
+country_event = {
+	id = catalan_civil_war.2
+	title = catalan_civil_war.2.t
+	desc = catalan_civil_war.2.d
+	picture = ELECTION_REPUBLICAN_eventPicture
+	is_triggered_only = yes 
+	fire_only_once = yes
+
+	trigger = { has_country_flag = ara_supports_royalists }
+
+	option = { 
+		name = catalan_civil_war.2.a #not good
+		every_owned_province = { 
+			limit = { area = catalonia_area }
+			add_province_triggered_modifier = cat_council
+		}
+	}
+}
+#Remences Rebel!
+country_event = {
+	id = catalan_civil_war.3
+	title = catalan_civil_war.3.t
+	desc = catalan_civil_war.3.d
+	picture = ANGRY_MOB_eventPicture
+	is_triggered_only = yes 
+
+	trigger = { 
+		NOT = { has_country_flag = remences_war_flag }
+		any_owned_province = { 
+			area = catalonia_area
+			NOT = { has_province_flag = cat_remenca_rebels_flag_old }
+		}
+	}
+
+	immediate = { 
+		hidden_effect = { 
+			random_owned_province = { 
+				limit = { 
+					area = catalonia_area
+					is_capital = no 
+					NOT = { units_in_province = 1 }
+					NOT = { has_province_flag = cat_remenca_rebels_flag_old }
+				}
+				set_province_flag = cat_remenca_rebels_flag
+			}
+		}
+	}
+
+	option = { 
+		name = catalan_civil_war.3.a #we must calm the masses!
+		random_owned_province  = { 
+			limit = { 
+				has_province_flag = cat_remenca_rebels_flag
+			}
+			spawn_rebels = { 
+				type = anti_tax_rebels
+				size = 3
+			}
+			hidden_effect = { 
+				clr_province_flag = cat_remenca_rebels_flag
+				set_province_flag = cat_remenca_rebels_flag_old
+			}
+			add_province_modifier = {
+				name = remenca_angry_mod
+				duration = 3650
+			}
+		}
+	}
+}
+#plot of san matías
+country_event = {
+	id = catalan_civil_war.4 
+	title = catalan_civil_war.4.t
+	desc = catalan_civil_war.4.d
+	picture = SPY_eventPicture
+	is_triggered_only = yes 
+	fire_only_once = yes
+
+	trigger = { has_country_flag = ara_supports_royalists }
+
+	option = { 
+		name = catalan_civil_war.4.a #fine, we will move the capital back to barcelona
+		ai_chance = { factor = 50 }
+		set_capital = 213
+		add_legitimacy = -10
+	}
+	option = { 
+		name = catalan_civil_war.4.b #guards, seize them!
+		ai_chance = { factor = 50 }
+		add_stability = -1
+	}
+}
+#Treaty of Bayonne
+country_event = {
+	id = catalan_civil_war.5
+	title = catalan_civil_war.5.t
+	desc = catalan_civil_war.5.d
+	picture = OVEREXTENSION_eventPicture
+	is_triggered_only = yes 
+	fire_only_once = yes
+
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			tag = CAT 
+			tag = FRA
+		}
+	}
+
+	trigger = { 
+		AND = { 
+			197 = { 
+				OR = { 
+					owned_by = ROOT 
+					AND = { 
+						has_global_flag = catalonia_secedes_flag
+						owned_by = CAT 
+						CAT = { offensive_war_with = ROOT }
+					}
+				}
+			}
+			3356 = { 
+				OR = { 
+					owned_by = ROOT 
+					AND = { 
+						has_global_flag = catalonia_secedes_flag
+						owned_by = CAT 
+						CAT = { offensive_war_with = ROOT }
+					}
+				}
+			}
+		}
+	}
+
+	option = { 
+		name = catalan_civil_war.5.a #accept the proposed deal
+		ai_chance = { factor = 50 } 
+		197 = { 
+			cede_province = FRA 
+			add_core = FRA 
+		}
+		3356 = { 
+			cede_province = FRA 
+			add_core = FRA 
+		}
+		add_truce_with = FRA 
+		add_treasury = 500
+	}
+	option = { 
+		name = catalan_civil_war.5.b #nope!
+		ai_chance = { factor = 50 }
+		197 = { add_permanent_claim = FRA }
+		3356 = { add_permanent_claim = FRA }
+	}
+}
+#secession of catalonia
+country_event = {
+	id = catalan_civil_war.6
+	title = catalan_civil_war.6.t
+	desc = catalan_civil_war.6.d
+	picture = REFORM_eventPicture
+	is_triggered_only = yes 
+	fire_only_once = yes
+
+	major = yes
+
+	trigger = { 
+		has_country_flag = ara_supports_royalists
+		any_owned_province = { has_province_modifier = cat_council }
+	}
+
+	immediate = { 
+		hidden_effect = { 
+			set_global_flag = catalonia_secedes_flag
+			set_global_flag = cat_first_election_flag 
+		} 
+	}
+
+	option = { 
+		name = catalan_civil_war.6.a #they will be defeated!
+		if = { 
+			limit = { capital_scope = { area = catalonia_area } }
+			set_capital = 220
+		}
+		release = CAT 
+		CAT = { 
+			add_government_reform = catalonian_principality_reform
+			country_event = { id = catalan_civil_war.7 }
+			capital_scope = { 
+				build_to_forcelimit = {
+					infantry = 0.8
+					cavalry = 0.2
+					heavy_ship = 0.3
+					light_ship = 0.3
+					transport = 0.3
+				}
+			}
+			declare_war_with_cb = {
+				who = ARA
+				casus_belli = cb_independence_war
+			}
+			if = { 
+				limit = { 
+					AND = { 
+						exists = PLL 
+						PLL = { 
+							is_subject_of = ROOT 
+							is_lesser_in_union = no 
+						}
+					}
+				}
+				create_subject = { 
+					who = PLL 
+					subject_type = fief 
+				}
+				PLL = { 
+					hidden_effect = { 
+						change_country_color = { color = { 249 130 111 } }
+					}
+					join_all_offensive_wars_of = CAT 
+				}
+			}
+		}
+		custom_tooltip = ara_defeat_cat.tt
+		if = { 
+			limit = { 
+				PRO = { 
+					has_country_flag = pro_cat_flag
+				}
+			}
+			PRO = { 
+				join_all_offensive_wars_of = CAT 
+				create_union = CAT 
+			}
+		}
+		else = { 
+			CAT = { 
+				country_event = { 
+					id = catalan_civil_war.7
+					days = 1
+				}
+			}
+		}
+	}
+	option = { 
+		name = catalan_civil_war.6.b #play as catalonia
+		trigger = { ai = no }
+		release = CAT 
+		CAT = { 
+			add_government_reform = catalonian_principality_reform
+			capital_scope = { 
+				build_to_forcelimit = {
+					infantry = 0.8
+					cavalry = 0.2
+					heavy_ship = 0.3
+					light_ship = 0.3
+					transport = 0.3
+				}
+			}
+			declare_war_with_cb = {
+				who = ARA
+				casus_belli = cb_independence_war
+			}
+			if = { 
+				limit = { 
+					AND = { 
+						exists = PLL 
+						PLL = { 
+							is_subject_of = ROOT 
+							is_lesser_in_union = no 
+						}
+					}
+				}
+				create_subject = { 
+					who = PLL 
+					subject_type = fief 
+				}
+				PLL = { 
+					hidden_effect = { 
+						change_country_color = { color = { 229 130 111 } }
+					}
+					join_all_offensive_wars_of = CAT 
+				}
+			}
+		}
+		switch_tag = CAT
+		if = { 
+			limit = { PRO = { NOT = { has_country_flag = pro_cat_flag }  } }
+			CAT = { 
+				country_event = { 
+					id = catalan_civil_war.7
+					days = 1
+				}
+			}
+		}
+	}
+}
+#catalonia elects a count of barcelona
+country_event = {
+	id = catalan_civil_war.7
+	title = catalan_civil_war.7.t
+	desc = catalan_civil_war.7.d
+	picture = AULIC_COUNCIL_eventPicture
+	is_triggered_only = yes 
+	fire_only_once = yes
+
+	major = yes
+	major_trigger = { 
+		OR = { 
+			tag = POR 
+			tag = ANJ 
+			tag = CAS 
+			tag = ARA 
+		}
+	}
+
+	option = { 
+		name = catalan_civil_war.7.a #Elect a prince of Castile to rule us
+		trigger = {
+			AND = { 
+				exists = CAS
+				CAS = {  
+					is_lesser_in_union = no 
+					is_free_or_tributary_trigger = yes 
+				}
+			}
+		}
+		define_ruler = { 
+			name = "Enric I"
+			culture = castillian
+			age = 25
+			adm = 2
+			dip = 0
+			mil = 1
+		}
+		set_dynasty = CAS
+		create_alliance = CAS 
+	}
+	option = {
+		name = catalan_civil_war.7.b #Elect a Prince of Portugal to rule us
+		trigger = {
+			AND = { 
+				exists = POR  
+				POR = {  
+					is_lesser_in_union = no 
+					is_free_or_tributary_trigger = yes 
+				}
+			}
+		}
+		define_ruler = { 
+			name = "Pere IV"
+			culture = portugese
+			age = 33
+			adm = 3
+			dip = 2
+			mil = 3
+		}
+		set_dynasty = POR 
+		create_alliance = POR 
+	}
+	option = { 
+		name = catalan_civil_war.7.c #Elect a Prince of Anjou to rule us
+		trigger = { 
+			OR = { 
+				AND = { 
+					exists = ANJ 
+					ANJ = {  
+						is_lesser_in_union = no 
+						is_free_or_tributary_trigger = yes 
+					}
+				}
+				AND = { 
+					exists = PRO 
+					PRO = {  
+						is_lesser_in_union = no 
+						is_free_or_tributary_trigger = yes 
+					}
+				}
+			}
+		}
+		if = {
+			limit = { 
+				AND = { 
+					exists = ANJ 
+					ANJ = {
+						is_lesser_in_union = no 
+						is_free_or_tributary_trigger = yes 
+					}
+				}
+			}
+			define_ruler = { 
+				name = "Renat I"
+				culture = angevin
+				age = 60
+				adm = 5
+				dip = 4
+				mil = 2
+			}
+			set_dynasty = ANJ 
+			create_alliance = ANJ 
+		}
+		else = { 
+			define_ruler = { 
+				name = "Renat I"
+				culture = angevin
+				age = 60
+				adm = 5
+				dip = 4
+				mil = 2
+			}
+			set_dynasty = PRO
+			create_alliance = PRO
+		}
+	}
+	option = { 
+		name = catalan_civil_war.7.dd #Elect a Catalan Prince of the old House of Barcelona 
+		define_ruler = { 
+			name = "Jaume III"
+			dynasty = "de Barcelona"
+			age = 25
+			adm = 2
+			dip = 1
+			mil = 4
+		}
+	}
+	after = { hidden_effect = { clr_global_flag = cat_first_election_flag } }
+}
+#pro-royalist end of the civil war
+country_event = {
+	id = catalan_civil_war.8
+	title = catalan_civil_war.8.t
+	desc = catalan_civil_war.8.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	is_triggered_only = yes 
+	fire_only_once = yes
+
+	major = yes 
+
+	trigger = { 
+		has_global_flag = catalonia_secedes_flag
+		OR = {
+			NOT = { exists = CAT }
+			CAT = { 
+				any_owned_province = { 
+					controller = { 
+						OR = { 
+							tag = ARA 
+							alliance_with = ARA 
+							is_subject_of = ARA 
+						}
+					}
+				}
+			}
+		}
+	}
+
+	immediate = { 
+		hidden_effect = { 
+			every_province = { 
+				limit = { has_province_modifier = cat_council }
+				remove_province_modifier = cat_council
+			}
+		}
+	}
+
+	option = { 
+		name = catalan_civil_war.8.a
+		white_peace = CAT 
+		inherit = CAT 
+		end_disaster = catalan_civil_war
+		add_stability = 1
+		add_government_reform = absolutist_aragonese_monarchy_reform
+	}
+	after = { 
+		hidden_effect = { 
+			clr_global_flag = catalonia_secedes_flag
+		}
+		hidden_effect = { ARA = { set_country_flag = ara_cat_cw_end } }
+	}
+}
+#catalonia wins independence and ends civil war
+country_event = {
+	id = catalan_civil_war.9
+	title = catalan_civil_war.9.t
+	desc = catalan_civil_war.9.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	is_triggered_only = yes 
+	fire_only_once = yes
+
+	major = yes 
+
+	trigger = { 
+		tag = CAT 
+		is_at_war = no 
+		is_lesser_in_union = no 
+		is_free_or_tributary_trigger = yes 
+		has_global_flag = catalonia_secedes_flag
+	}
+
+	immediate = { 
+		hidden_effect = { 
+			every_province = { 
+				limit = { has_province_modifier = cat_council }
+				remove_province_modifier = cat_council
+			}
+		}
+	}
+
+	option = { 
+		name = catalan_civil_war.9.a 
+		every_owned_province = { 
+			limit = {  
+				area = catalonia_area
+				is_core = ARA 
+			}
+			remove_core = ARA 
+		}
+		ARA = { end_disaster = catalan_civil_war }
+		hidden_effect = { clr_global_flag = catalonia_secedes_flag }
+	}
+	after = { 
+		hidden_effect = { ARA = { set_country_flag = ara_cat_cw_end } }
+	}
+}
+#neutral ending
+country_event = {
+	id = catalan_civil_war.10 
+	title = catalan_civil_war.10.t
+	desc = catalan_civil_war.10.d
+	picture = CONQUEST_eventPicture
+	is_triggered_only = yes 
+	fire_only_once = yes
+
+	major = yes 
+
+	option = { 
+		name = catalan_civil_war.10.a #we can only hope that this will preserve the peace for now
+		end_disaster = catalan_civil_war
+		add_stability = 1
+	}
+	after = { 
+		hidden_effect = { ARA = { set_country_flag = ara_cat_cw_end } }
+	}
+}
+#Local infante revolts
+country_event = {
+	id = catalan_civil_war.11
+	title = catalan_civil_war.11.t
+	desc = catalan_civil_war.11.d
+	picture = BORDER_TENSION_eventPicture
+	is_triggered_only = yes 
+
+	trigger = { 
+		has_country_flag = ara_supports_pactists
+	}
+
+	option = { 
+		name = catalan_civil_war.11.a
+		random_owned_province = { 
+			limit = { 
+				is_capital = no 
+				NOT = { units_in_province = 1 }
+			}
+			spawn_rebels = { 
+				type = pretender_rebels
+				leader_dynasty = ROOT
+				size = 2
+				win = yes 
+			}
+		}
+	}
+}
+#neighboring reaction to pro-pactist support
+country_event = {
+	id = catalan_civil_war.12
+	title = catalan_civil_war.12.t
+	desc = catalan_civil_war.12.d
+	picture = CONQUEST_eventPicture
+	is_triggered_only = yes 
+	fire_only_once = yes
+
+	trigger = { 
+		has_country_flag = ara_supports_pactists
+		OR = { 
+			CAS = { 
+				exists = yes 
+				is_lesser_in_union = no 
+				is_free_or_tributary_trigger = yes
+				government = monarchy
+			}
+			FRA = { 
+				exists = yes 
+				is_lesser_in_union = no 
+				is_free_or_tributary_trigger = yes
+				government = monarchy
+			}
+		}
+	}
+
+	option = { 
+		name = catalan_civil_war.12.a #only time will tell
+		if = { 
+			limit = { 
+				CAS = { 
+					exists = yes 
+					is_lesser_in_union = no 
+					is_free_or_tributary_trigger = yes
+					government = monarchy
+				}
+			}
+			CAS = { country_event = { id = catalan_civil_war.13 } }
+		}
+		if = { 
+			limit = { 
+				FRA = { 
+					exists = yes 
+					is_lesser_in_union = no 
+					is_free_or_tributary_trigger = yes
+					government = monarchy
+				}
+			}
+			FRA = { country_event = { id = catalan_civil_war.14 } }
+		}
+	}
+}
+#castile's reaction
+country_event = {
+	id = catalan_civil_war.13
+	title = catalan_civil_war.13.t
+	desc = catalan_civil_war.13.d
+	picture = CONQUEST_eventPicture
+	is_triggered_only = yes 
+	fire_only_once = yes
+
+	option = { 
+		name = catalan_civil_war.13.a
+		ai_chance = { factor = 75 }
+		add_casus_belli = {
+			type = cb_restore_personal_union
+			months = 300
+			target = ARA
+		}
+	}
+	option = { 
+		name = catalan_civil_war.13.b
+		ai_chance = { factor = 25 }
+		add_prestige = 5
+	}
+}
+#french reaction
+country_event = {
+	id = catalan_civil_war.14
+	title = catalan_civil_war.14.t
+	desc = catalan_civil_war.14.d
+	picture = CONQUEST_eventPicture
+	is_triggered_only = yes 
+	fire_only_once = yes
+
+	option = { 
+		name = catalan_civil_war.14.a
+		ai_chance = { factor = 75 }
+		add_casus_belli = {
+			type = cb_restore_personal_union
+			months = 300
+			target = CAS
+		}
+	}
+	option = { 
+		name = catalan_civil_war.14.b
+		ai_chance = { factor = 25 }
+		add_prestige = 5
+	}
+}
+#War of the Remences
+country_event = {
+	id = catalan_civil_war.15
+	title = catalan_civil_war.15.t
+	desc = catalan_civil_war.15.d
+	picture = ANGRY_MOB_eventPicture
+	is_triggered_only = yes 
+	fire_only_once = yes
+
+	trigger = { has_country_flag = ara_supports_pactists }
+
+	immediate = { 
+		hidden_effect = { 
+			set_country_flag = remences_war_flag
+			random_owned_province = { 
+				limit = { 
+					area = catalonia_area
+					is_capital = no 
+					NOT = { units_in_province = 1 }
+				}
+				set_province_flag = cat_bigger_remenca_rebels_flag
+			}
+			random_owned_province = { 
+				limit = { 
+					area = catalonia_area
+					is_capital = no 
+					NOT = { units_in_province = 1 }
+					NOT = { has_province_flag = cat_bigger_remenca_rebels_flag }
+				}
+				set_province_flag = cat_bigger_remenca_rebels_flag
+			}
+			random_owned_province = { 
+				limit = { 
+					area = catalonia_area
+					is_capital = no 
+					NOT = { units_in_province = 1 }
+					NOT = { has_province_flag = cat_bigger_remenca_rebels_flag }
+				}
+				set_province_flag = cat_big_remenca_rebels_flag
+			}
+		}
+	}
+
+	option = { 
+		name = catalan_civil_war.15.a #uh oh
+		add_stability = -1
+		random_owned_province = { 
+			limit = { has_province_flag = cat_bigger_remenca_rebels_flag }
+			spawn_rebels = { 
+				type = anti_tax_rebels
+				size = 3
+				win = yes 
+			}
+		}
+		random_owned_province = { 
+			limit = { has_province_flag = cat_bigger_remenca_rebels_flag }
+			spawn_rebels = { 
+				type = anti_tax_rebels
+				size = 3
+			}
+		}
+		random_owned_province = { 
+			limit = { has_province_flag = cat_big_remenca_rebels_flag }
+			spawn_rebels = { 
+				type = anti_tax_rebels
+				size = 1
+			}
+		}
+	}
+}
+#The Price of Sicily's loyalty
+country_event = {
+	id = catalan_civil_war.16
+	title = catalan_civil_war.16.t
+	desc = catalan_civil_war.16.d
+	picture = ANGRY_MOB_eventPicture
+	is_triggered_only = yes 
+	fire_only_once = yes
+
+	option = { 
+		name = catalan_civil_war.16.a #sure
+		ai_chance = { factor = 75 }
+		add_prestige = -10
+		add_years_of_income = -0.25 #was add_yearly_income which doesnt exist
+		add_yearly_manpower = -0.05
+		SIC = { 
+			random_owned_province = { 
+				add_base_tax = 1
+			}
+			random_owned_province = { 
+				add_base_manpower = 1
+			}
+			add_opinion = { 
+				who = ROOT 
+				modifier = ara_supported_us
+			}
+		}
+		add_country_modifier = { 
+			name = sic_loyalty
+			duration = 7300 #just 20 years
+		}
+	}
+	option = { 
+		name = catalan_civil_war.16.b #is this some kind of joke?
+		add_prestige = 5
+		SIC = { 
+			add_opinion = { 
+				who = ROOT 
+				modifier = ara_didnt_support_us
+			}
+		}
+		add_country_modifier = { 
+			name = ara_disloyal_subjects
+			duration = 7300
+		}
+	}
+}

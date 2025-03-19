@@ -1,0 +1,131 @@
+#Country Name: Please see filename.
+
+graphical_culture = latingfx #westerngfx
+
+color = { 165 85 170 } #162  80  60         
+revolutionary_colors = { 15  6  16 } #Parthenopean Republic
+
+historical_score = 120
+
+historical_idea_groups = {
+	trade_ideas
+	quantity_ideas
+	economic_ideas
+	maritime_ideas
+	defensive_ideas
+	innovativeness_ideas
+	offensive_ideas
+	quality_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	italian_condotta
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"René #0" = 25
+	"Robert #1" = 20
+	"Charles #3" = 50
+	"Charobert #1" = 0
+	"Charles #0 Martel" = 0
+	"Ferdinand #0" = 5
+	"Philippe #0" = 5
+	"Alfonso #0" = 40
+	"Frédéric #0" = 20
+	"Ladislas #1" = 40
+	"Louis #2" = 50
+	"Joachim #0" = 10
+	"Achille #0" = 15
+	"Gabriel #0" = 15
+	"Alberte #0" = 10
+	"Antoine #0" = 10
+	"André #0" = 10
+	"César #0" = 10
+	"François #0" = 10
+	"Jean #0" = 10
+	"Joseph #0" = 10
+	"Léopold #0" = 10
+	"Adrien #0" = 0
+	"Alexandre #0" = 0
+	"Alfred #0" = 0
+	"Barthélemy #0" = 0
+	"Benoît #0" = 0
+	"Claude #0" = 0
+	"Enzo #0" = 0
+	"Fabio #0" = 0
+	"Fabrizio #0" = 0
+	"Casper #0" = 0
+	"Leandro #0" = 0
+	"Marque #0" = 0
+	"Martin #0" = 0
+	"Nestore #0" = 0
+	"Paul #0" = 0
+	"Pierre #0" = 0
+	"Vincent #0" = 0
+	"Simone #0" = 0
+	"Raimond #0" = 0
+	"Guillaume #0" = 0
+	"Simon #0" = 0
+	"Raymond #0" = 0
+	"Jean-Charles #0" = 0
+	"Jean-Antoine #0" = 0
+	"Perdicasso #0" = 0
+	"Muzio #0" = 0
+	"Sergianni #0" = 0
+	"Hugues #0" = 0
+	
+	"Joanne #2" = -15
+	"Blanche #0" = -5
+	"Éléonore #0" = -5
+	"Marguerite #0" = -5
+	"Julie #0" = -5
+	"Carlotta #0" = -5
+	"Isabella #0" = -1
+	"Marie #0" = -1
+	"Susanne #0" = -1
+}
+
+leader_names = {
+	Acquaviva "d'Andria" "d'Avalo" d'Aquino
+	"de Barbiano" "des Baux" "de Bourbon" 
+	Cantelmo Caracciolo Carafa "de Clermont" Colonna Coppola "de Courtenay"
+	"d'Enghien"
+	"de Granvelle" Grimaldi
+	"de Laval" "di Lecce" "de Lusignan"
+	"Martinie"
+	"Orsini del Balzo"
+	Piscopo
+	"Ruffo di Calabria"
+	"de Sabran" Sanseverino Sforza
+	"de Tarente" Tramontano "de la Trémoile" Tocco
+}
+
+ship_names = {
+	Achille Amalia Archimede Aretusa Aurora Brava Capitana Capri Caracciolo Carolana Cerere Cingana Constanza Cristina Determinada Etna Fama Fiamma Flora
+	Fortuna Galantuomo Galatea Gioacchino Gioia Gru Guiscardo Gusmana Idra Intrepido Invidia Lampreda Leonessa Letiza "Lucien Charles" Luna Lupa Marchesa
+	Margherita Mendoza Minerva Monarca Ocasion Padrona "Padrone di Davide Imperiale" Pallade Partenope Piemontese "Piramide con Cane" Pugliese Pylades Regina
+	"Regina Isabella" Roma Ruggiero Sagittaria Samnita "San Antonio" "San Carlo" "San Ferdinando" "San Filippo" "San Gabriele" "San Genaro" "San Gioacchino"
+	"San Giorgio" "San Giovanni" "San Giuseppe" "San Guilian" "San Jacopo" "San Leopoldo" "San Luigi" "San Luigi Gonzaga" "San Michele" "San Nicola" "San Pasquale"
+	"Santa Amalia" "Santa Barbara" "Santa Caterina" "Santa Chiara" "Santa Dorotea" "Santa Elisabetta" "Santa Lucia" "Santa Teresa" "Sant'Andrea" "Sant'Angelo"
+	"Santissima Concezione" Sibilla Sicilia Simplon Sirena Sparviero Speranza Stabia Stromboli Tancredi Taranto Terana Turca Urania Venere Vesuvio Vittoria Volpe
+	Vulcano
+}
+
+army_names = {
+	"Armée de Sicile citérieure" "Armée péninsulaire" "Armée de $PROVINCE$"
+}
+fleet_names = { 
+	"Marine royale" "Flotte de $PROVINCE$"
+}

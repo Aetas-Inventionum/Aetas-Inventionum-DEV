@@ -1,0 +1,8 @@
+government = monarchy
+government_rank = 1
+add_government_reform = feudalism_reform
+technology_group = eastern
+unit_type = eastern
+primary_culture = livonian
+religion = catholic
+capital = 5982 #limbazi

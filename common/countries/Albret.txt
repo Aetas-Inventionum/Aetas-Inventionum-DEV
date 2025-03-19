@@ -1,0 +1,120 @@
+#Country Name: Please see filename.
+
+graphical_culture = latingfx
+
+color = { 105  106  182 }	#previous 191  139  175 // 60 89 201
+
+revolutionary_colors = { 5 8 13 }
+
+preferred_religion = reformed
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	religious_ideas
+	diplomatic_ideas
+	economic_ideas
+	innovativeness_ideas
+	offensive_ideas
+	spy_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	dutch_maurician
+	french_caracolle
+	anglofrench_line
+	french_dragoon
+	french_bluecoat
+	french_carabinier
+	french_impulse
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	#all names with chances are actual names listed in the Albret family tree     
+	"Carles #2" = 20
+	"Bernat Ez #5" = 15
+	"Joan #2" = 10
+	"Amaniu #7" = 20
+	"Bérard #1" = 5
+	"Arnaud Amaniu #1" = 5
+	"Alan #0" = 25
+	"Loís #0" = 5
+	"Jaume #0" = 5
+	"Enric #0" = 5
+	"Guitard #0" = 1
+	"Tòmas #0" = 5
+	"Cesar #0" = 1
+	"Laurenç #0" = 0
+	"Miquèla #0" = 0 #:OOO
+	"Nicolau #0" = 0
+	"Peiròt #0" = 0
+	"Rainier #0" = 0
+	"Andrieu Febus #0" = 5
+	"Pèr #0" = 5
+	"Gabrièl Febus #0" = 5
+	"Geris #0" = 5
+	"Arnaud #0" = 5
+	"Carles Amaniu #0" = 1
+
+	"Maria #0" = -1
+	"Catalina #0" = -1
+	"Cristina #0" = -1
+	"Estela #0" = -1
+	"Enriqueta #0" = -1
+	"Joana #0" = -10
+	"Emília #0" =-1
+	"Mailís #0" = -1
+	"Laura #0" = -1
+	"Manon #0" = -1
+	"Carlòta #0" = -1
+	"Loísa #0" = -1
+	"Elisabèt #0" = -1
+	"Margarida #0" = -1
+}
+
+ship_names = {
+        Athis
+        Bel-Air Boultan Bouy
+        Chavenay Combert Courtaumont Court-sur-Couffy Cumières
+        Fontenelle
+        Gizaucourt
+        Isse
+        Jâlons Jippé Jonchery
+        "La Cheppe" "La Croisée" "Lagery" "La Grande Romanie" "La Presle" "La Salle" "Laval-sur-Tourbe" "La Grossemasse" "La Veuve" "Le Breuil" "Le Grand-Essart" "Le Moncet" "Les Cruzis" Livry-Louvercy Louvois
+        Minaucourt-le-Mesnil Montflambert Montigny Moussy
+        Neuville-en-Châlois
+        Passy-Grigny 
+        Raday
+        "Saint Hilaire" "Saint Imoges" "Saint Jean sur Tourbe" Seigneur-Klou Souain-Perthes Suippes
+        Tauxières-Mutry Toubiotte
+        Vadenay Valmy Vaudemange Vraux 
+        Wargemoulin
+}
+
+leader_names = {
+        d'Alenduy d'Artigoity d'Arzillières
+        "de Balatier" "de Balayne" "de Baleine" "Beaufort de Pothemont" "de Beaurepaire" "Bellot de Ferreux" "de Brancourt" "de Brienne" "de Broye" "de Bruce"
+        "Cauchon de Vercinay" "de Charbogne" "de Chassy" "du Châtelet" "de Châtillon" Clausse "de Coucy" "de Courtenay" "de Crécy" "de Croy"
+        d'Espinoy
+        "de Failly"
+        "de Grandpré" "de Grignon"
+        "du Hamel" "de Houx"
+        "de Joigny" "de Joinville"
+        "de La Fontaine" "de Lalaing" "de Lantages" "de Lavisé" "de Lezines" "de Loménie"
+        Pérignon "de Plancy" "du Prat"
+        "de Rethel" "de Roucy" "de Rumigny"
+        "de Saint Belin" "de Saint Cheron" "de Sergine"
+        "de Vauclerois" "de Vergy" "de Verrières" "de Villeprouvée"
+}
+
+army_names = {
+	 "Armada de $PROVINCE$" 
+}

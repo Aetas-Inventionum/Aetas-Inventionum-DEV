@@ -1,0 +1,18 @@
+government = monarchy
+add_government_reform = bosnian_duchy_reform
+primary_culture = bosnian
+religion = krstjani
+technology_group = eastern
+government_rank = 1
+capital = 5420
+
+1390.1.1 = {
+	monarch = {
+		name = "Vukasin" #the second generation
+		dynasty = "Zlatonosovic"
+		birth_date = 1370.1.1
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}

@@ -1,0 +1,17 @@
+government = tribal
+add_government_reform = tribal_kingdom
+government_rank = 2
+primary_culture = circassian
+religion = orthodox
+technology_group = eastern
+capital = 1856 #sukumi
+
+1415.1.1 = { #fictional, but based off of old clan
+	monarch = {
+		name = "Nedakhe I"
+		dynasty = "Abazin"
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}

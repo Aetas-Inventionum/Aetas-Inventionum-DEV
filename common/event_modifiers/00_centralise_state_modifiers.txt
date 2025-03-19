@@ -1,0 +1,50 @@
+centralize_state_provinces_1 = {
+	local_autonomy = -0.01
+	local_centralize_state_cost = -0.05
+	picture = "centralize_state"
+}
+centralize_state_provinces_2 = {
+	local_autonomy = -0.02
+	local_centralize_state_cost = -0.10
+	picture = "centralize_state"
+}
+centralize_state_provinces_3 = {
+	local_autonomy = -0.03
+	local_centralize_state_cost = -0.15
+	picture = "centralize_state"
+}
+centralize_state_provinces_4 = {
+	local_autonomy = -0.04
+	local_centralize_state_cost = -0.20
+	picture = "centralize_state"
+}
+centralize_state_provinces_5 = {
+	local_autonomy = -0.05
+	local_centralize_state_cost = -0.25
+	picture = "centralize_state"
+}
+centralize_state_provinces_6 = {
+	local_autonomy = -0.06
+	local_centralize_state_cost = -0.30
+	picture = "centralize_state"
+}
+centralize_state_provinces_7 = {
+	local_autonomy = -0.07
+	local_centralize_state_cost = -0.35
+	picture = "centralize_state"
+}
+centralize_state_provinces_8 = {
+	local_autonomy = -0.08
+	local_centralize_state_cost = -0.40
+	picture = "centralize_state"
+}
+centralize_state_provinces_9 = {
+	local_autonomy = -0.09
+	local_centralize_state_cost = -0.45
+	picture = "centralize_state"
+}
+centralize_state_provinces_10 = {
+	local_autonomy = -0.1
+	local_centralize_state_cost = -0.50
+	picture = "centralize_state"
+}

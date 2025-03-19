@@ -1,0 +1,193 @@
+#Beauce
+ai_la_beauce = {
+	trade_goods_size = 1.5
+}
+
+#Bay of Bourgneuf
+ai_bourgneuf = {
+	trade_goods_size = 1.5
+	local_production_efficiency = 0.2
+}
+
+#Episkopi's Sugar Factory
+ai_episkopi = {
+	trade_goods_size = 2
+	local_production_efficiency = 0.25
+}
+
+#Claret of Bordeaux
+ai_wines_of_bordeaux = {
+	trade_goods_size = 1.5
+}
+
+#Basque Whaling 
+ai_basque_whaling = {
+	trade_goods_size = 1.0
+}
+
+#Mines of Almaden 
+ai_mercury_of_almaden = {
+	trade_goods_size = 3.0
+}
+
+#Forests of Cadore
+ai_forests_of_cadore = {
+	trade_goods_size = 1
+	naval_forcelimit = 3
+}
+
+#Friesian Cattle 
+ai_super_cows = {
+	trade_goods_size = 1
+}
+
+ai_cinque_ports_modifier = {
+	province_trade_power_value = 2
+	naval_forcelimit = 2
+	local_development_cost = -0.05
+	local_sailors_modifier = 0.25
+	local_defensiveness = 0.25
+}
+ai_durkheim_modifier = { 
+	trade_goods_size = 1.5
+	local_production_efficiency = 0.25
+}
+ai_tirol_mines = {
+	trade_goods_size = 1
+}
+
+#Amber Coast
+ai_amber_coast = {
+	trade_goods_size = 1.5
+}
+
+#Mines of Kutna Hora
+ai_kutna_hora_modifier = { 
+	trade_goods_size = 1.5
+	local_gold_depletion_chance_modifier = -0.1
+}
+
+#Principle Hanseatic City
+ai_hsa_principle_city_modifier = { 
+	trade_goods_size_modifier = 0.15
+	province_trade_power_modifier = 0.2
+	min_local_autonomy = 25
+	local_autonomy = 0.05
+}
+
+#Shadow Caliph of Cairo
+ai_shadow_caliph = {
+	monthly_piety_accelerator = 0.05
+	prestige = 1
+	tolerance_own = 2
+}
+
+#Marrakesh Khettara
+ai_khettara = {
+	trade_goods_size = 1
+	local_development_cost_modifier = -0.1
+}
+
+#Cornish Tin Mines
+ai_cornish_mines = { 
+	trade_goods_size = 2
+}
+
+#Falun Copper Mines
+ai_falun_modifier = { 
+	trade_goods_size = 4
+}
+
+#stone of scone
+ai_stone_scone = { 
+	legitimacy = 1
+	prestige_decay = -0.25
+}
+
+#peshkopi salt #disabled
+ai_peshkopi_salt = {
+	trade_goods_size = 1
+}
+
+#srebrenica mines
+ai_srebrenica = {
+	trade_goods_size = 3
+}
+
+#albaicin
+ai_albayzin = {
+	trade_goods_size = 1
+}
+
+#wieliczka
+ai_wieliczka = { 
+	trade_goods_size = 3
+}
+
+#ai bochnia
+ai_bochnia = { 
+	trade_goods_size = 1
+}
+
+#Sauneries of Salin
+ai_sauneries = {
+	trade_goods_size = 1
+}
+
+#Lüneburg Saltworks
+ai_luneburg_saltworks = {
+	trade_goods_size = 1.5
+}
+
+#Mines of Rammelsberg
+ai_rammelsberg_mines = {
+	trade_goods_size = 1
+	local_gold_depletion_chance_modifier = -0.15
+}
+
+#Venetian Glass
+ai_venetian_glass = { 
+	trade_goods_size = 2
+}
+
+#Galera Silkworms
+ai_galera_silkworms = { 
+	trade_goods_size = 1.5
+	prestige = 0.1
+}
+
+#Sword Guilds of Toledo
+ai_toledo_swords_guilds = { 
+	trade_goods_size = 1.5
+	land_maintenance_modifier = -0.025
+}
+
+#Camino Francés
+ai_camino_frances = {
+	province_trade_power_value = 2.5
+	local_defensiveness = 0.15
+}
+
+#Way of Saint James
+ai_way_of_st_james = {
+	province_trade_power_value = 10
+	local_missionary_strength = -0.05
+}
+
+#Union of the Boroughs of Iruña
+iruna_united_mod = { 
+	local_development_cost_modifier = -0.1
+	local_production_efficiency = 0.1
+	local_unrest = -2
+}
+
+
+#Silk Factories of Catanzaro
+ai_catanzaro = {
+	trade_goods_size = 1.5
+}
+
+northern_dvina_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}

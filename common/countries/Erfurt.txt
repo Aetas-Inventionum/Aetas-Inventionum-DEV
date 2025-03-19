@@ -1,0 +1,113 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+color = { 209  155  129 } #178 145 87
+revolutionary_colors = { 5 0 5 }
+
+historical_idea_groups = {
+	religious_ideas
+	trade_ideas
+	defensive_ideas
+	economic_ideas
+	diplomatic_ideas
+	offensive_ideas
+	spy_ideas
+	quantity_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	dutch_maurician
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	prussian_uhlan
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	#historical and future archbishops of mainz
+	"Arnold #0" = 0
+	"Konrad #0" = 5
+	"Rudolf #0" = 0
+	"Christian #0" = 0
+	"Leopold #0" = 0
+	"Siegfried #0" = 0
+	"Gerhard #0" = 5
+	"Werner #0" = 0
+	"Heinrich #0" = 5
+	"Peter #0" = 0
+	"Matthias #0" = 5
+	"Balduin #0" = 0
+	"Gerlach #0" = 5
+	"Johann #0" = 10
+	"Ludwig #0" = 5
+	"Adolf #0" = 5
+	"Gottfried #0" = 5
+	"Dietrich #0" = 5
+	"Diether #0" = 5
+	"Adalbert #0" = 5
+	"Berthold #0" = 5
+	"Jakob #0" = 5
+	"Uriel #0" = 5
+	"Albrecht #0" = 5
+	"Sebastian #0" = 5
+	"Daniel Brendel #0" = 5
+	"Wolfgang #0" = 7
+	"Johann Adam #0" = 5
+	"Johann Schweikhard #0" = 5
+	"Georg Friedrich #0" = 5
+	"Anselm Casimir Wamboldt #0" = 5
+	"Johann Philipp #0" = 5
+	"Lothar Friedrich #0" = 5
+	"Damian Hartard #0" = 5
+	"Karl Heinrich #0" = 5
+	"Anselm Franz #0" = 5
+	"Lothar Franz #0" = 8
+	"Franz Ludwig #0" = 5
+	"Johann Friedrich Karl #0" = 5
+	"Emmerich Joseph #0" = 5
+	"Friedrich Karl Joseph #0" = 5
+	"Karl Theodor #0" = 1
+	
+	"Sylvia #0" = -1
+	"Wilhelmine #0" = -1
+	"Alexis #0" = -1
+}
+
+leader_names = { 
+	"von Bicken" "von Breidbach zu Bürresheim"
+	"von Cronberg"
+	"von Dalberg"
+	"von Eltz" "von Erbach" "von Erthal"
+	"von Gemmingen" "von Greiffenclau"
+	"von Henneberg" "von Heussenstahm" "von Hohenzollern"
+	"von Ingelheim" "von Isenburg"
+	"von Leiningen" "von der Leyen" "von Liebenstein"
+	"von Metternich"
+	"von Nassau"
+	"von Ostein"
+	"von Schönburg"
+	"von Wittelsbach"
+}
+
+ship_names = {
+	"St. Theonest" "St. Georg" "St. Peter"
+	Udenmünster "St. Christoph" "St. Lambert"
+	"St. Quintin" "St. Maria" "St. Johannes"
+	"St. Emmeran" "St. Ignaz" Hagenmünster
+	"St. Aureus" "St. Nicomedes" "St. Alban"
+}
+
+army_names = {
+	"Erzbischofliche Garde" "Armee von $PROVINCE$" 
+}

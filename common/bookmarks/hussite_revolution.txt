@@ -1,0 +1,18 @@
+bookmark =
+{
+	name = "HUSSITE_REVOLUTION"
+	desc = "HUSSITE_REVOLUTION_DESC"
+	date = 1415.8.22
+	
+	center = 67
+	
+	country = BOH
+	country = HUN
+	country = HAB
+	country = STY
+	country = PAL
+	country = BRA
+	country = SAX
+	#country = KOL felt like too much :(
+	#country = MAI
+}

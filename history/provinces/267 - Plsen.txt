@@ -1,0 +1,38 @@
+#267 - Plsen
+#Area - Ore Mountains
+#Region - South Germany
+
+#Core Details
+capital = "Plzen"
+is_city = yes
+owner = BOH
+controller = BOH
+
+#Demographics
+culture = czech
+religion = hussite
+
+#Development and Trade
+base_tax = 3
+base_production = 4
+base_manpower = 3
+trade_goods = cloth #one of the largest trade cities. also changes to books in 1468 with the first printing press in Bohemia
+#Cores and Occupation (Alphabetical after current)
+add_core = BOH
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+center_of_trade = 2
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

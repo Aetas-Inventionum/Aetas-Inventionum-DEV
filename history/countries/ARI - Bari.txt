@@ -1,0 +1,10 @@
+government = monarchy
+government_rank = 1
+add_government_reform = feudalism_reform
+technology_group = western
+religion = catholic
+primary_culture = neapolitan
+capital = 1933 #Bari
+fixed_capital = 1933
+
+

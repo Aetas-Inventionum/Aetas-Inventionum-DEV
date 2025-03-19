@@ -1,0 +1,36 @@
+#6078 - Virolahti
+#Area - Tavastia-Savonia
+#Region - Scandinavia 
+
+#Core Details
+capital = "Virolahti"
+is_city = yes
+owner = VBG 
+controller = VBG  
+
+#Demographics
+culture = finnish
+religion = catholic
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = fish
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = VBG
+add_core = FIN
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+
+#Histories

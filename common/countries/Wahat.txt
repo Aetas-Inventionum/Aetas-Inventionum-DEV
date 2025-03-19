@@ -1,0 +1,134 @@
+#Country Name: Please see filename.
+
+graphical_culture = muslimgfx
+
+color = { 175  130  40 }
+
+historical_idea_groups = {
+	maritime_ideas
+	defensive_ideas
+	religious_ideas
+	trade_ideas
+	offensive_ideas
+	administrative_ideas
+	economic_ideas
+	expansion_ideas
+}
+
+historical_units = {
+	mamluk_archer
+	mamluk_cavalry_charge
+	mamluk_duel
+	mamluk_musket_charge
+	muslim_mass_infantry
+	muslim_dragoon
+	ali_bey_reformed_infantry
+}
+
+monarch_names = {
+	#salihi mamluk sultan names
+	"Aybak #1" = 1
+	"Ali #2" = 10
+	"Qutuz #1" = 1
+	#bahri mamluk sultan names 
+	"Baybars #2" = 10 #Baybars
+	"Barakah #1" = 1 
+	"Salamish #1" = 1
+	"Qalawun #1" = 1
+	"Khalil #1" = 1
+	"Muhammad #2" = 5
+	"Kitbugha #1" = 1
+	"Lajin #1" = 1
+	"Abu Bakr #1" = 1
+	"Kujuk #1" = 1
+	"Ahmad #1" = 7 #also a burji
+	"Ismai'l #1" = 1
+	"Sha'ban #2" = 5
+	"Haji #2" = 1
+	"Hasan #1" = 1
+	"Salih #1" = 1
+	#burji mamluk names 
+	"Barquq #1" = 3
+	"Faraj #1" = 3
+	"Abd al-Aziz #1" = 3
+	"al-Muayyad Shaykh #1" = 3
+	"Tatar #0" = 5
+	"Barsbay #0" = 10 #Barsbay another significant ruler
+	"Yusuf #0" = 5
+	"Jaqmaq #0" = 5
+	"Inal #0" = 5
+	"Khushqadam #0" = 5
+	"Bilbay #0" = 5
+	"Timurbugha #0" = 5
+	"Qa'itbay #0" = 5
+	"Qansuh #0" = 7
+	"Janbalat #0" = 5
+	"Tuman bay #0" = 7
+
+
+
+	
+	"Aybanu #0" = -1
+	"Alsou #0" = -1
+	"Arslanbika #0" = -1
+	"Alfia #0" = -1
+	"Aida #0" = -1
+	"Aziz #0" = -1
+	"Agdal #0" = -1
+	"Bakir #0" = -1
+	"Vazih #0" = -1
+	"Walia #0" = -1
+	"Gaysha #0" = -1
+	"Gulnara #0" = -1
+	"Zia #0" = -1
+	"Zifa #0" = -1
+	"Zakaria #0" = -1
+	"Zamira #0" = -1
+	"Zainulla #0" = -1
+	"Irada #0" = -1
+	"Islamia #0" = -1
+	"Katib #0" = -1
+	"Kirama #0" = -1
+	"Lyabiba #0" = -1
+	"Lutfulla #0" = -1
+	"Maysara #0" = -1
+	"Nailya #0" = -1
+	"Nasima #0" = -1
+	"Rushaniya #0" = -1
+	"Sadiq #0" = -1
+	"Salih #0" = -1
+	"Fazil #0" = -1
+	"Farida #0" = -1
+	"Hayat #0" = -1
+	"Habibullah #0" = -1
+	"Shamil #0" = -1
+	"Elvira #0" = -1
+	"Elmira #0" = -1
+	"Yuldus #0" = -1
+	"Salwah #1" = -1
+}
+
+leader_names = {
+	Ali
+	Aybak
+	Baibars
+	Bay
+	Bey
+	Bugha
+	Inâl
+	Kansur
+	Sayfuddin
+	Zangi
+}
+
+ship_names = {
+	"Zaher Barqooq" "Farag Ben Barqooq"
+	"Ben Barqooq" "Muyaid Sheikh" "Ahmen Muyaid"
+	"Zaher Tatar" "Nasser Muhamed" "Ashraf Barsbay"
+	"Aziz Gamal" "Nahr an-Nil" "Al-Farafirah"
+	"Ad-Däkhilah" "Al-Kharijah" "Al-Ali" "Al-Bahriyah"
+	Rahman Rahim Malik Quddus Salam Mu'min Muhaymin
+	Aziz Jabbar Mutakabbir Khaliq Bari Musawwir
+	Ghaffar Qahhar Wahhab Razzaq Fattah Alim Qabid
+	Basit Khafid Rafi Mu'izz Mudhill Sami Basir Hakam Adl
+}

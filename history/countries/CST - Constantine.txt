@@ -1,0 +1,8 @@
+government = monarchy
+add_government_reform = barbary_sultanate_reform
+technology_group = muslim
+religion = sunni
+primary_culture = constantinian
+capital = 340
+religious_school = maliki_school
+

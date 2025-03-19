@@ -1,0 +1,35 @@
+#6049 - Levanger
+#Area - Trondelag
+#Region - Scandinavia 
+
+#Core Details
+capital = "Levanger"
+is_city = yes
+owner = NOR 
+controller = NOR 
+
+#Demographics
+culture = norwegian
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 2
+base_manpower = 1
+trade_goods = livestock
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = NOR
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+
+#Histories

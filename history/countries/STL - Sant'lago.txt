@@ -1,0 +1,20 @@
+government = theocracy
+add_government_reform = iberian_military_order_reform
+government_rank = 1
+technology_group = western
+primary_culture = portugese
+religion = catholic
+capital = 4985 #setúbal
+add_army_professionalism = 0.1
+
+1415.1.1 = { 
+	monarch = { 
+		name = "João"
+		dynasty = "de Avis"
+		birth_date = 1400.1.3
+		adm = 4
+		dip = 2
+		mil = 4
+	}
+}
+

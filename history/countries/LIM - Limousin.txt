@@ -1,0 +1,38 @@
+government = monarchy
+add_government_reform = fief_reform
+government_rank = 1
+primary_culture = limousin
+religion = catholic
+technology_group = western
+capital = 195 # Limoges
+fixed_capital = 195 # Cannot move capital away from this province & no power cost to move to it
+historical_friend = ABT 
+
+1404.1.1 = { 
+	monarch = {
+		name = "Jean IV"
+		dynasty = "de Châtillon"
+		culture = breton
+		birth_date = 1393.1.1
+		death_date = 1454.1.1
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}
+1415.1.1 = { 
+	heir = { 
+		name = "Guillaume"
+		monarch_name = "Guillaume I"
+		dynasty = "de Châtillon"
+		culture = breton
+		birth_date = 1415.1.1
+		death_date = 1481.1.1
+		claim = 95
+		block_disinherit = yes 
+		adm = 2
+		dip = 1
+		mil = 1
+	}
+	add_heir_personality = infertile_personality
+}

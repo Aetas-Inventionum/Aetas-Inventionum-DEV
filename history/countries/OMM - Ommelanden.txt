@@ -1,0 +1,22 @@
+government = republic
+add_government_reform = frisian_freedom_reform
+government_rank = 1
+mercantilism = 10 #was 0.1, im guessing thats 10?
+primary_culture = frisian
+religion = catholic
+technology_group = western
+capital = 3353	# Delfsyl
+fixed_capital = 3353
+historical_friend = EFR 
+
+1413.1.1 = { 
+	monarch = {
+		name = "Falkmar" #based on old member of onsta family 
+		dynasty = "Onsta"
+		adm = 2
+		dip = 1
+		mil = 3
+		birth_date = 1384.1.1
+		death_date = 1444.1.1
+	}
+}

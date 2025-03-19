@@ -1,0 +1,176 @@
+#Prussia
+
+graphical_culture = westerngfx
+
+#color = { 143  141  128 }
+color = { 0 49 86 }
+
+revolutionary_colors = { 1  0  4 }
+
+historical_score = 1800
+
+preferred_religion = protestant
+
+historical_idea_groups = {
+	innovativeness_ideas
+	offensive_ideas
+	diplomatic_ideas
+	quality_ideas
+	economic_ideas
+	trade_ideas
+	defensive_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	dutch_maurician
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	prussian_frederickian
+	prussian_uhlan
+	prussian_drill
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	#hohenzollern electors. regnal numerals restart with these
+	"Friedrich #1" = 25
+	"Johann #0" = 25
+	"Albrecht #0 Achilles" = 10
+	"Johann Cicero #0" = 10
+	"Sigismund #0" = 10
+	"Joachim #0" = 25
+	"Kasimir #0" = 5
+	"Hector #0" = 0
+	"Georg #0" = 10
+	"Georg Friedrich #0" = 10
+	"Johann Georg #0" = 10
+	"Joachim Friedrich #0" = 10
+	"Joachim Ernst #0" = 5
+	"Johann Sigismund #0" = 5
+	"Georg Wilhelm #0" = 5
+	"Albrecht #0" = 25
+	"Friedrich Wilhelm #0" = 25
+	"Christian Ernst #0" = 5
+	"Georg Friedrich #0" = 5
+	#misc
+	"Stefan #0" = 0
+	"Franz Carl #0" = 0
+	"Carl #0" = 0
+	"Ludwig #0" = 0
+	"Ernst #0" = 0
+	"Wilhelm #0" = 5
+	"Otto #0" = 0
+	"Conrad #0" = 0
+	"Heinrich #0" = 0
+	"Wenzel #0" = 0
+	"Jacob Philipp #0" = 0
+	"Philipp Otto #0" = 0
+	"Otto Wilhelm Hermann #0" = 0
+	"Adam #0" = 0
+	"Adolf Heinrich #0" = 0
+	"Achim #0" = 0
+	"Hermann #0" = 0
+	"Caspar #0" = 0
+	"Alexander Gottlieb #0" = 0
+	"August Immanuel #0" = 0
+	"Lazarus #0" = 0
+	"Friedrich Eduard #0" = 0
+	"Gottfried #0" = 0
+	"August Ferdinand #0" = 0
+	"Christoph #0" = 0
+	"Christoph Caspar #0" = 0
+	"Joachim Friedrich #0" = 0
+	"Gottfried Gabriel #0" = 0
+	"Christian Leopold #0" = 0
+	"Leopold #0" = 0
+	"Meno #0" = 0
+	"Johann Gustav Gottlieb #0" = 0
+	"Martin #0" = 0
+	"Daniel #0" = 0
+	"August Leopold #0" = 0
+	"August #0" = 5
+	"Ernst Heinrich Karl #0" = 0
+	"Johann Sigismund #0" = 0
+	"Carl Ludwig #0" = 0
+	"David #0" = 0
+	"Jacob Philipp #0" = 0
+	"Peter #0" = 0
+	"Isaac #0" = 0
+	"Hans #0" = 0
+	"Hans Christoph #0" = 0
+	"Andreas #0"= 0
+	"Andreas Sigismund #0" = 0
+	"Johann Friedrich Adolf #0" = 0
+	"Wichard Joachim Heinrich #0" = 0
+	"Kurd #0" = 0
+	"Hans Adam #0" = 0
+
+	"Miriam #0" = -1
+	"Paula #0" = -1
+	"Ulrike #0" = -1
+	"Sabina #0" = -1
+	"Anna Maria #0" = -1
+	"Sophie #0" = -1
+	"Hedwig #0" = -1
+	"Magdalena #0" = -1
+	"Margarete #0" = -1
+	"Agnes #0" = -1
+	"Barbara #0" = -1
+	"Amalie #0" = -1
+	"Frederike #0" = -1
+	"Dorothea #0" = -1
+	"Elisabeth #0" = -1
+	"Elisabeth Sophia #0" = -1
+}
+
+leader_names = {	
+	"von Abich" Achard "von Arnim"
+	"von Balk" "von Barth" Baumgarten Beer Bekker Beneke Bernhardi Blechen "von Blumenthal" "von Boitzenburg" "von Brandenburg" Bredow "von Buch" "von Bülow"
+	"von Canitz" Chemnitz Cramer Crelle
+	"von Dechen" "von Derfflinger" Devrient
+	Ebel Elshotz Engel
+	"von Flemming" Frommann
+	Gilly "von Grumbkow"
+	Hackert Haffitz "von der Hagen" "von Hake" Henke Herz Himmel "von Hohenzollern" "von Humboldt"
+	"von Ilow"
+	"von Kahlbutz" "von Kalckstein" "von Katte" "von Kleist" "von Königsmarck" Krünitz
+	Marggraf "von der Marwitz" "von Möllendorf"
+	"von Pfuel"
+	"von Quitzow"
+	Rösner
+	"von Saldern" "von Schöning" Schröter "von Schwarzenburg" "von Stosch" Streit Süssmilch
+	"von Tauentzien" Tieck
+	"von Unfriedt"
+	"von Wöllner" Wolff "von Wylich und Lottum"
+	Yorck
+	"von Zieten"
+}
+
+ship_names = {
+	"Brandenburgischer Dragoner" "Charlotte Louise" "Churfürst von Brandenburg" "Churfürtstlische Liebjagd" "Churprinz von Brandenburg" "Clevesche Lindenbaum"
+	"Die Sieben Provinzien" "Fliegender Drache" "Friedrich Carl" "Friedrich Wilhelm zu Pferde" "Friedrich Wilhelm" "Goldener Löve" "Grafschaft Mark" "Große Jacht"
+	"Grüner Drache" "Herzogtum Cleve" "Kastell Spandau" "Kronprinz van Preußen" "König von Preußen" "König von Spanien" "König Wilhelm" "Littauer Bauer" "Maria Catharina"
+	"Markgraf von Brandenburg" "Nordischer Löve" "Preußischer Adler" "Princess Maria" "Prinz Adalbert" "Prinz Ludwig" "Prinz Philipp" "Prinz von Preußen" "Prinz Wilhelm"
+	"Prinzess Maria" "Rother Löve" "Sankt Johannes der Täufer" "Sankt Josef" "Sankt Peter" "Schloss Oranienburg" "Stad Emden" "Vogel Greif" "Wappen von Brandenburg"
+	"Wappen von Cleve" "Wilhelmine Margrethe" Afrikaner Amazone Arminius Barbarossa Basilisk Berlin Bersteinfänger Bielefeld Blitz Britannia Bulle Camaeleon Churprinz
+	Clementia Cleve Comet Cyclop Danzig Delphin Derffinger Dorothea Drache Eichhorn Falke Fortuna Frauenlob Frede Fuchs Gazelle Gefion Grille Grossfriedrichburg Habicht
+	Hansa Hay Hela Hertha Hyäne Jupiter Kronprinz Leopard Makarele Maria Mars Merkur Meteor Mohrian Morian Mummelpot Musquito Natter Neptun Niobe Pallas Pax Pfeil
+	Pierlepomp Post Potsdam Prosperpina Rommelpot Rosenfelde Rover Salamander Schwalbe Seeritter Spandau Sperber Stralsund Thetis Tiger Undine Vineta Wasserhund Wespe
+	Wolkensäule
+}
+
+army_names = {
+	"Preußenische Armee" "Kurbrandenburgische Armee" "Armee von $PROVINCE$" 
+}
+
+fleet_names = {
+	"Kurfürstliche Flotte"
+}

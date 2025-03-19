@@ -1,0 +1,26 @@
+#SGL - St Gallen
+
+#Political Situation
+capital = 1870
+fixed_capital = 1870 #Cannot move capital away from this province & no power cost to move to it
+
+#Government
+government_rank = 1
+government = republic
+add_government_reform = free_city #de facto imperial city, having just ousted abbots for a while
+
+#Demographics
+primary_culture = swiss
+religion = catholic
+
+#Tech and Military
+technology_group = western
+1411.1.1 = {
+	monarch = {
+		name = "Heinrich von Gundelfingen"
+		birth_date = 1383.1.1
+		adm = 3
+		dip = 3
+		mil = 1
+	}
+}

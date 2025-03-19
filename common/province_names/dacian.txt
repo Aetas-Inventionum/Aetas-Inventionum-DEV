@@ -1,0 +1,70 @@
+#AI Update
+# = { "x" "x" }
+
+#Transylvania
+1951 = { "Hunedoara" "Deva" }
+4127 = { "Torda" "Torda" }
+5486 = {  "Cluj" "Cluj" }
+5487 = { "Solnocul-Someshan" "Dés" }
+5488 = { "Alba" "Alba Iulia" }
+5490 = { "Fagaraslui" "Fagaras" }
+
+#Banat
+156 = { "Timis" "Timisoara" }
+5440 = { "Orsova" "Orsova" }
+5441 = { "Lugoj" "Lugoj" }
+
+#silistria
+159 = { "Dârstor" "Dârstor" }
+4706 = { "Tulcea" "Tulcea" }
+5517 = { "Hârsova" "Hârsova" }
+5518 = { "Constanta" "Constanta" }
+5519 = { "Caliacra" "Caliacra" }
+5520 = { "Cuiuchioi" "Cuiuchioi" }
+
+#east muntenia
+4531 = { "Giurgiu" "Giurgiu" } #Vlascha
+5510 = { "Ilfov" "Bucuresti" }
+5511 = { "Prahova" "Târgsor" }
+5512 = { "Ialomita" "Târgu de Floci" }
+5514 = { "Slam Râmnic" "Râmnicu Sarat" }
+
+#west muntenia
+161 = { "Târgoviste" "Târgoviste" } #Dâmbovita
+5506 = { "Teleorman" "Turnu" }
+5507 = { "Arges" "Curtea de Arges" }
+5508 = { "Câmpulung" "Câmpulung" } #Muscel
+5509 = { "Pitesti" "Pitesti" }
+
+#oltenia
+160 = { "Craiova" "Craiova" } #dolj
+4532 = { "Severin" "Turnu Severin" } #Mehedinti
+5459 = { "Vâlcea" "Râmnicu Vâlcea" }
+5499 = { "Calafat" "Calafat" }
+5501 = { "Romanati" "Caracal" }
+
+#bessarabia
+2405 = { "Tighina" "Tighina" }
+5590 = { "Chilia" "Chilia" }
+5591 = { "Smilu" "Smilu" }
+5592 = { "Tigheciu" "Tigheci" }
+5597 = { "Covurlui" "Galati" }
+#moldavia
+4529 = { "Iasi" "Târgul Iasi" } #old name of Iashi
+4530 = { "Bârlad" "Bârlad" }
+5595 = { "Baltile" "Baltile" } #older name of Balti
+5599 = { "Hârlau" "Hârlau" }
+#Bukovina
+5596 = { "Hotin" "Hotin" }
+5600 = { "Dorohoi" "Dorohoi" }
+5601 = { "Putna" "Focshani" }
+5604 = { "Radauti" "Radauti" }
+5605 = { "Bucovina" "Cernauti" } #large portion of historical bukovina, as well as the capital
+5606 = { "Pocutia" "Colomeea" }
+##misc balkans
+#macedonia
+1853 = { "Castoria" "Castoria" }
+4780 = { "Ohãrda" "Ohãrda" }
+5561 = { "Pãrleap" "Pãrleap" }
+#iron gates
+2746 = { "Diiu" "Diiu" }

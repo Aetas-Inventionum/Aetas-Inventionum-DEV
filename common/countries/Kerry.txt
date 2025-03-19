@@ -1,0 +1,92 @@
+# Country name see file name.
+
+graphical_culture = westerngfx
+
+color = { 199 109 109 }
+revolutionary_colors = { 5 6 5 }
+
+historical_idea_groups = {
+	maritime_ideas
+	aristocracy_ideas
+	trade_ideas
+	diplomatic_ideas
+	economic_ideas
+	spy_ideas
+	innovativeness_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	gaelic_galloglaigh
+	gaelic_mercenary
+	gaelic_free_shooter
+	irish_charge
+	anglofrench_line
+	british_redcoat
+	british_hussar
+	british_square
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	#historical iarla in gaelic
+	"Gerald #1" = 20
+	"John #1" = 30
+	"Morice #2" = 40
+	"Thomas #1" = 30
+	"James #0" = 40
+	#historical camrbo/hiberno-norman namings
+	"Huge #0" = 5 #hugh
+	"Willame #0" = 5 #william
+	"Gilibert #0" = 5
+	"Richard #0" = 5
+	"Jocelyn #0" = 5
+	"Geffrei #0" = 5
+	"Adam #0" = 5
+	"Laurence #0" = 5
+	"Meiler #0" = 5
+	"Dermod #0" = 5
+	"Garrett #0" = 1
+	
+	"Margeret #0" = -1
+	"Elisabeth #0" = -1
+	"Margery #0" = -1
+	"Maud #0" = -1
+	"Alice #0" = -1
+	"Joan #0" = -1
+	"Anne #0" = -1
+	"Hermoine #0" = -1
+}
+
+ship_names = {
+	Clare Cork
+	"Deas Mhuman" 
+	Kerry 
+	"Lar Mumhan" Limerick
+	Tipperary "Tuad Mhuman" 
+	"Urh Mumhan"  
+	Waterford
+}  
+
+leader_names = {
+	#local desmond norman houses 
+	Baggott Barrett Barrymore "de Burgh" "Butler"
+	"de la Chapele" "de Clare" "de Cogan" Cotter 
+	Downing
+	"de Lacy"
+	Fant "de Feipo" FitzAnthony FitzGerald FitzGibbon FitzHenry FitzMaurice FitzMartin FitzStephen FitzThomas Fleming
+	"O'Hanley" "O'Hennessey" Herdin "O'Hurley" Hussey 
+	Longue Lynch
+	McGrath "de Muset"
+	Nagle "de Nungent"
+	"le Petit" "le Poer"
+	Roche "de Rupe"
+	Stapleton
+	Tuite Tyrel
+	Wall 
+}

@@ -1,0 +1,7 @@
+government = monarchy
+add_government_reform = jerusalem_monarchy_reform
+primary_culture = hierosolymitan
+religion = catholic
+technology_group = western
+capital = 379	# Jerusalem
+

@@ -1,0 +1,688 @@
+namespace = aetas_tun
+normal_or_historical_nations = yes
+
+# Local Kabilye Tribes demand Autonomy as Vassals
+country_event = {
+	id = aetas_tun.1
+	title = aetas_tun.1.t
+	desc = aetas_tun.1.d
+	picture = muslimgfx_DIPLOMACY_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		capital_scope = {
+			region = maghreb_region
+		}
+		AND = { 
+			num_of_owned_provinces_with = {
+				value = 2
+				is_core = KBA
+			}
+			num_of_owned_provinces_with = {
+				value = 2
+				is_core = AIT
+			}
+			NOT = { 
+				exists = KBA 
+				exists = AIT
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 40
+	}
+
+	option = { #fine
+		name = "aetas_tun.1.a"
+		release = KBA 
+		create_march = KBA
+		release = AIT 
+		create_march = AIT
+		hidden_effect = {
+			every_province = {
+				limit = { 
+					OR = { 
+						owned_by = KBA 
+						owned_by = AIT 
+					}
+				}
+				remove_core = ROOT 
+			}
+			if = { 
+				limit = { 
+					OR = { 
+						tag = TUN 
+						tag = ALG 
+					}
+				}
+				KBA = {
+					change_country_color = { 
+						color = { 140 120 35 }
+					}
+				}
+			}
+			else = {
+				KBA = {
+					change_country_color = { country = ROOT }
+				}
+			}
+			if = { 
+				limit = { tag = TLC }
+				AIT = {
+					change_country_color = { 
+						color = { 80 120 30 }
+					}
+				}
+			}
+			else_if = { 
+				limit = { tag = TUN }
+				AIT = {
+					change_country_color = { 
+						color = { 210 190 85 }
+					}
+				}
+			}
+			else_if = {
+				limit = { NOT = { tag = ALG } }
+				AIT = {
+					change_country_color = { country = ROOT }
+				}
+			}
+		}
+		add_country_modifier = { 
+			name = "kabylian_tribes"
+			duration = -1
+		}
+	}
+	option = { #absolutely not!
+		name = "aetas_tun.1.b"
+		every_owned_province = { 
+			limit = { culture = kabylian }
+			add_province_modifier = {
+				name = "kabylian_tribes_angered"
+				duration = 7300
+			}
+		}
+	}
+}
+# Hafisd Decline
+country_event = {
+	id = aetas_tun.2
+	title = aetas_tun.2.t
+	desc = aetas_tun.2.d
+	picture = muslimgfx_COUNTRY_COLLAPSE_eventPicture
+
+	is_triggered_only = yes 
+
+	immediate = { 
+		random_list = { 
+            95 = { # Control lost
+                modifier = {
+                    legitimacy = 90
+                    factor = 0.9
+                }
+                modifier = {
+                    legitimacy = 95
+                    factor = 0.9
+                }
+                modifier = {
+                    legitimacy = 100
+                    factor = 0.9
+                }
+                if = { 
+					limit = { 
+						NOT = { exists = BJA }
+						any_owned_province = { 
+							is_core = BJA
+							NOT = { has_province_modifier = bejaia_trade }
+						}
+					}
+					release = BJA 
+					hidden_effect = { 
+						BJA = { 
+							define_ruler = {
+								dynasty = "Banu Hafs"
+							}
+							capital_scope = {
+								build_to_forcelimit = {
+									infantry = 0.8
+									cavalry = 0.2
+									heavy_ship = 0.3
+									light_ship = 0.3
+									transport = 0.3
+								}
+							}
+						}
+					}
+				}
+				else_if = { 
+					limit = { 
+						exists = BJA 
+					}
+					every_province = { 
+						limit = {
+							is_core = BJA 
+							NOT = { has_province_modifier = bejaia_trade }
+						}
+						cede_province = BJA
+					}
+				}
+				if = { 
+					limit = { 
+						NOT = { exists = TRP }
+						any_owned_province = { 
+							is_core = TRP
+						}
+					}
+					release = TRP 
+					hidden_effect = { 
+						TRP = { 
+							define_ruler = {
+								dynasty = "Banu Hafs"
+							}
+							capital_scope = {
+								build_to_forcelimit = {
+									infantry = 0.8
+									cavalry = 0.2
+									heavy_ship = 0.3
+									light_ship = 0.3
+									transport = 0.3
+								}
+							}
+						}
+					}
+				}
+				else_if = { 
+					limit = { 
+						exists = TRP 
+					}
+					every_province = { 
+						limit = {
+							is_core = TRP 
+						}
+						cede_province = TRP
+					}
+				}
+				if = { 
+					limit = { 
+						NOT = { exists = CST }
+						any_owned_province = { 
+							is_core = CST
+							NOT = { 
+								has_province_modifier = constantine_citadel
+							}
+						}
+					}
+					release = CST
+					CST = {
+						capital_scope = {
+							build_to_forcelimit = {
+								infantry = 0.8
+								cavalry = 0.2
+								heavy_ship = 0.3
+								light_ship = 0.3
+								transport = 0.3
+							}
+						}
+					}
+				}
+				else_if = { 
+					limit = { 
+						exists = CST 
+					}
+					every_province = { 
+						limit = {
+							is_core = CST 
+						}
+						cede_province = CST
+					}
+				}
+				if = { 
+					limit = { 
+						NOT = { exists = GFS }
+						any_owned_province = { 
+							is_core = GFS
+						}
+					}
+					release = GFS
+					GFS = {
+						capital_scope = {
+							build_to_forcelimit = {
+								infantry = 0.8
+								cavalry = 0.2
+								heavy_ship = 0.3
+								light_ship = 0.3
+								transport = 0.3
+							}
+						}
+					}
+				}
+				else_if = { 
+					limit = { 
+						exists = GFS 
+					}
+					every_province = { 
+						limit = {
+							is_core = GFS 
+						}
+						cede_province = GFS
+					}
+				}
+				if = { 
+					limit = { 
+						NOT = { exists = TGT }
+						any_owned_province = { 
+							is_core = TGT
+						}
+					}
+					release = TGT
+				}
+				else_if = { 
+					limit = { 
+						exists = TGT 
+					}
+					every_province = { 
+						limit = {
+							is_core = TGT 
+						}
+						cede_province = TGT
+					}
+				}
+				if = { 
+					limit = { 
+						NOT = { exists = OGL }
+						any_owned_province = { 
+							is_core = OGL
+						}
+					}
+					release = OGL
+				}
+				else_if = { 
+					limit = { 
+						exists = OGL 
+					}
+					every_province = { 
+						limit = {
+							is_core = OGL 
+						}
+						cede_province = OGL
+					}
+				}
+				if = { 
+					limit = { 
+						NOT = { exists = CAA  }
+						any_owned_province = { 
+							is_core = CAA
+						}
+					}
+					release = CAA
+				}
+				else_if = { 
+					limit = { 
+						exists = CAA 
+					}
+					every_province = { 
+						limit = {
+							is_core = CAA 
+						}
+						cede_province = CAA
+					}
+				}
+				if = { 
+					limit = { 
+						NOT = { exists = MZB }
+						any_owned_province = { 
+							is_core = MZB
+						}
+					}
+					release = MZB
+				}
+				else_if = { 
+					limit = { 
+						exists = MZB 
+					}
+					every_province = { 
+						limit = {
+							is_core = MZB 
+						}
+						cede_province = MZB
+					}
+				}
+				if = { 
+					limit = { 
+						NOT = { exists = LGH }
+						any_owned_province = { 
+							is_core = LGH
+						}
+					}
+					release = LGH
+				}
+				else_if = { 
+					limit = { 
+						exists = LGH 
+					}
+					every_province = { 
+						limit = {
+							is_core = LGH 
+						}
+						cede_province = LGH
+					}
+				}
+				if = { 
+					limit = { 
+						NOT = { exists = GHD }
+						any_owned_province = { 
+							is_core = GHD
+						}
+					}
+					release = GHD
+				}
+				else_if = { 
+					limit = { 
+						exists = GHD 
+					}
+					every_province = { 
+						limit = {
+							is_core = GHD 
+						}
+						cede_province = GHD
+					}
+				}
+				if = { 
+					limit = { 
+						NOT = { exists = NAF }
+						any_owned_province = { 
+							is_core = NAF
+						}
+					}
+					release = NAF
+				}
+				else_if = { 
+					limit = { 
+						exists = NAF 
+					}
+					every_province = { 
+						limit = {
+							is_core = NAF 
+						}
+						cede_province = NAF
+					}
+				}
+				if = { 
+					limit = { 
+						NOT = { exists = JUF }
+						any_owned_province = { 
+							is_core = JUF
+						}
+					}
+					release = JUF
+				}
+				else_if = { 
+					limit = { 
+						exists = JUF 
+					}
+					every_province = { 
+						limit = {
+							is_core = JUF 
+						}
+						cede_province = JUF
+					}
+				}
+				if = { 
+					limit = { 
+						NOT = { exists = BSM }
+						any_owned_province = { 
+							is_core = BSM
+						}
+					}
+					release = BSM
+				}
+				else_if = { 
+					limit = { 
+						exists = BSM 
+					}
+					every_province = { 
+						limit = {
+							is_core = BSM 
+						}
+						cede_province = BSM
+					}
+				}
+				if = { 
+					limit = { 
+						NOT = { exists = TLC }
+						any_owned_province = { 
+							is_core = TLC
+						}
+					}
+					release = TLC
+				}
+				else_if = { 
+					limit = { 
+						exists = TLC 
+					}
+					every_province = { 
+						limit = {
+							is_core = TLC 
+						}
+						cede_province = TLC
+					}
+				}
+				every_country = { 
+					limit = { 
+						is_subject_of = TUN 
+						NOT = { 
+							tag = KBA 
+							tag = AIT 
+						}
+					}
+					grant_independence = yes 
+				}
+				if = { 
+					limit = { 
+						any_owned_province = { 
+							culture = shenwa 
+						}
+					}
+					hidden_effect = {
+						every_owned_province = { 
+							limit = { culture = shenwa }
+							add_core = SHW 
+						}
+					}
+					release = SHW 
+				}
+				hidden_effect = { 
+					every_owned_province = { 
+						limit = { culture = shawia }
+						add_core = SAI 
+					}
+				}
+				release = SAI
+				if = { 
+					limit = { 
+						KBA = { 
+							is_subject_of = TUN 
+						}
+						NOT = { has_country_modifier = kabylian_tribes }
+					}
+					free_vassal = KBA 
+				}
+				if = { 
+					limit = { 
+						AIT = { 
+							is_subject_of = TUN 
+						}
+						NOT = { has_country_modifier = kabylian_tribes }
+					}
+					free_vassal = AIT
+				}
+				if = { 
+					limit = {
+						NOT = { exists = KBA }
+					}
+					release = KBA 
+					hidden_effect = { 
+						KBA = { 
+							capital_scope = {
+								build_to_forcelimit = {
+									infantry = 0.8
+									cavalry = 0.2
+									heavy_ship = 0.3
+									light_ship = 0.3
+									transport = 0.3
+								}
+							}
+						}
+					}
+				}
+				if = { 
+					limit = {
+						NOT = { exists = AIT }
+					}
+					release = AIT
+					hidden_effect = {
+						AIT = {
+							capital_scope = {
+								build_to_forcelimit = {
+									infantry = 0.8
+									cavalry = 0.2
+									heavy_ship = 0.3
+									light_ship = 0.3
+									transport = 0.3
+								}
+							}
+						}
+					}
+				}
+				set_global_flag = TUN_collapse
+            }
+            5 = { # Control kept
+                trigger = {
+                    stability = 1
+                    heir_age = 15 # we have old enough heir to grab power
+                }
+                modifier = {
+                    stability = 2
+                    factor = 4
+                }
+                modifier = {
+                    stability = 3
+                    factor = 4
+                }
+                modifier = {
+                    heir_claim = 85
+                    factor = 2
+                }
+            }
+        }
+	}
+	desc = {
+		trigger = {
+			has_global_flag = TUN_collapse
+		}
+		desc = aetas_tun.2.d
+	}
+	desc = {
+		trigger = {
+			NOT = { has_global_flag = TUN_collapse }
+		}
+		desc = aetas_tun.2.alt.d
+	}
+	
+	picture = {
+		trigger = {
+			has_global_flag = TUN_collapse
+		}
+		picture = muslimgfx_COUNTRY_COLLAPSE_eventPicture
+	}
+	picture = {
+		trigger = {
+			NOT = { has_global_flag = TUN_collapse }
+		}
+		picture = CONQUEST_eventPicture
+	}
+
+	option = { #shit
+		name = "aetas_tun.2.a"
+		trigger = { 
+			has_global_flag = TUN_collapse
+		}
+	}
+	option = { #we made it.
+		name = "aetas_tun.2.b"
+		trigger = { 
+			NOT = { has_global_flag = TUN_collapse }
+		}
+	}
+
+	after = { 
+		clr_global_flag = TUN_collapse
+	}
+}
+# Hafisd Decline info
+country_event = {
+	id = aetas_tun.3
+	title = aetas_tun.3.t
+	desc = aetas_tun.3.d
+	picture = muslimgfx_COUNTRY_COLLAPSE_eventPicture
+
+	is_triggered_only = yes 
+	fire_only_once = yes 
+
+	option = {
+		name = "aetas_tun.3.a" #okay
+		custom_tooltip = tun_decline.tt
+		add_ruler_modifier = { 
+			name = "tun_aziz"
+			duration = -1
+		}
+	}
+}
+#Occupation of Tlemcen
+country_event = {
+	id = aetas_tun.4 #missing loc
+	title = aetas_tun.4.t
+	desc = aetas_tun.4.d
+	picture = muslimgfx_REVOLUTION_eventPicture
+
+	fire_only_once = yes 
+	major = yes 
+	major_trigger = { 
+		is_neighbor_of = TUN 
+	}
+
+	trigger = { 
+		tag = TUN 
+		TLC = { 
+			capital_scope = { 
+				controlled_by = TUN
+			}
+		}
+	}
+
+	option = { 
+		name = "aetas_tun.4.a"
+		white_peace = TLC 
+		vassalize = TLC 
+		custom_tooltip = aetas_tun_tlc.tt
+	}
+}
+#Maghrebi Caliphate
+country_event = {
+	id = aetas_tun.5
+	title = aetas_tun.5.t
+	desc = aetas_tun.5.d
+	picture = muslimgfx_PRAYING_eventPicture
+
+	is_triggered_only = yes 
+
+	option = { 
+		name = "aetas_tun.5.a"
+		remove_government_reform = hafsid_reform
+		add_government_reform = maghrebi_caliphate_reform
+		set_government_rank = 3
+	}
+}

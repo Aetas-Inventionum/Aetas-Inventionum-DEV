@@ -1,0 +1,39 @@
+#121 - Napoli
+#Area - Campania
+#Region - Italy
+
+#Core Details
+capital = "Napoli"
+is_city = yes
+owner = NAP
+controller = NAP
+
+#Demographics
+culture = neapolitan
+religion = catholic
+
+#Development and Trade
+base_tax = 7
+base_production = 7
+base_manpower = 7
+trade_goods = silk #high grade silk & linen cloths // silk manufactoring in naples was the forefront of the industry
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = NAP
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+center_of_trade = 4 #false positive
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

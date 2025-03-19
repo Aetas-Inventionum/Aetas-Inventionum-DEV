@@ -1,0 +1,249 @@
+#AI Update 
+# = { "x" "x" }
+
+#/  means no Dutch name for province known
+# / means no Dutch name for city known
+#// means neither known
+
+
+########################################
+#        Low Countries by sim          #
+########################################
+
+## Netherlands/Nederland
+# Gueldres/Gelderland
+99 = { "Arnhem" "Arnhem" }
+1742 = { "Opper Gelre" "Roermond" }
+2975 = { "Kleef" "Kleef" }
+3351 = { "Nijmegen" "Nijmegen" }
+3352 = { "Zutphen" "Zutphen" }
+4381 = { "Overijssel" "Zwolle" }
+5019 = { "Wezel" "Wezel" }
+5026 = { "Twente" "Enschede" }
+
+# Frisia/Friesland
+100 = { "Friesland" "Leeuwarden" }
+1931 = { "Emden" "Emden" }
+3350 = { "Drenthe" "Coevorden" }
+3353 = { "Ommelanden" "Delfzijl" }
+4382 = { "Groningen" "Groningen" }
+5027 = { "Oostergo" "Dokkum" }
+5372 = { "Jever" "Jever" }
+
+#Holland
+96 = { "Zeeland" "Middelburg" }
+97 = { "Amsterdam" "Amsterdam" }
+98 = { "Utrecht" "Utrecht" }
+3348 = { "Dordrecht" "Dordrecht" }
+3349 = { "West-Friesland" "Haarlem" }
+4383 = { "Den Haag" "'s Gravenhage"}
+5025 = { "Leiden" "Leiden" }
+
+## Belgium/België
+# Flanders/Vlaanderen
+90 = { "Brugge" "Brugge" }
+1865 = { "Gent" "Gent" }
+3302 = { "Duinkerken" "Duinkerken" }
+3303 = { "Ieper" "Ieper" }
+3304 = { "Doornik" "Doornik" }
+4769 = { "Rijsel" "Rijsel" }
+5011 = { "Dowaai" "Dowaai" }
+5012 = { "Kortrijk" "Kortrijk" }
+5013 = { "Aalst" "Aalst" }
+
+# Brabant
+92 = { "Brussel" "Brussel" }
+95 = { "Breda" "Breda" }
+1744 = { "Antwerpen" "Antwerpen" }
+3347 = { "Leuven" "Leuven" }
+4770 = { "Den Bosch" "'s Hertogenbosch" } #Den Bosch? or maybe 's Hertogenbosch
+5015 = { "Mechelen" "Mechelen" }
+5018 = { "Eindhoven" "Eindhoven" }
+5228 = { "Turnhout" "Turnhout"}
+
+# Wallonia/Wallonië
+93 = { "Luik" "Luik" }
+1866 = { "Namen" "Namen" }
+2974 = { "Loon" "Hasselt" }
+3344 = { "Dinant" "Dinant" }
+3345 = { "Stavelot" "Stavelot-Malmedy" }
+3346 = { "Limburg" "Maastricht" }
+3380 = { "Bullioen" "Bullioen" }
+5017 = { "Couvenes" "Couvenes" } #only source I could find for a Dutch name was a very very old map
+
+# Hainaut/Henegouwen
+91 = { "Bergen" "Bergen" }
+1743 = { "Kamerijk" "Kamerijk" }
+3329 = { "Valencijn" "Valencijn" }
+5016 = { "Malbode" "Malbode" }
+5227 = { "Aat" "Aat" }
+
+## Luxemburg
+# Luxemburg
+94 = { "Luxemburg" "Luxemburg"}
+3330 = { "Chiny" "Chiny" }
+3331 = { "Aarlen" "Aarlen"}
+3332 = { "Bastenaken" "Bastenaken" }
+3333 = { "Diedenhoven" "Diedenhoven" }
+3363 = { "Bitburg" "Bitburg" }
+
+## Modern day France
+# Artois/Artesië
+88 = { "Atrecht" "Atrecht" }
+3256 = { "Sint-Omaars" "Sint-Omaars"}
+3257 = { "Betun" "Betun" }
+5014 = { "Heusden" "Heusden" }
+
+########################################
+#           Germany by sim             #
+########################################
+
+# Westphalia/Westfalen
+56 = { "Osnabrugge" "Osnabrugge" }
+69 = { "Dortmond" "Dortmond" }
+86 = { "Munster" "Munster" }
+2973 = { "Meppe" "Meppe" }
+5367 = { "Warendorp" "Warendorp" }
+5368 = { "Coesveld" "Coesveld" }
+5369 = { "Benthem" "Benthem" }
+5370 = { "Teklenburg" "Teklenburg" } #//
+5375 = { "Cloppenburg" "Cloppenburg" }
+
+# West Rhineland/West Rijnland
+80 = { "Trier" "Trier" }
+85 = { "Keulen" "Keulen" }
+1760 = { "Koblenz" "Koblenz" }
+1878 = { "Aken" "Aken" }
+3335 = { "Prum" "Prum" }
+3387 = { "Kochem" "Kochem" }
+3389 = { "Duren" "Duren"}
+3390 = { "Bon" "Bon" }
+3391 = { "Nuys" "Nuys" } #Nuis and Nuijs are also options, but I find Nuys aesthetically pleasing
+4768 = { "Gulik" "Gulik" }
+
+# East Rhineland/Oost Rijnland
+84 = { "Berg" "Dusseldorp" }
+5350 = { "Nassau" "Nassau" }
+5351 = { "Ziegen" "Ziegen" }
+5353 = { "Montabaur" "Montabaur" } #//
+5354 = { "Ziegburg" "Ziegburg" } #//
+5355 = { "Salingen" "Salingen" }
+5356 = { "Essen" "Essen" }
+
+# Angria/Engern
+82 = { "Westfalen" "Arnsberg"} # /
+2972 = { "Paderbor" "Paderbor" }
+4775 = { "Bieleveld" "Bieleveld" } #//
+5357 = { "Marck" "Ham" } # /
+5358 = { "Iserlon" "Iserlon" }
+5364 = { "Waldek" "Waldek" }
+5374 = { "Lipstad" "Lipstad" }
+5376 = { "Lippe" "Detmelle"}
+5377 = { "Minden" "Minden" }
+
+#Weser/Wezer
+54 = { "Stood" "Stood" } #uncertain
+55 = { "Oldenburg" "Oldenburg" }
+1874 = { "Bremen" "Bremen" }
+2971 = { "Haaien" "Haaien" } #//
+5373 = { "Varel" "Varelstad" }
+5383 = { "Voerde" "Voerde" } #// other place named "Vörde" translates to this
+5384 = { "Hadelingen" "Otterdorp" } # /
+
+#Holstein
+44 = { "Hamburg" "Hamburg" }
+45 = { "Lubek" "Lubek" }
+1775 = { "Kiel" "Kiel" }
+4141 = { "Ditmars" "Meldorp" }
+5289 = { "Molen" "Molen" } #//
+5293 = { "Rensburg" "Rensburg" }
+5294 = { "Ietzehe" "Ietzehe"} #uncertain
+5295 = { "Segeberg" "Segeberg" }
+
+########################################
+#         Scandinavia by sim           #
+########################################
+
+#Schleswig/Sleeswijk
+13 = { "Sleeswijk" "Sleeswijk" }
+5614 = { "Flensburg" "Flensburg" } #//
+5615 = { "Husum" "Husum" }
+5616 = { "Tonderen" "Tonderen" } #//
+5617 = { "Apenrade" "Apenrade" }
+5618 = { "Hadersleven" "Hadersleven" } #//
+
+########################################
+#            France by sim             #
+########################################
+
+#Picardy/Picardië
+87 = { "Kales" "Kales" }
+89 = { "Amiens" "Amiens" }
+3252 = { "Wieze" "Wieze" }
+3253 = { "Vermandland" "Perron" } # /
+3254 = { "Ponteland" "Abbekerke" }
+3255 = { "Bonen" "Bonen" } #Beunen equally correct
+
+#Brie 
+181 = { "Rethel" "Rethel" } #//
+186 = { "Riemen" "Riemen" }
+3246 = { "Provin" "Provin" } #//
+3247 = { "Melde" "Melde" } #//
+3248 = { "Porcijn" "Kasteel-te-Porcijn"} #//
+3249 = { "Kalon" "Kalon" } #//
+5338 = { "Spernay" "Spernay" } #//
+
+#Île-de-France/Klein Frankrijk
+182 = {"Valens" "Compiën"} #//
+183 = { "Parijs" "Parijs" }
+185 = { "Nemoer" "Nemoer" } #//
+3231 = { "Mante" "Mante" } #//
+3232 = { "Stampe" "Stampe" } #//
+3233 = { "Melun" "Melun" }
+3234 = { "Pontis" "Pontis" } #//
+3235 = { "Bieuves" "Bieuves" } #//
+3236 = { "Seussen" "Seussen" } #//
+3237 = { "Louwen" "Louwen" }
+
+#Lorraine/Lotharingen
+187 = { "Baarle" "Baarle-Hertog" }
+188 = { "Mets" "Mets" } #//
+189 = { "Nanzig" "Nanzig" }
+3334 = { "Saarburg" "Saarburg" }
+3336 = { "Nieuwburg" "Nieuwburg" } #//
+3337 = { "Spinal" "Spinal" } #//
+3338 = { "Toel" "Toel" } #//
+3339 = { "Moessenbrugge" "Moessenbrugge" } #//
+3386 = { "Sint-Deo" "Sint-Deo"} #//
+4766 = { "Verden" "Verden" }
+
+########################################
+#        Britain by math               #
+########################################
+
+233 = { "Trueren" "Trueren" }  #historical
+235 = { "Kantelberg" "Kantelberg" } #historical
+236 = { "Londen" "Londen" } #historical
+237 = { "Ossenvoorde" "Ossenvoorde" }  #historical
+251 = { "Abberdaan" "Abberdaan" }   #historical
+369 = { "Orkaden" "Kirkwallis" }  #historical and based on cornwall - cornwallis
+1860 = { "Noordwijk" "Noordwijk" }  #historical
+1978 = { "Hitland" "Schadelwage" }  #historical
+3326 = { "Nieuwkasteel" "Nieuwkasteel" }  #fictional
+3309 = { "Haastingen" "Haastingen" }    #fictional
+3313 = { "Gipswijk" "Gipswijk" }  #fictional - based on noordwijk
+3383 = { "Bolstoen" "Bolstoen" }    #historical
+3384 = { "Lint" "Lint" }  #historical
+3385 = { "Pleimuiden" "Pleimuiden" }    #historical
+4367 = { "Hul" "Hul" }  #historical
+5179 = { "Scharenburg" "Scharenburg" }  #historical
+6537 = { "Wicht" "Nieuwpoort" }  #historical
+6540 = { "Jarmuiden" "Jarmuiden" }  #historical
+6541 = { "Grunsbij" "Grunsbij" }  #historical
+6542 = { "Whithbijk" "Whithbijk" }  #historical
+
+########################################
+#        Brittany by math               #
+########################################
+
+3190 = { "Oudegerne" "Oudegerne" } #historical

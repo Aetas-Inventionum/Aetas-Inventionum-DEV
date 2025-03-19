@@ -1,0 +1,40 @@
+#4726 - Ostrava
+#Area - Moravia
+#Region - Poland
+
+#Core Details
+capital = "Ostrava"
+is_city = yes
+owner = MVA
+controller = MVA
+
+#Demographics
+culture = moravian
+religion = hussite
+
+#Development and Trade
+base_tax = 1
+base_production = 2
+base_manpower = 1
+trade_goods = livestock
+latent_trade_goods = { coal }
+
+#Cores and Occupation (Alphabetical after current)
+add_core = MVA
+add_core = SIL
+add_core = TPL
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

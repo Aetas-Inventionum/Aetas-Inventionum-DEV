@@ -1,0 +1,40 @@
+government = theocracy
+add_government_reform = leading_clergy_reform
+primary_culture = friulan
+religion = catholic
+technology_group = western
+capital = 111	# Friuli
+government_rank = 2
+historical_friend = HUN 
+historical_friend = GRZ
+historical_rival = VEN
+
+1394.1.1 = {
+	monarch = {
+		name = "Antonio I"
+		adm = 3
+		dip = 1
+		mil = 1
+	}
+}
+
+1412.1.1 = { 
+	monarch = { 
+		name = "Ludovico II"
+		dynasty = "von Teck"
+		birth_date = 1360.1.1
+		culture = swabian 
+		adm = 2
+		dip = 1
+		mil = 3
+	}
+}
+
+1439.12.18 = {
+	monarch = {
+		name = "Ludovico III"
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}

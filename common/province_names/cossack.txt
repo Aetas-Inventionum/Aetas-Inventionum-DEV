@@ -1,0 +1,3 @@
+#moved to west slavic file
+#only for zaporozhian sich
+6198 = { "Zaporozka Sich" "Zaporozka Sich" }

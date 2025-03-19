@@ -1,0 +1,39 @@
+#4988 - CastroVerde
+#Area - Algarve
+#Region - Iberia
+
+#Core Details
+capital = "Castro Verde"
+is_city = yes
+owner = POR
+controller = POR 
+
+#Demographics
+culture = algarvian
+religion = catholic
+
+#Development and Trade
+base_tax = 1
+base_production = 2
+base_manpower = 1
+trade_goods = dyes  #Azul de Aljustrel 
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = POR
+add_core = STL
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+add_province_triggered_modifier = stl_order
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

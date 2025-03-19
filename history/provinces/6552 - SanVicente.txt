@@ -1,0 +1,38 @@
+#6552 - SanVicente
+#Area - Asturias-Cantabria
+#Region - Iberia
+
+#Core Details
+capital = "San Vicente de la Barquera"
+is_city = yes
+owner = CAS
+controller = CAS
+
+#Demographics
+culture = castillian
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 1
+base_manpower = 1
+trade_goods = whaling   #whaling and fishing main prod of the 4 towns of cantabria, that and export of wool
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = CAS
+add_core = CTB
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

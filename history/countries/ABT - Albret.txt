@@ -1,0 +1,36 @@
+government = monarchy
+add_government_reform = fief_reform
+government_rank = 1
+technology_group = western
+primary_culture = gascon
+religion = catholic
+capital = 3261
+historical_friend = FOI 
+historical_friend = NAV
+historical_friend = BOU
+historical_friend = LIM 
+
+1402.1.1 = {
+	monarch = {
+		name = "Carles I"
+		dynasty = "de Labrit"
+		birth_date = 1368.1.1
+		death_date = 1415.1.1
+		adm = 2
+		dip = 2
+		mil = 5
+	}
+}
+1407.1.1 = { 
+	heir = { 
+		name = "Carles"
+		monarch_name = "Carles II"
+		dynasty = "de Labrit"
+		claim = 95
+		adm = 3
+		dip = 4
+		mil = 3
+		birth_date = 1407.1.1
+		death_date = 1471.1.1
+	}
+}

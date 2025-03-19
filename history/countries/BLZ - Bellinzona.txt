@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+primary_culture = swiss
+add_accepted_culture = lombard
+religion = catholic
+technology_group = western
+capital = 5039	# Bellinzona
+
+1415.1.1 = { 
+	monarch = { 
+		name = "Johann I"
+		dynasty = "von Sax"
+		birth_date = 1370.1.1
+		adm = 3
+		dip = 3
+		mil = 1
+	}
+}

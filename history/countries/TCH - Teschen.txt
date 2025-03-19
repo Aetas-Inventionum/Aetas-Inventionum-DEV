@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = appanage_reform
+government_rank = 1
+technology_group = western
+primary_culture = schlesian
+add_accepted_culture = silesian
+religion = catholic
+capital = 5253
+
+1399.1.1 = {
+	monarch = {
+		name = "Boleslaw I"
+		dynasty = "Piastów"
+		birth_date = 1389.1.1
+		dip = 3
+		adm = 3
+		mil = 2
+	}
+}

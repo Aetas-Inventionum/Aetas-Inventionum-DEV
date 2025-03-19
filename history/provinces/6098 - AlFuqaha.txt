@@ -1,0 +1,34 @@
+#6098 - AlFuqaha
+#Area - Jufrah
+#Region - Maghreb
+
+#Core Details
+capital = "Al Fuqaha"
+
+#Demographics
+culture = fezzan
+religion = sunni
+native_size = 2
+native_ferocity = 2
+native_hostileness = 3
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = unknown
+
+#Cores and Occupation (Alphabetical after current) 
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

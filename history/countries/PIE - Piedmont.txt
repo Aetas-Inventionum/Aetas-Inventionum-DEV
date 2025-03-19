@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = appanage_reform
+government_rank = 1
+technology_group = western
+primary_culture = piedmontese
+religion = catholic
+capital = 5043
+
+1413.2.21 = {
+	monarch = {
+		name = "Louis I"
+		dynasty = "de Savoie"
+		birth_date = 1364.1.1
+		culture = arpitan
+		adm = 1
+		dip = 2
+		mil = 1
+	}
+	queen = { 
+		name = "Bona"
+		dynasty = "de Savoie"
+		birth_date = 1400.1.1 #guess
+		culture = arpitan
+		country_of_origin = SAV
+		adm = 1
+		dip = 1
+		mil = 1
+		#s_female = yes 
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = infertile_personality
+}

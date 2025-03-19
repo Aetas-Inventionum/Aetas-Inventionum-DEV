@@ -1,0 +1,25 @@
+name = "Thirteenth Venetian-Hungarian War"
+war_goal = {
+	type = annex_country
+	casus_belli = cb_annex
+	tag = AQU
+}
+
+#Occupation of Udine
+1411.1.1 = {
+	add_attacker = VEN
+	add_attacker = NEG
+	add_attacker = CDA
+	add_defender = AQU
+	add_defender = HUN
+}
+
+#5-year treaty signed
+1413.1.1 = {
+	rem_attacker = VEN
+	rem_attacker = NEG
+	rem_attacker = CDA
+	rem_attacker = BRC
+	rem_defender = AQU
+	add_defender = HUN
+}

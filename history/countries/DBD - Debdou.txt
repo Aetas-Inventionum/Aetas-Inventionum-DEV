@@ -1,0 +1,9 @@
+government = monarchy
+add_government_reform = barbary_sultanate_reform
+government_rank = 1
+technology_group = muslim
+primary_culture = riffian
+add_accepted_culture = moroccan
+religion = sunni
+capital = 5723
+religious_school = maliki_school

@@ -1,0 +1,25 @@
+government = republic
+add_government_reform = free_city
+government_rank = 1
+mercantilism = 10 #was 0.1, im guessing thats 10?
+technology_group = western
+primary_culture = swabian
+religion = catholic
+capital = 5333
+fixed_capital = 5333
+historical_rival = WUR 
+historical_friend = PAL
+
+1399.1.1 = {
+	monarch = {
+		name = "Stadtrat"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}
+
+1528.1.1 = { religion = protestant }
+
+1798.1.1 = { set_legacy_government = constitutional_republic }

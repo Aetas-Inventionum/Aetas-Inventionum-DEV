@@ -1,0 +1,38 @@
+#191 - Nevers
+#Area - Burgundy
+#Region - France
+
+#Core Details
+capital = "Nevers"
+is_city = yes
+owner = NEV
+controller = NEV
+
+#Demographics
+culture = cosmopolitan_french
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 3
+base_manpower = 2
+trade_goods = glass
+
+#Cores and Occupation (Alphabetical after current)
+add_core = NEV
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

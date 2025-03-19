@@ -1,0 +1,17 @@
+government = monarchy
+add_government_reform = albanian_lordship_reform
+government_rank = 1
+primary_culture = albanian
+religion = orthodox
+technology_group = eastern
+capital = 5433
+
+1396.1.1 = {
+	monarch = {
+		name = "Teodor III"
+		dynasty = "Muzaka"	
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}

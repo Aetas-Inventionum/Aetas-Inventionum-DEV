@@ -1,0 +1,25 @@
+government = theocracy
+add_government_reform = princely_abbey_reform
+government_rank = 1
+mercantilism = 10 #was 0.1, im guessing thats 10?
+technology_group = western
+religion = catholic
+primary_culture = hannoverian
+capital = 5356
+fixed_capital = 5356
+historical_friend = KLE
+
+1413.1.1 = {
+	monarch = {
+		name = "Margarete I"
+		dynasty = "von der Mark"
+		adm = 3
+		dip = 2
+		mil = 2
+		female = yes
+	}
+}
+
+1563.1.1 = { religion = protestant }
+
+1624.1.1 = { religion = catholic }

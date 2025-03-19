@@ -1,0 +1,45 @@
+#5493 - Brasov
+#Area - 
+#Region - Carpathia
+
+#Core Details
+capital = "Brasov"
+is_city = yes
+owner = SZK
+controller = SZK
+
+#Demographics
+culture = transylvanian_saxon
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 3
+base_manpower = 2
+trade_goods = cloth
+
+#Cores and Occupation (Alphabetical after current)
+add_core = SZK
+add_core = SBL
+add_core = TRA
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = KAZ
+discovered_by = CRI
+discovered_by = GOL
+discovered_by = AST
+discovered_by = QAS
+
+#Histories

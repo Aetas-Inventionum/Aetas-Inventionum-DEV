@@ -1,0 +1,80 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+color = { 194 129 129 }
+
+historical_idea_groups = {
+	religious_ideas
+	defensive_ideas
+	diplomatic_ideas
+	trade_ideas
+	economic_ideas
+	innovativeness_ideas
+	offensive_ideas
+	spy_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	dutch_maurician
+	french_caracolle
+	anglofrench_line
+	french_dragoon
+	french_bluecoat
+	french_carabinier
+	french_impulse
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Philippe #0" = 80
+	"Conrad #0" = 60
+	"Pierre #0" = 60
+	"Guy #0" = 60
+	"Guillaume #0" = 40
+	"Gérard #0" = 20
+	"Robert #0" = 20
+	"André #0" = 10
+	"Jean #0" = 10
+	"François #0" = 5
+	"Henri #2" = 5
+	"Jacques #0" = 5
+	"Louis #0" = 5
+}
+
+ship_names = {
+	"l'Amboise" "l'Amilly" "l'Artenay" "l'Azay-le-Rideau"
+	"le Beaune-la-Rolande" "le Beauregard" "le Bellegarde" "le Blois" "le Briare"
+	"le Chalette" "le Chambord" "le Chamerolles" "le Châteauneuf" "le Château-Renard" "le Châtillon-Coligny" "le Chécy" "le Chenonceau" "le Cheverny" "le Chevilly" "le Cléry-Saint-André" "le Combleux" "le Courtenay"
+	"le Dunois"
+	"le Fay-aux-Loges" "le Ferrières" "le Ferté-Saint-Aubin" "le Fleury-les-Aubrais"
+	"le Germigny" "le Gien"
+	"le Jargeau"
+	"le La Bussière"
+	"le Malesherbes" "le Meung-sur-Loire" "le Montargis"
+	"le Neuville-aux-Bois"
+	"l'Olivet" "l'Outarville" "l'Ouzouer"
+	"le Patay" "le Pithiviers" "le Pontchevron" "le Puiseaux"
+	"le Saint-Benoît" "le Saint-Jean-de-Braye" "le Saint-Jean-le-Blanc" "le Sully"
+	"le Talcy"
+	"le Vendôme" "le Villesavin"
+}
+
+leader_names = {
+	"de Dainville" "d'Ailly" "de Gavere" "de Berghes" "de Croÿ" "de Berlaymont" "de Bourgogne" "d'Auxonne" "de Clermont" "de Marigny" "Jonnart" "Richardot" "de Salignac"
+}
+
+army_names = { 
+	"Armée de $PROVINCE$" 
+}
+
+fleet_names = {
+	"Escadre de $PROVINCE$"
+}

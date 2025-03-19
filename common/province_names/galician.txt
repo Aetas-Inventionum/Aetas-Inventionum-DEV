@@ -1,0 +1,6 @@
+#AI Update
+# = { "x" "x" }
+
+#galicia
+206 = { "A Coruña" "A Coruña" }
+4558 = { "Ourense" "Ourense" }

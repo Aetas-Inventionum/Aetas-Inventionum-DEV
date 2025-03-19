@@ -1,0 +1,8 @@
+government = monarchy
+
+add_government_reform = catalonian_principality_reform
+
+religion = catholic
+primary_culture = catalan
+technology_group = western
+capital = 213	# Barcelona

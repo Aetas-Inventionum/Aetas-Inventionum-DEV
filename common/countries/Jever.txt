@@ -1,0 +1,99 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+color = { 190  52  36 }
+revolutionary_colors = { 1 5 13 }
+
+historical_idea_groups = {
+	innovativeness_ideas
+	religious_ideas
+	spy_ideas
+	diplomatic_ideas
+	offensive_ideas
+	defensive_ideas
+	trade_ideas
+	economic_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	dutch_maurician
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	prussian_uhlan
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Keno #2" = 5
+	"Hisko #0" = 5 
+	"Everd #0" = 1
+	"Immel #0" = 0
+	"Okko #1" = 5
+	"Kampo #0" = 0
+	"Folkmar #0" = 0
+	"Sibet #0" = 0
+	"Eggerik #0" = 0
+	"Widzel #0" = 5
+	"Foelke #0" = 0
+	"Tanne #0" = 0
+	"Baltasar #0" = 0
+	"Hero #0" = 0
+	"Fokko #0" = 10
+	"Edo #0" = 0
+	#East Frisian Counts
+	"Ulrik #0" = 25
+	"Enno #0" = 25
+	"Edzard #0" = 10
+	"Enno Loadewyk #0" = 5
+	"Jehan #0" = 10
+	"Rudolf Kristiaan #0" = 5
+	
+	"Heba #0" = -1
+	"Gela #0" = -1
+	"Theda #0" = -1
+	"Katarina #0" = -1
+	"Sabina Katarina #0" = -1
+	"Anna #0" = -1
+	"Maria #0" = -5
+	"Kristina #0" = -1
+}
+
+leader_names = {
+	Abdena Aildesna Allena Attena 
+	Beninga "tom Brok"
+	"fan Dornum"
+	Jarges
+	Kampana Kankena
+	Manninga
+	Oomkens
+	Papinga
+	Sirksena
+	Tjarksena
+	Ukena
+	Wiemken Wyneda
+}
+	
+ship_names = {
+	Elsfleth Hude Hatten Wardenburg Edewecht
+	Zwischenahn Weifelstede Rastede
+	Likedeelers Victualia
+}
+
+army_names = {
+	"Leger fan $PROVINCE$" 
+}
+
+fleet_names = { 
+	"Float fan $PROVINCE$"
+}

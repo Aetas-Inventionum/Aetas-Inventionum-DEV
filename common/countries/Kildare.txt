@@ -1,0 +1,103 @@
+# Country name see file name.
+
+graphical_culture = westerngfx
+
+color = { 165  45  41 }
+revolutionary_colors = { 0 4 0 }
+
+historical_idea_groups = {
+	maritime_ideas
+	aristocracy_ideas
+	trade_ideas
+	diplomatic_ideas
+	economic_ideas
+	spy_ideas
+	innovativeness_ideas
+	offensive_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	gaelic_galloglaigh
+	gaelic_mercenary
+	gaelic_free_shooter
+	irish_charge
+	anglofrench_line
+	british_redcoat
+	british_hussar
+	british_square
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+leader_names = {
+	"d'Arcy" Archibold
+	"de Barnival" Bellew Bellingham Bermingham Bigod Butler Brabazon
+	Cheevers "de Clare" Cusack Cornwalsh
+	Dowdall Dillon "de Devereux"
+	Eustace "d'Exetor"
+	FitzGerald FitzMaurice FitzPeter FitzWilliam
+	"le Gros" "de Geneville"
+	Hereford "de Harold"
+	"de Kenley" 
+	"de Lacy" Locke Loffus "de Loundres" Lawless
+	Mortimer
+	"de Nungent"
+	"de Vesey"
+	Riddlesford
+	"le Poer"
+	"St Laurence" Sherlock
+	Talbot Taaffe Townley Taylor "de Taghmon"
+	Walsh White Warren Wogan
+}
+
+monarch_names = {
+	"Thomas #1" = 40
+	"Gerald #1" = 50
+	"Art #0" = 5
+	"Henry #0" = 10
+	"John #0" = 30
+	"Morice #0" = 30
+	"George #0" = 5
+	"Wentworth #0" = 5
+	"Robert #0" = 5
+	"James #0" = 5
+	#historical camrbo/hiberno-norman namings
+	"Huge #0" = 5 #hugh
+	"Willame #0" = 5 #william
+	"Gilibert #0" = 5
+	"Richard #0" = 5
+	"Jocelyn #0" = 5
+	"Geffrei #0" = 5
+	"Adam #0" = 5
+	"Laurence #0" = 5
+	"Meiler #0" = 5
+	"Dermod #0" = 5
+	"Theobald #0" = 5
+	"Edmond #0" = 5
+	"Nicholas #0" = 10
+	"Lettice #0" = 0
+	"Edward #0" = 5
+	
+	"Margeret #0" = -1
+	"Elisabeth #0" = -1
+	"Margery #0" = -1
+	"Maud #0" = -1
+	"Alice #0" = -1
+	"Joan #0" = -1
+	"Anne #0" = -1
+	"Hermoine #0" = -1
+}
+
+ship_names = {
+	Carlow
+	Dublin
+	Kildare Kilkenny
+	Laios Longford Louth
+	Meath
+	Offaly 
+	Westmeath Wexford Wicklow
+}

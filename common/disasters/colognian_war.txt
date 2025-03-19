@@ -1,0 +1,91 @@
+colognian_war = {
+	potential = {
+		AND = { 
+			tag = KOL
+			government = theocracy
+		}
+		is_elector = yes 
+		NOT = { has_reform = celestial_empire }
+		NOT = { has_reform = steppe_horde }
+		uses_doom = no
+		is_free_or_tributary_trigger = yes
+		NOT = { has_country_flag = colognian_war_flag }
+		has_country_flag = kol_war_enabled
+		hre_religion_treaty = no
+	}
+	
+	
+	can_start = {
+		OR = {
+			current_age = age_of_reformation
+			current_age = age_of_absolutism
+		}
+		is_elector = yes 
+		religion = catholic 
+		government = theocracy 
+		is_religion_enabled = protestant
+		is_religion_enabled = reformed 
+		hre_religion = catholic 
+		is_incident_active = no
+	}
+	
+	can_stop = {
+		OR = { 
+			AND = {
+				NOT = { current_age = age_of_reformation } 
+				religious_unity = 1
+				OR = { 
+					has_idea_group = humanist_ideas
+					has_idea_group = religious_ideas
+				}
+			}
+			is_part_of_hre = no 
+			hre_religion_treaty = yes 
+			NOT = { hre_religion = catholic }
+		}
+	}
+	
+	progress = {
+		modifier = {
+			factor = 0.05
+			is_part_of_hre = yes 
+			government = theocracy 
+		}
+		modifier = { 
+			factor = 1
+			NOT = { devotion = 100 } 
+		}
+		modifier = {
+			factor = 1
+			NOT = {
+				num_of_religion = { 
+					religion = catholic
+					value = 0.75
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+			NOT = {
+				num_of_religion = { 
+					religion = catholic
+					value = 0.25
+				}
+			}
+		}
+	}
+	
+	can_end = {
+		custom_trigger_tooltip = { 
+			tooltip = colognian_war_happened.tt
+			has_country_flag = colognian_war_flag
+		}
+	}
+	
+
+	modifier = {
+	}	
+	
+	
+	on_start = aetas_kol.10 #cologne will secularize and the imperial incident will begin
+}

@@ -1,0 +1,42 @@
+#5420 - Srebenik
+#Area - Syrmia
+#Region - Balkans
+
+#Core Details
+capital = "Srebrenik"
+is_city = yes
+owner = USR
+controller = USR
+
+#Demographics
+culture = bosnian
+religion = krstjani
+
+#Development and Trade
+base_tax = 2
+base_production = 1
+base_manpower = 2
+trade_goods = wool
+
+#Cores and Occupation (Alphabetical after current)
+add_core = USR
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = KAZ
+discovered_by = CRI
+discovered_by = GOL
+discovered_by = AST
+discovered_by = QAS
+
+#Histories

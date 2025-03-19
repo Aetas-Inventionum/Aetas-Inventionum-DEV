@@ -1,0 +1,38 @@
+#6556 - Osona
+#Area - Old Catalonia
+#Region - Iberia
+
+#Core Details
+capital = "Vic"
+is_city = yes
+owner = ARA
+controller = ARA
+
+#Demographics
+culture = catalan
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 3
+base_manpower = 2
+trade_goods = oils  
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = ARA
+add_core = CAT
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

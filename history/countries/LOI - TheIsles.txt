@@ -1,0 +1,44 @@
+government = monarchy
+add_government_reform = scots_gaelic_monarchy_reform
+primary_culture = norse_gael
+religion = catholic
+technology_group = western
+capital = 5160 # inner hebrides
+government_rank = 1
+
+1386.1.1 = {
+	monarch = {
+		name = "Dòmhnall II"
+		#onarch_name = "Dòmhnall II"
+		dynasty = "Mac Dòmhnaill"
+		birth_date = 1365.1.1
+		adm = 2
+		dip = 3
+		mil = 4
+	}
+	queen = {
+		country_of_origin = SCO
+		name = "Mariota"
+		dynasty = "Leslie"
+		birth_date = 1375.1.1
+		death_date = 1440.1.1
+		female = yes
+		adm = 2 
+		dip = 3
+		mil = 1
+	}
+}
+
+1390.1.1 = {
+	heir = {
+		name = "Alasdair"
+		monarch_name = "Alasdair II"
+		dynasty = "Mac Dòmhnaill"
+		birth_date = 1390.1.1
+		death_date = 1449.1.1
+		claim = 95
+		adm = 3
+		dip = 3
+		mil = 6 #being generous
+	}
+}

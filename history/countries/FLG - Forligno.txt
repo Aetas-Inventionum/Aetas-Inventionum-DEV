@@ -1,0 +1,23 @@
+government = monarchy
+add_government_reform = signoria_monarchy_reform
+government_rank = 1
+technology_group = western
+primary_culture = umbrian
+religion = catholic
+capital = 5083
+fixed_capital = 5083
+
+#historical_friend = XXX
+#historical_rival = XXX
+
+
+1406.1.1 = {
+	monarch = {
+		name = "Ugolino III"
+		dynasty = "Trinci"
+		birth_date = 1386.1.1
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}

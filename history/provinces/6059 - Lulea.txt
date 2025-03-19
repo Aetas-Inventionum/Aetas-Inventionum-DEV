@@ -1,0 +1,36 @@
+#6059 - Lulea
+#Area - Westrobothnia
+#Region - Scandinavia 
+
+#Core Details
+capital = "Luleå"
+is_city = yes
+owner = SWE 
+controller = SWE 
+
+#Demographics
+culture = sapmi
+religion = animism
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = fur
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = SWE
+add_core = SMI
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+
+#Histories

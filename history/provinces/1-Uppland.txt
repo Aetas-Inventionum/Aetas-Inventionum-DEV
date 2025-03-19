@@ -1,0 +1,39 @@
+#1 - Uppland
+#Area - Svealand
+#Region - Scandinavia 
+
+#Core Details
+capital = "Stockholm"
+is_city = yes
+owner = SWE 
+controller = SWE 
+
+#Demographics
+culture = swedish
+religion = catholic
+
+#Development and Trade
+base_tax = 3
+base_production = 4
+base_manpower = 3
+trade_goods = tar
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = SWE
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+center_of_trade = 2
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

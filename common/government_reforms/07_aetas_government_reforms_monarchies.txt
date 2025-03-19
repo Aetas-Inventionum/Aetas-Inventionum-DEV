@@ -1,0 +1,5780 @@
+burgundian_state_reform = {
+	icon = jean_sans_peur
+	fixed_rank = 1
+	allow_normal_conversion = no
+	legacy_equivalent = feudal_monarchy
+	lock_level_when_selected = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = BUR
+			was_tag = BUR
+			has_reform = burgundian_state_reform
+			have_had_reform = burgundian_state_reform
+		}
+	}
+	nation_designer_cost = 0
+	modifiers = {
+		vassal_forcelimit_bonus = 0.25
+		diplomatic_upkeep = 4
+		diplomats = 1
+		reduced_liberty_desire_on_same_continent = 10
+		#min_autonomy = 10  # Harb's Autonomy Overhaul
+	}
+}
+
+bretonstate_reform = {
+	icon = bretonstate
+	allow_normal_conversion = yes
+	legacy_equivalent = feudal_monarchy
+	valid_for_nation_designer = yes
+	potential = {
+		OR = {
+			tag = BRI
+			was_tag = BRI
+			has_reform = bretonstate_reform
+			have_had_reform = bretonstate_reform
+		}
+	}
+	nation_designer_cost = 0
+	modifiers = {
+		diplomats = 1
+		global_trade_power = 0.15
+		navy_tradition = 1
+	}
+	custom_attributes = {
+		diet_increases_not_influence = yes
+	}
+}
+
+#duchies_silesia_reform = { -- Deprecated as Silesia was split up.
+#	icon = silesia
+#	allow_normal_conversion = yes
+#	legacy_equivalent = feudal_monarchy
+#	valid_for_nation_designer = yes
+#	potential = {
+#		OR = {
+#			tag = SIL
+#			was_tag = SIL
+#			has_reform = duchies_silesia_reform
+#			have_had_reform = duchies_silesia_reform
+#		}
+#	}
+#	nation_designer_cost = 0
+#	modifiers = {
+#		#min_autonomy = 45 # Harb's Autonomy Overhaul
+#		global_manpower_modifier = 0.10
+#		improve_relation_modifier = 0.2
+#	}
+#}
+
+composite_monarchy_reform = { #This was retooled into the spanish government
+	icon = enrique_ii
+	allow_normal_conversion = no
+	legacy_equivalent = feudal_monarchy
+	valid_for_nation_designer = yes
+	potential = {
+		OR = { 
+			has_reform = composite_monarchy_reform
+			have_had_reform = composite_monarchy_reform
+		}
+	}
+	nation_designer_cost = 0
+	modifiers = {
+		#governing_capacity = 100 # Harb's Autonomy Overhaul
+		num_accepted_cultures = 2
+		#min_autonomy = 15
+		nobles_influence_modifier = 0.1
+	}
+	conditional = { 
+		allow = { 
+			NOT = { mission_completed = spa_solo } #False Positive error, according to neo
+		}
+		
+		custom_attributes = { 
+			castile_cortes = yes
+		}
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Origins"
+		}
+		custom_attributes = {
+			has_itinerant_capital = yes
+		}
+	}
+	custom_attributes = {
+		diet_increases_not_influence = yes
+	}
+}
+
+hispanic_monarchy_reform = {
+	icon = "hispanic_monarchy"
+	allow_normal_conversion = no
+	potential = {
+		OR = { 
+			has_reform = hispanic_monarchy_reform
+			have_had_reform = hispanic_monarchy_reform
+		}
+	}
+	government_abilities = {
+		system_of_councils_mechanic
+	}
+	modifiers = {
+		allow_free_estate_privilege_revocation = yes 
+		#governing_capacity = 200 # Harb's Autonomy Overhaul
+		num_accepted_cultures = 3
+		tolerance_heretic = -2
+	}
+}
+nueva_planta_decrees_reform = {
+	icon = "hispanic_monarchy"
+	allow_normal_conversion = no
+	potential = {
+		OR = { 
+			has_reform = nueva_planta_decrees_reform
+			have_had_reform = nueva_planta_decrees_reform
+		}
+	}
+	modifiers = {
+		global_autonomy = -0.1
+		free_adm_policy = 1
+		max_absolutism = 10
+		governing_capacity_modifier = 0.1 # Harb's Autonomy Overhaul
+	}
+}
+aragonese_monarchy_reform = {
+	icon = "catalan_cortes"
+	allow_normal_conversion = no
+	legacy_equivalent = feudal_monarchy
+	valid_for_nation_designer = yes
+	lock_level_when_selected = yes 
+	can_change_primary_culture = no
+	potential = {
+		OR = { 
+			tag = ARA 
+			was_tag = ARA 
+		}
+		NOT = { has_reform = pactist_aragonese_monarchy_reform }
+	}
+	nation_designer_cost = 0
+	modifiers = {
+		diplomatic_upkeep = 2
+		num_accepted_cultures = 2
+		trade_efficiency = 0.1
+		#min_autonomy = 20 # Harb's Autonomy Overhaul
+		max_absolutism = -10
+	}
+	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
+		has_parliament = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Origins"
+		}
+		custom_attributes = {
+			has_itinerant_capital = yes
+		}
+	}
+	government_abilities = {
+		crown_vs_corts
+	}
+}
+
+absolutist_aragonese_monarchy_reform = {
+	icon = "catalan_cortes"
+	allow_normal_conversion = no
+	legacy_equivalent = feudal_monarchy
+	valid_for_nation_designer = yes
+	lock_level_when_selected = yes 
+	potential = {
+		OR = { 
+			has_reform = absolutist_aragonese_monarchy_reform
+			have_had_reform = absolutist_aragonese_monarchy_reform
+		}
+	}
+	nation_designer_cost = 0
+	modifiers = {
+		diplomatic_upkeep = 2
+		num_accepted_cultures = 2
+		move_capital_cost_modifier = -0.75
+		all_estate_influence_modifier = -0.05
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Origins"
+		}
+		custom_attributes = {
+			has_itinerant_capital = yes
+		}
+	}
+	custom_attributes = {
+		diet_increases_not_influence = yes
+	}
+}
+
+pactist_aragonese_monarchy_reform = {
+	icon = "catalan_cortes"
+	allow_normal_conversion = no
+	legacy_equivalent = feudal_monarchy
+	valid_for_nation_designer = yes
+	potential = {
+		OR = { 
+			tag = ARA 
+			was_tag = ARA 
+		}
+		OR = { 
+			has_reform = pactist_aragonese_monarchy_reform
+			have_had_reform = pactist_aragonese_monarchy_reform
+		}
+	}
+	nation_designer_cost = 0
+	modifiers = {
+		diplomatic_upkeep = 2
+		num_accepted_cultures = 2
+		min_autonomy = 40
+		max_absolutism = -25
+		can_revoke_parliament_seats = no
+	}
+	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
+		has_parliament = yes
+	}
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		custom_attributes = {
+			has_ruler_election = yes
+			has_improved_ruler_election = yes
+		}
+	}
+}
+
+reformed_generalitat_reform = {
+	icon = decent_comp
+	allow_normal_conversion = no
+	legacy_equivalent = feudal_monarchy
+	valid_for_nation_designer = yes
+	potential = {
+		OR = { 
+			has_reform = reformed_generalitat_reform
+			have_had_reform = reformed_generalitat_reform
+		}
+	}
+	nation_designer_cost = 0
+	modifiers = {
+		global_unrest = -2
+		num_accepted_cultures = 2
+		development_cost = -0.1
+	}
+	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
+		has_parliament = yes
+	}
+}
+
+frenchfeudalism_reform = {
+	icon = charles_v
+	allow_normal_conversion = yes
+	legacy_equivalent = feudal_monarchy
+	valid_for_nation_designer = yes
+	potential = {
+		OR = {
+			tag = FRA
+			was_tag = FRA
+			has_reform = frenchfeudalism_reform
+			have_had_reform = frenchfeudalism_reform
+		}
+	}
+	nation_designer_cost = 0
+	modifiers = {
+		governing_capacity_modifier = -0.25 # Harb's Autonomy Overhaul
+		#min_autonomy = 25 # Harb's Autonomy Overhaul
+		diplomatic_annexation_cost = 0.25
+	}
+	custom_attributes = { 
+		nobility_loyalty_hit_on_integration = yes
+		locked_government_type = yes
+	}
+	government_abilities = {
+		french_council
+	}
+}
+
+cinarca_reform = {
+	icon = cinarca
+	allow_normal_conversion = yes
+	legacy_equivalent = feudal_monarchy
+	valid_for_nation_designer = yes
+	potential = {
+		OR = {
+			tag = COR
+			was_tag = COR
+			has_reform = cinarca_reform
+			have_had_reform = cinarca_reform
+		}
+	}
+	nation_designer_cost = 0
+	modifiers = {
+		core_creation = -0.15
+		legitimacy = 0.5
+	}
+}
+
+judicate_reform = {
+	icon = judicate
+	allow_normal_conversion = yes
+	legacy_equivalent = feudal_monarchy
+	valid_for_nation_designer = yes
+	potential = {
+		OR = {
+			tag = ABR
+			was_tag = ABR
+			has_reform = judicate_reform
+			have_had_reform = judicate_reform
+		}
+	}
+	nation_designer_cost = 0
+	modifiers = {
+		heir_chance = 0.5
+		governing_capacity = 100 # Harb's Autonomy Overhaul
+	}
+	conditional = {
+		allow = { has_dlc = "Common Sense" }
+		has_parliament = yes
+	}
+}
+
+barbary_sultanate_reform = {
+	icon = "barbary_eyalet_government"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			culture_group = maghrebi
+			culture_group = berber_group
+		}
+	}
+	queen = no
+	nation_designer_trigger = {
+		culture_group = maghrebi
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+	modifiers = {
+		land_attrition = -0.1
+		may_perform_slave_raid = yes
+		coast_raid_range = 1 
+		navy_tradition_decay = -0.005
+		min_autonomy = 35
+	}
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			iqta_mechanic
+		}
+	}
+	ai = {
+		factor = 1
+	}
+}
+romania_start_reform = {
+	icon = byz_state
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = romania_start_reform
+			have_had_reform = romania_start_reform
+		}
+	}
+	modifiers = {
+		stability_cost_to_declare_war = 1
+		min_autonomy = 10 # Harb's Autonomy Overhaul
+		governing_capacity_modifier = -0.1 # Harb's Autonomy Overhaul
+		global_autonomy = 0.1 # Harb's Autonomy Overhaul
+		envoy_travel_time = -0.2
+		diplomatic_reputation = 2
+	}
+
+	government_abilities = {
+		bureaucracy_vs_military_mechanic
+	}
+	conditional = {
+		allow = { has_dlc = "King of Kings" }
+		custom_attributes = {
+			#civil_war_on_every_new_ruler = yes
+			enables_pronoias = yes 
+		}
+	}
+}
+romania_new_reform = {
+	icon = "byzantine_rule"
+	allow_normal_conversion = yes 
+	lock_level_when_selected = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = romania_start_reform
+			have_had_reform = romania_start_reform
+			has_reform = romania_new_reform
+			have_had_reform = romania_new_reform
+		}
+	}
+	modifiers = {
+		all_power_cost = -0.025
+		envoy_travel_time = -0.2
+		diplomatic_reputation = 2
+		max_absolutism = 10
+		yearly_absolutism = 1
+	}
+
+	conditional = {
+		allow = { has_dlc = "King of Kings" }
+		custom_attributes = {
+			enables_pronoias = yes 
+		}
+	}
+
+	government_abilities = {
+		bureaucracy_vs_military_mechanic
+	}
+}
+wittelsbach_prince_reform = {
+	icon = wittelsbach
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes
+	valid_for_nation_designer = no
+	fixed_rank = 1
+	potential = {
+		OR = {
+			has_reform = wittelsbach_prince_reform
+			have_had_reform = wittelsbach_prince_reform
+		}
+		dynasty = "von Wittelsbach"
+	}
+	modifiers = {
+		governing_capacity_modifier = -0.5
+		land_forcelimit_modifier = 0.15
+		diplomatic_reputation = 1
+		ae_impact = -0.075
+	}
+}
+palatine_county_reform = {
+	icon = johann_neumarkt
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes
+	valid_for_nation_designer = no
+	fixed_rank = 1
+	potential = {
+		OR = {
+			tag = PAL 
+			tag = MBC
+			tag = ZWE
+			tag = NMK 
+		}
+		OR = { 
+			has_reform = wittelsbach_prince_reform
+			have_had_reform = wittelsbach_prince_reform
+			has_reform = palatine_county_reform
+			have_had_reform = palatine_county_reform
+		}
+		is_elector = no 
+	}
+	modifiers = {
+		governing_capacity_modifier = -0.5
+		land_forcelimit_modifier = 0.15
+		diplomatic_upkeep = 1
+		diplomatic_reputation = 2
+		improve_relation_modifier = 0.25
+	}
+}
+electoral_palatinate_reform = {
+	icon = palatinate
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes
+	valid_for_nation_designer = no
+	fixed_rank = 1
+	potential = {
+		OR = {
+			tag = PAL 
+			has_reform = electoral_palatinate_reform
+			have_had_reform = electoral_palatinate_reform
+		}
+	}
+	modifiers = {
+		governing_capacity_modifier = -0.35
+		diplomatic_reputation = 2
+		diplomats = 1
+		global_tax_modifier = 0.25
+		land_maintenance_modifier = -0.1
+	}
+}
+dutch_wittelsbach_prince_reform = {
+	icon = wittelsbach
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes
+	fixed_rank = 1
+	valid_for_nation_designer = no
+	potential = {
+		always = no #disabled
+	}
+	trigger = { dynasty = "von Wittelsbach" }
+	factions = { 
+		aetas_hooks
+		aetas_cods
+	}
+	modifiers = {
+		governing_capacity_modifier = -0.25
+		diplomatic_reputation = 1
+	}
+}
+holland_reform = {
+	icon = "dutch_republic"
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			mission_completed = hol_reformation #was hol_reform
+			has_reform = holland_reform
+			have_had_reform = holland_reform
+		}
+	}
+	modifiers = {
+		governing_capacity_modifier = -0.25
+		diplomatic_reputation = 1
+		trade_efficiency = 0.1
+		legitimacy = 1
+	}
+
+	conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+		}
+		has_parliament = yes
+	}
+}
+aviz_princes_reform = {
+	icon = "portuguese_king"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = POR
+			dynasty = "de Avis"
+			has_reform = aviz_princes_reform
+			have_had_reform = aviz_princes_reform
+		}
+	}
+	modifiers = {
+		naval_forcelimit_modifier = 0.2
+		idea_cost = -0.075
+		sailors_recovery_speed = 0.2
+		may_perform_slave_raid = yes
+	}
+	custom_attributes = {
+		diet_increases_not_influence = yes
+	}
+}
+moroccan_sultanate_reform = {
+	icon = moroccan_sultanate
+	allow_normal_conversion = yes
+	potential = {
+		primary_culture = moroccan 
+		government_rank = 2
+	}
+	queen = no
+	maintain_dynasty = yes 
+	nation_designer_trigger = {
+		culture_group = maghrebi
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+	modifiers = {
+		may_perform_slave_raid = yes
+		coast_raid_range = 1 
+		vassal_income = 0.2
+		liberty_desire_from_subject_development = -0.1
+	}
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			iqta_mechanic
+		}
+	}
+	conditional = {
+		allow = {
+			OR = { 
+				has_dlc = "Rights of Man" 
+				has_dlc = "Domination"
+			}
+		}
+		has_harem = yes
+		custom_attributes = {
+			has_harem_events = yes
+		}
+	}
+	ai = {
+		factor = 1
+	}
+}
+wattasid_vizier_reform = {
+	icon = "soldiers_7"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		OR = { 
+			has_reform = wattasid_vizier_reform
+			have_had_reform = wattasid_vizier_reform
+		}
+	}
+	nation_designer_trigger = {
+		culture_group = maghrebi
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+	modifiers = {
+		min_autonomy = 30
+		monarch_lifespan = -0.25
+		monarch_admin_power = -1
+		monarch_diplomatic_power = -1
+	}
+	ai = {
+		factor = 1
+	}
+}
+hungarian_elective_kingdom_reform = {
+	icon = hun_reform
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			primary_culture = hungarian
+		}
+	}
+	nation_designer_trigger = {
+		OR = {
+			primary_culture = hungarian
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	modifiers = {
+		nobles_influence_modifier = 0.1
+		diplomatic_upkeep = 3
+		num_accepted_cultures = 3
+	}
+
+	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
+		has_parliament = yes
+	}
+
+	ai = {
+		factor = 1
+	}
+}
+hungarian_elective_reform = {
+	icon = hun_reform
+	allow_normal_conversion = no
+	potential = {
+		OR = {
+			has_reform = hungarian_elective_reform
+			have_had_reform = hungarian_elective_reform
+		}
+	}
+	nation_designer_trigger = {
+		OR = {
+			primary_culture = hungarian
+		}
+	}
+	valid_for_nation_designer = yes
+	lock_level_when_selected = yes
+	nation_designer_cost = 10
+	modifiers = {
+		diplomatic_reputation = 1
+		nobles_influence_modifier = 0.2
+		diplomatic_upkeep = 3
+		num_accepted_cultures = 3
+	}
+	conditional = {
+		allow = { has_dlc = "Res Publica" }
+		is_elective = yes
+		custom_attributes = {
+			has_polish_election = yes
+			locked_government_type = yes
+		}
+	}
+
+	conditional = {
+		allow = { NOT = { has_dlc = "Res Publica" } }
+		custom_attributes = {
+			locked_government_type = yes
+		}
+	}
+
+	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
+		has_parliament = yes
+	}
+
+	ai = {
+		factor = 1
+	}
+}
+hunyadi_elective_reform = {
+	icon = hun_reform
+	allow_normal_conversion = no
+	potential = {
+		OR = {
+			has_reform = hunyadi_elective_reform
+			have_had_reform = hunyadi_elective_reform
+		}
+	}
+	nation_designer_trigger = {
+		OR = {
+			primary_culture = hungarian
+		}
+	}
+	valid_for_nation_designer = yes
+	lock_level_when_selected = yes
+	nation_designer_cost = 10
+	modifiers = {
+		diplomatic_reputation = 1
+		nobles_influence_modifier = 0.2
+		diplomatic_upkeep = 3
+		num_accepted_cultures = 3
+	}
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		custom_attributes = {
+			has_ruler_election = yes
+			has_improved_ruler_election = yes
+		}
+	}
+
+	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
+		has_parliament = yes
+	}
+
+	conditional = {
+		allow = { NOT = { has_dlc = "Res Publica" } }
+		custom_attributes = {
+			locked_government_type = yes
+		}
+	}
+
+	ai = {
+		factor = 1
+	}
+}
+corvinus_reform = {
+	icon = corvin
+	allow_normal_conversion = no
+	potential = {
+		OR = {
+			has_reform = hunyadi_elective_reform
+			have_had_reform = hunyadi_elective_reform
+			has_reform = corvinus_reform
+			have_had_reform = corvinus_reform
+		}
+	}
+	nation_designer_trigger = {
+		OR = {
+			primary_culture = hungarian
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	modifiers = {
+		diplomatic_upkeep = 3
+		num_accepted_cultures = 3
+		global_tax_modifier = 0.15
+		max_absolutism = 10
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		government_abilities = {
+			hessian_militarization_mechanic
+		}
+	}
+	custom_attributes = {
+		mercs_do_not_cost_army_professionalism = yes
+	}
+
+	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
+		has_parliament = yes
+	}
+
+	ai = {
+		factor = 1
+	}
+}
+hussite_elective_kingdom_reform = {
+	icon = "bohemian_monarchy"
+	allow_normal_conversion = no
+	potential = {
+		OR = {
+			primary_culture = czech
+			primary_culture = czech_new
+		}
+		religion = hussite
+	}
+	nation_designer_trigger = {
+		OR = {
+			primary_culture = czech
+			primary_culture = czech_new
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	modifiers = {
+		diplomatic_reputation = 2
+		monarch_admin_power = 1
+		governing_capacity_modifier = -0.5
+		vassal_income = 0.25
+		max_absolutism = -25
+	}
+	conditional = {
+		allow = { has_dlc = "Rights of Man" }
+		government_abilities = {
+			militarization_mechanic
+		}
+	}
+	conditional = {
+		allow = { has_dlc = "Res Publica" }
+		is_elective = yes
+		custom_attributes = {
+			has_polish_election = yes
+			locked_government_type = yes
+		}
+	}
+
+	conditional = {
+		allow = { NOT = { has_dlc = "Res Publica" } }
+		custom_attributes = {
+			locked_government_type = yes
+		}
+	}
+	ai = {
+		factor = 1
+	}
+}
+swedish_elective_kingdom_reform = {
+	icon = svea_rike
+	allow_normal_conversion = yes
+	potential = {
+		OR = { 
+			has_reform = swedish_elective_kingdom_reform
+			have_had_reform = swedish_elective_kingdom_reform
+		}
+	}
+	nation_designer_trigger = {
+		OR = {
+			primary_culture = swedish 
+			primary_culture = geatish
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	modifiers = {
+		nobles_influence_modifier = 0.15
+		global_autonomy = +0.075
+	}
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		custom_attributes = {
+			has_ruler_election = yes
+			has_improved_ruler_election = yes
+		}
+	}
+	ai = {
+		factor = 1
+	}
+}
+swedish_vasa_reform = {
+	icon = gustav_vasa
+	allow_normal_conversion = no
+	potential = {
+		OR = {
+			primary_culture = swedish 
+			primary_culture = geatish
+		}
+		have_had_reform = swedish_vasa_reform
+		has_reform = swedish_vasa_reform
+	}
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	modifiers = {
+		nobles_influence_modifier = -0.10
+		global_autonomy = -0.075
+		max_absolutism = 10
+	}
+	ai = {
+		factor = 1
+	}
+}
+guelders_quart_reform = {
+	icon = gelre_quart
+	fixed_rank = 1
+	allow_normal_conversion = no
+	lock_level_when_selected = yes 
+	potential = {
+		tag = GEL 
+	}
+	nation_designer_trigger = {
+		OR = {
+			primary_culture = brabantian
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	modifiers = {
+		global_autonomy = +0.075
+		all_estate_influence_modifier = 0.1
+		governing_capacity_modifier = -0.45
+		global_manpower_modifier = 0.25
+		land_forcelimit_modifier = 0.25
+	}
+	ai = {
+		factor = 1
+	}
+}
+maarten_army_reform = {
+	icon = maarten_reform
+	allow_normal_conversion = no
+	lock_level_when_selected = yes 
+	potential = {
+		tag = GEL 
+		OR = { 
+			has_reform = maarten_army_reform
+			have_had_reform = maarten_army_reform
+		}
+	}
+	nation_designer_trigger = {
+		OR = {
+			primary_culture = brabantian
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	modifiers = {
+		movement_speed = 0.10
+		hostile_attrition = 1
+		leader_land_manuever = 1
+		leader_land_shock = 1
+	}
+	conditional = {
+		allow = { has_dlc = "Rights of Man" }
+		government_abilities = {
+			militarization_mechanic
+		}
+	}
+	ai = {
+		factor = 1
+	}
+}
+guelders_grand_duchy_reform = {
+	icon = gelre_quart
+	fixed_rank = 1
+	allow_normal_conversion = no
+	lock_level_when_selected = yes 
+	potential = {
+		tag = GEL 
+		OR = { 
+			has_reform = guelders_grand_duchy_reform
+			have_had_reform = guelders_grand_duchy_reform
+		}
+	}
+	nation_designer_trigger = {
+		OR = {
+			primary_culture = brabantian
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	modifiers = {
+		governing_capacity_modifier = -0.45
+		global_manpower_modifier = 0.25
+		land_forcelimit_modifier = 0.25
+		diplomatic_upkeep = 2
+		prestige_decay = -0.05
+	}
+	ai = {
+		factor = 1
+	}
+}
+burgundian_kingdom_reform = {
+	icon = "burgundian_state"
+	allow_normal_conversion = no
+	legacy_equivalent = feudal_monarchy
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = burgundian_kingdom_reform
+			have_had_reform = burgundian_kingdom_reform
+		}
+	}
+	nation_designer_cost = 0
+	modifiers = {
+		vassal_income = 0.25
+		diplomatic_reputation = 1
+		diplomatic_upkeep = 2
+		monarch_diplomatic_power = 1
+	}
+	government_abilities = {
+		french_council
+	}
+}
+hafsid_reform = {
+	icon = hafsid
+	allow_normal_conversion = no
+	potential = {
+		has_reform = hafsid_reform 
+		have_had_reform = hafsid_reform
+	}
+	queen = no
+	lock_level_when_selected = yes 
+	valid_for_nation_designer = no
+	maintain_dynasty = yes 
+	modifiers = {
+		same_culture_advisor_cost = -0.1
+		may_perform_slave_raid = yes
+		coast_raid_range = 1 
+		min_autonomy = 25
+	}
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			iqta_mechanic
+		}
+	}
+	ai = {
+		factor = 1
+	}
+}
+maghrebi_caliphate_reform = {
+	icon = moroccan_sultanate
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	fixed_rank = 3
+	potential = {
+		OR = {
+			has_reform = maghrebi_caliphate_reform
+			have_had_reform = maghrebi_caliphate_reform
+		}
+	}
+	queen = no
+	nation_designer_trigger = {
+		culture_group = maghrebi
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+	modifiers = {
+		liberty_desire_from_subject_development = -0.25
+		may_perform_slave_raid = yes
+		coast_raid_range = 1 
+		vassal_income = 0.2
+		land_morale = 0.1
+	}
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			feudal_theocracy_mechanic
+		}
+	}
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			iqta_mechanic
+		}
+	}
+	ai = {
+		factor = 1
+	}
+}
+shurafa_reform = {
+	icon = sharifi_sultanate
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		OR = {
+			has_reform = shurafa_reform
+			have_had_reform = shurafa_reform
+			have_had_reform = tribal_shurafa_reform
+			tag = DRA 
+			tag = TFL
+		}
+	}
+	queen = no
+	valid_for_nation_designer = no
+	nation_designer_cost = 40
+	maintain_dynasty = yes 
+	modifiers = {
+		monthly_piety = -0.02
+		max_absolutism = 10
+		may_perform_slave_raid = yes
+		coast_raid_range = 1 
+		land_morale = 0.15
+		nomadic_tribes_loyalty_modifier = 0.15
+	}
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			feudal_theocracy_mechanic
+		}
+	}
+	conditional = {
+		allow = {
+			OR = { 
+				has_dlc = "Rights of Man" 
+				has_dlc = "Domination"
+			}
+		}
+		has_harem = yes
+		custom_attributes = {
+			has_harem_events = yes
+		}
+	}
+	ai = {
+		factor = 1
+	}
+}
+#tribal shurafa
+tribal_shurafa_reform = {
+	icon = shurafa
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		OR = {
+			has_reform = shurafa_reform
+			have_had_reform = shurafa_reform
+			tag = DRA 
+			tag = TFL
+		}
+	}
+	queen = no
+	valid_for_nation_designer = no
+	nation_designer_cost = 40
+	maintain_dynasty = yes 
+	modifiers = {
+		monthly_piety = -0.01
+		diplomatic_reputation = 1
+		may_perform_slave_raid = yes
+		coast_raid_range = 1 
+		land_morale = 0.1
+		nomadic_tribes_loyalty_modifier = 0.1
+	}
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			feudal_theocracy_mechanic
+		}
+	}
+	conditional = {
+		allow = {
+			OR = { 
+				has_dlc = "Rights of Man" 
+				has_dlc = "Domination"
+			}
+		}
+		has_harem = yes
+		custom_attributes = {
+			has_harem_events = yes
+		}
+	}
+	ai = {
+		factor = 1
+	}
+}
+moroccan_absolutism_reform = {
+	icon = shurafa_reform
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		OR = {
+			has_reform = moroccan_absolutism_reform
+			have_had_reform = moroccan_absolutism_reform
+		}
+	}
+	queen = no
+	valid_for_nation_designer = no
+	nation_designer_cost = 40
+	maintain_dynasty = yes 
+	disables_estate_nomadic_tribes = yes 
+	modifiers = {
+		monthly_piety = -0.02
+		max_absolutism = 20
+		yearly_absolutism = 0.5
+		may_perform_slave_raid = yes
+		coast_raid_range = 1 
+		land_morale = 0.15
+	}
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			feudal_theocracy_mechanic
+		}
+	}
+	conditional = {
+		allow = {
+			OR = { 
+				has_dlc = "Rights of Man" 
+				has_dlc = "Domination"
+			}
+		}
+		has_harem = yes
+		custom_attributes = {
+			has_harem_events = yes
+		}
+	}
+	ai = {
+		factor = 1
+	}
+}
+moroccan_absolutism2_reform = {
+	icon = mor_abs
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		OR = {
+			has_reform = moroccan_absolutism2_reform
+			have_had_reform = moroccan_absolutism2_reform
+		}
+	}
+	queen = no
+	valid_for_nation_designer = no
+	nation_designer_cost = 40
+	maintain_dynasty = yes 
+	disables_estate_nomadic_tribes = yes 
+	modifiers = {
+		max_absolutism = 10
+		may_perform_slave_raid = yes
+		coast_raid_range = 1 
+		vassal_income = 0.2
+		liberty_desire_from_subject_development = -0.1
+	}
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			iqta_mechanic
+		}
+	}
+	conditional = {
+		allow = {
+			OR = { 
+				has_dlc = "Rights of Man" 
+				has_dlc = "Domination"
+			}
+		}
+		has_harem = yes
+		custom_attributes = {
+			has_harem_events = yes
+		}
+	}
+	ai = {
+		factor = 1
+	}
+}
+black_guard_reform = {
+	icon = black_guard
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes
+	potential = {
+		OR = {
+			has_reform = black_guard_reform
+			have_had_reform = black_guard_reform
+			primary_culture = moroccan 
+		}
+	}
+	trigger = { 
+		any_owned_province = { culture = haratin }
+	}
+	valid_for_nation_designer = no
+	nation_designer_cost = 40
+	modifiers = {
+		infantry_power = 0.15
+		land_maintenance_modifier = -0.15
+		has_mamluks = yes
+		allowed_mamluks_fraction = 0.2	
+	}
+	ai = {
+		factor = 1
+	}
+}
+makhzen_reform = {
+	icon = makhzen
+	allow_normal_conversion = yes 
+	potential = {
+		OR = { 
+			culture_group = maghrebi 
+			has_reform = gra_al_qaria_reform
+			have_had_reform = gra_al_qaria_reform
+		}
+		NOT = { primary_culture = andalusi }
+	}
+	trigger = { government_rank = 2 }
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	modifiers = {
+		global_tax_modifier = 0.25
+		global_autonomy = -0.01
+		nobles_influence_modifier = -0.05
+		nomadic_tribes_influence_modifier = -0.05
+	}
+	conditional = {
+		allow = { has_dlc = "Mandate of Heaven" }
+		custom_attributes = {
+			unlock_special_state_edicts = yes
+		}
+	}
+	ai = {
+		factor = 1
+	}
+}
+burji_mamluks_reform = {
+	icon = burji
+	allow_normal_conversion = no
+	potential = {
+		OR = { 
+			have_had_reform = burji_mamluks_reform
+			has_reform = burji_mamluks_reform
+		}
+	}
+	lock_level_when_selected = yes 
+	maintain_dynasty = yes 
+	legacy_equivalent = mamluk_government_legacy
+	queen = no
+
+	valid_for_nation_designer = yes
+	nation_designer_cost = 60
+
+	nation_designer_trigger = {
+		religion_group = muslim
+	}
+
+	modifiers = {
+		num_accepted_cultures = 3
+		monarch_admin_power = 2
+		promote_culture_cost = -0.5
+		nobles_influence_modifier = 0.15
+		special_unit_forcelimit = 0.15
+		monarch_lifespan = 0.1
+	}
+
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			mamluk_mechanic
+		}
+		heir = no
+		foreign_slave_rulers = yes
+	}
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			iqta_mechanic
+		}
+	}
+}
+burji_tax_reform = {
+	icon = fiqh_laws
+	allow_normal_conversion = no
+	potential = {
+		OR = { 
+			have_had_reform = burji_mamluks_reform
+			has_reform = burji_mamluks_reform
+		}
+	}
+
+	valid_for_nation_designer = yes
+	nation_designer_cost = 60
+
+	nation_designer_trigger = {
+		religion_group = muslim
+	}
+
+	modifiers = {
+		global_tax_modifier = 0.25
+		state_maintenance_modifier = -0.25
+		global_autonomy = -0.05
+	}
+}
+khushdashiyyah_mamluks_reform = {
+	icon = burji
+	allow_normal_conversion = no
+	potential = {
+		OR = { 
+			have_had_reform = khushdashiyyah_mamluks_reform
+			has_reform = khushdashiyyah_mamluks_reform
+		}
+	}
+	lock_level_when_selected = yes 
+	maintain_dynasty = yes 
+	legacy_equivalent = mamluk_government_legacy
+	queen = no
+
+	valid_for_nation_designer = yes
+	nation_designer_cost = 60
+
+	nation_designer_trigger = {
+		religion_group = muslim
+	}
+
+	modifiers = {
+		num_accepted_cultures = 3
+		promote_culture_cost = -0.5
+		nobles_influence_modifier = -0.15
+		nobles_loyalty_modifier = 0.15
+		discipline = 0.04
+		monarch_lifespan = 0.1
+	}
+
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			mamluk_mechanic
+		}
+	}
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			iqta_mechanic
+		}
+	}
+}
+better_burji_mamluks_reform = {
+	icon = burji
+	allow_normal_conversion = no
+	potential = {
+		OR = { 
+			have_had_reform = better_burji_mamluks_reform
+			has_reform = better_burji_mamluks_reform
+		}
+	}
+	lock_level_when_selected = yes 
+	maintain_dynasty = yes 
+	legacy_equivalent = mamluk_government_legacy
+	queen = no
+
+	valid_for_nation_designer = yes
+	nation_designer_cost = 60
+
+	nation_designer_trigger = {
+		religion_group = muslim
+	}
+
+	modifiers = {
+		num_accepted_cultures = 3
+		monarch_admin_power = 2
+		promote_culture_cost = -0.5
+		land_forcelimit_modifier = 0.15
+		global_manpower_modifier = 0.1
+		monarch_lifespan = 0.1
+	}
+
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			mamluk_mechanic
+		}
+		heir = no
+		foreign_slave_rulers = yes
+	}
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			iqta_mechanic
+		}
+	}
+}
+jerusalem_monarchy_reform = {
+	icon = godfroy
+	allow_normal_conversion = yes 
+	legacy_equivalent = feudal_monarchy
+	valid_for_nation_designer = yes
+	lock_level_when_selected = yes
+	can_change_primary_culture = no
+	rulers_can_be_generals = yes
+	heirs_can_be_generals = yes
+	potential = {
+		government = monarchy 
+		religion = catholic
+		OR = {
+			tag = KOJ 
+			primary_culture = hierosolymitan
+			primary_culture = tripolitan 
+			primary_culture = antiochean
+			has_reform = jerusalem_monarchy_reform
+			have_had_reform = jerusalem_monarchy_reform
+		}
+	}
+	nation_designer_cost = 0
+	modifiers = {
+		diplomatic_reputation = 2
+		tolerance_heathen = 3
+		vassal_income = 0.25
+		vassal_forcelimit_bonus = 0.25
+		may_perform_slave_raid = yes
+		cb_on_religious_enemies = yes
+	}
+	government_abilities = {
+		haute_cour
+	}
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		custom_attributes = {
+			has_ruler_election = yes
+			has_improved_ruler_election = yes
+		}
+	}
+}
+latin_crusader_reform = {
+	icon = "holy_state_reform"
+	allow_normal_conversion = yes 
+	legacy_equivalent = feudal_monarchy
+	valid_for_nation_designer = yes
+	lock_level_when_selected = yes
+	can_change_primary_culture = no
+	fixed_rank = 1
+	rulers_can_be_generals = yes
+	heirs_can_be_generals = yes
+	potential = {
+		government = monarchy 
+		religion = catholic
+		OR = {
+			primary_culture = hierosolymitan
+			primary_culture = tripolitan 
+			primary_culture = antiochean
+			has_reform = latin_crusader_reform
+			have_had_reform = latin_crusader_reform
+		}
+		NOT = { tag = KOJ }
+	}
+	nation_designer_cost = 0
+	modifiers = {
+		diplomatic_reputation = 1
+		tolerance_heathen = 3
+		defensiveness = 0.33
+		may_perform_slave_raid = yes
+	}
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		custom_attributes = {
+			has_ruler_election = yes
+			has_improved_ruler_election = yes
+		}
+	}
+}
+cyprian_monarchy_reform = {
+	icon = henry_fat
+	allow_normal_conversion = no
+	legacy_equivalent = feudal_monarchy
+	valid_for_nation_designer = yes
+	lock_level_when_selected = yes 
+	can_change_primary_culture = no
+	potential = {
+		government = monarchy 
+		religion = catholic
+		OR = {
+			tag = CYP 
+			was_tag = CYP 
+			has_reform = cyprian_monarchy_reform
+			have_had_reform = cyprian_monarchy_reform
+		}
+		NOT = { tag = KOJ } 
+	}
+	nation_designer_cost = 0
+	modifiers = {
+		diplomatic_reputation = 1
+		tolerance_heretic = 4
+		vassal_income = 0.1
+		may_perform_slave_raid = yes
+	}
+	government_abilities = {
+		haute_cour
+	}
+}
+grand_duchy_reform = {
+	icon = grand_duchy
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			AND = {
+				tag = LIT
+				NOT = { map_setup = map_setup_random }
+			}
+			AND = {
+				is_playing_custom_nation = yes
+				have_had_reform = grand_duchy_reform
+			}
+		}
+	}
+	lock_level_when_selected = yes
+	legacy_equivalent = despotic_monarchy
+	fixed_rank = 1
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	modifiers = {
+		governing_capacity = 100
+		tolerance_heretic = 1
+		diplomats = 1
+		vassal_income = 0.25
+		nobles_influence_modifier = 0.2
+	}
+}
+ai_margraviate_reform = {
+	icon = mark_reform
+	allow_normal_conversion = no
+	potential = {
+		OR = {
+			has_reform = ai_margraviate_reform
+			have_had_reform = ai_margraviate_reform
+		}
+	}
+	nation_designer_trigger = {
+		culture_group = germanic
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	modifiers = {
+		global_manpower_modifier = 0.33
+		land_forcelimit_modifier = 0.15
+		development_cost_modifier = -0.1
+		nobles_influence_modifier = 0.15
+		governing_capacity_modifier = -0.5
+	}
+	fixed_rank = 1
+
+	conditional = {
+		allow = { NOT = { has_dlc = "Res Publica" } }
+		custom_attributes = {
+			locked_government_type = yes
+		}
+	}
+
+	ai = {
+		factor = 1
+	}
+}
+ai_pru_directorate_reform = {
+	icon = "nobleman"
+	allow_normal_conversion = no
+	potential = {
+		OR = { 
+			tag = BRA 
+			tag = PRU
+		}
+	}
+	nation_designer_trigger = {
+		culture_group = germanic
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	modifiers = {
+		governing_capacity_modifier = 0.1
+		advisor_cost = -0.1
+		advisor_pool = 1
+	}
+
+	government_abilities = {
+		pru_council
+	}
+
+	ai = {
+		factor = 1
+	}
+}
+sforza_mlo_reform = {
+	icon = sforza
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = sforza_mlo_reform
+			have_had_reform = sforza_mlo_reform
+		}
+	}
+	nation_designer_cost = 0
+	modifiers = {
+		improve_relation_modifier = 0.25
+		mercenary_cost = -0.15
+		possible_condottieri = 0.5
+		merc_leader_army_tradition = 0.25
+		movement_speed = 0.15
+	}
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		government_abilities = {
+			hessian_militarization_mechanic
+		}
+	}
+	custom_attributes = {
+		mercs_do_not_cost_army_professionalism = yes
+	}
+}
+sicilian_parl_reform = {
+	icon = decent_comp
+	allow_normal_conversion = yes
+	legacy_equivalent = feudal_monarchy
+	valid_for_nation_designer = yes
+	potential = {
+		OR = { 
+			has_reform = sicilian_parl_reform
+			have_had_reform = sicilian_parl_reform
+			#mission_completed = npi_courts
+		}
+	}
+	nation_designer_cost = 0
+	modifiers = {
+		global_unrest = -2
+		num_accepted_cultures = 2
+		production_efficiency = 0.15
+	}
+	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
+		has_parliament = yes
+	}
+}
+empower_justicia_reform = {
+	icon = justicia
+	allow_normal_conversion = yes
+	potential = {
+		OR = { 
+			tag = ARA 
+			was_tag = ARA
+			have_had_reform = empower_justicia_reform
+			has_reform = empower_justicia_reform
+		}
+	}
+
+	valid_for_nation_designer = yes
+	nation_designer_cost = 60
+
+	nation_designer_trigger = {
+		culture_group = iberian
+	}
+
+	modifiers = {
+		max_absolutism = -10
+		state_maintenance_modifier = -0.25
+		all_estate_influence_modifier = -0.1
+	}
+}
+austrian_duchy_reform = {
+	icon = rudolfiv
+	allow_normal_conversion = yes
+	legacy_equivalent = feudal_monarchy
+	fixed_rank = 1
+	valid_for_nation_designer = no
+	potential = {
+		OR = { 
+			primary_culture = austrian
+			primary_culture = tyrolean
+		}
+		dynasty = "von Habsburg"
+	}
+	nation_designer_cost = 0
+	modifiers = {
+		vassal_income = 0.15
+		diplomatic_reputation = 2
+		diplomats = 1
+		nobles_influence_modifier = 0.1
+	}
+}
+hre_council_reform = {
+	icon = aulic_council
+	allow_normal_conversion = yes
+	legacy_equivalent = feudal_monarchy
+	valid_for_nation_designer = no
+	potential = {
+		is_part_of_hre = yes 
+	}
+	trigger = { 
+		OR = { 
+			is_emperor = yes
+			AND = { 
+				capital_scope = { 
+					OR = { 
+						region = north_german_region
+						region = south_german_region
+					}
+				}
+				government_rank = 3
+			}
+		}
+	}
+	nation_designer_cost = 0
+	modifiers = {
+		monthly_reform_progress_modifier = 0.1
+		legitimacy = 1
+	}
+	government_abilities = {
+		hre_council
+	}
+}
+hab_landsknetch_reform = {
+	icon = hre_landsk
+	allow_normal_conversion = yes
+	legacy_equivalent = feudal_monarchy
+	valid_for_nation_designer = no
+	potential = {
+		OR = { 
+			tag = STY 
+			tag = HAB
+		}
+		OR = { 
+			is_part_of_hre = yes 
+			is_emperor = yes 
+			government_rank = 3
+		}
+	}
+	trigger = { 
+		OR = { 
+			is_emperor = yes
+			AND = { 
+				capital_scope = { 
+					OR = { 
+						region = north_german_region
+						region = south_german_region
+					}
+				}
+				government_rank = 3
+			}
+		}
+		mission_completed = hab_landsknetch
+	}
+	nation_designer_cost = 0
+	modifiers = {
+		global_manpower_modifier = 0.15
+		mercenary_cost = -0.15
+	}
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		government_abilities = {
+			hessian_militarization_mechanic
+		}
+	}
+	custom_attributes = {
+		mercs_do_not_cost_army_professionalism = yes
+	}
+}
+riksdag_reform = {
+	icon = riksdag
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		primary_culture = swedish 
+	}
+	trigger = { 
+		mission_completed = swe_rikstad
+	}
+	nation_designer_cost = 0
+	modifiers = {
+		all_estate_loyalty_equilibrium = 0.075
+		development_cost_in_primary_culture = -0.05
+		parliament_backing_chance = 0.05
+	}
+	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
+		has_parliament = yes
+	}
+	custom_attributes = {
+		diet_increases_not_influence = yes
+	}
+}
+scots_monarchy_reform = {
+	icon = james_i
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes 
+	potential = {
+		OR = {
+			primary_culture = scottish
+			primary_culture = highland_scottish
+		}
+	}
+	nation_designer_trigger = {
+		OR = {
+			primary_culture = scottish
+			primary_culture = highland_scottish
+		}
+	}
+	trigger = { 
+		tag = SCO
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	modifiers = {
+		nobles_influence_modifier = 0.1
+		vassal_income = 0.1
+		land_forcelimit_modifier = 0.1
+		diplomatic_reputation = 1
+		defensiveness = 0.1
+	}
+	
+	conditional = {
+		allow = { 
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
+		has_parliament = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
+scots_bank_reform = {
+	icon = scots_bank
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			primary_culture = scottish
+			primary_culture = highland_scottish
+		}
+	}
+	nation_designer_trigger = {
+		OR = {
+			primary_culture = scottish
+			primary_culture = highland_scottish
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	modifiers = {
+		global_tax_modifier = 0.25
+		inflation_reduction = 0.02
+		interest = -0.5
+		parliament_effect_duration = 2
+	}
+	
+	ai = {
+		factor = 1
+	}
+}
+scots_covenanter_reform = {
+	icon = covenanter
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			primary_culture = scottish
+			primary_culture = highland_scottish
+		}
+	}
+	trigger = { 
+		religion = reformed
+	}
+	nation_designer_trigger = {
+		OR = {
+			primary_culture = scottish
+			primary_culture = highland_scottish
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	modifiers = {
+		nobles_loyalty_modifier = 0.1
+		monthly_fervor_increase = 1
+		land_morale = 0.1
+		global_trade_goods_size_modifier = 0.15
+	}
+	
+	ai = {
+		factor = 1
+	}
+}
+scots_gaelic_monarchy_reform = {
+	icon = pictish
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			primary_culture = scottish
+			primary_culture = highland_scottish
+			primary_culture = norse_gael
+		}
+	}
+	trigger = { 
+		OR = { 
+			primary_culture = highland_scottish
+			primary_culture = norse_gael
+		}
+	}
+	nation_designer_trigger = {
+		OR = {
+			primary_culture = scottish
+			primary_culture = highland_scottish
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	modifiers = {
+		vassal_income = 0.25
+		land_forcelimit_modifier = 0.2
+		diplomatic_reputation = 1
+		defensiveness = 0.2
+		heir_chance = 0.5
+	}
+	
+	conditional = {
+		allow = { 
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
+		has_parliament = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
+galway_tribes_reform = {
+	icon = galway
+	allow_normal_conversion = yes
+	potential = {
+		OR = { 
+			mission_completed = cnn_special
+			has_reform = galway_tribes_reform
+			have_had_reform = galway_tribes_reform
+		}
+	}
+	nation_designer_trigger = {
+		primary_culture = hiberno_norman
+	}
+	trigger = { 
+		owns_core_province = 5171
+	}
+	boost_income = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 5
+	modifiers = {
+		province_trade_power_modifier = 0.33
+		global_trade_goods_size_modifier = 0.15
+		governing_capacity_modifier = -0.75
+		burghers_influence_modifier = 0.15
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			NOT = { has_dlc = "Mare Nostrum" }
+		}
+		can_use_trade_post = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Mare Nostrum"
+			NOT = { has_dlc = "Res Publica" }
+		}
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			has_dlc = "Mare Nostrum"
+		}
+		can_use_trade_post = yes
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+	custom_attributes = { 
+		is_merchant_republic = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
+hiberno_norman_reform = {
+	icon = ormond
+	allow_normal_conversion = no
+	lock_level_when_selected = yes 
+	can_change_primary_culture = no
+	fixed_rank = 1
+	potential = {
+		OR = { 
+			primary_culture = hiberno_norman
+			has_reform = hiberno_norman_reform
+			have_had_reform = hiberno_norman_reform
+		}
+	}
+	nation_designer_trigger = {
+		primary_culture = hiberno_norman
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 5
+	modifiers = {
+		fort_maintenance_modifier = -0.33
+		development_cost_in_primary_culture = -0.05
+		culture_conversion_cost = 0.75
+	}
+	conditional = {
+		allow = { 
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
+		has_parliament = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
+lordship_ireland_reform = {
+	icon = strongbow
+	allow_normal_conversion = no
+	lock_level_when_selected = yes 
+	can_change_primary_culture = no
+	fixed_rank = 1
+	potential = {
+		OR = { 
+			primary_culture = hiberno_norman
+			has_reform = hiberno_norman_reform
+			have_had_reform = hiberno_norman_reform
+		}
+	}
+	nation_designer_trigger = {
+		primary_culture = hiberno_norman
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 5
+	modifiers = {
+		fort_maintenance_modifier = -0.33
+		diplomats = 1
+		land_forcelimit_modifier = 0.2
+		development_cost = -0.1
+		papal_influence = 1
+	}
+	conditional = {
+		allow = { 
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
+		has_parliament = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
+crown_ireland_reform = {
+	icon = kildare
+	allow_normal_conversion = yes 
+	potential = {
+		OR = { 
+			primary_culture = hiberno_norman
+			has_reform = hiberno_norman_reform
+			have_had_reform = hiberno_norman_reform
+			has_reform = crown_ireland_reform
+			have_had_reform = crown_ireland_reform
+		}
+	}
+	trigger = { 
+		tag = ANI
+	}
+	nation_designer_trigger = {
+		primary_culture = hiberno_norman
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 5
+	modifiers = {
+		defensiveness = 0.1
+		fort_maintenance_modifier = -0.25
+		num_accepted_cultures = 1
+		development_cost_in_primary_culture = -0.1
+	}
+	conditional = {
+		allow = { 
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
+		has_parliament = yes
+	}
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		custom_attributes = {
+			has_ruler_election = yes
+			can_elect_from_relative = yes
+		}
+	}
+	ai = {
+		factor = 1
+	}
+}
+brehon_law_reform = {
+	icon = brehon_reform
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			primary_culture = irish 
+			tag = DMS 
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	modifiers = {
+		stability_cost_modifier = -0.15
+		all_estate_loyalty_equilibrium = 0.05
+		global_unrest = -1
+		free_adm_policy = 1
+	}
+	
+	ai = {
+		factor = 1
+	}
+}
+irish_abbey_reform = {
+	icon = st_matthew
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			primary_culture = irish 
+			has_country_modifier = dms_gaels_mod
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	modifiers = {
+		church_loyalty_modifier = 0.1
+		church_privilege_slots = 1
+		production_efficiency = 0.2
+		establish_order_cost = -0.1
+	}
+	
+	ai = {
+		factor = 1
+	}
+}
+clans_laigin_reform = {
+	icon = art_mor
+	allow_normal_conversion = yes
+	potential = {
+		primary_culture = irish 
+		OR = { 
+			tag = LEI 
+			was_tag = LEI
+		}
+	}
+	trigger = {
+		government = monarchy
+		OR = { 
+			tag = LEI 
+			was_tag = LEI 
+			has_reform = clans_laigin_reform
+			have_had_reform = clans_laigin_reform
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	modifiers = {
+		nobles_loyalty_modifier = 0.1
+		hostile_attrition = 2
+		defensiveness = 0.15
+	}
+
+	conditional = {
+		allow = { has_dlc = "Rights of Man" }
+		government_abilities = {
+			militarization_mechanic
+		}
+	}
+	
+	ai = {
+		factor = 1
+	}
+}
+sligo_reform = {
+	icon = galway
+	allow_normal_conversion = yes
+	potential = {
+		OR = { 
+			mission_completed = sln_special
+			has_reform = sligo_reform
+			have_had_reform = sligo_reform
+		}
+	}
+	nation_designer_trigger = {
+		primary_culture = hiberno_norman
+	}
+	trigger = { 
+		owns_core_province = 5171
+	}
+	boost_income = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 5
+	modifiers = {
+		province_trade_power_modifier = 0.25
+		global_trade_goods_size_modifier = 0.075
+		governing_capacity_modifier = -0.75
+		burghers_influence_modifier = 0.15
+		build_cost = -0.15
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			NOT = { has_dlc = "Mare Nostrum" }
+		}
+		can_use_trade_post = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Mare Nostrum"
+			NOT = { has_dlc = "Res Publica" }
+		}
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			has_dlc = "Mare Nostrum"
+		}
+		can_use_trade_post = yes
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+	custom_attributes = { 
+		is_merchant_republic = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
+try_gallowglass_reform = {
+	icon = gallowglass
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = TRY 
+			was_tag = TRY 
+		}
+		mission_completed = mobilize_gallowglass
+	}
+	nation_designer_cost = 0
+	modifiers = {
+		mercenary_cost = -0.1
+		possible_condottieri = 0.1
+		merc_leader_army_tradition = 0.1
+		movement_speed = 0.05
+	}
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		government_abilities = {
+			hessian_militarization_mechanic
+		}
+	}
+	custom_attributes = {
+		mercs_do_not_cost_army_professionalism = yes
+	}
+}
+breton_estates_reform = {
+	icon = bri_estates 
+	allow_normal_conversion = yes
+	potential = {
+		primary_culture = breton 
+	}
+	trigger = { 
+		tag = BRI
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	modifiers = {
+		all_estate_loyalty_equilibrium = 0.05
+	}
+	conditional = {
+		allow = { 
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
+		has_parliament = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
+breton_closes_reform = {
+	icon = bri_pc
+	allow_normal_conversion = yes
+	potential = {
+		OR = { 
+			primary_culture = breton
+			primary_culture = celtic_breton
+		} 
+		any_owned_province = { 
+			culture = celtic_breton
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	modifiers = {
+		church_influence_modifier = 0.1
+		development_cost_modifier = -0.05
+		curia_powers_cost = -0.1
+	}
+	trigger = { 
+		OR = { 
+			primary_culture = celtic_breton
+			accepted_culture = celtic_breton
+		}
+	}
+	effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_tax_building_trigger = yes
+				}
+				add_province_modifier = {
+					name = gov_expanded_temple_rights_mod
+					duration = -1
+				}
+			}
+		}
+	}
+	post_removed_effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = gov_expanded_temple_rights_mod
+				}
+				remove_province_modifier = gov_expanded_temple_rights_mod
+			}
+		}
+	}
+	custom_attributes = {
+		temples_modifier = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
+breton_nobles_reform = {
+	icon = richemont
+	allow_normal_conversion = yes
+	potential = {
+		OR = { 
+			primary_culture = breton
+			primary_culture = celtic_breton
+		} 
+		any_owned_province = { 
+			culture = celtic_breton
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	modifiers = {
+		nobles_loyalty_modifier = 0.1
+		diplomatic_upkeep = 1
+		improve_relation_modifier = 0.15
+		spy_offence = 0.25
+	}
+	ai = {
+		factor = 1
+	}
+}
+frankokratic_reform = {
+	icon = baldwin
+	allow_normal_conversion = yes  
+	lock_level_when_selected = yes 
+	can_change_primary_culture = no
+	potential = {
+		OR = { 
+			has_reform = frankokratic_reform
+			have_had_reform = frankokratic_reform
+		}
+		NOT = { tag = GRE }
+	}
+	nation_designer_trigger = {
+		primary_culture = greek 
+		religion = catholic 
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 5
+	modifiers = {
+		fort_maintenance_modifier = -0.33
+		tolerance_heretic = 4 
+		diplomatic_reputation = 1
+		nobles_influence_modifier = 0.1
+	}
+	ai = {
+		factor = 1
+	}
+}
+epirus_reform = {
+	icon = reform_epirus
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes 
+	potential = {
+		OR = { 
+			tag = EPI 
+			tag = RTA 
+		}
+	}
+	nation_designer_trigger = {
+		primary_culture = greek 
+		religion = catholic 
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 5
+	modifiers = {
+		fort_maintenance_modifier = -0.33
+		tolerance_heretic = 4 
+		diplomatic_reputation = 1
+		num_accepted_cultures = 1
+	}
+	ai = {
+		factor = 1
+	}
+}
+ai_greece_reform = {
+	icon = hellenic_reform
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = ai_greece_reform
+			have_had_reform = ai_greece_reform
+			tag = GRE
+		}
+	}
+	boost_income = yes
+	modifiers = {
+		province_trade_power_modifier = 0.33
+		global_trade_goods_size_modifier = 0.15
+		trade_efficiency = 0.1
+		governing_capacity_modifier = -0.5
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			NOT = { has_dlc = "Mare Nostrum" }
+		}
+		can_use_trade_post = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Mare Nostrum"
+			NOT = { has_dlc = "Res Publica" }
+		}
+		can_form_trade_league = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			has_dlc = "Mare Nostrum"
+		}
+		can_use_trade_post = yes
+		can_form_trade_league = yes
+	}
+	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
+		has_parliament = yes
+	}
+}
+assizes_romania_reform = {
+	icon = paper_with_seal 
+	allow_normal_conversion = yes
+	potential = {
+		OR = { 
+			tag = ACH 
+			was_tag = ACH 
+			tag = LTE 
+			was_tag = LTE 
+			tag = EPI 
+			was_tag = EPI 
+			tag = ATH 
+			was_tag = ATH 
+			tag = THB 
+			was_tag = THB 
+			tag = NPT 
+			was_tag = NPT 
+			tag = NAX 
+			was_tag = NAX
+			has_reform = frankokratic_reform
+			has_reform = epirus_reform
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	modifiers = {
+		global_tax_modifier = 0.1 
+		nobles_influence_modifier = 0.1
+		global_unrest = -1 
+		vassal_income = 0.1
+	}
+	ai = {
+		factor = 1
+	}
+}
+latin_empire_reform = {
+	icon = latin_empire
+	allow_normal_conversion = yes  
+	lock_level_when_selected = yes 
+	fixed_rank = 3
+	can_change_primary_culture = no
+	potential = {
+		OR = { 
+			has_reform = frankokratic_reform
+			have_had_reform = frankokratic_reform
+			has_reform = latin_empire_reform
+			have_had_reform = latin_empire_reform
+		}
+		tag = LTE 
+	}
+	nation_designer_trigger = {
+		primary_culture = greek 
+		religion = catholic 
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 5
+	modifiers = {
+		fort_maintenance_modifier = -0.33
+		tolerance_heretic = 4 
+		diplomatic_upkeep = 1 
+		diplomats = 1 
+		prestige = 1
+		papal_influence = 1
+		cb_on_religious_enemies = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
+serbian_reform = {
+	icon = stefan_lazarevich
+	allow_normal_conversion = no
+	lock_level_when_selected = yes 
+	fixed_rank = 1
+	potential = {
+		OR = { 
+			tag = SER 
+			was_tag = SER 
+		}
+		NOT = { tag = YGS }
+	}
+	nation_designer_trigger = {
+		primary_culture = serbian
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 5
+	modifiers = {
+		diplomats = 1
+		diplomatic_reputation = 1
+		land_forcelimit_modifier = 0.1
+		global_manpower_modifier = 0.05
+	}
+	ai = {
+		factor = 1
+	}
+}
+serbian_vlast_reform = {
+	icon = vlast_reform
+	allow_normal_conversion = yes
+	potential = {
+		OR = { 
+			tag = SER 
+			was_tag = SER 
+			tag = YGS
+		}
+	}
+	nation_designer_trigger = {
+		primary_culture = serbian
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 5
+	modifiers = {
+		nobles_influence_modifier = -0.1
+		global_tax_modifier = 0.1
+		manpower_recovery_speed = 0.15
+	}
+	custom_attributes = {
+		free_noble_levies = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
+zakonoprovilo_reform = {
+	icon = sava
+	allow_normal_conversion = yes
+	potential = {
+		primary_culture = serbian 
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	modifiers = {
+		church_influence_modifier = 0.1
+		development_cost_modifier = -0.05
+		yearly_patriarch_authority = 0.003
+	}
+	effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_tax_building_trigger = yes
+				}
+				add_province_modifier = {
+					name = gov_expanded_temple_rights_mod
+					duration = -1
+				}
+			}
+		}
+	}
+	post_removed_effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = gov_expanded_temple_rights_mod
+				}
+				remove_province_modifier = gov_expanded_temple_rights_mod
+			}
+		}
+	}
+	custom_attributes = {
+		temples_modifier = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
+serbian_kingdom_reform = {
+	icon = nemanjich
+	allow_normal_conversion = no
+	lock_level_when_selected = yes 
+	fixed_rank = 2
+	potential = {
+		OR = { 
+			tag = SER 
+			was_tag = SER 
+		}
+		NOT = { tag = YGS }
+	}
+	nation_designer_trigger = {
+		primary_culture = serbian
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 5
+	modifiers = {
+		diplomats = 1
+		diplomatic_reputation = 1
+		land_forcelimit_modifier = 0.15
+		global_manpower_modifier = 0.1
+		vassal_income = 0.1
+	}
+	ai = {
+		factor = 1
+	}
+}
+serbian_empire_reform = {
+	icon = dushan
+	allow_normal_conversion = no
+	lock_level_when_selected = yes 
+	fixed_rank = 3
+	potential = {
+		OR = { 
+			tag = SER 
+			was_tag = SER 
+		}
+		NOT = { tag = YGS }
+	}
+	nation_designer_trigger = {
+		primary_culture = serbian
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 5
+	modifiers = {
+		diplomats = 1
+		diplomatic_reputation = 1
+		land_forcelimit_modifier = 0.25
+		global_manpower_modifier = 0.15
+		vassal_income = 0.25
+	}
+	ai = {
+		factor = 1
+	}
+}
+romanian_lordship_reform = {
+	icon = mircea
+	allow_normal_conversion = yes
+	fixed_rank = 1
+	lock_level_when_selected = yes 
+	potential = {
+		culture_group = dacian 
+	}
+	nation_designer_trigger = {
+		culture_group = dacian 
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 5
+	modifiers = {
+		global_manpower_modifier = 0.1
+		governing_capacity_modifier	= -0.25
+		nobles_influence_modifier = 0.1
+		min_autonomy = 10
+	}
+	custom_attributes = {
+		diet_increases_not_influence = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
+romanian_boyars_reform = {
+	icon = boier
+	allow_normal_conversion = no
+	lock_level_when_selected = yes 
+	potential = {
+		OR = { 
+			has_reform = romanian_boyars_reform
+			have_had_reform = romanian_boyars_reform
+		}
+	}
+	nation_designer_trigger = {
+		culture_group = dacian 
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 5
+	modifiers = {
+		all_estate_loyalty_equilibrium = 0.025
+	}
+	government_abilities = {
+		boyar_council
+	}
+	ai = {
+		factor = 1
+	}
+}
+romanian_reformed_reform = {
+	icon = mihail
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes 
+	potential = {
+		OR = { 
+			has_reform = romanian_reformed_reform
+			have_had_reform = romanian_reformed_reform
+		}
+	}
+	valid_for_nation_designer = no
+	nation_designer_cost = 5
+	modifiers = {
+		global_manpower_modifier = 0.1
+		diplomatic_reputation = 1
+		global_prosperity_growth = 0.1
+		nobles_influence_modifier = -0.1
+		max_absolutism = 10
+	}
+	custom_attributes = {
+		diet_increases_not_influence = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
+koj_iqta_reform = {
+	icon = "muslim"
+	allow_normal_conversion = yes
+	potential = {
+		OR = { 
+			tag = KOJ 
+			was_tag = KOJ 
+			primary_culture = hierosolymitan
+			primary_culture = tripolitan
+			primary_culture = antiochean
+			has_reform = koj_iqta_reform
+			have_had_reform = koj_iqta_reform
+		}
+	}
+	trigger = { 
+		religion_group = christian
+		any_owned_province = { 
+			religion_group = muslim
+		}
+	}
+	valid_for_nation_designer = no
+	nation_designer_cost = 5
+	modifiers = {
+		tolerance_heathen = 2
+		global_heathen_missionary_strength = -0.03
+		missionary_maintenance_cost = 0.75
+	}
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			iqta_mechanic
+		}
+	}
+	ai = {
+		factor = 1
+	}
+}
+albanian_lordship_reform = {
+	icon = andrea
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes 
+	fixed_rank = 1 
+	potential = {
+		OR = { 
+			has_reform = albanian_lordship_reform
+			have_had_reform = albanian_lordship_reform
+		}
+		culture_group = illyrian
+		NOT = { tag = ALB }
+	}
+	valid_for_nation_designer = no
+	nation_designer_cost = 5
+	modifiers = {
+		land_forcelimit_modifier = 0.1
+		land_maintenance_modifier = -0.1
+		fort_maintenance_modifier = -0.1
+		governing_capacity_modifier = -0.5
+	}
+	ai = {
+		factor = 1
+	}
+}
+#league of lezhe
+alb_lol_reform = {
+	icon = "giga_chad"
+	allow_normal_conversion = no
+	potential = {
+		has_reform = alb_lol_reform
+	}
+	valid_for_nation_designer = no
+	lock_level_when_selected = yes
+	nation_designer_cost = 10
+	fixed_rank = 1
+	modifiers = {
+		land_forcelimit_modifier = 0.35
+		land_maintenance_modifier = -0.25
+		fort_maintenance_modifier = -0.33
+		governing_capacity_modifier = -0.5
+		vassal_forcelimit_bonus = 0.25
+		liberty_desire_from_subject_development = -0.25
+	}
+	custom_attributes = {
+		winning_battles_increases_legitimacy = yes
+	}
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		custom_attributes = {
+			has_ruler_election = yes
+			has_improved_ruler_election = yes
+		}
+	}
+	ai = {
+		factor = 1
+	}
+}
+#albanian monarchy
+alb_monarchy_reform = {
+	icon = "giga_chad"
+	allow_normal_conversion = yes 
+	potential = {
+		OR = {
+			has_reform = alb_monarchy_reform
+			have_had_reform = alb_monarchy_reform
+		}
+		religion_group = christian 
+		tag = ALB 
+	}
+	valid_for_nation_designer = no
+	lock_level_when_selected = yes
+	nation_designer_cost = 10
+	modifiers = {
+		land_maintenance_modifier = -0.25
+		fort_maintenance_modifier = -0.33
+		governing_capacity_modifier = -0.5
+		vassal_forcelimit_bonus = 0.25
+		production_efficiency = 0.15
+		nobles_loyalty_modifier = 0.1
+	}
+	custom_attributes = {
+		winning_battles_increases_legitimacy = yes
+	}
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		custom_attributes = {
+			has_ruler_election = yes
+			has_improved_ruler_election = yes
+			can_elect_from_relative = yes
+		}
+	}
+	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
+		has_parliament = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
+muslim_alb_monarchy_reform = {
+	icon = "giga_chad"
+	allow_normal_conversion = yes 
+	potential = {
+		OR = {
+			has_reform = muslim_alb_monarchy_reform
+			have_had_reform = muslim_alb_monarchy_reform
+		}
+		religion_group = muslim 
+		tag = ALB 
+	}
+	valid_for_nation_designer = no
+	lock_level_when_selected = yes
+	nation_designer_cost = 10
+	modifiers = {
+		land_maintenance_modifier = -0.25
+		fort_maintenance_modifier = -0.33
+		governing_capacity_modifier = -0.5
+		vassal_forcelimit_bonus = 0.25
+		production_efficiency = 0.15
+		nobles_loyalty_modifier = 0.1
+	}
+	custom_attributes = {
+		winning_battles_increases_legitimacy = yes
+	}
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		custom_attributes = {
+			has_ruler_election = yes
+			has_improved_ruler_election = yes
+			can_elect_from_relative = yes
+		}
+	}
+	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
+		has_parliament = yes
+	}
+	conditional = {
+		allow = { 
+			has_dlc = "Cradle of Civilization" 
+			religion_group = muslim
+		}
+		government_abilities = {
+			iqta_mechanic
+		}
+	}
+	ai = {
+		factor = 1
+	}
+}
+#bosnian crown
+bosnian_monarchy_reform = {
+	icon = stjepan_thomas
+	allow_normal_conversion = yes 
+	potential = {
+		OR = {
+			has_reform = bosnian_monarchy_reform
+			have_had_reform = bosnian_monarchy_reform
+		}
+		tag = BOS
+	}
+	valid_for_nation_designer = no
+	lock_level_when_selected = yes
+	nation_designer_cost = 10
+	modifiers = {
+		reduced_liberty_desire = 25
+		vassal_income = 0.25
+		vassal_forcelimit_bonus = 1
+		production_efficiency = 0.15
+		nobles_influence_modifier = 0.15
+		governing_capacity_modifier = -0.5
+	}
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		custom_attributes = {
+			has_ruler_election = yes
+			can_elect_from_relative = yes
+		}
+	}
+	ai = {
+		factor = 1
+	}
+}
+#bosnian duchy
+bosnian_duchy_reform = {
+	icon = "nobleman"
+	allow_normal_conversion = yes 
+	potential = {
+		OR = {
+			has_reform = bosnian_duchy_reform
+			have_had_reform = bosnian_duchy_reform
+		}
+		primary_culture = bosnian 
+		government_rank = 1
+	}
+	valid_for_nation_designer = no
+	fixed_rank = 1 
+	nation_designer_cost = 10
+	modifiers = {
+		production_efficiency = 0.15
+		land_forcelimit_modifier = 0.15
+		nobles_influence_modifier = 0.15
+		governing_capacity_modifier = -0.5
+	}
+	ai = {
+		factor = 1
+	}
+}
+#bosnian protovestijar
+bosnian_protovestijar_reform = {
+	icon = "trading_city"
+	allow_normal_conversion = yes 
+	potential = {
+		OR = {
+			has_reform = bosnian_protovestijar_reform
+			have_had_reform = bosnian_protovestijar_reform
+		}
+	}
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	modifiers = {
+		trade_efficiency = 0.15
+		global_trade_power = 0.25
+		merchants = 1 
+		advisor_cost = -0.15
+		burghers_loyalty_modifier = 0.1
+	}
+	ai = {
+		factor = 1
+	}
+}
+#croatian monarchy
+croatian_monarchy_reform = {
+	icon = tomislav
+	allow_normal_conversion = yes 
+	potential = {
+		primary_culture = croatian
+	}
+	valid_for_nation_designer = no
+	lock_level_when_selected = yes
+	nation_designer_cost = 10
+	modifiers = {
+		global_tax_modifier = 0.15
+		development_cost_in_primary_culture = -0.05
+		fort_maintenance_modifier = -0.15
+		nobles_influence_modifier = 0.1
+	}
+	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
+		has_parliament = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
+illyrian_reform = {
+	icon = "byzantine_rule"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = ILY
+			tag = YGS
+			has_reform = illyrian_reform
+			have_had_reform = illyrian_reform
+			AND = {
+				is_playing_custom_nation = yes
+				have_had_reform = illyrian_reform
+			}
+		}
+	}
+	fixed_rank = 3
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+
+	modifiers = {
+		global_tax_modifier = 0.15
+		development_cost_in_primary_culture = -0.05
+		fort_maintenance_modifier = -0.15
+		embracement_cost = -0.25
+	}
+
+	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
+		has_parliament = yes
+	}
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		government_abilities = {
+			table_of_ranks_mechanic
+		}
+	}
+}
+bulgarian_appanage_reform = {
+	icon = bul_app
+	allow_normal_conversion = yes
+	potential = {
+		primary_culture = bulgarian 
+	}
+	lock_level_when_selected = yes 
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+
+	modifiers = {
+		fort_maintenance_modifier = -0.15
+		land_forcelimit_modifier = 0.15
+		governing_capacity_modifier = -0.75
+	}
+	conditional = {
+		allow = { has_dlc = "Rights of Man" }
+		government_abilities = {
+			militarization_mechanic
+		}
+	}
+}
+bul_boyar_reform = {
+	icon = bul_council
+	allow_normal_conversion = yes
+	potential = {
+		primary_culture = bulgarian 
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+
+	modifiers = {
+		nobles_influence_modifier = 0.1
+		global_manpower_modifier = 0.1
+	}
+	custom_attributes = {
+		free_noble_levies = yes
+	}
+
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		government_abilities = {
+			table_of_ranks_mechanic
+		}
+	}
+}
+bulgarian_empire_reform = {
+	icon = ivan_aleksandar
+	allow_normal_conversion = yes
+	potential = {
+		primary_culture = bulgarian 
+		OR = { 
+			has_reform = bulgarian_empire_reform
+			have_had_reform = bulgarian_empire_reform
+			tag = BUL 
+		}
+	}
+	fixed_rank = 3
+	lock_level_when_selected = yes 
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+
+	modifiers = {
+		fort_maintenance_modifier = -0.25
+		development_cost_in_primary_culture = -0.075
+		land_forcelimit_modifier = 0.15
+		vassal_income = 0.25
+		governing_capacity_modifier = -0.5
+	}
+	conditional = {
+		allow = { has_dlc = "Rights of Man" }
+		government_abilities = {
+			militarization_mechanic
+		}
+	}
+}
+bul_patriarchate_reform = {
+	icon = bul_pat
+	allow_normal_conversion = yes
+	potential = {
+		primary_culture = bulgarian 
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	modifiers = {
+		church_influence_modifier = 0.1
+		yearly_patriarch_authority = 0.05
+		tolerance_own = 1
+	}
+	effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_tax_building_trigger = yes
+				}
+				add_province_modifier = {
+					name = gov_expanded_temple_rights_mod
+					duration = -1
+				}
+			}
+		}
+	}
+	post_removed_effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = gov_expanded_temple_rights_mod
+				}
+				remove_province_modifier = gov_expanded_temple_rights_mod
+			}
+		}
+	}
+	custom_attributes = {
+		temples_modifier = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
+enlightened_bulgarian_empire_reform = {
+	icon = ivan_aleksandar
+	allow_normal_conversion = yes
+	potential = {
+		primary_culture = bulgarian 
+		OR = { 
+			has_reform = enlightened_bulgarian_empire_reform
+			have_had_reform = enlightened_bulgarian_empire_reform
+		}
+	}
+	fixed_rank = 3
+	lock_level_when_selected = yes 
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+
+	modifiers = {
+		fort_maintenance_modifier = -0.25
+		land_forcelimit_modifier = 0.15
+		development_cost_in_primary_culture = -0.1
+		vassal_income = 0.25
+		governing_capacity_modifier = -0.5
+		max_absolutism = 20
+		yearly_absolutism = 0.1
+	}
+	conditional = {
+		allow = { has_dlc = "Rights of Man" }
+		government_abilities = {
+			militarization_mechanic
+		}
+	}
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		government_abilities = {
+			russian_rule_mechanic
+		}
+	}
+}
+gra_emirate_reform = {
+	icon = muhammad_i
+	allow_normal_conversion = yes 
+	potential = {
+		OR = {
+			has_reform = gra_emirate_reform
+			have_had_reform = gra_emirate_reform
+		}
+	}
+	valid_for_nation_designer = no
+	lock_level_when_selected = yes
+	nation_designer_cost = 10
+	fixed_rank = 1
+	modifiers = {
+		hostile_attrition = 2
+		tolerance_heathen = 1
+		fort_maintenance_modifier = -0.33
+		governing_capacity_modifier = -0.5
+	}
+	custom_attributes = {
+		advisors_generate_innovativeness = yes
+	}
+	conditional = {
+		allow = { 
+			has_dlc = "Cradle of Civilization" 
+			religion_group = muslim
+		}
+		government_abilities = {
+			iqta_mechanic
+		}
+	}
+	conditional = {
+		allow = {
+			OR = { 
+				has_dlc = "Rights of Man" 
+				has_dlc = "Domination"
+			}
+		}
+		has_harem = yes
+		custom_attributes = {
+			has_harem_events = yes
+		}
+	}
+	ai = {
+		factor = 1
+	}
+}
+gra_tribes_reform = {
+	icon = shurafa
+	allow_normal_conversion = yes 
+	potential = {
+		OR = { 
+			culture_group = maghrebi 
+			has_reform = gra_tribes_reform
+			have_had_reform = gra_tribes_reform
+		}
+	}
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	trigger = { 
+		culture_group = maghrebi 
+		any_owned_province = { 
+			culture_group = berber_group 
+			has_owner_accepted_culture = yes 
+		}
+	}
+	modifiers = {
+		nomadic_tribes_influence_modifier = -0.05
+		army_tradition = 0.25
+		army_tradition_from_battle = 0.25
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Cradle of Civilization"
+		}
+		government_abilities = {
+			tribal_federation_mechanic
+		}
+	}
+	ai = {
+		factor = 1
+	}
+}
+gra_al_qaria_reform = {
+	icon = "landscape"
+	allow_normal_conversion = yes 
+	potential = {
+		OR = { 
+			primary_culture = andalusi 
+			has_reform = gra_al_qaria_reform
+			have_had_reform = gra_al_qaria_reform
+		}
+	}
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	modifiers = {
+		global_tax_modifier = 0.25
+		global_prosperity_growth = 0.5
+		global_unrest = -1
+	}
+	conditional = {
+		allow = { has_dlc = "Mandate of Heaven" }
+		custom_attributes = {
+			unlock_special_state_edicts = yes
+		}
+	}
+	ai = {
+		factor = 1
+	}
+}
+gra_shurfa_reform = {
+	icon = shurfa
+	allow_normal_conversion = yes 
+	potential = {
+		OR = { 
+			primary_culture = andalusi 
+			has_reform = gra_shurfa_reform
+			have_had_reform = gra_shurfa_reform
+		}
+	}
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	modifiers = {
+		land_forcelimit_modifier = 0.25
+		global_manpower_modifier = 0.1
+		reinforce_speed = 0.25
+	}
+	conditional = {
+		allow = { has_dlc = "Rights of Man" }
+		government_abilities = {
+			militarization_mechanic
+		}
+	}
+	ai = {
+		factor = 1
+	}
+}
+adu_government_reform = {
+	icon = muhammad_i
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = ADU
+			has_reform = adu_government_reform 
+			have_had_reform = adu_government_reform
+			AND = {
+				has_reform = adu_government_reform
+				is_playing_custom_nation = yes
+			}
+		}
+	}
+	trigger = {
+		religion_group = muslim
+		primary_culture = andalusi
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 5
+	nation_designer_trigger = {
+		religion_group = muslim
+		primary_culture = andalusi
+	}
+	fixed_rank = 3
+	modifiers = {
+		hostile_attrition = 2
+		tolerance_heathen = 2
+		fort_maintenance_modifier = -0.33
+		governing_capacity_modifier = -0.5
+		vassal_forcelimit_bonus = 1
+		cb_on_religious_enemies = yes 
+	}
+	custom_attributes = {
+		advisors_generate_innovativeness = yes
+	}
+	conditional = {
+		allow = {
+			OR = { 
+				has_dlc = "Rights of Man" 
+				has_dlc = "Domination"
+			}
+		}
+		has_harem = yes
+		custom_attributes = {
+			has_harem_events = yes
+		}
+	}
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		custom_attributes = {
+			allow_piety_switch_decision = yes	#Enables a decision which gives 1 stabhit, but turns your piety 180�
+		}
+	}
+}
+cdb_caliphate_reform = {
+	icon = "noble_muslim"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = CDB 
+			has_reform = cdb_caliphate_reform
+			have_had_reform = cdb_caliphate_reform
+			AND = {
+				has_reform = cdb_caliphate_reform
+				is_playing_custom_nation = yes
+			}
+		}
+	}
+	trigger = {
+		religion_group = muslim
+		primary_culture = andalucian
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 5
+	nation_designer_trigger = {
+		religion_group = muslim
+		primary_culture = andalucian
+	}
+	fixed_rank = 3
+	modifiers = {
+		missionaries = 1 
+		missionary_maintenance_cost = -0.25
+		max_absolutism = 10
+		governing_capacity_modifier = -0.25
+		cb_on_religious_enemies = yes 
+	}
+	custom_attributes = {
+		advisors_generate_innovativeness = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Rights of Man" 
+			NOT = { has_dlc = "Domination" }
+		}
+		has_harem = yes
+		custom_attributes = {
+			has_harem_events = yes
+		}
+	}
+	conditional = {
+		allow = { has_dlc = "Cradle of Civilization" }
+		government_abilities = {
+			feudal_theocracy_mechanic
+		}
+	}
+}
+por_infantes_reform = {
+	icon = henry_navigator
+	allow_normal_conversion = yes 
+	potential = {
+		OR = { 
+			primary_culture = portugese
+			has_reform = por_infantes_reform
+			have_had_reform = por_infantes_reform
+		}
+	}
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	modifiers = {
+		embracement_cost = -0.25
+		nobles_influence_modifier = 0.15
+		nobles_loyalty_modifier = 0.1
+		army_tradition = 0.15
+		navy_tradition = 0.15
+	}
+	ai = {
+		factor = 1
+	}
+}
+goa_reform = {
+	icon = goa
+	allow_normal_conversion = yes 
+	potential = {
+		OR = { 
+			primary_culture = portugese
+			has_reform = goa_reform
+			have_had_reform = goa_reform
+		}
+	}
+	trigger = { owns = 2030 }
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	modifiers = {
+		papal_influence = 1 
+		church_loyalty_modifier = 0.05
+		church_influence_modifier = 0.05
+		tolerance_heathen = -1
+		missionaries = 1 
+		global_heathen_missionary_strength = 0.03
+	}
+	ai = {
+		factor = 1
+	}
+}
+casa_da_india_reform = {
+	icon = manuel_i
+	allow_normal_conversion = yes 
+	potential = {
+		OR = { 
+			primary_culture = portugese
+			has_reform = casa_da_india_reform
+			have_had_reform = casa_da_india_reform
+		}
+	}
+	trigger = { mission_completed = por_casa_india }
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	modifiers = {
+		merchants = 1 
+		global_trade_power = 0.1
+		trade_steering = 0.25
+		global_trade_goods_size_modifier = 0.15
+		burghers_influence_modifier = 0.1
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			NOT = { has_dlc = "Mare Nostrum" }
+		}
+		can_use_trade_post = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Mare Nostrum"
+			NOT = { has_dlc = "Res Publica" }
+		}
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			has_dlc = "Mare Nostrum"
+		}
+		can_use_trade_post = yes
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+	ai = {
+		factor = 1
+	}
+}
+mare_clausum_reform = {
+	icon = da_gama
+	allow_normal_conversion = yes 
+	potential = {
+		OR = { 
+			primary_culture = portugese
+			primary_culture = castillian
+			has_reform = mare_clausum_reform
+			have_had_reform = mare_clausum_reform
+		}
+	}
+	trigger = { mission_completed = por_casa_india }
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	modifiers = {
+		placed_merchant_power_modifier = 0.15
+		global_ship_trade_power = 0.2
+		naval_attrition = -0.15
+		mercantilism_cost = -0.1
+	}
+	ai = {
+		factor = 1
+	}
+}
+afonsine_reform = {
+	icon = afonsine
+	allow_normal_conversion = yes 
+	potential = {
+		OR = { 
+			has_reform = afonsine_reform
+			have_had_reform = afonsine_reform
+		}
+	}
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	modifiers = {
+		nobles_influence_modifier = -0.1
+		max_absolutism = 5
+		monthly_reform_progress_modifier = 0.15
+	}
+	ai = {
+		factor = 1
+	}
+}
+por_thassalocracy_reform = {
+	icon = joao_ii
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	valid_for_nation_designer = no
+	potential = {
+		has_reform = por_thassalocracy_reform
+		have_had_reform = por_thassalocracy_reform
+	}
+	modifiers = {
+		naval_forcelimit_modifier = 0.5
+		navy_tradition_decay = -0.25
+		idea_cost = -0.1
+		sailors_recovery_speed = 0.33
+		may_perform_slave_raid = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			NOT = { has_dlc = "Mare Nostrum" }
+		}
+		can_use_trade_post = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Mare Nostrum"
+			NOT = { has_dlc = "Res Publica" }
+		}
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			has_dlc = "Mare Nostrum"
+		}
+		can_use_trade_post = yes
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+	custom_attributes = {
+		is_merchant_republic = yes
+		diet_increases_not_influence = yes
+	}
+}
+nav_fueros_reform = {
+	icon = nav_fuero
+	allow_normal_conversion = yes 
+	potential = {
+		OR = { 
+			primary_culture = basque 
+			#primary_culture = navarrese
+			has_reform = nav_fueros_reform
+			have_had_reform = nav_fueros_reform
+		}
+	}
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	modifiers = {
+		num_of_parliament_issues = 1
+		expand_infrastructure_cost_modifier = -0.25
+	}
+	conditional = {
+		allow = { has_dlc = "Mandate of Heaven" }
+		custom_attributes = {
+			nav_fueros_edict = yes
+		}
+	}
+	ai = {
+		factor = 1
+	}
+}
+hidalgo_reform = {
+	icon = cervantes
+	allow_normal_conversion = yes 
+	potential = {
+		OR = { 
+			culture_group = iberian 
+			primary_culture = basque 
+			has_reform = hidalgo_reform
+			have_had_reform = hidalgo_reform
+		}
+	}
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	modifiers = {
+		nobles_influence_modifier = 0.1
+		nobles_loyalty_modifier = 0.15
+		stability_cost_modifier = -0.1
+		global_manpower_modifier = -0.1
+	}
+	ai = {
+		factor = 1
+	}
+}
+spa_coi_reform = {
+	icon = contreras
+	allow_normal_conversion = yes 
+	potential = {
+		OR = { 
+			tag = CAS 
+			was_tag = CAS 
+			tag = SPA 
+			was_tag = SPA 
+			tag = SPN 
+			has_reform = spa_coi_reform
+			have_had_reform = spa_coi_reform
+		}
+	}
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	modifiers = {
+		global_trade_power = 0.05
+		treasure_fleet_income = 0.25
+		reduced_liberty_desire_on_other_continent = -0.05
+		colonist_placement_chance = 0.15
+	}
+	ai = {
+		factor = 1
+	}
+}
+hermandad_reform = {
+	icon = hermandad
+	allow_normal_conversion = yes 
+	potential = {
+		OR = { 
+			tag = CAS 
+			was_tag = CAS 
+			tag = SPA 
+			was_tag = SPA 
+			tag = SPN 
+			was_tag = SPN
+			has_reform = hermandad_reform
+			have_had_reform = hermandad_reform
+		}
+		religion = catholic
+	}
+	trigger = { mission_completed = spa_santa_hermandad }
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	modifiers = {
+		global_rebel_suppression_efficiency = 0.15
+		harsh_treatment_cost = -0.1
+		papal_influence = 1
+	}
+	ai = {
+		factor = 1
+	}
+}
+flemish_court_reform = {
+	icon = carlos_i
+	allow_normal_conversion = yes 
+	potential = {
+		OR = { 
+			tag = CAS 
+			was_tag = CAS 
+			tag = SPA 
+			was_tag = SPA 
+			tag = SPN 
+			has_reform = spa_coi_reform
+			have_had_reform = spa_coi_reform
+		}
+	}
+	trigger = { accepted_culture = flemish }
+	valid_for_nation_designer = no
+	nation_designer_cost = 10
+	modifiers = {
+		monarch_admin_power = 1
+		advisor_cost = -0.1
+		advisor_pool = 1
+		num_accepted_cultures = 1 
+		nobles_loyalty_modifier = -0.1
+		nobles_influence_modifier = -0.1
+	}
+	ai = {
+		factor = 1
+	}
+}
+savoy_reform = {
+	icon = sav_states
+	allow_normal_conversion = no
+	legacy_equivalent = feudal_monarchy
+	valid_for_nation_designer = yes
+	lock_level_when_selected = yes 
+	fixed_rank = 1
+	potential = {
+		OR = { 
+			has_reform = savoy_reform
+			have_had_reform = savoy_reform
+		}
+	}
+	nation_designer_cost = 0
+	modifiers = {
+		num_accepted_cultures = 2
+		global_tax_modifier = 0.05
+		min_autonomy = 25
+		governing_capacity_modifier = -0.5
+	}
+}
+reorganized_savoy_reform = {
+	icon = emanuele
+	allow_normal_conversion = no
+	legacy_equivalent = feudal_monarchy
+	valid_for_nation_designer = yes
+	lock_level_when_selected = yes 
+	fixed_rank = 1
+	potential = {
+		OR = { 
+			has_reform = reorganized_savoy_reform
+			have_had_reform = reorganized_savoy_reform
+		}
+	}
+	nation_designer_cost = 0
+	modifiers = {
+		global_tax_modifier = 0.1
+		num_accepted_cultures = 2
+		min_autonomy = 10
+		governing_capacity_modifier = -0.25
+	}
+}
+savoy_kingdom_reform = {
+	icon = vittorio_amedeo
+	allow_normal_conversion = no
+	legacy_equivalent = feudal_monarchy
+	valid_for_nation_designer = yes
+	lock_level_when_selected = yes 
+	potential = {
+		OR = { 
+			has_reform = savoy_kingdom_reform
+			have_had_reform = savoy_kingdom_reform
+		}
+	}
+	nation_designer_cost = 0
+	modifiers = {
+		global_tax_modifier = 0.25
+		num_accepted_cultures = 3
+		global_unrest = -1
+		max_absolutism = 5
+	}
+}
+statuta_sabaudiae_reform = {
+	icon = amedeo
+	allow_normal_conversion = no
+	legacy_equivalent = feudal_monarchy
+	valid_for_nation_designer = yes
+	lock_level_when_selected = yes 
+	potential = {
+		OR = { 
+			has_reform = statuta_sabaudiae_reform
+			have_had_reform = statuta_sabaudiae_reform
+		}
+	}
+	nation_designer_cost = 0
+	modifiers = {
+		advisor_cost = -0.05
+		yearly_corruption = -0.01
+		legitimacy = 1
+	}
+}
+bohemian_elective_kingdom_reform = {
+	icon = wenceslas
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			primary_culture = czech
+			primary_culture = czech_new
+		}
+	}
+	nation_designer_trigger = {
+		OR = {
+			primary_culture = czech
+			primary_culture = czech_new
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	modifiers = {
+		diplomatic_reputation = 1
+		governing_capacity_modifier = -0.5
+		nobles_influence_modifier = 0.15
+		max_absolutism = -20
+	}
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		custom_attributes = {
+			has_ruler_election = yes
+			has_improved_ruler_election = yes
+		}
+	}
+	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
+		has_parliament = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
+better_bohemian_elective_kingdom_reform = {
+	icon = wenceslas
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			has_reform = better_bohemian_elective_kingdom_reform
+			have_had_reform = better_bohemian_elective_kingdom_reform
+		}
+	}
+	nation_designer_trigger = {
+		OR = {
+			primary_culture = czech
+			primary_culture = czech_new
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	modifiers = {
+		diplomatic_reputation = 2
+		monarch_admin_power = 1
+		governing_capacity_modifier = -0.5
+		vassal_income = 0.25
+		max_absolutism = -25
+	}
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		custom_attributes = {
+			has_ruler_election = yes
+			has_improved_ruler_election = yes
+		}
+	}
+	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
+		has_parliament = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
+bohemian_absolutist_kingdom_reform = {
+	icon = wenceslas
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			has_reform = bohemian_absolutist_kingdom_reform
+			have_had_reform = bohemian_absolutist_kingdom_reform
+		}
+	}
+	nation_designer_trigger = {
+		OR = {
+			primary_culture = czech
+			primary_culture = czech_new
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	modifiers = {
+		diplomatic_reputation = 2
+		monarch_admin_power = 1
+		allow_free_estate_privilege_revocation = yes
+		yearly_absolutism = 0.05
+		max_absolutism = 10
+	}
+	ai = {
+		factor = 1
+	}
+}
+plc_autorament_reform = {
+	icon = war_map
+	allow_normal_conversion = yes
+	potential = {
+		has_country_flag = plc_autorament_flag
+	}
+	trigger = { 
+		any_ally = { culture_group = germanic }
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	modifiers = {
+		discipline = 0.03
+		army_tradition_from_battle = 0.25
+		drill_gain_modifier = 0.25
+	}
+	ai = {
+		factor = 1
+	}
+}
+ai_bav_duchy_reform = {
+	icon = bav_duke
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			has_reform = ai_bav_duchy_reform
+			have_had_reform = ai_bav_duchy_reform
+			primary_culture = bavarian 
+		}
+	}
+	trigger = { tag = BAV }
+	lock_level_when_selected = yes 
+	fixed_rank = 1
+	nation_designer_cost = 10
+	modifiers = {
+		diplomatic_reputation = 2
+		governing_capacity_modifier = -0.35
+		global_prosperity_growth = 0.05
+		allow_free_estate_privilege_revocation = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
+ai_bav_absolutism_reform = {
+	icon = max_bav
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			has_reform = ai_bav_absolutism_reform
+			have_had_reform = ai_bav_absolutism_reform
+		}
+	}
+	nation_designer_cost = 10
+	modifiers = {
+		governing_capacity_modifier = -0.25
+		diplomatic_reputation = 2
+		global_prosperity_growth = 0.1
+		allow_free_estate_privilege_revocation = yes
+		yearly_absolutism = 0.05
+		max_absolutism = 10
+	}
+	fixed_rank = 1
+	custom_attributes = {
+		free_noble_levies = yes
+	}
+
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		government_abilities = {
+			table_of_ranks_mechanic
+		}
+	}
+	ai = {
+		factor = 1
+	}
+}
+ai_bav_absolutism_kingdom_reform = {
+	icon = max_bav
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			has_reform = ai_bav_absolutism_reform
+			have_had_reform = ai_bav_absolutism_reform
+		}
+	}
+	nation_designer_cost = 10
+	modifiers = {
+		diplomatic_reputation = 2
+		global_prosperity_growth = 0.15
+		allow_free_estate_privilege_revocation = yes
+		yearly_absolutism = 0.05
+		max_absolutism = 15
+	}
+	custom_attributes = {
+		free_noble_levies = yes
+	}
+
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		government_abilities = {
+			table_of_ranks_mechanic
+		}
+	}
+	ai = {
+		factor = 1
+	}
+}
+pal_absolutism_reform = {
+	icon = karl_theodor
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			has_reform = pal_absolutism_reform
+			have_had_reform = pal_absolutism_reform
+		}
+	}
+	nation_designer_cost = 10
+	modifiers = {
+		diplomatic_reputation = 2
+		global_tax_modifier = 0.33
+		monarch_admin_power = 1
+		yearly_absolutism = 0.05
+		max_absolutism = 15
+	}
+
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		government_abilities = {
+			table_of_ranks_mechanic
+		}
+	}
+	ai = {
+		factor = 1
+	}
+}
+absolutist_monarchy_kurerzbistum_reform = {
+	potential = {
+		NOT = { tag = PAP }
+		OR = { 
+			has_reform = absolutist_kurerzbistum_reform
+			have_had_reform = absolutist_kurerzbistum_reform
+		}
+	}
+	trigger = { 
+		OR = { 
+			is_elector = yes 
+			AND = { 
+				NOT = { hre_size = 1 }
+				OR = {
+					have_had_reform = kurerzbistum_reform
+					have_had_reform = absolutist_kurerzbistum_reform
+				}
+			}
+		}
+	}
+	allow_normal_conversion = yes
+	icon = baroque
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		all_estate_influence_modifier = -0.05
+		global_tax_modifier = 0.25
+		diplomatic_reputation = 2
+		max_absolutism = 10
+		yearly_absolutism = 0.1
+	}
+}
+mainz_hofrat_monarchy_reform = {
+	potential = {
+		OR = { 
+			tag = MAI 
+			was_tag = MAI 
+			tag = KOL
+			was_tag = KOL 
+			tag = TRI
+			was_tag = TRI
+		}
+	}
+	allow_normal_conversion = yes 
+	icon = albrecht_mai
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		yearly_corruption = -0.075
+		advisor_cost = -0.1
+		global_autonomy = -0.01
+		monthly_reform_progress_modifier = 0.25
+	}
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		government_abilities = {
+			table_of_ranks_mechanic
+		}
+	}
+	custom_attributes = {
+		diet_increases_not_influence = yes
+	}
+}
+brb_constitutional_monarchy_reform = {
+    icon = brb_constitution
+    potential = {
+		OR = {
+			has_reform = brb_constitutional_monarchy_reform
+			have_had_reform = brb_constitutional_monarchy_reform
+		}
+    }
+
+    lock_level_when_selected = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+
+    conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+		}
+		has_parliament = yes
+	}
+    
+    modifiers = {
+        advisor_cost = -0.1
+		nobles_loyalty_modifier = 0.1
+		all_estate_influence_modifier = 0.05
+    }
+}
+ai_sax_reform = {
+	icon = wettin
+	allow_normal_conversion = yes
+	potential = {
+		primary_culture = saxon 
+	}
+	trigger = { 
+		OR = { 
+			tag = SAX 
+			is_elector = yes 
+		}
+	}
+	lock_level_when_selected = yes 
+	fixed_rank = 1
+	nation_designer_cost = 10
+	modifiers = {
+		diplomatic_reputation = 2
+		governing_capacity_modifier = -0.35
+		global_prosperity_growth = 0.075
+		heir_chance = 1
+	}
+	ai = {
+		factor = 1
+	}
+}
+sax_primogeniture_reform = {
+	icon = "hispanic_monarchy"
+	allow_normal_conversion = yes
+	potential = {
+		OR = { 
+			mission_completed = sax_succession
+			has_reform = sax_primogeniture_reform
+			have_had_reform = sax_primogeniture_reform
+		}
+	}
+	nation_designer_cost = 10
+	modifiers = {
+		monthly_reform_progress_modifier = 0.15
+		monarch_admin_power = 1
+		nobles_influence_modifier = -0.1
+	}
+	ai = {
+		factor = 1
+	}
+}
+sax_landtag_reform = {
+	icon = riksdag
+	allow_normal_conversion = yes
+	potential = {
+		OR = { 
+			mission_completed = sax_landtag
+			has_reform = sax_landtag_reform
+			have_had_reform = sax_landtag_reform
+		}
+	}
+	nation_designer_cost = 10
+	modifiers = {
+		advisor_cost = -0.1
+		development_cost_in_primary_culture = -0.05
+		all_estate_influence_modifier = -0.05
+	}
+	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
+		has_parliament = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
+sax_absolutism_reform = {
+	icon = august_strong
+	allow_normal_conversion = yes
+	potential = {
+		OR = { 
+			has_reform = sax_absolutism_reform
+			have_had_reform = sax_absolutism_reform
+		}
+	}
+	lock_level_when_selected = yes 
+	nation_designer_cost = 10
+	modifiers = {
+		governing_capacity_modifier = -0.35
+		global_prosperity_growth = 0.1
+		heir_chance = 1
+		max_absolutism = 10
+		great_project_upgrade_cost = -0.15
+		build_cost = -0.15
+	}
+	ai = {
+		factor = 1
+	}
+}
+ehrbarkeit_reform = {
+	icon = ehrbarkeit
+	allow_normal_conversion = yes
+	potential = {
+		OR = { 
+			has_reform = ehrbarkeit_reform
+			have_had_reform = ehrbarkeit_reform
+			primary_culture = swabian
+			primary_culture = alsatian
+		}
+	}
+	lock_level_when_selected = yes 
+	nation_designer_cost = 10
+	modifiers = {
+		nobles_loyalty_modifier = 0.075
+		burghers_loyalty_modifier = 0.075
+		advisor_cost = -0.1
+		global_unrest = -1
+	}
+	ai = {
+		factor = 1
+	}
+}
+oberramt_reform = {
+	icon = oberramt
+	allow_normal_conversion = yes
+	potential = {
+		OR = { 
+			has_reform = oberramt_reform
+			have_had_reform = oberramt_reform
+		}
+	}
+	lock_level_when_selected = yes 
+	nation_designer_cost = 10
+	modifiers = {
+		global_tax_modifier = 0.25
+		global_autonomy = -0.03
+		state_maintenance_modifier = -0.25
+		nobles_influence_modifier = 0.05
+		burghers_influence_modifier = 0.05
+	}
+	custom_attributes = {
+		diet_increases_not_influence = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
+kirchenordinung_reform = {
+	icon = kirchenordinung
+	allow_normal_conversion = yes
+	potential = {
+		OR = { 
+			has_reform = kirchenordinung_reform
+			have_had_reform = kirchenordinung_reform
+			AND = { 
+				culture_group = germanic
+				religion = protestant
+			}
+		}
+	}
+	disables_estate_church_estate = yes 
+	lock_level_when_selected = yes 
+	nation_designer_cost = 10
+	modifiers = {
+		tolerance_own = 2
+		global_heretic_missionary_strength = 0.025
+		innovativeness_gain = 0.15
+	}
+	ai = {
+		factor = 1
+	}
+}
+truchsessian_reform = {
+	icon = truchsess
+	allow_normal_conversion = yes
+	potential = {
+		OR = { 
+			has_reform = truchsessian_reform
+			have_had_reform = truchsessian_reform
+			AND = { 
+				tag = KOL 
+				NOT = { government = theocracy } #redundant but duh
+			}
+		}
+	}
+	disables_estate_church_estate = yes 
+	lock_level_when_selected = yes 
+	nation_designer_cost = 10
+	modifiers = {
+		no_religion_penalty = yes 
+		innovativeness_gain = 0.15
+	}
+	ai = {
+		factor = 1
+	}
+}
+swabian_principality_reform = {
+	icon = eberhard_i
+	allow_normal_conversion = yes
+	potential = {
+		OR = { 
+			has_reform = swabian_principality_reform
+			have_had_reform = swabian_principality_reform
+			primary_culture = swabian
+		}
+	}
+	lock_level_when_selected = yes 
+	fixed_rank = 1
+	nation_designer_cost = 10
+	modifiers = {
+		improve_relation_modifier = 0.1
+		heir_chance = 0.25
+		governing_capacity_modifier = -0.5
+	}
+	ai = {
+		factor = 1
+	}
+}
+wur_duchy_reform = {
+	icon = eberhard_v
+	allow_normal_conversion = no
+	potential = {
+		OR = { 
+			has_reform = wur_duchy_reform
+			have_had_reform = wur_duchy_reform
+			tag = WUR 
+		}
+	}
+	lock_level_when_selected = yes 
+	fixed_rank = 1
+	nation_designer_cost = 10
+	modifiers = {
+		improve_relation_modifier = 0.15
+		heir_chance = 0.5
+		governing_capacity_modifier = -0.25
+		land_forcelimit_modifier = 0.2
+		land_maintenance_modifier = -0.1
+	}
+	ai = {
+		factor = 1
+	}
+}
+wur_absolutism_reform = {
+	icon = eberhard_ludwig
+	allow_normal_conversion = no
+	potential = {
+		OR = { 
+			has_reform = wur_absolutism_reform
+			have_had_reform = wur_absolutism_reform
+		}
+	}
+	lock_level_when_selected = yes 
+	nation_designer_cost = 10
+	modifiers = {
+		improve_relation_modifier = 0.2
+		heir_chance = 1
+		land_forcelimit_modifier = 0.25
+		land_maintenance_modifier = -0.15
+		max_absolutism = 10
+		prestige = 1
+	}
+	ai = {
+		factor = 1
+	}
+}
+landgraviate_reform = {
+	icon = landgraviate
+	allow_normal_conversion = no
+	potential = {
+		OR = { 
+			has_reform = landgraviate_reform
+			have_had_reform = landgraviate_reform
+			tag = THU 
+			tag = HES 
+			#tag = MBG 
+			tag = KSS 
+		}
+	}
+	fixed_rank = 1
+	lock_level_when_selected = yes 
+	nation_designer_cost = 10
+	modifiers = {
+		land_forcelimit_modifier = 0.15
+		land_maintenance_modifier = -0.15
+		global_tax_modifier = 0.1
+	}
+	ai = {
+		factor = 1
+	}
+}
+hesse_reform = {
+	icon = amalie_hesse
+	allow_normal_conversion = no
+	potential = {
+		OR = { 
+			has_reform = hesse_reform
+			have_had_reform = hesse_reform
+		}
+	}
+	lock_level_when_selected = yes 
+	nation_designer_cost = 10
+	modifiers = {
+		land_forcelimit_modifier = 0.15
+		land_maintenance_modifier = -0.2
+		global_tax_modifier = 0.15
+		heir_chance = 0.25
+		max_absolutism = 5
+	}
+	ai = {
+		factor = 1
+	}
+}
+landeskinder_reform = {
+	icon = jaeger
+	allow_normal_conversion = no
+	potential = {
+		OR = { 
+			has_reform = landeskinder_reform
+			have_had_reform = landeskinder_reform
+		}
+	}
+	lock_level_when_selected = yes 
+	nation_designer_cost = 10
+	modifiers = {
+		global_manpower_modifier = 0.15
+		discipline = 0.05
+		mercenary_discipline = 0.05
+	}
+	conditional = {
+		allow = { has_dlc = "Rights of Man" }
+		government_abilities = {
+			militarization_mechanic
+		}
+	}
+	ai = {
+		factor = 1
+	}
+}
+welf_principality_reform = {
+	icon = bernhard
+	allow_normal_conversion = no
+	potential = {
+		OR = { 
+			has_reform = welf_principality_reform
+			have_had_reform = welf_principality_reform
+			tag = BRU
+			tag = LUN
+			tag = CLB 
+			tag = GTT
+		}
+	}
+	fixed_rank = 1
+	lock_level_when_selected = yes 
+	nation_designer_cost = 10
+	modifiers = {
+		stability_cost_to_declare_war = 1
+		heir_chance = 0.2
+		global_prov_trade_power_modifier = 0.1
+	}
+	ai = {
+		factor = 1
+	}
+}
+welf_duchy_reform = {
+	icon = welf
+	allow_normal_conversion = no
+	potential = {
+		OR = { 
+			has_reform = welf_duchy_reform
+			have_had_reform = welf_duchy_reform
+			tag = BRL 
+			tag = HAN 
+		}
+	}
+	lock_level_when_selected = yes 
+	nation_designer_cost = 10
+	modifiers = {
+		heir_chance = 0.25
+		global_prov_trade_power_modifier = 0.15
+		diplomats = 1
+		advisor_cost = -0.05
+	}
+	ai = {
+		factor = 1
+	}
+}
+hanoverian_reform = {
+	icon = han_george
+	allow_normal_conversion = no
+	potential = {
+		OR = { 
+			has_reform = hanoverian_reform
+			have_had_reform = hanoverian_reform
+			tag = HAN 
+			was_tag = HAN 
+		}
+	}
+	lock_level_when_selected = yes 
+	nation_designer_cost = 10
+	modifiers = {
+		global_prov_trade_power_modifier = 0.25
+		max_absolutism = 10
+		max_absolutism_effect = 0.15
+		diplomats = 1
+		advisor_cost = -0.1
+	}
+	ai = {
+		factor = 1
+	}
+}
+protestant_bishops_reform = {
+	icon = protestant_bishops
+	allow_normal_conversion = yes
+	potential = {
+		OR = { 
+			has_reform = protestant_bishops_reform
+			have_had_reform = protestant_bishops_reform
+		}
+	}
+	lock_level_when_selected = yes 
+	nation_designer_cost = 10
+	modifiers = {
+		church_loyalty_modifier = 0.075
+		church_influence_modifier = 0.1
+		reverse_relation_with_same_religion = 10
+	}
+	effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_tax_building_trigger = yes
+				}
+				add_province_modifier = {
+					name = gov_expanded_temple_rights_mod
+					duration = -1
+				}
+			}
+		}
+	}
+	post_removed_effect = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = gov_expanded_temple_rights_mod
+				}
+				remove_province_modifier = gov_expanded_temple_rights_mod
+			}
+		}
+	}
+	custom_attributes = {
+		temples_modifier = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
+han_primogeniture_reform = {
+	icon = han_primogeniture_reform
+	allow_normal_conversion = yes
+	potential = {
+		primary_culture = eastphalian
+	}
+	trigger = { 
+		OR = { 
+			dynasty = "von Welf"
+			tag = BRL 
+			tag = HAN
+		}
+	}
+	lock_level_when_selected = yes 
+	nation_designer_cost = 10
+	modifiers = {
+		monarch_admin_power = 1
+		max_absolutism_effect = 0.075
+		nobles_influence_modifier = -0.1
+	}
+	ai = {
+		factor = 1
+	}
+}
+kol_monarchy_reform = {
+	potential = {
+		OR = { 
+			tag = KOL 
+			was_tag = KOL 
+		}
+	}
+	allow_normal_conversion = yes
+	icon = agnes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		global_tax_modifier = 0.15
+		diplomatic_reputation = 1
+		female_advisor_chance = 0.15
+		max_absolutism = 5
+	}
+}
+kol_absolute_monarchy_reform = {
+	potential = {
+		OR = { 
+			tag = KOL 
+			was_tag = KOL 
+		}
+	}
+	allow_normal_conversion = yes
+	icon = clemens
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		global_tax_modifier = 0.25
+		diplomatic_reputation = 2
+		female_advisor_chance = 0.15
+		max_absolutism = 10
+		max_absolutism_effect = 0.15
+	}
+}
+frisian_chiefdom_reform = {
+	icon = haadling
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes
+	potential = {
+		primary_culture = frisian
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+	nation_designer_trigger = {
+		has_dlc = "Res Publica"
+	}
+
+	modifiers = {
+		global_manpower_modifier = 0.1
+		max_absolutism = -10
+		peasants_influence_modifier = 0.15
+		nobles_influence_modifier = 0.15
+		aetas_fetkeapers_influence = 0.15
+	}
+	factions = { 
+		aetas_skieringers
+		aetas_fetkeapers
+	}
+}
+east_frisian_monarchy_reform = {
+	icon = edzard
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes
+	potential = {
+		tag = EFR 
+	}
+	trigger = { 
+		OR = { 
+			is_part_of_hre = yes 
+			NOT = { hre_size = 1 }
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+	nation_designer_trigger = {
+		has_dlc = "Res Publica"
+	}
+
+	modifiers = {
+		global_manpower_modifier = 0.15
+		global_tax_modifier = 0.1
+		heir_chance = 0.5
+		nobles_influence_modifier = 0.1
+	}
+}
+ned_states_general_reform = {
+	icon = "dutch_republic"
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes 
+	potential = {
+		OR = {
+			AND = {
+				OR = {
+					primary_culture = dutch
+					primary_culture = frisian
+					primary_culture = flemish
+				}
+				NOT = { map_setup = map_setup_random }
+			}
+			AND = {
+				is_playing_custom_nation = yes
+				have_had_reform = ned_states_general_reform
+			}
+		}
+	}
+	trigger = {
+		is_lesser_in_union = no
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+
+	modifiers = {
+		trade_efficiency = 0.1
+		parliament_effect_duration = 1
+		min_autonomy = 25
+	}
+
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+		}
+		states_general_mechanic = {
+			statists = {
+				naval_forcelimit_modifier = 0.10
+				global_trade_power = 0.05
+				legitimacy = -0.5
+			}
+
+			orangists = {
+				land_forcelimit_modifier = 0.25
+				stability_cost_modifier = -0.10
+				legitimacy = 0.5
+			}
+		}
+	}
+	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
+		has_parliament = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
+low_countries_monarchy_reform = {
+	icon = zeeland
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes
+	fixed_rank = 1
+	valid_for_nation_designer = no
+	potential = {
+		OR = { 
+			culture_group = nederlandic
+			has_reform = low_countries_monarchy_reform
+			have_had_reform = low_countries_monarchy_reform
+		}
+	}
+	modifiers = {
+		min_autonomy = 10
+		diplomatic_upkeep = 1
+		advisor_cost = -0.025
+	}
+}
+
+hol_states_reform = {
+	icon = "dutch_republic"
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes 
+	potential = {
+		OR = {
+			tag = HOL 
+			was_tag = HOL
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+
+	modifiers = {
+		nobles_influence_modifier = 0.05
+		burghers_influence_modifier = 0.05
+		global_unrest = -2
+	}
+	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
+		has_parliament = yes
+	}
+	custom_attributes = {
+		diet_increases_not_influence = yes
+	}
+}
+bur_chancery_reform = {
+	icon = nicolas_rolin
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes 
+	potential = {
+		OR = {
+			tag = BUR 
+			was_tag = BUR 
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+
+	modifiers = {
+		advisor_cost = -0.1
+		global_tax_modifier = 0.15
+		all_estate_influence_modifier = -0.05
+	}
+	custom_attributes = {
+		diet_increases_not_influence = yes
+	}
+}
+bur_oc_reform = {
+	icon = charles_the_bold
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes 
+	potential = {
+		OR = {
+			tag = BUR 
+			was_tag = BUR 
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+
+	modifiers = {
+		land_maintenance_modifier = -0.15
+		land_forcelimit_modifier = 0.15
+		drill_gain_modifier = 0.15
+		mercenary_discipline = 0.075
+	}
+	custom_attributes = {
+		personal_union_war_contribution = yes
+		mercs_do_not_cost_army_professionalism = yes
+	}
+}
+bur_estates_general_reform = {
+	icon = philippe_le_bon 
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes 
+	potential = {
+		OR = {
+			tag = BUR 
+			was_tag = BUR 
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+
+	modifiers = {
+		global_unrest = -1
+		global_autonomy = 0.05
+		min_autonomy = 15
+		all_estate_loyalty_equilibrium = 0.05
+		all_estate_influence_modifier = 0.10
+		vassal_income = 0.1
+	}
+	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
+		has_parliament = yes
+	}
+}
+bur_great_privilege_reform = {
+	icon = marie
+	allow_normal_conversion = yes
+	potential = {
+		OR = { 
+			has_reform = bur_great_privilege_reform
+			have_had_reform = bur_great_privilege_reform
+		}
+	}
+	modifiers = {
+		chance_to_inherit = 0.15
+		governing_capacity = 150
+		num_accepted_cultures = 1
+		max_absolutism = 5
+	}
+	custom_attributes = {
+		no_more_dutch_revolt = yes
+	}
+}
+burgundian_duchy_reform = {
+	icon = jean_sans_peur
+	fixed_rank = 1
+	allow_normal_conversion = no
+	legacy_equivalent = feudal_monarchy
+	lock_level_when_selected = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			has_reform = burgundian_duchy_reform
+			have_had_reform = burgundian_duchy_reform
+		}
+	}
+	nation_designer_cost = 0
+	modifiers = {
+		vassal_forcelimit_bonus = 0.25
+		diplomatic_upkeep = 4
+		diplomats = 1
+		reduced_liberty_desire_on_same_continent = 10
+	}
+	custom_attributes = { 
+		has_itinerant_capital = yes
+		locked_government_type = yes
+	}
+}
+bur_parliament_of_mechelen_reform = {
+	icon = mechelen 
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes 
+	potential = {
+		OR = {
+			has_reform = bur_parliament_of_mechelen_reform
+			have_had_reform = bur_parliament_of_mechelen_reform
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+
+	modifiers = {
+		global_unrest = -2
+		global_autonomy = 0.05
+		max_absolutism = -10
+		vassal_income = 0.15
+		reduced_liberty_desire = 25
+	}
+	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
+		has_parliament = yes
+	}
+	custom_attributes = {
+		no_more_dutch_revolt = yes
+		cannot_integrate_personal_unions = yes
+		cannot_abandon_personal_unions = yes
+	}
+}
+foix_monarchy_reform = {
+	icon = gaston_febus
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes
+	fixed_rank = 1
+	valid_for_nation_designer = no
+	potential = {
+		OR = { 
+			has_reform = foix_monarchy_reform
+			have_had_reform = foix_monarchy_reform
+			tag = FOI 
+			tag = BEA 
+		}
+	}
+	modifiers = {
+		development_cost_in_primary_culture = -0.05
+		hostile_attrition = 1
+		improve_relation_modifier = 0.15
+		prestige = 0.15
+	}
+	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
+		has_parliament = yes
+	}
+}
+
+signoria_monarchy_reform = {
+	icon = "signoria_reform"
+	allow_normal_conversion = no
+	legacy_equivalent = signoria
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	fixed_rank = 1
+	lock_level_when_selected = yes
+	potential = {
+		culture_group = latin
+	}
+	nation_designer_trigger = {
+		culture_group = latin
+	}
+	modifiers = {
+		global_tax_modifier = 0.15
+		production_efficiency = 0.15
+		governing_capacity_modifier = -0.5
+		burghers_influence_modifier = 0.1
+	}
+	custom_attributes = {
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+		boost_income = yes
+		locked_government_type = yes
+		rulers_can_be_generals = yes
+	}
+	#conditional = {
+	#	allow = { has_dlc = "Res Publica" }
+	#	duration = 4
+	#	has_term_election = yes
+	#	states_general_mechanic = {
+	#		signorie = {
+	#			naval_forcelimit_modifier = 0.10
+	#			global_trade_power = 0.05
+	#			republican_tradition = 1
+	#		}
+	#		
+	#		monarchists = {
+	#			diplomatic_reputation = 1
+	#			manpower_recovery_speed = 0.1
+	#			global_unrest = -1
+	#		}
+	#	}
+	#}
+	ai = {
+		factor = 10
+	}
+}
+remenca_reform = {
+	icon = remenca
+	allow_normal_conversion = yes
+	potential = {
+		OR = { 
+			has_reform = remenca_reform
+			have_had_reform = remenca_reform
+			#tag = NPI
+			tag = ARA 
+		}
+	}
+	modifiers = {
+		peasants_influence_modifier = 0.1
+		nobles_influence_modifier = -0.1
+		global_unrest = 2
+		global_tax_modifier = 0.15
+		crown_power_gain_modifier = 0.15
+	}
+}
+montesa_reform = {
+	icon = montesa
+	allow_normal_conversion = yes
+	potential = {
+		OR = { 
+			has_reform = montesa_reform
+			have_had_reform = montesa_reform
+			#tag = NPI
+			primary_culture = catalan
+			primary_culture = aragonese
+		}
+	}
+	modifiers = {
+		establish_order_cost = -0.1
+		discipline = 0.05
+		stability_cost_modifier = -0.075
+	}
+}
+mudejar_tolerance_reform = {
+	icon = mudejar
+	allow_normal_conversion = yes
+	potential = {
+		OR = { 
+			has_reform = mudejar_tolerance_reform
+			have_had_reform = mudejar_tolerance_reform
+			primary_culture = catalan
+			primary_culture = basque
+			culture_group = iberian 
+		}
+		any_owned_province = { 
+			region = iberia_region
+			OR = { 
+				religion_group = muslim 
+				religion = jewish
+			}
+		}
+	}
+	trigger = { 
+		any_owned_province = { 
+			region = iberia_region
+			OR = { 
+				religion_group = muslim 
+				religion = jewish
+			}
+		}
+	}
+	modifiers = {
+		tolerance_heathen = 1
+		idea_cost = -0.025
+		global_manpower_modifier = 0.075
+	}
+}
+catalonian_principality_reform = {
+	icon = "catalan_cortes"
+	allow_normal_conversion = no
+	potential = {
+		OR = {
+			tag = CAT
+			has_reform = catalonian_principality_reform
+			have_had_reform = catalonian_principality_reform
+		}
+	}
+	nation_designer_trigger = {
+		OR = {
+			primary_culture = catalan
+		}
+	}
+	valid_for_nation_designer = yes
+	lock_level_when_selected = yes
+	nation_designer_cost = 10
+	fixed_rank = yes 
+	modifiers = {
+		diplomatic_reputation = 1
+		nobles_influence_modifier = 0.2
+		diplomatic_upkeep = 2
+		parliament_effect_duration = 5
+		num_of_parliament_issues = 1
+	}
+	conditional = {
+		allow = { has_dlc = "Res Publica" }
+		is_elective = yes
+		custom_attributes = {
+			has_polish_election = yes
+			locked_government_type = yes
+		}
+	}
+
+	conditional = {
+		allow = { NOT = { has_dlc = "Res Publica" } }
+		custom_attributes = {
+			locked_government_type = yes
+		}
+	}
+
+	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
+		has_parliament = yes
+	}
+
+	ai = {
+		factor = 1
+	}
+}
+sicilian_monarchy_reform = {
+	icon = roger_ii
+	allow_normal_conversion = no
+	potential = {
+		OR = {
+			tag = SIC
+			was_tag = SIC 
+			primary_culture = sicilian 
+		}
+	}
+	trigger = {
+		government_rank = 2
+	}
+	nation_designer_trigger = {
+		OR = {
+			primary_culture = sicilian
+		}
+	}
+	valid_for_nation_designer = yes
+	lock_level_when_selected = yes
+	nation_designer_cost = 10
+	modifiers = {
+		nobles_influence_modifier = 0.1
+		liberty_desire = 25
+		diplomatic_reputation = 1
+		production_efficiency = 0.1
+	}
+
+	conditional = {
+		allow = {
+			OR = {
+				has_dlc = "Common Sense"
+				has_dlc = "Domination"
+			}
+		}
+		has_parliament = yes
+	}
+
+	conditional = {
+		allow = { 
+			has_dlc = "Res Publica" 
+			is_free_or_tributary_trigger = yes #neo says false positive, in lack of us understanding this one 
+		}
+		is_elective = yes
+		custom_attributes = {
+			has_polish_election = yes
+			locked_government_type = yes
+		}
+	}
+
+	ai = {
+		factor = 1
+	}
+}
+genoese_banks_reform = {
+	icon = "judge"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			has_reform = genoese_banks_reform
+			have_had_reform = genoese_banks_reform
+			has_country_flag = enable_gen_banks_flag
+		}
+	}
+	trigger = {
+		OR = { 
+			alliance_with = GEN 
+			GEN = { is_subject_of = ROOT }
+			AND = { 
+				owns_core_province = 101
+				accepted_culture = ligurian
+			}
+		}
+	}
+	valid_for_nation_designer = no
+	modifiers = {
+		inflation_action_cost = -0.1
+		possible_adm_policy = 1
+		advisor_pool = 1
+	}
+	government_abilities = { 
+		casa_san_giorgio
+	}
+	ai = {
+		factor = 1
+	}
+}
+patronato_real = {
+	icon = patronato
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			has_reform = patronato_real
+			have_had_reform = patronato_real
+		}
+	}
+	valid_for_nation_designer = no
+	modifiers = {
+		church_loyalty_modifier = 0.1
+		prestige_per_development_from_conversion = 0.15
+		global_heathen_missionary_strength = 0.025
+		missionaries = 1
+	}
+
+	ai = {
+		factor = 1
+	}
+}
+aragonese_infantado_reform = {
+	icon = antequera
+	allow_normal_conversion = no
+	potential = {
+		OR = {
+			tag = PNF
+			tag = ABQ
+		}
+		dynasty = "de Trast�mara"
+	}
+	valid_for_nation_designer = no
+	lock_level_when_selected = yes
+	nation_designer_cost = 10
+	modifiers = {
+		land_forcelimit_modifier = 0.15
+		land_maintenance_modifier = -0.15
+		diplomatic_reputation = 2
+		prestige_decay = -0.05
+	}
+
+	ai = {
+		factor = 1
+	}
+}
+fief_reform = {
+	icon = "nobleman"
+	allow_normal_conversion = no
+	potential = {
+		is_subject_of_type = fief
+	}
+	replacement_on_independence_war = feudalism_reform
+	fixed_rank = 1
+	maintain_dynasty = yes
+	valid_for_nation_designer = no
+	lock_level_when_selected = yes
+	modifiers = {
+		land_forcelimit_modifier = -0.25
+		nobles_loyalty_modifier = 0.1
+		nobles_influence_modifier = 0.05
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+angevin_monarchy_reform = {
+	icon = charles_anjou
+	allow_normal_conversion = yes
+	potential = {
+		OR = { 
+			tag = ANJ 
+			tag = NAP 
+		}
+		primary_culture = angevin
+	}
+	valid_for_nation_designer = no
+	lock_level_when_selected = yes
+	modifiers = {
+		diplomatic_reputation = 1
+		diplomatic_upkeep = 1
+		administrative_efficiency = -0.025
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+neapolitan_monarchy_reform = {
+	icon = roberto
+	allow_normal_conversion = yes
+	potential = {
+		tag = NAP 
+	}
+	valid_for_nation_designer = no
+	lock_level_when_selected = yes
+	modifiers = {
+		diplomatic_upkeep = -1
+		diplomatic_annexation_cost = 0.25
+		global_tax_modifier = 0.1
+	}
+}
+reformed_neapolitan_monarchy_reform = {
+	icon = ferrante
+	allow_normal_conversion = yes
+	potential = {
+		tag = NAP 
+		OR = { 
+			has_reform = reformed_neapolitan_monarchy_reform
+			have_had_reform = reformed_neapolitan_monarchy_reform
+		}
+	}
+	valid_for_nation_designer = no
+	lock_level_when_selected = yes
+	modifiers = {
+		nobles_loyalty_modifier = -0.1
+		nobles_influence_modifier = -0.05
+		global_tax_modifier = 0.15
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+liber_augustalis_reform = {
+	icon = frederick_ii
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = SIC
+			was_tag = SIC 
+			tag = NAP 
+			was_tag = NAP 
+			primary_culture = sicilian 
+			primary_culture = neapolitan
+		}
+	}
+	trigger = { 
+		government_rank = 2
+	}
+	nation_designer_trigger = {
+		OR = {
+			primary_culture = sicilian
+		}
+	}
+	valid_for_nation_designer = yes
+	lock_level_when_selected = yes
+	nation_designer_cost = 10
+	modifiers = {
+		nobles_influence_modifier = -0.1
+		legitimacy = 1
+		allow_free_estate_privilege_revocation = yes
+	}
+
+	ai = {
+		factor = 1
+	}
+}
+upgraded_liber_augustalis_reform = {
+	icon = frederick_ii
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			has_reform = upgraded_liber_augustalis_reform
+			have_had_reform = upgraded_liber_augustalis_reform
+		}
+	}
+	trigger = { 
+		government_rank = 2
+	}
+	nation_designer_trigger = {
+		OR = {
+			primary_culture = sicilian
+		}
+	}
+	valid_for_nation_designer = yes
+	lock_level_when_selected = yes
+	nation_designer_cost = 10
+	modifiers = {
+		nobles_influence_modifier = -0.15
+		legitimacy = 1
+		allow_free_estate_privilege_revocation = yes
+	}
+	custom_attributes = {
+		seizing_land_loyalty = yes
+		seizing_land_no_rebels = yes
+	}
+
+	ai = {
+		factor = 1
+	}
+}
+tts_code_reform = {
+	icon = ferdinand_ii
+	allow_normal_conversion = yes
+	potential = {
+		tag = TTS
+		OR = { 
+			has_reform = tts_code_reform
+			have_had_reform = tts_code_reform
+		}
+	}
+	valid_for_nation_designer = no
+	lock_level_when_selected = yes
+	modifiers = {
+		max_absolutism = 10
+		yearly_absolutism = 0.01
+		autonomy_change_time = -0.25
+		state_maintenance_modifier = -0.15
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+sic_masserie_reform = {
+	icon = ferdinand_ii
+	allow_normal_conversion = yes
+	potential = {
+		OR = { 
+			has_reform = sic_masserie_reform
+			have_had_reform = sic_masserie_reform
+		}
+	}
+	valid_for_nation_designer = no
+	modifiers = {
+		production_efficiency = 0.1
+		governing_capacity_modifier = -0.1
+	}
+	custom_attributes = {
+		sicily_masserie = yes 
+	}
+}

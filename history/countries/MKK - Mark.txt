@@ -1,0 +1,10 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+primary_culture = hannoverian
+religion = catholic
+technology_group = western
+capital = 5357 #mark
+historical_rival = KOL 
+historical_friend = KLE 
+historical_rival = LPP

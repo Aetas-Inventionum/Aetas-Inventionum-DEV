@@ -1,0 +1,36 @@
+#6512 - YoshkarOla
+#Area - Viatka Land
+#Region - Russia 
+
+#Core Details
+capital = "Yoshkar Ola"
+is_city = yes
+owner = KAZ
+controller = KAZ
+
+#Demographics
+culture = mari
+religion = tengri_pagan_reformed
+
+#Development and Trade
+base_tax = 1
+base_production = 2
+base_manpower = 1
+trade_goods = beer
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = KAZ
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = nomad_group
+
+#Histories

@@ -1,0 +1,35 @@
+#6024 - Sarna
+#Area - Jamtland
+#Region - Scandinavia 
+
+#Core Details
+capital = "Särna"
+is_city = yes
+owner = NOR 
+controller = NOR 
+
+#Demographics
+culture = norwegian
+religion = catholic
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = fur
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = NOR
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+
+#Histories

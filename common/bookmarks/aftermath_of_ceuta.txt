@@ -1,0 +1,16 @@
+bookmark =
+{
+	name = "CONQUEST_OF_CEUTA"
+	desc = "CONQUEST_OF_CEUTA_DESC"
+	date = 1415.8.22
+	
+	center = 225
+	default = yes
+	
+	country = POR
+	country = CAS
+	country = ARA
+	country = NAV
+	country = GRA
+	country = CAE
+}

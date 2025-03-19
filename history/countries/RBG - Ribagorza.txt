@@ -1,0 +1,20 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+primary_culture = aragonese 
+religion = catholic
+technology_group = western
+capital = 3366 #Ribagorça
+fixed_capital = 3366
+
+1412.1.1 = { 
+	monarch = { 
+		name = "Alfons V" #Alfons II as Duke of Gandia
+		dynasty = "de Barcelona"
+		birth_date = 1358.1.1
+		death_date = 1422.1.1
+		adm = 3
+		dip = 3
+		mil = 1
+	}
+}

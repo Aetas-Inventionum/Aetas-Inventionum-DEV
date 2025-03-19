@@ -1,0 +1,37 @@
+#4250 - Mologa
+#Area - Yaroslavl
+#Region - Russia 
+
+#Core Details
+capital = "Mologa"   
+is_city = yes
+owner = YAR
+controller = YAR
+
+#Demographics
+culture = russian
+religion = orthodox
+
+#Development and Trade
+base_tax = 2
+base_production = 2
+base_manpower = 3
+trade_goods = naval_supplies
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = YAR
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+center_of_trade = 2
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = nomad_group
+
+#Histories

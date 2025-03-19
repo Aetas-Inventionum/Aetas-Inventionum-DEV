@@ -1,0 +1,93 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+color = { 63  114  43 } #134 154 138 // 84 124 48
+
+revolutionary_colors = { 5 1 0 }
+
+historical_idea_groups = {
+	religious_ideas
+	trade_ideas
+	defensive_ideas
+	economic_ideas
+	diplomatic_ideas
+	innovativeness_ideas
+	spy_ideas
+	offensive_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	dutch_maurician
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Arnold #2" = 0
+	"Rainald #1" = 0
+	"Bruno #4" = 0
+	"Adolf #2" = 10
+	"Heinrich #2" = 10
+	"Dietrich #2" = 15
+	"Engelbert #2" = 5
+	"Konrad #1" = 5
+	"Siegfried #1" = 5
+	"Wigbold #1" = 5
+	"Walram #1" = 1
+	"Wilhelm #1" = 5
+	"Kuno #1" = 5
+	"Friedrich #3" = 10
+	"Ruprecht #0" = 10
+	"Hermann #3" = 25
+	"Philipp #1" = 10
+	"Anton #0" = 5
+	"Johann Gebhard #0" = 5
+	"Salentin #0" = 5
+	"Gebhard #0" = 10
+	"Ernst #0" = 10
+	"Ferdinand #0" = 5
+	"Maximilian Heinrich #0" = 5
+	"Joseph Clemens #0" = 5
+	"Maximilian Friedrich #0" = 5
+	"Maximilian Franz #0" = 5
+	
+	"Carina #0" = -1
+	"Diana #0" = -1
+	"Elisa #0" = -1
+}
+
+leader_names = {
+	"von Altena"
+	"von Berg"
+	"von Dassel" "von Daun"
+	"von Falkenberg"
+	"von Heinsberg" "von Hengebach" "von Hessen" "von Hochstaden" "von Holte" "von Hoya"
+	"von Isenburg"
+	"von Jülich"
+	"von Mansfeld" "von der Mark" "von Moers"
+	"von Nassau"
+	"von Sayn" "von Schaumberg"
+	"von Waldburg" "von Wied" "von Wittelsbach"
+}
+
+ship_names = {
+	"Erzbischof Brun" "Erbischof Anno" "Bischof Hildebold"
+	"Erzbischof Gunthar" "Erzbischof Gero" "Rainald von Dassel"
+	"Engelbert II" "Konrad Hochstaden" Rhein Erft Agger
+}
+
+army_names = {
+	"Kurkölnische Armee" "Armee von $PROVINCE$" 
+}

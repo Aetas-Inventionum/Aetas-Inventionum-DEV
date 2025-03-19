@@ -1,0 +1,39 @@
+#3230 - Eu
+#Area - Normandy
+#Region - France
+
+#Core Details
+capital = "Eu"
+is_city = yes
+owner = EUF
+controller = EUF 
+
+#Demographics
+culture = normand
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 1
+base_manpower = 1
+trade_goods = fish
+
+#Cores and Occupation (Alphabetical after current)
+add_core = EUF
+add_core = NRM
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+add_local_autonomy = 25 #Count of Eu
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

@@ -1,0 +1,39 @@
+#4558 - Orense
+#Area - Galicia
+#Region - Iberia
+
+#Core Details
+capital = "Orense"
+is_city = yes
+owner = CAS
+controller = CAS
+
+#Demographics
+culture = galician
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 1
+base_manpower = 1
+trade_goods = fruit #chestnuts and stuff
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = CAS
+add_core = GAL
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

@@ -1,0 +1,9 @@
+government = monarchy
+add_government_reform = appanage_reform
+government_rank = 1
+technology_group = western
+primary_culture = arpitan 
+add_accepted_culture = piedmontese
+religion = catholic
+capital = 5045
+fixed_capital = 5045

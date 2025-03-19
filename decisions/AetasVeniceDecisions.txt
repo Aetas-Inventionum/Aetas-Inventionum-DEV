@@ -1,0 +1,142 @@
+country_decisions = {
+	ven_kingdom_of_the_morea = {
+		major = yes
+		potential = {
+			tag = VEN 
+			NOT = { exists = MEA }
+			any_owned_province = {
+				OR = { 
+					area = morea_area 
+					area = achaea_area
+				}
+			}
+		}
+		allow = {
+			morea_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+			achaea_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+		}
+		effect = {
+			morea_area = {
+				cede_province = MEA 
+				add_core = MEA 
+				remove_core = FROM 
+			}
+			achaea_area = { 
+				cede_province = MEA 
+				add_core = MEA 
+				remove_core = FROM 
+			}
+			create_subject = { 
+				who = MEA 
+				subject_type = trade_colony
+			}
+			MEA = { 
+				add_government_reform = venetocracy_reform 
+				hidden_effect = { change_country_color = { color = { 74  187  35 } } }
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	ven_kingdom_of_thessalonica = {
+		major = yes
+		potential = {
+			tag = VEN 
+			NOT = { exists = TSA }
+			any_owned_province = {
+				OR = { 
+					area = macedonia_area
+					area = thessaly_area
+				}
+			}
+		}
+		allow = {
+			148 = { country_or_non_sovereign_subject_holds = ROOT  }
+			5557 = { country_or_non_sovereign_subject_holds = ROOT  }
+			5553 = { country_or_non_sovereign_subject_holds = ROOT  }
+			4702 = { country_or_non_sovereign_subject_holds = ROOT  }
+			5543 = { country_or_non_sovereign_subject_holds = ROOT  }
+			5542 = { country_or_non_sovereign_subject_holds = ROOT  }
+			thessaly_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+		}
+		effect = {
+			every_province = { 
+				limit = { 
+					OR = { 
+						area = macedonia_area
+						area = thessaly_area
+					}
+					country_or_non_sovereign_subject_holds = ROOT 
+				}
+				cede_province = TSA 
+				add_core = TSA 
+				remove_core = FROM 
+			}
+			create_subject = { 
+				who = TSA
+				subject_type = trade_colony
+			}
+			TSA = { 
+				add_government_reform = venetocracy_reform 
+				change_country_color = { color = { 94  207  55 } }
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	ven_lte_decision = {
+		major = yes
+		potential = {
+			tag = VEN 
+			NOT = { exists = LTE }
+			any_owned_province = {
+				area = thrace_area
+			}
+		}
+		allow = {
+			OR = { 
+				AND = { 
+					151 = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = { exists = BYZ }
+				}
+				thrace_area = { 
+					country_or_non_sovereign_subject_holds = ROOT 
+					type = all 
+				}
+			}
+		}
+		effect = {
+			every_province = { 
+				limit = { 
+					area = thrace_area
+					country_or_non_sovereign_subject_holds = ROOT 
+				}
+				cede_province = LTE 
+				add_core = LTE 
+				remove_core = FROM 
+			}
+			create_subject = { 
+				who = LTE 
+				subject_type = trade_colony
+			}
+			LTE = { 
+				add_government_reform = venetocracy_reform 
+				change_country_color = { color = { 34  147  15 } }
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}

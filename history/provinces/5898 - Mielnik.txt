@@ -1,0 +1,39 @@
+#5898 - Mielnik
+#Area - Podlasie
+#Region - Ruthenia 
+
+#Core Details
+capital = "Mielnik"
+is_city = yes
+owner = LIT
+controller = LIT
+
+#Demographics
+culture = volhynian
+religion = orthodox
+
+#Development and Trade
+base_tax = 1
+base_production = 2
+base_manpower = 2
+trade_goods = beer
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = LIT
+add_core = VOL
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = nomad_group
+
+#Histories

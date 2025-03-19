@@ -1,0 +1,36 @@
+#6464 - Romanov
+#Area - Yaroslavl
+#Region - Russia 
+
+#Core Details
+capital = "Romanov"   
+is_city = yes
+owner = YAR
+controller = YAR
+
+#Demographics
+culture = russian
+religion = orthodox
+
+#Development and Trade
+base_tax = 2
+base_production = 2
+base_manpower = 2
+trade_goods = livestock
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = YAR
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = nomad_group
+
+#Histories

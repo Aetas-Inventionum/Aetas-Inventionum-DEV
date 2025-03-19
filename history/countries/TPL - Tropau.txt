@@ -1,0 +1,31 @@
+government = monarchy
+add_government_reform = appanage_reform
+government_rank = 1
+technology_group = western
+primary_culture = schlesian
+add_accepted_culture = silesian
+religion = catholic
+capital = 5235
+
+1382.1.1 = {
+	monarch = {
+		name = "Premysl I"
+		dynasty = "Premyslov"
+		birth_date = 1365.1.1
+		dip = 2
+		adm = 2
+		mil = 1
+	}
+}
+1397.1.1 = { 
+	heir = {
+		name = "Václav"
+		monarch_name = "Václav II"
+		dynasty = "Premyslov"
+		birth_date = 1397.1.1
+		death_date = 1449.1.1
+		adm = 2
+		dip = 3
+		mil = 1
+	}
+}

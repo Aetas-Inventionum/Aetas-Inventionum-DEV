@@ -1,0 +1,20 @@
+edict_of_governance = {
+	potential = {
+		has_country_flag = hab_prosperity_edict
+	}
+	
+	allow = {
+		has_country_flag = hab_prosperity_edict
+	}
+	
+	modifier = {
+		local_dev_points_modifier = 0.25
+		local_autonomy = -0.025
+	}
+	
+	color = { 69 122 232 }
+	
+	ai_will_do = {
+		factor = 5
+	}
+}

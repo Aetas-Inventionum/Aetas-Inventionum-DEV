@@ -1,0 +1,27 @@
+#VOG - Vogtland // plauen
+
+#Political Situation
+capital = 2965
+
+#Government
+government_rank = 1
+government = monarchy
+add_government_reform = feudalism_reform
+
+#Demographics
+primary_culture = franconian
+religion = catholic
+
+#Tech and Military
+technology_group = western
+
+1410.1.1 = {
+	monarch = {
+		name = "Heinrich II"
+		dynasty = "von der Vögte"
+		birth_date = 1371.9.21
+		dip = 1
+		adm = 1
+		mil = 1
+	}
+}

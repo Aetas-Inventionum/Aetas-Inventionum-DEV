@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = signoria_monarchy_reform
+government_rank = 1
+primary_culture = ligurian
+religion = catholic
+technology_group = western
+capital = 5042 # Oneglia
+fixed_capital = 5042 # Cannot move capital away from this province & no power cost to move to it
+historical_friend = GEN
+
+1406.1.1 = { 
+	monarch = { 
+		name = "Francesco I"
+		dynasty = "Doria"
+		birth_date = 1370.1.1
+		adm = 2
+		dip = 4
+		mil = 2
+	}
+}
+

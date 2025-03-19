@@ -1,0 +1,43 @@
+#NUC - Neuchatel
+
+#Political Situation
+capital = 5030
+fixed_capital = 5030 #Cannot move capital away from this province & no power cost to move to it
+
+#Government
+government_rank = 1
+government = monarchy
+add_government_reform = united_cantons_reform
+
+#Demographics
+primary_culture = arpitan
+religion = catholic
+
+#Tech and Military
+technology_group = western
+
+#History
+1395.1.1 = {
+	monarch = {
+		name = "Konrad III"
+		birth_date = 1372.1.1
+		adm = 1
+		dip = 2
+		mil = 3
+		dynasty = "von Zähringen"
+		culture = swabian
+	}
+}
+	
+1396.5.26 = {
+	heir = {
+		name = "Rudolph"
+		monarch_name = "Rudolph IV"
+		birth_date = 1396.5.26
+		adm = 2
+		dip = 3
+		mil = 3
+		dynasty = "von Zähringen"
+		culture = swabian
+	}
+}

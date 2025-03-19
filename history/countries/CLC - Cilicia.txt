@@ -1,0 +1,7 @@
+government = monarchy
+add_government_reform = feudalism_reform
+primary_culture = cilician
+religion = catholic #de jure
+technology_group = western #crusader heavy influence
+capital = 3215
+historical_friend = CYP

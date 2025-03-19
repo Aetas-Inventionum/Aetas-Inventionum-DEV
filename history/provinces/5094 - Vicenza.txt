@@ -1,0 +1,38 @@
+#5094 - Vicenza
+#Area - Venetia
+#Region - Italy
+
+#Core Details
+capital = "Vicenza"
+is_city = yes
+owner = VEN
+controller = VEN
+
+#Demographics
+culture = venetian
+religion = catholic
+
+#Development and Trade
+base_tax = 5
+base_production = 5
+base_manpower = 5
+trade_goods = silver
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = VEN
+add_core = VNA
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories
