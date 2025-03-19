@@ -1,0 +1,7 @@
+government = monarchy
+add_government_reform = croatian_monarchy_reform
+primary_culture = croatian
+religion = catholic
+technology_group = eastern
+capital = 131
+

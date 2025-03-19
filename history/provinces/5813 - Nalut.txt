@@ -1,0 +1,35 @@
+#5813 - Nalut
+#Area - Tripolitania
+#Region - Maghreb
+
+#Core Details
+capital = "Nalut"
+is_city = yes
+owner = NAF
+controller = NAF
+
+#Demographics
+culture = nafusi
+religion = ibadi
+
+#Development and Trade
+base_tax = 1
+base_production = 2
+base_manpower = 1
+trade_goods = livestock
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = NAF
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

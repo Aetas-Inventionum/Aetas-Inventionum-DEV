@@ -1,0 +1,98 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+color = { 145  77  50 } #red = 190 47 66
+
+revolutionary_colors = { 9  5  8 } #Helvetian Republic
+
+preferred_religion = reformed
+
+historical_idea_groups = {
+	administrative_ideas
+	plutocracy_ideas
+	trade_ideas
+	defensive_ideas
+	economic_ideas
+	expansion_ideas
+	quality_ideas
+	innovativeness_ideas
+}
+
+historical_units = {
+	halberd_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Gerold #0" = 10
+	"Ludwig #0" = 10
+	"Friedrich #0" = 10
+	"Felix #0" = 10
+	"Rudolf #0" = 10
+	"Hans #0" = 10
+	"Leo #0" = 10
+	"Petermann #0" = 10
+	"Christoph #0" = 10
+	"Ulrich #0" = 10
+	"Nikolaus #0" = 10
+	"Laurenz #0" = 10
+	"Hans Leu #0" = 10
+	"Dietrich #0" = 10
+	"Ital #0" = 10
+	"Abel #0" = 10
+	"Lukas #0" = 10
+	"Gotthard #0" = 10
+	"Konrad #0" = 10
+	"Francis #0" = 10
+	"Erhard #0" = 10
+	"Heinrich #0" = 10
+	"Johannes #0" = 10
+	"Melchior #0" = 10
+	"Jakob #0" = 10
+	"Hans Konrad #0" = 10
+	"Johann Jakob #0" = 10
+	"Hans Rudolf #0" = 10
+	"Johann Melchior #0" = 10
+	"Karl #0" = 10
+	"Karl Nikolaus #0" = 10
+
+	"Ysabella #0" = -1
+	"Katharina #0" = -1
+	"Elisabeth #0" = -1
+}
+
+leader_names = {
+	Ammann
+	Bullinger
+	Edilbach Escher Etterlin 
+	"von Flüe" Froschauer Füssli
+	Jud
+	Heidegger Hemmerlin
+	Liechti
+	Manz
+	Reding Ringgli
+	Scheuchzer Schnitt Senfl Stimmer Stüsi Stumpf
+	Zeiner Zellweger "von Zimmern" Zwingli
+}
+
+ship_names = {
+	Uri Schwyz Unterwalden Glarus Zug
+	Lucerne Zürich Berne "Wilhelm Tell"
+	Dufour Rhein Rhöne Inn Ticino
+}
+
+army_names = {
+	"Armee von $PROVINCE$" 
+}

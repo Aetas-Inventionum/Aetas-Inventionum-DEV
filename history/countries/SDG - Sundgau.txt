@@ -1,0 +1,8 @@
+government = monarchy
+add_government_reform = landgraviate_reform
+government_rank = 1
+primary_culture = alsatian
+religion = catholic
+technology_group = western
+capital = 1880
+fixed_capital = 1880

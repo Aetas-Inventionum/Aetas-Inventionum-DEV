@@ -1,0 +1,20 @@
+government = monarchy
+add_government_reform = signoria_monarchy_reform
+government_rank = 1
+mercantilism = 25
+primary_culture = umbrian
+religion = catholic
+technology_group = western
+capital = 5086
+fixed_capital = 5086 
+
+1415.1.1 = { #guesstimate
+	monarch = {
+		name = "Cecco I"
+		dynasty = "Alfani"
+		birth_date = 1360.1.1
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}

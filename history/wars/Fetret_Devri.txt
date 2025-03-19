@@ -1,0 +1,21 @@
+name = "Fetret Devri Intervention"
+war_goal = {
+	type = take_capital_throne #mehmed wants throne
+	casus_belli = cb_claim_throne
+}
+
+1403.7.20 = {
+	add_attacker = BYZ
+	add_attacker = WAL 
+	add_attacker = AYD 
+	add_attacker = MEN
+	add_defender = TUR
+}
+
+1412.7.5 = {
+	rem_attacker = BYZ
+	rem_defender = WAL
+	rem_attacker = AYD 
+	rem_attacker = MEN
+	rem_defender = TUR
+}

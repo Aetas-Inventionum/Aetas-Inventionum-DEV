@@ -1,0 +1,213 @@
+#AI Update
+# = { "x" "x" }
+
+12 = { "København" "København" }
+
+#Finland - by Math with ammendments by pleibos
+18 = { "Enontekis" "Enontekis" }
+19 = { "Korsholm" "Korsholm" }
+27 = { "Finland" "Åbo" } #historical finland proper. Finland used to only apply to this area
+28 = { "Borgå" "Borgå" }
+29 = { "Tavastland" "Tavastehus" } #cited as Tavastland 'Proper'
+#30 - localized
+31  = { "Södra Savolax" "Sankt Olofsborg" }
+4113  = { "Simo" "Kemi" }
+4123  = { "Birkaland" "Birkala" }
+6062  = { "Ijo" "Ijo hamn" }
+6063  = { "Uleåborg" "Uleåborg" }
+6064 = { "Salois" "Salois" }
+6065 = { "Karleby" "Karleby" }
+6066 = { "Pedersöre" "Bennäs" }
+#6067 - localized
+6067 = { "Storkyro" "Storkyro" }
+#6068 - localized
+6069 = { "Kannus" "Kannus" }
+6070 = { "Ulvsby" "Ulvsby" }
+#6071 - localized
+6072 = { "Kumogård" "Kumo" }
+6073 = { "Nådendal" "Nådendal" }
+#6074 - RIP Rauma
+#6075 - localized 
+6076 = { "Kyrkslätt" "Kyrkslätt" }
+6077 = { "Kymmenegård" "Veckelax Nystad" }
+6078 = { "Vederlax" "Vederlax" }
+6079 = { "Jäskis" "Jäskis" }
+6080 = { "Norra Savolax" "Sankt Mikhel" }
+6081 = { "Sääksmäki" "Sääksmäki" }
+
+#scandinavian misc britain by pleibos
+369 = { "Orknøjar" "Kirkavå" }
+1978 = { "Hjaltland" "Skálavágr" }
+5159 = { "Katanes" "Thurso" }
+
+#scandinavian iceland by pleibos
+370 = { "Reykjavík" "Reykjavík" }
+371 = { "Norðurland" "Hólar" }
+5999 = { "Suðurland" "Heimaey" }
+6000 = { "Austfirðir" "Djúpivogur" }
+#6001 = localized
+6002 = { "Vestfirðir" "Ísafjörður" }
+6003 = { "Þingvellir" "Þingvellir" }
+
+#scandinavian misc.
+10 = { "Jamtlann" "Frøysøya" }
+
+#Swedish Scania
+4980 = { "Ystad" "Ystad" }
+
+##germany
+#fore pomerania
+47 = { "Strålsund" "Strålsund" }
+1858 = { "Stettin" "Stettin" }
+2994 = { "Volgast" "Volgast" }
+4745 = { "Rygen" "Bergen" } 
+5276 = { "Griparhamn" "Griparhamn" } #translation of Griffins + hagen
+5278 = { "Gripskog" "Gripskog" }
+5280 = { "Ysedom" "Ysedom" }
+#further pommerania
+48 = { "Kolborg" "Kolborg" }
+2995 = { "Stolp" "Stolp" }
+5281 = { "Kammin" "Kammin" }
+5282 = { "Belgard" "Belgard" }
+5283 = { "Schlave" "Schlave" }
+5285 = { "Köslin" "Köslin" }
+#slesvig
+5614 = { "Flensborg" "Flensborg" }
+5615 = { "Nordfrisland" "Nordfrisland" }
+5616 = { "Tönder" "Tönder" }
+#holstein
+45 = { "Lybeck" "Lybeck" }
+4141 = { "Ditmarsken" "Meldorf" }
+5293 = { "Rendsborg" "Rendsborg" }
+##scandinavia
+#denmark
+12 = { "Köpenhamn" "Köpenhamn" }
+15 = { "Ringkøbing" "Ringkøbing" }
+1983 = { "Laaland" "Nykøbing" }
+#scania
+6 = { "Malmöhus" "Malmö" } #or Oksie
+26 = { "Södra Halland" "Halmstad" }
+1981 = { "Bornholm" "Rönne" }
+4165 = { "Göinge" "Göinge" }
+4980 = { "Beritsholm" "Ystad" }
+5212 = { "Norra Halland" "Varberg" }
+5138 = { "Helsingborg" "Helsingborg" }
+#gotland
+7 = { "Skaraborg" "Skara" }
+16 = { "Bohuslän" "Bohus" }
+25 = { "Gottland" "Visby" } #spelled with 2 t's until 1920s
+4163 = { "Älvsborg" "Lödöse" } #name of county
+4164 = { "Dalsland" "Dalaborg" }
+6011 = { "Öresten" "Bogesund" }
+6012 = {  "Kåkind" "Skövde" }
+#bergslagen
+4 = { "Söderbergslagen" "Arboga" } #traditional west of vastmanland
+8 = { "Dalarna" "Mora" }
+6018 = { "Västerås" "Västerås" } #traditional east of vastmanland
+6020 = { "Örebro" "Örebro" }
+6021 = { "Österbergslagen" "Hedemora" }
+6022 = { "Kopparbergslagen" "Falun" }
+#smaland
+2 = { "Linköping" "Linköping" }
+6006 = { "Värend" "Växjö" } #later kronoberg county
+6007 = { "Finnveden" "Värnamo" }
+6008 = { "Vimmerby" "Vimmerby" }
+6009 = { "Vedbo" "Eksjö" }
+6010 = { "Stäkeholm" "Västervik" }
+6013 = { "Norrköping" "Norrköping" }
+#svealand
+1 = { "Stockholm" "Stockholm" } #almost exactly Södertörn but name is probably just Stockholmslottslän
+6014 = { "Nyköping" "Nyköping" }
+6015 = { "Strängnäs" "Strängnäs" }
+6016 = { "Sigtuna" "Sigtuna" }
+6019 = { "Uppland" "Uppsala" }
+#jamtland
+10 = { "Jämtland" "Jämtland" }
+6024 = { "Särna-Idre" "Särna" }
+6040 = { "Härjedalen" "Härjedalen" }
+6041 = { "Hudiksvall" "Hudiksvall" }
+6043 = { "Ångermanland" "Härnönsand" }
+6045 = { "Åre" "Åre" }
+#westbothnia
+11 = { "Västerbotten" "Umeå" }
+6058 = { "Norra Västerbotten" "Skellefteå" }
+6059 = { "Norrbotten" "Luleå" }
+6060 = { "Kalix" "Kalix" }
+#ostlandet
+17 = { "Åkershus" "Oslo" }
+4143 = { "Borgfylke" "Borg" }
+6025 = { "Österdalen" "Vinger" }
+6026 = { "Tönsberg" "Tönsberg" }
+#agder
+4144 = { "Bratsberg" "Skien" }
+4145 = { "Öster Agder" "Arendal" }
+6029 = { "Vegusdal" "Evje" }
+
+##balticum
+#courland
+35 = { "Ösel" "Arensburg" }
+39 = { "Goldingen" "Goldingen" }
+5864 = { "Dagö" "Keinis" }
+5969 = { "Gröbin" "Gröbin" }
+5970 = { "Hasenpot" "Hasenpot" } #from german
+5971 = { "Vindau" "Vindau" }
+5972 = { "Piltene" "Piltene" }
+5973 = { "Dundagen" "Dundagen" } #borrowed from german
+5974 = { "Kandau" "Kandau" }
+36 = { "Räffle" "Räffle" } #swedish alternative to reval
+1842 = { "Östvirland" "Narva" }
+5989 = { "Västland" "Hapsal" }
+5990 = { "Leal" "Leal" }
+5991 = { "Kegel" "Kegel" }
+5992 = { "Harrien" "Rappel" }
+5993 = { "Jerven" "Veissenstein" }
+5994 = { "Västvirland" "Vesenberg" } 
+5988 = { "Laisholm" "Talkhof" }
+#livonia 
+37 = { "Fellin" "Fellin" }
+1834 = { "Dorpat" "Dorpat" }
+4241 = { "Venden" "Venden" }
+5981 = { "Volmar" "Volmar" }
+5982 = { "Lemsal" "Lemsal" }
+5985 = { "Rönneborg" "Rönneborg" }
+5986 = { "Marienborg" "Marienborg" }
+5987 = { "Pernau" "Pernau" }
+5995 = { "Odenpä" "Odenpä" }
+#latgalia
+5977 = { "Selonien" "Selborg" }
+5980 = { "Korsaborg" "Korsaborg" }
+5983 = { "Marienhausen" "Marienhausen" }
+5984 = { "Rositten" "Rositten" }
+#semigalia
+1935 = { "Mitau" "Mitau" }
+5976 = { "Bauske" "Bauske" }
+5978 = { "Neumünde" "Neumünde" }
+#pomerelia
+43 = { "Danzig" "Danzig" }
+2997 = { "Tuchel" "Tuchel" }
+5825 = { "Lauenborg" "Lauenborg" }
+5828 = { "Putzk" "Putzk" } #closer to polish
+5829 = { "Dirschau" "Dirschau" }
+5830 = { "Thorn" "Thorn" }
+#pomesania
+42 = { "Ermland" "Heilsborg" }
+1841 = { "Marienborg" "Marienborg" }
+1859 = { "Kulm" "Kulm" }
+5831 = { "Marienverder" "Marienverder" }
+5832 = { "Löbau" "Löbau" }
+5833 = { "Kristborg" "Kristborg" }
+5834 = { "Elbingen" "Elbingen" }
+#prussia
+41 = { "Kungsborg" "Kungsborg" }
+5838 = { "Gerdauen" "Gerdauen" }
+5839 = { "Insterborg"  "Insterborg"}
+5840 = { "Tilsit" "Tilsit" }
+5841 = { "Vindenborg" "Vindenborg" }
+5842 = { "Vehlau" "Vehlau" }
+5843 = { "Sammland" "Fischaus" }
+#masuria
+767 = { "Ortelsborg" "Ortelsborg" }
+2958 = { "Österode" "Österode" }
+5837 = { "Ångerborg" "Ångerborg" }
+#Samogitia
+40 = { "Memel" "Memel" }

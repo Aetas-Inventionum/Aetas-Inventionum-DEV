@@ -1,0 +1,113 @@
+#Albania
+
+graphical_culture = greekgfx
+
+color = { 191 60 70 }
+
+revolutionary_colors = { 4 1 4 }
+
+historical_idea_groups = {
+	religious_ideas
+	defensive_ideas
+	spy_ideas
+	trade_ideas
+	offensive_ideas
+	economic_ideas
+	diplomatic_ideas
+	innovativeness_ideas
+}
+
+historical_units = {
+	bardiche_infantry
+	eastern_knights
+	slavic_stradioti
+	eastern_militia
+	ottoman_sekban
+	ottoman_reformed_spahi
+	ottoman_reformed_janissary
+	ottoman_toprakli_hit_and_run
+	ottoman_nizami_cedid
+	ottoman_toprakli_dragoon
+	eastern_skirmisher
+	eastern_uhlan
+	eastern_carabinier
+	ottoman_new_model
+	ottoman_lancer
+}
+
+monarch_names = {
+	#kastrioti
+	"Gjergj #0" = 50
+	"Lekë #0" = 20
+	"Gjon #1" = 50
+	"Kostandin #1" = 50
+	"Lulëzim #0" = 10
+	"Pal #1" = 40
+	"Aleks #0" = 25
+	"Reposh #0" = 15
+	"Stanisha #0" = 15
+	"Hamza #0" = 15
+	#Thopia
+	"Tunash #0" = 5 #1 of thopia
+	"Muzakë #0" = 5
+	"Karl #0" = 5 #1 of thopia
+	"Niketa #0" = 5 #1 of thopia
+	"Koja #0" = 5
+	#Arbanon
+	"Grigor #0" = 5
+	"Dhimitër #0" = 10 #mention of a kastrioti of the same name
+	"Golem #0" = 5
+	#muzaka
+	"Andrea #0" = 5 #2
+	"Teodor #0" = 5 #3
+	#Shpata
+	"Skurra #0" = 5
+	"Jakob #0" = 5 #1 of arta
+	"Muriq #0" = 5 #1 of arta
+	#Matrëngajt
+	"Vlash #0" = 5
+	#dukagjini
+	"Lekë #0" = 5 #2 of dukagjini
+	"Nikollë #0" = 5
+	#lesha
+	"Pjetër #0" = 5
+	
+	"Angelina #0" = -1
+	"Jelena #0" = -1
+	"Mamica #0" = -1
+	"Gjylo #0" = -1
+	"Mara #0" = -1
+	"Blerta #0" = -1
+	
+	"Gjylo #0" = -1
+	"Blerta #0" = -1
+	"Fatmire #0" = -1
+}
+
+leader_names = {
+	Arianitët
+	Dukagjinit
+	Gjonima Gropajt
+	Kastriotët
+	Matrëngajt Muzakajt
+	Shpatë Shpani
+	Topia
+	Zahariaj Zenebishi
+}
+
+ship_names = {
+	"Bishti i Palles"
+	"Gjiri i Drinit" "Gjiri i Rondonit"
+	Jube
+	"Kalaja e Turres" "Kepi i Rodonit" Kyrekuq
+	Shengjin Shetaj
+	Velipoje
+}
+
+army_names = { 
+	"Ushtria Mbretërore" "Ushtria e $PROVINCE$"
+}
+
+fleet_names = {
+	"Marina e $PROVINCE$"
+}

@@ -1,0 +1,156 @@
+#Country Name: Please see filename.
+
+graphical_culture = latingfx
+
+color = { 143 172 76 } #aragonese dependency = 180 83 25
+
+revolutionary_colors = { 10  0  5 } #Sicilian Separatist Flag
+
+historical_idea_groups = {
+	maritime_ideas
+	trade_ideas
+	economic_ideas
+	defensive_ideas
+	diplomatic_ideas
+	spy_ideas
+	religious_ideas
+	administrative_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	italian_condotta
+	spanish_tercio
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Rubertu #1" = 5
+	"Gugghiermu #3" = 10
+	"Ruggeru #3" = 10
+	"Simuni #1" = 5
+	"Tancredi #1" = 1
+	"Arricu #6" = 15
+	"Fidiricu #2" = 20
+	"Curradu #1" = 1
+	"Manfredi #1" = 1
+	"Carlu #1" = 15
+	"Petru #2" = 20
+	"Jàcumu #1" = 15
+	"Luiggi #1" = 10
+	"Martinu #2" = 20
+	#Post Martin Kings
+	"Firdinannu #1" = 10
+	"Alfonzu #0" = 10
+	"Giuvanni #0" = 10
+	"Filippu #0" = 10 
+	"Amideu #0" = 0
+	"Bernarduzzu #0" = 0
+	"Benedettu #0" = 0
+	"Camillu #0" = 0
+	"Cèsiri #0" = 0
+	"Giseppi #0" = 0
+	"Climenti #0" = 0
+	"Cristofùru #0" = 0
+	"Custanzu #0" = 0
+	"Enricu #0" = 0
+	"Gabrieli #0" = 0
+	"Giustu #0" = 0
+	"Giustinu #0" = 0
+	"Giacumu #0" = 0
+	"Giraldu #0" = 0
+	"Duardu #0" = 0
+	"Fabiu #0" = 0
+	"Liunardu #0" = 0
+	"Antonellu #0" = 0
+	"Lucianu #0" = 0
+	"Luduvicu #0" = 0
+	"Marcu #0" = 0
+	"Mariu #0" = 0
+	"Martinu #0" = 0
+	"Matteu #0" = 1
+	"Maurizziu #0" = 0
+	"Micheli #0" = 0
+	"Patriziu #0" = 0
+	"Pasquali #0" = 0
+	"Orazziu #0" = 0
+	"Riccardu #0" = 0
+	"Rumèu #0" = 0
+	"Sergghiu #0" = 0
+	"Sirvanu #0" = 0
+	"Teodoru #0" = 0
+	"Ugu #0" = 0
+	"Vicenzu #0" = 0
+
+	"Custanza #1" = -10
+	"Marìa #1" = -1
+	"Bianca #1" = -2
+	"Giuvanna #0" = -1
+	"Adalina #0" = -1
+	"Adeli #0" = -1
+	"Camiluzza #0" = -1
+	"Carulina #0" = -1
+	"Catirina #0" = -1
+	"Cicilia #0" = -1
+	"Giosepa #0" = -1
+	"Giacumina #0" = -1
+	"Giraldina #0" = -1
+	"Custantina #0" = -1
+	"Eleonura #0" = -1
+	"Eluisa #0" = -1
+	"Fabiula #0" = -1
+	"Loredda #0" = -1
+	"Lorinza #0" = -1
+	"Marghirita #0" = -5
+	"Orsula #0" = -1
+	"Sirvana #0" = -1
+	"Sufìa #0" = -1
+	"Vicenza #0" = -1
+}
+
+leader_names = {
+	Alaguna Alliata "di Adragna" Admundu Aragona
+	Barresi
+	"de Cabrera" "de Carduna" "del Carrettu" Castellu Chiaramunte
+	Filangieri Fisichella
+	Giueni "di Gravina"
+	"di Lignamine" Lombardu Lonci
+	Miussi Moncada Montalto Monroy
+	Nutarbartulu
+	Polizzi
+	Russu
+	Valguarnera Ventimiglia
+}
+
+ship_names = {
+	Agatobles Altavilla Apollo Archimede Audaze Borbone
+	Calabria Capitana Diana Disttrutore Drago
+	Ercole Etna "Federigo Barbarossa" Folgorante Fulminante
+	Generoso Guiscardo Hohenstaufen Idra Invencibile L'Aretusa Jupiter
+	"Maria Inmacolata" Marte Mercurio Messaggero Minerva
+	Napoli Navigante Nettuno Palinuro Partenope Pegaso 
+	Peloro Plutone Puglia "Purissima Concezione"
+	"Re Carlo" "Re Federigo" "Re Ferrante" "Regina dei Mari"
+	"S.Francesco d'Assisi" Saetta "San Antonio" "San Carlo"
+	"San Ferdinando" "San Vito" Sannita "Santa Amalia" "Santa Helena"
+	"Santa Lucia" "Santa Wenfrida" Sant'Agata Sant'Agatone
+	Sibilla Sicilia Sirena Tancredi Veloce
+}
+
+army_names = {
+	"Esèrcitu di $PROVINCE$"
+}
+
+fleet_names = { 
+	"Flotta Siciliana" "Flotta di $PROVINCE$"
+}

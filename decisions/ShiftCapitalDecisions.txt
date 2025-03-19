@@ -1,0 +1,20 @@
+#country_decisions = { DISABLED
+#	ara_capital_decision = {
+#		potential = {
+#			tag = ARA 
+#			always = no #disabled
+#			NOT = { mission_completed = ara_one_capital }
+#		}
+#		allow = {
+#			NOT = { 
+#				has_country_modifier = ai_recent_changed_capital
+#			}
+#		}
+#		effect = {
+#			country_event = { id = aetas_capitals.3 }
+#		}
+#		ai_will_do = {
+#			factor = 0
+#		}
+#	}
+#}

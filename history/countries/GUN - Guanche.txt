@@ -1,0 +1,29 @@
+government = tribal
+add_government_reform = tribal_kingdom
+government_rank = 2
+primary_culture = guanche
+religion = animism
+technology_group = sub_saharan
+capital = 4565	#Tenerife
+
+1400.1.1 = {
+	monarch = {
+		name = "Benehar I" 
+		dynasty = "Anaga" 
+		birth_date = 1365.1.1
+		dip = 5
+		adm = 3
+		mil = 3
+	}
+}
+1410.1.1 = { 
+	heir = { 
+		name = "Benehar"
+		monarch_name = "Benehar II"
+		dynasty = "Anaga"
+		birth_date = 1410.1.1
+		adm = 1
+		dip = 4
+		mil = 1
+	}
+}

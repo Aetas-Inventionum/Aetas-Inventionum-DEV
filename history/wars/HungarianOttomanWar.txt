@@ -1,0 +1,43 @@
+name = "Hungarian-Ottoman Wars"
+war_goal = {
+	type = superiority_insult_mutual
+	casus_belli = cb_insult
+	tag = TUR #turkish were driving force 
+}
+
+# Hrvoje Vukčić Hrvatinić and Tvrtko of Bosnia, the Pretender brought in by TUR sought help from the Ottoman Empire
+1414.5.1 = { #first ottoman troops enter bosnia
+	add_attacker = DJK
+	add_attacker = TUR
+	add_attacker = GRM
+	add_defender = HUN
+	add_defender = CRO
+	add_defender = TRA
+	add_defender = BDN
+	add_defender = BOS
+	add_defender = HRZ
+	add_defender = PVC
+	add_defender = POL
+	add_defender = MAZ
+	add_defender = LIT
+	add_defender = USR
+}
+
+# Defeat of Hungary and Sigismund, new King of Bosnia recognized by TUR, TUR gains BOS allegiance
+1415.8.15 = {
+	rem_attacker = DJK
+	rem_attacker = TUR
+	rem_attacker = GRM
+	rem_defender = HUN
+	rem_defender = CRO
+	rem_defender = TRA
+	rem_defender = SZK
+	rem_defender = BDN
+	rem_defender = BOS
+	rem_defender = HRZ
+	rem_defender = PVC
+	rem_defender = POL
+	rem_defender = MAZ
+	rem_defender = LIT
+	rem_defender = USR
+}

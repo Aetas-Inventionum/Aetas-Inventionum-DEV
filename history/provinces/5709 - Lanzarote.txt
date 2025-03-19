@@ -1,0 +1,40 @@
+#5709 - Lanzarote
+#Area - Macaronesia
+#Region - Iberia
+
+#Core Details
+capital = "Rubicon"
+is_city = yes
+owner = CAE
+controller = CAE
+
+#Demographics
+culture = canarian
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 1
+base_manpower = 1
+trade_goods = wine #La Geria
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = CAE
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = GUN
+discovered_by = CRY 
+discovered_by = GMR
+
+#Histories

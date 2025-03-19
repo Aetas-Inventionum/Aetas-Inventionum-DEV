@@ -1,0 +1,91 @@
+# Hanseatic League Members
+
+alliance = {
+	first = HSA
+	second = RVA
+	trade_league = 1
+	start_date = 1380.1.1
+	end_date = 1581.1.1
+}
+
+alliance = {
+	first = HSA
+	second = GRN
+	trade_league = 1
+	start_date = 1380.1.1
+	end_date = 1581.1.1
+}
+
+alliance = {
+	first = HSA
+	second = LUN
+	start_date = 1380.1.1
+	end_date = 1581.1.1
+}
+
+alliance = {
+	first = HSA
+	second = BRE
+	trade_league = 1
+	start_date = 1380.1.1
+	end_date = 1563.1.1
+}
+alliance = {
+	first = HSA
+	second = KLO
+	trade_league = 1
+	start_date = 1380.1.1
+	end_date = 1563.1.1
+}
+alliance = {
+	first = HSA
+	second = GOS
+	trade_league = 1
+	start_date = 1380.1.1
+	end_date = 1563.1.1
+}
+# Bremen kicked out of the Hansa due to religious conflicts for a few years
+alliance = {
+	first = HSA
+	second = BRE
+	trade_league = 1
+	start_date = 1576.1.1
+	end_date = 1719.9.30
+}
+
+alliance = {
+	first = HSA
+	second = HAM
+	trade_league = 1
+	start_date = 1380.1.1
+	end_date = 1719.9.30
+}
+##decapole
+alliance = {
+	first = HGE 
+	second = WIS
+	trade_league = 1
+	start_date = 1380.1.1
+	end_date = 1581.1.1
+}
+alliance = {
+	first = HGE
+	second = SLS
+	trade_league = 1
+	start_date = 1380.1.1
+	end_date = 1581.1.1
+}
+alliance = {
+	first = HGE
+	second = KML
+	trade_league = 1
+	start_date = 1380.1.1
+	end_date = 1581.1.1
+}
+alliance = {
+	first = HGE
+	second = MLH
+	trade_league = 1
+	start_date = 1380.1.1
+	end_date = 1581.1.1
+}

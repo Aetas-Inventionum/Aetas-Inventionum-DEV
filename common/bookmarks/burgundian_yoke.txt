@@ -1,0 +1,18 @@
+bookmark =
+{
+	name = "BURGUNDIAN_YOKE"
+	desc = "BURGUNDIAN_YOKE_DESC"
+	date = 1415.8.22
+	
+	center = 5015 #mechelen
+	default = yes
+	
+	country = BUR 
+	country = HOL 
+	country = GEL 
+	country = UTR 
+	country = FRI 
+	country = EFR
+	country = LUX
+	country = LOR 
+}

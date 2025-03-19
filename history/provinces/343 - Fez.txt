@@ -1,0 +1,39 @@
+#343 - Fez
+#Area - Gharb
+#Region - Maghreb
+
+#Core Details
+capital = "Fez"
+is_city = yes
+owner = FEZ
+controller = FEZ
+
+#Demographics
+culture = moroccan
+religion = sunni
+
+#Development and Trade
+base_tax = 5
+base_production = 6
+base_manpower = 5
+trade_goods = dyes
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = FEZ
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+center_of_trade = 3
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

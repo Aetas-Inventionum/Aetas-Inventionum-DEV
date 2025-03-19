@@ -1,0 +1,38 @@
+#5983 - Vilaka
+#Area - Latgale
+#Region - Baltica 
+
+#Core Details
+capital = "Vilaka"
+is_city = yes
+owner = RIG
+controller = RIG
+
+#Demographics
+culture = latgalian
+religion = catholic
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = naval_supplies
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = RIG
+add_core = LTG
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

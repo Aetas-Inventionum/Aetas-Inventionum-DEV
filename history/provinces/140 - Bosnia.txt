@@ -1,0 +1,44 @@
+#140 - Bosnia
+#Area - Donji Kraji
+#Region - Balkans
+
+#Core Details
+capital = "Doboj"
+is_city = yes
+owner = USR
+controller = USR
+
+#Demographics
+culture = bosnian
+religion = krstjani
+
+#Development and Trade
+base_tax = 2
+base_production = 2
+base_manpower = 1
+trade_goods = salt
+
+#Cores and Occupation (Alphabetical after current)
+add_core = USR
+add_core = DJK
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = KAZ
+discovered_by = CRI
+discovered_by = GOL
+discovered_by = AST
+discovered_by = QAS
+
+#Histories

@@ -1,0 +1,23 @@
+government = monarchy
+add_government_reform = signoria_monarchy_reform
+government_rank = 1
+technology_group = western
+primary_culture = umbrian
+religion = catholic
+capital = 5089
+fixed_capital = 5089
+
+#historical_friend = XXX
+#historical_rival = XXX
+
+
+1400.1.1 = {
+	monarch = {
+		name = "Giacomo I"
+		dynasty = "di Vico"
+		birth_date = 1380.1.1
+		adm = 1
+		dip = 1
+		mil = 3
+	}
+}

@@ -1,0 +1,20 @@
+government = republic
+add_government_reform = serene_merchants_reform
+government_rank = 1
+mercantilism = 25
+primary_culture = dalmatian
+religion = catholic
+add_accepted_culture = croatian
+technology_group = western
+capital = 136	# Split
+fixed_capital = 136 # Cannot move capital away from this province & no power cost to move to it
+
+1415.1.1 = {
+      monarch = {
+           name = "Gran Consiglio di Spalato"
+           adm = 2
+           dip = 2
+           mil = 2
+           #regency = yes - doesnt work, other example is also commented out
+      }
+} # Noble councils. 

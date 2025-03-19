@@ -1,0 +1,46 @@
+#5865 - Bochnia
+#Area - Lesser Poland
+#Region - Poland 
+
+#Core Details
+capital = "Bochnia"
+is_city = yes
+owner = POL
+controller = POL
+
+#Demographics
+culture = polish
+religion = catholic 
+
+#Development and Trade
+base_tax = 2
+base_production = 3
+base_manpower = 2
+trade_goods = salt
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = POL
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+add_permanent_province_modifier = {
+	name = ai_bochnia
+	duration = -1
+}
+
+#Discoveries
+discovered_by = KAZ
+discovered_by = CRI
+discovered_by = GOL
+discovered_by = AST
+discovered_by = QAS
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = eastern
+
+#Histories

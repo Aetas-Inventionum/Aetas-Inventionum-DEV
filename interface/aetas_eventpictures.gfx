@@ -1,0 +1,71 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_disaster_amg_vs_bur_civil_war"
+		texturefile = "gfx//interface//disasters//amg_vs_bur_civil_war.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "LOW_COUNTRIES_DAMS_eventPicture"
+		texturefile = "gfx/event_pictures/LOW_COUNTRIES_DAMS_eventPicture.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "DUAL_CAPITALS_eventPicture"
+		texturefile = "gfx/event_pictures/DUAL_CAPITALS_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "VAN_EYCK_eventPicture"
+		texturefile = "gfx/event_pictures/VAN_EYCK_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "VH_eventPicture"
+		texturefile = "gfx/event_pictures/VH_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "SIGISMUND_eventPicture"
+		texturefile = "gfx/event_pictures/SIGISMUND_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "AETAS_AMSTERDAM_eventPicture"
+		texturefile = "gfx/event_pictures/AETAS_AMSTERDAM_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "ROTTERDAM_eventPicture"
+		texturefile = "gfx/event_pictures/ROTTERDAM_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "AIDUTCH_eventPicture"
+		texturefile = "gfx/event_pictures/AIDUTCH_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "NED_SCIENCE_eventPicture"
+		texturefile = "gfx/event_pictures/NED_SCIENCE_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "PETRUS_eventPicture"
+		texturefile = "gfx/event_pictures/PETRUS_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "REMBRANDT_eventPicture"
+		texturefile = "gfx/event_pictures/REMBRANDT_eventPicture.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "HENRIQUE_eventPicture"
+		texturefile = "gfx/event_pictures/HENRIQUE_eventPicture.dds"
+		alwaystransparent = yes
+	}
+}

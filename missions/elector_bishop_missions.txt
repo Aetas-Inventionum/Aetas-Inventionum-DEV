@@ -1,0 +1,1424 @@
+ai_hre_elector_bishop_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = no
+	potential = {
+		OR = {
+			tag = MAI
+			tag = TRI
+		}
+	}
+
+	hre_b_auth = {
+		icon = control_the_church
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			if = {
+				limit = { religion = catholic } 
+				papal_influence = 50
+			}
+			else = {
+				OR = {
+					church_power = 25
+					fervor = 25
+				}
+			}
+		}
+
+		effect = {
+			if = {
+				limit = { religion = catholic } 
+				add_country_modifier = {
+					name = "pap_ear"
+					duration = 7300
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = "prot_auth"
+					duration = 7300
+				}
+			}
+			if = {
+				limit = { tag = KOL } 
+				add_core = 2972
+			}
+		}
+	}
+}
+ai_mai_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MAI } 
+
+	mai_erf = {
+		icon = unite_the_league
+		position = 2
+		required_missions = {
+			hre_b_auth
+			kol_churches
+		}
+		provinces_to_highlight = {
+			province_id = 63
+			NOT = { owned_by = ROOT } 
+		}
+
+		trigger = {
+			OR = {
+				owns_core_province = 63
+				AND = {
+					emperor = {
+						has_opinion = {
+							who = ROOT
+							value = 175
+						}
+					}
+					63 = { country_or_non_sovereign_subject_holds = ROOT } 
+				}
+			}
+		}
+
+		effect = {
+			custom_tooltip = mai_erf.tt
+			hidden_effect = {
+				if = {
+					limit = { owns = 63 } 
+					63 = {
+						add_province_modifier = {
+							name = "mainz_erf_mod"
+							duration = -1
+						}
+					}
+				}
+				else = { country_event = { id = aetas_kol.1 }  } 
+				upper_franconia_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+				add_casus_belli = {
+					target = WBG
+					type = cb_vassalize_mission
+					months = 1200
+				}
+				add_casus_belli = {
+					target = AUG
+					type = cb_vassalize_mission
+					months = 1200
+				}
+				add_casus_belli = {
+					target = FLD
+					type = cb_vassalize_mission
+					months = 1200
+				}
+				add_casus_belli = {
+					target = HLD
+					type = cb_vassalize_mission
+					months = 1200
+				}
+				add_casus_belli = {
+					target = HLB
+					type = cb_vassalize_mission
+					months = 1200
+				}
+				add_casus_belli = {
+					target = ALS
+					type = cb_vassalize_mission
+					months = 1200
+				}
+			}
+		}
+	}
+
+	mai_suffragan = {
+		icon = reform_bergordnung
+		position = 3
+		required_missions = { mai_erf } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 79
+				province_id = 1868
+				province_id = 4774
+				province_id = 6380
+				province_id = 5385
+				province_id = 75
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				OR = {
+					province_id = 79
+					province_id = 1868
+					province_id = 4774
+					province_id = 6380
+					province_id = 5385
+					province_id = 75
+				}
+				value = 3
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "kol_diocese_mod"
+				duration = 18250
+			}
+			upper_franconia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			hesse_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	mai_diocese = {
+		icon = mission_unite_home_region
+		position = 4
+		required_missions = { mai_suffragan } 
+		provinces_to_highlight = {
+			OR = {
+				area = upper_franconia_area
+				area = upper_swabia_area
+				area = lower_swabia_area
+				area = upper_rhineland_area
+				area = alsace_area
+				area = thuringia_area
+				area = hesse_area
+				area = braunschweig_area
+			}
+		}
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				OR = {
+					area = upper_franconia_area
+					area = upper_swabia_area
+					area = lower_swabia_area
+					area = upper_rhineland_area
+					area = alsace_area
+					area = thuringia_area
+					area = hesse_area
+					area = braunschweig_area
+				}
+				value = 35
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "mai_arch_mod"
+				duration = -1
+			}
+		}
+	}
+}
+ai_tri_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = TRI } 
+
+	tri_prum = {
+		icon = holy_state
+		position = 2
+		required_missions = {
+			hre_b_auth
+			kol_churches
+		}
+		provinces_to_highlight = {
+			province_id = 3335
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			OR = {
+				AND = {
+					alliance_with = PUM
+					PUM = {
+						has_opinion = {
+							who = ROOT
+							value = 190
+						}
+					}
+				}
+				owns_core_province = 3335
+			}
+		}
+
+		effect = {
+			custom_tooltip = tri_pum.tt
+			hidden_effect = {
+				if = {
+					limit = { alliance_with = PUM } 
+					create_subject = {
+						who = PUM
+						subject_type = fief
+					}
+					PUM = { change_country_color = { color = { 228  124  64 } } }
+				}
+				else = {
+					3335 = {
+						add_province_modifier = {
+							name = "pum_abbey"
+							duration = -1
+						}
+					}
+				}
+			}
+			lorraine_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			add_casus_belli = {
+				target = VDN
+				type = cb_vassalize_mission
+				months = 1200
+			}
+			add_casus_belli = {
+				target = MTZ
+				type = cb_vassalize_mission
+				months = 1200
+			}
+			add_casus_belli = {
+				target = TLO
+				type = cb_vassalize_mission
+				months = 1200
+			}
+		}
+	}
+
+	tri_3 = {
+		icon = take_the_bishoprics
+		position = 3
+		required_missions = { tri_prum } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 188
+				province_id = 3338
+				province_id = 4766
+				province_id = 3334
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				OR = {
+					province_id = 188
+					province_id = 3338
+					province_id = 4766
+					province_id = 3334
+				}
+				value = 3
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "kol_diocese_mod"
+				duration = 18250
+			}
+			luxemburg_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	tri_united = {
+		icon = a_real_roman_empire
+		position = 4
+		required_missions = { tri_3 } 
+		provinces_to_highlight = {
+			OR = {
+				area = luxemburg_area
+				area = lorraine_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			luxemburg_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			lorraine_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "tri_arch_mod"
+				duration = -1
+			}
+		}
+	}
+}
+ai_hre_elector_bishop_branch_2a = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = no
+	potential = {
+		OR = {
+			tag = MAI
+			tag = TRI
+		}
+	}
+
+	kol_churches = {
+		icon = mission_european_church
+		position = 1
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { has_tax_building_trigger = yes } 
+		}
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				has_tax_building_trigger = yes
+				value = 3
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "kol_churchbuilder"
+				duration = 18250
+			}
+		}
+	}
+}
+ai_mai_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MAI } 
+
+	mai_cathedral = {
+		icon = mission_mainzdom
+		position = 2
+		required_missions = { kol_churches } 
+		provinces_to_highlight = {
+			province_id = 78
+			NOT = {
+				AND = {
+					owned_by = ROOT
+					is_core = ROOT
+					has_great_project = {
+						type = ai_mainz
+						tier = 3
+					}
+				}
+			}
+		}
+
+		trigger = {
+			owns_core_province = 78
+			78 = {
+				has_great_project = {
+					type = ai_mainz
+					tier = 3
+				}
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "mainz_cathedral_mod"
+				duration = -1
+			}
+		}
+	}
+}
+ai_tri_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = TRI } 
+
+	tri_cathedral = {
+		icon = mission_trierdom
+		position = 2
+		required_missions = { kol_churches } 
+		provinces_to_highlight = {
+			province_id = 80
+			NOT = {
+				AND = {
+					owned_by = ROOT
+					is_core = ROOT
+					has_great_project = {
+						type = ai_trier
+						tier = 3
+					}
+				}
+			}
+		}
+
+		trigger = {
+			owns_core_province = 80
+			80 = {
+				has_great_project = {
+					type = ai_trier
+					tier = 3
+				}
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "trier_cathedral_mod"
+				duration = -1
+			}
+		}
+	}
+}
+ai_hre_elector_bishop_branch_2b = {
+	slot = 2
+	generic = no
+	ai = no
+	has_country_shield = no
+	potential = {
+		OR = {
+			tag = MAI
+			tag = TRI
+		}
+	}
+
+	hofrat_mission = {
+		icon = mission_mainz_albrecht
+		position = 3
+		required_missions = { hre_bish_renaissance } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			has_reform = mainz_hofrat_reform
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "temporal_government"
+				duration = 7300
+			}
+		}
+	}
+
+	hre_bish_secularization = {
+		icon = mission_mai_lothar
+		position = 4
+		required_missions = { hofrat_mission } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = { 
+				has_reform = partial_secularisation_reform
+				AND = { 
+					NOT = { government = theocracy }
+					reform_level = 7
+				}
+			}
+		}
+
+		effect = { add_stability = 1 } 
+	}
+
+	hre_bish_abs = {
+		icon = mission_josef_clemens
+		position = 5
+		required_missions = { hre_bish_secularization } 
+		provinces_to_highlight = {  } 
+
+		trigger = { absolutism = 25 } 
+
+		effect = {
+			if = {
+				limit = { government = theocracy } 
+				add_government_reform = absolutist_kurerzbistum_reform
+			}
+			else = {
+				add_government_reform = absolutist_monarchy_kurerzbistum_reform
+			}
+		}
+	}
+}
+ai_hre_elector_bishop_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = no
+	potential = {
+		OR = {
+			tag = MAI
+			tag = TRI
+		}
+	}
+
+	hre_bish_renaissance = {
+		icon = sponsor_the_arts
+		position = 2
+		required_missions = { kol_churches } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { renaissance = 100 } 
+		}
+
+		trigger = { has_institution = renaissance } 
+
+		effect = {
+			add_country_modifier = {
+				name = "hre_b_ren" #Root loc?
+				duration = 7300
+			}
+		}
+	}
+}
+ai_mai_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MAI } 
+
+	mai_gutenberg = {
+		icon = mission_gutenberg
+		position = 3
+		required_missions = { hre_bish_renaissance } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			has_institution = renaissance
+			OR = {
+				innovativeness = 25
+				has_institution = printing_press
+			}
+			OR = {
+				NOT = { advisor_exists = 498 } 
+				is_advisor_employed = 498
+			}
+		}
+
+		effect = { country_event = { id = flavor_mai.1 }  } 
+	}
+
+	mai_paper = {
+		icon = take_the_bishoprics
+		position = 4
+		required_missions = { mai_gutenberg } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 5330
+				province_id = 4718
+			}
+			NOT = {
+				AND = {
+					base_production = 5
+					has_production_building_trigger = yes
+				}
+			}
+		}
+
+		trigger = {
+			5330 = {
+				base_production = 5
+				has_production_building_trigger = yes
+			}
+			4718 = {
+				base_production = 5
+				has_production_building_trigger = yes
+			}
+		}
+
+		effect = {
+			5330 = {
+				change_trade_goods = paper
+				add_province_modifier = {
+					name = "spessart_paper"
+					duration = -1
+				}
+			}
+			4718 = {
+				change_trade_goods = paper
+				add_province_modifier = {
+					name = "spessart_paper"
+					duration = -1
+				}
+			}
+		}
+	}
+
+	mai_johannisberg = {
+		icon = mission_johannisburg
+		position = 5
+		required_missions = { mai_paper } 
+		provinces_to_highlight = {
+			province_id = 4718
+			NOT = {
+				AND = {
+					owned_by = ROOT
+					is_core = ROOT
+					has_fort_building_trigger = yes
+					num_of_times_improved = 10
+				}
+			}
+		}
+
+		trigger = {
+			4718 = {
+				owned_by = ROOT
+				is_core = ROOT
+				has_fort_building_trigger = yes
+				num_of_times_improved = 10
+			}
+			OR = {
+				AND = {
+					treasury = 1000
+					NOT = { current_age = age_of_discovery } 
+				}
+				AND = {
+					treasury = 750
+					OR = {
+						current_age = age_of_absolutism
+						current_age = age_of_revolutions
+					}
+				}
+			}
+		}
+
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							current_age = age_of_absolutism
+							current_age = age_of_revolutions
+						}
+					}
+				}
+				add_treasury = -1000
+			}
+			else = { add_treasury = -750 } 
+			4718 = {
+				add_great_project_tier = {
+					type = ai_johannisburg
+					tier = 1
+				}
+			}
+		}
+	}
+}
+ai_tri_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = TRI } 
+
+	tri_rom = {
+		icon = mission_wine_monopolies
+		position = 3
+		required_missions = { hre_bish_renaissance } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 80
+				province_id = 3387
+				province_id = 1760
+				province_id = 5353
+			}
+			NOT = {
+				AND = {
+					owned_by = ROOT
+					is_core = ROOT
+					has_production_building_trigger = yes
+					base_production = 4
+				}
+			}
+		}
+
+		trigger = {
+			80 = {
+				owned_by = ROOT
+				is_core = ROOT
+				has_production_building_trigger = yes
+				base_production = 4
+			}
+			3387 = {
+				owned_by = ROOT
+				is_core = ROOT
+				has_production_building_trigger = yes
+				base_production = 4
+			}
+			1760 = {
+				owned_by = ROOT
+				is_core = ROOT
+				has_production_building_trigger = yes
+				base_production = 4
+			}
+		}
+
+		effect = {
+			80 = {
+				add_building = farm_estate
+				add_province_modifier = {
+					name = "tri_wine_mod"
+					duration = -1
+				}
+			}
+			3387 = {
+				add_building = farm_estate
+				add_province_modifier = {
+					name = "tri_wine_mod"
+					duration = -1
+				}
+			}
+			1760 = {
+				add_building = farm_estate
+				add_province_modifier = {
+					name = "tri_wine_mod"
+					duration = -1
+				}
+			}
+		}
+	}
+
+	tri_kolbenz = {
+		icon = secure_dejima
+		position = 4
+		required_missions = { tri_rom } 
+		provinces_to_highlight = {
+			province_id = 1760
+			NOT = {
+				AND = {
+					owned_by = ROOT
+					is_core = ROOT
+					has_tax_building_trigger = yes
+					has_trade_building_trigger = yes
+					num_of_times_improved = 8
+				}
+			}
+		}
+
+		trigger = {
+			1760 = {
+				owned_by = ROOT
+				is_core = ROOT
+				has_tax_building_trigger = yes
+				has_trade_building_trigger = yes
+				num_of_times_improved = 10
+			}
+		}
+
+		effect = {
+			1760 = {
+				add_province_triggered_modifier = kolbenz1
+				center_of_trade = 1
+			}
+		}
+	}
+
+	tri_capital = {
+		icon = alpine_defenses
+		position = 5
+		required_missions = { tri_kolbenz } 
+		provinces_to_highlight = {
+			province_id = 1760
+			NOT = {
+				AND = {
+					owned_by = ROOT
+					is_core = ROOT
+					has_fort_building_trigger = yes
+					num_of_times_improved = 10
+				}
+			}
+		}
+
+		trigger = {
+			1760 = {
+				owned_by = ROOT
+				is_core = ROOT
+				has_fort_building_trigger = yes
+				num_of_times_improved = 10
+			}
+			OR = {
+				AND = {
+					treasury = 1000
+					NOT = { current_age = age_of_discovery } 
+				}
+				AND = {
+					treasury = 750
+					OR = {
+						current_age = age_of_absolutism
+						current_age = age_of_revolutions
+					}
+				}
+			}
+		}
+
+		effect = {
+			set_capital = 1760
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							current_age = age_of_absolutism
+							current_age = age_of_revolutions
+						}
+					}
+				}
+				add_treasury = -1000
+			}
+			else = { add_treasury = -750 } 
+			1760 = {
+				remove_province_modifier = kolbenz1
+				add_province_triggered_modifier = kolbenz2
+				add_great_project_tier = {
+					type = ai_ehrenbreitstein
+					tier = 1
+				}
+			}
+		}
+	}
+}
+ai_hre_elector_bishop_branch_4a = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = no
+	potential = {
+		OR = {
+			tag = MAI
+			tag = TRI
+		}
+	}
+
+	hre_b_army = {
+		icon = knights_of_the_new_world
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = { army_size_percentage = 1 } 
+
+		effect = {
+			if = {
+				limit = { tag = KOL } 
+				add_country_modifier = {
+					name = "kol_army_mod"
+					duration = 18250
+				}
+			}
+			else_if = {
+				limit = { tag = MAI } 
+				hesse_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			else = {
+				palatinate_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+}
+ai_mai_branch_4A = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MAI } 
+
+	mai_hes = {
+		icon = mission_lit_harness_steppes
+		position = 2
+		required_missions = { hre_b_army } 
+		provinces_to_highlight = {  
+			area = hesse_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		} 
+
+		trigger = {  
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { 
+				area = hesse_area
+				value = 4
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = mai_hes_conquest
+				duration = 7300
+			}
+			thuringia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+}
+ai_tri_branch_4a = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = TRI } 
+
+	tri_pal = {
+		icon = boh_humiliate_austria
+		position = 2
+		required_missions = { hre_b_army } 
+		provinces_to_highlight = {  
+			area = palatinate_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { 
+				area = palatinate_area
+				value = 3
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = mai_hes_conquest
+				duration = 7300
+			}
+			alsace_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+}
+ai_hre_elector_bishop_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = no
+	potential = {
+		OR = {
+			tag = MAI
+			tag = TRI
+		}
+	}
+
+	hre_bish_reformation = {
+		icon = join_the_reformation
+		position = 3
+		provinces_to_highlight = {  } 
+
+		trigger = { is_religion_enabled = protestant } 
+
+		effect = {  
+			add_country_modifier = { 
+				name = hre_b_prep
+				duration = 7300
+			}
+		} 
+	}
+}
+ai_mai_branch_4B = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MAI } 
+
+	mai_fc = {
+		icon = ansbach_succession
+		position = 4
+		required_missions = { mai_gutenberg } 
+		provinces_to_highlight = {  
+			province_id = 78
+			NOT = { 
+				AND = { 
+					owned_by = ROOT
+					is_core = ROOT 
+					development = 35
+					has_tax_building_trigger = yes 
+					has_trade_building_trigger = yes 
+					has_production_building_trigger = yes 
+				}
+			}
+		} 
+
+		trigger = {  
+			78 = { 
+				owned_by = ROOT
+				is_core = ROOT 
+				development = 35
+				has_tax_building_trigger = yes 
+				has_trade_building_trigger = yes 
+				has_production_building_trigger = yes 
+			}
+		} 
+
+		effect = {  
+			78 = { add_province_triggered_modifier = mainz_fc_mod }
+		} 
+	}
+}
+ai_mai_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = MAI } 
+
+	mai_nsa = {
+		icon = generality_lands
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			any_country = { 
+				dynasty = "von Nassau"
+				has_opinion = {
+					who = ROOT
+					value = 150
+				}
+			}
+		} 
+
+		effect = {  
+			# add_country_modifier = { #you have a loc? yes papa, you exist? no papa
+			# 	name = mai_nsa_mod
+			# 	duration = 7300
+			# }
+			palatinate_area  = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			upper_franconia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			thuringia_area  = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	mai_feud = {
+		icon = end_the_habsburgs
+		position = 2
+		required_missions = {
+			hre_b_army
+			mai_nsa
+		}
+		provinces_to_highlight = {  
+			province_id = 5331
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			5331 = { country_or_non_sovereign_subject_holds = ROOT }
+			77 = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = mai_feud_mod
+				duration = 7300
+			}
+		} 
+	}
+
+	mai_contiguous = {
+		icon = mission_redcoats
+		position = 3
+		required_missions = {
+			mai_hes
+			mai_feud
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			all_province = {
+				OR = { 
+					province_id = 4718
+					province_id = 63
+					province_id = 5381
+				}
+				is_in_capital_area = yes 
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = contiguous_mai
+				duration = -1
+			}
+		} 
+	}
+}
+ai_tri_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = TRI } 
+
+	tri_hre = {
+		icon = lead_the_empire
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			emperor = {
+				has_opinion = { 
+					who = ROOT
+					value = 125
+				}
+			}
+		} 
+
+		effect = {  
+			north_rhine_area  = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	tri_kol = {
+		icon = sway_cologne
+		position = 2
+		required_missions = {
+			hre_b_army
+			tri_hre
+		}
+		provinces_to_highlight = {  
+			OR = { 
+				province_id = 3390
+				province_id = 85
+			}
+			NOT = { 
+				AND = { 
+					owned_by = ROOT
+					is_core = ROOT 
+				}
+			}
+		} 
+
+		trigger = {  
+			owns_core_province = 3390
+			owns_core_province = 85
+			NOT = { exists = KOL }
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = tri_kol_mod
+				duration = -1
+			}
+			98 = { add_permanent_claim = ROOT }
+			north_brabant_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			luxemburg_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			# wallonia_area = { #Liege, relevant?
+			# 	limit = {
+			# 		NOT = { is_permanent_claim = ROOT } 
+			# 		NOT = { is_core = ROOT } 
+			# 	}
+			# 	add_permanent_claim = ROOT
+			# }
+		} 
+	}
+
+	tri_mfr = {
+		icon = carolingian_empire
+		position = 3
+		required_missions = {
+			tri_pal
+			tri_kol
+		}
+		provinces_to_highlight = {  
+			OR = { 
+				area = north_brabant_area
+				area = luxemburg_area
+				#area = wallonia_area #Liege, relevant?
+				province_id = 98
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			owns_core_province = 98
+			owns_core_province = 93
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { 
+				OR = {
+					area = north_brabant_area
+					area = luxemburg_area
+					#area = wallonia_area
+				}
+				value = 8
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = tri_mfr_mod
+				duration = -1
+			}
+			override_country_name = MIDDLE_FRANCIA
+		} 
+	}
+}
+ai_hre_elector_bishop_branch_5_protestant = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = no
+	potential = {
+		OR = {
+			tag = MAI
+			tag = TRI
+		}
+		OR = { 
+			religion = protestant
+			religion = reformed
+		}
+	}
+
+	hre_b_protestant1 = {
+		icon = mission_spread_the_reformation
+		position = 4
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			if = { 
+				limit = { religion = protestant }
+				church_power = 1 #0.5 is not an integer
+			}
+			else = { 
+				fervor = 50
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = {
+				name = prot_mod
+				duration = -1
+			}
+		} 
+	}
+}
+ai_hre_elector_bishop_branch_5_cath = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = no
+	potential = {
+		OR = {
+			tag = MAI
+			tag = TRI
+		}
+		religion = catholic
+	}
+
+	hre_bish_jesuits = {
+		icon = mission_petrus
+		position = 4
+		required_missions = { hre_bish_reformation } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			any_country = { 
+				culture_group = iberian 
+				has_opinion = { 
+					who = ROOT 
+					value = 125
+				}
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = elector_jesuits.tt
+			add_prestige = 10
+			set_country_flag = enable_jesuit_order_flag
+		} 
+	}
+
+	hre_b_counter_ref = {
+		icon = spread_piety
+		position = 5
+		required_missions = { hre_bish_jesuits } 
+		provinces_to_highlight = {  } 
+
+		trigger = { is_council_enabled = yes } 
+
+		effect = {  
+			add_country_modifier = { 
+				name = hre_b_counter
+				duration = 18250
+			}
+		} 
+	}
+}

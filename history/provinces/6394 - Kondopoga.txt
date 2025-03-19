@@ -1,0 +1,37 @@
+#6394 - Kondopoga
+#Area - East Karelia
+#Region - Russia 
+
+#Core Details
+capital = "Kondopoga"   
+is_city = yes
+owner = NOV
+controller = NOV
+
+#Demographics
+culture = karelian
+religion = orthodox
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = fish
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = NOV
+add_core = KRL
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = nomad_group
+
+#Histories

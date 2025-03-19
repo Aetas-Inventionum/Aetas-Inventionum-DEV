@@ -1,0 +1,1574 @@
+ai_bdn_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = BDN 
+			was_tag = BDN 
+		}
+	} 
+
+	bdn_ser = {
+		icon = mission_lazar
+		position = 1
+		provinces_to_highlight = { is_capital_of = SER } 
+
+		trigger = {  
+			SER = { 
+				OR = {
+					alliance_with = ROOT
+					is_rival = ROOT
+					is_subject_of = ROOT
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = insulted
+					}
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = scornfully_insulted
+					}
+				}
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = bdn_contacts
+				duration = 7300
+			}
+		} 
+	}
+
+	bdn_lov = {
+		icon = mission_frk
+		position = 2
+		provinces_to_highlight = { is_capital_of = LOV } 
+
+		trigger = {  
+			exists = LOV
+			LOV = { 
+				OR = { 
+					AND = { 
+						alliance_with = ROOT 
+						has_opinion = { 
+							who = ROOT 
+							value = 190
+						}
+					}
+					AND = { 
+						is_subject_of = ROOT 
+						is_subject_of_type = fief
+					}
+				}
+			}
+		} 
+
+		effect = {  
+			if = { 
+				limit = { 
+					LOV = { 
+						ai = yes 
+						NOT = { is_subject_of = ROOT }
+					} 
+				}
+				country_event = { id = aetas_bul.2 }
+			}
+			else = { add_prestige = 15 }
+		} 
+	}
+}
+ai_bdn_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = BDN 
+			was_tag = BDN 
+		}
+	} 
+
+	bdn_hun = {
+		icon = mission_sigi
+		position = 1
+		provinces_to_highlight = { is_capital_of = HUN } 
+
+		trigger = {  
+			alliance_with = HUN 
+		} 
+
+		effect = {  
+			if = {
+				limit = { HUN = { ai = yes } }
+				country_event = { id = aetas_bul.3 }
+			}
+			else = { HUN = { country_event = { id = aetas_bul.3 } } }
+		} 
+	}
+
+	bdn_uprise = {
+		icon = mission_fruzhin
+		position = 2
+		required_missions = {
+			bdn_ser
+			bdn_hun
+			bdn_militarize
+		}
+		provinces_to_highlight = {  
+			continent = europe
+			owned_by = TUR
+		} 
+
+		trigger = {  
+			has_spy_network_in = {
+				who = TUR
+				value = 25
+			}
+		} 
+
+		effect = {  
+			TUR = { country_event = { id = aetas_bul.4 } }
+		} 
+	}
+
+	bdn_bul = {
+		icon = mission_bul_tsar
+		position = 3
+		required_missions = { bdn_uprise } 
+		provinces_to_highlight = {  
+			OR = { 
+				province_id = 1765
+				province_id = 5533
+			}
+			NOT = { 
+				OR = { 
+					controlled_by = ROOT 
+					owned_by = ROOT 
+				}
+			}
+		} 
+
+		trigger = {  
+			OR = { 
+				controls = 1765
+				owns = 1765
+				any_ally = { 
+					controls = 1765
+				}
+				any_subject_country = { 
+					controls = 1765
+				}
+			}
+			OR = { 
+				controls = 5533
+				owns = 5533
+				any_ally = { 
+					controls = 5533
+				}
+				any_subject_country = { 
+					controls = 5533
+				}
+			}
+		} 
+
+		effect = {  
+			if = { 
+				limit = { NOT = { owns = 5552 } }
+				5552 = { 
+					cede_province = ROOT 
+					add_core = ROOT 
+				}
+			}
+			if = { 
+				limit = { NOT = { owns = 1765 } }
+				1765 = { 
+					cede_province = ROOT 
+					add_core = ROOT 
+				}
+			}
+			if = { 
+				limit = { NOT = { owns = 150 } }
+				150 = { 
+					cede_province = ROOT 
+					add_core = ROOT 
+				}
+			}
+			if = { 
+				limit = { NOT = { owns = 5533 } }
+				5533 = { 
+					cede_province = ROOT 
+					add_core = ROOT 
+				}
+			}
+			change_tag = BUL 
+			add_government_reform = bulgarian_empire_reform
+			set_government_rank = 3
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = BUL_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			swap_non_generic_missions = yes
+			hidden_effect = { 
+				if = { 
+					limit = { LOV = { is_subject_of = ROOT } }
+					LOV = { change_country_color = { color = { 216 155 75 } } }
+				}
+			}
+			custom_tooltip = bul_cores.tt
+			hidden_effect = { 
+				moesia_area = { 
+					limit = { culture = bulgarian }
+					add_core = ROOT 
+				}
+				bulgaria_area = { 
+					limit = { culture = bulgarian }
+					add_core = ROOT 
+				}
+				hemimont_area = { 
+					limit = { culture = bulgarian }
+					add_core = ROOT 
+				}
+				rhodope_area = { 
+					limit = { culture = bulgarian }
+					add_core = ROOT 
+				}
+				silistria_area = { 
+					limit = { culture = bulgarian }
+					add_core = ROOT 
+				}
+			}
+			hemimont_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			rhodope_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			silistria_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			rascia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+}
+ai_bdn_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = BDN 
+			was_tag = BDN 
+		}
+	} 
+
+	bdn_militarize = {
+		icon = moravian_arms
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			has_government_power = {
+				mechanic_type = militarization_mechanic
+				power_type = militarized_society
+				value = 20
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = bul_army_mod
+				duration = -1
+			}
+		} 
+	}
+
+	bul_cavalry = {
+		icon = mission_bul_cav
+		position = 2
+		required_missions = {
+			bdn_militarize
+			bdn_baba_vida
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			num_of_hussars = 6
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = bul_cav
+				duration = -1
+			}
+		} 
+	}
+}
+ai_bdn_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = BDN 
+			was_tag = BDN 
+		}
+	} 
+
+	bdn_baba_vida = {
+		icon = mission_baba_vida
+		position = 1
+		provinces_to_highlight = {  
+			province_id = 2746
+			NOT = { 
+				AND = { 
+					owned_by = ROOT 
+					num_of_times_improved = 5
+					base_manpower = 7
+				}
+			}
+		} 
+
+		trigger = {  
+			2746 = { 
+				owned_by = ROOT 
+				num_of_times_improved = 5
+				base_manpower = 7
+			}
+		} 
+
+		effect = {  
+			2746 = { #Baba Vida isn't presented
+				add_great_project_tier = {
+					type = ai_baba_vida
+					tier = 1
+				}
+			}
+		} 
+	}
+}
+ai_bdn_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = BDN 
+			was_tag = BDN 
+		}
+	} 
+
+	bdn_patr = {
+		icon = catholic_confraternity
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			patriarch_authority = 0.25
+			capital_scope = { 
+				has_tax_building_trigger = yes
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = bdn_pat_mod
+				duration = 7300
+			}
+		} 
+	}
+}
+ai_bul_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = BUL } 
+
+	bul_app = {
+		icon = balance_of_power
+		position = 3
+		required_missions = { bdn_lov } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			calc_true_if = { 
+				all_subject_country = { 
+					is_subject_of_type = fief 
+				}
+				amount = 5
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = bul_apps
+				duration = -1
+			}
+		} 
+	}
+
+	bul_bul = {
+		icon = prosper_in_piedmont
+		position = 4
+		required_missions = { bdn_bul } 
+		provinces_to_highlight = {  
+			area = bulgaria_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			bulgaria_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+		} 
+
+		effect = {  
+			country_event = { id = aetas_bul.9 }
+			macedonia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	bul_sofia = {
+		icon = mission_sofiya
+		position = 5
+		required_missions = { bul_bul } 
+		provinces_to_highlight = {  
+			province_id = 1765
+			NOT = { 
+				AND = { 
+					owned_by = ROOT 
+					num_of_times_improved = 10 
+					has_tax_building_trigger = yes 
+					has_trade_building_trigger = yes 
+					has_production_building_trigger = yes 
+				}
+			}
+		} 
+
+		trigger = {  
+			1765 = { 
+				owned_by = ROOT 
+				num_of_times_improved = 10 
+				has_tax_building_trigger = yes 
+				has_trade_building_trigger = yes 
+				has_production_building_trigger = yes 
+			}
+		} 
+
+		effect = {  
+			1765 = { add_province_triggered_modifier = bul_sof }
+		} 
+	}
+
+	bul_enlightened = {
+		icon = mission_bul_simeon1
+		position = 6
+		required_missions = {
+			bul_tarnovo
+			bul_sofia
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			has_institution = global_trade 
+			current_age = age_of_absolutism
+		} 
+
+		effect = {  
+			add_government_reform = enlightened_bulgarian_empire_reform
+		} 
+	}
+
+	bul_solun = {
+		icon = mission_thessalonica
+		position = 7
+		required_missions = { bul_rhodope } 
+		provinces_to_highlight = {  
+			area = macedonia_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			macedonia_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = vic_solun
+				duration = 7300
+			}
+			northern_greece_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			hellas_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			morea_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+}
+ai_bul_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = BUL } 
+
+	bul_moesia = {
+		icon = claim_the_borderlands
+		position = 4
+		required_missions = { bdn_bul } 
+		provinces_to_highlight = {  
+			area = moesia_area 
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			moesia_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+		} 
+
+		effect = {  
+			country_event = { id = aetas_bul.8 }
+			hemimont_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	bul_tarnovo = {
+		icon = mission_tsarevets
+		position = 5
+		required_missions = { bul_moesia } 
+		provinces_to_highlight = {  
+			province_id = 4704
+			NOT = {
+				AND = { 
+					num_of_times_improved = 10 
+					has_tax_building_trigger = yes 
+					has_trade_building_trigger = yes 
+					OR = { 
+						is_capital = yes 
+						has_courthouse_building_trigger = yes
+					}
+					has_great_project = { 
+						type = any
+						tier = 1
+					}
+				}
+			}
+		} 
+
+		trigger = {  
+			4704 = { 
+				num_of_times_improved = 10 
+				has_tax_building_trigger = yes 
+				has_trade_building_trigger = yes 
+				OR = { 
+					is_capital = yes 
+					has_courthouse_building_trigger = yes
+				}
+				has_great_project = { 
+					type = any
+					tier = 1
+				}
+			}
+		} 
+
+		effect = {  
+			4704 = { 
+				add_province_modifier = {
+					name = veliko_tarnovo
+					duration = -1
+				}
+				add_province_triggered_modifier = tarnovo_literary_school
+			}
+		} 
+	}
+
+	bul_rhodope = {
+		icon = alpine_fortifications
+		position = 6
+		provinces_to_highlight = {  
+			area = rhodope_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			rhodope_area = {
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+		} 
+
+		effect = {  
+			2750 = { 
+				if = {
+					limit = { NOT = { religion = ROOT } }
+					change_religion = ROOT
+					change_culture = ROOT 
+				}
+			}
+			macedonia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	bul_3_hills = {
+		icon = mission_plovdiv
+		position = 7
+		required_missions = { bul_rhodope } 
+		provinces_to_highlight = {  
+			province_id = 2750
+			NOT = { 
+				AND = { 
+					num_of_times_improved = 10
+					has_tax_building_trigger = yes 
+					has_trade_building_trigger = yes 
+				}
+			}
+		} 
+
+		trigger = {  
+			2750 = { 
+				num_of_times_improved = 10
+				has_tax_building_trigger = yes 
+				has_trade_building_trigger = yes 
+			}
+		} 
+
+		effect = {  
+			2750 = { 
+				add_province_modifier = { 
+					name = plovdiv_mod
+					duration = -1
+				}
+			}
+		} 
+	}
+}
+ai_bul_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = BUL } 
+
+	bul_samoko = {
+		icon = gory_to_the_black_army
+		position = 3
+		required_missions = { bul_cavalry } 
+		provinces_to_highlight = {  
+			province_id = 5549
+			NOT = { 
+				AND = { 
+					owned_by = ROOT
+					has_production_building_trigger = yes 
+					base_production = 8
+				}
+			}
+		} 
+
+		trigger = {  
+			5549 = { 
+				owned_by = ROOT 
+				has_production_building_trigger = yes 
+				base_production = 8
+			}
+		} 
+
+		effect = {  
+			5549 = { 
+				add_province_modifier = { 
+					name = samoko_mod
+					duration = -1
+				}
+				add_building = weapons
+			}
+		} 
+	}
+
+	bul_golden_age = {
+		icon = mission_bul_ga
+		position = 4
+		required_missions = { bdn_bul } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			OR = { 
+				has_had_golden_age = yes
+				in_golden_age = yes
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = bul_third_ga
+				duration = -1
+			}
+			if = { 
+				limit = { in_golden_age = yes }
+				extend_golden_age = 600
+			}
+			else = { 
+				reset_golden_age = yes
+			}
+		} 
+	}
+
+	bul_hemimont = {
+		icon = take_the_littoral
+		position = 5
+		required_missions = { bul_moesia } 
+		provinces_to_highlight = {  
+			area = hemimont_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			hemimont_area = { 
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		} 
+
+		effect = {  
+			thrace_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	bul_tsarigrad = {
+		icon = end_the_schism
+		position = 7
+		required_missions = {
+			bul_rhodope
+			bul_hemimont
+		}
+		provinces_to_highlight = {  
+			province_id = 151
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			151 = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		effect = {  
+			151 = { 
+				if = { 
+					limit = { NOT = { religion = ROOT } } 
+					change_religion = ROOT 
+				}
+				change_culture = greek
+				add_province_modifier = { 
+					name = bul_tsarigrad_mod #missed loc
+					duration = -1
+				}
+			}
+		} 
+	}
+}
+ai_bul_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = BUL } 
+
+	bul_forts = {
+		icon = pacify_the_albanian_lands
+		position = 2
+		required_missions = { bdn_baba_vida } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { 
+				has_terrain = mountain
+				has_fort_building_trigger = yes 
+				value = 5
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = bul_forts_mod
+				duration = -1
+			}
+		} 
+	}
+
+	bul_christ = {
+		icon = protectors_of_christendom
+		position = 3
+		required_missions = { bul_metros } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			is_defender_of_faith = yes
+			is_defender_of_faith_of_tier = 4
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = bul_christ_mod
+				duration = -1
+			}
+		} 
+	}
+
+	bul_commerce = {
+		icon = dominant_economy
+		position = 4
+		required_missions = { bdn_bul } 
+		provinces_to_highlight = {  
+			OR = { 
+				province_id = 1321
+				province_id = 151
+				province_id = 148
+				province_id = 4239
+			}
+			NOT = { is_strongest_trade_power = ROOT }
+		} 
+
+		trigger = {  
+			1321 = { is_strongest_trade_power = ROOT }
+			151 = { is_strongest_trade_power = ROOT }
+			148 = { is_strongest_trade_power = ROOT }
+			4239 = { is_strongest_trade_power = ROOT }
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = bul_trade
+				duration = -1
+			}
+		} 
+	}
+
+	bul_dobruja = {
+		icon = swiss_mercenaries
+		position = 5
+		required_missions = { bul_moesia } 
+		provinces_to_highlight = {  
+			area = silistria_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			silistria_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+		} 
+
+		effect = {  
+			country_event = { id = aetas_bul.10 }
+			add_casus_belli = {
+				target = WAL
+				type = cb_vassalize_mission
+				months = 240
+			}
+			oltenia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			wallachia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			east_muntenia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			add_casus_belli = {
+				target = MOL
+				type = cb_vassalize_mission
+				months = 240
+			}
+			bessarabia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			moldavia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			bukovina_pokuttia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	bul_wal = {
+		icon = push_on_to_bulgaria
+		position = 6
+		required_missions = { bul_dobruja } 
+		provinces_to_highlight = {  
+			OR = { 
+				area = oltenia_area
+				area = wallachia_area
+				area = east_muntenia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { 
+				OR = {
+					area = oltenia_area
+					area = wallachia_area
+					area = east_muntenia_area
+				}
+				value = 15
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = vlach_vassals
+				duration = -1
+			}
+		} 
+	}
+}
+ai_bul_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = BUL } 
+
+	bul_metros = {
+		icon = law_of_the_pious
+		position = 2
+		required_missions = { bdn_patr } 
+		provinces_to_highlight = {  
+			OR = { 
+				province_id = 4704
+				province_id = 159
+				province_id = 1765
+				province_id = 2746
+			}
+			has_state_patriach = no 
+		} 
+
+		trigger = {  
+			4704 = { has_state_patriach = yes }
+			159 = { has_state_patriach = yes }
+			1765 = { has_state_patriach = yes }
+			2746 = { has_state_patriach = yes }
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = bul_pat_mod
+				duration = 18250
+			}
+		} 
+	}
+
+	bul_patr = {
+		icon = mission_euthy
+		position = 3
+		required_missions = { bul_metros } 
+		provinces_to_highlight = {  
+			province_id = 151
+			OR = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				controlled_by = ROOT 
+			}
+		} 
+
+		trigger = {  
+			151 = { 
+				OR = { 
+					country_or_non_sovereign_subject_holds = ROOT 
+					controlled_by = ROOT 
+				}
+			}
+		} 
+
+		effect = { country_event = { id = aetas_bul.11 } } 
+	}
+
+	bul_iron_gates = {
+		icon = mission_advance_to_the_dnieper
+		position = 4
+		required_missions = { bdn_bul } 
+		provinces_to_highlight = {  
+			area = rascia_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			rascia_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+		} 
+
+		effect = {  
+			dardania_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	bul_dardania = {
+		icon = tame_the_magnates
+		position = 5
+		required_missions = { bul_iron_gates } 
+		provinces_to_highlight = {  
+			area = dardania_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			dardania_area = { 
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all 
+			}
+		} 
+
+		effect = {  
+			serbia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	bul_mol = {
+		icon = mission_modernized_vikings
+		position = 6
+		required_missions = { bul_dobruja } 
+		provinces_to_highlight = {  
+			OR = { 
+				area = moldavia_area
+				area = bessarabia_area
+				area = bukovina_pokuttia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { 
+				OR = { 
+					area = bessarabia_area
+					area = moldavia_area
+					area = bukovina_pokuttia_area
+				}
+				value = 15
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = bul_mol_mod
+				duration = -1
+			}
+		} 
+	}
+}
+ai_bul_locked_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = BDN } 
+
+	bul_locked_1b = {
+		icon = mission_locked_mission
+		position = 3
+		required_missions = { bdn_lov } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = bul_bdn_locked.tt
+				always = no
+			}
+		} 
+
+		effect = { custom_tooltip = bul_bdn_locked.tt } 
+	}
+
+	bul_locked_1c = {
+		icon = mission_locked_mission
+		position = 4
+		required_missions = { bdn_bul } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = bul_bdn_locked.tt
+				always = no
+			}
+		} 
+
+		effect = { custom_tooltip = bul_bdn_locked.tt } 
+	}
+
+	bul_locked_1d = {
+		icon = mission_locked_mission
+		position = 5
+		required_missions = { bul_locked_1c } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = bul_bdn_locked.tt
+				always = no
+			}
+		} 
+
+		effect = { custom_tooltip = bul_bdn_locked.tt } 
+	}
+
+	bul_locked_1e = {
+		icon = mission_locked_mission
+		position = 6
+		required_missions = {
+			bul_locked_1d
+			bul_locked_2d
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = bul_bdn_locked.tt
+				always = no
+			}
+		} 
+
+		effect = { custom_tooltip = bul_bdn_locked.tt } 
+	}
+
+	bul_locked_1f = {
+		icon = mission_locked_mission
+		position = 7
+		required_missions = { bul_locked_2e } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = bul_bdn_locked.tt
+				always = no
+			}
+		} 
+
+		effect = { custom_tooltip = bul_bdn_locked.tt } 
+	}
+}
+ai_bul_locked_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = BDN } 
+
+	bul_locked_2c = {
+		icon = mission_locked_mission
+		position = 4
+		required_missions = { bdn_bul } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = bul_bdn_locked.tt
+				always = no
+			}
+		} 
+
+		effect = { custom_tooltip = bul_bdn_locked.tt } 
+	}
+
+	bul_locked_2d = {
+		icon = mission_locked_mission
+		position = 5
+		required_missions = { bul_locked_2c } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = bul_bdn_locked.tt
+				always = no
+			}
+		} 
+
+		effect = { custom_tooltip = bul_bdn_locked.tt } 
+	}
+
+	bul_locked_2e = {
+		icon = mission_locked_mission
+		position = 6
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = bul_bdn_locked.tt
+				always = no
+			}
+		} 
+
+		effect = { custom_tooltip = bul_bdn_locked.tt } 
+	}
+
+	bul_locked_2f = {
+		icon = mission_locked_mission
+		position = 7
+		required_missions = { bul_locked_2e } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = bul_bdn_locked.tt
+				always = no
+			}
+		} 
+
+		effect = { custom_tooltip = bul_bdn_locked.tt } 
+	}
+}
+ai_bul_locked_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = BDN } 
+
+	bul_locked_3b = {
+		icon = mission_locked_mission
+		position = 3
+		required_missions = { bul_cavalry } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = bul_bdn_locked.tt
+				always = no
+			}
+		} 
+
+		effect = { custom_tooltip = bul_bdn_locked.tt } 
+	}
+
+	bul_locked_3c = {
+		icon = mission_locked_mission
+		position = 4
+		required_missions = { bdn_bul } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = bul_bdn_locked.tt
+				always = no
+			}
+		} 
+
+		effect = { custom_tooltip = bul_bdn_locked.tt } 
+	}
+
+	bul_locked_3d = {
+		icon = mission_locked_mission
+		position = 5
+		required_missions = { bul_locked_2c } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = bul_bdn_locked.tt
+				always = no
+			}
+		} 
+
+		effect = { custom_tooltip = bul_bdn_locked.tt } 
+	}
+
+	bul_locked_3f = {
+		icon = mission_locked_mission
+		position = 7
+		required_missions = {
+			bul_locked_2e
+			bul_locked_3d
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = bul_bdn_locked.tt
+				always = no
+			}
+		} 
+
+		effect = { custom_tooltip = bul_bdn_locked.tt } 
+	}
+}
+ai_bul_locked_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = BDN } 
+
+	bul_locked_4a = {
+		icon = mission_locked_mission
+		position = 2
+		required_missions = { bdn_baba_vida } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = bul_bdn_locked.tt
+				always = no
+			}
+		} 
+
+		effect = { custom_tooltip = bul_bdn_locked.tt } 
+	}
+
+	bul_locked_4b = {
+		icon = mission_locked_mission
+		position = 3
+		required_missions = { bul_locked_5a } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = bul_bdn_locked.tt
+				always = no
+			}
+		} 
+
+		effect = { custom_tooltip = bul_bdn_locked.tt } 
+	}
+
+	bul_locked_4c = {
+		icon = mission_locked_mission
+		position = 4
+		required_missions = { bdn_bul } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = bul_bdn_locked.tt
+				always = no
+			}
+		} 
+
+		effect = { custom_tooltip = bul_bdn_locked.tt } 
+	}
+
+	bul_locked_4d = {
+		icon = mission_locked_mission
+		position = 5
+		required_missions = { bul_locked_2c } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = bul_bdn_locked.tt
+				always = no
+			}
+		} 
+
+		effect = { custom_tooltip = bul_bdn_locked.tt } 
+	}
+
+	bul_locked_4e = {
+		icon = mission_locked_mission
+		position = 6
+		required_missions = { bul_locked_4d } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = bul_bdn_locked.tt
+				always = no
+			}
+		} 
+
+		effect = { custom_tooltip = bul_bdn_locked.tt } 
+	}
+}
+ai_bul_locked_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = BDN } 
+
+	bul_locked_5a = {
+		icon = mission_locked_mission
+		position = 2
+		required_missions = { bdn_patr } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = bul_bdn_locked.tt
+				always = no
+			}
+		} 
+
+		effect = { custom_tooltip = bul_bdn_locked.tt } 
+	}
+
+	bul_locked_5b = {
+		icon = mission_locked_mission
+		position = 3
+		required_missions = { bul_locked_5a } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = bul_bdn_locked.tt
+				always = no
+			}
+		} 
+
+		effect = { custom_tooltip = bul_bdn_locked.tt } 
+	}
+
+	bul_locked_5c = {
+		icon = mission_locked_mission
+		position = 4
+		required_missions = { bdn_bul } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = bul_bdn_locked.tt
+				always = no
+			}
+		} 
+
+		effect = { custom_tooltip = bul_bdn_locked.tt }  
+	}
+
+	bul_locked_5d = {
+		icon = mission_locked_mission
+		position = 5
+		required_missions = { bul_locked_5c } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = bul_bdn_locked.tt
+				always = no
+			}
+		} 
+
+		effect = { custom_tooltip = bul_bdn_locked.tt } 
+	}
+
+	bul_locked_5e = {
+		icon = mission_locked_mission
+		position = 6
+		required_missions = { bul_locked_4d } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = bul_bdn_locked.tt
+				always = no
+			}
+		} 
+
+		effect = { custom_tooltip = bul_bdn_locked.tt } 
+	}
+}

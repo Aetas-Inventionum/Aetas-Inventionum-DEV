@@ -1,0 +1,102 @@
+##celtic group DPN of britain by pleibos
+#Ireland
+372 = { "Tír Eoghain" "Dún Geanainn" }
+373 = { "Áth Cliath" "Duibhlinn" }
+374 = { "Fearna" "Fearna Mór Maedhóg" }
+375 = { "Tuamhain" "Inis Cluana Rámhfhada" }
+376 = { "Maigh Eo" "Cill Mheáin" } #only capital found of de burgh mayo
+4118 = { "Luimneach" "Luimneach" }
+4119 = { "Sligeach" "Sligeach" }
+4120 = { "Cill Dara" "Cill Dara" }
+4121 = { "Ulaidh" "An Caisleán Riabhach" }
+4377 = { "Urmumhain" "Cill Chainnigh" }
+4378 = { "Múscraí" "Cionn tSáile" }
+4379 = { "Uíbh Fhailí" "An Anaíle" }
+4380 = { "Tír Chonaill" "Dún na nGall" }
+5146 = { "Gleannta" "Oirthear Maí" }
+5161 = { "Uí Echach" "Ráth Fraoileann" }
+5162 = { "Ard Ciannachta" "Léim an Mhadaidh" }
+5163 = { "Airgíalla" "Ard Mhacha" } 
+5164 = { "Muineachán" "Muineachán" }
+5165 = { "Fir Manach" "Inis Ceithleann" }
+5166 = { "Bréifne" "An Cabhán" }
+5167 = { "Mí" "Baile Átha Troim" }
+5168 = { "Droichead Átha" "Droichead Átha" }
+5169 = { "Ros Comáin" "Ros Comáin" } #Ros Comáin is the relevant city, while Cruachan was used ceremoniously. Síol Muireadaigh used to describe core ancestral lands of the O'Connors
+5170 = { "Conamara" "Eanach Dhúin" }
+5171 = { "Gaillimh" "Gaillimh" } 
+5172 = { "Uí Mhaine" "Baile Átha Luain" }
+5173 = { "An Trian Meánach" "Caiseal" }
+5174 = { "Loch Garman" "Loch Garman" }
+5175 = { "Port Láirge" "Port Láirge" }
+5176 = { "Ceann Chiarraí" "Tráigh Lí" } #kerry is larger and different size from province. the name is of the primary penninsula, Dingle Penninsula, named after a people who also lived in the region
+5177 = { "Eochaill" "Eochaill" }
+5178 = { "Corcaigh" "Corcaigh" }
+5181 = { "Uíbh Ráthach" "Cill Airne" }
+6529 = { "Fánaid" "Cill Mhic Réanáin" }
+6530 = { "Tiobraid Árann" "Tiobraid Árann" }
+6531 = { "An Nás" "An Nás" }
+6532 = { "Béarra" "Ceann Mara" }
+
+#Wales
+241 = { "Morgannwg" "Caerdydd" }
+242 = { "Gaernarfon" "Aber Garth Celyn" }
+3319 = { "Meirionnydd" "Harlech" }
+3320 = { "Ddinbych" "Ddinbych" }
+3321 = { "Ynys Môn" "Aberffraw" }
+3322 = { "Aberhonddu" "Aberhonddu" }
+3323 = { "G?yr" "Abertawe" }
+3324 = { "Penfro" "Penfro" }
+4366 = { "Powys" "Trefaldwyn" }
+4369 = { "Ceredigion" "Aberteifi" }
+
+#Man
+4365 = { "Vannin" "Balley Chashtal" }
+
+#Scottish higlands
+252 = { "Inbhir Nis" "Inbhir Nis" }
+253 = { "Na h-Eileanan Siar" "Steòrnabhagh" }
+4110 = { "Cataibh" "Dòrnach" }
+4363 = { "Earra-Ghàidheal" "An Tairbeart" }
+4364 = { "Sgitheanach" "Slèite" }
+5147 = { "Srath Èireann" "Craoibh" }
+5148 = { "Athall" "Dùn Chailleann" }
+5149 = { "Aonghas" "Dùn Dè" }
+5151 = { "Màrr" "Cionn Droma" }
+5152 = { "Moireibh" "Eilginn" }
+5154 = { "Latharna" "Dhùn Stadhainis" }
+5155 = { "Loch Abar" "Inbhir Lòchaidh" }
+5156 = { "A' Mhorbhairne" "Àird Tòirinis" }
+5157 = { "Ros an Ear" "Inbhir Pheofharain" }
+5158 = { "Ros an Iar" "Strome" }
+5159 = { "Gallaibh" "Inbhir Theòrsa" }
+5160 = { "Ìle" "Port an Eilein" }
+#Scottish Lowlands
+248 = { "Lodainn" "Dùn Èideann" }
+249 = { "Srath Chluaidh" "Glaschu" }
+250 = { "Gobharaidh" "Sgàin" }
+251 = { "Obar Dheathain" "Obar Dheathain" }
+4361 = { "Rosbrog" "Rosbrog" }
+4362 = { "Srath Nid" "Dùn Phris" }
+5136 = { "Machair Ghallghaidhealaibh" "Baile na h-Ùige" }
+5137 = { "Gall-Ghàidhealaibh" "Cille Chùithbeirt" }
+5139 = { "Lodainn an Ear" "Dùn Bar" }
+5140 = { "Sailcirc"  "Sailcirc" }
+5141 = { "Lannraig" "Lannraig" }
+5142 = { "Carraig" "Carraig" }
+5143 = { "Inbhir Àir" "Inbhir Àir" }
+5144 = { "Fìobha" "Cill Rìmhinn" }
+5145 = { "Sruighlea" "Sruighlea" }
+5150 = { "A' Mhaoin" "Cinn Chàrdainn" }
+
+
+#Brittany
+172 = { "Naoned" "Naoned" }
+4384 = { "Roazhon" "Roazhon" }
+171 = { "Bro Wened" "Gwened" }
+170 = { "Leon" "Brest" }
+169 = { "Sant-Maloù" "Sant-Maloù" }
+183 = { "Pariz" "Pariz" }
+236 = { "Londrez" "Londrez" }
+248 = { "Dinedin" "Dinedin" }
+233 = { "Kernev" "Truro" }

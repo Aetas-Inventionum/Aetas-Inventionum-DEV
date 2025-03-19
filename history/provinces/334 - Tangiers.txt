@@ -1,0 +1,41 @@
+#334 - Tangiers
+#Area - Tingitan
+#Region - Maghreb
+
+#Core Details
+capital = "Tanja"
+is_city = yes
+owner = FEZ
+controller = FEZ
+
+#Demographics
+culture = moroccan
+religion = sunni
+
+#Development and Trade
+base_tax = 3
+base_production = 3
+base_manpower = 3
+trade_goods = sugar
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = FEZ
+
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+center_of_trade = 2
+add_province_triggered_modifier = african_terminus_disunity
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

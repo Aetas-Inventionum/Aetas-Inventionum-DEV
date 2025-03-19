@@ -1,0 +1,30 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+primary_culture = circassian
+religion = xabzist
+secondary_religion = orthodox
+technology_group = eastern
+capital = 6224 #Shanjir
+add_accepted_culture = kubanian
+
+# Being a confederation, there were a lot of Princes that ruled small areas with no significant leader, other than maybe Petrezok.  They banded together for defense when needed.
+
+1415.1.1 = { #couldve been ruling earlier than 1427 but its a confederation
+	monarch = {
+		name = "Inal I Nef" #yinal prince of princes
+		dynasty = "Inalabzhe"
+		adm = 1
+		dip = 4
+		mil = 4
+	}
+}
+
+#1470.1.1 = {
+#	monarch = {
+#		adm = 0
+#		mil = 0
+#		dip = 0
+#		regent = yes
+#	}
+#}

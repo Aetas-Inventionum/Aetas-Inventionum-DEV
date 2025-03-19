@@ -1,0 +1,53 @@
+infantes_of_aragon = {
+	ended_by_country_breaking_to_rebels = no
+	potential = {
+		has_dlc = "Domination"
+		NOT = { has_country_flag = ended_infantes_disaster_flag }
+		has_estate_privilege = estate_nobles_factionalist_nobility
+	}
+	
+	can_start = {
+		current_age = age_of_discovery
+		has_regency = no
+		is_lesser_in_union = no
+	}
+	
+	can_stop = { is_lesser_in_union = yes }
+	
+	
+	progress = {
+		modifier = {
+			factor = 10
+			has_estate_privilege = estate_nobles_factionalist_nobility 
+		}
+	}
+	
+	can_end = {
+		stability = 3
+		legitimacy = 100
+		NOT = { 
+			OR = { 
+				exists = PNF
+				exists = ABQ 
+			}
+		}
+	}
+	
+
+	modifier = {
+		global_unrest = 5
+		nobles_loyalty_modifier = -0.1
+		nobles_influence_modifier = 0.1
+		legitimacy = -1
+	}
+	
+	on_start = aetas_ioa.1 #Coup of Tordesillas
+	on_end = aetas_ioa.10 #dismantlement of the infantes of aragon
+	
+	on_monthly = {
+		events = { }
+		random_events = {
+		}
+	}
+}
+

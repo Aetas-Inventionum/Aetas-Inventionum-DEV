@@ -1,0 +1,168 @@
+#AI Update
+# = { "x" "x" }
+#PLEASE ORGANIZE BY ##REGION // #AREA WHEN POSSIBLE <3
+#WHEN MODIFYING PREVIOUS DPN PLEASE ADD A # NOTE TO THE RIGHT OR BELOW <3
+
+##CARPATHIA
+#afold
+4125 = { "Külsõ-Szolnok" "Szolnok" }
+5444 = { "Bodrog" "Zenta" }
+5446 = { "Kiskunság" "Feledház" } #older contemporary name
+5458 = { "Buda" "Buda" }
+#pannonia
+5449 = { "Baranya" "Pécs" }
+5453 = { "Kõszeg" "Kõszeg" }
+5456 = { "Gyõr" "Gyõr" }
+#upper hungary
+162 = { "Zemplén" "Töketerebes" }
+1318 = { "Szepesség" "Igló" }
+5470= { "Abaúj" "Kassa"}
+5472 = { "Sáros" "Eperjes"}
+5473 = { "Homonna" "Homonna" }
+5758 = { "Jászság" "Jászberény" }
+#lower hungary
+1772 = { "Pozsony" "Pozsony" }
+4236 = { "Trencsén" "Trencsén" }
+5462 = { "Nyitra" "Nyitra" }
+5463 = { "Nagyszombat" "Nagyszombat"}
+5465 = { "Zsolna" "Zsolna" }
+5466 = { "Zólyom" "Zólyom"}
+5467 = { "Árva" "Liptószentmiklós" }
+#crisania 
+157 = { "Hadjú" "Debrecen" }
+5475 = { "Nagykunság" "Karcag" }
+5476 = { "Bihar" "Nagyvárad" }
+5477 = { "Kraszna" "Belényes" }
+5478 = { "Zaránd" "Körösbánya" }
+5479 = { "Nagykároly" "Nagykároly" }
+5482 = { "Közép-Szolnok" "Zilah" }
+#marmatia
+1952 = { "Máramaros" "Máramarossziget" }
+5474 = { "Ung" "Ungvár" }
+5480 = { "Szatmár" "Szatmárnémeti"}
+5481 = { "Nagybánya" "Nagybánya"}
+5483 = { "Bereg" "Beregszász" }
+5484 = { "Munkács" "Munkács" }
+5485 = { "Huszt" "Huszt" }
+#transylvania
+1951 = { "Hunyad" "Déva" }
+4127 = { "Torda" "Tordavár" }
+4128 = { "Szásföld" "Nagyszeben" }
+5486 = { "Kolozs" "Kolozsvár" }
+5487 = { "Belsõ-Szolnok" "Dés" }
+5488 = { "Alsó-Fehér" "Gyulafehérvár" }
+5489 = { "Küküllõ" "Segesvár" }
+5491 = { "Beszterceszék" "Beszterce" }
+#szklerland
+158 = { "Marosszék" "Marosvásárhely" }
+5492 = { "Szászrégen" "Szászrégen" }
+5493 = { "Barcaság" "Brassó" }
+5494 = { "Udvarhelyszék" "Székelyudvarhely" }
+5495 = { "Gyergyószék" "Gyergyószentmiklós" }
+5496 = { "Csík" "Csíkszereda" }
+5497 = { "Háromszék" "Sepsiszentgyörgy" }
+#banat
+156 = { "Temes" "Temesvár" }
+1954 = { "Torontál" "Nagybecskerek" }
+5438 = { "Keve" "Pancsova" }
+5439 = { "Krassó" "Resicabánya" } 
+5441 = { "Szörény" "Lugos" } 
+#east muntenia
+2998 = { "Bodzavásár" "Bodzavásár" }
+5510 = { "Jilfó" "Bukarest" }
+5513 = { "Brajla" "Brajla" }
+#oltenia
+160 = { "Királyi" "Királyi" }
+4532 = { "Méhed" "Szõrény" }
+5498 = { "Hegyi-Zsil" "Zsilvásárhely" }
+5499 = { "Calfat" "Calfat" }
+#moldavia
+4529 = { "Jászvásár" "Jászvásár" }
+4530 = { "Barlád" "Barlád" }
+5593 = { "Õrhely" "Õrhely" }
+5598 = { "Vászló" "Vászló" }
+5601 = { "Foksány" "Foksány" }
+5602 = { "Bákó" "Bákó" }
+5603 = { "Karácsonkõ" "Karácsonkõ" }
+#bessarabia
+2405 = { "Tigy" "Tigy" } #invented
+5591 = { "Izmajil" "Izmajil" }
+5597 = { "Galac" "Galac" }
+#bukovina
+268 = { "Szõcsvásár" "Szõcsvásár" }
+5600 = { "Dorohoj" "Dorohoj" }
+5604 = { "Radóc" "Radóc" }
+5606 = { "Kolomija" "Kolomija" }
+5605 = { "Bukovina" "Csernyivci" }
+##BALKANS
+#syrmia
+141 = { "Szendró" "Szendró" }
+4126 = { "Bács" "Bács" }
+4173 = { "Szerém" "Szávaszentdemeter" }
+5428 = { "Macsó" "Szabács" }
+4239 = { "Nándorfehérvár" "Nándorfehérvár" }
+5419 = { "Só" "Só" }
+5420 = { "Ózora" "Srebrenik" }
+#slavonia
+131 = { "Zábrág" "Zábrág" } #13th-18th century form
+152 = { "Varasd" "Varasd" }
+1767 = { "Valkó" "Vukovár" }
+4756 = { "Monoszló" "Kõrös" }
+5396 = { "Újlak" "Újlak" }
+5397 = { "Szetin" "Szetin" }
+5399 = { "Sziszek" "Sziszek" }
+5400 = { "Zagorje" "Korpona" }
+5401 = { "Belovár" "Kapronca" }
+5402 = { "Verõce" "Verõce" }
+5403 = { "Pozsega" "Pozsega" }
+#istria
+4752 = { "Fiume" "Fiume" }
+#croatia
+5386 = { "Vynodol" "Lopar" } #old site in hungarian
+5389 = { "Lika" "Sengg" }
+5390 = { "Gazska" "Brinye" }
+5391 = { "Bihács" "Bihács" }
+#dalmatia
+1826 = { "Tinin" "Tinin" }
+4753 = { "Zára" "Zára" }
+5392 = { "Szetina" "Sziny" }
+5393 = { "Szebenikó" "Szebenikó" }
+#donji kraji
+140 = { "Doboj" "Doboj" }
+1828 = { "Jajca" "Jajca" }
+5398 = { "Dubicsány" "Dubicsány" } #rough translation, but same etymology from same word
+5404 = { "Lewachmezõ" "Gradishka" } #or Petrinyai
+5406 = { "Szana" "Kljuc" }
+5409 = { "Orbász" "Orbász" }
+#misc greek
+320 = { "Rodosz" "Rodosz" }
+5678 = { "Szent-Péter" "Szent-Péter" }
+#iron gates
+2746 = { "Bodony" "Bodony" }
+#serbia
+141 = { "Szendrõ" "Szendrõ" }
+5431 = { "Galambóc" "Galambóc" }
+
+##south germany
+#styria
+1863 = { "Grác" "Grác" }
+#austria
+134 = { "Bécs" "Bécs" }
+5203 = { "Fölöstöm" "Fölöstöm" }
+#moravia
+265 = { "Berén" "Berén" }
+4237 = { "Alamóc" "Alamóc" }
+5233 = { "Oláhföld" "Zlín" }
+#bohemia proper
+266 = { "Prága" "Prága" }
+#upper silesia
+4723 = { "Opoly" "Opoly" }
+5235 = { "Osztrává" "Osztrává" }
+5253 = { "Tessény" "Tessény" }
+5255 = { "Glywice" "Glywice" }
+#lower
+264 = { "Boroszló" "Boroszló" }
+
+##poland
+#poland random
+2960 = { "Újszandec" "Újszandec" }

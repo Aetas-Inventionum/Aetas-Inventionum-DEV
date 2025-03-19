@@ -1,0 +1,36 @@
+#6479 - Medyn
+#Area - Kaluga
+#Region - Russia 
+
+#Core Details
+capital = "Medyn"   
+is_city = yes
+owner = MOZ
+controller = MOZ
+
+#Demographics
+culture = ryazanian
+religion = orthodox
+
+#Development and Trade
+base_tax = 1
+base_production = 2
+base_manpower = 1
+trade_goods = livestock
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = MOZ
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = nomad_group
+
+#Histories

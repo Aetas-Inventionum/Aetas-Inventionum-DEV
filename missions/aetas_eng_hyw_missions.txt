@@ -1,0 +1,706 @@
+eng_hyw_phase1_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = ENG 
+			was_tag = ENG
+		}
+		NOT = { NOT = { has_country_flag = eng_hyw_flag } }
+	} 
+
+	eng_guyenne = {
+		icon = mission_guyenne
+		position = 2
+		required_missions = { eng_land } 
+		provinces_to_highlight = {
+			area = guyenne_area
+			owned_by = ROOT
+		}
+
+		trigger = {
+			is_year = 1417
+			all_owned_province = {
+				area = guyenne_area
+				controlled_by = ROOT
+			}
+		}
+
+		effect = {
+			guyenne_area = {
+				limit = { owned_by = ROOT } 
+				add_province_modifier = {
+					name = "eng_defense"
+					duration = 3650
+				}
+			}
+		}
+	}
+
+	eng_alb = {
+		icon = fra_develop_trade
+		position = 3
+		required_missions = { eng_guyenne } 
+		provinces_to_highlight = {
+			province_id = 3261
+			NOT = { controlled_by = ROOT } 
+		}
+
+		trigger = { 3261 = { controlled_by = ENG }  } 
+
+		effect = {
+			add_country_modifier = {
+				name = "albret_captured"
+				duration = 3650
+			}
+			guyenne_area = {
+				limit = { NOT = { is_core = ROOT }  } 
+				add_core = ROOT
+			}
+			saintonge_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			poitou_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	eng_garonne = {
+		icon = fixed_garrison_system
+		position = 4
+		required_missions = { eng_alb } 
+		provinces_to_highlight = {
+			area = guyenne_area
+			NOT = {
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					controlled_by = ROOT
+				}
+			}
+		}
+
+		trigger = {
+			guyenne_area = {
+				controlled_by = ROOT
+				type = all
+			}
+		}
+
+		effect = {
+			languedoc_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	eng_toulouse = {
+		icon = mission_steppe_warriors
+		position = 5
+		required_missions = { eng_garonne } 
+		provinces_to_highlight = {
+			area = languedoc_area
+			NOT = {
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					controlled_by = ROOT
+				}
+			}
+		}
+
+		trigger = {
+			languedoc_area = {
+				controlled_by = ROOT
+				type = all
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "eng_occitania"
+				duration = -1
+			}
+			lower_languedoc_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			limousin_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			massif_central_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+eng_hyw_phase1_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = ENG 
+			was_tag = ENG
+		}
+		NOT = { NOT = { has_country_flag = eng_hyw_flag } }
+	}
+
+	eng_caen = {
+		icon = fra_refine_bombards
+		position = 2
+		required_missions = { eng_land } 
+		provinces_to_highlight = {
+			area = lower_normandy_area
+			NOT = {
+				OR = {
+					controlled_by = ROOT
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+
+		trigger = {
+			lower_normandy_area = {
+				controlled_by = ROOT
+				type = all
+			}
+		}
+
+		effect = {
+			custom_tooltip = eng_caen.tt
+			lower_normandy_area = {
+				add_province_modifier = {
+					name = "eng_normandy_mod"
+					duration = -1
+				}
+				add_core = ENG
+			}
+		}
+	}
+
+	eng_poitou = {
+		icon = republican_yearnings
+		position = 4
+		required_missions = { eng_alb } 
+		provinces_to_highlight = {  
+			OR = { 
+				area = saintonge_area
+				area = poitou_area
+			}
+			NOT = { 
+				OR = { 
+					country_or_non_sovereign_subject_holds = ROOT 
+					controlled_by = ROOT
+				}
+			}
+		} 
+
+		trigger = {  
+			saintonge_area = { 
+				controlled_by = ROOT 
+				type = all 
+			}
+			poitou_area = { 
+				controlled_by = ROOT 
+				type = all
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = eng_poit
+				duration = 3650
+			}
+		} 
+	}
+
+	eng_orl = {
+		icon = mission_siege_orleans
+		position = 5
+		required_missions = { eng_troyes } 
+		provinces_to_highlight = {  
+			province_id = 184 
+			NOT = { 
+				OR = { 
+					country_or_non_sovereign_subject_holds = ROOT 
+					controlled_by = ROOT
+				}
+			}
+		} 
+
+		trigger = {  
+			184 = { 
+				controlled_by = ROOT
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = eng_orl_siege
+				duration = 7300
+			}
+			orleans_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+}
+eng_hyw_phase1_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = ENG 
+			was_tag = ENG
+		}
+		NOT = { NOT = { has_country_flag = eng_hyw_flag } }
+	}
+
+	eng_land = {
+		icon = mission_rb_invade_england
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			france_region = { 
+				infantry_in_province = 10
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = eng_invasion
+				duration = 3650
+			}
+		} 
+	}
+
+	eng_agincourt = {
+		icon = mission_agincourt
+		position = 2
+		required_missions = { eng_land } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = eng_agincourt.tt
+				has_country_flag = agincourt_won
+			}
+		} 
+
+		effect = {  
+			add_prestige = 25
+		} 
+	}
+
+	eng_dukes_normandy = {
+		icon = the_hundred_years_war
+		position = 3
+		required_missions = {
+			eng_caen
+			eng_rouen
+		}
+		provinces_to_highlight = {  
+			OR = { 
+				area = normandy_area 
+				area = lower_normandy_area
+			}
+			NOT = { 
+				AND = {
+					controlled_by = ROOT 
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		} 
+
+		trigger = {  
+			normandy_area = { 
+				controlled_by = ROOT 
+				type = all 
+			}
+			lower_normandy_area = { 
+				controlled_by = ROOT 
+				type = all 
+			}
+		} 
+
+		effect = {  
+			country_event = { id = aetas_eng.6 }
+		} 
+	}
+
+	eng_troyes = {
+		icon = mission_fra_paix
+		position = 4
+		required_missions = { eng_dukes_normandy } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			is_in_war = {
+				attacker_leader = ROOT
+				war_score = 40
+			}
+		} 
+
+		effect = {  
+			country_event = { id = aetas_eng.8 }
+		} 
+	}
+
+	eng_dauphin = {
+		icon = mission_charles_vii
+		position = 5
+		required_missions = { eng_troyes } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			FRA = { 
+				capital_scope = { 
+					controlled_by = ROOT
+				}
+			}
+		} 
+
+		effect = {  
+			FRA = { 
+				add_ruler_modifier = { 
+					name = dauphin_captured
+					duration = -1
+				}
+			}
+		} 
+	}
+
+	eng_dual_king = {
+		icon = fra_appease_the_princes
+		position = 6
+		required_missions = {
+			eng_orl
+			eng_dauphin
+			eng_anj
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			is_in_war = {
+				attacker_leader = ROOT
+				war_score = 90
+			}
+			186 = { 
+				controlled_by = ROOT
+			}
+			183 = { 
+				controlled_by = ROOT
+			}
+			184 = { 
+				controlled_by = ROOT
+			}
+			178 = { 
+				controlled_by = ROOT
+			}
+		} 
+
+		effect = {  
+			country_event = { id = aetas_eng.9 }
+		} 
+	}
+}
+eng_hyw_phase1_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = ENG 
+			was_tag = ENG
+		}
+		NOT = { NOT = { has_country_flag = eng_hyw_flag } }
+	}
+
+	eng_rouen = {
+		icon = mission_unite_home_region
+		position = 2
+		required_missions = { eng_land } 
+		provinces_to_highlight = {  
+			area = normandy_area
+			NOT = { 
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT 
+					controlled_by = ROOT 
+				}
+			}
+		} 
+
+		trigger = {  
+			normandy_area = { 
+				controlled_by = ROOT 
+				type = all
+			}
+		} 
+
+		effect = {  
+			normandy_area = {
+				add_province_modifier = {
+					name = "eng_normandy_mod"
+					duration = -1
+				}
+				add_core = ENG
+			}
+			picardy_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	eng_amiens = {
+		icon = mission_cannons_firing
+		position = 3
+		required_missions = { eng_rouen } 
+		provinces_to_highlight = {  
+			area = picardy_area
+			NOT = { 
+				OR = { 
+					country_or_non_sovereign_subject_holds = ROOT 
+					controlled_by = ROOT
+				}
+			}
+		} 
+
+		trigger = {  
+			picardy_area = { 
+				controlled_by = ROOT 
+				type = all 
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = path_to_calais
+				duration = 3650
+			}
+		} 
+	}
+
+	eng_anj = {
+		icon = mission_fire_of_london
+		position = 5
+		required_missions = { eng_troyes } 
+		provinces_to_highlight = {  
+			province_id = 178
+			NOT = { 
+				controlled_by = ROOT
+			}
+		} 
+
+		trigger = {  
+			178 = { 
+				controlled_by = ROOT
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = eng_anger
+				duration = 3650
+			}
+		} 
+	}
+}
+eng_hyw_phase1_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = ENG 
+			was_tag = ENG
+		}
+		NOT = { NOT = { has_country_flag = eng_hyw_flag } }
+	}
+
+	eng_bri = {
+		icon = mission_bri_duc
+		position = 1
+		provinces_to_highlight = { owned_by = BRI } 
+
+		trigger = {  
+			BRI = { 
+				OR = { 
+					has_opinion = { 
+						WHO = ROOT 
+						value = 100
+					}
+					alliance_with = ROOT
+				}
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = eng_bri_dip
+				duration = 7300
+			}
+		} 
+	}
+
+	eng_secret = {
+		icon = mission_ai_fleece
+		position = 2
+		required_missions = { eng_bri } 
+		provinces_to_highlight = {  
+			OR = { 
+				owned_by = BRI 
+				owned_by = BUR 
+			}
+		} 
+
+		trigger = {  
+			alliance_with = BRI 
+			alliance_with = BUR 
+		} 
+
+		effect = {  
+			add_country_modifier = {
+				name = eng_triple
+				duration = 7300
+			}
+			BRI = { 
+				add_country_modifier = {
+					name = eng_triple
+					duration = 7300
+				}
+			}
+			BUR = { 
+				add_country_modifier = {
+					name = eng_triple
+					duration = 7300
+				}
+			}
+		} 
+	}
+
+	eng_bur = {
+		icon = mission_rb_repatriate_burgundy
+		position = 3
+		required_missions = { eng_secret } 
+		provinces_to_highlight = { owned_by = BUR } 
+
+		trigger = {  
+			OR = { 
+				AND = { 
+					alliance_with = BUR 
+					BUR = {
+						has_opinion = { 
+							WHO = ROOT
+							value = 125
+						}
+					}
+				}
+				BUR = { 
+					offensive_war_with = FRA 
+				}
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = eng_bur.tt
+			tooltip = { 
+				BUR = {
+					join_all_offensive_wars_of = ROOT
+				}
+			}
+			hidden_effect = { 
+				if = { 
+					limit = { 
+						NOT = { 
+							BUR = { 
+								offensive_war_with = FRA 
+							}
+						}
+					}
+					BUR = {
+						join_all_offensive_wars_of = ROOT
+					}
+				}
+			}
+			add_country_modifier = { 
+				name = eng_bur_support
+				duration = 3650
+			}
+		} 
+	}
+
+	eng_bur_concessions = {
+		icon = hungarian_union
+		position = 4
+		required_missions = {
+			eng_bur
+			eng_amiens
+		}
+		provinces_to_highlight = {  
+			area = picardy_area
+			NOT = { 
+				OR = { 
+					country_or_non_sovereign_subject_holds = ROOT 
+					controlled_by = ROOT
+				}
+			}
+		} 
+
+		trigger = {  
+			picardy_area = { 
+				controlled_by = ROOT 
+				type = all 
+			}
+			BUR = { 
+				offensive_war_with = FRA 
+				has_opinion = { 
+					WHO = ROOT 
+					value = 175
+				}
+			}
+		} 
+
+		effect = {  
+			country_event = { id = aetas_eng.11 }
+		} 
+	}
+}

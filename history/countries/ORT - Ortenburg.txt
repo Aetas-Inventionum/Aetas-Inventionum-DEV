@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+technology_group = western
+primary_culture = austrian
+religion = catholic
+capital = 5199
+
+1390.1.1 = {
+	monarch = {
+		name = "Friedrich I"
+		dynasty = "von Ortenberg"
+		birth_date = 1360.1.1 #approx
+		death_date = 1418.1.1
+		adm = 1
+		dip = 2
+		mil = 1
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = infertile_personality
+}

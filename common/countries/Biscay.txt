@@ -1,0 +1,107 @@
+#Country Name: Please see filename.
+
+graphical_culture = latingfx
+
+color = { 214 205 95 }
+revolutionary_colors = { 5 8 5 }
+
+historical_idea_groups = {
+	maritime_ideas
+	religious_ideas
+	defensive_ideas
+	economic_ideas
+	innovativeness_ideas
+	spy_ideas
+	offensive_ideas
+	diplomatic_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	spanish_tercio
+	french_caracolle
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Eneko #1" = 1
+	"Gartzea #4" = 30
+	"Orti #1" = 10
+	"Antso #7" = 60
+	"Semeno #1" = 5
+	"Petri #1" = 5
+	"Alfontso #1" = 5
+	"Tibalt #2" = 5
+	"Henrike #1"= 5
+	"Filipe #3" = 15
+	"Luis #1" = 0
+	"Joanes #1" = 0
+	"Karlos #3" = 15
+	"Piarres #0" = 0
+	"Oier #0" = 0
+	"Aimar #0" = 0
+	"Antoni #0" = 0
+	"Beñat #0" = 0
+	"Gaizka #0" = 0
+	"Gorka #0" = 0
+	"Gotzon #0" = 0
+	"Ibai #0" = 0
+	"Iker #0" = 0
+	"Imanol #0" = 0
+	"Iñaki #0" = 0
+	"Ximen #0" = 0
+	"Joseba #0" = 0
+	"Josetxu #0" = 0
+	"Josu #0" = 0
+	"Mikel #0" = 0
+	"Santxo #0" = 0
+	"Txiki #0" = 0
+	"Patxi #0" = 0
+	"Urtzi #0" = 0
+	"Xavier #0" = 0
+ 
+	"Joana #2" = -10
+}
+
+leader_names = {
+	Aiara Agaramontar Agirre
+	Balda Baroja Belasko Belzuntze Bergara Biskarret Butroe
+	Calleja
+	Duhalde
+	Elizondo Elorriaga Enparan Eskibel Esparza Etxeberri Etxenike
+	Fernanditz Foixko
+	Ganboa Garzeitz Gabiria Galarza
+	Henrikez
+	Idiakez
+	Latsaga Lazkanoko Laxalt Legazpi Loiola Lüküze
+	Maetzu Mendoza Montoya Muxika
+	Nafarro
+	Oinaz Otsoiz Okendo Olaso Orzabal Otxoa Otxotorena
+	Riscalgo
+	Sagasti Saltu Semenotarrak
+	Ugarte Ugartetxe Unamuno Urdaneta Uribe Uriburu Uzain
+	Valdespina
+	Xanpain
+	Zabaleta Zarate Zaldua Zelaia Zubiria Zuloaga 
+}
+
+ship_names = {
+	Atlántida "Conde de Evreux" "Conde de Foix" "Conde de Guenduláin" "Conde de Lerín"
+	"Don Jimeno" "Duque de Armagnac" "Duque de Champaña"
+	"El Agramontés" "El Beaomontés" "El Bearnés" "El Cruzado Navarro" "El Montañés" "El Navarro" "El Salvador" "El Trobador" "El Viñador" "Emperador Hispánico" Europa
+	"Mar de Navarra" "Nuestra Sra de Leyre" "Príncipe de Viana"
+	"Reina Juana" "Rey Enrique" "Rey García" "Rey Sancho" "Reyno de Navarra" "Reyno de Pamplona"
+	"San Agustín" "San Andrés" "San Antonio" "San Carlos" "San Enrique" "San Esteban" "San Fermín" "San Francisco" "San Francisco Xabier" "San Gregorio" "San Juan" "San León" "San Miguel Arcángel" "San Raimundo" "San Virila"
+	"Santa Ana" "Santa Catalina" "Santa Juana" "Santa Leonor" "Santísima Trinidad" "Señor de Tudela"
+	Vasconia
+}

@@ -1,0 +1,39 @@
+#4561 - Tetouan
+#Area - Tingitan
+#Region - Maghreb
+
+#Core Details
+capital = "Titwan"
+is_city = yes
+owner = FEZ
+controller = FEZ
+
+#Demographics
+culture = moroccan
+religion = sunni
+
+#Development and Trade
+base_tax = 3
+base_production = 3
+base_manpower = 2
+trade_goods = cloth
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = FEZ
+add_core = TET
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

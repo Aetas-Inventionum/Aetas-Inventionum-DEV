@@ -1,0 +1,38 @@
+#4946 - Alcaraz
+#Area - La Mancha
+#Region - Iberia
+
+#Core Details
+capital = "Alcaraz"
+is_city = yes
+owner = CAS
+controller = CAS
+
+#Demographics
+culture = manchego
+religion = catholic
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 2
+trade_goods = wool
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = CAS
+add_core = TLD
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

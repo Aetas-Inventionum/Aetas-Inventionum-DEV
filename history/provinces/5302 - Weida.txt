@@ -1,0 +1,39 @@
+#5302 - Weida
+#Area - Vogtland
+#Region - South Germany
+
+#Core Details
+capital = "Weida"
+is_city = yes
+owner = MEI 
+controller = MEI 
+
+#Demographics
+culture = franconian
+religion = catholic
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 2
+trade_goods = apiculture
+
+#Cores and Occupation (Alphabetical after current)
+add_core = MEI
+add_core = WED
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

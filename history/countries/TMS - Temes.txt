@@ -1,0 +1,8 @@
+government = republic
+add_government_reform = noble_elite_reform
+government_rank = 1
+technology_group = eastern
+primary_culture = hungarian
+add_accepted_culture = transylvanian
+religion = catholic
+capital = 156 #temes

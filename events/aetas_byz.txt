@@ -1,0 +1,1279 @@
+namespace = aetas_byz
+normal_or_historical_nations = yes
+#designed and integrated by pleibos
+# Status of the Margraviate of Montferrat
+country_event = {
+	id = aetas_byz.1
+	title = aetas_byz.1.t
+	desc = aetas_byz.1.d
+	picture = CORRUPTION_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { #Ask if they would merge with the main branch of Palaiologos
+		name = "aetas_byz.1.a"
+		MFA = {
+			country_event = { id = aetas_byz.2 } #popping the big question
+		}
+	}
+}
+country_event = {
+	id = aetas_byz.2
+	title = aetas_byz.2.t
+	desc = aetas_byz.2.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+	is_triggered_only = yes 
+
+	option = { #Sure why not
+		name = "aetas_byz.2.a"
+		ai_chance = { factor = 75 }
+		tooltip = {
+			BYZ = {
+				create_union = MFA
+			}
+		}
+		BYZ = {
+			country_event = { id = aetas_byz.3 } #positive response
+		}
+	}
+	option = { #fkuc yuo i dnot eben spek greek
+		name = "aetas_byz.2.b"
+		ai_chance = { factor = 25 }
+		BYZ = {
+			add_casus_belli = {
+				target = MFA
+				type = cb_restore_personal_union
+				months = 240
+			}
+		}
+	}
+}
+country_event = {
+	id = aetas_byz.3
+	title = aetas_byz.3.t
+	desc = aetas_byz.3.d
+	picture = CONQUEST_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { #very cool
+		name = "aetas_byz.3.a"
+		create_union = MFA
+	}
+}
+country_event = { #art of the deal
+	id = aetas_byz.4
+	title = aetas_byz.4.t
+	desc = aetas_byz.4.d
+	picture = CONQUEST_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { #lets talk to venice
+		name = "aetas_byz.4.a"
+		trigger = {
+			VEN = {
+				alliance_with = BYZ 
+				has_opinion = {
+					WHO = BYZ
+					value = 150
+				}
+			}
+		}
+		country_event = { id = aetas_byz.5 }
+	}
+	option = { #lets talk to genoa
+		name = "aetas_byz.4.b"
+		trigger = {
+			GEN = {
+				alliance_with = BYZ 
+				has_opinion = {
+					WHO = BYZ
+					value = 150
+				}
+			}
+		}
+		country_event = { id = aetas_byz.6 }
+	}
+}
+
+country_event = {
+	id = aetas_byz.5 #sale of exclaves from VEN
+	title = aetas_byz.5.t
+	desc = aetas_byz.5.d
+	picture = CONQUEST_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { #good deal i buy
+		name = "aetas_byz.6.a"
+		add_treasury = -250
+		tooltip = {
+			5633 = { cede_province = BYZ }
+			5640 = { cede_province = BYZ }
+			5540 = { cede_province = BYZ }
+		}
+		hidden_effect = {
+			if = { 
+				limit = { 
+					5583 = { 
+						owned_by = VEN 
+					}
+				}
+				5583 = { 
+					cede_province = BYZ 
+					remove_core = VEN 			
+				}
+			}
+			if = {
+				limit = {
+					5580 = {
+						owned_by = VEN 
+					}
+				}
+				5580 = { 
+					cede_province = BYZ 
+					remove_core = VEN
+				}
+			}
+			if = {
+				limit = {
+					5579 = {
+						owned_by = VEN 
+					}
+				}
+				5579 = { 
+					cede_province = BYZ 
+					remove_core = VEN
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = aetas_byz.6 #sale of exclaves from GEN
+	title = aetas_byz.6.t
+	desc = aetas_byz.6.d
+	picture = CONQUEST_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { #good deal i buy
+		name = "aetas_byz.5.a"
+		add_treasury = -250
+		tooltip = {
+			5633 = { 
+				cede_province = BYZ
+				add_core = BYZ 
+			}
+			5640 = { 
+				cede_province = BYZ
+				add_core = BYZ 
+			}
+			5540 = { 
+				cede_province = BYZ 
+				add_core = BYZ
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					5633 = {
+						owned_by = GEN 
+					}
+				}
+				5633 = { 
+					cede_province = BYZ 
+					add_core = BYZ 
+					remove_core = GEN
+				}
+			}
+			if = {
+				limit = {
+					5640 = {
+						owned_by = GEN 
+					}
+				}
+				5640 = { 
+					cede_province = BYZ 
+					add_core = BYZ 
+					remove_core = GEN
+				}
+			}
+			if = {
+				limit = {
+					5540 = {
+						owned_by = GEN 
+					}
+				}
+				5540 = { 
+					cede_province = BYZ 
+					add_core = BYZ 
+					remove_core = GEN
+				}
+			}
+		}
+	}
+}
+country_event = { #council of florence
+	id = aetas_byz.7
+	title = aetas_byz.7.t
+	desc = aetas_byz.7.d
+	picture = POPE_PREACHING_eventPicture
+	
+	fire_only_once = yes
+	major = yes 
+
+	trigger = { 
+		has_global_flag = council_lan_flag
+	}
+
+	mean_time_to_happen = { 
+		months = 120
+	}
+
+	option = { #his holiness is my one true daddy
+		name = "aetas_byz.7.a"
+		ai_chance = { factor = 90 }
+		change_religion = catholic
+		set_estate_privilege = estate_church_union_of_the_churches
+		custom_tooltip = byz_begin_catholicization
+		add_stability = -2
+		151 = {
+			spawn_rebels = {
+				type = orthodox_rebels
+				size = 3
+			}
+		}
+		5521 = {
+			spawn_rebels = {
+				type = orthodox_rebels
+				size = 3
+			}
+		}
+	}
+	option = { #no, i donteven spekesh the latin
+		name = "aetas_byz.7.b"
+		ai_chance = { factor = 10 }
+		custom_tooltip = byz_catholic_haters.tt
+		every_known_country = { 
+			limit = { religion = catholic }
+			add_opinion = { 
+				who = ROOT 
+				modifier = byz_cath_hater
+			}
+		}
+		add_stability = 1
+		add_country_modifier = {
+			name = "byz_stand_alone"
+			duration = -1
+		}
+		clr_country_flag = byz_cath_flag
+		set_country_flag = byz_orthodox_flag
+		swap_non_generic_missions = yes 
+	}
+}
+country_event = { #Knights enter the Service of the Emperor
+	id = aetas_byz.8
+	title = aetas_byz.8.t
+	desc = aetas_byz.8.d
+	picture = CONQUEST_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { #very cool
+		name = "aetas_byz.8.a"
+		vassalize = KNI
+		custom_tooltip = aetas_byz.8.tt
+		set_country_flag = enable_holy_orders_flag 
+	}
+}
+country_event = { #Gemistos PLethon
+	id = aetas_byz.9
+	title = aetas_byz.9.t
+	desc = aetas_byz.9.d
+	picture = DIPLOMACY_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	trigger = {
+		tag = BYZ 
+		BYZ = {
+			has_country_flag = mouseion_flag #no modifier
+		}
+	}
+
+	#no MTTH for triggered
+
+	option = { #very cool
+		name = "aetas_byz.9.a"
+		ai_chance = { factor = 1 }
+		define_advisor = {
+			type = philosopher 
+			culture = greek
+			discount = yes
+			skill = 3
+			name = "Gemistos Plethon"
+		}
+	}
+}
+country_event = { #Gennadius Scholarius
+	id = aetas_byz.10
+	title = aetas_byz.10.t
+	desc = aetas_byz.10.d
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	trigger = {
+		tag = BYZ 
+		BYZ = {
+			has_country_flag = mouseion_flag 
+		}
+	}
+
+	#no MTTH for triggered
+
+	option = { #very cool
+		name = "aetas_byz.10.a"
+		ai_chance = { factor = 1 }
+		define_advisor = {
+			type = theologian 
+			culture = greek
+			discount = yes
+			skill = 3
+			name = "Gennadius Scholarius"
+		}
+	}
+}
+#early retirement of Andronikos
+country_event = {
+	id = aetas_byz.11
+	title = aetas_byz.11.t
+	desc = aetas_byz.11.d
+	picture = CONQUEST_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	major = yes 
+	major_trigger = { tag = VEN }
+
+	option = { #May he have a good stay at Athos
+		name = aetas_byz.11.a 
+		inherit = TSK 
+		148 = { add_core = VEN }
+	}
+}
+#autonomy of mount athos
+country_event = {
+	id = aetas_byz.12
+	title = aetas_byz.12.t
+	desc = aetas_byz.12.d
+	picture = COPTIC_BISHOP_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { #May he have a good stay at Athos
+		name = aetas_byz.12.a 
+		ai_chance = { factor = 50 }
+		release = ATO 
+		create_subject = { 
+			subject = ATO 
+			subject_type = fief
+		}
+		custom_tooltip = byz_atos.tt
+		hidden_effect =  {
+			add_country_modifier = { 
+				name = byz_athos
+				duration = -1
+			}
+		}
+	}
+	option = { #No exceptions will be made for them.
+		name = aetas_byz.12.b
+		ai_chance = { factor = 50 }
+		add_prestige = 15
+	}
+}
+#hexamilion
+country_event = {
+	id = aetas_byz.13
+	title = aetas_byz.13.t
+	desc = aetas_byz.13.d
+	picture = BYZ_FORT_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { #Excellent news!
+		name = aetas_byz.13.a 
+		4701 = { 
+			add_province_triggered_modifier = byz_cor_hex
+		}
+	}
+}
+#athens fealty 
+country_event = {
+	id = aetas_byz.14
+	title = aetas_byz.14.t
+	desc = aetas_byz.14.d
+	picture = BYZ_ATHENS_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { #Welcome to the family
+		name = aetas_byz.14.a 
+		create_subject = { 
+			subject = ATH 
+			subject_type = fief 
+		}
+		custom_tooltip = byz_ath_subject.tt
+		hidden_effect = { 
+			add_country_modifier = { 
+				name = byz_ath_subject #missed loc
+				duration = -1
+			}
+			change_country_color = { 
+				color = { 
+					164 103 129
+				}
+			}
+		}
+	}
+}
+#morean brothers 
+country_event = {
+	id = aetas_byz.15
+	title = aetas_byz.15.t
+	desc = aetas_byz.15.d
+	picture = BYZ_REVOLUTION_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_byz.15.a #let Thomas take charge 
+		ai_chance = { factor = 50 }
+		MOE = { 
+			define_ruler = { 
+				name = "Thomás I"
+				dynasty = "Palaiológos"
+				adm = 2 
+				dip = 4 
+				mil = 4 
+				age = 20 
+			}
+			add_ruler_modifier = { 
+				name = moe_bros 
+				duration = -1 
+			}
+			define_heir = { 
+				name = "Dimítrios"
+				monarch_name = "Dimítrios I"
+				dynasty = "Palaiológos"
+				age = 25 
+			}
+		}
+	}
+	option = { 
+		name = aetas_byz.15.b #let Dimitrios take charge 
+		ai_chance = { factor = 50 }
+		MOE = { 
+			define_ruler = { 
+				name = "Dimítrios I"
+				dynasty = "Palaiológos"
+				age = 25
+			}
+			add_ruler_modifier = { 
+				name = moe_bros 
+				duration = -1 
+			}
+		}
+	}
+}
+#manouil resigns from power
+country_event = {
+	id = aetas_byz.16
+	title = aetas_byz.16.t
+	desc = aetas_byz.16.d
+	picture = BYZ_COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = { 
+		tag = BYZ 
+		is_year = 1420
+		has_ruler = "Manouíl II" 
+	}
+
+	mean_time_to_happen = { 
+		months = 12 
+	}
+
+	option = { 
+		name = aetas_byz.16.a #very interesting development
+		exile_ruler_as = { name = manouil_ii }
+		set_country_flag = ioannes_flag
+	}
+}
+#success of Mustafa's revolt
+country_event = {
+	id = aetas_byz.17
+	title = aetas_byz.17.t
+	desc = aetas_byz.17.d
+	picture = BYZ_BAD_WITH_MONARCH_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			is_subject_of = ROOT 
+			tag = TUR 
+			is_subject_of = TUR 
+			is_neighbor_of = ROOT 
+			is_neighbor_of = TUR
+		}
+	}
+
+	option = { 
+		name = aetas_byz.16.a #high risk, even higher reward
+		white_peace = TUR 
+		TUR = { 
+			disband_rebels = pretender_rebels
+			define_ruler = { 
+				name = "Mustafa Çelebi"
+				dynasty = "Osmanoglu"
+				adm = 1
+				dip = 1
+				mil = 3
+				age = 40
+			}
+			remove_heir = {}
+		}
+		if = { 
+			limit = { TUR = { owns = 5630 } }
+			5630 = { 
+				cede_province = ROOT 
+			}
+		}
+		if = { 
+			limit = { TUR = { owns = 5631 } }
+			5631 = { 
+				cede_province = ROOT 
+			}
+		}
+		thrace_area = { 
+			limit = { owned_by = TUR }
+			cede_province = ROOT 
+		}
+		macedonia_area = { 
+			limit = { 
+				owned_by = TUR 
+				is_core = ROOT 
+			}
+			cede_province = ROOT 
+		}
+		thessaly_area = { 
+			limit = { 
+				owned_by = TUR 
+				is_core = ROOT 
+			}
+			cede_province = ROOT 
+		}
+		aetolia_area = { 
+			limit = { 
+				owned_by = TUR 
+				is_core = ROOT 
+			}
+			cede_province = ROOT 
+		}
+		northern_greece_area = { 
+			limit = { 
+				owned_by = TUR 
+				is_core = ROOT 
+			}
+			cede_province = ROOT 
+		}
+	}
+}
+#fate of the greek church
+country_event = {
+	id = aetas_byz.18
+	title = aetas_byz.18.t
+	desc = aetas_byz.18.d
+	picture = ORTHODOX_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = { 
+		tag = BYZ 
+	}
+
+	mean_time_to_happen = { 
+		months = 5
+	}
+
+	option = { 
+		name = aetas_byz.18.a #catholic
+		ai_chance = { factor = 75 }
+		set_country_flag = byz_cath_flag
+		set_ruler_religion = catholic 
+		set_heir_religion = catholic 
+		custom_tooltip = byz_catholic_missions.tt
+		swap_non_generic_missions = yes 
+	}
+	option = { 
+		name = aetas_byz.18.b #orthodox
+		ai_chance = { factor = 25 }
+		set_country_flag = byz_orthodox_flag
+		custom_tooltip = byz_orthodox_missions.tt
+		swap_non_generic_missions = yes 
+	}
+}
+#beginning of the western tour
+country_event = {
+	id = aetas_byz.19
+	title = aetas_byz.19.t
+	desc = aetas_byz.19.d
+	picture = ORTHODOX_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_byz.19.a #let our journey begin!
+		custom_tooltip = byz_tour_start.tt #our tour through italy and perhaps all of western europe will begin
+		add_ruler_modifier = { 
+			name = byz_ruler_tour
+			duration = -1
+		}
+	}
+}
+#arrival in naples
+country_event = {
+	id = aetas_byz.20 
+	title = aetas_byz.20.t
+	desc = aetas_byz.20.d
+	picture = CITY_VIEW_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	major = yes 
+	major_trigger = { tag = NAP }
+
+	option = { 
+		name = aetas_byz.20.a #lovely
+		reverse_add_opinion = { 
+			who = NAP 
+			modifier = byz_dip_visit
+		}
+		custom_tooltip = byz_tour_continue.tt
+		hidden_effect = { 
+			country_event = { 
+				id = aetas_byz.21 
+				days = 4
+			}
+		}
+	}
+}
+#delegation at rome
+country_event = {
+	id = aetas_byz.21
+	title = aetas_byz.21.t
+	desc = aetas_byz.21.d
+	picture = ST_PETERS_CHURCH_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	major = yes 
+	major_trigger = { tag = PAP }
+
+	option = { 
+		name = aetas_byz.21.a #lovely
+		add_prestige = 10 
+		reverse_add_opinion = { 
+			who = PAP 
+			modifier = byz_dip_visit
+		}
+		custom_tooltip = byz_tour_continue.tt
+		hidden_effect = { 
+			country_event = { 
+				id = aetas_byz.22
+				days = 3
+			}
+		}
+	}
+}
+#fraternization at florence & exchange with florence
+country_event = {
+	id = aetas_byz.22
+	title = aetas_byz.22.t
+	desc = aetas_byz.22.d
+	picture = UNIVERSITY_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	major = yes 
+	major_trigger = { tag = LAN }
+
+	option = { 
+		name = aetas_byz.22.a #lovely
+		add_historical_friend = LAN 
+		LAN = { add_historical_friend = BYZ }
+		reverse_add_opinion = { 
+			who = LAN 
+			modifier = byz_dip_visit
+		}
+		add_country_modifier = { 
+			name = byz_latin_scholars
+			duration = -1
+		}
+		LAN = { 
+			add_country_modifier = { 
+				name = byz_latin_scholars
+				duration = -1
+			}
+		}
+		custom_tooltip = byz_tour_continue.tt
+		hidden_effect = { 
+			country_event = { 
+				id = aetas_byz.23
+				days = 4
+			}
+		}
+	}
+}
+#stop at genoa
+country_event = {
+	id = aetas_byz.23
+	title = aetas_byz.23.t
+	desc = aetas_byz.23.d
+	picture = SONS_OF_ARAGON_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	major = yes 
+	major_trigger = { tag = GEN }
+
+	option = { 
+		name = aetas_byz.23.a #lovely
+		reverse_add_opinion = { 
+			who = GEN 
+			modifier = byz_dip_visit
+		}
+		custom_tooltip = byz_tour_continue.tt
+		hidden_effect = { 
+			country_event = { 
+				id = aetas_byz.24
+				days = 4
+			}
+		}
+	}
+}
+#travelling to milan
+country_event = {
+	id = aetas_byz.24
+	title = aetas_byz.24.t
+	desc = aetas_byz.24.d
+	picture = DIPLOMAT_INTERROGATION_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	major = yes 
+	major_trigger = { tag = MLO }
+
+	option = { 
+		name = aetas_byz.24.a #midpoint of northern italy, if you stay you might receive a surprise invitation...
+		ai_chance = { factor = 50 }
+		reverse_add_opinion = { 
+			who = MLO
+			modifier = byz_dip_visit
+		}
+		random_list = { 
+			1 = { 
+				country_event = { 
+					id = aetas_byz.26 
+					days = 2
+				}
+			}
+			1 = { 
+				country_event = { 
+					id = aetas_byz.28
+					days = 2
+				}
+			}
+			1 = { 
+				country_event = { 
+					id = aetas_byz.30
+					days = 2
+				}
+			}
+		}
+	}
+	option = { 
+		name = aetas_byz.24.b #finish in venice owo
+		ai_chance = { factor = 50 }
+		reverse_add_opinion = { 
+			who = MLO
+			modifier = byz_dip_visit
+		}
+		country_event = { 
+			id = aetas_byz.25 
+			days = 4
+		}
+	}
+}
+#visitation to venice
+country_event = {
+	id = aetas_byz.25
+	title = aetas_byz.25.t
+	desc = aetas_byz.25.d
+	picture = STREET_SPEECH_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	major = yes 
+	major_trigger = { tag = VEN }
+
+	option = { 
+		name = aetas_byz.25.a #lovely
+		reverse_add_opinion = { 
+			who = VEN
+			modifier = byz_dip_visit
+		}
+		custom_tooltip = byz_tour_end_tt 
+		hidden_effect = { 
+			country_event = { 
+				id = aetas_byz.32
+				days = 7
+			}
+		}
+	}
+}
+#invitation to paris
+country_event = {
+	id = aetas_byz.26
+	title = aetas_byz.26.t
+	desc = aetas_byz.26.d
+	picture = WESTERNISATION_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_byz.26.a #we shall visit paris
+		ai_chance = { factor = 50 }
+		custom_tooltip = byz_tour_continue.tt
+		country_event = {
+			id = aetas_byz.27
+			days = 7
+		}
+	}
+	option = { 
+		name = aetas_byz.26.b #we await another's invite.
+		ai_chance = { factor = 50 }
+		random_list = { 
+			1 = { 
+				country_event = { 
+					id = aetas_byz.28
+					days = 2
+				}
+			}
+			1 = { 
+				country_event = { 
+					id = aetas_byz.30
+					days = 2
+				}
+			}
+		}
+	}
+}
+#arrival in paris
+country_event = {
+	id = aetas_byz.27
+	title = aetas_byz.27.t
+	desc = aetas_byz.27.d
+	picture = GREAT_BUILDING_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	major = yes 
+	major_trigger = { tag = FRA }
+
+	option = { 
+		name = aetas_byz.27.a #wonderful! (tour ends with return to Constantinople
+		reverse_add_opinion = { 
+			who = FRA 
+			modifier = byz_dip_visit
+		}
+		add_prestige = 10 
+		custom_tooltip = byz_tour_end_tt
+		country_event = { 
+			id = aetas_byz.32
+			days = 14
+		}
+	}
+}
+#invitation to aragon
+country_event = {
+	id = aetas_byz.28
+	title = aetas_byz.28.t
+	desc = aetas_byz.28.d
+	picture = WESTERNISATION_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_byz.28.a #we shall visit aragon
+		ai_chance = { factor = 50 }
+		custom_tooltip = byz_tour_continue.tt
+		country_event = { 
+			id = aetas_byz.29
+			days = 5
+		}
+	}
+	option = { 
+		name = aetas_byz.26.b #we await another's invite.
+		ai_chance = { factor = 50 }
+		country_event = { 
+			id = aetas_byz.30 
+			days = 1
+		}
+	}
+}
+#offer from the consulate of the sea
+country_event = {
+	id = aetas_byz.29
+	title = aetas_byz.29.t
+	desc = aetas_byz.29.d
+	picture = DIPLOMACY_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	major = yes 
+	major_trigger = { tag = ARA }
+
+	option = { 
+		name = aetas_byz.29.a #accept their deal
+		ai_chance = { 
+			factor = 0
+			modifier = { 
+				factor = 90
+				alliance_with = ARA 
+			}
+		}
+		#cede lemnos in return for alliance and historical friendship
+		5500 = { 
+			cede_province = ARA 
+			add_core = ARA 
+			remove_core = ROOT 
+		}
+		add_historical_friend = ARA 
+		ARA = { add_historical_friend = BYZ }
+		create_alliance = ARA 
+		custom_tooltip = byz_tour_end_tt 
+		hidden_effect = { 
+			country_event = { 
+				id = aetas_byz.32
+				days = 10
+			}
+		}
+	}
+	option = { 
+		name = aetas_byz.29.b #charming, but absolutely not.
+		ai_chance = { 
+			factor = 100 
+			modifier = {
+				factor = 0 
+				alliance_with = ARA 
+			}
+		}
+	}
+}
+#invitation to england
+country_event = {
+	id = aetas_byz.30 
+	title = aetas_byz.30.t
+	desc = aetas_byz.30.d
+	picture = WESTERNISATION_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_byz.30.a #we will depart for london
+		custom_tooltip = byz_tour_continue.tt
+		country_event = { 
+			id = aetas_byz.31 
+			days = 10
+		}
+	}
+	option = { 
+		name = aetas_byz.30.b #we will end the tour in venice instead
+		country_event = { 
+			id = aetas_byz.25
+			days = 4
+		}
+	}
+}
+#stay at blackheath in london
+country_event = {
+	id = aetas_byz.31
+	title = aetas_byz.31.t
+	desc = aetas_byz.31.d
+	picture = GREAT_BUILDING_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	major = yes 
+	major_trigger = { tag = ENG }
+
+	option = { 
+		name = aetas_byz.31.a #wonderful! (tour ends with return to Constantinople
+		reverse_add_opinion = { 
+			who = ENG 
+			modifier = byz_dip_visit
+		}
+		add_historical_friend = ENG 
+		ENG = { add_historical_friend = BYZ }
+		add_prestige = 10 
+		custom_tooltip = byz_tour_end_tt
+		hidden_effect = { 
+			country_event = { 
+				id = aetas_byz.32
+				days = 14
+			}
+		}
+	}
+}
+#end of the tour :)
+country_event = {
+	id = aetas_byz.32
+	title = aetas_byz.32.t
+	desc = aetas_byz.32.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_byz.32.a #wonderful! (tour ends with return to Constantinople
+		remove_country_modifier = byz_ruler_tour
+	}
+}
+#intrigue in the triarchy
+country_event = {
+	id = aetas_byz.33
+	title = aetas_byz.33.t
+	desc = aetas_byz.33.d
+	picture = SPY_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_byz.33.a #let us take the chance
+		NEG = { country_event = { id = aetas_byz.34 } }
+	}
+	option = { 
+		name = aetas_byz.33.b #just take the cores
+		3003 = { add_core = ROOT }
+		5576 = { add_core = ROOT }
+	}
+}
+#byzantine offer to triarchy
+country_event = {
+	id = aetas_byz.34
+	title = aetas_byz.34.t
+	desc = aetas_byz.34.d
+	picture = STREET_SPEECH_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			tag = BYZ 
+			tag = VEN 
+		}
+	}
+
+	option = { 
+		name = aetas_byz.34.a #sure 
+		BYZ = { 
+			create_subject = { 
+				subject = ROOT 
+				subject_type = fief 
+			}
+		}
+		hidden_effect = { 
+			change_country_color = { 
+				color = { 132 90 109 }
+			}
+		}
+		3003 = { 
+			add_core = VEN 
+		}
+		5576 = { 
+			add_core = VEN 
+		}
+	}
+}
+#lesbos responds
+country_event = {
+	id = aetas_byz.35
+	title = aetas_byz.35.t
+	desc = aetas_byz.35.d
+	picture = STREET_SPEECH_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			tag = BYZ 
+			tag = GEN
+		}
+	}
+
+	option = { 
+		name = aetas_byz.35.a #sure 
+		BYZ = { 
+			create_subject = { 
+				subject = ROOT 
+				subject_type = fief 
+			}
+		}
+		hidden_effect = { 
+			change_country_color = { 
+				color = { 142 100 119 }
+			}
+		}
+		4700 = { add_core = GEN }
+		5540 = { add_core = GEN }
+	}
+}
+#fate of the arvanites
+country_event = {
+	id = aetas_byz.36
+	title = aetas_byz.36.t
+	desc = aetas_byz.36.d
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	major = yes 
+	major_trigger = { 
+		AND = { 
+			is_subject_of = ROOT 
+			OR = { 
+				owns_core_province = 5573
+				owns_core_province = 5575
+				owns_core_province = 4701
+				owns_core_province = 5578
+			}
+		}
+	}
+
+	option = { 
+		name = aetas_byz.36.a #we will accept them with open arms!
+		ai_chance = { factor = 95 }
+		add_country_modifier = { 
+			name = arvanite_comms
+			duration = -1
+		}
+		add_accepted_culture = arvanite
+		5573 = { 
+			change_culture = arvanite 
+			add_province_triggered_modifier = arvanite_mod
+		}
+		5575 = { 
+			change_culture = arvanite 
+			add_province_triggered_modifier = arvanite_mod
+		}
+		4701 = { 
+			change_culture = arvanite 
+			add_province_triggered_modifier = arvanite_mod
+		}
+		5578 = { 
+			change_culture = arvanite 
+			add_province_triggered_modifier = arvanite_mod
+		}
+	}
+	option = { 
+		name = aetas_byz.36.b
+		ai_chance = { factor = 5 }
+	}
+}
+#fate of the arumanians
+country_event = {
+	id = aetas_byz.37
+	title = aetas_byz.37.t
+	desc = aetas_byz.37.d
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	major = yes 
+	major_trigger = { 
+		AND = { 
+			is_subject_of = ROOT 
+			OR = { 
+				owns_core_province = 5555
+				owns_core_province = 5569
+				owns_core_province = 5564
+				owns_core_province = 5568
+				owns_core_province = 5550
+			}
+		}
+	}
+
+	option = { 
+		name = aetas_byz.37.a #we will accept them with open arms!
+		ai_chance = { factor = 95 }
+		add_country_modifier = { 
+			name = arumanian_acceptance
+			duration = -1
+		}
+		add_accepted_culture = aromanian
+		5555 = { 
+			change_culture = aromanian
+			add_province_triggered_modifier = aromanian_mod
+		}
+		5569 = { 
+			change_culture = aromanian
+			add_province_triggered_modifier = aromanian_mod
+		}
+		5564 = { 
+			change_culture = aromanian
+			add_province_triggered_modifier = aromanian_mod
+		}
+		5568 = { 
+			change_culture = aromanian
+			add_province_triggered_modifier = aromanian_mod
+		}
+		5550 = { 
+			change_culture = aromanian
+			add_province_triggered_modifier = aromanian_mod
+		}
+	}
+	option = { 
+		name = aetas_byz.37.b
+		ai_chance = { factor = 5 }
+	}
+}

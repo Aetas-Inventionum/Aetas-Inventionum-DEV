@@ -1,0 +1,38 @@
+#5084 - Todi
+#Area - Umbria
+#Region - Italy
+
+#Core Details
+capital = "Todi"
+is_city = yes
+owner = PGA
+controller = PGA
+
+#Demographics
+culture = umbrian
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 3
+base_manpower = 2
+trade_goods = cloth
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = PGA
+add_core = TUC
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

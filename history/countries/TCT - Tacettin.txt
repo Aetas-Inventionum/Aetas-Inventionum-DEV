@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = beylik_government
+government_rank = 1
+primary_culture = chepni
+add_accepted_culture = pontic_greek
+religion = sunni
+technology_group = ottoman
+capital = 5652 #niksar
+religious_school = hanafi_school
+
+1405.1.1 = {
+	monarch = {
+		name = "Mahmut I"
+		dynasty = "Tâcüddînoglu"
+		adm = 3
+		dip = 1
+		mil = 2
+	}
+}

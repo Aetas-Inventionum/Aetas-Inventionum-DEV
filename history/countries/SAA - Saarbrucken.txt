@@ -1,0 +1,34 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+primary_culture = palatinish
+religion = catholic
+technology_group = western
+capital = 5021
+fixed_capital = 5021
+historical_friend = DLL
+historical_friend = WIE
+
+1381.7.3 = {
+	monarch = {
+		name = "Philipp I"
+		dynasty = "von Nassau"
+		culture = palatinehessian
+		birth_date = 1368.1.1
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}
+
+1412.1.1 = {
+	queen = {
+		name = "Elisabeth"
+		dynasty = "de Lorraine"
+		birth_date = 1395.1.1
+		female = yes
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}

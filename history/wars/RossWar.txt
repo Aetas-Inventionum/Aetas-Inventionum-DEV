@@ -1,0 +1,16 @@
+name = "First MacDonald War over Ross"
+war_goal = {
+	type = take_core
+	casus_belli = cb_core
+	province = 5157
+}
+
+1411.1.1 = {
+	add_attacker = LOI 
+	add_defender = SCO 
+}
+
+1415.8.1 = {
+	rem_attacker = LOI 
+	rem_defender = SCO 
+}

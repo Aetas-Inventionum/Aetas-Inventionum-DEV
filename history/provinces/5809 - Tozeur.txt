@@ -1,0 +1,39 @@
+#5809 - Tozeur
+#Area - Suf-Djerid
+#Region - Maghreb
+
+#Core Details
+capital = "Tozeur"
+is_city = yes
+owner = TUN
+controller = TUN
+
+#Demographics
+culture = tugurti
+religion = sunni
+
+#Development and Trade
+base_tax = 2
+base_production = 3
+base_manpower = 3
+trade_goods = fruit
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = TUN
+add_core = GFS
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+center_of_trade = 2
+
+#Discoveries
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

@@ -1,0 +1,38 @@
+#3394 - Luxeuil
+#Area - Franche-Comté
+#Region - France
+
+#Core Details
+capital = "Luxeuil" #hericourt out of province and actually co-owned by basel and neuchatel. Luxeuil firmly in Burgundian sphere
+is_city = yes
+owner = BUR
+controller = BUR
+
+#Demographics
+culture = burgundian
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 1
+base_manpower = 2
+trade_goods = books
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = BUR
+add_core = FCB
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

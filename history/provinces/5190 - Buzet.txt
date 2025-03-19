@@ -1,0 +1,39 @@
+#5190 - Buzet
+#Area - Istria
+#Region - South Germany
+
+#Core Details
+capital = "Buzet"
+is_city = yes
+owner = AQU
+controller = AQU 
+
+#Demographics
+culture = istriot
+religion = catholic
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = livestock
+
+#Cores and Occupation (Alphabetical after current)
+add_core = AQU
+add_core = IST
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

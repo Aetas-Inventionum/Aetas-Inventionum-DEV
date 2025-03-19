@@ -1,0 +1,36 @@
+#6057 - Pitea
+#Area - Lapland
+#Region - Scandinavia 
+
+#Core Details
+capital = "Jokkmokk"
+is_city = yes
+owner = BKL
+controller =  BKL
+
+#Demographics
+culture = sapmi
+religion = animism
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = tar
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = BKL
+add_core = SMI
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+
+#Histories

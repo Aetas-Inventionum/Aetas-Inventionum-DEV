@@ -1,0 +1,134 @@
+#Country Name: Please see filename.
+
+graphical_culture = easterngfx
+
+color = { 42  117  17 }
+
+revolutionary_colors = { 15 2 10 }
+
+historical_idea_groups = {
+	defensive_ideas
+	maritime_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	humanist_ideas
+	quantity_ideas
+}
+
+historical_units = {
+	eastern_medieval_infantry
+	eastern_knights
+	slavic_stradioti
+	eastern_militia
+	muscovite_musketeer
+	muscovite_caracolle
+	muscovite_soldaty
+	muscovite_cossack
+	russian_petrine
+	russian_lancer
+	russian_green_coat
+	russian_cuirassier
+	eastern_skirmisher
+	eastern_uhlan
+	eastern_carabinier
+	russian_mass
+}
+
+monarch_names = {
+	"Baxsan #1" = 5
+	"Xepek' #1" = 10
+	"Rededey #1" = 5
+	"Verzaxta #1" = 40
+	"Tukar #1" = 5
+	"Inal #1" = 30
+	"Temyruky #0" = 50
+	"Janxyet #0" = 50
+	"Minbolet #0" = 50
+	"Beslian #0" = 50
+	"Xurfatal #1" = 20
+	"Inermes #0" = 40
+	"Idar #0" = 30
+	"Temirikyue #0" = 10
+	"Kambolet #0" = 10
+	"Kundet #0" = 10
+	"Irisxan #0" = 10
+	"Mixail #0" = 50
+	"Aleksey #0" = 10
+	"Sh'aleguet #0" = 10
+	"Kenkiul #0" = 10
+	"Sunjeley #0" = 10
+	"Alegukue #0" = 5
+	"Adiy #0" = 0
+	"Janxuet #0" = 30
+	"Talosten #0" = 20
+	"Tepsery'kue #0" = 20
+	"Sholexu #0" = 30
+	"Bespen #0" = 30
+	"Keytikiye #0" = 40
+	"Psheapshokue #0" = 10
+	"Aslenbek #0" = 40
+	"Kyeytikue #0" = 10
+	"Xet'exushokue #0" = 40
+	"Kergokue #0" = 40
+	"Bemat #0" = 40
+	"Mesost #0" = 5
+	"Jambolet #0" = 15
+	"Keytikue #0" = 1
+	"Becmirey #0" = 0
+	"Aslienbek #0" = 10
+	"Batokue #0" = 5
+	"Teterxan #0" = 5
+	"Kiush'ku #0" = 5
+	"Xemirze #0" = 10
+	"Isliambec #0" = 0
+	"Djilexistan #0" = 0
+	"Tyagyata #0" = 0
+	"Buebuerikue #0" = 0
+	"Aslen #0" = 5
+	"Kansavuk #0" = 5
+
+	"Albina #0" = -1
+	"Dane #0" = -1
+	"Diana #0" = -1
+	"Irina #0" = -1
+	"Nadia #0" = -1
+	"Natalia #0" = -1
+	"Snejana #0" = -1
+	"Tamara #0" = -1
+	"Gueshiney #0" = -5
+	"Maria #0" = -1
+	"Danizet #0" = -1
+}
+
+leader_names = { 
+	Abdzax Ademiy Anchabadze
+	Beslieney Bjedigu
+	"Ch'opsine"
+	Goaye
+	Hemtikuay "Het'ukyu"
+	Jane
+	Keberdey "K'emguy"
+	Mamxig Maxosh
+	Namixuay
+	Shapsig
+	Ubyx
+	Xekuaikiu "Xet'oxushokue"
+	Ydjeriquay
+}
+
+ship_names = {
+	Adyghe
+	Cöbein
+	Beslenei
+	Zichia
+	Natukhay
+	Mamkhegh
+	Tuapse
+	Anapa
+	Nalchik
+	Ossetia
+	Kabardia
+	Petrezok
+}

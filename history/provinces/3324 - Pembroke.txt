@@ -1,0 +1,40 @@
+#3324 - Pembroke
+#Area - Wales
+#Region - British Isles
+
+#Core Details
+capital = "Pembroke"
+is_city = yes
+owner = ENG 
+controller = ENG 
+
+#Demographics
+culture = welsh
+religion = catholic
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = cloth #cloth industry in Pembrokeshire because of flemish immigrants
+latent_trade_goods = { coal }
+
+#Cores and Occupation (Alphabetical after current)
+add_core = ENG
+add_core = WLM
+add_core = WLS
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

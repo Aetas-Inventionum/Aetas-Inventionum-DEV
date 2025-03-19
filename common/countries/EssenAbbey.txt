@@ -1,0 +1,106 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx # was hessiangfx # UPE compatibility
+
+color = { 122 162 95 }
+
+historical_idea_groups = {
+	defensive_ideas
+	offensive_ideas
+	religious_ideas
+	economic_ideas
+	diplomatic_ideas
+	innovativeness_ideas
+	spy_ideas
+	trade_ideas	
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	dutch_maurician
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	prussian_uhlan
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	#for diplomat names test
+	"Hedwig #1" = 0
+	"Agana #1" = 0
+	"Mathilde #2" = 0
+	"Beatrix #1" = 0
+	"Margarete #1" = 0
+	"Elisabeth #3" = 0
+	"Katharina #2" = 0
+	"Sophia #1" = 0
+	"Sibylle #0" = 0
+	"Maria #0" = 0
+	"Anna Eleanore #0" = 0
+	"Anna Salome #0" = 0
+	"Anna #0" = 0
+	"Irmgard #0" = 0
+
+	#regular female names
+	"Hedwig #1" = -25
+	"Agana #1" = -15
+	"Mathilde #2" = -35
+	"Beatrix #1" = -30
+	"Margarete #1" = -50
+	"Elisabeth #3" = -80
+	"Katharina #2" = -25
+	"Sophia #1" = -15
+	"Sibylle #0" = -25
+	"Maria #0" = -25
+	"Anna Eleanore #0" = -10
+	"Anna Salome #0" = -10
+	"Anna #0" = -25
+	"Irmgard #0" = -10
+}
+
+leader_names = {
+	Blittersdorf
+	"von Gelnhausen"
+	"von Schöneck"
+	"von Dieblich"
+	Cölln
+	Bensenraede
+	Adenau
+	Gruithausen
+	Hohenfeld
+	"von Namedy"
+	Falkenberg
+	"von Clausbruch"
+	Hillensberg
+	Dammerscheidt
+	Elmpt
+	Naxleden
+	Schaluyn
+	"von Leyen"
+	Ansembourg
+	Zebnitsch
+}
+
+ship_names = {
+	Neustadt Kaiserslautern Elmstein Landstuhl
+	Rhodt Deidesheim Hochspeyer Neunkirchen
+	Wolfstein Winnweiler
+}
+
+
+army_names = {
+	"Frauengarde von Essen" "Armee von $PROVINCE$" 
+}
+
+fleet_names = {
+	"Frauensflotte" "$PROVINCE$ Flotte"
+}

@@ -1,0 +1,22 @@
+government = theocracy
+add_government_reform = iberian_military_order_reform
+government_rank = 1
+technology_group = western
+primary_culture = castillian 
+add_accepted_culture = leonese
+add_accepted_culture = sephardic
+religion = catholic
+capital = 3404 #Llerena
+add_army_professionalism = 0.1
+
+1409.1.1 = { 
+	monarch = { 
+		name = "Enrique"
+		dynasty = "de Trastámara"
+		birth_date = 1400.1.1
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}
+

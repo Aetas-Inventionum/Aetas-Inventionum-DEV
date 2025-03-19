@@ -1,0 +1,40 @@
+#4728 - Pavia
+#Area - West Lombardy
+#Region - Italy
+
+#Core Details
+capital = "Pavia"
+is_city = yes
+owner = MLO
+controller = MLO
+
+#Demographics
+culture = lombard
+religion = catholic
+
+#Development and Trade
+base_tax = 5
+base_production = 5
+base_manpower = 5
+trade_goods = books
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = MLO
+add_core = PVI
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+university = yes
+
+#Special Modifiers
+add_province_triggered_modifier = pavia_university
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

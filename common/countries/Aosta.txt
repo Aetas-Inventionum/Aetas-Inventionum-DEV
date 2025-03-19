@@ -1,0 +1,118 @@
+#Country Name: Please see filename.
+
+graphical_culture = latingfx
+
+color = { 181 89 85 }	
+
+revolutionary_colors = { 5  13  6 } #Republic of Alba
+
+historical_idea_groups = {
+	administrative_ideas
+	defensive_ideas
+	diplomatic_ideas
+	offensive_ideas
+	trade_ideas
+	economic_ideas
+	innovativeness_ideas
+	quality_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	italian_condotta
+	french_caracolle
+	anglofrench_line
+	french_dragoon
+	french_bluecoat
+	french_carabinier
+	french_impulse
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Medeo #8" = 40
+	"Carl #0" = 40
+	"Ludovich #0" = 20
+	"Filibert #0" = 40
+	"Carl Emanuel #0" = 40
+	"Umbert #3" = 5
+	"Pero #2" = 5
+	"Filibert Emanuel #0" = 10
+	"Tomà #2" = 1
+	"Flip #1" = 5
+	"Ajmon #2" = 1
+	"Edoard #1" = 1
+	"Fransèis Hyacinthe #0" = 5
+	"Gian #0" = 0
+	"Gian Medeo #0" = 0
+	"Bonifass #1" = 1
+	"Vitòrio Emanuel #0" = 5
+	"Vitòrio Medeo #0" = 10
+	"Vitòrio #0" = 5
+	"Luis Emanuel #0" = 1
+	"Augusta #0" = 0
+	"Genio #0" = 0
+	"Berold #0" = 0
+	"Gioann #0" = 0
+	"Aleram #0" = 0
+	"Thibaud #0" = 0
+	"Grimaldi #0" = 0
+	"Antòni #0" = 0
+	"Gulielm #0" = 0
+	"Robert #0" = 0
+	"Andrea #0" = 0
+	"Ëdcò Bullonde #0" = 0
+
+	"Adelàide #0" = -1
+	"Carolin #0" = -1
+	"Marìa Cristin #0" = -5
+	"Bona #0" = -1
+	"Anna #0" = -1
+	"Bianca #0" = -1
+	"Marìa Vitòria #0" = -1
+	"Marìa Clotilde #0" = -1
+	"Lissandria #0" = -1
+}
+
+leader_names = {
+	"d'Ast"
+	"ëd Beaufort" "ëd Borbon" "ëd Brissogne"
+	"ëd Canavéis" "ëd Challant" "ëd Cly" "ëd Conflans" "ëd Coni"
+	Fabri "ëd Faucigny"
+	"ëd Gëneva" "ëd Gex" "ëd Gignod" "ëd Gruyères"
+	"ëd Losan-na"
+	"ëd Menton" "ëd Monfrà"
+	"ëd Nissa"
+	"d'Osta"
+	"ëd Piemont" "ëd Prangins"
+	"ëd Sarre" "ëd Savòja" "ëd Susa"
+	"ëd Turin"
+}
+
+ship_names = { 
+	"Adelaide di Susa" Albane Aimone "Amedeo Coda" Annecy
+	Bauges Bellevaux Biancamano Bonifacio
+	"Casa di Savoia" Chablais Chambéry Contamine-sur-Arve
+	"Dora Riparia"
+	Edoardo Entremont
+	Faucigny Filippo
+	Genevois Giacomo Jaquerio
+	Hautecombe
+	"Umberto Sabaudia" 
+	"Lac du Bourget" Leysse  
+	Maurienne  
+	Oddone 
+	"Pietro I" Piemonte "fiume Po"
+	"Sacra Sindone" "San Domenico" "San Donato" "San Paolo" "Santa Rita" "San Salvario" "Stura di Lanzo" Sangone 
+	Talloires Tamié Tommaso Tarentaise Torino
+	"Val d'Aosta" 
+}
+
+army_names = {
+	"Armata ëd $PROVINCE$"
+}

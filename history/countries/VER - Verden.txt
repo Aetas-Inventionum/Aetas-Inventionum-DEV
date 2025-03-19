@@ -1,0 +1,29 @@
+government = theocracy
+add_government_reform = hre_bishopric_reform
+government_rank = 1
+primary_culture = lower_saxon
+religion = catholic
+technology_group = western
+capital = 4771	# Verden
+
+
+1395.1.1 = {
+	monarch = {
+		name = "Konrad III"
+		birth_date = 1350.1.1
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+
+1407.1.1 = {
+	monarch = {
+		name = "Heinrich II"
+		dynasty = "von Hoya"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

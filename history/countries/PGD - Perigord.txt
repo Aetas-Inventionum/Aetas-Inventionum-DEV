@@ -1,0 +1,8 @@
+government = monarchy
+add_government_reform = appanage_reform
+government_rank = 1
+primary_culture = limousin
+religion = catholic
+technology_group = western
+capital = 3263 # Limoges
+fixed_capital = 3263 # Cannot move capital away from this province & no power cost to move to it

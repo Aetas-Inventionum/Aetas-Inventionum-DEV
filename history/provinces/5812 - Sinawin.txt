@@ -1,0 +1,37 @@
+#5811 - Sinawin
+#Area - Libya
+#Region - Maghreb
+
+#Core Details
+capital = "Sinawin"
+is_city = yes
+owner = GHD
+controller = GHD
+
+#Demographics
+culture = berber
+religion = ibadi
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = fruit
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = GHD
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = sub_saharan
+
+#Histories

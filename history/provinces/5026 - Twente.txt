@@ -1,0 +1,39 @@
+#5026 - Twente
+#Area - Guelders
+#Region - Lowlands
+
+#Core Details
+capital = "Enschede"
+is_city = yes
+owner = UTR
+controller = UTR
+
+#Demographics
+culture = hannoverian
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 1
+base_manpower = 2
+trade_goods = wool
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = UTR
+add_core = OVJ
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

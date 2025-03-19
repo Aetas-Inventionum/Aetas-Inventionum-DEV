@@ -1,0 +1,7 @@
+government = monarchy
+add_government_reform = adu_government_reform
+primary_culture = andalusi
+religion = sunni
+technology_group = muslim
+government_rank = 3
+capital = 223 #garnatah

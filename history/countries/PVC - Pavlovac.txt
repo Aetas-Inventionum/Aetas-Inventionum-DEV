@@ -1,0 +1,31 @@
+government = monarchy
+add_government_reform = bosnian_duchy_reform
+primary_culture = bosnian
+religion = krstjani
+secondary_religion = orthodox
+technology_group = eastern
+government_rank = 1
+capital = 4755
+historical_rival = HRZ
+
+1415.1.1 = {
+	monarch = {
+		name = "Pavle I"
+		dynasty = "Pavlovic"
+		birth_date = 1365.1.1
+		death_date = 1415.8.24
+		adm = 2
+		dip = 3
+		mil = 5
+	}
+	heir = {
+		name = "Petar"
+		monarch_name = "Petar I"
+		dynasty = "Pavlovic"
+		birth_date = 1390.1.1
+		death_date = 1441.1.1
+		adm = 1
+		dip = 3
+		mil = 3
+	}
+}

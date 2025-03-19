@@ -1,0 +1,44 @@
+#5590 - Chillia
+#Area - Bessarabia
+#Region - Balkans
+
+#Core Details
+capital = "Chilia"
+is_city = yes
+owner = GEN
+controller = GEN
+
+#Demographics
+culture = moldovan
+religion = orthodox
+
+#Development and Trade
+base_tax = 3
+base_production = 4
+base_manpower = 3
+trade_goods = naval_supplies
+
+#Cores and Occupation (Alphabetical after current)
+add_core = GEN
+add_core = MOL
+add_core = WAL
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+add_permanent_province_modifier = {
+	name = danube_estuary_modifier
+	duration = -1
+}
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = nomad_group
+
+#Histories

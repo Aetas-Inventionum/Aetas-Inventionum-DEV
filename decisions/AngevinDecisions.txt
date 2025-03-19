@@ -1,0 +1,178 @@
+country_decisions = {
+	tarasque_decision = {
+		potential = {
+			has_country_flag = tarasque_flag
+		}
+		allow = {
+			NOT = { has_country_modifier = tarasque_mod }
+			treasury = 125
+			adm_power = 10
+			dip_power = 10
+			mil_power = 10
+		}
+		effect = {
+			country_event = { id = aetas_anj.14 }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	angevin_england_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_angevin_england_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			has_country_flag = anj_ave_missions_flag
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 236 #London
+				province_id = 237 #Oxford
+				province_id = 235 #Canterbury
+				province_id = 3306 #Bristol
+				province_id = 3313 #Ipswich
+				province_id = 1860 #Norwich
+				province_id = 4370 #Cambridge
+				province_id = 243 #Lincoln
+				province_id = 240 #Shropshire
+				province_id = 4375 #Chester
+				province_id = 245 #York
+				area = home_counties_area
+				area = wessex_area
+				area = east_anglia_area
+				area = east_midlands_area
+				area = west_midlands_area
+				area = scottish_marches_area
+				area = yorkshire_area
+				area = northumberland_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			OR = { 
+				AND = { 
+					owns_core_province = 236
+					owns_core_province = 237
+					owns_core_province = 235
+					owns_core_province = 3306
+					owns_core_province = 3313
+					owns_core_province = 1860
+					owns_core_province = 4370
+					owns_core_province = 243
+					owns_core_province = 240
+					owns_core_province = 4375
+					owns_core_province = 245
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						OR = { 
+							area = home_counties_area
+							area = wessex_area
+							area = east_anglia_area
+							area = east_midlands_area
+							area = west_midlands_area
+							area = scottish_marches_area
+							area = yorkshire_area
+							area = northumberland_area
+						}
+						value = 45
+					}
+					NOT = { exists = ENG }
+				}
+				AND = { 
+					senior_union_with = ENG
+					236 = { country_or_non_sovereign_subject_holds = ROOT }
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						OR = { 
+							area = home_counties_area
+							area = wessex_area
+							area = east_anglia_area
+							area = east_midlands_area
+							area = west_midlands_area
+							area = scottish_marches_area
+							area = yorkshire_area
+							area = northumberland_area
+						}
+						value = 45
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = anj_eng_inherit.tt
+			hidden_effect = { 
+				if = { 
+					limit = { senior_union_with = ENG }
+					inherit = ENG 
+				}
+			}
+			change_tag = AVE
+			on_change_tag_effect = yes
+			restore_country_name_effect = yes
+			set_capital = 236 #can be removed if deemed necessary
+			add_government_reform = english_monarchy
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			wales_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			set_country_flag = formed_angevin_england_flag
+			add_prestige = 25
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+					is_part_of_hre = no
+				}
+				set_government_rank = 2
+			}
+			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					is_playing_custom_nation = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			hidden_effect = { 
+				every_province = { 
+					limit = { 
+						is_core = ENG 
+						NOT = { 
+							OR = {
+								owned_by = AVE 
+								is_core = AVE 
+							}
+						}
+					}
+					add_core = AVE
+				}
+			}
+			if = { 
+				limit = { NOT = { mission_completed = anj_nrm } }
+				complete_mission = anj_nrm
+			}
+			if = { 
+				limit = { NOT = { mission_completed = anj_navy } }
+				complete_mission = anj_navy
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

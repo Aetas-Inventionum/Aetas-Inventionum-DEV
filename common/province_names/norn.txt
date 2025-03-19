@@ -1,0 +1,43 @@
+#AI Update
+# = { "x" "x" }
+
+12 = { "København" "København" }
+#scandinavian misc britain by pleibos
+369 = { "Orknøjar" "Kirkavå" }
+1978 = { "Hjaltland" "Skálavágr" }
+5159 = { "Katanes" "Thurso" }
+
+#scandinavian iceland by pleibos
+370 = { "Reykjavík" "Reykjavík" }
+371 = { "Norðurland" "Hólar" }
+5999 = { "Suðurland" "Heimaey" }
+6000 = { "Austfirðir" "Djúpivogur" }
+#6001 = localized
+6002 = { "Vestfirðir" "Ísafjörður" }
+6003 = { "Þingvellir" "Þingvellir" }
+##germany
+#fore pomerania
+47 = { "Strålsund" "Strålsund" }
+4745 = { "Rygen" "Bergen" } 
+#slesvig
+5614 = { "Flensborg" "Flensborg" }
+5615 = { "Nordfrisland" "Nordfrisland" }
+5616 = { "Tønder" "Tønder" }
+#holstein
+4141 = { "Ditmarsken" "Meldorf" }
+5293 = { "Rendsborg" "Rendsborg" }
+#misc denmark
+15 = { "Ringkøbing" "Ringkøbing" }
+1983 = { "Laaland" "Nykøbing" }
+#scania
+1981 = { "Borghandæholm" "Rønne" }
+4980 = { "Ysted" "Ysted" } #danish
+#gotland
+25 = { "Gotland" "Visby" }
+#gotaland
+16 = { "Båhus" "Bohus" }
+#ostlandet
+6026 = { "Tunsberg" "Tunsberg" }
+#jamtland
+6040 = { "Herjådalen" "Herjådalen" }
+

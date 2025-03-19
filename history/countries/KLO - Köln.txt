@@ -1,0 +1,23 @@
+government = republic
+add_government_reform = free_city
+government_rank = 1
+primary_culture = hessian
+religion = catholic
+technology_group = western
+capital = 85
+fixed_capital = 85
+mercantilism = 25
+historical_rival = KOL
+historical_friend = KLE
+historical_friend = JUL
+historical_friend = HSA
+
+1415.1.1 = {
+	monarch = {
+		name = "Reichsstadt"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}

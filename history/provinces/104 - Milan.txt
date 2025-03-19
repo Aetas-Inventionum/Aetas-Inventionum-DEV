@@ -1,0 +1,39 @@
+#104 - Milan
+#Area - West Lombardy
+#Region - Italy
+
+#Core Details
+capital = "Milano"
+is_city = yes
+owner = MLO
+controller = MLO
+
+#Demographics
+culture = lombard
+religion = catholic
+
+#Development and Trade
+base_tax = 9
+base_production = 9
+base_manpower = 5
+trade_goods = cloth
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = MLO
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+center_of_trade = 4 #false positive
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

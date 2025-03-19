@@ -1,0 +1,17 @@
+government = tribal
+add_government_reform = steppe_horde
+primary_culture = bashkir
+religion = sunni
+technology_group = nomad_group
+capital = 2444	# Ufa
+religious_school = hanafi_school
+
+1412.1.1 = {
+	monarch = {
+		name = "Möxemmet I"
+		dynasty = "Shaybon" #shaybanids seemed to rule the area
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

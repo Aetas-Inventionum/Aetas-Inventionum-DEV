@@ -1,0 +1,39 @@
+#5357 - Mark
+#Area - Angria
+#Region - North Germany
+
+#Core Details
+capital = "Hamm"
+is_city = yes
+owner = MKK
+controller = MKK 
+
+#Demographics
+culture = hannoverian
+religion = catholic
+
+#Development and Trade
+base_tax = 3
+base_production = 3
+base_manpower = 3
+trade_goods = grain
+latent_trade_goods = { coal }
+
+#Cores and Occupation (Alphabetical after current)
+add_core = MKK
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

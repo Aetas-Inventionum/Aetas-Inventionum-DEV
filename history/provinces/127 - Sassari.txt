@@ -1,0 +1,41 @@
+#127 - Sassari
+#Area - Sardinia
+#Region - Italy
+
+#Core Details
+capital = "Sassari"
+is_city = yes
+owner = ABR
+controller = ABR
+
+#Demographics
+culture = corsican
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 2
+base_manpower = 2
+trade_goods = silver #amongst the oldest and most important silver mines in sardinia
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = ARA
+add_core = ABR
+add_core = SAR
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+center_of_trade = 1
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

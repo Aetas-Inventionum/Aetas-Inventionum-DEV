@@ -1,0 +1,16 @@
+name = "Swiss Conquest of Aargau"
+war_goal = {
+	type = take_province_nationalist
+	casus_belli = cb_conquest
+	province = 5036
+}
+
+1415.8.20 = { #day before just so it shows up
+	add_attacker = SWI
+	add_defender = TIR
+}
+
+1415.8.21 = {
+	rem_attacker = SWI 
+	rem_defender = TIR
+}

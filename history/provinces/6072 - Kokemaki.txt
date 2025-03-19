@@ -1,0 +1,37 @@
+#6072 - Kokemaki
+#Area - Finland
+#Region - Scandinavia 
+
+#Core Details
+capital = "Kokemäki"
+is_city = yes
+owner = SWE 
+controller = SWE 
+
+#Demographics
+culture = finnish
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 1
+base_manpower = 1
+trade_goods = fish
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = SWE
+add_core = FIN
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+#fort_15th = yes #dismantled in mid-late 14th cent.
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+
+#Histories

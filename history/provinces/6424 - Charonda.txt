@@ -1,0 +1,38 @@
+#6424 - Charonda
+#Area - Beloozero
+#Region - Russia 
+
+#Core Details
+capital = "Charonda"   
+is_city = yes
+owner = BLO
+controller = BLO
+
+#Demographics
+culture = vologdan
+religion = orthodox
+
+#Development and Trade
+base_tax = 2
+base_production = 3
+base_manpower = 2
+trade_goods = apiculture
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = BLO
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+center_of_trade = 1
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = nomad_group
+
+#Histories

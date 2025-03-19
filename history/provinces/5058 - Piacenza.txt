@@ -1,0 +1,38 @@
+#5058 - Piacenza
+#Area - Emilia
+#Region - Italy
+
+#Core Details
+capital = "Piacenza"
+is_city = yes
+owner = PIA 
+controller = PIA 
+
+#Demographics
+culture = romagnan
+religion = catholic
+
+#Development and Trade
+base_tax = 3
+base_production = 3
+base_manpower = 3
+trade_goods = grain
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = PIA
+add_core = MLO
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

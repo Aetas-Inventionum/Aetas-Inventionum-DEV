@@ -1,0 +1,37 @@
+#6498 - Gorokhovets
+#Area - Nizhny Novgorod
+#Region - Russia 
+
+#Core Details
+capital = "Gorokhovets" 
+is_city = yes
+owner = MOS
+controller = MOS
+
+#Demographics
+culture = russian
+religion = orthodox
+
+#Development and Trade
+base_tax = 2
+base_production = 3
+base_manpower = 1
+trade_goods = beer
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = MOS
+add_core = NZH
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = nomad_group
+
+#Histories

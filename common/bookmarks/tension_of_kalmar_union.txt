@@ -1,0 +1,16 @@
+bookmark =
+{
+	name = "TENSION_OF_KALMAR_UNION"
+	desc = "TENSION_OF_KALMAR_UNION_DESC"
+	date = 1415.8.22
+	
+	center = 12
+	
+	country = DAN 
+	country = SWE
+	country = NOR  
+	country = ICE 
+	country = SHL
+	country = OLD 
+	country = STP
+}

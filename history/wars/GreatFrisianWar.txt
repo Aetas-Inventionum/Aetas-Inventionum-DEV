@@ -1,0 +1,22 @@
+name = "Great Frisian War"
+war_goal = {
+	type = wt_greatfrisianwar
+	casus_belli = cb_greatfrisianwar
+	tag = EFR
+}
+
+# Runaway dispute between Keno II and Hisko Abdena, picked up after Groningen in 1415
+1413.1.1 = {
+	add_attacker = EFR
+	add_attacker = OMM
+	add_defender = FRI
+	add_defender = GRN 
+}
+
+# Peace of Groningen
+1422.1.1 = {
+	rem_attacker = EFR
+	rem_attacker = OMM 
+	rem_defender = FRI
+	rem_defender = GRN
+}

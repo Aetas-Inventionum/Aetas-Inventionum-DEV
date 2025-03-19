@@ -1,0 +1,207 @@
+#AI Update
+# = { "x" "x" }
+##NOTES FOR GENERAL:
+#CHARACTERS WITH CARON ARE TO BE TRANSLITERATED AS REGULAR LETTER WITHOUT FOR NOW UNLESS OFFICIALLY SPELLED OTHERWISE
+###ORGANIZATION:
+##REGION
+#AREA 
+
+#banat
+156 = { "Tamis" "Temisvar" }
+1954 = { "Torontal" "Veliki Beckerek" }
+5438 = { "Kovin" "Pancevo" }
+5439 = { "Karas" "Resica" }
+5441 = { "Lugos" "Lugos" }
+5443 = { "Canad" "Makov" }
+
+#serbia by pleibos
+141 = { "Smederevo" "Smederevo" } 
+1827 = { "Raska" "Trgovište" }
+4176 = { "Morava" "Kruševac" }
+5426 = { "Prokuplje" "Prokuplje" }
+5427 = { "Drina" "Uzice" } #medieval region name, after the river 
+5431 = { "Golubac" "Golubac" }
+#dioclea
+138 = { "Zeta" "Podgorica" } #over zeta
+5284 = { "Skadar" "Skadar" }
+5352 = { "Budimlja" "Berane" }
+#dardania
+1766 = { "Kosovo" "Priština" } #also platkovo
+5421 = { "Podrimlje" "Prizren" }
+5423 = { "Pec" "Pec" } 
+#silistria
+4706 = { "Tulca" "Tulca" } #same in ukrainian and russian
+5516 = { "Oblucitsa" "Oblucitsa" }
+5517 = { "Harsovo" "Harsovo" }
+5518 = { "Kyustendzha" "Kyustendzha" }
+#iron gates misc
+3000 = { "Nis" "Niš" }
+5425 = { "Svrljig" "Pirot" }
+5502 = { "Gurgusovac" "Gurgusovac" }
+#syrmia
+4239 = { "Beograd" "Beograd" }
+4757 = { "Kolubara" "Valjevo" }
+5420 = { "Usora" "Srebrenik" }
+5428 = { "Macva" "Zaslon" } 
+#bosnia
+3002 = { "Bosna" "Visoki" }
+4755 = { "Podrinje" "Višegrad" }
+5414 = { "Polimlje" "Prijepolje" }
+5416 = { "Srebrenica" "Srebrenica" }
+5417 = { "Kresevo" "Kreševo" }
+5418 = { "Bobovac" "Bobovac" }
+#zachlumia
+137 = { "Dubrovnik" "Dubrovnik" }
+139 = { "Neretva" "Mostar" }
+5410 = { "Blagaj" "Blagaj" }
+5411 = { "Kom" "Konjic" } #komska zupa
+5412 = { "Hotca" "Hotca" }
+5415 = { "Trebinje" "Trebinje" }
+#donji kraji
+140 = { "Doboj" "Doboj" }
+5398 = { "Dubica" "Dubica" }
+5404 = { "Banska Krajina" "Gradiški Brod" }
+5406 = { "Donji Kraji" "Kljuc" } #literal Donji Kraji
+5409 = { "Kozarje" "Kozara" }
+#dioclea
+1831 = { "Novi" "Novi" } #founded as Sveti Stjefan, but Novi meaning new caught on almost immediately
+4754 = { "Primorje" "Kotor" }
+5413 = { "Onogost" "Onogošt" }
+#slavonia
+131 = { "Zagreb" "Zagreb" }
+152 = { "Varazdin" "Varazdin" }
+4756 = { "Moslavina" "Krizevci" }
+5397 = { "Cetin" "Cetin" }
+5400 = { "Zagorje" "Krapina" }
+#croatia
+5386 = { "Vinodol" "Novigrad" }
+5388 = { "Modrus" "Modruš" }
+5389 = { "Senj" "Senj" }
+5390 = { "Gacka" "Brinje" }
+5391 = { "Bihac" "Bihac" } #Pounje is referenced in some historiogrpahic for bihacs' county
+5394 = { "Krbava" "Krbava" }
+#dalmatia 
+136 = { "Split" "Split" } #primorje is older county, toponym changes to Podmorje under Hungarian union but Split is more specific to city
+1826 = { "Knin" "Knin" }
+4753 = { "Nona" "Zadar" }
+5392 = { "Cetina" "Sinj" }
+5393 = { "Sibenik" "Šibenik" }
+5395 = { "Brac" "Bol" }
+5407 = { "Livno" "Livno" }
+5408 = { "Zupanjac" "Zupanjac" } #Duvno's old name
+#Dardania
+5562 = { "Stip" "Štip" }
+5563 = { "Slaviste" "Kratovo" }
+#Macedonia
+148 = { "Solun" "Solun" }
+1853 = { "Kastoriya" "Kastoriya" }
+4702 = { "Ser" "Ser" }
+5553 = { "Halkidiki" "Jeriso" }
+5554 = { "Kukush" "Kukush" }
+5556 = { "Serviya" "Serviya" }
+5557 = { "Verya" "Verya" }
+5560 = { "Bitolj" "Bitolj" }
+#albania
+4174 = { "Dras" "Dras" }
+4175 = { "Lesh" "Lesh" }
+4750 = { "Kruja" "Kruja" }
+5430 = { "Presolengrad" "Presolengrad" }
+5432 = { "Debar" "Debar" }
+5433 = { "Belgrat" "Belgrat" }
+5434 = { "Korca" "Korca" }
+#epirus
+142 = { "Krph" "Krph" }
+144 = { "Yanyina" "Yanyina" }
+5437 = { "Butrinto" "Butrinto" }
+5565 = { "Preveza" "Preveza" }
+5566 = { "Amfilociya" "Amfilociya" }
+5568 = { "Vracori" "Vracori" }
+5571 = { "Neopatras" "Neopatras" }
+5589 = { "Vonica" "Vonica" }
+#Thessaly
+147 = { "Trikala" "Trikala" }
+5558 = { "Magnisiya" "Volos" }
+5559 = { "Lamiya" "Lamiya" }
+5569 = { "Larisa" "Larisa" }
+5570 = { "Farsala" "Farsala" }
+#Hellas
+146 = { "Atina" "Atina" }
+5573 = { "Livadiya" "Livadiya" }
+5574 = { "Teba" "Teba" }
+#albania
+143 = { "Avlona" "Avlona" }
+5435 = { "Laberiya" "Himara" }
+#bulgaria
+1765 = { "Sredets" "Sofiya" }
+4703 = { "Velbazhd" "Velbazhd" }
+5548 = { "Stryama" "Kopsis" }
+5549 = { "Samokov" "Samokov" }
+5550 = { "Pirin" "Nevrokop" }
+5552 = { "Pernik" "Pernik" }
+#moesia
+150 = { "Plèven" "Plèven" }
+4704 = { "Tarnovo" "Tarnovo" }
+5527 = { "Shumen" "Shumen" }
+5528 = { "Preslav" "Preslav" }
+5529 = { "Razgrad" "Razgrad" }
+5530 = { "Cevren" "Cevren" }
+5531 = { "Rusi" "Rusi" }
+5533 = { "Nikopol" "Nikopol" }
+5547 = { "Kran" "Kran" }
+#rhodope
+2750 = { "Plovdiv" "Plovdiv" }
+4705 = { "Gyumurzhina" "Gyumurzhina" }
+5542 = { "Morunets" "Morunets" }
+5544 = { "Skeca" "Skeca" }
+5545 = { "Haskovo" "Haskovo" }
+#hemimont
+149 = { "Odrin" "Odrin" }
+1764 = { "Burgas" "Burgas" }
+5522 = { "Nesebar" "Nesebar" }
+5523 = { "Sozopol" "Sozopol" }
+5534 = { "Karnobat" "Karnobat" }
+5535 = { "Dbilin" "Hiampol" }
+5536 = { "Sliven" "Sliven" }
+5537 = { "Lozengrad" "Lozengrad" }
+5546 = { "Zagoriya" "Stara Zagora" }
+#dobrudja
+159 = { "Drastar" "Drastar" } #medieval name
+#thrace
+151 = { "Tsarigrad" "Tsarigrad" }
+4779 = { "Kalipol" "Kalipol" }
+5524 = { "Viza" "Viza" }
+5525 = { "Silivriya" "Silivriya" }
+5526= { "Midiya" "Midiya" }
+5538 = { "Rodosto" "Rodosto" }
+5539 = { "Cariopol" "Cariopol" }
+5540 = { "Enos" "Enos" }
+5541 = { "Dimotika" "Dimotika" }
+##carpathia
+#west muntenia
+161 = { "Dambovitsa" "Targovise" }
+4531 = { "Golyamo Yorgovo" "Golyamo Yorgovo" }
+5505 = { "Olt" "Slatina" }
+5506 = { "Teleorman" "Tùrnu" }
+5507 = { "Ardzhes" "Ardzhes" }
+5508 = { "Dulgo Pole" "Kampalung" }
+5509 = { "Pitesh" "Pitesh" }
+#east muntenia
+5510 = { "Bukurest" "Bukurest" }
+#oltenia
+160 = { "Dolzh" "Krayova" }
+4532 = { "Mehedintsi" "Severno" }
+5459 = { "Valca" "Romanku Valca" }
+5498 = { "Gorzh" "Targu Jiu" }
+5499 = { "Kalafat" "Kalafat" }
+5501 = { "Karakal" "Karakal" }
+##germany
+#carinthia
+128 = { "Celovec" "Celovec" }
+4759 = { "Beljak" "Beljak" }
+#lower styria
+4751 = { "Celje" "Celje" }
+5195 = { "Zovnek" "Zovnek" }
+5196 = { "Maribor" "Maribor" }
+#carniola
+5191 = { "Metlika" "Metlika" }
+5192 = { "Marka" "Novo Mesto" } #or Slovenska Marka, colloquially referred to simply as 'Marka'

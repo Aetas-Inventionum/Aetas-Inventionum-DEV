@@ -1,0 +1,39 @@
+#6183 -  Kerch
+#Area - Crimea
+#Region - Tartary
+
+#Core Details
+capital = "Kerch"
+is_city = yes
+owner = GZR
+controller = GZR
+
+#Demographics
+culture = ligurian #lasting historical communnity until Stalin era
+religion = catholic 
+
+#Development and Trade
+base_tax = 2
+base_production = 3
+base_manpower = 2
+trade_goods = slaves
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = GZR
+add_core = TRE
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = nomad_group
+
+#Histories

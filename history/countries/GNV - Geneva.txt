@@ -1,0 +1,22 @@
+government_rank = 1
+government = theocracy
+add_government_reform = hre_bishopric_reform
+technology_group = western
+religion = catholic
+primary_culture = arpitan
+capital = 4720
+fixed_capital = 4720
+
+1408.1.1 = {
+	monarch = {
+		name = "Jean II"
+		dynasty = "de Bertrand"
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+1528.1.1 = { religion = reformed }
+
+1798.1.1 = { set_legacy_government = constitutional_republic }

@@ -1,0 +1,10 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+religion = catholic
+primary_culture = hannoverian
+technology_group = western
+capital = 3352	# Zutphen
+fixed_capital = 3352
+
+historical_friend = GEL	

@@ -1,0 +1,42 @@
+#3277 - Nimes
+#Area - Lower Languedoc
+#Region - France
+
+#Core Details
+capital = "Nîmes"
+is_city = yes
+owner = FRA
+controller = FRA
+
+#Demographics
+culture = provencal
+religion = catholic
+
+#Development and Trade
+base_tax = 4
+base_production = 3
+base_manpower = 3
+trade_goods = cloth
+
+#Cores and Occupation (Alphabetical after current)
+add_core = FRA
+add_core = NIM
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+add_permanent_province_modifier = {
+	name = rhone_estuary_modifier
+	duration = -1
+}
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

@@ -1,0 +1,185 @@
+namespace = aetas_cyp
+normal_or_historical_nations = yes
+
+# purchase of famagusta
+country_event = {
+	id = aetas_cyp.1
+	title = aetas_cyp.1.t
+	desc = aetas_cyp.1.d
+	picture = CITY_VIEW_eventPicture
+
+	is_triggered_only = yes 
+	fire_only_once = yes 
+	major = yes 
+	major_trigger = { 
+		tag = GEN 
+	}
+
+	option = { 
+		name = aetas_cyp.1.a
+		add_treasury = -250
+		GEN = { add_treasury = 250 } 
+		5002 = { 
+			cede_province = ROOT 
+			remove_core = GEN 
+		}
+	}
+}
+#kings of cilicia 
+country_event = {
+	id = aetas_cyp.2
+	title = aetas_cyp.2.t
+	desc = aetas_cyp.2.d
+	picture = REFORM_eventPicture
+
+	is_triggered_only = yes 
+	fire_only_once = yes 
+
+	option = { 
+		name = aetas_cyp.2.a #release cilicia in personal union
+		release = CLC 
+		create_union = CLC 
+		hidden_effect = { 
+			CLC = { 
+				every_owned_province = { 
+					limit = { is_core = CYP }
+					remove_core = CYP
+				}
+			}
+		}
+		custom_tooltip = cyp_clc.2.tt
+		hidden_effect = { 
+			add_country_modifier = { 
+				name = clc_cyp_mod
+				duration = -1 
+			}
+		}
+	}
+
+	option = { 
+		name = aetas_cyp.2.b #no thank you
+		add_prestige = 10
+	}
+}
+#a joint effort for peaceful conquest of jerusalem
+country_event = {
+	id = aetas_cyp.3
+	title = aetas_cyp.3.t
+	desc = aetas_cyp.3.d
+	picture = HRE_eventPicture
+
+	is_triggered_only = yes 
+	fire_only_once = yes 
+
+	option = { 
+		name = aetas_cyp.3.a #let us visit the sultan
+		add_prestige = 10 
+		MAM = { 
+			country_event = { 
+				id = aetas_cyp.4
+				days = 3
+			}
+		}
+	}
+}
+#mamluks' reply
+country_event = {
+	id = aetas_cyp.4
+	title = aetas_cyp.4.t
+	desc = aetas_cyp.4.d
+	picture = muslimgfx_MERCHANTS_TALKING_eventPicture
+
+	is_triggered_only = yes 
+	fire_only_once = yes 
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			tag = CYP 
+			is_emperor = yes 
+		}
+	}
+
+	option = { 
+		name = aetas_cyp.4.a #eat shit, pile of dung!
+		ai_chance = { factor = 95 }
+	}
+
+	option = { 
+		name = aetas_cyp.4.b #fine
+		ai_chance = { factor = 5 }
+		palestine_area = { 
+			limit = { country_or_non_sovereign_subject_holds = ROOT }
+			cede_province = CYP 
+		}
+		add_truce_with = CYP 
+	}
+}
+#return of the king
+country_event = {
+	id = aetas_cyp.5
+	title = aetas_cyp.5.t
+	desc = aetas_cyp.5.d
+	picture = muslimgfx_CITY_VIEW_eventPicture
+
+	is_triggered_only = yes 
+	fire_only_once = yes 
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			religion_group = christian 
+			religion_group = muslim 
+		}
+	}
+
+	option = { 
+		name = aetas_cyp.5.a #in the name of God and the Holy Cross.
+		if = { 
+			limit = { 
+				AND = { 
+					6146 = { controlled_by = ROOT }
+					NOT = { owns_core_province = 6146 }
+					NOT = { owns_core_province = 379 }
+				}
+			}
+			6146 = { 
+				cede_province = ROOT 
+				change_religion = ROOT 
+				change_culture = hierosolymitan
+			}
+			set_capital = 6146
+		}
+		else_if = {
+			limit = { 
+				AND = { 
+					owns_core_province = 6146
+					NOT = { owns_core_province = 379 }
+				}
+			}
+			6146 = { 
+				change_religion = ROOT 
+				change_culture = hierosolymitan
+			}
+			set_capital = 6146
+		}
+		else_if = { 
+			limit = { owns_core_province = 379 }
+			379 = { 
+				change_religion = ROOT 
+				change_culture = hierosolymitan
+			}
+			set_capital = 379
+		}
+		change_tag = KOJ 
+		change_primary_culture = hierosolymitan
+		on_change_tag_effect = yes
+		if = {
+			limit = { 
+				has_custom_ideas = no
+				NOT = { has_idea_group = ai_KOJ_ideas }
+			}
+			country_event = { id = ideagroups.1 } #Swap Ideas
+		}
+		swap_non_generic_missions = yes
+		add_government_reform = jerusalem_monarchy_reform
+	}
+}

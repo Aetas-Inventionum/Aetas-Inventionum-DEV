@@ -1,0 +1,35 @@
+#6416 - Pinega
+#Area - Zavoloch'ye
+#Region - Russia 
+
+#Core Details
+capital = "Pinega"   
+is_city = yes
+owner = NOV
+controller = NOV
+
+#Demographics
+culture = bjarmian
+religion = animism
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = naval_supplies
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = NOV
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = nomad_group
+
+#Histories

@@ -1,0 +1,630 @@
+namespace = aetas_kol
+normal_or_historical_nations = yes
+
+#Fate of Erfurt
+country_event = {
+	id = aetas_kol.1
+	title = aetas_kol.1.t
+	desc = aetas_kol.1.d
+	picture = CITY_VIEW_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_kol.1.a
+		ai_chance = { factor = 3 }
+		inherit = ERF 
+		custom_tooltip = free_cities_mad.tt
+		hidden_effect = { 
+			every_country = {
+				limit = { 
+					has_reform = free_city
+					is_part_of_hre = yes 
+				}
+				reverse_add_opinion = {
+					who = ROOT 
+					modifier = fc_mad #missing loc
+				}
+			}
+		}
+	}
+	option = { 
+		name = aetas_kol.1.b
+		ai_chance = { factor = 1 }
+		ERF = {
+			add_government_reform = free_city
+			capital_scope = { 
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+		}
+	}
+}
+#true capital of cologne
+country_event = {
+	id = aetas_kol.2
+	title = aetas_kol.2.t
+	desc = aetas_kol.2.d
+	picture = GREAT_BUILDING_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_kol.2.a
+		ai_chance = { 
+			factor = 0
+			modifier = { 
+				factor = 100
+				NOT = { owns_core_province = 85 }
+			}
+		}
+		3390 = {
+			add_province_triggered_modifier = bonn1_mod
+			add_great_project_tier = {
+				type = ai_bonn_minster
+				tier = 1
+			}
+		}
+		custom_tooltip = kol_bonn.tt
+		85 = { remove_core = ROOT }
+		set_country_flag = kol_bonn_capital
+		swap_non_generic_missions = yes 
+	}
+	option = { 
+		name = aetas_kol.2.b
+		ai_chance = { 
+			factor = 1 
+			modifier = { 
+				factor = 100
+				owns_core_province = 85
+			}
+		}
+		custom_tooltip = kol_kol.tt
+		set_country_flag = kol_koln_capital
+		swap_non_generic_missions = yes
+	}
+}
+#kolsch silk
+country_event = {
+	id = aetas_kol.3
+	title = aetas_kol.3.t
+	desc = aetas_kol.3.d
+	picture = GREAT_BUILDING_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_kol.3.a
+		85 = { change_trade_goods = silk }
+	}
+}
+#kolner reformation
+country_event = {
+	id = aetas_kol.4
+	title = aetas_kol.4.t
+	desc = aetas_kol.4.d
+	picture = GREAT_BUILDING_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_kol.4.a
+		ai_chance = {  factor = 0 }
+		if = { 
+			limit = { 
+				capital_scope = { religion = reformed }
+			}
+			change_religion = reformed 
+		}
+		else = { change_religion = protestant }
+		change_government = monarchy 
+		add_government_reform = feudalism_reform 
+		if = { 
+			limit = { has_reform = mainz_hofrat_reform }
+			add_government_reform = mainz_hofrat_monarchy_reform
+		}
+		custom_tooltip = kol_prot.tt
+		hidden_effect = { 
+			every_country = { 
+				limit = {  
+					is_part_of_hre = yes
+					OR = {
+						religion = protestant
+						religion = reformed 
+					}
+				}
+				reverse_add_opinion = { 
+					who = ROOT 
+					modifier = kol_prot_prince
+				}
+			}
+			every_country = {
+				limit = { 
+					is_part_of_hre = yes 
+					religion = catholic
+				}
+				reverse_add_opinion = { 
+					who = ROOT 
+					modifier = kol_cat_prince
+				}
+			}
+		}
+	}
+	option = { 
+		name = aetas_kol.4.b 
+		ai_chance = { factor = 1 }
+		add_stability = 1 
+	}
+}
+#Köln's Fight for Freedom
+country_event = {
+	id = aetas_kol.5
+	title = aetas_kol.5.t
+	desc = aetas_kol.5.d
+	picture = ANGRY_MOB_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = { 
+		tag = KOL 
+		owns_core_province = 85
+	}
+	
+	mean_time_to_happen = { 
+		days = 1
+	}
+
+	option = { 
+		name = aetas_kol.5.a #damn
+		85 = { add_province_triggered_modifier = kol_city }
+		custom_tooltip = kol_disaster.tt
+	}
+}
+#free city of köln
+country_event = {
+	id = aetas_kol.6
+	title = aetas_kol.6.t
+	desc = aetas_kol.6.d
+	picture = CHURCH_ESTATE_UPSET_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			is_neighbor_of = ROOT 
+			is_part_of_hre = yes
+		}
+	}
+
+	option = { 
+		name = aetas_kol.6.a #submit
+		ai_chance = {
+			factor = 1
+			modifier = { 
+				factor = 50
+				is_at_war = yes 
+			}
+			modifier = { 
+				factor = 10
+				is_bankrupt = yes 
+			}
+		}
+		set_capital = 3390 #bonn
+		85 = { 
+			if = { 
+				limit = { has_province_modifier = kol_city }
+				remove_province_modifier = kol_city
+			}
+			cede_province = KLO 
+			if = { 
+				limit = { NOT = { is_core = KLO } }
+				add_core = KLO 
+			}
+			remove_core = ROOT 
+		}
+		KLO = { 
+			if = { 
+				limit = { is_part_of_hre = yes }
+				add_government_reform = free_city 
+			}
+			hidden_effect = {
+				capital_scope = {
+					build_to_forcelimit = {
+						infantry = 0.8
+						cavalry = 0.2
+						heavy_ship = 0.3
+						light_ship = 0.3
+						transport = 0.3
+					}
+				}
+			}
+		}
+		add_truce_with = KLO 
+	}
+	option = { 
+		name = aetas_kol.6.b #teach them a lesson!
+		set_capital = 3390 #bonn
+		85 = { 
+			if = { 
+				limit = { has_province_modifier = kol_city }
+				remove_province_modifier = kol_city
+			}
+			cede_province = KLO 
+			if = { 
+				limit = { NOT = { is_core = KLO } }
+				add_core = KLO 
+			}
+		}
+		KLO = { 
+			if = { 
+				limit = { is_part_of_hre = yes }
+				add_government_reform = free_city 
+			}
+			hidden_effect = {
+				capital_scope = {
+					build_to_forcelimit = {
+						infantry = 0.8
+						cavalry = 0.2
+						heavy_ship = 0.3
+						light_ship = 0.3
+						transport = 0.3
+					}
+				}
+			}
+		}
+		declare_war_with_cb = {
+			who = KLO
+			casus_belli = cb_annex
+		}
+		custom_tooltip = koln_allies.tt
+		hidden_effect = { 
+			KOL = { 
+				every_neighbor_country = {
+					limit = {
+						NOT = { alliance_with = ROOT }
+					}
+					country_event = { id = aetas_kol.7 }
+				}
+			}
+		}
+	}
+}
+#call to aid koln 
+country_event = {
+	id = aetas_kol.7
+	title = aetas_kol.7.t
+	desc = aetas_kol.7.d
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_kol.7.a #aid koln!
+		ai_chance = {
+			factor = 1
+			modifier = { 
+				factor = 10 
+				AND = { 
+					is_rival = KOL 
+					OR = { 
+						is_at_war = no 
+						NOT = { num_of_loans = 1 }
+					}
+				}
+			}
+			modifier = { 
+				factor = 1
+				AND = { 
+					is_rival = KOL 
+					OR = { 
+						is_at_war = yes 
+						num_of_loans = 1
+					}
+				}
+			}
+			modifier = { 
+				factor = 0 
+				truce_with = KOL
+			}
+		}
+		join_all_defensive_wars_of = KLO
+	}
+	option = { 
+		name = aetas_kol.7.b
+		ai_chance = { 
+			factor = 1 
+			modifier = {
+				factor = 20
+				has_opinion = { 
+					who = KOL
+					value = 100 
+				}
+			}
+			modifier = {
+				factor = 10
+				has_opinion = { 
+					who = KOL
+					value = 100 
+				}
+			}
+		}
+		reverse_add_opinion = { 
+			who = KOL
+			modifier = no_to_koln 
+		}
+	}
+}
+#paderborn's decision (meant for general use for pu subjects of bishoprics)
+country_event = {
+	id = aetas_kol.8
+	title = aetas_kol.8.t
+	desc = aetas_kol.8.d
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	
+	is_triggered_only = yes 
+	major = yes 
+	major_trigger = { 
+		senior_union_with = ROOT
+	}
+
+	option = { 
+		name = aetas_kol.8.a #re-elect the archbishop of koln as our administrator
+		ai_chance = { 
+			factor = 1
+			modifier = { 
+				factor = 5
+				overlord = { 
+					reverse_has_opinion = { 
+						who = ROOT 
+						value = 190
+					}
+				}
+			} 
+			modifier = { 
+				factor = 2
+				overlord = { 
+					reverse_has_opinion = { 
+						who = ROOT 
+						value = 120
+					}
+				}
+			}
+		}
+		custom_tooltip = pad_remain.tt
+	}
+	option = { 
+		name = aetas_kol.8.b #elect another to be our bishop
+		ai_chance = { 
+			factor = 2
+			modifier = { 
+				factor = 10 
+				NOT = { 
+					overlord = { 
+						reverse_has_opinion = { 
+							who = ROOT 
+							value = 50
+						}
+					}
+				}
+			} 
+			modifier = {
+				factor = 5
+				NOT = { 
+					overlord = { 
+						reverse_has_opinion = { 
+							who = ROOT 
+							value = 100
+						}
+					}
+				}
+			}
+		} 
+		overlord = { 
+			break_union = ROOT 
+			add_truce_with = ROOT
+			add_casus_belli = {
+				target = ROOT
+				type = cb_restore_personal_union
+				months = 120
+			}
+		}
+	}
+}
+#colognian incident!
+country_event = {
+	id = aetas_kol.9
+	title = aetas_kol.9.t
+	desc = aetas_kol.9.d
+	picture = HRE_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_kol.9.a #we go to war.
+		emperor = { 
+			declare_war_with_cb = {
+				who = KOL 
+				casus_belli = cb_restore_bishopric 
+			}
+		}
+		every_country = { 
+			limit = { 
+				is_elector = yes 
+				religion = catholic 
+			}
+			join_all_offensive_wars_of = emperor
+		}
+	}
+	option = { 
+		name = aetas_kol.9.b #legalize the duchy
+		custom_tooltip = kol_legalized.tt
+		KOL = { set_country_flag = kol_legal_duchy } #prevents restore bishopric cb from being used
+		add_imperial_influence = -15
+	}
+	option = { 
+		name = aetas_kol.9.c #do nothing
+		add_imperial_influence = -25
+	}
+	after = { 
+		hidden_effect = { set_global_flag = kol_incident_happened }
+	}
+}
+#archbishop seizes power and secularizes the bishopric
+country_event = {
+	id = aetas_kol.10
+	title = aetas_kol.10.t
+	desc = aetas_kol.10.d
+	picture = PRINCE_BISHOP_RESIGN_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	major = yes 
+	major_trigger = {
+		is_part_of_hre = yes 
+	}
+
+	option = { 
+		name = aetas_kol.10.a
+		if = {
+			limit = { 
+				num_of_religion = {
+					religion = protestant
+					value = 0.5
+				}
+			}
+			change_religion = protestant 
+		}
+		else_if = { 
+			limit = { 
+				num_of_religion = {
+					religion = reformed 
+					value = 0.5
+				}
+			}
+			change_religion = reformed 
+		}
+		else_if = {
+			limit = { 
+				num_of_religion = {
+					religion = hussite
+					value = 0.5
+				}
+			}
+			change_religion = hussite 
+		}
+		else = { change_religion = reformed } #reformed is backup if there is no majority as it was the religion of choice historically by Gebhard Truchseß von Waldburg
+		change_government = monarchy
+		set_government_rank = 1
+		add_government_reform = feudalism_reform
+		add_government_reform = truchsessian_reform
+		define_consort = { 
+			name = "Agnes"
+			dynasty = "von Mansfeld-Eisleben"
+			religion = reformed
+			adm = 5
+			dip = 5
+			mil = 1
+			female = yes 
+			age = 32
+		}
+		define_advisor = { 
+			type = theologian 
+			name = "Agnes von Mansfeld-Eisleben"
+			skill = 3
+			religion = reformed 
+			female = yes 
+			discount = yes 
+		}
+		set_imperial_incident = incident_colognian_war
+		hidden_effect = { 
+			remove_historical_rival = KLE 
+			add_historical_friend = KLE 
+			add_historical_friend = BRG 
+			add_historical_friend = JUL 
+			add_historical_friend = JCB
+		}
+	}
+}
+#kolner silk
+country_event = {
+	id = aetas_kol.11
+	title = aetas_kol.11.t
+	desc = aetas_kol.11.d
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = { 
+		owns_core_province = 85
+		tag = KLO 
+		is_year = 1450
+	}
+
+	mean_time_to_happen = { 
+		months = 240
+	}
+
+	option = { 
+		name = aetas_kol.11.a #there is no finer industry for koln
+		85 = { 
+			change_trade_goods = silk
+			add_province_modifier = { 
+				name = kol_silk
+				duration = -1
+			}
+		}
+	}
+}
+#completion of cologne cathedral
+country_event = {
+	id = aetas_kol.12
+	title = aetas_kol.12.t
+	desc = aetas_kol.12.d
+	picture = CITY_VIEW_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	major = yes
+
+	option = { 
+		name = aetas_kol.12.a 
+		add_country_modifier = { 
+			name = patrons_of_koln
+			duration = -1
+		}
+	}
+}
+#setting the course of cologne
+country_event = {
+	id = aetas_kol.13
+	title = aetas_kol.13.t
+	desc = aetas_kol.13.d
+	picture = BANKRUPTCY_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_kol.13.a #horrendous! but we cannot help but be intrigued...
+		custom_tooltip = cologne_war_possible.tt
+		set_country_flag = kol_war_enabled
+		set_country_flag = kol_chose_protestant_flag
+		swap_non_generic_missions = yes 
+	}
+	option = { 
+		name = aetas_kol.13.b #they will find no quarter in cologne
+		custom_tooltip = cologne_war_possible.tt
+		set_country_flag = kol_chose_catholic_flag
+		swap_non_generic_missions = yes
+	}
+}

@@ -1,0 +1,674 @@
+#AI German DPN
+##south germany
+#alsace
+3340 = { "Hagenau" "Hagenau" }
+3341 = { "Schlettstadt" "Schlettstadt" }
+3342 = { "Kolmar" "Kolmar" }
+3343 = { "Weißenburg" "Weißenburg" }
+3393 = { "Saargemünd" "Saargemünd" }
+4765 = { "Mülhausen" "Mülhausen" }
+#baden
+5336 = { "Offenburg" "Offenburg" } 
+5340 = { "Hotzenwald" "Waldshut" }
+#west swabia
+70 = { "Stuttgart" "Stuttgart" } #or Württemberg, Stuttgarter Kessel
+4712 = { "Konstanz" "Konstanz" }
+5334 = { "Hall" "Schwäbisch Hall" }
+5335 = { "Tübingen" "Tübingen" }
+#east swabia
+4711 = { "Schwäbischwerd" "Schwäbischwerd" }
+5348 = { "Nördglinden" "Nördlingen" }
+#east rhineland
+84 = { "Düsseldorf" "Düsseldorf" }
+5350  = { "Katzenelnbogen" "Katzenelnbogen" }
+5351 = { "Siegen" "Siegen" }
+5353 = { "Montabaur" "Montabaur" }
+5355 = { "Berg" "Solingen" }
+#west rhineland
+1760 = { "Koblenz" "Koblenz" }
+3335 = { "Prüm" "Prüm" }
+3387 = { "Cochem" "Cochem" }
+#upper palatinate
+1757 = { "Amberg" "Amberg" }
+5292 = { "Weiden" "Weiden" }
+5321 = { "Cham" "Cham" }
+#upper austria by pleibos
+133 = { "Linz" "Linz" }
+4761 = { "Traungau" "Steyr" }
+5210 = { "Salzkammergut" "Ischl" } 
+5211 = { "Schärding" "Schärding" }
+#lower austria
+134 = { "Wien" "Wien" }
+1770 = { "Mistelbach" "Mistelbach an der Zaya" }
+4762 = { "Krems" "Krems" }
+5214 = { "Waidhofen" "Waidhofen an der Ybbs" }
+5215 = { "Weitra" "Weitra" }
+5216 = { "Wels" "Wels" }
+5217 = { "Horn" "Horn" }
+5218 = { "Sankt Pölten" "Sankt Pölten" }
+5219 = { "Wiener Neustadt" "Wiener Neustadt" }
+#upper styria
+132 = { "Judenburg" "Judenburg" }
+5203 = { "Fürstenfeld" "Fürstenfeld" }
+5206 = { "Bruck" "Bruck an der Mur" }
+5208 = { "Admont" "Admont" }
+5209 = { "Murau" "Murau" }
+#lower styria
+4751 = { "Cilli" "Cilli" }
+5195 = { "Sanneck" "Sanneck" }
+5196 = { "Marburg" "Marburg an der Drau" }
+5197 = { "Pettau" "Pettau" }
+5204 = { "Leibnitz" "Leibnitz" }
+#carinthia
+128 = { "Klagenfurt" "Klagenfurt" }
+4759 = { "Villach" "Villach" }
+5200 = { "Sankt Veit" "Sankt Veit an der Glan" }
+#carniola
+129 = { "Laibach" "Laibach" } #mittelkrain
+5187 = { "Adelsberg" "Adelsberg" } #interkrain
+5189 = { "Mitterburg" "Mitterburg" }
+5191 = { "Möttling" "Möttling" }
+5192 = { "Windische Mark" "Rudolfswerth" } #confirmed
+5193 = { "Krainburg" "Krainburg" } #oberkrain
+5194 = { "Veldes" "Veldes" }
+#tirol
+73 = { "Innsbruck" "Innsbruck" }
+1768 = { "Lienz" "Lienz" }
+5184 = { "Hall in Tirol" "Hall in Tirol" }
+5186 = { "Feldkirch" "Feldkirch" }
+#upper bavaria
+5314 = { "Neuburg" "Neuburg an der Donau" } #or Oberdonau
+5315 = { "Landsberg am Lech" "Landsberg am Lech" }
+5316 = { "Tölz" "Tölz" }
+5324 = { "Weißenburg in Bayern" "Weißenburg in Bayern" }
+#salzburg
+76 = { "Salzburg" "Salzburg" }
+5012 = { "Pongau" "Sankt Johann im Pongau" }
+5183 = { "Pinzgau" "Mittersill" }
+#lower palatinate
+1761 = { "Kaiserslautern" "Kaiserslautern" }
+5020 = { "Neustadt" "Neustadt an der Haardt" } 
+5021 = { "Saarbrücken" "Saarbrücken" }
+5022 = { "Landau" "Landau in der Pfalz" }
+#rhaetia
+1870 = { "Sankt Gallen" "Sankt Gallen" }
+#eastphalia
+57 = { "Braunschweig" "Braunschweig" }
+1758 = { "Calenberg" "Hannover" } #or Calenberg, Calenbergerland
+
+##north germany
+#angria
+5374 = { "Lippe" "Lippe" }
+5376 = { "Detmold" "Detmold" }
+#weser estuary
+1931 = { "Ostfriesland" "Emden" }
+5372 = { "Jeverland" "Jever" }
+5373 = { "Varel" "Varel" }
+#lower saxony
+53 = { "Lüneburg" "Lüneburg" }
+5291 = { "Altmark" "Salzwedel" }
+5378 = { "Wendland" "Lüchow" } #reconfirmed
+5379 = { "Uelzen" "Uelzen" } #city name mispelled and mismatches correct province name
+#mittelmark
+50 = { "Berlin" "Berlin" } #roughly Niederebarnim, Lower Barnim
+4748 = { "Brandenburg" "Brandenburg" }
+4749 = { "Stargard" "Stargard" }
+5271 = { "Eberswalde" "Eberswalde" }
+5272 = { "Barnim" "Oderberg" } #roughly Upper Barnim
+#upper saxony
+4741 = { "Halle" "Halle" }
+5297 = { "Torgau" "Torgau" }
+5298 = { "Jüterborg" "Jüterbog" }
+5299 = { "Herzberg" "Herzberg" }
+5303 = { "Pirna" "Pirna" }
+5305 = { "Meißen" "Meißen" }
+#neumark
+49 = { "Landsberg" "Lansberg" }
+5273 = { "Soldin" "Soldin" }
+#anhalt
+2964 = { "Stendal" "Stendal" }
+5290 = { "Havelberg" "Havelberg" }
+5296 = { "Burg" "Burg" }
+#mecklenburg
+46 = { "Rostock" "Rostock" }
+2996 = { "Wismar" "Wismar" }
+5286 = { "Güstrow" "Güstrow" }
+#fore pommerania
+5275 = { "Gollnow" "Gollnow" }
+5276 = { "Greifenhagen" "Greifenhagen" }
+#farther pommerania
+4746 = { "Stargard im Pommern" "Stargard im Pommern" }
+#schleswig
+13 = { "Schleswig" "Schleswig" }
+5616 = { "Tondern" "Tondern" }
+5617 = { "Apenrade" "Apenrade" }
+5618 = { "Hadersleben" "Hadersleben" }
+#hesse
+81 = { "Marburg" "Marbug" }
+1762 = { "Kassel" "Kassel" }
+5365 = { "Gießen" "Gießen" }
+#lusatia
+60 = { "Budissin" "Budissin" }
+5264 = { "Gubin" "Gubin" }
+5265 = { "Lübben" "Lübben" }
+#ore mountains
+267 = { "Pilsen" "Pilsen" }
+1771 = { "Leitmeritz" "Leitmeritz" }
+2967 = { "Eger" "Eger" }
+5236 = { "Kaaden" "Kaaden" }
+5237 = { "Saaz" "Saaz" }
+5246 = { "Mies" "Mies" }
+#prachens
+2968 = { "Budweis" "Budweis" }
+5243 = { "Bechingen" "Bechin" }
+5245 = { "Prachens" "Pisek" }
+5247 = { "Klattau" "Klattau" }
+5248 = { "Prachatitz" "Prachatitz" }
+#central bohemia
+266 = { "Prag" "Prag" }
+4725 = { "Deutschbrod" "Deutschbrod" }
+5238 = { "Melnick" "Melnick" }
+5239 = { "Nimburg" "Neuenburg" }
+5241 = { "Kuttenberg" "Kuttenberg" }
+5242 = { "Lainsitz" "Beneschau" }
+5244 = { "Beraun" "Beraun" } 
+5250 = { "Tschaslau" "Tschaslau" }
+#sudetes
+2970 = { "Königgrätz" "Königgrätz" }
+4724 = { "Crudim" "Crudim" }
+5240 = { "Jungbunzlau" "Jungbunzlau" }
+5249 = { "Leitomischl" "Leitomischl" }
+5251 = { "Glatz" "Glatz" }
+5252 = { "Podiebrad" "Podiebrad" }
+#moravia
+265 = { "Brünn" "Brünn" }
+4237 = { "Olmütz" "Olmütz" }
+5230 = { "Trebitsch" "Trebitsch" }
+5231 = { "Iglau" "Iglau" }
+5232 = { "Znaim" "Znaim" }
+5233 = { "Zlin" "Zlin" }
+5234 = { "Mährisch Schönberg" "Mährisch Schönberg" }
+5267 = { "Kremsier" "Kremsier" }
+5268 = { "Prerau" "Prerau" }
+#switzerland
+166 = { "Waldstätte" "Schwyz" }
+5034 = { "Thun" "Thun" }
+5037 = { "Thurgau" "Schaffenhausen" }
+
+##low countries
+#luxemburg
+94 = { "Lützelburg" "Lützelburg" }
+3330 = { "Chiny" "Mittelberg" }
+3331 = { "Arel" "Arel" }
+3332 = { "Bastnach" "Bastnach" }
+3333 = { "Diedenhofen" "Diedenhofen" }
+3363 = { "Südeifel" "Bitburg" }
+#liège
+93 = { "Lüttich" "Lüttich" }
+2974 = { "Loon" "Loon" }
+3344 = { "Dinand" "Dinand" }
+3345 = { "Stablo" "Stablo" }
+3380 = { "Burg Bouillon" "Burg Bouillon" }
+#hainaut
+91 = { "Bergen" "Bergen" }
+1743 = { "Kamerich" "Kamerich" }
+3329 = { "Valencijn" "Valencijn" } #just from dutch
+5016 = { "Malbode" "Malbode" }
+#flanders
+90 = { "Brügge" "Brügge" }
+1865 = { "Gent" "Gent" }
+3302 = { "Duinkerke" "Duinkerke" } #dutch
+3303 = { "Ypern" "Ypern" }
+3304 = { "Dornick" "Dornick" }
+4769 = { "Rijsel" "Rijsel" } #dutch
+5011 = { "Dowai" "Dowai" } #dutch without double a
+5012 = { "Cortrick" "Cortrick" }
+5013 = { "Alst" "Alst" }
+#brabant
+92 = { "Brüssel" "Brüssel" }
+95 = { "Breda" "Breda" }
+1744 = { "Antorf" "Antorf" }
+3347 = { "Löwen" "Löwen" }
+4770 = { "Herzogenbusch" "Herzogenbusch" }
+5015 = { "Mecheln" "Mecheln" }
+5018 = { "Eindhoven" "Eindhoven" }
+5228 = { "Turnhout" "Turnhout" }
+#holland
+96 = { "Seeland" "Middelburg" }
+97 = { "Amstelsdam" "Amstelsdam" }
+98 = { "Utrecht" "Utrecht" } #or Utreg
+3348 = { "Dordrecht" "Dordrecht" }
+3349 = { "West-Friesland" "Haarlem" }
+4383 = { "der Haag" "der Haag" }
+5025 = { "Leiden" "Leiden" }
+#guelders
+99 = { "Falbland" "Arnheim" } #followed Etymology of Veluwe
+1742 = { "Obergeldern" "Rurmund" }
+3351 = { "Nimwegen" "Nimwegen" }
+3352 = { "Zütphen" "Zütphen" }
+4381 = { "Oberyssel" "Zwolle" }
+5026 = { "Twente" "Enschede" }
+#frisia
+100 = { "Friesland" "Leeuwarden" }
+3350 = { "Drenthe" "Koevern" }
+3353= { "Umland" "Delfsiel" } 
+4382 = { "Gröningen" "Gröningen" }
+5027 = { "Ostergo" "Dokkum" }
+
+##france
+#franche comte
+193 = { "Bisanz" "Bisanz" }
+3298 = { "Lons" "Lons" }
+3299 = { "Dollen" "Dollen" }
+3301 = { "Wesel" "Wesel" }
+3394 = { "Lure" "Luxeuil" }
+3398 = { "Mömpelgard" "Mömpelgard" }
+4764 = { "Salins" "Salins" }
+#lorraine
+187 = { "Bar" "Bar" }
+188 = { "Metz" "Metz" }
+189 = { "Nanzig" "Nanzig" }
+3334 = { "Saarburg" "Saarburg" }
+3336 = { "Neuenburg" "Neuenburg" }
+3337 = { "Spinal" "Spinal" }
+3338 = { "Tull" "Tull" }
+3339 = { "Mosetal" "Mussenbrück" }
+3386 = { "Vogesen" "Sankt Diedolt" }
+3393 = { "Saargemünd" "Saargemünd" }
+#artois
+87 = { "Kalen" "Kalen" }
+88 = { "Atrecht" "Atrecht" } #from dutch
+3255 = { "Beunen" "Beunen" }
+3256 = { "Sankt Omars" "Sankt Omars" }
+3257 = { "Betun" "Betun" }
+5014 = { "Heusden" "Heusden" } #dutch
+
+##italy
+#frioul
+111 = { "Weiden" "Weiden" }
+1769 = { "Görz" "Görz" }
+4738 = { "Triest" "Triest" }
+5100 = { "Cadober" "Pieve von Cadober" }
+5101 = { "Portenau" "Portenau" }
+5102 = { "Tisanen" "Tisanen" }
+5103 = { "Schönfeld" "Tolmein" }
+5104 = { "Agley" "Agley" }
+5105 = { "Östrich" "Östrich" }
+5106 = { "Tolmein" "Tolmein" }
+#venetia
+108 = { "Wälsch-Bern" "Wälsch-Bern" }
+112 = { "Venedig" "Venedig" }
+#1774 lacks obvious german name
+4729 = { "Padua" "Padua" }
+5078 = { "Klein-Venedig" "Klein-Venedig" }
+5093 = { "Rofreit" "Rofreit" } #Lagertal
+5094 = { "Wiesenthein" "Wiesenthein" }
+5095 = { "Schleit" "Schleit" }
+5098 = { "Felters" "Felters" }
+5099 = { "Beilun" "Beilun" }
+#trentino
+110 = { "Trient" "Trient" }
+5096 = { "Reiff" "Reiff am Gartsee" }
+5107 = { "Meran" "Meran" }
+5108 = { "Botzen" "Botzen" }
+5109 = { "Brixen" "Brixen" }
+#eastern lombardy
+107 = { "Wälsch-Brixen" "Wälsch-Brixen" }
+109 = { "Mantua" "Mantua" }
+1862 = { "Kremun" "Kremun" }
+4739 = { "Wälsch-Bergen" "Wälsch-Bergen" }
+5060 = { "Veltlin" "Sünders" }
+5061 = { "Camunental" "Brenn" }
+#western lombardy
+104 = { "Mailand" "Mailand" }
+2979 = { "Nowaren" "Nowaren" }
+4728 = { "Pawen" "Pawen" }
+4740 = { "Chum" "Chum" }
+5039 = { "Tessin" "Bellenz" }
+5054 = { "Vigen" "Vigen" }
+5055 = { "Eschental" "Döm" }
+5059 = { "Lauden" "Lauden" }
+#upper piedmont
+103 = { "Turin" "Turin" }
+5041 = { "Cher" "Cher" }
+5043 = { "Kiefernwald" "Kiefernwald" }
+5044 = { "Susatal" "Susa" }
+5045 = { "Ostental" "Osten" }
+5046 = { "Eebri" "Eebri" }
+5047 = { "Biellen" "Biellen" }
+#lower piedmont
+102 = { "Nizza" "Nizza" }
+1875 = { "Keilspitze" "Keilspitze" }
+2981 = { "Montferrat" "Montferratberg" }
+4727 = { "Salutz" "Salutz" }
+5040 = { "Königsberg" "Königsberg" }
+5048 = { "Wertschaal" "Wertschaal" }
+5049 = { "Asten" "Asten" }
+5050 = { "Die Langhe" "Alba" }
+5053 = { "Kaiserstadt" "Kaiserstadt" }
+#ligura
+101 = { "Genua" "Genua" }
+5042 = { "Onelen" "Onelen" }
+#emilia
+106 = { "Muden" "Muden" }
+5057 = { "Barden" "Barden" }
+5058 = { "Piazen" "Piazen" }
+#romagna
+114 = { "Raben" "Raben" }
+5062 = { "Feynz" "Feynz" }
+5064 = { "Rimen" "Rimen" }
+5076 = { "Sumpfland" "Rovigo" }
+#northern tuscany
+116 = { "Florenz" "Florenz" }
+#lazio
+118 = { "Rom" "Rom" }
+5089 = { "Altstadt" "Altstadt" }
+#umbria
+4731 = { "Spolet" "Spolet" }
+5075 = { "Bergstadt" "Bergstadt" }
+#abruzzo
+120 = { "Wälsch-Aachen" "Wälsh-Aachen" }
+5115 = { "Abruzzen" "Teram" }
+#campania
+121 = { "Neapel" "Neapel" }
+2983 = { "Salern" "Salern" }
+5097 = { "Gaeten" "Gaeten" }
+#capitanate
+5119 = { "Sankt Severin" "Sankt Severin" }
+#sicily
+125 = { "Palerm" "Palerm" }
+2982 = { "Syrakus" "Syrakus" }
+4736 = { "Drapanen" "Drapanen" }
+4737 = { "Kerkent" "Kerkent" }
+5131 = { "Catanien" "Catanien" }
+5135 = { "Calatanissen" "Calatanissen" }
+#apulia
+122 = { "Tarent" "Tarent" }
+5125 = { "Salent" "Salent" }
+
+##baltica
+#pomerelia
+43 = { "Danzig" "Danzig" }
+2997 = { "Tuchel" "Tuchel" }
+#pomesania
+42 = { "Ermland" "Heilsberg" }
+1859 = { "Kulm" "Kulm" }
+5834 = { "Elbing" "Elbing" }
+#prussia
+41 = { "Königsberg" "Königsberg" }
+5836 = { "Rhein" "Lyck" }
+5841 = { "Windenburg" "Windenburg" }
+5843 = { "Samland" "Fischhausen" }
+#sudovia
+270 = { "Traken" "Traken" }
+1936 = { "Kauen" "Kauen" }
+1937 = { "Garden" "Garden" }
+5891 = { "Seine" "Seine" }
+5892 = { "Aliten" "Aliten" }
+5893 = { "Merkenpill" "Merkenpill" }
+#lithuana
+272 = { "Wilna" "Wilna" }
+4534 = { "Utenen" "Utenen" }
+4535 = { "Wilkinberg" "Wilkinberg" }
+5890 = { "Poswol" "Poswol" }
+5903 = { "Swenziany" "Swenziany" }
+#samogitia
+40 = { "Memel" "Memelburg" }
+271 = { "Medeniken" "Medeniken" }
+5884 = { "Polange" "Polange" }
+5886 = { "Raseinen" "Raseinen" }
+5887 = { "Schaulen" "Schaulen" }
+5888 = { "Wehlonen" "Wehlonen" }
+5889 = { "Kedahnen" "Kedahnen" }
+#courland
+5970 = { "Hasenpoth" "Hasenpoth" }
+5971 = { "Windau" "Windau" }
+5972 = { "Pilten" "Pilten" }
+5969 = { "Grobin" "Grobin" }
+5973 = { "Dondangen" "Dondangen" }
+5974 = { "Kandau" "Kandau"}
+#semigallia
+38 = { "Riga" "Riga" }
+1935 = { "Mitau" "Mitau" }
+5976 = { "Bauske" "Bauske" }
+5977 = { "Selonen" "Selburg" }
+5978 = { "Dünamünde" "Dünamünde" }
+5979 = { "Kokenhausen" "Kokenhausen" }
+#latgale
+273 = { "Dünaburg" "Dünaburg" }
+5980 = { "Kreutzburg" "Kreutzburg" }
+5983 = { "Marienhausen" "Marienhausen" }
+5984 = { "Rositten" "Rositten" }
+#livonia
+37 = { "Fellin" "Fellin" }
+1834 = { "Dorpat" "Dorpat" }
+4241 = { "Wenden" "Wenden" }
+5981 = { "Wolmar" "Wolmar" }
+5982 = { "Lemsal" "Lemsal" }
+5985 = { "Ronneburg" "Ronneburg" }
+5986 = { "Marienburg" "Marienburg" }
+5987 = { "Pernau" "Pernau" }
+5995 = { "Odenpäh" "Odenpäh" }
+#estonia
+35 = { "Ösel" "Arensburg" }
+1842 = { "Narwa" "Narwa" }
+5864 = { "Dagö" "Keinis" }
+5988 = { "Talkhof" "Talkhof" }
+5989 = { "Wiek" "Hapsal" }
+5990 = { "Alt-Pernau" "Leal" }
+5991 = { "Kegel" "Kegel" }
+5992 = { "Rappel" "Rappel" }
+5993 = { "Jerwen" "Weißenstein" }
+5994 = { "Wesenburg" "Wesenburg"}
+
+##poland  by pleibos
+#greater poland
+254 = { "Posen" "Posen" }
+255 = { "Kalisch" "Kalisch" }
+2963 = { "Krojanke" "Nakel" }
+4526 = { "Gnesen" "Gnesen" }
+5846 = { "Kunau" "Kunau" }
+5847 = { "Deutsch Krone" "Deutsch Krone" }
+5848 = { "Rogasen" "Rogasen" }
+5849 = { "Filehne" "Filehne" }
+5850 = { "Bentschen" "Bentschen" }
+#polish  lowlands
+258 = { "Schieratz" "Schieratz" }
+1939 = { "Lentschitza" "Lentschitza" }
+4523 = { "Inowrazlaw" "Junges Leslau" }
+4533 = { "Welun" "Welun" }
+5853 = { "Petrikau" "Petrikau" }
+#lesser poland
+262 = { "Krakau" "Krakau" }
+2960 = { "Neu Sandez" "Neu Sandez" }
+5861 = { "Mistau" "Mistau" }
+5862 = { "Ilkenau" "Ilkenau" }
+5863 = { "Neumarkt am Dohnst" "Neumarkt am Dohnst" }
+5866 = { "Beitsch" "Beitsch" }
+5867 = { "Wislitz" "Wislitz" }
+#kuyaiva
+4524 = { "Dobrin" "Dobrin an der Weichsel" }
+4528 = { "Kujawisch Brest" "Kujawisch Brest" }
+5851 = { "Bromberg" "Bromberg" }
+#mazovia
+256 = { "Plozk" "Plozk" }
+257 = { "Warschau" "Warschau" }
+5856 = { "Zechenau" "Zechenau" }
+5858 = { "Poltow" "Poltow" }
+5860 = { "Lumbsee" "Lumbsee" }
+#polish uplands
+259 = { "Sandomir" "Sandomir" }
+#lower silesia
+264 = { "Breslau" "Breslau" }
+2966 = { "Glogau" "Glogau" }
+4238 = { "Liegnitz" "Liegnitz" }
+5258 = { "Brieg" "Brieg" }
+5259 = { "Schweidnitz" "Schweidnitz" }
+5260 = { "Jauer" "Jauer" }
+5261 = { "Sagan" "Sagan" }
+5262 = { "Crossen" "Crossen an der Oder" }
+5266 = { "Oels" "Oels" }
+#upper silesia
+263 = { "Ratibor" "Ratibor" }
+4723 = { "Oppeln" "Oppeln" }
+4726 = { "Ostrau" "Ostrau" }
+5235 = { "Troppau" "Troppau" }
+5253 = { "Teschen" "Teschen" }
+5254 = { "Auschwitz" "Auschwitz" }
+5255 = { "Gleiwitz" "Gleiwitz" }
+5257 = { "Neiße" "Neiße" } #or Neisse
+
+##ruthenia
+#halychyna
+261 = { "Halytsch" "Halytsch" }
+2424 = { "Premissel" "Premissel" }
+4541 = { "Sambir" "Sambir" }
+#red ruthenia
+4538 = { "Cholm" "Cholm" }
+5878 = { "Jaroslau" "Jaroslau" }
+5879 = { "Rasau" "Rasau" } #invented off of other exonyms combined with germanic transliteration patterns
+5880 = { "Saanig" "Saanig" }
+
+#random
+5939 = { "Medschybisch" "Medschybisch" }
+
+#misc greek pleibos
+5678 = { "Heilige-Petrus" "Heilige-Petrus" }
+320 = { "Rhodos" "Rhodos" }
+
+##carpathia
+#lower hungary 
+154 = { "Hont" "Hont" }
+1772 = { "Preßburg" "Preßburg" }
+4236 = { "Trentschin" "Trentschin" }
+5461 = { "Neuburg" "Neuburg" }
+5462 = { "Neutra" "Neutra" }
+5463 = { "Tyrnau" "Tyrnau" } 
+5464 = { "Barsch" "Lewenz" }
+5465 = { "Sillein" "Sillein" }
+5466 = { "Sohl" "Sohl" }
+#upper hungary
+162 = { "Semplin" "Trebischau" }
+1318 = { "Zips" "Zipser Burg" }
+5460 = { "Hewesch" "Erlau" }
+5468 = { "Gemer" "Rosenau" }
+5469 = { "Borschod" "Visegrad" } #need better town name
+5470 = { "Abaujwar-Tornau" "Kaschau" }
+5471 = { "Mischkolz" "Mischkolz" }
+5472 = { "Scharosch" "Eperies" }
+5473 = { "Homenau" "Homenau" }
+5758 = { "Jaß" "Jaßbring" }
+#marmatia
+1952 = { "Maramuresch" "Marmaroschsiget" }
+5474 = { "Ung" "Ungwar" }
+5480 = { "Sathmar" "Sathmar" }
+5483 = { "Berg" "Bergsaß" }
+5484 = { "Mukatschewo" "Mukatschewo" }
+5485 = { "Chust" "Chust" }
+#pannonia
+135 = { "Ödenburg" "Ödenburg" }
+1864 = { "Schomodei" "Ruppertsburg" }
+5451 = { "Kesthell" "Kesthell" }
+5452 = { "Zala" "Egersee" }
+5453 = { "Güns" "Güns" }
+5454 = { "Eisenburg" "Steinamanger" }
+5455 = { "Weißbrunn" "Weißbrunn" }
+5456 = { "Raab" "Raab" }
+5457 = { "Komorn" "Komorn" }
+#afold
+153 = { "Pesth" "Pesth" }
+4125 = { "Sollnock" "Sollnock" }
+4240 = { "Stuhlweiß" "Stuhlweißenburg" }
+5445 = { "Tschongrad" "Tschongrad" }
+5446 = { "Klein-Kumanien" "Feulegaß" }
+5447 = { "Kollotschau" "Kollotschau" }
+5448 = { "Tolnau" "Tolnau" }
+5449 = { "Branau" "Fünfkirchen" }
+5458 = { "Ofen" "Ofen" }
+#crisania
+155 = { "Bekesch" "Jula" }
+157 = { "Debrezin" "Debrezin" }
+5475 = { "Großkumanien" "Engelhausen" }
+5476 = { "Bihar" "Großwardein" }
+5477 = { "Beiush" "Beiush" }
+5478 = { "Sarand" "Tannenhof" }
+5479 = { "Großkarol" "Großkarol" }
+5482 = { "Szilagy" "Zillenmarkt" }
+#banat
+156 = { "Temesch" "Temeschburg" }
+1954 = { "Großbetschkerek" "Großbetschkerek" }
+5438 = { "Pantschowa" "Pantschowa" }
+5439 = { "Karasch" "Reschitz" }
+5440 = { "Orschowa" "Orschowa" }
+5441 = { "Lugosch" "Lugosch" }
+5443 = { "Tschanad" "Makowa" }
+##balkans
+#istria
+4752 = { "Pflaum" "Sankt Veit am Flaum" }
+#syrmia
+4126 = { "Batsch" "Batsch" }
+4173 = { "Syrmien" "Syrmisch-Mitrowitz" }
+5396 = { "Illok" "Illok" }
+5403 = { "Poschegg" "Poschegg" }
+#slavonia
+131 = { "Agram" "Agram" }
+152 = { "Warasdin" "Warasdin" }
+4756 = { "Kreutz" "Kreutz" }
+5399 = { "Sissek" "Sissek" }
+5400 = { "Seger" "Grabing" } 
+5402 = { "Wirowititz" "Wirowititz" }
+#croatia
+5389 = { "Zengg" "Zengg" }
+5390 = { "Bründl" "Bründl" }
+5391 = { "Bihatsch" "Bihatsch" }
+5394 = { "Korbawa" "Korbawa" }
+#transylvania
+1951 = { "Hunyad" "Diemrich" }
+4127 = { "Turda" "Burgdorf" }
+4128 = { "Hermannstadt" "Hermannstadt" }
+5486 = { "Klausenburg" "Klausenburg" }
+5487 = { "Innere Szolnok" "Deesch" }
+5488 = { "Unterweißenburger" "Weißenburg" }
+5489 = { "Scheeßprich" "Scheeßprich" }
+5490 = { "Fogarasch" "Fogarasch" }
+5491 = { "Bistriz" "Bistriz" }
+#Szeklerland
+158 = { "Mieresch" "Neumarkt am Mieresch" }
+5492 = { "Sächsisch-Reen" "Reen" }
+5493 = { "Burzenland" "Kronstadt" }
+5494 = { "Odorhellen" "Odorhellen" }
+5495 = { "Niklasmarkt" "Niklasmarkt" }
+5496 = { "Tschick" "Szeklerburg" }
+5497 = { "Sankt Georgen" "Sankt Georgen" }
+#bukovina
+268  = { "Suczawa" "Suczawa" }
+5596 = { "Chotyn" "Chotyn" }
+5604 = { "Radautz" "Radautz" }
+5605 = { "Pokutien" "Kolomea" }
+5606 = { "Buchenland" "Chernowitz" }
+#moldavia 
+4529 = { "Jassenmarkt" "Jassenmarkt" }
+5598 = { "Wassluy" "Wassluy" }
+5601 = { "Fokschan" "Fokschan" }
+5602 = { "Bakau" "Bakau" }
+5603 = { "Kreuzburg an der Bistritz" "Kreuzburg an der Bistritz" }
+#bessarabia
+5597 = { "Galatz" "Galatz" }
+##france
+#France - by Math 
+3302 = { "Dünkirchen" "Dünkirchen" }
+#romandie
+1867 = { "Lausannen" "Lausannen" }
+1871 = { "Oberwallis" "Sitte" }
+4720 = { "Genf" "Genf" }
+4721 = { "Freiburg" "Freiburg im Üechtland" }
+5028 = { "Waadt" "Morsee" }
+5029 = { "Unterwallis" "Sankt Moritz" }
+5030 = { "Jura" "Neuenburg" }
+
+########################################
+#        Britain by math               #
+########################################
+
+235 = { "Kantelberg" "Kantelberg" } #historical
+1978 = { "Shetland" "Schadelwage" }  #historical

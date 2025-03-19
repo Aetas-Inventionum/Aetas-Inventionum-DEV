@@ -1,0 +1,172 @@
+#Country Name: Please see filename.
+
+graphical_culture = latingfx
+
+color = { 200 103 25 } #168 27 57 for red, 176 100 85 for irl aragon colour
+
+revolutionary_colors = { 4  8  4 }
+
+historical_score = 400
+
+historical_idea_groups = {
+	maritime_ideas
+	quantity_ideas
+	religious_ideas
+	trade_ideas
+	naval_ideas
+	economic_ideas
+	innovativeness_ideas
+	offensive_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	spanish_tercio
+	french_caracolle
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	#Kings of the Royal House of Aragon
+	"Alifonso #4" = 25 
+	"Pero #4" = 10
+	"Chaime #2" = 5
+	"Remiro #2" = 5
+	"Chuan #1" = 20
+	"Ferrando #1" = 20
+	"Sancho #1" = 1
+	"Martín #1" = 10
+	"Celipe #0" = 5
+
+	#misc nobles
+	"Mariano #0" = 0
+	"Pero Ferrández #0" = 0
+	"Remón #0" = 0
+	"Ferrando Peréz #0" = 0
+	"Pero López #0" = 0
+	"Luís #0" = 1
+	"Luís Ferrández #0" = 0
+	"Guiomar #0" = 0
+	"Berenguer #0" = 0
+	"Arnau #0" = 0
+	"Chaime Peréz #0" = 0
+	"José #0" = 0
+	"Miguel #0" = 0
+	"Bital #0" = 0
+	"Betrán #0" = 0
+	"Bernal #0" = 0
+	"Brun #0" = 0
+	"Chabier #0" = 0
+	"Chacobo #0" = 0
+	"Cheromo #0" = 0
+	"Choel #0" = 0
+	"Chuaquín #0" = 0
+	"Cristuábal #0" = 0
+	"Cristofo #0" = 0
+	"Ebardo #0" = 0
+	"Costanzio #0" = 1
+	"Daví #0" = 0
+	"Dachoberto #0" = 0
+	"Eriberto #0" = 0
+	"Euchenio #0" = 0
+	"Fadric #0" = 1
+	"Fagostino #0" = 0
+	"Feli #0" = 0
+	"Galindo #0" = 0
+	"Garapasio #0" = 0
+	"Guillén #0" = 0
+	"Istebe #0" = 0
+	"Liandro #0" = 0
+	"Lorient #0" = 0
+	"Marzelo #0" = 0
+	"Ponz #0" = 0
+	"Rafel #0" = 0
+	"Remundo #0" = 0
+	"Romaldo #0" = 0
+	"Sabastián #0" = 0
+	"Salbador #0" = 0
+	"Simeón #0" = 0
+	"Sifredo #0" = 0
+	"Urico #0" = 0
+	"Mateu #0" = 0
+	"Mateu Florimon #0" = 0
+	"Nicolau #0" = 0
+	"Tomás #0" = 0
+	"Chuan Tomás #0" = 0
+	"Aimau #0" = 0
+	"Francho #0" = 0
+	"Francho Berenguer #0" = 0
+	"Domingo #0" = 0
+	"Domingo Lopéz #0" = 0
+	"Chuan Ximenéz #0" = 0
+	"Manuel #0" = 0
+	"Alonso #0" = 0
+	"Henrique #0" = 0
+	"Chorche #0" = 0
+	
+	"Biolant #0" = -1
+	"Blanga #0" = -1
+	"Chuana #0" = -10
+	"Celipa #0" = -1
+	"Chabiera #0" = -1
+	"Chulia #0" = -1
+	"Alionor #0" = -1
+	"Estrel #0" = -1
+	"Grabiela #0" = -1
+	"Guillena #0" = -1
+	"Loísa #0" = -1
+	"Rafela #0" = -1
+	"Tresa #0" = -1
+	"Asperanza #0" = -1
+	"Caterina #0" = -1
+	"Margalida #0" = -1
+	"María #0" = -1
+	"Sibila #0" = -1
+}
+
+leader_names = {
+	d'Anglesola
+	"de Barcelona" "de Beaumont" "de Borja"
+	"de Cabrera" "de Cardona" "de Castro" "de Chaca" Chustaz
+	d'Embún
+	d'Íxar
+	"de Fantova" "de Fois" "de Fortía"
+	Garavito "de Gómara"
+	"de Lanuza" "de Latas" "de Luna"
+	"de Marcilla" "de Martorell" "de Mataplana" Mexía "de Mur"
+	"de Nápols"
+	"de Perenisca" "de Pinós" "de Prades"
+	"de Ribagorza" "de Rocafort"
+	Sarnés "de Sesé"
+	"de Trastámara"
+	"d'Urchel"
+	Villalpando
+	"de Zapata"
+}
+
+ship_names = {
+	"Blanca Aurora" "Sant Jacob" Flama Lleona Falcó "La Bonaventura" "Sant Antoni" 
+	"Sant Miquel" "Sant Bernat" "Sant Francesc" "Santa Ágata" "Santa Eulàlia" 
+	"Sant Gabriel" "Sant Climent" "Sant Jordi" "La Reial" Trinitat "Santa Creu" 
+	"Santa Maria" "Santa Caterina" "Sant Joan Evangelista" "Santa Bàrbara" 
+	"Sant Pere de Roma" "La Gasela" "Santa Magdalena" "Sant Víctor" Magnana 
+	"Santa Ventura" "Santa Coloma" "Sant Ambrós" "La Garsa"  
+}
+
+army_names = {
+	"Exercito Reyal" "Exercito Valenciano" "Exercito Catalán" "Exercito Aragonés" "Exercito Mallorquín" "Exercito Sardo" "Exercito Siciliano" "Exercito de $PROVINCE$"
+}
+
+fleet_names = { 
+	"Estol Reyal" "Estol de $PROVINCE$"
+}

@@ -1,0 +1,24 @@
+#moved to west slavic file
+##only use if there are significant differences between West Slavic languages
+##Poland
+#upper silesia
+4726 = { "Ostrawa" "Ostrawa" }
+5254 = { "Slaski" "Oswiecim" }
+##north germany
+#lusatia
+4778 = { "Zgorzelec" "Zgorzelec" }
+5263 = { "Zitawa" "Zitawa" }
+#sudetes
+5240 = { "Boleslaw" "Mladá Boleslaw" }
+5249 = { "Lytomysl" "Lytomysl" }
+5251 = { "Klodzko" "Klodzko" }
+#moravia
+4237 = { "Olomuniec" "Olomuniec" }
+5231 = { "Iglawa" "Iglawa" }
+5268 = { "Przerów" "Przerów" }
+#central bohemia
+266 = { "Praga" "Praga" }
+5250 = { "Czaslaw" "Czaslaw" }
+#prachens
+2968 = { "Budziejowice" "Budziejowice" }
+5247 = { "Klatowy" "Klatowy" }

@@ -1,0 +1,265 @@
+namespace = aetas_dan
+normal_or_historical_nations = yes
+
+# A new capital for Denmark?
+country_event = {
+	id = aetas_dan.1
+	title = aetas_dan.1.t
+	desc = aetas_dan.1.d
+	picture = CASTLE_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = DAN
+		NOT = { 
+			capital = 12
+		}
+	}
+
+	mean_time_to_happen = { 
+		months = 20
+	}
+
+	option = { #We will move our capital to Kobenhavn!
+		name = "aetas_dan.1.a"
+		ai_chance = { factor = 1 }
+		custom_tooltip = aetas_dan.1.tt
+		set_capital = 12
+		12 = { 
+			add_province_modifier = {
+				name = "dan_new_capital"
+				duration = -1
+			}
+			change_trade_goods = books
+			add_great_project_tier = {
+				type = kronborg
+				tier = 1
+			}
+		}
+		add_prestige = 15
+	}
+	option = { #We remain at Roskilde
+		name = "aetas_dan.1.b"
+		add_prestige = 25
+		5620 = { 
+			add_province_modifier = { 
+				name = "roskilde_remains_capital"
+				duration = -1
+			}
+		}
+	}
+}
+# Oresund Tolls
+country_event = {
+	id = aetas_dan.2
+	title = aetas_dan.2.t
+	desc = aetas_dan.2.d
+	picture = HARBOUR_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			is_subject_of = DAN 
+			is_neighbor_of = DAN 
+			tag = HSA 
+		}
+	}
+
+	option = { 
+		name = "aetas_dan.2.a"
+		12 = { 
+			add_province_modifier = { 
+				name = "ai_sound_toll"
+				duration = -1
+			}
+		}
+		hidden_effect = { 
+			HSA = { country_event = { id = aetas_hsa.1 } }
+		}
+	}
+}
+# Deposition of King Erik
+country_event = {
+	id = aetas_dan.3
+	title = aetas_dan.3.t
+	desc = aetas_dan.3.d
+	picture = REFORM_eventPicture
+
+	fire_only_once = yes
+
+	trigger = { 
+		tag = DAN 
+		has_country_flag = eric_haters
+	}
+
+	mean_time_to_happen = { 
+		months = 40
+	}
+
+	immediate = { 
+		set_country_flag = dan_forced_deposition
+	}
+
+	option = { 
+		name = "aetas_dan.3.a"
+		custom_tooltip = aetas_dan.3.tt
+		kill_ruler = yes 
+		define_ruler = { 
+			name = "Christoffer III"
+			dynasty = "von Wittelsbach"
+			culture = bavarian
+			adm = 3
+			dip = 2
+			mil = 2
+		}
+		hidden_effect = { 
+			remove_heir = {}
+		}
+		set_country_flag = chris_wittl
+		release = GOT 
+		GOT = {
+			change_government = republic
+			add_government_reform = pirate_republic_reform
+			hidden_effect = {
+				adopt_reform_progress = ROOT
+				add_republican_tradition = 50
+				change_religion = ROOT
+				discover_provinces = ROOT
+				capital_scope = {
+					build_to_forcelimit = {
+						infantry = 0.8
+						artillery = 0.2
+						heavy_ship = 0.3
+						light_ship = 0.3
+						transport = 0.3
+					}
+				}
+				swap_non_generic_missions = yes
+				add_treasury = 200
+			}
+			define_ruler = {
+				name = "Eric"
+				dynasty = "Gryf"
+				adm = 1
+				dip = 2
+				mil = 3
+				age = 60
+				culture = pommeranian
+			}
+			set_ruler_flag = historical_pirate
+		}
+	}
+	option = { 
+		name = "aetas_dan.3.b"
+		kill_ruler = yes 
+		define_ruler = { 
+			name = "Christoffer III"
+			dynasty = "von Wittelsbach"
+			culture = bavarian
+			adm = 3
+			dip = 2
+			mil = 2
+		}
+		set_country_flag = chris_wittl
+		release = GOT 
+		GOT = {
+			change_government = republic
+			add_government_reform = pirate_republic_reform
+			hidden_effect = {
+				adopt_reform_progress = ROOT
+				add_republican_tradition = 50
+				change_religion = ROOT
+				discover_provinces = ROOT
+				capital_scope = {
+					build_to_forcelimit = {
+						infantry = 0.8
+						artillery = 0.2
+						heavy_ship = 0.3
+						light_ship = 0.3
+						transport = 0.3
+					}
+				}
+				swap_non_generic_missions = yes
+				add_treasury = 200
+			}
+			define_ruler = {
+				name = "Eric"
+				dynasty = "Gryf"
+				adm = 1
+				dip = 2
+				mil = 3
+				age = 60
+				culture = pommeranian
+			}
+			set_ruler_flag = historical_pirate
+		}
+		switch_tag = GOT
+	}
+
+	after = { 
+		clr_country_flag = dan_forced_deposition
+	}
+}
+# woes of erik
+country_event = {
+	id = aetas_dan.4
+	title = aetas_dan.4.t
+	desc = aetas_dan.4.d
+	picture = ROYAL_STRESS_eventPicture
+
+	fire_only_once = yes 
+	major = yes 
+	major_trigger = { 
+		is_subject_of = ROOT 
+	}
+
+	trigger = { 
+		tag = DAN 
+	}
+
+	mean_time_to_happen = { 
+		days = 1
+	}
+
+	option = { 
+		name = aetas_dan.4.a 
+		add_ruler_modifier = { 
+			name = dan_erik
+			duration = -1
+		}
+	}
+}
+#Christian of Oldenberg earns favor of the nobility
+country_event = {
+	id = aetas_dan.5
+	title = aetas_dan.5.t
+	desc = aetas_dan.5.d
+	picture = QUEEN_AND_MALE_HEIR_eventPicture
+
+	is_triggered_only = yes 
+	fire_only_once = yes 
+
+	option = { 
+		name = aetas_dan.5.a #Christian will be named heir
+		ai_chance = { factor = 100 } #historical
+		define_heir = {
+			name = "Christian"
+			monarch_name = "Christian I"
+			dynasty = "von Oldenburg"
+			culture = lower_saxon
+			age = 10
+			claim = 60
+			adm = 4
+			dip = 4
+			mil = 4
+		}
+		custom_tooltip = christian_oldenburg.tt
+	}
+	option = { 
+		name = aetas_dan.5.b
+		ai_chance = { factor = 0 }
+	}
+}

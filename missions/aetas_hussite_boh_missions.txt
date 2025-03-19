@@ -1,0 +1,1051 @@
+boh_hussite_branch_1_old = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = BOH
+		OR = { 
+			religion = hussite 
+			religion = protestant 
+		}
+		always = no #temporary disabled, idk what to do there
+	}
+
+	boh_expel = {
+		icon = catholic_volunteers
+		position = 4
+		required_missions = { boh_troubles } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				culture_group = germanic
+				religion = hussite
+				value = 2
+			}
+		}
+
+		effect = {
+			every_owned_province = {
+				limit = { culture_group = germanic } 
+				add_province_modifier = {
+					name = "boh_exp_or_con"
+					duration = 7300
+				}
+			}
+		}
+	}
+
+	boh_hus_unity = {
+		icon = defenestrate_the_heretics
+		position = 5
+		required_missions = {
+			boh_expel
+			boh_taborites
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = { religious_unity = 0.99 } 
+
+		effect = {
+			add_country_modifier = {
+				name = "hussite_unity"
+				duration = -1
+			}
+		}
+	}
+}
+boh_hussite_branch_2_old = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = BOH
+		OR = { 
+			religion = hussite 
+			religion = protestant 
+		}
+		always = no #temporary disabled, temporary disabled, idk what to do there
+	}
+
+	boh_taborites = {
+		icon = protect_against_austria
+		position = 4
+		required_missions = { boh_troubles } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			5242 = {
+				num_of_times_improved = 3
+				has_tax_building_trigger = yes
+				religion = hussite
+			}
+		}
+
+		effect = {
+			country_event = { id = aetas_boh.7 } 
+			custom_tooltip = boh_taborites.tt
+		}
+	}
+
+	boh_raid = {
+		icon = boh_humiliate_austria
+		position = 5
+		required_missions = {
+			boh_taborites
+			boh_war_start
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			any_province = {
+				is_neighbor_of = BOH
+				has_province_modifier = tabor_raid
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "catholic_terror"
+				duration = -1
+			}
+		}
+	}
+}
+boh_hussite_branch_3_old = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = BOH
+		religion = hussite
+		always = no #temporary disabled, idk what to do there
+	}
+
+	boh_war_start = {
+		icon = mission_huss_wars
+		position = 4
+		required_missions = { boh_troubles } 
+		provinces_to_highlight = {  } 
+
+		trigger = { defensive_war_with = HUN } 
+
+		effect = {
+			add_country_modifier = {
+				name = "hussite_wars_started"
+				duration = 7300
+			}
+		}
+	}
+
+	boh_defend = {
+		icon = mission_hundred_years_war
+		position = 5
+		required_missions = { boh_war_start } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			defensive_war_with = HUN
+			war_score = 10
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "hussite_tide"
+				duration = 3650
+			}
+		}
+	}
+
+	boh_hussite_kingdom = {
+		icon = mission_hussite
+		position = 6
+		required_missions = { boh_defend } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = boh_hussite_kingdom.tt
+				has_country_flag = won_hussite_war
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "hussite_victor"
+				duration = -1
+			}
+		}
+	}
+}
+boh_hussite_branch_4_old = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = BOH
+		OR = { 
+			religion = hussite 
+			religion = protestant 
+		}
+		always = no #temporary disabled, idk what to do there
+	}
+
+	boh_secret_weapon = {
+		icon = mission_war_wagon
+		position = 4
+		required_missions = {
+			boh_troubles
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = { advisor = army_reformer } 
+
+		effect = { country_event = { id = aetas_boh.6 }  } 
+	}
+
+	boh_inquire = {
+		icon = mission_pax_ottomana
+		position = 5
+		required_missions = { boh_war_start } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			TUR = {
+				has_opinion = {
+					WHO = BOH
+					value = 100
+				}
+			}
+		}
+
+		effect = {
+			create_alliance = TUR
+			TUR = { join_all_defensive_wars_of = BOH } 
+		}
+	}
+}
+boh_hussite_branch_5_old = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = BOH
+		OR = { 
+			religion = hussite 
+			religion = protestant 
+		}
+		always = no #temporary disabled, idk what to do there
+	}
+
+	boh_prep_allies = {
+		icon = friends_in_high_places
+		position = 4
+		required_missions = { boh_troubles } 
+		provinces_to_highlight = {  } 
+
+		trigger = { num_of_allies = 2 } 
+
+		effect = {
+			add_country_modifier = {
+				name = "hussite_support"
+				duration = 7300
+			}
+		}
+	}
+
+	boh_polish_offer = {
+		icon = mission_conquer_5_states
+		position = 5
+		required_missions = { boh_war_start } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				POL = {
+					has_opinion = {
+						WHO = BOH
+						value = 100
+					}
+				}
+				alliance_with = POL
+			}
+		}
+
+		effect = {
+			if = {
+				limit = {
+					POL = {
+						has_opinion = {
+							WHO = BOH
+							value = 100
+						}
+					}
+					NOT = { alliance_with = POL } 
+				}
+				country_event = { id = aetas_boh.9 } 
+			}
+			add_dip_power = 50
+		}
+	}
+
+	boh_lit_leads = {
+		icon = mission_lit_great_power_politics
+		position = 6
+		required_missions = { boh_polish_offer } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				AND = {
+					alliance_with = POL
+					POL = { defensive_war_with = HUN } 
+				}
+				AND = {
+					has_country_flag = pol_said_no
+					LIT = {
+						has_opinion = {
+							WHO = BOH
+							value = 100
+						}
+					}
+				}
+			}
+		}
+
+		effect = {
+			if = {
+				limit = {
+					AND = {
+						has_country_flag = pol_said_no
+						LIT = {
+							has_opinion = {
+								WHO = BOH
+								value = 100
+							}
+						}
+					}
+				}
+				country_event = { id = aetas_boh.11 } 
+			}
+			add_dip_power = 50
+		}
+	}
+}
+boh_post_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = BOH
+		OR = { 
+			religion = hussite 
+			religion = protestant 
+		}
+		always = no #temporary disabled, idk what to do there
+	}
+
+	boh_restore_country = {
+		icon = develop_the_po_valley
+		position = 7
+		required_missions = { boh_hussite_kingdom } 
+		provinces_to_highlight = {
+			OR = {
+				area = erzgebirge_area
+				area = bohemia_area
+				area = sumava_area
+				area = sudetes_area
+			}
+			devastation = 0
+		}
+
+		trigger = {
+			erzgebirge_area = {
+				NOT = { devastation = 0 } 
+				type = all
+			}
+			bohemia_area = {
+				NOT = { devastation = 0 } 
+				type = all
+			}
+			sumava_area = {
+				NOT = { devastation = 0 } 
+				type = all
+			}
+			sudetes_area = {
+				NOT = { devastation = 0 } 
+				type = all
+			}
+		}
+
+		effect = {
+			erzgebirge_area = {
+				add_province_modifier = {
+					name = "boh_healing"
+					duration = 7300
+				}
+			}
+			bohemia_area = {
+				add_province_modifier = {
+					name = "boh_healing"
+					duration = 7300
+				}
+			}
+			sumava_area = {
+				add_province_modifier = {
+					name = "boh_healing"
+					duration = 7300
+				}
+			}
+			sudetes_area = {
+				add_province_modifier = {
+					name = "boh_healing"
+					duration = 7300
+				}
+			}
+		}
+	}
+
+	boh_dev_kutna = {
+		icon = develop_konigsberg
+		position = 8
+		required_missions = { boh_restore_country } 
+		provinces_to_highlight = { province_id = 5241 } 
+
+		trigger = {
+			5241 = {
+				num_of_times_improved = 5
+				has_tax_building_trigger = yes
+				has_trade_building_trigger = yes
+			}
+		}
+
+		effect = {
+			5241 = {
+				add_building = courthouse
+				add_province_modifier = {
+					name = "kutna_residence"
+					duration = -1
+				}
+			}
+		}
+	}
+
+	emp_boh_bohemian_crystal_2 = {
+		icon = bohemian_crystal
+		position = 1
+		required_missions = { boh_dev_kutna } 
+		provinces_to_highlight = {
+			province_id = 1771
+			OR = {
+				NOT = { owned_by = ROOT } 
+				NOT = { development = 20 } 
+				has_production_building_trigger = no
+			}
+		}
+
+		trigger = {
+			1771 = {
+				owned_by = ROOT
+				development = 20
+				has_production_building_trigger = yes
+			}
+		}
+
+		effect = {
+			set_country_flag = bohemian_crystal_flag
+			if = {
+				limit = { NOT = { has_global_flag = bohemian_glass_flag }  } 
+				country_event = { id = prices.43 } 
+			}
+			add_prestige = 20
+		}
+	}
+}
+boh_post_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = BOH
+		OR = { 
+			religion = hussite 
+			religion = protestant 
+		}
+		always = no #temporary disabled, idk what to do there
+	}
+
+	boh_regulate_mining = {
+		icon = claim_the_borderlands
+		position = 7
+		required_missions = { boh_hussite_kingdom } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				OR = {
+					trade_goods = iron
+					trade_goods = gold
+				}
+				num_of_times_improved = 3
+				has_production_building_trigger = yes
+				value = 6
+			}
+		}
+
+		effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						trade_goods = iron
+						trade_goods = gold
+					}
+				}
+				add_province_modifier = {
+					name = "boh_mining_codes"
+					duration = -1
+				}
+			}
+		}
+	}
+
+	boh_praha_1 = {
+		icon = reclaim_the_ducal_lands
+		position = 8
+		required_missions = { boh_restore_country } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			266 = {
+				development = 35
+				has_tax_building_trigger = yes
+				has_trade_building_trigger = yes
+				has_production_building_trigger = yes
+			}
+		}
+
+		effect = {
+			266 = {
+				add_province_modifier = {
+					name = "boh_great_prague"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+boh_post_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = BOH
+		OR = { 
+			religion = hussite 
+			religion = protestant 
+		}
+		always = no #temporary disabled, idk what to do there
+	}
+
+	boh_reformation = {
+		icon = join_the_reformation
+		position = 7
+		required_missions = { boh_hussite_kingdom } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			is_religion_enabled = protestant
+			religious_unity = 1
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "defenestrations_of_prague"
+				duration = -1
+			}
+		}
+	}
+
+	boh_enter_league = {
+		icon = chivalry_is_not_dead
+		position = 8
+		required_missions = { boh_reformation } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			hre_leagues_enabled = yes
+			in_league = protestant
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "boh_lead_league"
+				duration = 7300
+			}
+		}
+	}
+
+	boh_religious_treaty = {
+		icon = show_piety
+		position = 9
+		required_missions = { boh_enter_league } 
+		provinces_to_highlight = {  } 
+
+		trigger = { hre_religion_treaty = yes } 
+
+		effect = { add_prestige = 25 } 
+	}
+
+	boh_empire = {
+		icon = lead_the_empire
+		position = 10
+		required_missions = { boh_religious_treaty } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				is_emperor = yes
+				government_rank = 3
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "hussite_emperor"
+				duration = -1
+			}
+		}
+	}
+}
+boh_post_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = BOH
+		OR = { 
+			religion = hussite 
+			religion = protestant 
+		}
+		always = no #temporary disabled, idk what to do there
+	}
+
+	boh_prof_army = {
+		icon = professional_army
+		position = 7
+		required_missions = { boh_hussite_kingdom } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			army_professionalism = 0.40
+			army_size_percentage = 0.9
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "boh_army_pros"
+				duration = -1
+			}
+			add_casus_belli = {
+				target = BRA
+				type = cb_restore_personal_union
+				months = 240
+			}
+			add_casus_belli = {
+				target = HAB
+				type = cb_restore_personal_union
+				months = 240
+			}
+			add_casus_belli = {
+				target = STY
+				type = cb_restore_personal_union
+				months = 240
+			}
+			mittelmark_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			austria_proper_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			upper_austria_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			inner_austria_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	boh_brandenburg = {
+		icon = military_self_reliance
+		position = 8
+		required_missions = { boh_prof_army } 
+		provinces_to_highlight = { owned_by = BRA } 
+
+		trigger = {
+			OR = {
+				BRA = { is_subject_of = BOH } 
+				mittelmark_area = {
+					country_or_non_sovereign_subject_holds = ROOT
+					type = all
+				}
+			}
+		}
+
+		effect = {
+			custom_tooltip = boh_brandenburg.tt
+			if = {
+				limit = {
+					BOH = { religion = hussite } 
+					BRA = { is_subject_of = BOH } 
+				}
+				BRA = { change_religion = hussite } 
+			}
+			else_if = {
+				limit = {
+					BOH = { religion = protestant } 
+					BRA = { is_subject_of = BOH } 
+				}
+				BRA = { change_religion = protestant } 
+			}
+			add_casus_belli = {
+				target = PAL
+				type = cb_restore_personal_union
+				months = 240
+			}
+			upper_bavaria_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	boh_wittelsbach = {
+		icon = mission_winter_crown
+		position = 9
+		required_missions = { boh_brandenburg } 
+		provinces_to_highlight = { owned_by = PAL } 
+
+		trigger = {
+			OR = {
+				PAL = { is_subject_of = BOH } 
+				upper_bavaria_area = {
+					country_or_non_sovereign_subject_holds = ROOT
+					type = all
+				}
+			}
+		}
+
+		effect = {
+			custom_tooltip = boh_wittelsbach.tt
+			if = {
+				limit = {
+					BOH = { religion = hussite } 
+					PAL = { is_subject_of = BOH } 
+				}
+				PAL = { change_religion = hussite } 
+			}
+			else_if = {
+				limit = {
+					BOH = { religion = protestant } 
+					PAL = { is_subject_of = BOH } 
+				}
+				PAL = { change_religion = protestant } 
+			}
+			add_country_modifier = {
+				name = "reverse_winter_crown"
+				duration = -1
+			}
+		}
+	}
+}
+boh_post_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = BOH
+		OR = { 
+			religion = hussite 
+			religion = protestant 
+		}
+		always = no #temporary disabled, idk what to do there
+	}
+
+	boh_polish_connection = {
+		icon = polish_diplomacy
+		position = 7
+		required_missions = {
+			boh_lit_leads
+			boh_hussite_kingdom
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			dynasty = "Jagiellonów"
+		}
+
+		effect = {
+			add_casus_belli = {
+				target = POL
+				type = cb_restore_personal_union
+				months = 240
+			}
+		}
+	}
+
+	boh_otakar = {
+		icon = boh_humiliate_austria
+		position = 8
+		required_missions = { boh_prof_army } 
+		provinces_to_highlight = {
+			OR = {
+				owned_by = HAB
+				owned_by = STY
+			}
+		}
+
+		trigger = {
+			OR = {
+				HAB = { is_subject_of = BOH } 
+				STY = { is_subject_of = BOH } 
+				AND = {
+					austria_proper_area = {
+						country_or_non_sovereign_subject_holds = ROOT
+						type = all
+					}
+					upper_austria_area = {
+						country_or_non_sovereign_subject_holds = ROOT
+						type = all
+					}
+					inner_austria_area = {
+						country_or_non_sovereign_subject_holds = ROOT
+						type = all
+					}
+				}
+			}
+		}
+
+		effect = {
+			custom_tooltip = boh_otakar.tt
+			if = {
+				limit = {
+					BOH = { religion = hussite } 
+					HAB = { is_subject_of = BOH } 
+				}
+				HAB = { change_religion = hussite } 
+			}
+			else_if = {
+				limit = {
+					BOH = { religion = protestant } 
+					HAB = { is_subject_of = BOH } 
+				}
+				HAB = { change_religion = protestant } 
+			}
+			if = {
+				limit = {
+					BOH = { religion = hussite } 
+					STY = { is_subject_of = BOH } 
+				}
+				STY = { change_religion = hussite } 
+			}
+			else_if = {
+				limit = {
+					BOH = { religion = protestant } 
+					STY = { is_subject_of = BOH } 
+				}
+				STY = { change_religion = protestant } 
+			}
+			transdanubia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			slovakia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			upper_hungary_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	boh_hungary = {
+		icon = mission_destroy_the_hungarians
+		position = 9
+		required_missions = { boh_otakar } 
+		provinces_to_highlight = { owned_by = HUN } 
+
+		trigger = { HUN = { is_subject_of = BOH }  } 
+
+		effect = {
+			custom_tooltip = boh_hungary.tt
+			if = {
+				limit = {
+					BOH = { religion = hussite } 
+					HUN = { is_subject_of = BOH } 
+				}
+				HUN = { change_religion = hussite } 
+			}
+			else_if = {
+				limit = {
+					BOH = { religion = protestant } 
+					PAL = { is_subject_of = BOH } 
+				}
+				HUN = { change_religion = protestant } 
+			}
+			add_country_modifier = {
+				name = "hussite_hungary"
+				duration = -1
+			}
+		}
+	}
+}
+boh_electorate_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = BOH
+		always = no #temporary disabled, idk what to do there
+	}
+
+	boh_imperial_succession = {
+		icon = secure_our_rule
+		required_missions = { pal_embrace } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				HUN = { NOT = { is_emperor = yes }  } 
+				HUN = {
+					is_emperor = yes
+					NOT = { has_ruler = Sigismund } 
+				}
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "pal_moving_on"
+				duration = 7300
+			}
+		}
+	}
+}
+boh_electorate_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = BOH
+		always = no #temporary disabled, idk what to do there
+	}
+
+	pal_embrace = { #missing loc
+		icon = mission_electoral_palatine
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			is_elector = yes
+			emperor = {
+				has_opinion = {
+					WHO = BOH
+					value = 100
+				}
+			}
+		}
+
+		effect = { add_prestige = 25 } 
+	}
+
+	boh_lands_crown = {
+		icon = reform_the_nomocanon
+		required_missions = { pal_embrace } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			treasurer = 2
+			reform_level = 3
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "boh_crownlands_law"
+				duration = -1
+			}
+		}
+	}
+
+	boh_cup = {
+		icon = mission_boh_cup_hold
+		required_missions = {
+			boh_lands_crown
+			boh_imperial_succession
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			stability = 3
+			prestige = 50
+			OR = {
+				emperor = {
+					has_opinion = {
+						WHO = BOH
+						value = 100
+					}
+				}
+				is_emperor = yes
+			}
+		}
+
+		effect = {
+			every_country = {
+				limit = { is_part_of_hre = yes } 
+				country_event = { id = aetas_boh.18 } 
+			}
+		}
+	}
+}
+

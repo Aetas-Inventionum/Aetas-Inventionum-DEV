@@ -1,0 +1,8 @@
+# change_estate_land_share = {
+    # estate = estate_burghers
+    # share = -20
+# }
+# change_estate_land_share = {
+    # estate = estate_peasants
+    # share = 20 #Completely made up. I'm assuming a Peasants republic has powerful peasants. Also puts the crownland for Dithmarschen at 26% burghers, 20% peasants, which I think makes sense.
+# }

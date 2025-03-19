@@ -1,0 +1,35 @@
+#6526 - Gayny
+#Area - Permia
+#Region - Russia 
+
+#Core Details
+capital = "Gayny" 
+is_city = yes
+owner = PRM
+controller = PRM
+
+#Demographics
+culture = uralic
+religion = tengri_pagan_reformed
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = naval_supplies
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = PRM
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = nomad_group
+
+#Histories

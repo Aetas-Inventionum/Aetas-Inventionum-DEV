@@ -1,0 +1,5 @@
+﻿l_english:
+ CENTRALIZE_STATE_DESC:6 "§YCentralize State§!\nSpend $POWER_COST|Y$£adm£ to centralize the $STATE|Y$ Area, giving the following bonuses to all provinces in the state:\nLocal Autonomy Change: §G-0.01§!\nCost to Centralize State: §G-10.0%§!\n\nIt will take $YEARS|0Y$ years."
+ CONFIRM_CENTRALIZE_STATE_TEXT:5 "Are you sure you want to spend $POWER_COST|Y$£adm£ to centralize the $STATE|Y$ Area, giving the following bonuses to all provinces in the state:\nLocal Autonomy Change: §G-0.01§!\nCost to Centralize State: §G-10.0%§!\n\nIt will take $YEARS|0Y$ years."
+
+ MODIFIER_MIN_AUTONOMY_IN_TERRITORIES:0 "Minimum Autonomy in Trade Companies"

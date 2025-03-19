@@ -1,0 +1,102 @@
+# Swabia
+
+graphical_culture = westerngfx
+
+color = { 154  153  157 }
+revolutionary_colors = { 8  8  1 }
+
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	religious_ideas
+	economic_ideas
+	diplomatic_ideas
+	spy_ideas
+	offensive_ideas
+	quality_ideas
+}
+
+historical_units = {
+	halberd_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	dutch_maurician
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Otto #3" = 5
+	"Ernst #2" = 5
+	"Hermann #4" = 25
+	"Heinrich #2" = 30
+	"Rudolf #1" = 30
+	"Berthold #2" = 10
+	"Friedrich #7" = 55
+	"Konrad #4" = 25
+	"Philipp #1" = 5
+	"Eberhard #0" = 25
+	"Ulrich #0" = 25
+	"Ludwig #0" = 25
+	"Georg #0" = 5
+	"Christoph #0" = 5
+	"Carl #0" = 0
+	"Johann #0" = 0
+	"Wilhelm #0" = 0
+	"Hans #0" = 0
+
+	"Antonia #0" = -1
+	"Sophie #0" = -1
+	"Auguste #0" = -1
+	"Charlotte #0" = -1
+	"Feodora #0" = -1
+	"Renata #0" = -1
+	"Sieglinde #0" = -1
+	"Ulrike #0" = -1
+}
+
+leader_names = {
+	#majority are noble families represented in Eberhard III's council
+	"von Anweil" "von Asch"
+	"von Berg" "von Blankenstein" "von Bubenhofen"
+	"von Eberstein" "von Emershofen" "von Enzberg"
+	"von Freiburg"
+	"von Geroldsdeck" "von Grüningen-Landau" "von Gütlingen" "von Gundelfingen"
+	"von Helfenstein" "Truchseß von Höfingen" "von Hohenstein" "von Hornberg"
+	"von Kirchberg" "von Klingenberg"
+	"von Lichtenberg" "von Löwenstein" "von Lupfen"
+	"von Mansberg"
+	"von Nellenberg" "Nothaft von Hohenberg"
+	"von Oettingen"
+	"von Rechberg"
+	"von Schenkenberg" "von Sperberseck" "von Spät" "von Stain" "von Stammheim" "von Stauf" "Sturmfeder" "von Sulz"
+	"Thumb von Neuburg"
+	"von Urslingen"
+	"von Württemberg"
+}
+
+ship_names = {
+	Wirtemberg "Kaiser Friedrich I" "Kaiser Friedrich II"
+	"Gräfin Mechthild" Stuttgart "Kaiser Heinrich VI"
+	Ravensburg Konstanz Breisgau
+	Marbach Neuffen Balingen Mömpelgard
+
+	"St. Sebaldus" Memmingen  "St. Kilian" "Tassilo III"
+	"König Arnulf" "Graf von Bogen"
+	"Graf von Sulzbach" "Graf von Diepolding" Otto
+	Augsburg Andechs Burgau Diessen Friedberg Kempten Lindau
+	Memmingen Mindel Oettingen Wolfstein Konstanz
+}
+
+army_names = {
+	"Erste Schwäbische Armee" "Zweite Schwäbische Armee" "Dritte Schwäbische Armee" "Armee von $PROVINCE$" 
+}

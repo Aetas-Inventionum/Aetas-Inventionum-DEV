@@ -1,0 +1,38 @@
+#19 - Osterbotten
+#Area - Ostrobothnia
+#Region - Scandinavia 
+
+#Core Details
+capital = "Korsholm"
+is_city = yes
+owner = SWE 
+controller = SWE 
+
+#Demographics
+culture = finlandic
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 2
+base_manpower = 1
+trade_goods = fish 
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = SWE
+add_core = OBT 
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+center_of_trade = 1
+
+#Special Modifiers
+fort_15th = yes
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+
+#Histories

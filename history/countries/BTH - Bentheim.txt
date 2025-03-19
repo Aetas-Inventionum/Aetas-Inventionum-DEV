@@ -1,0 +1,28 @@
+#BTH - Bentheim
+
+#Political Situation
+capital = 5369
+
+#Government
+government_rank = 1
+government = monarchy
+add_government_reform = feudalism_reform
+
+#Demographics
+primary_culture = hannoverian
+religion = catholic
+
+#Tech and Military
+technology_group = western
+
+#History
+1364.1.1 = { 
+	monarch = {
+		name = "Bernhard I"
+		dynasty = "Gerulfinger"
+		birth_date = 1330.1.1
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}

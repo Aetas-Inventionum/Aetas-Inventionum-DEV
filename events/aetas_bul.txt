@@ -1,0 +1,468 @@
+namespace = aetas_bul
+normal_or_historical_nations = yes
+
+#become bulgaria cheat event for vidin
+country_event = {
+	id = aetas_bul.1
+	title = aetas_bul.1.t
+	desc = aetas_bul.1.d
+	picture = easterngfx_COURT_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { 
+		name = aetas_bul.1.a 
+		change_tag = BUL 
+		set_government_rank = 3 
+		add_government_reform = bulgarian_empire_reform
+		hidden_effect = { 
+			moesia_area = { 
+				limit = { 
+					NOT = { province_id = 5532 }
+				}
+				cede_province = ROOT 
+				add_core = ROOT 
+			}
+			create_subject = { 
+				who = LOV 
+				subject_type = fief 
+			}
+			LOV = { 
+				change_country_color = { 
+					color = { 216 155 75 }
+				}
+			}
+			bulgaria_area = { 
+				cede_province = ROOT 
+				add_core = ROOT 
+			}
+			159 = { 
+				cede_province = ROOT 
+				add_core = ROOT 
+				change_culture = ROOT 
+				change_religion = ROOT
+			}
+			5536 = { 
+				cede_province = ROOT 
+				add_core = ROOT
+			}
+			5425 = { 
+				cede_province = ROOT 
+				add_core = ROOT
+			}
+			5534 = { 
+				cede_province = ROOT 
+				add_core = ROOT
+			}
+			silistria_area = { 
+				limit = { NOT = { owned_by = ROOT } }
+				cede_province = DBJ 
+			}
+			DBJ = { 
+				define_ruler = { 
+					dynasty = "Terter"
+				}
+				set_capital = 5520
+			}
+			create_subject = {
+				who = DBJ 
+				subject_type = fief
+			}
+			release = KRN 
+			KRN = { 
+				define_ruler = { 
+					dynasty = "Terter"
+				}
+			}
+			create_subject = { 
+				who = KRN 
+				subject_type = fief 
+			}
+			release = KPS
+			KPS = { 
+				define_ruler = { 
+					dynasty = "Smilets"
+				}
+			}
+			create_subject = { 
+				who = KPS 
+				subject_type = fief
+			}
+			set_capital = 4704
+		}
+		if = {
+			limit = {
+				has_custom_ideas = no
+				NOT = { has_idea_group = BUL_ideas }
+			}
+			country_event = { id = ideagroups.1 } #Swap Ideas
+		}
+		swap_non_generic_missions = yes
+	}
+}
+#lovech vassal
+country_event = {
+	id = aetas_bul.2
+	title = aetas_bul.2.t
+	desc = aetas_bul.2.d
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = aetas_bul.2.a 
+		create_subject = { 
+			who = LOV 
+			subject_type = fief
+		}
+	}
+}
+#hungary gifts temes
+country_event = {
+	id = aetas_bul.3
+	title = aetas_bul.3.t
+	desc = aetas_bul.3.d
+	picture = CONQUEST_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = aetas_bul.3.a
+		ai_chance = { factor = 100 }
+		if = { 
+			limit = { 
+				OR = { 
+					tag = BDN 
+					was_tag = BDN 
+				}
+			}
+			156 = { 
+				cede_province = ROOT 
+				add_core = ROOT 
+				remove_core = HUN 
+			}
+		}
+		else = { 
+			156 = { 
+				cede_province = FROM 
+				add_core = FROM 
+				remove_core = ROOT 
+			}	
+		}
+	}
+	option = { 
+		name = aetas_bul.3.b 
+		ai_chance = { factor = 0 }
+		trigger = { 
+			tag = HUN 
+			ai = no
+		}
+	}
+}
+#bulgarian uprising
+country_event = {
+	id = aetas_bul.4
+	title = aetas_bul.4.t
+	desc = aetas_bul.4.d
+	picture = BORDER_TENSION_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	major = yes 
+	major_trigger = { 
+		is_neighbor_of = ROOT 
+		capital_scope = { 
+			continent = europe
+		}
+	}
+
+	option = { 
+		name = aetas_bul.4.a #bulgarian bastards!
+		moesia_area = {
+			limit = { owned_by = ROOT }
+			add_devastation = 10
+		}
+		bulgaria_area = {
+			limit = { owned_by = ROOT }
+			add_devastation = 10
+		}
+		hemimont_area = {
+			limit = { owned_by = ROOT }
+			add_devastation = 10
+		}
+		rhodope_area = {
+			limit = { owned_by = ROOT }
+			add_devastation = 10
+		}
+		5553 = { 
+			spawn_rebels = { 
+				type = independence_rebels
+				win = yes 
+				friend = BDN 
+				size = 2
+			}
+		}
+		1765 = { 
+			spawn_rebels = { 
+				type = independence_rebels
+				win = yes 
+				friend = BDN 
+				size = 2
+			}
+		}
+	}
+}
+#fall of vidin
+country_event = {
+	id = aetas_bul.5
+	title = aetas_bul.5.t
+	desc = aetas_bul.5.d
+	picture = muslimgfx_CONQUEST_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = { 
+		BDN = { 
+			capital_scope = { 
+				OR = { 
+					area = rascia_area
+					area = bulgaria_area
+					area = moesia_area
+				}
+				controlled_by = TUR 
+			}
+		}
+	}
+
+	mean_time_to_happen = { 
+		days = 1
+	}
+
+	option = { 
+		name = aetas_bul.5.a 
+		if = { 
+			limit = { BDN = { owns_core_province = 156 } }
+			BDN = {
+				every_owned_province = { 
+					limit = { region = balkan_region }
+					cede_province = TUR 
+					add_core = TUR 
+					remove_core = BDN 
+				}
+				hidden_effect = { 
+					set_capital = 156 
+					change_tag = TMS
+					change_religion = catholic
+					add_accepted_culture = hungarian 
+					change_graphical_culture = westerngfx
+					change_government = republic
+					#add_government_reform = nobles_elite_reform #no ref (((
+				}
+			}
+			custom_tooltip = bdn_tms.tt
+			hidden_effect = { 
+				HUN = { 
+					create_subject = { 
+						who = TMS 
+						subject_type = fief
+					}
+				}
+			}
+		}
+		else = { 
+			inherit = BDN 
+			HUN = { country_event = { id = aetas_bul.6 } }
+		}
+	}
+}
+country_event = {
+	id = aetas_bul.6
+	title = aetas_bul.6.t
+	desc = aetas_bul.6.d
+	picture = CATHOLIC_RULERS_PRAYING_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_bul.6.a #allow them to flee to temes
+		ai_chance = { factor = 100 }
+		release = TMS 
+		TMS = { 
+			change_primary_culture = bulgarian 
+			add_accepted_culture = hungarian 
+			add_accepted_culture = transylvanian
+			define_ruler = { 
+				name = "Fruzhin"
+				dynasty = "Sratsimir"
+				culture = bulgarian 
+				age = 37
+				adm = 1
+				dip = 3
+				mil = 4
+			}
+		}
+		create_subject = { 
+			who = TMS 
+			subject_type = fief 
+		}
+	}
+	option = { 
+		name = aetas_bul.6.b #no thx
+		ai_chance = { factor = 10 }
+	}
+}
+#creation of kran 
+country_event = {
+	id = aetas_bul.7
+	title = aetas_bul.7.t
+	desc = aetas_bul.7.d
+	picture = easterngfx_COURT_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = aetas_bul.7.a #allow it 
+		ai_chance = { factor = 50 }
+		release = KRN 
+		KRN = { 
+			#add_reform = bulgarian_fief_reform #no reform :(
+			define_ruler = { 
+				dynasty = "Terter"
+			}
+		}
+		create_subject = { 
+			who = KRN 
+			subject_type = fief 
+		}
+	}
+	option = { 
+		name = aetas_bul.7.b 
+		ai_chance = { factor = 50 }
+	}
+}
+#bulgarian capital
+country_event = {
+	id = aetas_bul.8
+	title = aetas_bul.8.t
+	desc = aetas_bul.8.d
+	picture = east_slavic_GREAT_BUILDING_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	option = { 
+		name = aetas_bul.8.a #veliko preslav
+		set_capital = 5528
+		5528 = { 
+			add_base_tax = 1 
+			add_base_production = 1 
+			add_base_manpower = 1
+			# add_province_triggered_modifier = bul_royal #no trigger
+		}
+	}
+	option = { 
+		name = aetas_bul.8.b #veliko tarnovo
+		set_capital = 4704
+		4704 = { 
+			add_base_tax = 1 
+			add_base_production = 1 
+			add_base_manpower = 1
+			# add_province_triggered_modifier = bul_royal #no trigger
+		}
+	}
+	option = { 
+		name = aetas_bul.8.c #same capital
+		capital_scope = { 
+			add_base_tax = 1 
+			add_base_production = 1 
+			add_base_manpower = 1
+			# add_province_triggered_modifier = bul_royal #no trigger
+		}
+	}
+}
+#creation of kopsis
+country_event = {
+	id = aetas_bul.9
+	title = aetas_bul.9.t
+	desc = aetas_bul.9.d
+	picture = east_slavic_ANGRY_MOB_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = aetas_bul.9.a #allow it 
+		ai_chance = { factor = 50 }
+		release = KPS
+		KPS = { 
+			#add_reform = bulgarian_fief_reform #no reform :(
+			define_ruler = { 
+				dynasty = "Smilets"
+			}
+		}
+		create_subject = { 
+			who = KPS
+			subject_type = fief 
+		}
+	}
+	option = { 
+		name = aetas_bul.7.b 
+		ai_chance = { factor = 50 }
+	}
+}
+#creation of dobruja
+country_event = {
+	id = aetas_bul.10
+	title = aetas_bul.10.t
+	desc = aetas_bul.10.d
+	picture = east_slavic_DIPLOMACY_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = aetas_bul.10.a #allow it 
+		ai_chance = { factor = 50 }
+		release = DBJ
+		DBJ = { 
+			#add_reform = bulgarian_fief_reform #no reform :(
+			define_ruler = { 
+				dynasty = "Smilets"
+			}
+		}
+		create_subject = { 
+			who = DBJ
+			subject_type = fief 
+		}
+	}
+	option = { 
+		name = aetas_bul.10.b 
+		ai_chance = { factor = 50 }
+	}
+}
+#bulgarian patriarchate
+country_event = {
+	id = aetas_bul.11
+	title = aetas_bul.11.t
+	desc = aetas_bul.11.d
+	picture = COPTIC_BISHOP_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	major = yes 
+	major_trigger = { 
+		religion = orthodox
+	}
+
+	option = { 
+		name = aetas_bul.11.a #allow it 
+		add_country_modifier = { 
+			name = bul_pat2
+			duration = -1
+		}
+	}
+}

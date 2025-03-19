@@ -1,0 +1,39 @@
+#273 - Livland
+#Area - Livonia
+#Region - Baltica 
+
+#Core Details
+capital = "Viljandi"
+is_city = yes
+owner = LIV
+controller = LIV
+
+#Demographics
+culture = estonian
+religion = catholic
+
+#Development and Trade
+base_tax = 3
+base_production = 3
+base_manpower = 2
+trade_goods = fur
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = LIV
+add_core = EST
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

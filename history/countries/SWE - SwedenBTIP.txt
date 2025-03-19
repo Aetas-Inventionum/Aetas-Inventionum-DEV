@@ -1,0 +1,13 @@
+# set_global_flag = btip_loaded #Flag to show BR (Or other mods, should they so desire) that BTIP is loaded, allowing it to add new estate privileges made for BTIP.
+# change_estate_land_share = {
+#     estate = estate_nobles
+#     share = 5
+# }
+# change_estate_land_share = {
+#     estate = estate_burghers
+#     share = 5
+# }
+# change_estate_land_share = {
+#     estate = estate_peasants
+#     share = -9
+# }

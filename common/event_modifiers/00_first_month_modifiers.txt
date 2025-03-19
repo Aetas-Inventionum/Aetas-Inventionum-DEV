@@ -1,0 +1,196 @@
+
+bt_over_gov_cap_modifier = {
+	global_autonomy = 0.2
+}
+
+bt_first_month_0p925_gov_cap = {
+	governing_cost = -0.027
+}
+
+bt_first_month_0p950_gov_cap = {
+	governing_cost = -0.053
+}
+
+bt_first_month_0p975_gov_cap = {
+	governing_cost = -0.077
+}
+
+bt_first_month_1p000_gov_cap = {
+	governing_cost = -0.100
+}
+
+bt_first_month_1p025_gov_cap = {
+	governing_cost = -0.122
+}
+
+bt_first_month_1p050_gov_cap = {
+	governing_cost = -0.143
+}
+
+bt_first_month_1p075_gov_cap = {
+	governing_cost = -0.163
+}
+
+bt_first_month_1p100_gov_cap = {
+	governing_cost = -0.182
+}
+
+bt_first_month_1p125_gov_cap = {
+	governing_cost = -0.200
+}
+
+bt_first_month_1p150_gov_cap = {
+	governing_cost = -0.217
+}
+
+bt_first_month_1p175_gov_cap = {
+	governing_cost = -0.234
+}
+
+bt_first_month_1p200_gov_cap = {
+	governing_cost = -0.250
+}
+
+bt_first_month_1p250_gov_cap = {
+	governing_cost = -0.280
+}
+
+bt_first_month_1p300_gov_cap = {
+	governing_cost = -0.308
+}
+
+bt_first_month_1p350_gov_cap = {
+	governing_cost = -0.333
+}
+
+bt_first_month_1p400_gov_cap = {
+	governing_cost = -0.357
+}
+
+bt_first_month_1p450_gov_cap = {
+	governing_cost = -0.379
+}
+
+bt_first_month_1p500_gov_cap = {
+	governing_cost = -0.400
+}
+
+bt_first_month_1p550_gov_cap = {
+	governing_cost = -0.419
+}
+
+bt_first_month_1p600_gov_cap = {
+	governing_cost = -0.438
+}
+
+bt_first_month_1p650_gov_cap = {
+	governing_cost = -0.455
+}
+
+bt_first_month_1p700_gov_cap = {
+	governing_cost = -0.471
+}
+
+bt_first_month_1p800_gov_cap = {
+	governing_cost = -0.500
+}
+
+bt_first_month_1p900_gov_cap = {
+	governing_cost = -0.526
+}
+
+bt_first_month_2p000_gov_cap = {
+	governing_cost = -0.550
+}
+
+bt_first_month_2p100_gov_cap = {
+	governing_cost = -0.571
+}
+
+bt_first_month_2p200_gov_cap = {
+	governing_cost = -0.591
+}
+
+bt_first_month_2p300_gov_cap = {
+	governing_cost = -0.609
+}
+
+bt_first_month_2p400_gov_cap = {
+	governing_cost = -0.625
+}
+
+bt_first_month_2p500_gov_cap = {
+	governing_cost = -0.64
+}
+
+bt_first_month_2p600_gov_cap = {
+	governing_cost = -0.654
+}
+
+bt_first_month_2p700_gov_cap = {
+	governing_cost = -0.667
+}
+
+bt_first_month_2p800_gov_cap = {
+	governing_cost = -0.679
+}
+
+bt_first_month_2p900_gov_cap = {
+	governing_cost = -0.690
+}
+
+bt_first_month_3p000_gov_cap = {
+	governing_cost = -0.700
+}
+
+bt_first_month_3p200_gov_cap = {
+	governing_cost = -0.719
+}
+
+bt_first_month_3p400_gov_cap = {
+	governing_cost = -0.735
+}
+
+bt_first_month_3p600_gov_cap = {
+	governing_cost = -0.75
+}
+
+bt_first_month_3p800_gov_cap = {
+	governing_cost = -0.763
+}
+
+bt_first_month_4p000_gov_cap = {
+	governing_cost = -0.775
+}
+
+bt_first_month_4p500_gov_cap = {
+	governing_cost = -0.800
+}
+
+bt_first_month_5p000_gov_cap = {
+	governing_cost = -0.820
+}
+
+bt_first_month_5p500_gov_cap = {
+	governing_cost = -0.830
+}
+
+bt_first_month_6p000_gov_cap = {
+	governing_cost = -0.850
+}
+
+bt_first_month_6p500_gov_cap = {
+	governing_cost = -0.862
+}
+
+bt_first_month_7p000_gov_cap = {
+	governing_cost = -0.871
+}
+
+bt_first_month_8p000_gov_cap = {
+	governing_cost = -0.880
+}
+
+bt_first_month_more_than_8p000_gov_cap = {
+	governing_cost = -0.900
+}

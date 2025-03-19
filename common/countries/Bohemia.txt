@@ -1,0 +1,138 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+color = { 203 136 76  } #197 112 72 
+revolutionary_colors = { 0  4  15 }
+
+preferred_religion = protestant
+
+historical_idea_groups = {
+	economic_ideas
+	defensive_ideas
+	diplomatic_ideas
+	offensive_ideas
+	innovativeness_ideas
+	quantity_ideas
+	administrative_ideas
+	religious_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	dutch_maurician
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	#kings of bohemia
+	"Vratislav #2" = 10
+	"Konrád #2" = 5
+	"Ota #3" = 10
+	"Bretislav #3" = 10
+	"Oldrich #3" = 10
+	"Litold #1" = 1
+	"Borivoj #2" = 1
+	"Svatopluk #1" = 1
+	"Vladislav #1" = 10
+	"Sobeslav #1" = 5
+	"Václav #4" = 25
+	"Spytinhev #2" = 1
+	"Bedrich #1" = 1
+	"Prmysl Otakar #2" = 1
+	"Jindrich #1" = 1
+	"Rudolf #1" = 1
+	"Jan #1" = 15
+	"Karel #1" = 10
+	"Jirí #0" = 15
+	"Ludvík #0" = 15
+	"Matyásh #0" = 15
+	"Hynek #0" = 0
+	"Bochek #0" = 0
+	"Jeshek #0" = 0
+	"Viktorín #0" = 0
+	"Albrecht #0" = 0
+	"Ludmila #0" = 0
+	"Puta #0" = 0
+	"Vladimír #0" = 0
+	"Kashpar #0" = 0
+	"Jan Adam #0" = 0
+	"Herman #0" = 0
+	"Hynek Krushina #0" = 0
+	"Divish Borek #0" = 0
+	"Bohuslav #0" = 0
+	"Prokop #0" = 0
+
+	"Anna #1" = -5
+	"Elishka #2" = -10
+	"Katerina #0" = -1
+	"Zdenka #0" = -1
+	"Vratislava #0" = -1
+}
+
+leader_names = {
+	"z Adlaru" "z Althannu"
+	"Balbínové z Vorli?né" "z Beneshova" "z Buchína" "z Boskovic"
+	"z Cimberka" "Chanovský z Dlouhé Vsi" "z Chastolovic" Czernin "z Chotkova"
+	"z Donina" "z Dubche" "z Dubnic"
+	"z Klinshtejna" "z Koldic" "z Kolovrat" "z Kotvic" "z Kotulína" "Korenshti z Tereshova" "z Kunshtátu"
+	"z Helfenburka" "z Hodejova" "z Horky" Hrabishic "z Hradce" "z Hyrshova"
+	"z Jenshtejna"
+	"z Lazhan" "z Ledské" Lemberkové "z Leskovce" "z Lichtenburka" "z Lipé" "z Lokshan "z Ludanic
+	"z Malovic" Martinicové Markvarticové "z Medlova" "z Michalovic" "z Mohru" "z Miletínka"
+	"z Olbramovic" Opavský
+	Rakovshtí "z Rimovice" "z Rozmitálu" "z Radche" Rohanové "z Rozmberka" Ronovci
+	Serényiové "z Schönbornu" "z Schönfeldu" "z Schwarzenbergu" Slavata "ze Smiric"
+	"z Talmberka" 
+	"z Pardubic" "z Pernshtejna" "z Pirkshtejna" Piastovic "z Plavna" "z Podebrad" "z Pöttingu" Premyslovci "z Príchovic" "z Prestavlk" "z Postupic"
+	"z Vartemberka" "z Vlastimilu"
+	"z Questenberka"
+	"z Zábedovic"
+}
+
+ship_names = {
+	"Svatý Vaclav"
+	"Svatá Ludmila"
+	"Svatý Jan Nepomucký"
+	"Svatý Mikulás"
+	"Svatý Jirí"
+	"Svatá Anezká"
+	"Nejsvetejsí Trojice"
+	"Král Karel"
+	"Král Boleslav"
+	"Král Premysl"
+	"Panna Maria Vitezná"
+	"Jan Hus"
+	"Jan Zizka"
+	"Prokop Holý"
+	"Kníze Bretislav"
+	"Premysl Orac"
+	Ctirad
+	Cechy
+	Morava
+	Libuse
+	Odvázný
+	Neporazitelný
+	Rychlý
+	Bystrý
+	Orel
+	Sokol
+	Slezsko
+	Sipka
+	Hvezda
+}
+
+army_names = { 
+	"Královské armády" "Svatováclavská armády" "Armády z $PROVINCE$" 
+}

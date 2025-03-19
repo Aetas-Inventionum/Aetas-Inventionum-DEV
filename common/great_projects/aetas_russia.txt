@@ -1,0 +1,230 @@
+kremlin = {
+	start = 295 #moscow
+	date = 1.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 1000
+	can_be_moved = no
+	move_days_per_unit_distance = 10
+	starting_tier = 1
+	type = monument
+	build_trigger = {		
+	}
+	on_built = {
+	}
+	on_destroyed = {
+	}
+	can_use_modifiers_trigger = {
+		culture_group = east_slavic
+		province_is_or_accepts_culture = yes
+	}
+	can_upgrade_trigger = {
+		culture_group = east_slavic
+		province_is_or_accepts_culture = yes
+	}
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_defensiveness = 0.15
+		}
+		area_modifier = {
+			local_manpower_modifier = 0.15
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+			local_defensiveness = 0.25
+		}
+		area_modifier = {
+			local_manpower_modifier = 0.25
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+			local_defensiveness = 0.33
+		}
+		area_modifier = {
+			local_manpower_modifier = 0.33
+		}
+		country_modifiers = {
+			monthly_reform_progress_modifier = 0.25
+			yearly_absolutism = 0.01
+			max_absolutism = 10
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+
+ai_novgorod_kremlin = {
+	start = 310 #novgorod
+	date = 1.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 1000
+	can_be_moved = no
+	move_days_per_unit_distance = 10
+	starting_tier = 2
+	type = monument
+	build_trigger = {		
+	}
+	on_built = {
+	}
+	on_destroyed = {
+	}
+	can_use_modifiers_trigger = {
+		culture_group = east_slavic
+		province_is_or_accepts_culture = yes
+	}
+	can_upgrade_trigger = {
+		culture_group = east_slavic
+		province_is_or_accepts_culture = yes
+	}
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_defensiveness = 0.15
+		}
+		area_modifier = {
+			trade_value_modifier = 0.1
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+			local_defensiveness = 0.25
+			trade_goods_size_modifier = 0.1
+		}
+		area_modifier = {
+			trade_value_modifier = 0.2
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+
+		cost_to_upgrade = {
+			factor = 5000
+		}
+
+		province_modifiers = {
+			local_defensiveness = 0.33
+			trade_goods_size_modifier = 0.2
+		}
+		area_modifier = {
+			trade_value_modifier = 0.33
+		}
+		country_modifiers = {
+			trade_efficiency = 0.25
+			mercantilism_cost = -0.25
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}

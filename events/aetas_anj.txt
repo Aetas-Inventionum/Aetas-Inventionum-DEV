@@ -1,0 +1,832 @@
+namespace = aetas_anj
+normal_or_historical_nations = yes
+
+#King of Sicily, Jerusalem and Aragon
+country_event = {
+	id = aetas_anj.1
+	title = aetas_anj.1.t
+	desc = aetas_anj.1.d
+	picture = ITALIAN_wars_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_anj.1.a #one day will we be true kings
+		add_casus_belli = {
+			target = NAP 
+			type = cb_restore_personal_union
+			months = 480
+		}
+		add_casus_belli = {
+			target = SIC
+			type = cb_restore_personal_union
+			months = 480
+		}
+		add_casus_belli = {
+			target = ARA
+			type = cb_restore_personal_union
+			months = 480
+		}
+	}
+}
+
+#county of maine?
+country_event = {
+	id = aetas_anj.2
+	title = aetas_anj.2.t
+	desc = aetas_anj.2.d
+	picture = CONQUEST_eventPicture
+	
+	fire_only_once = yes
+	trigger = { 
+		tag = ANJ 
+		owns_core_province = 177
+		owns_core_province = 3203
+		is_year = 1430 #gives enough time to have the local situation with england sorted
+	}
+
+	mean_time_to_happen = { 
+		months = 60
+	}
+
+	option = { 
+		name = aetas_anj.2.a #give him what he deserves! certainly!
+		ai_chance = { factor = 10 } #historical 
+		every_owned_province = { 
+			limit = { is_core = MNE }
+			cede_province = MNE 
+			remove_core = ROOT 
+		}
+		create_subject = { 
+			who = MNE 
+			subject_type = appanage
+		}
+		MNE = { 
+			add_government_reform = appanage_reform
+			define_ruler = {
+				name = "Charles IV"
+				dynasty = "de Valois"
+				age = 34
+				adm = 2
+				dip = 2
+				mil = 5
+			}
+		}
+	}
+	option = { 
+		name = aetas_anj.2.b #we cannot part with maine!
+		ai_chance = { factor = 1 }
+		add_stability = -1 
+	}
+}
+
+#county of guise to rené
+country_event = {
+	id = aetas_anj.3
+	title = aetas_anj.3.t
+	desc = aetas_anj.3.d
+	picture = DEATH_OF_HEIR_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes
+
+	immediate = { 
+		hidden_effect = { 
+			ANJ = { set_country_flag = gui_appanage_flag }
+		}
+	}
+
+	option = { 
+		name = aetas_anj.3.a #I see.
+		3252 = { 
+			cede_province = GUI 
+			remove_core = ROOT 
+		}
+		create_subject = { 
+			who = GUI 
+			subject_type = appanage 
+		}
+		GUI = { 
+			add_government_reform = appanage_reform
+			define_ruler = { regency = yes }
+			define_heir = { 
+				name = "René I"
+				dynasty = "de Valois"
+				culture = angevin
+				birth_date = 1409.1.16
+				claim = 95
+				adm = 5
+				dip = 5
+				mil = 2 #not great in war
+			}
+			set_heir_flag = gui_rene_heir_flag
+			capital_scope = { 
+				build_to_forcelimit = { 
+					infantry = 0.8
+					cavalry = 0.2
+				}
+			}
+			join_all_offensive_wars_of = ROOT 
+		}
+	}
+}
+#Uneasy Succession in Bar
+country_event = {
+	id = aetas_anj.4
+	title = aetas_anj.4.t
+	desc = aetas_anj.4.d
+	picture = DEATH_OF_HEIR_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes
+
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			tag = ANJ 
+			tag = GUI 
+		}
+	}
+
+	trigger = { tag = BAR }
+
+	option = { 
+		name = aetas_anj.4.a #Bar Persists!
+		add_stability = 1 
+		define_heir = { 
+			name = "René"
+			monarch_name = "René I"
+			dynasty = "de Valois"
+			culture = angevin 
+			birth_date = 1409.1.16
+			claim = 95
+			adm = 5
+			dip = 5 
+			mil = 2
+		}
+		set_heir_flag = bar_rene_heir_flag
+		set_country_flag = rene_bar_flag
+		BRG = { 
+			add_casus_belli = {
+				target = ROOT
+				type = cb_restore_personal_union
+				months = 120
+			}
+		}
+	}
+}
+#Angevin Marriage
+country_event = {
+	id = aetas_anj.5
+	title = aetas_anj.5.t
+	desc = aetas_anj.5.d
+	picture = DEATH_OF_HEIR_eventPicture
+
+	fire_only_once = yes 
+	#is_triggered_only = yes -- I think this was unneccesary ??
+
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			tag = ANJ 
+			tag = GUI 
+			tag = BAR 
+		}
+	}
+
+	trigger = { 
+		tag = LOR 
+		has_heir_flag = lor_isabelle_heir_flag
+		OR = { 
+			ANJ = { has_heir_flag = anj_rene_heir_flag }
+			BAR = { has_heir_flag = bar_rene_heir_flag }
+			GUI = { has_ruler = "René I" }
+		}
+	}
+
+	mean_time_to_happen = { 
+		months = 48
+	}
+
+	option = { 
+		name = aetas_anj.5.a #welcome our new son-in-law!
+		ai_chance = { factor = 10 }#historical
+		custom_tooltip = lor_anj_union.tt
+		create_marriage = ANJ 
+		set_heir_flag = isabelle_rene_flag
+	}
+	option = { 
+		name = aetas_anj.5.b #no way josé
+		ai_chance = { factor = 1 }
+		custom_tooltip = lor_no_rene.tt
+	}
+}
+#Inheritance of Bar
+country_event = {
+	id = aetas_anj.6
+	title = aetas_anj.6.t
+	desc = aetas_anj.6.d
+	picture = DEATH_OF_HEIR_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes
+
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			tag = ANJ 
+			tag = GUI 
+			tag = BAR 
+		}
+	}
+
+	trigger = { 
+		if = { 
+			limit = { exists = GUI }
+			tag = GUI 
+			has_ruler = "René I" 
+		}
+		else_if = { 
+			limit = { exists = ANJ }
+			tag = ANJ 
+			has_ruler = "René I" 
+		}
+		else = { 
+			tag = BAR 
+			has_country_flag = rene_bar_flag
+			is_lesser_in_union = no
+		}
+	}
+
+	option = { 
+		name = aetas_anj.6.a #none like rené!
+		trigger = { 
+			OR = { 
+				tag = GUI 
+				tag = ANJ 
+			}
+		}
+		create_union = BAR 
+	}
+	option = { 
+		name = aetas_anj.6.b #rule from bar
+		trigger = { 
+			tag = GUI 
+			ai = no
+		}
+		inherit = BAR 
+		change_tag = BAR 
+		hidden_effect = { 
+			if = { 
+				limit = { 
+					owns_core_province = 3252
+				}
+				3252 = { 
+					cede_province = GUI 
+					remove_core = ROOT 
+				}
+			}
+		}
+		create_union = GUI 
+	}
+}
+#union with lorraine
+country_event = {
+	id = aetas_anj.7
+	title = aetas_anj.7.t
+	desc = aetas_anj.7.d
+	picture = DEATH_OF_HEIR_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes
+
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			tag = ANJ 
+			tag = GUI 
+			tag = LOR  
+		}
+	}
+
+	option = { 
+		name = aetas_anj.7.a #Long live René and Isabelle!
+		trigger = { 
+			OR = { 
+				tag = ANJ 
+				tag = GUI 
+				tag = BAR 
+			}
+		}
+		create_union = LOR 
+	}
+	option = { 
+		name = aetas_anj.7.b #rule from lorraine #missed loc
+		trigger = { 
+			OR = { 
+				tag = GUI 
+				tag = BAR 
+			}
+			ai = no 
+		}
+		hidden_effect = { 
+			if = { 
+				limit = { tag = GUI }
+				every_owned_province = { set_province_flag = gui_base_province }
+			}
+			else_if = { 
+				limit = { tag = BAR }
+				every_owned_province = { set_province_flag = bar_base_province }
+			}
+			inherit = LOR 
+		}
+		change_tag = LOR 
+		hidden_effect = { 
+			if = { 
+				limit = { 
+					was_tag = GUI 
+					NOT = { was_tag = BAR }
+				}
+				every_owned_province = { 
+					limit = { has_province_flag = gui_base_province }
+					cede_province = GUI
+					remove_core = ROOT 
+				}
+				create_union = GUI 
+			}
+			else_if = { 
+				limit = { was_tag = BAR }
+				every_owned_province = { 
+					limit = { has_province_flag = bar_base_province }
+					cede_province = BAR
+					remove_core = ROOT 
+				}
+				create_union = BAR
+			}
+		}
+	}
+	after = { 
+		hidden_effect = { 
+			country_event = { 
+				id = aetas_anj.12
+				days = 7
+			}
+		}
+	}
+}
+#mini cheat - anjou into provence/maine or naples
+country_event = {
+	id = aetas_anj.100
+	title = aetas_anj.100.t
+	desc = aetas_anj.100.d
+	picture = DEATH_OF_HEIR_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes
+
+	option = { 
+		name = aetas_anj.100.a #become provence
+		change_tag = PRO 
+		if = {
+			limit = { has_custom_ideas = no }
+			country_event = { id = ideagroups.1 } #Swap Ideas
+		}
+		change_primary_culture = provencal 
+		add_accepted_culture = angevin 
+		set_capital = 201
+		177 = { 
+			cede_province = MNE 
+			remove_core = ROOT 
+		}
+		3203 = { 
+			cede_province = MNE 
+			remove_core = ROOT 
+		}
+		3202 = { 
+			cede_province = MNE 
+			remove_core = ROOT 
+		}
+		create_subject = { 
+			who = MNE 
+			subject_type = appanage 
+		}
+		MNE = { 
+			add_government_reform = appanage_reform
+			define_ruler = { 
+				name = "Charles IV"
+				dynasty = "de Valois"
+				age = 12
+			}
+		}
+		create_union = BAR 
+		create_union = LOR 
+		set_country_flag = anj_pro_missions_flag
+		swap_non_generic_missions = yes 
+		change_graphical_culture = latingfx
+		set_global_flag = toulon_flag
+		4696 = { 
+			add_great_project = { 
+				type = ai_toulon
+				instant = yes 
+			}
+			add_great_project_tier = { 
+				type = ai_toulon
+				tier = 1
+			}
+		}
+	}
+	option = { 
+		name = aetas_anj.100.b #become naples
+		inherit = NAP 
+		change_tag = NAP 
+		if = {
+			limit = { has_custom_ideas = no }
+			country_event = { id = ideagroups.1 } #Swap Ideas
+		}
+		set_capital = 121
+		add_accepted_culture = neapolitan
+		set_country_flag = anj_nap_missions_flag
+		swap_non_generic_missions = yes
+		change_graphical_culture = latingfx
+	}
+	option = { 
+		name = aetas_anj.100.c #become angevin england
+		hidden_effect = { 
+			ENG = { white_peace = FRA }
+		}
+		inherit = ENG 
+		set_country_flag = anj_ave_missions_flag
+		change_tag = AVE 
+		set_capital = 236
+		add_government_reform = english_monarchy
+		grant_independence = yes 
+		if = {
+			limit = {
+				NOT = { government_rank = 2 }
+				is_part_of_hre = no
+			}
+			set_government_rank = 2
+		}
+		swap_non_generic_missions = yes
+		if = {
+			limit = {
+				is_playing_custom_nation = no
+			}
+			country_event = { id = ideagroups.1 } #Swap Ideas
+		}
+		hidden_effect = { 
+			every_province = { 
+				limit = { 
+					is_core = ENG 
+					NOT = { 
+						OR = {
+							owned_by = AVE 
+							is_core = AVE 
+						}
+					}
+				}
+				add_core = AVE
+			}
+		}
+	}
+}
+#antique clef
+country_event = {
+	id = aetas_anj.7
+	title = aetas_anj.7.t
+	desc = aetas_anj.7.d
+	picture = CITY_VIEW_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes
+
+	option = { 
+		name = aetas_anj.7.a #we are proud to have the privilege of ruling such a powerful city.
+		add_prestige = 10
+		178 = { 
+			add_permanent_province_modifier = { 
+				name = antique_clef
+				duration = -1
+			}
+		}
+	}
+}
+#printing innovations in angers
+country_event = {
+	id = aetas_anj.8
+	title = aetas_anj.8.t
+	desc = aetas_anj.8.d
+	picture = BIG_BOOK_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes
+
+	option = { 
+		name = aetas_anj.8.a #what an incredible development!
+		178 = { 
+			change_trade_goods = books
+			add_province_modifier = { 
+				name = angers_printing_press
+				duration = -1
+			}
+			if = {
+				limit = { NOT = { printing_press = 100 } }
+				add_institution_embracement = {
+					which = printing_press
+					value = 100
+				}
+			}
+		}
+	}
+}
+#Étude d'Angers
+country_event = {
+	id = aetas_anj.9
+	title = aetas_anj.9.t
+	desc = aetas_anj.9.d
+	picture = UNIVERSITY_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes
+
+	option = { 
+		name = aetas_anj.9.a #took them long enough!
+		178 = { 
+			add_building = university
+			add_province_triggered_modifier = university_of_angers
+		}
+	}
+}
+#Second Order of the Crescent
+country_event = {
+	id = aetas_anj.10
+	title = aetas_anj.10.t
+	desc = aetas_anj.10.d
+	picture = CATHOLIC_RULERS_PRAYING_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes
+
+	option = { 
+		name = aetas_anj.10.a #We will see to the expansion of our new order.
+		add_country_modifier = { 
+			name = second_order_of_the_crescent #note: pleib forgot to create this, need to talk to neo about if static or event modifier is better
+			duration = -1
+		}
+	}
+}
+#fate of anjou
+country_event = {
+	id = aetas_anj.11
+	title = aetas_anj.11.t
+	desc = aetas_anj.11.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes
+
+	option = { 
+		name = aetas_anj.11.a #Naples is ours!
+		custom_tooltip = anj_form_naples_decision.tt
+		set_country_flag = anj_nap_missions_flag
+	}
+	option = { 
+		name = aetas_anj.11.b #We shall retire to Provence.
+		set_capital = 201
+		change_tag = PRO 
+		change_primary_culture = provencal
+		add_accepted_culture = angevin
+		set_country_flag = anj_pro_missions_flag
+		swap_non_generic_missions = yes 
+		if = {
+			limit = { has_custom_ideas = no }
+			country_event = { id = ideagroups.1 } #Swap Ideas
+		}
+	}
+	option = { 
+		name = aetas_anj.11.c #England awaits.
+		set_country_flag = anj_ave_missions_flag
+		swap_non_generic_missions = yes 
+		custom_tooltip = ave_decision.tt 
+	}
+}
+#Protest of Antoine of Vaudémont
+country_event = {
+	id = aetas_anj.12
+	title = aetas_anj.12.t
+	desc = aetas_anj.12.d
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes
+
+	option = { 
+		name = aetas_anj.12.a #Renounce Lorraine in Antoine's favor
+		ai_chance = { factor = 1 } 
+		VDM = { 
+			grant_independence = yes 
+			inherit = LOR 
+			change_tag = LOR 
+			set_capital = 189
+			add_truce_with = ROOT 
+		}
+	}
+	option = { 
+		name = aetas_anj.12.b #provide Vaudémont with independence as compensation
+		ai_chance = { 
+			factor = 5
+			modifier = { 
+				factor = 20
+				is_at_war = yes 
+			}
+		}
+		VDM = { 
+			grant_independence = yes 
+			add_truce_with = ROOT 
+		}
+	}
+	option = { 
+		name = aetas_anj.12.c #He only bluffs!
+		ai_chance = { factor = 20 }
+		BUR = { country_event = { id = aetas_anj.12 } }
+	}
+}
+#Lorrainian Intervention (for Burgundy)
+country_event = {
+	id = aetas_anj.13
+	title = aetas_anj.13.t
+	desc = aetas_anj.13.d
+	picture = BATTLE_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes
+
+	option = { 
+		name = aetas_anj.13.a #We will support Antoine! To war!
+		ai_chance = { 
+			factor = 25
+			modifier = { 
+				factor = 10 
+				is_at_war = yes 
+			}
+		}
+		VDM = { 
+			declare_war_with_cb = { 
+				who = LOR 
+				casus_belli = cb_restore_personal_union
+			}
+		}
+		create_alliance = VDM 
+		add_historical_friend = VDM 
+		join_all_offensive_wars_of = VDM 
+	}
+	option = { 
+		name = aetas_anj.13.b #Unfortunately, we have our hands full at the moment.
+		ai_chance = { 
+			factor = 15
+			modifier = { 
+				factor = 25
+				war_exhaustion = 5
+			}
+		}
+		add_truce_with = LOR 
+	}
+}
+#Fête de Tarasque
+country_event = {
+	id = aetas_anj.14
+	title = aetas_anj.14.t
+	desc = aetas_anj.14.d
+	picture = FEAST_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes
+
+	option = { 
+		name = aetas_anj.14.a #Focus on the saintly qualities of Saint Martha!
+		add_papal_influence = 5
+		add_country_modifier = { 
+			name = tarasque_mod
+			duration = 3650
+		}
+	}
+	option = { 
+		name = aetas_anj.14.b #Let the villagers celebrate as they wish.
+		add_stability_or_adm_power = yes 
+		add_country_modifier = { 
+			name = tarasque_mod
+			duration = 3650
+		}
+	}
+	option = { 
+		name = aetas_anj.14.c #Invite a neighboring prince to join us for the festivities!
+		random_neighbor_country = { 
+			add_opinion = { 
+				who = ROOT 
+				modifier = invited_to_tarasque
+				years = 10
+			}
+		}
+		add_country_modifier = { 
+			name = tarasque_mod
+			duration = 3650
+		}
+	}
+}
+#Provence Petitions to Rejoin the Holy Roman Empire
+country_event = {
+	id = aetas_anj.15
+	title = aetas_anj.15.t
+	desc = aetas_anj.15.d
+	picture = FEAST_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes
+	major = yes 
+
+	option = { 
+		name = aetas_anj.15.a #yes!
+		every_province = { 
+			limit = { area = provence_area }
+			set_in_empire = yes 
+		}
+	}
+}
+#New Capital of Provence?
+country_event = {
+	id = aetas_anj.16
+	title = aetas_anj.16.t
+	desc = aetas_anj.16.d
+	picture = FEAST_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes
+
+	option = { 
+		name = aetas_anj.16.a #Make way to Tolosa!
+		set_capital = 196
+		196 = { add_province_triggered_modifier = capitala_occitania }
+	}
+	option = { 
+		name = aetas_anj.16.b #our current capital will remain as such!
+		capital_scope = { 
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+}
+#More Than a Summer Capital
+country_event = {
+	id = aetas_anj.17
+	title = aetas_anj.17.t
+	desc = aetas_anj.17.d
+	picture = FEAST_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes
+
+	option = { 
+		name = aetas_anj.17.a #kings of england should live in london
+		if = {
+			limit = {
+				NOT = { 
+					236 = {
+						is_capital = yes
+					}
+				} 
+			}
+			set_capital = 236
+		}
+		236 = { add_province_triggered_modifier = angevin_capital }
+	}
+	option = {
+		name = aetas_anj.17.b #we belong in angers
+		if = { 
+			limit = {
+				NOT = { 
+					178 = {
+						is_capital = yes
+					}
+				} 
+			}
+			set_capital = 178
+		}
+		178 = { add_province_triggered_modifier = angevin_capital }
+	}
+	option = {
+		name = aetas_anj.17.c #the comfortable châteaux of chinon call to us
+		if = { 
+			limit = {
+				NOT = { 
+					3206 = {
+						is_capital = yes
+					}
+				} 
+			}
+			set_capital = 3206
+		}
+		3206 = { add_province_triggered_modifier = angevin_capital }
+	}
+}

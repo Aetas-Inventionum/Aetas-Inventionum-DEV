@@ -1,0 +1,16 @@
+name = "Castillian Conquest of Antequera"
+war_goal = {
+	type = take_province_religion
+	casus_belli = cb_conquest
+	province = 3379
+}
+
+1415.8.20 = { #day before just so it shows up
+	add_attacker = CAS 
+	add_defender = GRA 
+}
+
+1415.8.21 = {
+	rem_attacker = CAS 
+	rem_defender = GRA
+}

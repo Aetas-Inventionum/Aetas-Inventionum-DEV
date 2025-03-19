@@ -1,0 +1,20 @@
+government = theocracy
+add_government_reform = hre_bishopric_reform
+government_rank = 1
+primary_culture = lorrain
+add_accepted_culture = alsatian
+religion = catholic
+technology_group = western
+capital = 3334 #Sarrebourg, since Vic-sur-Seily, the de facto capital, is in the province. Fixed is Metz so it can move back
+fixed_capital = 188 # Cannot move capital away from this province & no power cost to move to it
+
+1415.1.1 = {
+	monarch = {
+		name = "Conrad II Bayer"
+		dynasty = "de Boppard"
+		birth_date = 1390.1.1
+		adm = 3
+		dip = 2
+		mil = 1
+	}
+}

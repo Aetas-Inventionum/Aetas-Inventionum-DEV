@@ -1,0 +1,60 @@
+government = monarchy
+add_government_reform = scots_gaelic_monarchy_reform
+government_rank = 1
+technology_group = western
+primary_culture = norse_gael
+add_accepted_culture = highland_scottish
+religion = catholic
+capital = 5146	# Glens
+fixed_capital = 5146	# Glens
+historical_friend = LOI
+historical_rival = ENG			#Trying to prevent England from suiciding by alliance with Irish OPMs
+
+1410.1.1 = {
+	monarch = {
+		name = "Eòin Mòr Tànaiste"
+		dynasty = "Mac Dòmhnaill"
+		adm = 2
+		dip = 2
+		mil = 0
+	}
+}
+
+1410.1.1 = {
+	heir = {
+		name = "Dòmhnall Ballach"
+		monarch_name = "Dòmhnall Ballach"
+		dynasty = "Mac Dòmhnaill"
+		birth_date = 1410.1.1
+		death_date = 1460.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+		
+
+1430.1.1 = {
+	monarch = {
+		name = "Donald"
+		dynasty = "MacDhomhnaill"
+		adm = 2
+		dip = 2
+		mil = 3
+	}
+}
+
+1435.1.1 = {
+	heir = {
+		name = "John Mor"
+		monarch_name = "John Mor II"
+		dynasty = "MacDhomhnaill"
+		birth_date = 1435.1.1
+		death_date = 1490.1.1
+		claim = 95
+		adm = 1
+		dip = 1
+		mil = 2
+	}
+}

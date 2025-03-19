@@ -1,0 +1,584 @@
+namespace = aetas_ned
+normal_or_historical_nations = yes
+
+##Hooks back Burgundy # Chain Replaced by new chain in aetas_brb, if you read this, greatings from Sim!
+#country_event = {
+#	id = aetas_ned.2
+#	title = aetas_ned.2.t
+#	desc = aetas_ned.2.d
+#	picture = SPY_eventPicture
+#	
+#	fire_only_once = yes
+#
+#	trigger = {
+#		tag = HOL 
+#		NOT = { has_ruler = "Wilhelm VI" }
+#		has_country_flag = hook_cod_start 
+#	}
+#
+#	mean_time_to_happen = {
+#		months = 20
+#	}
+#
+#	option = { #Blasted meddling.
+#		name = "aetas_ned.2.a"
+#		custom_tooltip = aetas_ned.2.a.tt
+#		BUR = { 
+#			country_event = { id = aetas_ned.3 }
+#		}
+#	}
+#}
+#Hooks back Burgundy - notification for Burgundy
+#country_event = {
+#	id = aetas_ned.3
+#	title = aetas_ned.3.t
+#	desc = aetas_ned.3.d
+#	picture = CONQUEST_eventPicture
+#	
+#	fire_only_once = yes
+#	is_triggered_only = yes 
+#
+#	option = { #Excellent
+#		name = "aetas_ned.2.a"
+#		add_casus_belli = {
+#			target = HOL
+#			type = cb_restore_personal_union
+#			months = 240
+#		}
+#		set_country_flag = bur_jacobaa
+#	}
+#}
+#jan van eyck
+country_event = {
+	id = aetas_ned.4
+	title = aetas_ned.4.t
+	desc = aetas_ned.4.d
+	picture = VH_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { 
+		name = "aetas_ned.4.a"
+		define_advisor = {
+			type = artist
+			name = "Jan van Eyck"
+			skill = 3
+			culture = dutch 
+			religion = catholic
+		}
+	}
+}
+#reforming the gov // disabled or out of use
+country_event = {
+	id = aetas_ned.5
+	title = aetas_ned.5.t
+	desc = aetas_ned.5.d
+	picture = ELECTION_REPUBLICAN_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { #become dutch provincie
+		name = "aetas_ned.5.a"
+		remove_government_reform = dutch_wittelsbach_prince_reform
+		add_government_reform = holland_reform 
+		remove_country_modifier = hook_and_cod_disunity
+		remove_faction = aetas_hooks 
+		remove_faction = aetas_cods 
+	}
+
+	option = { 
+		name = "aetas_ned.5.b" #steady the course
+	}
+}
+#purchasing utrecht // disabled or out of use
+country_event = {
+	id = aetas_ned.6
+	title = aetas_ned.6.t
+	desc = aetas_ned.6.d
+	picture = CITY_VIEW_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { #become dutch provincie
+		name = "aetas_ned.6.a"
+		add_treasury= -500
+		inherit = UTR 
+	}
+}
+#Founding the VOC 
+country_event = {
+	id = aetas_ned.7
+	title = aetas_ned.7.t
+	desc = aetas_ned.7.d
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { #sure 
+		name = "aetas_ned.7.a"
+		add_country_modifier = {
+			name = "dutch_voc" #missing loc
+			duration = -1
+		}
+	}
+}
+#university of leiden
+country_event = {
+id = aetas_ned.8 #missing loc
+title = aetas_ned.8.t
+desc = aetas_ned.8.d
+picture = CITY_VIEW_eventPicture
+
+fire_only_once = yes
+is_triggered_only = yes 
+
+	option = { #sure 
+		name = "aetas_ned.8.a"
+		5025 = { 
+			add_building = university
+			add_province_modifier = { 
+				name = "ned_leiden"
+				duration = -1
+			}
+		}
+	}
+}
+#arrival of wilhelm the silent
+country_event = {
+	id = aetas_ned.9
+	title = aetas_ned.9.t
+	desc = aetas_ned.9.d
+	picture = CONQUEST_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	
+		option = { #sure he can be stadtholder or whatever lol
+			name = "aetas_ned.9.a"
+			define_ruler = { 
+				name = "Willem de Zwijger"
+				dynasty = "van Oranje-Nassau"
+				adm = 4
+				dip = 3
+				mil = 3
+				age = 35
+			}
+		}
+		option = { #sure he can be stadtholder or whatever lol
+			name = "aetas_ned.9.b"
+			add_prestige = 30
+		}
+}
+#refugees
+country_event = {
+	id = aetas_ned.10
+	title = aetas_ned.10.t
+	desc = aetas_ned.10.d
+	picture = REFUGEES_ESCAPING_eventPicture
+	
+	mean_time_to_happen = {
+		months = 40
+	} 
+
+	trigger =  {
+		OR = {
+			tag = NED 
+			tag = PRU
+		}
+		has_country_flag = ned_immigrants #no modifier
+		OR = { 
+			current_age = age_of_reformation 
+			current_age = age_of_absolutism
+		}
+	}
+	
+		option = { #we love random immigrants
+			name = "aetas_ned.10.a"
+			random_owned_province = { 
+				limit = { 
+					NOT = { has_province_modifier = ned_immigrants_welcomed }
+				}
+				add_province_modifier = { 
+					name = "ned_immigrants_welcomed"
+					duration = 3650
+				}
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+		}
+}
+#purchase of nagasaki
+country_event = {
+	id = aetas_ned.11
+	title = aetas_ned.11.t
+	desc = aetas_ned.11.d
+	picture = east_asian_COLONIZATION_eventPicture
+
+	is_triggered_only = yes 
+	fire_only_once = yes 
+	
+	option = { #we will buy the port
+		name = "aetas_ned.11.a"
+		4182 = { 
+			cede_province = NED 
+			add_core = NED 
+			add_province_modifier = { 
+				name = "dutch_dejima"
+				duration = -1
+			}
+			rename_capital = "Dejima-Nagasaki"
+			center_of_trade = 2
+		}
+		add_treasury = -1000
+	}
+	option = {
+		name = "aetas_ned.11.b"
+		custom_tooltip = aetas_ned.11.tt
+		add_core = 4182
+	}
+}
+country_event = {
+	id = aetas_ned.12
+	title = aetas_ned.12.t
+	desc = aetas_ned.12.d
+	picture = AETAS_AMSTERDAM_eventPicture
+
+	is_triggered_only = yes 
+	fire_only_once = yes 
+	
+	option = { #amsterdam POG
+		name = "aetas_ned.12.a"
+		97 = {
+			add_center_of_trade_level = 2
+			add_province_modifier = {
+				name = "star_amsterdam"
+				duration = -1
+			}
+			remove_province_modifier = hol_developping_hub
+		}
+	}
+}
+#rotterdam
+country_event = {
+	id = aetas_ned.13
+	title = aetas_ned.13.t
+	desc = aetas_ned.13.d
+	picture = ROTTERDAM_eventPicture
+
+	is_triggered_only = yes 
+	fire_only_once = yes 
+	
+	option = { #rotterdam POG
+		name = "aetas_ned.13.a"
+		4383 = {
+			center_of_trade = 2
+			add_province_modifier = {
+				name = "star_rotterdam"
+				duration = -1
+			}
+		}
+	}
+}
+#dutch golden age
+country_event = {
+	id = aetas_ned.14
+	title = aetas_ned.14.t
+	desc = aetas_ned.14.d
+	picture = AIDUTCH_eventPicture
+
+	is_triggered_only = yes 
+	fire_only_once = yes 
+	
+	option = { #rotterdam POG
+		name = "aetas_ned.14.a"
+		add_country_modifier = { 
+			name = "dutch_ga"
+			duration = -1
+		}
+		if = {
+			limit = { 
+				AND = { 
+					has_had_golden_age = yes 
+					NOT = { in_golden_age = yes }
+				}
+			}
+			reset_golden_age = yes 
+		}
+		else_if = {
+			limit = { 
+				in_golden_age = yes 
+			}
+			extend_golden_age = 360
+		}
+	}
+}
+#acquiring maastricht
+country_event = {
+	id = aetas_ned.15
+	title = aetas_ned.15.t
+	desc = aetas_ned.15.d
+	picture = CITY_VIEW_eventPicture
+
+	is_triggered_only = yes 
+	fire_only_once = yes 
+	
+	option = { #buy limburg
+		name = "aetas_ned.15.a"
+		3346 = {
+			cede_province = ROOT 
+			add_core = ROOT
+		}
+		add_treasury = -250
+	}
+}
+#dutch science
+country_event = {
+	id = aetas_ned.16
+	title = aetas_ned.16.t
+	desc = aetas_ned.16.d
+	picture = NED_SCIENCE_eventPicture
+
+	is_triggered_only = yes 
+	fire_only_once = yes 
+	
+	option = { #neat!
+		name = "aetas_ned.16.a"
+		add_country_modifier = { 
+			name = "dutch_sciences"
+			duration = -1
+		}
+	}
+}
+#Petrus Plancius
+country_event = {
+	id = aetas_ned.17
+	title = aetas_ned.17.t
+	desc = aetas_ned.17.d
+	picture = PETRUS_eventPicture
+	
+	fire_only_once = yes
+
+	trigger =  {
+		tag = NED 
+		has_country_flag = ned_golden_science
+	}
+
+	mean_time_to_happen = { 
+		months = 120
+	}
+
+	option = { 
+		name = "aetas_ned.17.a"
+		define_advisor = {
+			type = navigator 
+			name = "Petrus Plancius"
+			discount = yes 
+			skill = 3
+			culture = flemish
+			religion = catholic
+		}
+	}
+}
+#Rene Descartes
+country_event = {
+	id = aetas_ned.18
+	title = aetas_ned.18.t
+	desc = aetas_ned.18.d
+	picture = DESCARTES_eventPicture
+	
+	fire_only_once = yes
+
+	trigger =  {
+		tag = NED 
+		has_country_flag = ned_golden_science #no modifier
+	}
+
+	mean_time_to_happen = { 
+		months = 120
+	}
+
+	option = { 
+		name = "aetas_ned.18.a"
+		define_advisor = {
+			type = philosopher
+			name = "Ren� Descartes"
+			discount = yes 
+			skill = 3
+			culture = cosmopolitan_french #was francien
+			religion = catholic
+		}
+	}
+}
+#Rembrandt
+country_event = {
+	id = aetas_ned.19
+	title = aetas_ned.19.t
+	desc = aetas_ned.19.d
+	picture = REMBRANDT_eventPicture
+	
+	fire_only_once = yes
+
+	trigger =  {
+		tag = NED 
+		has_country_flag = ained_painting_set
+	}
+
+	mean_time_to_happen = { 
+		months = 120
+	}
+
+	option = { 
+		name = "aetas_ned.19.a"
+		define_advisor = {
+			type = artist
+			name = "Rembrandt"
+			discount = yes 
+			skill = 3
+			culture = dutch
+			religion = catholic
+		}
+	}
+}
+#Ultimatum of the States General
+country_event = {
+	id = aetas_ned.20 
+	title = aetas_ned.20.t
+	desc = aetas_ned.20.d
+	picture = REMBRANDT_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = aetas_ned.20.a #we cannot accept their ultimatum
+		add_government_reform = ned_states_general_reform
+		add_stability = -2
+	}
+	#option = { 
+	#	name = aetas_ned.20.b #give in to their ultimatum and form a Dutch Republic
+	#	change_government = republic
+	#	add_government_reform = dutch_republic
+	#	add_country_modifier = { 
+	#		name = ned_ultimatum
+	#		duration = 36000
+	#	}
+	#}
+}
+#Question of Government Resolved in the Netherlands
+country_event = {
+	id = aetas_ned.21
+	title = aetas_ned.21.t
+	desc = aetas_ned.21.d
+	picture = REMBRANDT_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = aetas_ned.21.a #peace in our time!
+		add_stability = 2
+	}
+}
+#cheat event to form ned
+country_event = {
+	id = aetas_ned.100 
+	title = aetas_ned.100.t
+	desc = aetas_ned.100.d
+	picture = REMBRANDT_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = aetas_ned.100.a 
+		if = {
+			limit = {
+				is_elector = no
+				is_emperor = no
+				OR = {
+					is_part_of_hre = yes
+					any_owned_province = {
+						is_part_of_hre = yes
+					}
+				}
+			}
+			set_in_empire = no
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+		}
+		hidden_effect = {
+			inherit = UTR 
+			inherit = GRN 
+			inherit = GEL 
+			inherit = ZEE 
+			inherit = ZUT 
+			inherit = FRI 
+			inherit = OMM 
+		}
+		change_tag = NED 
+		change_government = republic
+		add_government_reform = dutch_republic
+		if = {
+			limit = {
+				has_custom_ideas = no
+				NOT = { has_idea_group = ai_NED_ideas }
+			}
+			country_event = { id = ideagroups.1 } #Swap Ideas
+		}
+		swap_non_generic_missions = yes
+		set_government_rank = 2
+	}
+}
+#herring fishing
+country_event = {
+	id = aetas_ned.22
+	title = aetas_ned.22.t
+	desc = aetas_ned.22.d
+	picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+	
+	trigger = { 
+		owns_core_province = 97
+		tag = HOL 
+		NOT = { is_year = 1500 } #just to ensure it doesnt happen too late somehow
+	}
+
+	mean_time_to_happen = { 
+		days = 10
+	}
+
+	option = { 
+		name = aetas_ned.22.a
+		change_price = { 
+			trade_goods = fish 
+			key = herring_gibbing
+			value = 0.05
+			duration = 54750 #150 years?
+		}
+		change_price = { 
+			trade_goods = salt 
+			key = herring_gibbing
+			value = 0.05
+			duration = 54750 #150 years?
+		}
+		97 = { 
+			add_province_modifier = { 
+				name = amsterdam_herring
+				duration = -1
+			}
+		}
+	}
+}

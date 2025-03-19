@@ -1,0 +1,20 @@
+name = "Arborean Reconquest of Tàtari"
+war_goal = {
+	type = take_core
+	casus_belli = cb_core
+	province = 127
+}
+
+1410.1.1 = {
+	add_attacker = NRB 
+	add_attacker = ABR  
+	add_defender = ARA 
+	add_defender = SAR 
+}
+
+1415.8.1 = {
+	rem_attacker = NRB
+	rem_attacker = ABR 
+	rem_defender = ARA 
+	rem_defender = SAR
+}

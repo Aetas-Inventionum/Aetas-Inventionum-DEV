@@ -1,0 +1,42 @@
+#233 - Cornwall
+#Area - Cornwall
+#Region - British Isles
+
+#Core Details
+capital = "Truro"
+is_city = yes
+owner = ENG
+controller = ENG
+
+#Demographics
+culture = cornish
+religion = catholic
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = copper
+
+#Cores and Occupation (Alphabetical after current)
+add_core = ENG
+add_core = CRN
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+add_permanent_province_modifier = { 
+	name = ai_cornish_mines
+	duration = -1
+}
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

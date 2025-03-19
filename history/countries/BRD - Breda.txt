@@ -1,0 +1,20 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+primary_culture = brabantian
+religion = catholic
+technology_group = western
+capital = 95
+fixed_capital = 95
+
+1404.1.1 = {
+	monarch = {
+		name = "Engelbert I"
+		dynasty = "von Nassau"
+		culture = palatinehessian
+		birth_date = 1370.1.1
+		adm = 4
+		dip = 4
+		mil = 2
+	}
+}

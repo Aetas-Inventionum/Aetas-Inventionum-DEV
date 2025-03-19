@@ -1,0 +1,900 @@
+namespace = aetas_ven
+normal_or_historical_nations = yes
+
+# War for the Patriarchate of Aquileia
+country_event = {
+	id = aetas_ven.1
+	title = aetas_ven.1.t
+	desc = aetas_ven.1.d
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			tag = AQU 
+			is_subject_of = VEN
+		}
+	}
+
+	option = { #to war!
+		name = "aetas_ven.1.a"
+		set_country_flag = ven_aqu_start
+		every_province = { 
+			limit = { 
+				owned_by = AQU 
+			}
+			add_core = ROOT
+		}
+		add_manpower = 6
+		AQU = { 
+			add_country_modifier = { 
+				name = aqu_defense
+				duration = 3650
+			}
+		}
+	}
+}
+
+#fall of the patria
+country_event = {
+	id = aetas_ven.2
+	title = aetas_ven.2.t
+	desc = aetas_ven.2.d
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { #we have done well.
+		name = "aetas_ven.2.a"
+		white_peace = AQU 
+		GRZ = { 
+			if = { 
+				limit = { is_subject = yes }
+				grant_independence = yes 
+			}
+		}
+		ORT = { 
+			if = { 
+				limit = { is_subject = yes }
+				grant_independence = yes 
+			}
+		}
+		inherit = AQU
+		hidden_effect = { 
+			add_aggressive_expansion = {
+				who = MLO 
+				value = 15
+				apply_calc = yes
+			}
+			add_aggressive_expansion = {
+				who = HUN 
+				value = 20
+				apply_calc = yes
+			}
+			add_aggressive_expansion = {
+				who = MAN 
+				value = 15
+				apply_calc = yes
+			}
+			add_aggressive_expansion = {
+				who = FER
+				value = 15
+				apply_calc = yes
+			}
+			add_aggressive_expansion = {
+				who = HAB
+				value = 20
+				apply_calc = yes
+			}
+			add_aggressive_expansion = {
+				who = STY 
+				value = 20
+				apply_calc = yes
+			}
+			add_aggressive_expansion = {
+				who = TIR 
+				value = 20
+				apply_calc = yes
+			}
+		}
+	}
+}
+
+#pact of forli - milan's aggression
+country_event = {
+	id = aetas_ven.3
+	title = aetas_ven.3.t
+	desc = aetas_ven.3.d
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { #to war!
+		name = "aetas_ven.3.a"
+		ai_chance  = { factor = 1 }
+		declare_war_with_cb = {
+			who = VEN
+			casus_belli = cb_lombard
+		}
+	}
+	option = { #no thanks im a pussy
+		name = "aetas_ven.3.b"
+		custom_tooltip = aetas_ven.3.b.tt
+		hidden_effect = { 
+			every_province = { 
+				limit = { 
+					region = italy_region
+				}
+				remove_claim = ROOT
+			}
+		}
+		add_country_modifier = { 
+			name = "mlo_humiliated"
+			duration = 7300
+		}
+	}
+}
+country_event = {
+	id = aetas_ven.4
+	title = aetas_ven.4.t
+	desc = aetas_ven.4.d
+	picture = BURGHER_ESTATE_UPSET_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	mean_time_to_happen = {
+		days = 1 #was 3
+	}
+
+	option = { #u got urself a deal mister 
+		name = "aetas_ven.4.a"
+		#ai_chance = { factor = 1 }
+		VEN = {
+			country_event = {id = aetas_ven.5}
+		}
+	}
+}
+country_event = {
+	id = aetas_ven.5
+	title = aetas_ven.5.t
+	desc = aetas_ven.5.d
+	picture = BURGHER_ESTATE_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	mean_time_to_happen = {
+		days = 1 #was 3
+	}
+
+	option = { #cmere ;)
+		name = "aetas_ven.5.a"
+		#ai_chance = { factor = 1 }
+		inherit = RVA 
+		114 = {
+			spawn_rebels = {
+				size = 2
+				type = independence_rebels
+			}
+		}
+	}
+}
+country_event = {
+	id = aetas_ven.6
+	title = aetas_ven.6.t
+	desc = aetas_ven.6.d
+	picture = BAD_WITH_MONARCH_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	mean_time_to_happen = {
+		days = 1 #was 3
+	}
+
+	option = { #woohoo
+		name = "aetas_ven.6.a"
+		#ai_chance = { factor = 1 }
+		set_government_rank = 3
+		add_country_modifier = { 
+			name = "quarter_roman_ven"
+			duration = -1
+		}
+	}
+}
+country_event = {
+	id = aetas_ven.7
+	title = aetas_ven.7.t
+	desc = aetas_ven.7.d
+	picture = DIPLOMACY_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	mean_time_to_happen = {
+		days = 1 #was 3
+	}
+
+	option = { #thessalonike here we come
+		name = "aetas_ven.7.a"
+		#ai_chance = { factor = 1 }
+		148 = { 
+			add_core = ROOT 
+		}
+	}
+}
+country_event = {
+	id = aetas_ven.8
+	title = aetas_ven.8.t
+	desc = aetas_ven.8.d
+	picture = DEBATE_REPUBLICAN_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { #sure, release the empire
+		name = "aetas_ven.8.a"
+		thrace_area = { 
+			limit = { 
+				owned_by = VEN 
+			}
+			add_core = LTE 
+		}
+		release = LTE 
+		create_subject = {
+			subject_type = fief 
+			subject = LTE 
+		}
+		add_country_modifier = { 
+			name = "ven_lte_created"
+			duration = 14600
+		}
+	}
+	option = {
+		name = "aetas_ven.8.b"
+		ai_chance = {
+			factor = 1
+		}
+		add_prestige = 25
+	}
+}
+#savi del consiglio
+country_event = {
+	id = aetas_ven.9
+	title = aetas_ven.9.t
+	desc = aetas_ven.9.d
+	picture = DEBATE_REPUBLICAN_eventPicture
+	
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_ven.9.a #raise salt tax
+		add_country_modifier = { 
+			name = ven_gabella
+			duration = 3650
+		}
+	}
+	option = { 
+		name = aetas_ven.9.b #elect new members to the camerlenghi
+		add_country_modifier = { 
+			name = ven_camerlenghi
+			duration = 3650
+		}
+	}
+	option = { 
+		name = aetas_ven.9.c #reinforce state ceremony
+		add_country_modifier = { 
+			name = ven_state_ceremony
+			duration = 3650
+		}
+	}
+}
+#savi agli ordini
+country_event = {
+	id = aetas_ven.10
+	title = aetas_ven.10.t
+	desc = aetas_ven.10.d
+	picture = DEBATE_REPUBLICAN_eventPicture
+	
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_ven.10.a #rearm the guard fleet
+		add_country_modifier = { 
+			name = ven_guard_fleet
+			duration = 3650
+		}
+	}
+	option = { 
+		name = aetas_ven.10.b #improve integration of stato da mar
+		add_country_modifier = { 
+			name = ven_stato
+			duration = 3650
+		}
+	}
+	option = { 
+		name = aetas_ven.10.c #regulate tariffs
+		add_country_modifier = { 
+			name = ven_tariffs
+			duration = 3650
+		}
+	}
+}
+#savi di terraferma
+country_event = {
+	id = aetas_ven.11
+	title = aetas_ven.11.t
+	desc = aetas_ven.11.d
+	picture = DEBATE_REPUBLICAN_eventPicture
+	
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_ven.11.a #recruit volunteers
+		add_country_modifier = { 
+			name = ven_volunteers
+			duration = 3650
+		}
+	}
+	option = { 
+		name = aetas_ven.11.b #expand the terra ferma
+		add_country_modifier = { 
+			name = ven_secure
+			duration = 3650
+		}
+	}
+	option = { 
+		name = aetas_ven.11.c #appoint military committees
+		add_country_modifier = { 
+			name = ven_mil_com
+			duration = 3650
+		}
+	}
+}
+#venetian offer to cyprus 
+country_event = {
+	id = aetas_ven.12
+	title = aetas_ven.12.t
+	desc = aetas_ven.12.d
+	picture = DEBATE_REPUBLICAN_eventPicture
+	
+	is_triggered_only = yes 
+	fire_only_once = yes 
+
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			tag = TUR 
+			tag = VEN 
+			is_subject_of = VEN 
+			tag = MAM
+		}
+	}
+
+	option = { 
+		name = aetas_ven.12.a #sell our rights of inheritance to venice
+		ai_chance = { 
+			factor = 1
+			modifier = { 
+				factor = 10
+				has_opinion = { 
+					who = VEN 
+					value = 150
+				}
+			}
+			modifier = { 
+				factor = 10
+				VEN = { 
+					total_development = 300
+				}
+			}
+		}
+		set_country_flag = ven_to_inherit
+		custom_tooltip = ven_cyp.tt
+	}
+	option = { 
+		name = aetas_ven.12.b #absolutely not!
+		ai_chance = { 
+			factor = 1
+		}
+		add_opinion = { 
+			who = VEN 
+			modifier = cyp_says_no
+		}
+		cyprus_area = { 
+			limit = { owned_by = ROOT }
+			add_core = VEN
+		}
+	}
+}
+#venice inherits cyprus
+country_event = {
+	id = aetas_ven.13
+	title = aetas_ven.13.t
+	desc = aetas_ven.13.d
+	picture = DEBATE_REPUBLICAN_eventPicture
+	
+	is_triggered_only = yes 
+	fire_only_once = yes 
+
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			tag = TUR 
+			tag = CYP
+			is_subject_of = VEN 
+			tag = MAM
+		}
+	}
+
+	option = { 
+		name = aetas_ven.13.a
+		inherit = CYP
+	}
+}
+#Rovereto Joins Venice
+country_event = {
+	id = aetas_ven.14
+	title = aetas_ven.14.t
+	desc = aetas_ven.14.d
+	picture = CONQUEST_eventPicture
+	
+	is_triggered_only = yes 
+	fire_only_once = yes 
+	major = yes 
+	major_trigger = { 
+		is_neighbor_of = ROOT
+	}
+
+	option = { 
+		name = aetas_ven.14.a #welcome to the party, rovereto!
+		5093 = { 
+			cede_province = ROOT 
+			add_core = ROOT 
+			ROOT = { 
+				add_truce_with = FROM 
+			}
+		}
+	}
+}
+#cattaro seeks our protection
+country_event = {
+	id = aetas_ven.15
+	title = aetas_ven.15.t
+	desc = aetas_ven.15.d
+	picture = COURT_eventPicture
+	
+	is_triggered_only = yes 
+	fire_only_once = yes 
+
+	option = { 
+		name = aetas_ven.15.a #we knew you'd come around someday
+		inherit = KTR
+	}
+}
+#naxos returns (naxos pov)
+country_event = {
+	id = aetas_ven.16
+	title = aetas_ven.16.t
+	desc = aetas_ven.16.d
+	picture = BANKRUPTCY_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes 
+	major = yes 
+	major_trigger = { 
+		tag = VEN
+	}
+
+	trigger = { 
+		tag = NAX 
+		is_at_war = no 
+		is_subject = no 
+	}
+
+	option = { 
+		name = aetas_ven.16.a #it is in our best interest that we accept venetian suzerainty
+		ai_chance = { factor = 90 }
+		VEN = { 
+			create_subject = { 
+				who = ROOT 
+				subject_type = fief
+			}
+		}
+	}
+	option = { 
+		name = aetas_ven.16.b #the archipelago stands alone!
+		ai_chance = { factor = 10 }
+		164 = { add_core = VEN }
+		5588 = { add_core = VEN }
+	}
+}
+#return the polesine?
+country_event = {
+	id = aetas_ven.17
+	title = aetas_ven.17.t
+	desc = aetas_ven.17.d
+	picture = CORRUPTION_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes 
+	major = yes 
+	major_trigger = { tag = FER }
+
+	option = { 
+		name = aetas_ven.17.a #yes, we will grant our friends in ferrara rovigo at once
+		ai_chance = { 
+			factor = 25
+			modifier = { 
+				factor = 100
+				has_opinion = { 
+					who = FER 
+					value = 100
+				}
+			}
+		}
+		5076 = { 
+			cede_province = FER 
+			remove_core = ROOT 
+		}
+		reverse_add_opinion = { 
+			who = FER 
+			modifier = returned_polesine
+		}
+		add_truce_with = FER 
+	}
+
+	option = { 
+		name = aetas_ven.17.b #no, i think we'll keep it!
+		ai_chance = {
+			factor = 25
+		}
+		reverse_add_opinion = { 
+			who = FER 
+			modifier = kept_polesine
+		}
+	}
+}
+#Invasion of Friuli (with the support of Cividale)
+country_event = {
+	id = aetas_ven.18
+	title = aetas_ven.18.t
+	desc = aetas_ven.18.d
+	picture = HORDE_ON_HORSEBACK_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes 
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			is_emperor = yes 
+			tag = AQU
+			is_subject_of = AQU 
+			is_subject_of = ROOT 
+		}
+	}
+
+	immediate = { set_global_flag = ven_aqu_war_flag }
+
+	option = { 
+		name = aetas_ven.18.a #let the invasion begin!
+		ai_chance = { factor = 1 }
+		custom_tooltip = ven_aqu_war.tt
+		AQU = { 
+			declare_war_with_cb = {
+				who = VEN
+				casus_belli = cb_ven_aqu_war #add loc later
+			}
+		}
+		hidden_effect = { 
+			AQU = { 
+				country_event = { 
+					id = aetas_ven.19
+					days = 7
+				}
+			}
+		}
+	}
+}
+#Cividale Surrenders to Venice
+country_event = {
+	id = aetas_ven.19
+	title = aetas_ven.19.t
+	desc = aetas_ven.19.d
+	picture = SIEGE_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes 
+	major = yes 
+	major_trigger = { 
+		tag = VEN 
+	}
+
+	option = { 
+		name = aetas_ven.19.a 
+		5105 = { change_controller = VEN }
+	}
+}
+#Dalmatian Expedition - Venice
+country_event = {
+	id = aetas_ven.20 
+	title = aetas_ven.20.t
+	desc = aetas_ven.20.d
+	picture = HARBOUR_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes 
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			is_emperor = yes 
+			tag = AQU
+			is_subject_of = AQU 
+			is_subject_of = ROOT 
+			tag = CRO 
+			tag = RAG 
+		}
+	}
+
+	option = { 
+		name = aetas_ven.20.a #great work
+		136 = {
+			cede_province = ROOT 
+			add_core = ROOT 
+		}
+		5395 = { 
+			cede_province = ROOT 
+			add_core = ROOT
+		}
+		add_truce_with = HUN
+		if = { 
+			limit = { NOT = { 4754 = { country_or_non_sovereign_subject_holds = ROOT } } }
+			custom_tooltip = ven_ktr.tt
+			hidden_effect = { 
+				country_event = { 
+					id = aetas_ven.15 
+					days = 4
+				}
+			}
+		}
+	}
+}
+#resolution to aquileia
+country_event = {
+	id = aetas_ven.21
+	title = aetas_ven.21.t
+	desc = aetas_ven.21.d
+	picture = POPE_PREACHING_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes 
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			is_emperor = yes 
+			tag = PAP
+		}
+	}
+
+	option = { 
+		name = aetas_ven.21.a #we will accept their compromise
+		ai_chance = { factor = 1 } #historical
+		PAP = { 
+			add_opinion = { 
+				who = ROOT 
+				modifier = accepted_aqu_compromise
+			}
+		}
+		HUN = { 
+			add_opinion = { 
+				who = ROOT 
+				modifier = accepted_aqu_compromise
+			}
+		}
+		5104 = { 
+			cede_province = FIU
+			add_core = FIU 
+			remove_core = ROOT 
+			hidden_effect = { remove_core = AQU }
+		}
+		FIU = { 
+			add_government_reform = leading_clergy_reform 
+			set_government_rank = 2 
+			define_ruler = { 
+				name = "Lodovico"
+				dynasty = "Trevisano"
+				culture = venetian 
+				age = 37
+				#birth_date = 1401.1.1 -- not valid for define_ruler, age based on when they were appointed irl
+				adm = 2
+				dip = 3
+				mil = 1
+			}
+		}
+		add_truce_with = FIU 
+		every_owned_province = { 
+			limit = { is_core = AQU }
+			set_in_empire = no
+		}
+	}
+	option = {
+		name = aetas_ven.20.b #prepostrous! as if we'd agree! #missing loc
+		ai_chance = { factor = 0 }
+		PAP = { 
+			add_opinion = { 
+				who = ROOT 
+				modifier = rejected_aqu_compromise
+			}
+		}
+		emperor = { 
+			add_opinion = { 
+				who = ROOT 
+				modifier = rejected_aqu_compromise
+			}
+			every_province = { 
+				limit = { 
+					AND = { 
+						is_core = AQU 
+						owned_by = VEN 
+					}
+				}
+				add_core = PREV 
+			}
+		}
+	}
+}
+#venice offers to purchase thessaloniki (TSK POV)
+country_event = {
+	id = aetas_ven.22
+	title = aetas_ven.22.t
+	desc = aetas_ven.22.d
+	picture = DIPLOMACY_SIGNING_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes 
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			tag = VEN 
+			tag = BYZ 
+			tag = TUR 
+		}
+	}
+	
+	immediate = { hidden_effect = { set_global_flag = ven_tsk_flag } }
+
+	option = { 
+		name = aetas_ven.22.a #i will do what must be done for the sake of the city
+		ai_chance = { factor = 25 }
+		148 = { 
+			cede_province = VEN 
+			add_core = VEN 
+			add_core = TUR 
+		}
+		BYZ = { inherit = TSK }
+	}
+	option = { 
+		name = aetas_ven.22.b #i am sure we can hold on a little longer without venice's help
+		ai_chance = { factor = 25 }
+		148 = { add_core = VEN }
+	}
+}
+#caterina cornaro (cyprus pov)
+country_event = {
+	id = aetas_ven.23
+	title = aetas_ven.23.t
+	desc = aetas_ven.23.d
+	picture = wihgfx_FEMALES_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes 
+	major = yes 
+	major_trigger = { tag = VEN }
+
+	option = { 
+		name = aetas_ven.23.a #yes, marry caterina
+		ai_chance = { factor = 90 }
+		define_ruler = { 
+			name = "Katarina"
+			dynasty = "Cornaro"
+			female = yes 
+			culture = venetian
+			age = 14
+			adm = 1
+			dip = 3
+			mil = 1
+		}
+		custom_tooltip = ven_cyp_influence.tt
+		hidden_effect = { 
+			country_event = { 
+				id = aetas_ven.24
+				days = 364
+			}
+		}
+	}
+	option = { 
+		name = aetas_ven.23.b #no!
+		ai_chance = { factor = 10 }
+		add_stability = -1
+		VEN = { 
+			cyprus_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+#king dies, caterina takes power 
+country_event = {
+	id = aetas_ven.24
+	title = aetas_ven.24.t
+	desc = aetas_ven.24.d
+	picture = wihgfx_FEMALE_RULER_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes 
+	major = yes 
+	major_trigger = { tag = VEN }
+
+	option = { 
+		name = aetas_ven.24.a #venice will aid us
+		ai_chance = { factor = 1 } #at this point, always will accept
+		kill_ruler = yes 
+		VEN = { 
+			create_subject = {
+				who = ROOT 
+				subject_type = trade_colony
+			}
+		}
+		change_government = republic 
+		add_government_reform = venetocracy_reform  
+		change_primary_culture = venetian 
+		define_ruler = { 
+			name = "Francesco Barbarigo"
+			culture = venetian 
+			age = 43
+			adm = 3
+			dip = 2
+			mil = 4
+		}
+		hidden_effect = { 
+			change_country_color = { color = { 64  197  176 } }
+		}
+	}
+}
+#offer for alexandria (mam pov)
+country_event = {
+	id = aetas_ven.25
+	title = aetas_ven.25.t
+	desc = aetas_ven.25.d
+	picture = CORRUPTION_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes 
+	major = yes 
+	major_trigger = { tag = VEN }
+
+	option = { 
+		name = aetas_ven.25.a 
+		add_treasury = 2500
+		VEN = { add_treasury = -2500 }
+		358 = { 
+			cede_province = VEN 
+			add_core = VEN 
+			remove_core = ROOT 
+			add_province_modifier = { 
+				name = ven_alexandria_mod
+				duration = -1 
+			}
+		}
+		add_truce_with = VEN
+	}
+	option = { 
+		name = aetas_ven.25.b #no!
+		358 = { add_core = VEN }
+	}
+}

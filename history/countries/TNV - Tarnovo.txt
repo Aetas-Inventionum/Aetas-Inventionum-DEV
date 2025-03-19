@@ -1,0 +1,19 @@
+government = monarchy
+government_rank = 1
+add_government_reform = feudalism_reform
+technology_group = eastern
+primary_culture = bulgarian
+religion = orthodox
+capital = 4704
+
+1371.1.1 = {
+	monarch = {
+		name = "Ivan V"
+		dynasty = "Sratsimir"
+		birth_date = 1359.1.1
+		death_date = 1395.1.1
+		adm = 3
+		dip = 1
+		mil = 5
+	}
+}

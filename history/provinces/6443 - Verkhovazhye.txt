@@ -1,0 +1,36 @@
+#6443 - Verkhovazhye
+#Area - Povazhye
+#Region - Russia 
+
+#Core Details
+capital = "Verkhovazhye"
+is_city = yes
+owner = KBN
+controller = KBN 
+
+#Demographics
+culture = meryan
+religion = tengri_pagan_reformed
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = tar
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = KBN
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = nomad_group
+
+#Histories

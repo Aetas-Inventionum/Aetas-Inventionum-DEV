@@ -1,0 +1,40 @@
+#3359 - Peniscola
+#Area - Valencia
+#Region - Iberia
+
+#Core Details
+capital = "San Mateo"
+is_city = yes
+owner = ARA
+controller = ARA
+
+#Demographics
+culture = catalan
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 2
+base_manpower = 2
+trade_goods = wool  #san mateo was a BIG wool trade hub, like big-big
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = ARA
+add_core = MTA
+add_core = VAL
+
+#Other Political
+hre = no
+seat_in_parliament = yes
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

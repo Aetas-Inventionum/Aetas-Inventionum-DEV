@@ -1,0 +1,256 @@
+namespace = aetas_cro 
+normal_or_historical_nations = yes
+
+#Privilege of the Frankopan
+country_event = {
+	id = aetas_cro.1
+	title = aetas_cro.1.t
+	desc = aetas_cro.1.d
+	picture = easterngfx_COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = { 
+		tag = CRO 
+		NOT = { exists = FRK }
+	}
+
+	mean_time_to_happen = { 
+		months = 1
+	}
+	option = { 
+		name = aetas_cro.1.a #fine, release them.
+		ai_chance = { factor = 1 } 
+		release = FRK 
+		FRK = { 
+			define_ruler = { 
+				name = "Ivan V"
+				dynasty = "Frankopani"
+				age = 40 
+				culture = croatian 
+				adm = 1
+				dip = 3
+				mil = 3
+			}
+			add_accepted_culture = dalmatian 
+		}
+		create_subject = { 
+			who = FRK 
+			subject_type = fief
+		}
+	}
+	option = { 
+		name = aetas_cro.1.b #nice try!
+		ai_chance = { factor = 0 }
+		5387 = { 
+			spawn_rebels = {
+				type = noble_rebels
+				size = 1
+				win = yes
+			}
+		} 
+		5388 = { 
+			spawn_rebels = {
+				type = noble_rebels
+				size = 1
+			}
+		}
+		5397 = { 
+			spawn_rebels = {
+				type = noble_rebels
+				size = 1
+			}
+		}
+	}
+	after = { 
+		hidden_effect = { set_country_flag = frk_flag }
+	}
+}
+#select a capital - croatia
+country_event = {
+	id = aetas_cro.2
+	title = aetas_cro.2.t
+	desc = aetas_cro.2.d
+	picture = CITY_VIEW_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_cro.2.a #knin
+		if = { 
+			limit = { NOT = { capital = 1826 } }
+			set_capital = 1826
+		}
+		1826 = { 
+			add_base_tax = 1
+			add_base_production = 1 
+			add_base_manpower = 1
+			add_province_triggered_modifier = cro_capital_mod 
+		}
+	}
+	option = { 
+		name = aetas_cro.2.b #biograd
+		if = { 
+			limit = { NOT = { capital = 4753 } }
+			set_capital = 4753
+		}
+		4753 = { 
+			rename_capital = "Biograd"
+			change_province_name = "Biograd"
+			if = { 
+				limit = { NOT = { culture = ROOT } }
+				change_culture = ROOT
+			} 
+			add_base_tax = 1
+			add_base_production = 1 
+			add_base_manpower = 1
+			add_province_triggered_modifier = cro_capital_mod 
+		}
+	}
+	option = { 
+		name = aetas_cro.2.c #solin
+		if = { 
+			limit = { NOT = { capital = 136 } }
+			set_capital = 136
+		}
+		136 = { 
+			rename_capital = "Solin"
+			change_province_name = "Solin"
+			if = { 
+				limit = { NOT = { culture = ROOT } }
+				change_culture = ROOT
+			} 
+			add_base_tax = 1
+			add_base_production = 1 
+			add_base_manpower = 1
+			add_province_triggered_modifier = cro_capital_mod 
+		}
+	}
+	option = { 
+		name = aetas_cro.2.dd #zagreb
+		if = { 
+			limit = { NOT = { capital = 131 } }
+			set_capital = 131
+		}
+		131 = { 
+			add_base_tax = 1
+			add_base_production = 1 
+			add_base_manpower = 1
+			add_province_triggered_modifier = cro_capital_mod 
+		}
+	}
+	option = { 
+		name = aetas_cro.2.e #ragusa
+		if = { 
+			limit = { NOT = { capital = 137 } }
+			set_capital = 137
+		}
+		137 = { 
+			add_base_tax = 1
+			add_base_production = 1 
+			add_base_manpower = 1
+			add_province_triggered_modifier = cro_capital_mod 
+		}
+	}
+}
+#form illyria cheat
+country_event = {
+	id = aetas_cro.3
+	title = aetas_cro.3.t
+	desc = aetas_cro.3.d
+	picture = CITY_VIEW_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_cro.3 
+		grant_independence = yes 
+		set_capital = 131
+		hidden_effect = { 
+			inherit = DJK 
+			inherit = BOS 
+			inherit = USR
+			inherit = RAG 
+			inherit = PVC 
+			inherit = HRZ 
+			inherit = MON 
+			inherit = KTR 
+			inherit = SER 
+			east_adriatic_coast_area = { 
+				if = { 
+					limit = { NOT = { owned_by = ROOT } }
+					cede_province = ROOT 
+					add_core = ROOT 
+				}
+			}
+			dardania_area = { 
+				if = { 
+					limit = { NOT = { owned_by = ROOT } }
+					cede_province = ROOT 
+					add_core = ROOT 
+				}
+			}
+			syrmia_area = { 
+				if = { 
+					limit = { NOT = { owned_by = ROOT } }
+					cede_province = ROOT 
+					add_core = ROOT 
+				}
+			}
+			1954 = { 
+				if = { 
+					limit = { NOT = { owned_by = ROOT } }
+					cede_province = ROOT 
+					add_core = ROOT 
+				}
+			}
+			5438 = { 
+				if = { 
+					limit = { NOT = { owned_by = ROOT } }
+					cede_province = ROOT 
+					add_core = ROOT 
+				}
+			}
+			5560 = { 
+				if = { 
+					limit = { NOT = { owned_by = ROOT } }
+					cede_province = ROOT 
+					add_core = ROOT 
+				}
+			}
+			4780 = { 
+				if = { 
+					limit = { NOT = { owned_by = ROOT } }
+					cede_province = ROOT 
+					add_core = ROOT 
+				}
+			}
+			5432 = { 
+				if = { 
+					limit = { NOT = { owned_by = ROOT } }
+					cede_province = ROOT 
+					add_core = ROOT 
+				}
+			}
+		}
+		change_tag = ILY 
+		set_government_rank = 3
+		add_government_reform = illyrian_reform
+		if = {
+			limit = {
+				has_custom_ideas = no
+				NOT = { has_idea_group = ILY_ideas }
+			}
+			country_event = { id = ideagroups.1 } #Swap Ideas
+		}
+		balkan_region = {
+			limit = {
+				NOT = { is_permanent_claim = ROOT } 
+				NOT = { is_core = ROOT } 
+			}
+			add_permanent_claim = ROOT
+		}
+	}
+}

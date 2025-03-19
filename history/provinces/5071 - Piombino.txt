@@ -1,0 +1,38 @@
+#5071 - Piombino
+#Area - Southern Tuscany
+#Region - Italy
+
+#Core Details
+capital = "Piombino"
+is_city = yes
+owner = PIO
+controller = PIO
+
+#Demographics
+culture = tuscan
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 3
+base_manpower = 3
+trade_goods = iron
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = PIO
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

@@ -1,0 +1,44 @@
+#5513 - Braila
+#Area - East Muntenia
+#Region - Carpathia
+
+#Core Details
+capital = "Braila"
+is_city = yes
+owner = WAL
+controller = WAL
+
+#Demographics
+culture = romanian
+religion = orthodox
+
+#Development and Trade
+base_tax = 2
+base_production = 3
+base_manpower = 2
+trade_goods = fish
+
+#Cores and Occupation (Alphabetical after current)
+add_core = WAL
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+center_of_trade = 1
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = KAZ
+discovered_by = CRI
+discovered_by = GOL
+discovered_by = AST
+discovered_by = QAS
+
+#Histories

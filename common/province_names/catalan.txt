@@ -1,0 +1,176 @@
+
+#catalan dpn by pleibos 
+##France
+#Lower Languedoc
+200 = { "Montpeller" "Montpeller" }
+3276 = { "Besiers" "Besiers" }
+3277 = { "Nimes" "Nimes" }
+3278 = { "Usès" "Usès" }
+3279 = { "Gavaldà" "Mende" }
+3280 = { "Velai" "Lo Puèi de Velai" }
+4391 = { "Vivarès" "Vivièrs" }
+#Upper Languedoc
+196 = { "Tolosa" "Tolosa" }
+197 = { "Roselló" "Perpinyà" }
+198 = { "Rodés" "Rodés" }
+2753 = { "Narbona" "Narbona" }
+3273 = { "Albigès" "Albi" }
+3274 = { "Castres" "Castres" }
+3275 = { "Millau" "Millau" }
+4694 = { "Foix" "Foix" }
+4695 = { "Carcassona" "Carcassona" }
+#Gascony 
+173 = { "Labort" "Baiona" }
+175 = { "Armanyac" "Aush" }
+176 = { "Bearn" "Pau" }
+3261 = { "Albret" "Albret" }
+3262 = { "Dacs" "Dacs" }
+3266 = { "Baixa Navarra" "Sant Joan" }
+3267 = { "Bigorra" "Tarba" }
+3268 = { "Comenge" "Sant Bertran" }
+3269 = { "Lomanya" "Leitora" }
+#Provence
+201 = { "Ais" "Ais de Provença" }
+202 = { "Avinyó" "Avinyó" }
+2991 = { "Forcalquer" "Forcalquer" }
+3293 = { "Arle" "Arle" }
+3294 = { "Marsella" "Marsella" }
+3295 = { "Grassa" "Grassa" }
+3296 = { "Draguinhyan" "Draguinyan" }
+3297 = { "Barceloneta" "Barceloneta" }
+4696 = { "Toló" "Toló" }
+5226 = { "Sisteron" "Sisteron" }
+##Iberia
+#Catalonia
+213 = { "Barcelona" "Barcelona" }
+2988 = { "Tarragona" "Tarragona" }
+3355 = { "Empúries" "Figueres" }
+3356 = { "Cerdanya" "Puigcerdà" }
+3357 = { "Lleida" "Lleida" }
+3358 = { "Tortosa" "Tortosa" }
+3392 = { "Manresa" "Manresa" }
+#Aragon
+211 = { "Osca" "Osca" }
+214 = { "Saragossa" "Saragossa" }
+2990 = { "Terol" "Terol" }
+3362 = { "Albarrasí" "Albarrasí" }
+3364 = { "Baix Aragó" "Alcanyís" }
+3365 = { "Casp" "Casp" }
+3366 = { "Ribagorça" "Benasc" }
+3367 = { "Jaca" "Jaca" }
+4557 = { "Calataiud" "Calataiud" }
+#Valencia
+220 = { "València" "València" }
+1750 = { "Alacant" "Alacant" } 
+3359 = { "Peníscola" "Peníscola" }
+3360 = { "Gandia" "Gandia" }
+3361 = { "Dénia" "Dénia" }
+4549 = { "Xàtiva" "Xàtiva" }
+4550 = { "Castelló" "Castelló de la Plana" }
+#Balearic Islands
+333 = { "Mallorca" "Palma" }
+4559 = { "Menorca" "Maó" }
+4560 = { "Pitiüses" "Vila d'Eivissa" }
+5611 = { "Carinyena" "Carinyena" }
+#Navarra
+209 = { "Biscaia" "Bilbao" }
+210 = { "Pamplona" "Pamplona" }
+2989 = { "Terra de Pa" "Logronyo" }
+3368 = { "Ribera" "Tudela" }
+3369 = { "Sangüesa" "Sangüesa" }
+3370 = { "Estel" "Estel" }
+4958 = { "Nájera" "Nájera" }
+4959 = { "Miranda" "Miranda" }
+4960 = { "Àlaba" "Vitòria" }
+4961 = { "Guipúscoa" "Sant Sebastià" }
+##Africa
+#mitidja
+338 = { "Penyal d'Alger" "Aljer" }
+#tripolitania
+354 = { "Trípol de Barbaria" "Trípol de Barbaria" }
+##Italy
+#piedmont
+1875 = { "Coni" "Coni" }
+4727 = { "Saluças" "Saluças" }
+#upper piedmont
+103 = { "Torì" "Torì" }
+5043 = { "Pineròl" "Pineròl" }
+#sardinia
+127 = { "Sàsser" "Sàsser" }
+2986 = { "Càller" "Castell de Càller" }
+4735 = { "Oristany" "Oristany" }
+5007 = { "Gallura" "Terranoa" }
+5008 = { "Nuoro" "Nuoro" }
+5009 = { "Ullastre" "Lanusei" }
+5010 = { "Esglésies" "Esglésies" }
+5405 = { "Planargia" "Bosa" }
+#corsica
+1247 = { "Bastia" "Bastia" }
+5004 = { "Cinarca" "Aiacciu" }
+5005 = { "Bunifaziu" "Bunifaziu" }
+5006 = { "Corti" "Corti" }
+#sicily
+124 = { "Messina" "Messina" }
+125 = { "Palerm" "Palerm" }
+2982 = { "Saragossa" "Saragossa" }
+4736= { "Trapèna" "Trapèna" }
+4737 = { "Agrigent" "Agrigent" }
+5131 = { "Catània" "Catània" }
+5132 = { "Xifaló" "Xifaló" }
+5133 = { "Mòdica" "Mòdica" }
+5134 = { "Calatagiró" "Calatagiró" }
+5135 = { "Catalaniseta" "Catalaniseta" }
+#calabria
+123 = { "Regols" "Regols" }
+1934 = { "Potenza" "Potenza" }
+2984 = { "Cosenza" "Cosenza" }
+5126 = { "Matera" "Matera" }
+5127 = { "Melfi" "Melfi" }
+5128 = { "Rossano" "Rossano" }
+5129 = { "Crotó" "Crotó" }
+5130 = { "Catanzaro" "Catanzaro" }
+#apulia
+122 = { "Taràntol" "Taràntol" }
+1933 = { "Bari" "Bari" }
+5122 = { "Barletta" "Barletta" }
+5123 = { "Àndria" "Àndria" }
+5124 = { "Brandís" "Brandís" }
+5125 = { "Lecce" "Lecce" }
+#campania
+121 = { "Nàpols" "Nàpols" }
+2983 = { "Salern" "Salern" }
+5097 = { "Gaieta" "Gaieta" }
+5111 = { "Càpua" "Càpua" }
+5114 = { "Cilento" "Vall" }
+#lazio
+118 = { "Roma" "Roma" }
+#Southern Tuscany
+5073 = { "Presidis" "Orbetello" }
+#Northern Tuscany
+116 = { "Florència" "Florència" }
+#Romagna
+4730 = { "Bolonya" "Bolonya" }
+5064 = { "Rímini" "Rímini" }
+#emilia
+106 = { "Mòdena" "Mòdena" }
+#liguria
+101 = { "Gènova" "Gènova" }
+5051 = { "Saona" "Saona" }
+5052 = { "l'Espècia" "l'Espècia" }
+#lombardy
+104 = { "Milà" "Milà" }
+#eastern lombary
+109 = { "Màntua" "Màntua" }
+4739 = { "Bèrgam" "Bèrgam" }
+#Venetia
+112 = { "Venècia" "Venècia" }
+4729 = { "Pàdua" "Pàdua" }
+#piedmont
+103 = { "Torí" "Torí" }
+
+##what i can find for levant - pleib
+#lebanon
+378 = { "Trípol" "Trípol" }
+6156 = { "Gibelet" "Gibelet" }
+#jabal bahra
+6162 = { "Chastel Rouge" "Margat" }

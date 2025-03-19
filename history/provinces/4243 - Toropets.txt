@@ -1,0 +1,38 @@
+#4243 - Toropets
+#Area - Upper Volga
+#Region - Ruthenia 
+
+#Core Details
+capital = "Toropets"
+is_city = yes
+owner = LIT
+controller = LIT
+
+#Demographics
+culture = novgorodian
+religion = orthodox
+
+#Development and Trade
+base_tax = 2
+base_production = 2
+base_manpower = 1
+trade_goods = beer
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = LIT
+add_core = SMO
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = nomad_group
+
+#Histories

@@ -1,0 +1,38 @@
+#5095 - Schio
+#Area - Venetia
+#Region - Italy
+
+#Core Details
+capital = "Schio"
+is_city = yes
+owner = VEN
+controller = VEN
+
+#Demographics
+culture = venetian
+religion = catholic
+
+#Development and Trade
+base_tax = 3
+base_production = 3
+base_manpower = 3
+trade_goods = wool
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = VEN
+add_core = VNA
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

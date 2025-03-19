@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = albanian_lordship_reform
+government_rank = 1
+primary_culture = albanian
+religion = catholic
+technology_group = eastern
+capital = 5433
+
+
+1392.1.1 = {
+	monarch = {
+		name = "Komnen I"
+		dynasty = "Arianiti"	
+		birth_date = 1366.1.1 #guess
+		death_date = 1407.1.1
+		adm = 3
+		dip = 5
+		mil = 3
+	}
+}
+
+1407.1.1 = {
+	monarch = {
+		name = "Gjergj I"
+		dynasty = "Arianiti"	
+		birth_date = 1383.1.1
+		death_date = 1462.1.1
+		adm = 2
+		dip = 4
+		mil = 6
+	}
+}

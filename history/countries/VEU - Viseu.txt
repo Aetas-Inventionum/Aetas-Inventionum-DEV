@@ -1,0 +1,7 @@
+government = monarchy
+add_government_reform = aviz_princes_reform
+primary_culture = portugese
+religion = catholic
+technology_group = western
+capital = 228 #Viseu
+government_rank = 1

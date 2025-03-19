@@ -1,0 +1,33 @@
+government = republic
+add_government_reform = swiss_confederacy_reform
+government_rank = 1
+technology_group = western
+religion = catholic
+primary_culture = swiss
+capital = 165 # Bern
+add_army_professionalism = 0.1
+historical_friend = FRB
+historical_friend = NUC
+historical_friend = GRU
+historical_friend = ZDN
+historical_friend = GHB
+historical_friend = GRB
+historical_rival = BUR
+historical_rival = SAV
+historical_rival = TIR 
+historical_rival = HAB
+historical_rival = MLO
+
+1399.1.1 = {
+	monarch = {
+		name = "Die Tagsatzung"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}
+
+1528.1.1 = { religion = reformed }
+
+1798.1.1 = { set_legacy_government = constitutional_republic }

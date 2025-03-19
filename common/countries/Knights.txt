@@ -1,0 +1,110 @@
+#Country Name: Please see filename.
+
+graphical_culture = latingfx #westerngfx
+
+color = { 68 62 62 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	religious_ideas
+	offensive_ideas
+	maritime_ideas
+	innovativeness_ideas
+	spy_ideas
+	quality_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	french_caracolle
+	anglofrench_line
+	french_dragoon
+	prussian_frederickian
+	prussian_uhlan
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Fulcus #1" = 10
+	"Aelius #1" = 10
+	"Deus Dedit #1" = 0
+	"Petrus #1" = 10
+	"Rogerius #1" = 10
+	"Raymundus #1" = 10
+	"Robertus #1" = 10
+	"Ioannes #1" = 10
+	"Richardus #1" = 10
+	"Philibertus #1" = 10
+	"Antonius #0" = 10
+	"Jacubus #0" = 10
+	"Americus #0"= 10
+	"Guido #0" = 10
+	"Fabricius #0" = 10
+	"Philippus #0" = 10
+	#gms of malta
+	"Claudius #0" = 10
+	"Disius #0" = 10
+	"Hugo #0" = 10
+	"Martinus #0" = 10
+	"Gregorius #0" = 10
+	"Nicolaus #0" = 10
+	"Hadrianus #0" = 10
+	
+	"Maria #0" = -1
+	"Sarah #0" = -1
+	"Catherine #0" = -1
+}
+
+leader_names = {
+	"d'Aubusson" "d'Amboise"
+	"de Blanchefort"
+	"del Carretto" "de la Cassière" "de Clermont-Gessant" Cotoner Carafa Caracciolo "de Corneillan"
+	Despuig
+	"de Fonseca"
+	Garzez "de Gozon"
+	"de Homedes" "von Hormpesch" "de Heredia"
+	"de Juilliac"
+	"de Lastic" "de L'Isle-Adam" "de Lascaris-Castellar"
+	"de Milly" "del Monte"
+	"de Naillac"
+	Orsini
+	"del Ponte" "de Paule" "Perellos y Roccaful" "de Pins"
+	"de la Rivère" "de Redin" "de Rohan-Polduc"
+	"de Saint-Jaille" "de la Sengle"
+	"de Texada"
+	"de La Vallette-Parisot" "de Verdala" "de Vasconcellos" "de Vilhena" "de Villaret"
+	"de Wignacourt"
+	Zacosta Zondadari
+}
+
+ship_names = {
+	"The Blessed Gerard"
+	"Raymond du Puy de Provence"
+	"Auger de Balben"
+	"Arnaud de Comps"
+	"Gilbert d'Aissailly"
+	"Gastone de Murols"
+	"Gilbert of Syria"
+	"Roger de Moulins"
+	"Hélion de Villeneuve"
+	"Hermangard d'Asp"
+	"Garnier de Naplous"
+	"Geoffroy de Donjon"
+	"Alfonse of Portugal"
+	"Geoffrey le Rat"
+}
+
+army_names = {
+	"Milites Rhodii" "Milites Sancti Ioannis" "Equites Alverniae" "Equites Franciae" "Equites Provinciae" "Equites Aragonum" "Equites Italiae" "Equites Germaniae" "Equites Angliae" "Knights of $PROVINCE$"
+}
+
+fleet_names = { 
+	"Ordo Navium" "Aegaeae classis" "Classis Cypri" "Classis Sancti Ioannis"
+}

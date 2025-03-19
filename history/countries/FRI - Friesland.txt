@@ -1,0 +1,22 @@
+government = republic
+add_government_reform = frisian_freedom_reform
+government_rank = 1
+primary_culture = frisian
+religion = catholic
+technology_group = western
+capital = 100 #westergoa
+
+
+1413.1.1 = {
+	monarch = {
+		name = "Sikke Douwes"
+		dynasty = "Sjaardema"
+		birth_date = 1348.1.1 #approx but around here
+		death_date = 1422.1.1
+		adm = 3
+		dip = 1
+		mil = 4
+	}
+}
+
+1515.1.1 = { leader = { name = "Greate Pier" type = admiral fire = 1 shock = 1 manuever = 2 siege = 0 death_date = 1520.10.28 } }

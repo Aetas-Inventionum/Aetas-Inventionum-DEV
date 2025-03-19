@@ -1,0 +1,143 @@
+country_decisions = {
+	neapolitan_republic_decision = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			was_never_german_regional_tag_trigger = yes
+			NOT = { has_country_flag = formed_nap_republic_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { exists = NPR }
+			OR = { 
+				primary_culture = neapolitan
+				tag = NAP
+			}
+		}
+		provinces_to_highlight = {
+			OR = { 
+				area = naples_area 
+				area = abruzzo_area
+				area = capitanate_area
+				area = calabria_area
+				area = apulia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			government = republic 
+			owns_core_province = 121
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { 
+				OR = {
+					area = naples_area 
+					area = abruzzo_area
+					area = capitanate_area
+					area = calabria_area
+					area = apulia_area
+				}
+				value = 25
+			}
+			if = { 
+				limit = { 
+					any_province = { is_core = NPO }
+				}
+				OR = { 
+					tag = NPO 
+					NOT = { exists = NPO }
+				}
+			}
+			else = { 
+				OR = { 
+					tag = NAP 
+					NOT = { exists = NAP } 
+				}
+			}
+		}
+		effect = {
+			change_tag = NPR 
+			on_change_tag_effect = yes
+			restore_country_name_effect = yes
+			if = { 
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			if = { 
+				limit = { NOT = { primary_culture = neapolitan } }
+				change_primary_culture = neapolitan
+			}
+			add_government_reform = spqn_reform
+			naples_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			abruzzo_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			capitanate_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			calabria_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			apulia_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = { 
+				limit = {
+					NOT = { 
+						121 = {
+							is_capital = yes
+						}
+					} 
+				}
+				set_capital = 121
+			}
+			set_country_flag = formed_nap_republic_flag
+			if = {
+				limit = { 
+					has_custom_ideas = no
+					#NOT = { 
+					#	has_idea_group = NPI_ideas -- Not correct trigger, can't find one for intent
+					#}
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		ai_importance = 400
+	}
+}

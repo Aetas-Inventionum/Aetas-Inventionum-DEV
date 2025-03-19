@@ -1,0 +1,20 @@
+government = monarchy
+add_government_reform = croatian_monarchy_reform
+primary_culture = croatian
+religion = catholic
+add_accepted_culture = dalmatian
+technology_group = eastern
+capital = 5387
+
+
+1415.1.1 = {
+	monarch = {
+		name = "Nikola IV"
+		dynasty = "Frankopan"
+		birth_date = 1360.1.1
+		death_date = 1432.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

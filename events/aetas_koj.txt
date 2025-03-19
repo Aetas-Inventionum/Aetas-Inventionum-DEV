@@ -1,0 +1,766 @@
+namespace = aetas_koj
+normal_or_historical_nations = yes
+
+# Haute Court
+country_event = {
+	id = aetas_koj.1
+	title = aetas_koj.1.t
+	desc = aetas_koj.1.d
+	picture = COURT_eventPicture
+
+	is_triggered_only = yes 
+
+	option = { #Incentivize Settlers
+		name = aetas_koj.1.a
+		random_owned_province = { 
+			random_list = { 
+				1 = { add_base_tax = 1 }
+				1 = { add_base_production = 1 }
+				1 = { add_base_manpower = 1 }
+			}
+			add_province_modifier = { 
+				name = koj_settlers
+				duration = 3650
+			}
+		}
+	}
+	option = { #Cash in on Tithes
+		name = aetas_koj.1.b
+		add_country_modifier = { 
+			name = koj_tithes
+			duration = 3650
+		}
+	}
+	option = { #Mint more Bezants
+		name = aetas_koj.1.c
+		add_country_modifier = { 
+			name = koj_bezants
+			duration = 3650
+		}
+	}
+}
+# Court de la Mer
+country_event = {
+	id = aetas_koj.2
+	title = aetas_koj.2.t
+	desc = aetas_koj.2.d
+	picture = DEBATE_REPUBLICAN_eventPicture
+
+	is_triggered_only = yes 
+
+	option = { #Resign Treaties with Latin Republics
+		name = aetas_koj.2.a
+		add_country_modifier = { 
+			name = koj_trade_treaties
+			duration = 3650
+		}
+	}
+	option = { #Enlist Officers of the Sea
+		name = aetas_koj.2.b
+		add_country_modifier = { 
+			name = koj_sea
+			duration = 3650
+		}
+	}
+	option = { #improve local factories (of sugar and wine)
+		name = aetas_koj.2.c
+		every_owned_province = { 
+			limit = { 
+				is_core = ROOT 
+				OR = { 
+					trade_goods = wine 
+					trade_goods = sugar 
+					trade_goods = cotton 
+				}
+			}
+			add_base_production = 1 
+		}
+	}
+}
+#cour des bourgeois
+country_event = {
+	id = aetas_koj.3
+	title = aetas_koj.3.t
+	desc = aetas_koj.3.d
+	picture = LIBERUM_VETO_eventPicture
+
+	is_triggered_only = yes 
+
+	option = { #Deal with Local Petty Disputes
+		name = aetas_koj.3.a
+		random_owned_area = { 
+			add_province_modifier = { 
+				name = koj_local_disputes
+				duration = 3650
+			}
+		}
+	}
+	option = { #Listen to the Ra'is
+		name = aetas_koj.3.b
+		add_country_modifier = { 
+			name = koj_rais
+			duration = 3650
+		}
+	}
+	option = { #Encourage Conversion
+		name = aetas_koj.3.c
+		add_country_modifier = { 
+			name = koj_converts
+			duration = 3650
+		}
+	}
+}
+#form jerusalem cheat-cheat/test
+country_event = {
+	id = aetas_koj.100
+	title = aetas_koj.100.t
+	desc = aetas_koj.100.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_koj.10.a
+		palestine_area = { 
+			cede_province = ROOT 
+			add_core = ROOT 
+		}
+		4268 = { 
+			cede_province = ROOT 
+			add_core = ROOT
+		}
+		6154 = { 
+			cede_province = ROOT 
+			add_core = ROOT
+		}
+		6148 = { 
+			cede_province = ROOT 
+			add_core = ROOT
+		}
+		380 = { 
+			cede_province = ROOT 
+			add_core = ROOT
+		}
+		6153 = { 
+			cede_province = ROOT 
+			add_core = ROOT
+		}
+		2327 = { 
+			cede_province = ROOT 
+			add_core = ROOT
+		}
+		change_tag = KOJ 
+		change_primary_culture = hierosolymitan
+		set_capital = 379
+		on_change_tag_effect = yes
+		379 = { 
+			change_religion = ROOT 
+			change_culture = ROOT
+			build_to_forcelimit = {
+				infantry = 0.8
+				cavalry = 0.2
+				heavy_ship = 0.3
+				light_ship = 0.3
+				transport = 0.3
+			}
+		}
+		6146 = { 
+			change_religion = ROOT 
+			change_culture = ROOT
+		}
+		add_government_reform = jerusalem_monarchy_reform
+		if = {
+			limit = { 
+				has_custom_ideas = no
+				NOT = { has_idea_group = ai_KOJ_ideas }
+			}
+			country_event = { id = ideagroups.1 } #Swap Ideas
+		}
+		swap_non_generic_missions = yes
+		complete_mission = cyp_king_acre
+		6145 = { add_core = JAF }
+		release = JAF 
+		JAF = { 
+			add_government_reform = latin_crusader_reform
+			define_ruler = { 
+				dynasty = "d'Ibelin"
+			}
+		}
+		create_subject = { 
+			who = JAF 
+			subject_type = fief 
+		}
+		6147 = { add_core = GLI }
+		release = GLI 
+		GLI = { 
+			add_government_reform = latin_crusader_reform
+			define_ruler = { 
+				dynasty = "de Lusignan"
+			}
+		}
+		create_subject = { 
+			who = GLI 
+			subject_type = fief
+		}
+		1855 = { add_core = SID }
+		release = SID 
+		SID = { 
+			add_government_reform = latin_crusader_reform
+			define_ruler = { dynasty = "Granier" }
+		}
+		create_subject = { 
+			who = SID 
+			subject_type = fief 
+		}
+		trans_jordan_area = { 
+			add_core = OUL 
+		}
+		4268 = { add_core = OUL }
+		release = OUL 
+		OUL = { 
+			add_government_reform = latin_crusader_reform
+			define_ruler = { dynasty = "de Toron" }
+		}
+		create_subject = { 
+			who = OUL 
+			subject_type = march
+		}
+		hidden_effect = { 
+			6156 = { add_core = TRL }
+			378 = { add_core = TRL }
+			6162 = { add_core = TRL }
+			MAM = { 
+				release = TRL 
+			}
+			TRL = { 
+				add_government_reform = latin_crusader_reform
+				define_ruler = { 
+					dynasty = "de Tolosa"
+				}
+			}
+			378 = { 
+				change_culture = tripolitan 
+				change_religion = catholic
+			}
+			6164 = { add_core = ATC }
+			6166 = { add_core = ATC }
+			2313 = { add_core = ATC }
+			6167 = { add_core = ATC }
+			6165 = { add_core = ATC }
+			MAM = { 
+				release = ATC 
+			}
+			ATC = { 
+				add_government_reform = latin_crusader_reform
+				define_ruler = { 
+					dynasty = "de Poitiers"
+				}
+			}
+			2313 = { 
+				change_culture = antiochean 
+				change_religion = catholic
+			}
+			5700 = { add_core = EDS }
+			4298 = { add_core = EDS }
+			2308 = { add_core = EDS }
+			5701 = { add_core = EDS }
+			6171 = { add_core = EDS }
+			5702 = { add_core = EDS }
+			2303 = { add_core = EDS }
+			332 = { add_core = EDS }
+			MAM = { 
+				release = EDS 
+			}
+			EDS = { 
+				add_government_reform = latin_crusader_reform
+				define_ruler = { 
+					dynasty = "de Courtenay"
+				}
+			}
+			2308 = { 
+				change_culture = antiochean 
+				change_religion = catholic
+			}
+			5701 = { cede_province = EDS }
+			4298 = { cede_province = EDS }
+			5700 = { cede_province = EDS }
+			2303 = { cede_province = EDS }
+			5702 = { cede_province = EDS }
+			332 = { cede_province = EDS }
+		}
+	}
+}
+#creation of the county of jaffa 
+country_event = {
+	id = aetas_koj.4
+	title = aetas_koj.4.t
+	desc = aetas_koj.4.d
+	picture = NOBLE_ESTATE_eventPicture
+
+	fire_only_once = yes 
+
+	trigger = { 
+		tag = KOJ 
+		owns = 6145
+	}
+
+	mean_time_to_happen = { 
+		months = 1
+	}
+
+	option = { 
+		name = aetas_koj.4.a #allow the return of the ibelins to japhé
+		ai_chance = { factor = 1 }
+		6145 = { add_core = JAF }
+		release = JAF 
+		JAF = { 
+			add_government_reform = latin_crusader_reform
+			define_ruler = { 
+				name = "Guy III"
+				dynasty = "d'Ibelin"
+				age = 30
+			}
+		}
+		create_subject = { 
+			who = JAF 
+			subject_type = fief 
+		}
+		custom_tooltip = koj_jaf.tt
+		hidden_effect = { 
+			add_country_modifier = { 
+				name = koj_jaf_mod
+				duration = -1
+			}
+		}
+	}
+	option = { 
+		name = aetas_koj.4.b #no thanks
+		ai_chance = { factor = 0 }
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -10
+		}
+	}
+}
+#princes of galilee
+country_event = {
+	id = aetas_koj.5
+	title = aetas_koj.5.t
+	desc = aetas_koj.5.d
+	picture = NOBLE_ESTATE_TAKE_OVER_eventPicture
+
+	fire_only_once = yes 
+
+	trigger = { 
+		tag = KOJ 
+		owns = 6147
+	}
+
+	mean_time_to_happen = { 
+		months = 1
+	}
+
+	option = { 
+		name = aetas_koj.5.a #allow the return of the ibelins to japhé
+		ai_chance = { factor = 1 }
+		6147 = { add_core = GLI }
+		release = GLI  
+		GLI = { 
+			add_government_reform = latin_crusader_reform
+			define_ruler = { 
+				name = "Henri I"
+				dynasty = "de Lusignan"
+				age = 15
+			}
+		}
+		create_subject = { 
+			who = GLI 
+			subject_type = fief 
+		}
+		custom_tooltip = koj_gli.tt
+		hidden_effect = { 
+			add_country_modifier = { 
+				name = koj_gli_mod
+				duration = -1
+			}
+		}
+	}
+	option = { 
+		name = aetas_koj.5.b #no thanks
+		ai_chance = { factor = 0 }
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -10
+		}
+	}
+}
+#lords of sidon
+country_event = {
+	id = aetas_koj.6
+	title = aetas_koj.6.t
+	desc = aetas_koj.6.d
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+
+	fire_only_once = yes 
+
+	trigger = { 
+		tag = KOJ 
+		owns = 1855
+	}
+
+	mean_time_to_happen = { 
+		months = 1
+	}
+
+	option = { 
+		name = aetas_koj.6.a #allow sidon
+		ai_chance = { factor = 1 }
+		1855 = { add_core = SID }
+		release = SID 
+		SID = { 
+			add_government_reform = latin_crusader_reform
+			define_ruler = { 
+				name = "Julien II"
+				dynasty = "Granier"
+				age = 45
+			}
+		}
+		create_subject = { 
+			who = SID
+			subject_type = fief 
+		}
+		custom_tooltip = koj_sid.tt
+		hidden_effect = { 
+			add_country_modifier = { 
+				name = koj_sid_mod
+				duration = -1
+			}
+		}
+	}
+	option = { 
+		name = aetas_koj.6.b #no thanks
+		ai_chance = { factor = 0 }
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -10
+		}
+	}
+}
+#lords of oultrejordain
+country_event = {
+	id = aetas_koj.7
+	title = aetas_koj.7.t
+	desc = aetas_koj.7.d
+	picture = CONQUEST_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_koj.7.a #allow transjordan
+		ai_chance = { factor = 1 }
+		trans_jordan_area = { 
+			limit = { owned_by = ROOT }
+			add_core = OUL
+		}
+		release = OUL 
+		OUL = { 
+			add_government_reform = latin_crusader_reform
+			define_ruler = { 
+				name = "Humphrey IV"
+				dynasty = "de Toron"
+				age = 25
+			}
+		}
+		create_subject = { 
+			who = OUL
+			subject_type = march 
+		}
+		custom_tooltip = koj_oul.tt
+		hidden_effect = { 
+			add_country_modifier = { 
+				name = koj_oul_mod
+				duration = -1
+			}
+		}
+	}
+	option = { 
+		name = aetas_koj.7.b #no thanks
+		ai_chance = { factor = 0 }
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -10
+		}
+	}
+}
+#kingdom of egypt
+country_event = {
+	id = aetas_koj.8
+	title = aetas_koj.8.t
+	desc = aetas_koj.8.d
+	picture = DIPLOMACY_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes 
+
+	option = {
+		name = aetas_koj.8.a #union with the kingdom
+		egypt_region = { 
+			limit = { country_or_non_sovereign_subject_holds = ROOT }
+			add_core = KEM
+			cede_province = KEM 
+		}
+		sinai_area = { 
+			limit = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				NOT = { province_id = 4268 }
+			}
+			add_core = KEM 
+			cede_province = KEM 
+		}
+		KEM = { 
+			set_capital = 363
+		}
+		363 = { 
+			change_culture = KEM 
+			change_religion = KEM 
+		}
+		every_province = { 
+			limit = { culture = kemi }
+			add_core = KEM
+		}
+		every_province = { 
+			limit = { region = egypt_region }
+			add_permanent_claim = KEM 
+		}
+		create_union = KEM 
+	}
+	option = { 
+		name = aetas_koj.8.b #no thanks
+		add_prestige = -10
+	}
+	option = {
+		name = aetas_koj.8.c #become the kingdom
+		change_tag = KEM 
+		change_primary_culture = kemi 
+		add_accepted_culture = hierosolymitan
+		363 = { 
+			if = { 
+				limit = { NOT = { is_core = ROOT } }
+				add_core = ROOT  
+			}
+			if = { 
+				limit = { NOT = { owned_by = ROOT } }
+				cede_province = ROOT
+			}
+		}
+		set_capital = 363 
+		363 = { 
+			change_culture = ROOT 
+			change_religion = ROOT 
+		}
+		every_province = { 
+			limit = { culture = kemi }
+			add_core = ROOT
+		}
+		egypt_region = {
+			limit = {
+				NOT = { is_permanent_claim = ROOT } 
+				NOT = { is_core = ROOT } 
+			}
+			add_permanent_claim = ROOT
+		}
+	}
+}
+#counts of tripoli
+country_event = {
+	id = aetas_koj.9
+	title = aetas_koj.9.t
+	desc = aetas_koj.9.d
+	picture = CONQUEST_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_koj.9.a #allow tripoli
+		ai_chance = { factor = 1 }
+		6156 = { add_core = TRL }
+		378 = { add_core = TRL }
+		6162 = { add_core = TRL }
+		if = { 
+			limit = { 
+				AND = { 
+					NOT = { 378 = { country_or_non_sovereign_subject_holds = ROOT } }
+					378 = { controlled_by = ROOT }
+				}
+			}
+			378 = { cede_province = TRL }
+		}
+		else_if = {
+			limit = { owns = 378 }
+			release = TRL 
+		}
+		else = { 378 = { cede_province = TRL } }
+		TRL = { 
+			add_government_reform = latin_crusader_reform
+			define_ruler = { 
+				name = "Bohémond VIII"
+				dynasty = "de Tolosa"
+				age = 20
+			}
+		}
+		378 = { 
+			change_religion = TRL 
+			change_culture = TRL
+		}
+		create_subject = { 
+			who = TRL
+			subject_type = march 
+		}
+		custom_tooltip = koj_trl.tt
+		hidden_effect = { 
+			add_country_modifier = { 
+				name = koj_trl_mod
+				duration = -1
+			}
+		}
+	}
+	option = { 
+		name = aetas_koj.9.b #no thanks
+		ai_chance = { factor = 0 }
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -10
+		}
+	}
+}
+#antioch
+country_event = {
+	id = aetas_koj.10 
+	title = aetas_koj.10.t
+	desc = aetas_koj.10.d
+	picture = DEBATE_REPUBLICAN_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_koj.10.a #allow antioch 
+		ai_chance = { factor = 1 }
+		6164 = { add_core = ATC }
+		6166 = { add_core = ATC }
+		2313 = { add_core = ATC }	
+		6167 = { add_core = ATC }
+		6165 = { add_core = ATC }
+		if = { 
+			limit = { 
+				AND = { 
+					NOT = { 2313 = { country_or_non_sovereign_subject_holds = ROOT } }
+					2313 = { controlled_by = ROOT }
+				}
+			}
+			2313 = { cede_province = ATC }
+		}
+		else_if = {
+			limit = { owns = 2313 }
+			release = ATC 
+		}
+		else = { 2313 = { cede_province = ATC } }
+		ATC = { 
+			add_government_reform = latin_crusader_reform
+			define_ruler = { 
+				name = "Philippe III"
+				dynasty = "de Poitiers"
+				age = 50
+			}
+		}
+		2313 = { 
+			change_religion = ATC  
+			change_culture = ATC
+		}
+		create_subject = { 
+			who = ATC
+			subject_type = march 
+		}
+		custom_tooltip = koj_atc.tt
+		hidden_effect = { 
+			add_country_modifier = { 
+				name = koj_atc_mod
+				duration = -1
+			}
+		}
+	}
+	option = { 
+		name = aetas_koj.10.b #no thanks
+		ai_chance = { factor = 0 }
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -10
+		}
+	}
+}
+#edessa
+country_event = {
+	id = aetas_koj.11
+	title = aetas_koj.11.t
+	desc = aetas_koj.11.d
+	picture = SIEGE_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_koj.11.a #allow edessa 
+		ai_chance = { factor = 1 }
+		5700 = { add_core = EDS }
+		4298 = { add_core = EDS }
+		2308 = { add_core = EDS }
+		5701 = { add_core = EDS }
+		6171 = { add_core = EDS }
+		5702 = { add_core = EDS }
+		2303 = { add_core = EDS }
+		332 = { add_core = EDS }
+		if = { 
+			limit = { 
+				AND = { 
+					NOT = { 2308 = { country_or_non_sovereign_subject_holds = ROOT } }
+					2308 = { controlled_by = ROOT }
+				}
+			}
+			2308 = { cede_province = EDS }
+		}
+		else_if = {
+			limit = { owns = 2308 }
+			release = EDS 
+		}
+		else = { 2308 = { cede_province = EDS } }
+		EDS = { 
+			add_government_reform = latin_crusader_reform
+			define_ruler = { 
+				name = "Josselin IV"
+				dynasty = "de Courtenay"
+				age = 32
+			}
+		}
+		create_subject = { 
+			who = EDS
+			subject_type = march 
+		}
+		custom_tooltip = koj_eds.tt
+		hidden_effect = { 
+			add_country_modifier = { 
+				name = koj_eds_mod
+				duration = -1
+			}
+		}
+	}
+	option = { 
+		name = aetas_koj.11.b #no thanks
+		ai_chance = { factor = 0 }
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -10
+		}
+	}
+}

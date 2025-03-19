@@ -1,0 +1,48 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+primary_culture = burgundian
+add_accepted_culture = swabian
+religion = catholic
+technology_group = western
+capital = 3398
+
+1397.1.1 = {
+	monarch = {
+		name = "Henriette I"
+		dynasty = "de Montfaucon"
+		birth_date = 1387.1.1
+		female = yes 
+		adm = 4
+		dip = 3
+		mil = 1
+	}
+}
+
+1397.1.1 = {
+	queen = {
+		name = "Eberhard"
+		dynasty = "von Württemberg"
+		birth_date = 1388.8.23
+		death_date = 1419.7.2
+		culture = swabian
+		adm = 1
+		dip = 2
+		mil = 1
+	}
+}
+
+1413.1.1 = { 
+	heir = { 
+		name = "Ulrich"
+		monarch_name = "Ulrich I"
+		dynasty = "von Württemberg"
+		culture = swabian 
+		claim = 95 
+		birth_date = 1413.1.1
+		death_date = 1480.1.1
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}

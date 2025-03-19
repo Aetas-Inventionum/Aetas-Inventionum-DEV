@@ -1,0 +1,61 @@
+government = tribal
+add_government_reform = tribal_federation
+government_rank = 1
+primary_culture = shilha
+add_accepted_culture = moroccan
+religion = sunni
+technology_group = muslim
+capital = 344
+fixed_capital = 344 # Cannot move capital away from this province & no power cost to move to it
+religious_school = maliki_school
+historical_rival = FEZ
+
+# Hintata Emirs
+
+1415.1.1 = {
+	monarch = {
+		name = "Ahmad"	#known ruler died in 1455, best I could find and I want the Hintata dynasty in. 
+		dynasty = "Hin Tata"
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}
+
+#Vanilla Marrakesh
+
+1444.1.1 = {
+	monarch = {
+		name = "Muhammad"
+		dynasty = "Hintata"
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}
+
+1444.1.1 = {
+	heir = {
+		name = "Ali"
+		monarch_name = "Ali"
+		dynasty = "Hintata"
+		birth_date = 1440.1.1
+		death_date = 1472.1.1
+		claim = 95
+		adm = 2
+		dip = 2
+		mil = 4
+	}
+}
+
+1466.1.1 = {
+	monarch = {
+		name = "Ali"
+		dynasty = "Hintata"
+		adm = 2
+		dip = 2
+		mil = 4
+	}
+}
+
+# Wattasids take power

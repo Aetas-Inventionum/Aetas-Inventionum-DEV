@@ -1,0 +1,39 @@
+#1876 - Frankfurt
+#Area - Main Valley
+#Region - South Germany
+
+#Core Details
+capital = "Frankfurt"
+is_city = yes
+owner = FRN
+controller = FRN
+
+#Demographics
+culture = palatinehessian
+religion = catholic
+
+#Development and Trade
+base_tax = 6
+base_production = 6
+base_manpower = 5
+trade_goods = beer
+
+#Cores and Occupation (Alphabetical after current)
+add_core = FRN
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+center_of_trade = 4 #false positiveS
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

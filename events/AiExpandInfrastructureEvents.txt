@@ -1,0 +1,341 @@
+namespace = ai_expand_infrastructure
+
+
+# Event to get ai to expand infrastructure in their capitals
+# The ai will always do this, the logic here is that this will likely be highly developed and the focus of ai buildings so good to have E.I.ed in
+country_event = {
+    id = ai_expand_infrastructure.1
+    title = "ai_expand_infrastructure.1.title"
+    desc = "ai_expand_infrastructure.1.desc"
+    picture = ECONOMY_eventPicture
+
+	hidden = yes
+
+    trigger = {	# Much lower requirements here
+		ai = yes
+		adm_power = 100
+		# NOT = {
+			# governing_capacity_percentage = 0.75
+			# average_home_autonomy = 30
+		# }
+		capital_scope = {
+			can_expand_infrastructure_at_least_once_here_trigger = yes
+		}
+	}
+	
+	mean_time_to_happen = {	#If they can they should expand infrastructure in their capital
+		months = 2
+	}
+	
+	option = {
+		name = "ai_expand_infrastructure.1.opta"
+		ai_chance = { factor = 1 }	
+		if = {
+			limit = {
+				has_idea = efficient_construction_plans
+			}
+			add_adm_power = -30 # Slightly less for the ai to try help them
+		}
+		else = {
+			add_adm_power = -40 # Slightly less for the ai to try help them
+		}
+		capital_scope = {
+			simulate_expanding_infrastructure_effect = yes
+		}
+	}
+}
+
+# Event for the non-capital provinces of ai nations to simulate expanding infrastructure
+country_event = {
+    id = ai_expand_infrastructure.2
+    title = "ai_expand_infrastructure.2.title"
+    desc = "ai_expand_infrastructure.2.desc"
+    picture = ECONOMY_eventPicture
+
+	is_triggered_only = yes
+	hidden = yes
+
+    trigger = {
+		ai = yes
+		adm_power = 700	# Will spend a max of 200 adm points
+		any_owned_province = {
+			is_capital = no	# Capitals are handled by another event
+			is_state_core = ROOT
+			can_expand_infrastructure_at_least_once_here_trigger = yes
+			OR = {
+				NOT = {
+					num_free_building_slots = 1
+				}
+				development = 30
+			}
+			NOT = {
+				local_autonomy = 25
+			}
+		}
+	}
+	
+	# Options are for how much spare governing capactity the nations has to decide how many provinces should be expanded
+	option = {
+		name = "ai_expand_infrastructure.2.opta"
+		ai_chance = { factor = 1 }	
+		while = {
+			limit = {
+				adm_power = 500
+				any_owned_province = {
+					is_capital = no	# Capitals are handled by another event
+					is_state_core = ROOT
+					can_expand_infrastructure_at_least_once_here_trigger = yes
+					OR = {
+						NOT = {
+							num_free_building_slots = 1
+						}
+						development = 30
+					}
+					NOT = {
+						local_autonomy = 25
+					}
+				}
+			}
+			random_owned_province = {
+				limit = {
+					is_capital = no	# Capitals are handled by another event
+					is_state_core = ROOT
+					can_expand_infrastructure_at_least_once_here_trigger = yes
+					OR = {
+						NOT = {
+							num_free_building_slots = 1
+						}
+						development = 30
+					}
+				}
+				simulate_expanding_infrastructure_effect = yes
+				owner = {
+					if = {
+						limit = {
+							has_idea = efficient_construction_plans
+						}
+						add_adm_power = -30 # Slightly less for the ai to try help them
+					}
+					else = {
+						add_adm_power = -40 # Slightly less for the ai to try help them
+					}
+				}
+			}
+		}
+	}
+}
+
+# # Event for the non-capital provinces of ai nations to get them to remove expanded infrastructure if they stay above gov cap for too long.
+# # Prioritises removing from provinces with above autonomy 75%, 50%, 25%, 0% in that order to remove the least impactful provinces first.
+# country_event = {
+    # id = ai_expand_infrastructure.3
+    # title = "ai_expand_infrastructure.3.title"
+    # desc = "ai_expand_infrastructure.3.desc"
+    # picture = ECONOMY_eventPicture
+
+	# hidden = yes
+
+	# mean_time_to_happen = {
+		# months = 600	# 50 years
+		# modifier = {	# 25 years
+			# factor = 0.50
+			# governing_capacity_percentage = 0.8
+		# }
+		# modifier = {	# 10 years
+			# factor = 0.40
+			# governing_capacity_percentage = 0.9
+		# }
+		# modifier = {	# 8 years
+			# factor = 0.80
+			# governing_capacity_percentage = 1.0
+		# }
+		# modifier = {	# 6 years
+			# factor = 0.75
+			# governing_capacity_percentage = 1.1
+		# }
+		# modifier = {	# 4 years
+			# factor = 0.66
+			# governing_capacity_percentage = 1.2
+		# }
+		# modifier = {	# 2 years
+			# factor = 0.50
+			# governing_capacity_percentage = 1.3
+		# }
+		# modifier = {	# 1 years
+			# factor = 0.50
+			# governing_capacity_percentage = 1.4
+		# }
+		# modifier = {	# 0.5 years
+			# factor = 0.50
+			# governing_capacity_percentage = 1.5
+		# }
+		# modifier = {	# 0.25 years
+			# factor = 0.50
+			# governing_capacity_percentage = 1.6
+		# }
+		# ####
+		# # To protect against nations getting stuck with super high autonomy and no gov cap
+		# modifier = {	# 10 years
+			# factor = 0.40
+			# governing_capacity_percentage = 0.7
+			# average_home_autonomy = 5
+		# }
+		# modifier = {	# 8 years
+			# factor = 0.70
+			# governing_capacity_percentage = 0.7
+			# average_home_autonomy = 10
+		# }
+		# modifier = {	# 6 years
+			# factor = 0.75
+			# governing_capacity_percentage = 0.7
+			# average_home_autonomy = 15
+		# }
+		# modifier = {	# 4 years
+			# factor = 0.66
+			# governing_capacity_percentage = 0.7
+			# average_home_autonomy = 20
+		# }
+		# modifier = {	# 2 years
+			# factor = 0.50
+			# governing_capacity_percentage = 0.7
+			# average_home_autonomy = 25
+		# }
+		# modifier = {	# 1 years
+			# factor = 0.50
+			# governing_capacity_percentage = 0.7
+			# average_home_autonomy = 30
+		# }
+		# modifier = {	# 0.5 years
+			# factor = 0.50
+			# governing_capacity_percentage = 0.7
+			# average_home_autonomy = 40
+		# }
+		# modifier = {	# 0.25 years
+			# factor = 0.50
+			# governing_capacity_percentage = 0.7
+			# average_home_autonomy = 50
+		# }
+	# }
+    # trigger = {
+		# ai = yes
+		# OR = {
+			# governing_capacity_percentage = 0.8
+			# AND = {
+				# governing_capacity_percentage = 0.7
+				# average_home_autonomy = 5
+			# }
+		# }
+		# any_owned_province = {
+			# is_capital = no	# Capitals will not have their expanded infrastructure reduced
+			# is_state_core = ROOT
+			# has_expanded_infrastructure_here_at_least_once_trigger = yes
+		# }
+	# }
+	
+	# option = {
+		# name = "ai_expand_infrastructure.3.opta"
+		# ai_chance = { factor = 1 }	
+		# while = {
+			# limit = {
+				# OR = {
+					# governing_capacity_percentage = 0.8
+					# AND = {
+						# governing_capacity_percentage = 0.7
+						# average_home_autonomy = 5
+					# }
+				# }
+				# any_owned_province = {
+					# is_capital = no	# Capitals are handled by another event
+					# is_state_core = ROOT
+					# has_expanded_infrastructure_here_at_least_once_trigger = yes
+					# local_autonomy = 75
+				# }
+			# }
+			# random_owned_province = {
+				# limit = {
+					# is_capital = no	# Capitals are handled by another event
+					# is_state_core = ROOT
+					# has_expanded_infrastructure_here_at_least_once_trigger = yes
+					# local_autonomy = 75
+				# }
+				# remove_all_expanded_infrastructure_modifiers_effect = yes
+			# }
+		# }
+		# while = {
+			# limit = {
+				# OR = {
+					# governing_capacity_percentage = 0.8
+					# AND = {
+						# governing_capacity_percentage = 0.7
+						# average_home_autonomy = 5
+					# }
+				# }
+				# any_owned_province = {
+					# is_capital = no	# Capitals are handled by another event
+					# is_state_core = ROOT
+					# has_expanded_infrastructure_here_at_least_once_trigger = yes
+					# local_autonomy = 50
+				# }
+			# }
+			# random_owned_province = {
+				# limit = {
+					# is_capital = no	# Capitals are handled by another event
+					# is_state_core = ROOT
+					# has_expanded_infrastructure_here_at_least_once_trigger = yes
+					# local_autonomy = 50
+				# }
+				# remove_all_expanded_infrastructure_modifiers_effect = yes
+			# }
+		# }
+		# while = {
+			# limit = {
+				# OR = {
+					# governing_capacity_percentage = 0.8
+					# AND = {
+						# governing_capacity_percentage = 0.7
+						# average_home_autonomy = 5
+					# }
+				# }
+				# any_owned_province = {
+					# is_capital = no	# Capitals are handled by another event
+					# is_state_core = ROOT
+					# has_expanded_infrastructure_here_at_least_once_trigger = yes
+					# local_autonomy = 25
+				# }
+			# }
+			# random_owned_province = {
+				# limit = {
+					# is_capital = no	# Capitals are handled by another event
+					# is_state_core = ROOT
+					# has_expanded_infrastructure_here_at_least_once_trigger = yes
+					# local_autonomy = 25
+				# }
+				# remove_all_expanded_infrastructure_modifiers_effect = yes
+			# }
+		# }
+		# while = {
+			# limit = {
+				# OR = {
+					# governing_capacity_percentage = 0.8
+					# AND = {
+						# governing_capacity_percentage = 0.7
+						# average_home_autonomy = 5
+					# }
+				# }
+				# any_owned_province = {
+					# is_capital = no	# Capitals are handled by another event
+					# is_state_core = ROOT
+					# has_expanded_infrastructure_here_at_least_once_trigger = yes
+				# }
+			# }
+			# random_owned_province = {
+				# limit = {
+					# is_capital = no	# Capitals are handled by another event
+					# is_state_core = ROOT
+					# has_expanded_infrastructure_here_at_least_once_trigger = yes
+				# }
+				# remove_all_expanded_infrastructure_modifiers_effect = yes
+			# }
+		# }
+	# }
+# }

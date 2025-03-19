@@ -1,0 +1,33 @@
+government = monarchy
+add_government_reform = appanage_reform
+government_rank = 1
+primary_culture = normand
+religion = catholic
+technology_group = western
+capital = 3230	# Eu
+fixed_capital = 3230 # Cannot move capital away from this province & no power cost to move to it
+
+1397.1.1 = {
+	monarch = {
+		name = "Philippe II"
+		dynasty = "d'Artois"
+		adm = 1
+		dip = 0
+		mil = 0
+	}
+}
+
+1399.1.1 = {
+	monarch = {
+		name = "Charles I"
+		dynasty = "d'Artois"
+		birth_date = 1394.1.1
+		death_date = 1472.7.25
+		adm = 3
+		dip = 1
+		mil = 4
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = infertile_personality
+}
+

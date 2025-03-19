@@ -1,0 +1,33 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+primary_culture = breton
+add_accepted_culture = poitevin
+religion = catholic
+technology_group = western
+capital = 3196
+fixed_capital = 3196
+
+1415.1.1 = { 
+	monarch = { 
+		name = "Jean"
+		dynasty = "de Craon"
+		birth_date = 1365.1.1 #guess
+		regent = yes 
+		adm = 1
+		dip = 3
+		mil = 1
+	}
+}
+
+1415.1.1 = { 
+	monarch = { 
+		name = "Gilles I de Rais"
+		dynasty = "de Laval"
+		birth_date = 1405.1.1
+		death_date = 1440.1.1
+		adm = 1
+		dip = 0
+		mil = 5
+	}
+}

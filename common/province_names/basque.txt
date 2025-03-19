@@ -1,0 +1,82 @@
+#AI Update
+# = { "x" "x" }
+##iberia
+#Navarre
+209 = { "Bizkaia" "Bilbo" }
+210 = { "Iruña" "Iruña" } #Historical Merindad of Mendialdea (Montañas) #United Basque Front states that Iruñea is the official Basque spelling. However, the council of Pamplona ruled that its official name is Iruña as per Navarrese spelling.
+2989 = { "Errioxa" "Logruño" }
+3266 = { "Bortuez Bestaldea" "Donibane Garazi" } #Historical Merindad of Ultrapuertos (beyond the passes/mountains, or on this side of the passes, Ultrapuertos the common name)
+3368 = { "Tutera" "Tutera" } #Historical Merindad of Erribera
+3369 = { "Zangoza" "Zangoza" } #Historical Merindad of Zangoza
+3370 = { "Lizarra" "Lizarra" } #Historical Merindad of Lizzarra
+4958 = { "Naiara" "Naiara" }
+4959 = { "Miranda" "Miranda" }
+4960 = { "Araba" "Gasteiz" }
+4961 = { "Gipuzkoa" "Donostia" }
+#aragon
+211 = { "Oska" "Oska" }
+214 = { "Zaragoza" "Zaragoza" }
+2990 = { "Turia" "Teruel" }
+3364 = { "Aragoi Beherea" "Alcañiz" }
+3365 = { "Caspe" "Caspe" }
+3366 = { "Ribagorza" "Ribagorza" }
+3367 = { "Aragoi Garaia" "Jaka" }
+5611 = { "Cariñena" "Cariñena" }
+#catalonia
+212 = { "Girona" "Girona" }
+213 = { "Bartzelona" "Bartzelona" }
+3357 = { "Lleida" "Lleida" }
+##france
+#provence
+3294 = { "Marseilla" "Marseilla" }
+#lyonnais
+203 = { "Lione" "Lione" }
+#upper languedoc
+196 = { "Tolosa" "Tolosa" }
+197 = { "Perpinyà" "Perpinyà" }
+4694 = { "Fox" "Fox" }
+4695 = { "Carcasona" "Carcasona" }
+#gascony
+173 = { "Lapurdi" "Baiona" }
+175 = { "Auski" "Auski" }
+176 = { "Biarno" "Paue" }
+3261 = { "Labrite" "Labrite" }
+3262 = { "Akize" "Akize" }
+3265 = { "Marzana" "Mendi Marzana" }
+3267 = { "Bigorra" "Tarbe" }
+#guyenne
+174 = { "Bordele" "Bordele" }
+3258 = { "Blaia" "Blaia" }
+3259 = { "Vasats" "Vasats" }
+3263 = { "Perigord" "Périgueux" }
+#saintonge
+3212 = { "Arroxela" "Arroxela" }
+4387 = { "Angulema" "Angulema" }
+#limousin
+3271 = { "Turena" "Briva" }
+#ile de france
+183 = { "Parise" "Parise" }
+185 = { "Nemurtze" "Nemurtze" } #creation from typical lean on occitain naming seen in Basque and transformation of s following a consonant in French names -> Basque exonym transformation. Further, Basque uses lots of old latin elements, in this case the s is kept
+#champagne
+3245 = { "Senze" "Senze" } #same logical transformation as Nemurtze
+4392 = { "Auzere" "Auzere" }
+#upper normandy
+167 = { "Erruan" "Erruan" }
+3227 = { "Habre Grazia" "Habre Grazia" }
+#lower normandy
+168 = { "Kaen" "Kaen" }
+##north america
+#newfoundland
+980 = { "Donibane Ternuakoa" "Donibane Ternuakoa" }
+981 = { "Ophor-Portu" "Ophor-Portu" }
+2573 = { "Placentia" "Placentia" }
+#lower acadia
+982 = { "Ingonish" "Ingonish" }
+#cote nord
+996 = { "Balsaman" "Balsaman" }
+2577 = { "Chischedec" "Chischedec" }
+#labrador
+997 = { "Balea Baya" "Balea Baya" }
+#québec
+983 = { "Donibane Uhartea" "Donibane Uhartea" }
+986 = { "Geizpe" "Geizpe" }

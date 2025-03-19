@@ -1,0 +1,30 @@
+name = "Truce of Neutrality"
+war_goal = {
+	type = annex_country
+	casus_belli = cb_annex
+	tag = BRC
+}
+
+1415.1.1 = {
+	add_attacker = MLO 
+	add_attacker = BRC
+	add_attacker = CMO 
+	add_attacker = CRM 
+	add_attacker = PIA
+	add_defender = FER 
+	add_defender = LAN 
+	add_defender = GEN
+	add_defender = VEN 
+}
+
+1415.2.1 = {
+	rem_attacker = MLO 
+	rem_attacker = BRC
+	rem_attacker = CMO 
+	rem_attacker = CRM 
+	rem_attacker = PIA
+	add_defender = FER
+	rem_defender = LAN
+	rem_defender = GEN  
+	rem_defender = VEN
+}

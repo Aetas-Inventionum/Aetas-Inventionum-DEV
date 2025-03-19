@@ -1,0 +1,74 @@
+#AI Update
+# = { "x" "x" }
+
+##germany
+#fore pomerania
+4745 = { "Rygen" "Bergen" } 
+#lower saxony
+53 = { "Lyneborg" "Lyneborg" }
+1857 = { "Lauenborg" "Lauenborg" }
+4771 = { "Ferden" "Ferden" }
+#slesvig
+13 = { "Slesvig" "Slesvig" }
+5614 = { "Flensborg" "Flensborg" }
+5615 = { "Nordfrisland" "Husum" }
+5616 = { "Tørninglen" "Tønder" }
+#holstein
+44 = { "Hamborg" "Hamborg" }
+45 = { "Lybæk" "Lybæk" }
+4141 = { "Ditmarsken" "Meldorf" }
+5293 = { "Rendsborg" "Rendsborg" }
+5295 = { "Segeborg" "Segeborg" }
+
+##Scandinavia
+##Danish names based on historical fiefs during Kalmar union
+#denmark
+12 = { "København" "København" }
+1983 = { "Laaland" "Nykøbing" }
+#north jutland
+1984 = { "Himmerland" "Aalborg" }
+5623 = { "Kronjylland" "Randers" }
+#south jutland
+15 = { "Hardsyssel" "Ringkjøbing" }
+4149 = { "Kolding" "Kolding" }
+5622 = { "Velje" "Velje" }
+5627 = { "Viborg" "Viborg" }
+#scania
+6 = { "Malmøhus" "Malmø" } #or Oxie
+26 = { "Sønderhalland" "Halmsted" }
+1981 = { "Bornholm" "Rønne" }
+1982 = { "Bleking" "Rotnæby" }  #old danish before Ronneby
+4165 = { "Gønge" "Gønge" }
+4980 = { "Birridsholm" "Ysted" } 
+5212 = { "Nørrehalland" "Varbierg" }
+#ostlandet
+17 = { "Christania" "Christania" }
+4143 = { "Borgarsyle" "Borg" }
+6025 = { "Østerdalen" "Vinger" }
+6026 = { "Tønsbergsyle" "Tønsberg" }
+6037 = { "Ringerike" "Njardarhov" }
+#agder
+4144 = { "Bratsberg" "Skien" } 
+4145 = { "Øst-Agder" "Arendal" }
+6029 = { "Vegusdal" "Evje" }
+
+#gotland
+25 = { "Gulland" "Visby" }
+
+#courland
+5970 = { "Hasenpot" "Hasenpot" } #from german
+#5971 not sure
+5972 = { "Piltene" "Piltene" }
+5973 = { "Dundagen" "Dundagen" } #borrowed from german
+
+#estonia
+35 = { "Øsel" "Arensborg" }
+36 = { "Revælæ" "Lindanisa" }
+1842 = { "Øst Virland" "Narva" }
+5864 = { "Dagø" "Keinis" }
+5989 = { "Vestland" "Hapsal" }
+5990 = { "Leal" "Leal" }
+5991 = { "Kegel" "Kegel" }
+5992 = { "Harrien" "Rappel" }
+5994 = { "Vest Virland" "Vesenberg" } 
+5988 = { "Talkhof" "Talkhof" }

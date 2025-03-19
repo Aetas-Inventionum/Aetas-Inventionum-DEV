@@ -1,0 +1,19 @@
+government = theocracy
+add_government_reform = hre_bishopric_reform
+government_rank = 1
+primary_culture = lorrain
+religion = catholic
+technology_group = western
+capital = 4766 # Verdun
+fixed_capital = 4766 # Cannot move capital away from this province & no power cost to move to it
+
+1404.1.1 = {
+	monarch = {
+		name = "Jean"
+		dynasty = "de Sarrebruck"
+		birth_date = 1388.1.1
+		adm = 2
+		dip = 2
+		mil = 1
+	}
+}

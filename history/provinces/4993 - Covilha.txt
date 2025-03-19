@@ -1,0 +1,39 @@
+#4993 - Covilha
+#Area - Beiras
+#Region - Iberia
+
+#Core Details
+capital = "Covilhã"
+is_city = yes
+owner = POR
+controller = POR
+
+#Demographics
+culture = beiran
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 1
+base_manpower = 2
+trade_goods = wool  #beira baixa, one of the most important source of wool in portugal
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = POR
+add_core = OCS
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+add_province_triggered_modifier = crs_order
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

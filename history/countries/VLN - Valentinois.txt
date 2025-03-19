@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = fief_reform
+government_rank = 1
+primary_culture = provencal
+religion = catholic
+technology_group = western
+capital = 3288 # Valence
+fixed_capital = 3288 # Cannot move capital away from this province & no power cost to move to it
+
+1374.1.1 = {
+	monarch = {
+		name = "Louis II"
+		dynasty = "de Poitiers"
+		birth_date = 1354.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}

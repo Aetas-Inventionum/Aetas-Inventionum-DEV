@@ -1,0 +1,71 @@
+# Country name see file name.
+
+graphical_culture = westerngfx
+
+color = { 132 70 175 } #114 141 163
+
+historical_idea_groups = {
+	religious_ideas
+	aristocracy_ideas
+	trade_ideas
+	economic_ideas
+	diplomatic_ideas
+	innovativeness_ideas
+	offensive_ideas
+	spy_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	dutch_maurician
+	french_caracolle
+	anglofrench_line
+	french_dragoon
+	french_bluecoat
+	french_cuirassier
+	french_impulse
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+leader_names = { 
+	"de Hainaut" "de Dampierre" "de Brienne" "de Courtenay"
+	"de Luxembourg" "de Béthune" "d'Artois" "de Vianden" "d'Avesnes"
+	"de Namur" 
+}
+
+monarch_names = {
+	"Philippe #3" = 60
+	"Guillaume #2" = 40
+	"Jean #2" = 40
+	"Guy #2" = 20
+	"Henri #3" = 10
+	"Baudouin #2" = 10
+	"Charles #0" = 0
+	
+	"Marguerite #1" = -10
+	"Isabelle #1" = 10
+	"Mathilde #0" = -5
+	"Marie #0" = -5
+}
+
+ship_names = {
+	Tournai
+	Antwerpen
+	"Boudewijn I" Brugge
+	"De Vlaamse leeuw"
+	Gent Guldensporenslag "Gwijde van Dampierre" 
+	Hasselt
+	"Jacob van Artevelde"
+	"Karel de Goede" "Kerel van Vlaanderen"
+	Leuven
+	"Manneken Pis" Mechelen
+	"Pieter de Coninck"
+	Schelde
+	"Tijl Uilenspiegel"
+	Vlaanderen
+}

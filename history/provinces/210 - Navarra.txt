@@ -1,0 +1,39 @@
+#210 - Navarra
+#Area - Navarre
+#Region - Iberia
+
+#Core Details
+capital = "Pamplona"
+is_city = yes
+owner = NAV
+controller = NAV
+
+#Demographics
+culture = basque
+religion = catholic
+
+#Development and Trade
+base_tax = 4
+base_production = 4
+base_manpower = 3
+trade_goods = paper #very urbanized, influential government buildings, documents, and crafts // could also be iron
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = NAV
+
+#Other Political
+hre = no
+seat_in_parliament = yes
+
+#Fort/Other Buildings
+
+#Special Modifiers
+center_of_trade = 2
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

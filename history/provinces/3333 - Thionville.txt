@@ -1,0 +1,38 @@
+#3333 - Thionville
+#Area - Wallonia
+#Region - Low Countries
+
+#Core Details
+capital = "Thionville"
+is_city = yes
+owner = LUX
+controller = LUX
+
+#Demographics
+culture = hessian
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 1
+base_manpower = 2
+trade_goods = livestock
+latent_trade_goods = { coal }
+
+#Cores and Occupation (Alphabetical after current)
+add_core = LUX
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

@@ -1,0 +1,2433 @@
+boh_start_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = BOH } 
+
+	boh_rc = {
+		icon = despot_stefans_legacy
+		position = 1
+		provinces_to_highlight = {
+			OR = {
+				province_id = 267
+				province_id = 5246
+				province_id = 1771
+				province_id = 5237
+				province_id = 5245
+				province_id = 5250
+				province_id = 4724
+				province_id = 5247
+				province_id = 5236
+				province_id = 5238
+				province_id = 5239
+				province_id = 2970
+				province_id = 5241
+			}
+			NOT = { num_of_times_improved = 3 } 
+		}
+
+		trigger = {
+			267 = { num_of_times_improved = 3 } 
+			5246 = { num_of_times_improved = 3 } 
+			1771 = { num_of_times_improved = 3 } 
+			5237 = { num_of_times_improved = 3 } 
+			5245 = { num_of_times_improved = 3 } 
+			5250 = { num_of_times_improved = 3 } 
+			4724 = { num_of_times_improved = 3 } 
+			5247 = { num_of_times_improved = 3 } 
+			5236 = { num_of_times_improved = 3 } 
+			5238 = { num_of_times_improved = 3 } 
+			5239 = { num_of_times_improved = 3 } 
+			2970 = { num_of_times_improved = 3 } 
+			5241 = { num_of_times_improved = 3 } 
+		}
+
+		effect = { country_event = { id = aetas_boh.23 }  } 
+	}
+
+	boh_kutna = {
+		icon = mission_kutna_hora
+		position = 2
+		required_missions = { boh_rc } 
+		provinces_to_highlight = {
+			province_id = 5241
+			NOT = {
+				AND = {
+					has_tax_building_trigger = yes
+					num_of_times_improved = 8
+				}
+			}
+		}
+
+		trigger = {
+			5241 = {
+				has_tax_building_trigger = yes
+				num_of_times_improved = 8
+			}
+		}
+
+		effect = { 5241 = { add_province_triggered_modifier = boh_kh }  } 
+	}
+
+	boh_praha = {
+		icon = mission_prague1
+		position = 3
+		required_missions = { boh_kutna } 
+		provinces_to_highlight = {
+			province_id = 266
+			NOT = {
+				AND = {
+					development = 45
+					has_great_project = {
+						type = any
+						tier = 3
+					}
+				}
+			}
+		}
+
+		trigger = {
+			266 = {
+				is_capital = yes
+				development = 45
+				has_great_project = {
+					type = any
+					tier = 3
+				}
+			}
+		}
+
+		effect = {
+			266 = {
+				add_province_modifier = {
+					name = "royal_praha_mod"
+					duration = -1
+				}
+			}
+		}
+	}
+}
+boh_start_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = BOH } 
+
+	boh_plzen = {
+		icon = mission_plzen
+		position = 2
+		required_missions = { boh_rc } 
+		provinces_to_highlight = {
+			province_id = 267
+			NOT = {
+				AND = {
+					num_of_times_improved = 10
+					has_production_building_trigger = yes
+					renaissance = 100
+				}
+			}
+		}
+
+		trigger = {
+			267 = {
+				num_of_times_improved = 10
+				has_production_building_trigger = yes
+				renaissance = 100
+			}
+		}
+
+		effect = { country_event = { id = aetas_boh.19 }  } 
+	}
+
+	emp_boh_bohemian_crystal = {
+		icon = bohemian_crystal
+		position = 3
+		required_missions = { boh_plzen } 
+		provinces_to_highlight = {
+			province_id = 1771
+			OR = {
+				NOT = { owned_by = ROOT } 
+				NOT = { development = 20 } 
+				has_production_building_trigger = no
+			}
+		}
+
+		trigger = {
+			NOT = { current_age = age_of_discovery } 
+			1771 = {
+				owned_by = ROOT
+				development = 20
+				has_production_building_trigger = yes
+			}
+		}
+
+		effect = {
+			set_country_flag = bohemian_crystal_flag
+			if = {
+				limit = { NOT = { has_global_flag = bohemian_glass_flag }  } 
+				country_event = { id = prices.43 } 
+			}
+			add_prestige = 20
+		}
+	}
+}
+boh_start_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = BOH } 
+
+	boh_ost = {
+		icon = establish_oktoberfest
+		position = 1
+		provinces_to_highlight = {
+			owned_by = ROOT
+			culture_group = germanic
+		}
+
+		trigger = { stability = 1 } 
+
+		effect = { country_event = { id = aetas_boh.24 }  } 
+	}
+}
+boh_ost_branching_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = BOH
+		NOT = {
+			OR = {
+				has_country_flag = boh_expel_ost_flag #missing loc
+				has_country_flag = boh_encourage_ost_flag #missing loc
+			}
+		}
+	}
+
+	boh_ost_branching_mission = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { boh_ost } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = boh_ost.tt
+				always = no
+			}
+		}
+
+		effect = { custom_tooltip = boh_ost.tt } 
+	}
+}
+boh_ost_expel_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = BOH
+		has_country_flag = boh_expel_ost_flag #missing loc
+	}
+
+	boh_ost_expel = {
+		icon = mission_expel_the_moriscos
+		position = 2
+		required_missions = { boh_ost } 
+		provinces_to_highlight = {
+			OR = {
+				area = erzgebirge_area
+				area = bohemia_area
+				area = sudetes_area
+				area = sumava_area
+			}
+			NOT = { culture_group = germanic } 
+		}
+
+		trigger = {
+			erzgebirge_area = {
+				type = all
+				NOT = { culture_group = germanic } 
+			}
+			bohemia_area = {
+				type = all
+				NOT = { culture_group = germanic } 
+			}
+			sudetes_area = {
+				type = all
+				NOT = { culture_group = germanic } 
+			}
+			sumava_area = {
+				type = all
+				NOT = { culture_group = germanic } 
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "boh_czech_mod"
+				duration = -1
+			}
+		}
+	}
+}
+boh_ost_encourage_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = BOH
+		has_country_flag = boh_encourage_ost_flag #missing loc
+	}
+
+	boh_ost_encourage = {
+		icon = industrialized_rhineland
+		position = 2
+		required_missions = { boh_ost } 
+		provinces_to_highlight = {
+			OR = {
+				area = erzgebirge_area
+				area = bohemia_area
+				area = sudetes_area
+				area = sumava_area
+			}
+			culture_group = germanic
+			NOT = {
+				AND = {
+					has_production_building_trigger = yes
+					base_production = 5
+				}
+			}
+		}
+
+		trigger = {
+			num_of_owned_provinces_with = {
+				OR = {
+					area = erzgebirge_area
+					area = bohemia_area
+					area = sudetes_area
+					area = sumava_area
+				}
+				culture_group = germanic
+				has_production_building_trigger = yes
+				base_production = 5
+				value = 5
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "boh_ost_mod2"
+				duration = -1
+			}
+		}
+	}
+}
+boh_start_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = BOH } 
+
+	boh_jh = {
+		icon = hussite_regency
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = s_o_b.tt
+				has_country_flag = state_of_boh
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "boh_tensions"
+				duration = 3650
+			}
+		}
+	}
+
+	boh_troubles = {
+		icon = defenestrate_the_heretics
+		position = 2
+		required_missions = { boh_jh } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = boh_troubles.tt
+				has_country_flag = death_of_wenzel_happened
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "boh_course"
+				duration = 7300
+			}
+		}
+	}
+}
+boh_hre_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = BOH } 
+
+	boh_hre_relations = {
+		icon = regal_splendour
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			calc_true_if = {
+				all_country = {
+					is_part_of_hre = yes
+					alliance_with = ROOT
+				}
+				amount = 4
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "boh_hre_candidate"
+				duration = 7300
+			}
+		}
+	}
+
+	boh_cp = {
+		icon = mission_boh_cup_hold
+		position = 2
+		required_missions = { boh_hre_relations } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			stability = 3
+			prestige = 50
+			OR = {
+				emperor = {
+					has_opinion = {
+						WHO = BOH
+						value = 100
+					}
+				}
+				is_emperor = yes
+			}
+		}
+
+		effect = {
+			every_country = {
+				limit = { is_part_of_hre = yes } 
+				country_event = { id = aetas_boh.18 } 
+			}
+		}
+	}
+}
+boh_post_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = BOH } 
+
+	boh_cot = {
+		icon = reform_the_state
+		position = 4
+		provinces_to_highlight = {
+			province_id = 1763
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			is_year = 1444
+			1763 = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		effect = { country_event = { id = aetas_boh.20 }  } 
+	}
+
+	boh_sor = {
+		icon = ansbach_succession
+		position = 5
+		required_missions = { boh_cot } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 5265
+				province_id = 5264
+				province_id = 60
+				province_id = 4778
+				province_id = 5263
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			OR = {
+				AND = {
+					NOT = { exists = SOR } 
+					owns_core_province = 5265
+					owns_core_province = 5264
+					owns_core_province = 60
+					owns_core_province = 4778
+					owns_core_province = 5263
+				}
+				AND = {
+					exists = SOR
+					senior_union_with = SOR
+					SOR = {
+						has_opinion = {
+							who = ROOT
+							value = 190
+						}
+						owns_core_province = 5265
+						owns_core_province = 5264
+						owns_core_province = 60
+						owns_core_province = 4778
+						owns_core_province = 5263
+					}
+				}
+			}
+		}
+
+		effect = {
+			if = {
+				limit = { exists = SOR } 
+				inherit = SOR
+			}
+			add_casus_belli = {
+				target = BRA
+				type = cb_restore_personal_union
+				months = 480
+			}
+			mittelmark_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			neumark_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	boh_bra = {
+		icon = tame_brandenburg
+		position = 6
+		required_missions = { boh_sor } 
+		provinces_to_highlight = {
+			OR = {
+				area = mittelmark_area
+				area = neumark_area
+			}
+			NOT = {
+				OR = {
+					province_id = 51
+					province_id = 4749
+					province_id = 5847
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+
+		trigger = {
+			mittelmark_area = {
+				OR = {
+					province_id = 51
+					province_id = 4749
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				type = all
+			}
+			neumark_area = {
+				OR = {
+					province_id = 5847
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				type = all
+			}
+		}
+
+		effect = {
+			custom_tooltip = boh_bra.tt
+			hidden_effect = {
+				if = {
+					limit = { BRA = { is_subject_of = ROOT }  } 
+					create_subject = {
+						who = BRA
+						subject_type = crownland_subject
+					}
+					add_country_modifier = {
+						name = "boh_bra_mod"
+						duration = -1
+					}
+				}
+			}
+			northern_saxony_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			lower_saxony_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			mecklenburg_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			vorpommern_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			hinter_pommern_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	boh_sorbs = {
+		icon = contracts_of_correspondence
+		position = 7
+		required_missions = { boh_bra } 
+		provinces_to_highlight = {
+			OR = {
+				area = mittelmark_area
+				area = northern_saxony_area
+				area = lower_saxony_area
+				area = mecklenburg_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			mittelmark_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			mecklenburg_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+
+		effect = { country_event = { id = aetas_boh.25 }  } 
+	}
+}
+boh_post_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = BOH } 
+
+	boh_osw = {
+		icon = dominant_economy
+		position = 4
+		provinces_to_highlight = {
+			province_id = 5254
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			5254 = { country_or_non_sovereign_subject_holds = ROOT } 
+			is_year = 1450
+		}
+
+		effect = { country_event = { id = aetas_boh.21 }  } 
+	}
+
+	boh_pol_relations = {
+		icon = mission_pol_throne_bohemia
+		position = 5
+		required_missions = { boh_osw } 
+		provinces_to_highlight = {
+			OR = {
+				is_capital_of = POL
+				is_capital_of = PLC
+			}
+		}
+
+		trigger = {
+			if = {
+				limit = { exists = PLC } 
+				PLC = {
+					OR = {
+						alliance_with = ROOT
+						is_rival = ROOT
+						is_subject_of = ROOT
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = insulted
+						}
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = scornfully_insulted
+						}
+					}
+				}
+			}
+			else = {
+				POL = {
+					OR = {
+						exists = no
+						alliance_with = ROOT
+						is_rival = ROOT
+						is_subject_of = ROOT
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = insulted
+						}
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = scornfully_insulted
+						}
+					}
+				}
+			}
+		}
+
+		effect = {
+			if = {
+				limit = { exists = PLC } 
+				add_casus_belli = {
+					target = PLC
+					type = cb_restore_personal_union
+					months = 480
+				}
+			}
+			else_if = {
+				limit = { exists = POL } 
+				add_casus_belli = {
+					target = POL
+					type = cb_restore_personal_union
+					months = 480
+				}
+			}
+			else = {
+				malopolska_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+				sandomierz_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+				central_poland_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+				wielkopolska_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+				masuria_area = { #pomerelia_area
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+
+	boh_pol = {
+		icon = mission_plc_golden_liberty
+		position = 6
+		required_missions = { boh_pol_relations } 
+		provinces_to_highlight = {
+			OR = {
+				area = malopolska_area
+				area = sandomierz_area
+				area = central_poland_area
+				area = wielkopolska_area
+				area = masuria_area #pomerelia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			if = {
+				limit = { exists = PLC } 
+				senior_union_with = PLC
+			}
+			else_if = {
+				limit = { exists = POL } 
+				senior_union_with = POL
+			}
+			else = {
+				malopolska_area = {
+					country_or_non_sovereign_subject_holds = ROOT
+					type = all
+				}
+				sandomierz_area = {
+					country_or_non_sovereign_subject_holds = ROOT
+					type = all
+				}
+				central_poland_area = {
+					country_or_non_sovereign_subject_holds = ROOT
+					type = all
+				}
+				wielkopolska_area = {
+					country_or_non_sovereign_subject_holds = ROOT
+					type = all
+				}
+				masuria_area = { #pomerelia_area
+					country_or_non_sovereign_subject_holds = ROOT
+					type = all
+				}
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "premyslid_mod"
+				duration = -1
+			}
+			poland_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+boh_branching_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = BOH
+		NOT = {
+			OR = {
+				has_country_flag = boh_hussite_flag
+				has_country_flag = boh_catholic_flag
+			}
+		}
+	}
+
+	boh_branching_3a = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { boh_troubles } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = boh_vaclav.tt
+				always = no
+			}
+		}
+
+		effect = { custom_tooltip = boh_vaclav.tt } 
+	}
+
+	boh_branching_3b = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = { boh_branching_3a } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = boh_vaclav.tt
+				always = no
+			}
+		}
+
+		effect = { custom_tooltip = boh_vaclav.tt } 
+	}
+
+	boh_branching_3c = {
+		icon = mission_unknown_mission
+		position = 5
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = boh_vaclav.tt
+				always = no
+			}
+		}
+
+		effect = { custom_tooltip = boh_vaclav.tt } 
+	}
+
+	boh_branching_3d = {
+		icon = mission_unknown_mission
+		position = 6
+		required_missions = { boh_branching_3c } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = boh_vaclav.tt
+				always = no
+			}
+		}
+
+		effect = { custom_tooltip = boh_vaclav.tt } 
+	}
+
+	boh_branching_3e = {
+		icon = mission_unknown_mission
+		position = 7
+		required_missions = {
+			boh_branching_3d
+			boh_branching_4d
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = boh_vaclav.tt
+				always = no
+			}
+		}
+
+		effect = { custom_tooltip = boh_vaclav.tt } 
+	}
+}
+boh_branching_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = BOH
+		NOT = {
+			OR = {
+				has_country_flag = boh_hussite_flag
+				has_country_flag = boh_catholic_flag
+			}
+		}
+	}
+
+	boh_branching_4a = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { boh_troubles } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = boh_vaclav.tt
+				always = no
+			}
+		}
+
+		effect = { custom_tooltip = boh_vaclav.tt } 
+	}
+
+	boh_branching_4b = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = { boh_branching_4a } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = boh_vaclav.tt
+				always = no
+			}
+		}
+
+		effect = { custom_tooltip = boh_vaclav.tt } 
+	}
+
+	boh_branching_4c = {
+		icon = mission_unknown_mission
+		position = 5
+		required_missions = { boh_branching_5b } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = boh_vaclav.tt
+				always = no
+			}
+		}
+
+		effect = { custom_tooltip = boh_vaclav.tt } 
+	}
+
+	boh_branching_4d = {
+		icon = mission_unknown_mission
+		position = 6
+		required_missions = { boh_branching_3c } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = boh_vaclav.tt
+				always = no
+			}
+		}
+
+		effect = { custom_tooltip = boh_vaclav.tt } 
+	}
+}
+boh_branching_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = BOH
+		NOT = {
+			OR = {
+				has_country_flag = boh_hussite_flag
+				has_country_flag = boh_catholic_flag
+			}
+		}
+	}
+
+	boh_branching_5a = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { boh_troubles } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = boh_vaclav.tt
+				always = no
+			}
+		}
+
+		effect = { custom_tooltip = boh_vaclav.tt } 
+	}
+
+	boh_branching_5b = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = {
+			boh_branching_5a
+			boh_branching_4a
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = boh_vaclav.tt
+				always = no
+			}
+		}
+
+		effect = { custom_tooltip = boh_vaclav.tt } 
+	}
+
+	boh_branching_5c = {
+		icon = mission_unknown_mission
+		position = 5
+		required_missions = { boh_branching_5b } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = boh_vaclav.tt
+				always = no
+			}
+		}
+
+		effect = { custom_tooltip = boh_vaclav.tt } 
+	}
+
+	boh_branching_5d = {
+		icon = mission_unknown_mission
+		position = 6
+		required_missions = { boh_branching_5c } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = boh_vaclav.tt
+				always = no
+			}
+		}
+
+		effect = { custom_tooltip = boh_vaclav.tt } 
+	}
+}
+boh_catholic_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = BOH
+		religion = catholic
+		has_country_flag = boh_catholic_flag
+	}
+
+	boh_compacts = {
+		icon = law_of_the_pious
+		position = 3
+		required_missions = { boh_troubles } 
+		provinces_to_highlight = {
+			OR = {
+				is_capital_of = PAP
+				AND = {
+					owner = { is_emperor = yes } 
+					is_capital = yes
+				}
+			}
+		}
+
+		trigger = {
+			PAP = {
+				has_opinion = {
+					who = ROOT
+					value = 150
+				}
+			}
+			OR = {
+				emperor = {
+					has_opinion = {
+						who = ROOT
+						value = 150
+					}
+				}
+				is_emperor = yes
+				is_part_of_hre = no
+			}
+		}
+
+		effect = { country_event = { id = aetas_boh.27 }  } 
+	}
+}
+both_cath_branching_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = BOH
+		religion = catholic
+		has_country_flag = boh_catholic_flag
+		NOT = {
+			OR = {
+				has_country_flag = boh_cath_tolerance_flag
+				has_country_flag = boh_cath_conversion_flag
+			}
+		}
+	}
+
+	boh_branching_cath_3a = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = { boh_compacts } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = boh_branching_cath.tt
+				always = no
+			}
+		}
+
+		effect = { custom_tooltip = boh_branching_cath.tt } 
+	}
+}
+boh_cath_tolerance_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = BOH
+		religion = catholic
+		has_country_flag = boh_catholic_flag
+		has_country_flag = boh_cath_tolerance_flag
+	}
+
+	boh_hus_tolerate = {
+		icon = weimar_classicism
+		position = 4
+		required_missions = { boh_compacts } 
+		provinces_to_highlight = {
+			owned_by = ROOT
+			religion = hussite
+			NOT = {
+				AND = {
+					has_tax_building_trigger = yes
+					pure_unrest = 0
+				}
+			}
+		}
+
+		trigger = {
+			has_idea_group = humanist_ideas
+			num_of_owned_provinces_with = {
+				NOT = { religion = catholic } 
+				region = north_german_region
+				pure_unrest = 0
+				has_tax_building_trigger = yes
+				value = 14
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "boh_tolerant_mod"
+				duration = -1
+			}
+		}
+	}
+}
+boh_cath_conversion_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = BOH
+		religion = catholic
+		has_country_flag = boh_catholic_flag
+		has_country_flag = boh_cath_conversion_flag
+	}
+
+	boh_convert_mission = {
+		icon = chivalry_is_not_dead
+		position = 4
+		required_missions = { boh_compacts } 
+		provinces_to_highlight = {
+			OR = {
+				area = erzgebirge_area
+				area = bohemia_area
+				area = sudetes_area
+				area = sumava_area
+			}
+			NOT = { religion = catholic } 
+		}
+
+		trigger = {
+			erzgebirge_area = {
+				type = all
+				religion = catholic
+			}
+			bohemia_area = {
+				type = all
+				religion = catholic
+			}
+			sudetes_area = {
+				type = all
+				religion = catholic
+			}
+			sumava_area = {
+				type = all
+				religion = catholic
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "boh_catholic_mod"
+				duration = -1
+			}
+		}
+	}
+}
+boh_cath_branch_3b = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = BOH
+		religion = catholic
+		has_country_flag = boh_catholic_flag
+	}
+
+	boh_nobility = {
+		icon = mission_pol_imperial_commonwealth
+		position = 5
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 60
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "boh_nobles"
+				duration = 36500
+			}
+		}
+	}
+
+	boh_integrate_mva = {
+		icon = empower_the_junkers
+		position = 6
+		required_missions = { boh_nobility } 
+		provinces_to_highlight = {
+			area = moravia_area
+			NOT = {
+				AND = {
+					owned_by = ROOT
+					is_core = ROOT
+				}
+			}
+		}
+
+		trigger = {
+			OR = {
+				moravia_area = {
+					owned_by = ROOT
+					is_core = ROOT
+					type = all
+				}
+				AND = {
+					exists = MVA
+					MVA = { is_subject_of = ROOT } 
+					5232 = {
+						owned_by = MVA
+						has_tax_building_trigger = yes
+						has_trade_building_trigger = yes
+						num_of_times_improved = 5
+					}
+					5231 = {
+						owned_by = MVA
+						has_tax_building_trigger = yes
+						has_trade_building_trigger = yes
+						num_of_times_improved = 5
+					}
+					4237 = {
+						owned_by = MVA
+						has_tax_building_trigger = yes
+						has_trade_building_trigger = yes
+						num_of_times_improved = 5
+					}
+				}
+			}
+		}
+
+		effect = {
+			5232 = { add_province_triggered_modifier = boh_rc_mod } #missing loc
+			265 = { add_province_triggered_modifier = boh_rc_mod } #missing loc
+			4237 = { add_province_triggered_modifier = boh_rc_mod } #missing loc
+		}
+	}
+
+	boh_nature_crown = {
+		icon = mission_plc_seats_power
+		position = 7
+		required_missions = {
+			boh_integrate_mva
+			boh_cath_sil
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = { reform_level = 10 } 
+
+		effect = { capital_scope = {
+			province_event = { id = aetas_boh.28 } #tricky event
+		} } 
+	}
+}
+boh_catholic_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = BOH
+		religion = catholic
+		has_country_flag = boh_catholic_flag
+	}
+
+	boh_sigis = {
+		icon = mission_sigi
+		position = 3
+		required_missions = { boh_troubles } 
+		provinces_to_highlight = {  } 
+
+		trigger = { NOT = { junior_union_with = HUN }  } 
+
+		effect = {
+			add_country_modifier = {
+				name = "boh_independent_mod"
+				duration = 7300
+			}
+		}
+	}
+
+	boh_succession = {
+		icon = friends_in_high_places
+		position = 4
+		required_missions = { boh_sigis } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			if = {
+				limit = { has_country_flag = elected_jiri_lux } 
+				NOT = { has_ruler = "Jirí I" } 
+			}
+			any_known_country = {
+				is_great_power = yes
+				dynasty = ROOT
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "boh_marriage"
+				duration = -1
+			}
+		}
+	}
+
+	boh_mei = {
+		icon = electorate_of_saxony
+		position = 5
+		required_missions = { boh_karel_iv } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 5303
+				province_id = 5304
+				province_id = 61
+				province_id = 5305
+				province_id = 5301
+				province_id = 4744
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			5303 = { country_or_non_sovereign_subject_holds = ROOT } 
+			5304 = { country_or_non_sovereign_subject_holds = ROOT } 
+			61 = { country_or_non_sovereign_subject_holds = ROOT } 
+			5305 = { country_or_non_sovereign_subject_holds = ROOT } 
+			5301 = { country_or_non_sovereign_subject_holds = ROOT } 
+			4744 = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "boh_mei_mod"
+				duration = -1
+			}
+			south_saxony_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			vogtland_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	boh_cath_sil = {
+		icon = take_silesia
+		position = 6
+		required_missions = { boh_nobility } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				AND = {
+					NOT = { exists = SIL } 
+					owns_core_province = 264
+					owns_core_province = 4723
+					owns_core_province = 263
+				}
+				AND = {
+					SIL = {
+						is_subject_of = ROOT
+						is_subject_of_type = crownland_subject
+						has_opinion = {
+							who = ROOT
+							value = 200
+						}
+					}
+				}
+			}
+		}
+
+		effect = {
+			custom_tooltip = boh_sil.tt
+			hidden_effect = {
+				if = {
+					limit = { exists = SIL } 
+					country_event = { id = aetas_boh.100 } 
+				}
+			}
+			264 = { add_province_triggered_modifier = boh_rc_mod } #missing loc
+			4723 = { add_province_triggered_modifier = boh_rc_mod } #missing loc
+			263 = { add_province_triggered_modifier = boh_rc_mod } #missing loc
+		}
+	}
+}
+boh_catholic_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = BOH
+		religion = catholic
+		has_country_flag = boh_catholic_flag
+	}
+
+	boh_hre_electors = {
+		icon = unite_the_wittelsbachs
+		position = 3
+		required_missions = { boh_troubles } 
+		provinces_to_highlight = {
+			is_capital = yes
+			owner = { is_elector = yes } 
+		}
+
+		trigger = {
+			calc_true_if = {
+				all_country = {
+					is_part_of_hre = yes
+					is_elector = yes
+					preferred_emperor = ROOT
+				}
+				amount = 4
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "boh_hre_mod"
+				duration = 18250
+			}
+		}
+	}
+
+	boh_karel_iv = {
+		icon = mission_karel_iv
+		position = 4
+		required_missions = { boh_hre_electors } 
+		provinces_to_highlight = {  } 
+
+		trigger = { is_emperor = yes } 
+
+		effect = {
+			add_country_modifier = {
+				name = "karel_iv_legacy"
+				duration = -1
+			}
+			5303 = { add_permanent_claim = ROOT } 
+			61 = { add_permanent_claim = ROOT } 
+			5304 = { add_permanent_claim = ROOT } 
+			5305 = { add_permanent_claim = ROOT } 
+			5301 = { add_permanent_claim = ROOT } 
+			4744 = { add_permanent_claim = ROOT } 
+			if = {
+				limit = { exists = MEI } 
+				add_casus_belli = {
+					target = MEI
+					type = cb_vassalize_mission
+					months = 120
+				}
+			}
+			5292 = { add_core = ROOT } 
+			5323 = { add_core = ROOT } 
+			1757 = { add_core = ROOT } 
+		}
+	}
+
+	boh_ober = {
+		icon = boh_humiliate_austria
+		position = 5
+		required_missions = { boh_karel_iv } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 5292
+				province_id = 5323
+				province_id = 1757
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			5292 = { country_or_non_sovereign_subject_holds = ROOT } 
+			5323 = { country_or_non_sovereign_subject_holds = ROOT } 
+			1757 = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		effect = {
+			add_prestige = 10
+			upper_bavaria_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			franconia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			add_casus_belli = {
+				target = PAL
+				type = cb_restore_personal_union
+				months = 480
+			}
+		}
+	}
+
+	boh_pal = {
+		icon = mission_winter_crown
+		position = 6
+		required_missions = { boh_ober } 
+		provinces_to_highlight = { owned_by = PAL } 
+
+		trigger = { senior_union_with = PAL } 
+
+		effect = {
+			add_country_modifier = {
+				name = "boh_pal_mod"
+				duration = -1
+			}
+			add_casus_belli = {
+				target = BRB
+				type = cb_restore_personal_union
+				months = 480
+			}
+			add_casus_belli = {
+				target = LUX
+				type = cb_restore_personal_union
+				months = 480
+			}
+		}
+	}
+}
+boh_hussite_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = BOH
+		OR = { 
+			religion = protestant
+			religion = reformed
+			religion = hussite
+			religion = anglican
+		}
+		has_country_flag = boh_hussite_flag
+	}
+
+	boh_suitor = {
+		icon = mission_korybut
+		position = 3
+		required_missions = { boh_troubles } 
+		provinces_to_highlight = { is_capital_of = LIT } 
+
+		trigger = {
+			LIT = {
+				has_opinion = {
+					who = ROOT
+					value = 100
+				}
+			}
+		}
+
+		effect = { country_event = { id = aetas_boh.11 }  } 
+	}
+
+	boh_mva = {
+		icon = protect_against_austria
+		position = 4
+		required_missions = { boh_hw } 
+		provinces_to_highlight = {
+			owned_by = MVA
+			NOT = { controlled_by = ROOT } 
+		}
+
+		trigger = {
+			all_province = {
+				owned_by = MVA
+				controlled_by = ROOT
+			}
+		}
+
+		effect = {
+			white_peace = MVA
+			create_subject = {
+				who = MVA
+				subject_type = crownland_subject
+			}
+			MVA = {
+				change_religion = hussite
+				capital_scope = { change_religion = hussite } 
+				random_owned_province = { change_religion = hussite } 
+				join_all_defensive_wars_of = BOH
+			}
+			5466 = { change_religion = hussite } 
+		}
+	}
+
+	boh_mva2 = {
+		icon = empower_the_junkers
+		position = 5
+		required_missions = { boh_mva } 
+		provinces_to_highlight = {
+			area = moravia_area
+			NOT = {
+				AND = {
+					owned_by = ROOT
+					is_core = ROOT
+				}
+			}
+		}
+
+		trigger = {
+			OR = {
+				moravia_area = {
+					owned_by = ROOT
+					is_core = ROOT
+					type = all
+				}
+				AND = {
+					exists = MVA
+					MVA = { is_subject_of = ROOT } 
+					5232 = {
+						owned_by = MVA
+						has_tax_building_trigger = yes
+						has_trade_building_trigger = yes
+						num_of_times_improved = 5
+					}
+					5231 = {
+						owned_by = MVA
+						has_tax_building_trigger = yes
+						has_trade_building_trigger = yes
+						num_of_times_improved = 5
+					}
+					4237 = {
+						owned_by = MVA
+						has_tax_building_trigger = yes
+						has_trade_building_trigger = yes
+						num_of_times_improved = 5
+					}
+				}
+			}
+		}
+
+		effect = {
+			5232 = { add_province_triggered_modifier = boh_rc_mod } #missing loc
+			265 = { add_province_triggered_modifier = boh_rc_mod } #missing loc
+			4237 = { add_province_triggered_modifier = boh_rc_mod } #missing loc
+		}
+	}
+
+	boh_hus_convert = {
+		icon = spread_piety
+		position = 6
+		required_missions = { boh_hus_win } 
+		provinces_to_highlight = {
+			OR = {
+				area = bohemia_area
+				area = erzgebirge_area
+				area = sudetes_area
+				area = sumava_area
+			}
+			NOT = {
+				AND = {
+					owned_by = ROOT
+					is_core = ROOT
+					religion = ROOT
+				}
+			}
+		}
+
+		trigger = {
+			erzgebirge_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+				religion = ROOT
+			}
+			bohemia_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+				religion = ROOT
+			}
+			sudetes_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+				religion = ROOT
+			}
+			sumava_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+				religion = ROOT
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "boh_hussite_unity"
+				duration = -1
+			}
+		}
+	}
+
+	boh_hab = {
+		icon = boh_humiliate_austria
+		position = 7
+		required_missions = {
+			boh_hus_convert
+			boh_convert_mva
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = austria_proper_area
+				area = upper_austria_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			austria_proper_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			upper_austria_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+
+		effect = {
+			inner_austria_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			lower_styria_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			carinthia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			real_carinthia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			add_casus_belli = {
+				target = STY
+				type = cb_restore_personal_union
+				months = 480
+			}
+		}
+	}
+
+	boh_unite_hab = {
+		icon = confront_the_lombards
+		position = 8
+		required_missions = { boh_hab } 
+		provinces_to_highlight = {
+			OR = {
+				area = inner_austria_area
+				area = lower_styria_area
+				area = carinthia_area
+				area = real_carinthia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			inner_austria_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			lower_styria_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			carinthia_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			real_carinthia_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "boh_hab_mod"
+				duration = -1
+			}
+		}
+	}
+}
+boh_hussite_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = BOH
+		OR = { 
+			religion = protestant
+			religion = reformed
+			religion = hussite
+			religion = anglican
+		}
+		has_country_flag = boh_hussite_flag
+	}
+
+	boh_hw = {
+		icon = mission_hussites
+		position = 3
+		required_missions = { boh_troubles } 
+		provinces_to_highlight = {  } 
+
+		trigger = { defensive_war_with = HUN } 
+
+		effect = {
+			country_event = { id = aetas_boh.6 } 
+			add_country_modifier = {
+				name = "hussite_wars_started"
+				duration = 7300
+			}
+		}
+	}
+
+	boh_secure_sor = {
+		icon = league_of_the_public_weal
+		position = 4
+		required_missions = { boh_hw } 
+		provinces_to_highlight = {
+			area = lusatia_area
+			owned_by = SOR
+		}
+
+		trigger = {
+			all_province = {
+				AND = {
+					area = lusatia_area
+					owned_by = SOR
+				}
+				controlled_by = ROOT
+			}
+		}
+
+		effect = {
+			white_peace = SOR
+			create_subject = {
+				who = SOR
+				subject_type = crownland_subject
+			}
+		}
+	}
+
+	boh_hus_win = {
+		icon = mission_huss_wars
+		position = 5
+		required_missions = {
+			boh_secure_sor
+			boh_mva
+			boh_sil
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = boh_hussite_kingdom.tt
+				has_country_flag = won_hussite_war
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "hussite_victor"
+				duration = -1
+			}
+			slovakia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			upper_hungary_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	boh_convert_mva = {
+		icon = bohemian_borderlands
+		position = 6
+		required_missions = { boh_hus_win } 
+		provinces_to_highlight = {
+			OR = {
+				area = moravia_area
+				area = silesia_area
+				area = upper_silesia_area
+				area = lusatia_area
+			}
+			NOT = {
+				OR = {
+					province_id = 5254
+					province_id = 1763
+					AND = {
+						country_or_non_sovereign_subject_holds = ROOT
+						religion = hussite
+					}
+				}
+			}
+		}
+
+		trigger = {
+			moravia_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				religion = hussite
+				type = all
+			}
+			silesia_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				religion = hussite
+				type = all
+			}
+			upper_silesia_area = {
+				OR = {
+					province_id = 5254
+					AND = {
+						country_or_non_sovereign_subject_holds = ROOT
+						religion = hussite
+					}
+				}
+				type = all
+			}
+			lusatia_area = {
+				OR = {
+					province_id = 1763
+					AND = {
+						country_or_non_sovereign_subject_holds = ROOT
+						religion = hussite
+					}
+				}
+				type = all
+			}
+		}
+
+		effect = {
+			add_prestige = 10
+			add_country_modifier = {
+				name = "hus_mod" #missing loc
+				duration = -1
+			}
+		}
+	}
+}
+boh_hussite_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = BOH
+		OR = { 
+			religion = protestant
+			religion = reformed
+			religion = hussite
+			religion = anglican
+		}
+		has_country_flag = boh_hussite_flag
+	}
+
+	boh_tabor = {
+		icon = mission_taborites
+		position = 3
+		required_missions = { boh_troubles } 
+		provinces_to_highlight = {
+			province_id = 5242
+			NOT = {
+				AND = {
+					num_of_times_improved = 3
+					has_tax_building_trigger = yes
+					religion = hussite
+				}
+			}
+		}
+
+		trigger = {
+			5242 = {
+				num_of_times_improved = 3
+				has_tax_building_trigger = yes
+				religion = hussite
+			}
+		}
+
+		effect = {
+			country_event = { id = aetas_boh.7 } 
+			custom_tooltip = boh_taborites.tt
+		}
+	}
+
+	boh_sil = {
+		icon = mission_mansure_army
+		position = 4
+		required_missions = { boh_hw } 
+		provinces_to_highlight = {
+			OR = {
+				area = upper_silesia_area
+				area = silesia_area
+			}
+			NOT = {
+				OR = {
+					province_id = 5254
+					AND = {
+						religion = hussite
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			}
+		}
+
+		trigger = {
+			silesia_area = {
+				OR = {
+					controlled_by = ROOT
+					controller = {
+						OR = {
+							alliance_with = ROOT
+							is_subject_of = ROOT
+						}
+					}
+				}
+				type = all
+			}
+			upper_silesia_area = {
+				OR = {
+					controlled_by = ROOT
+					controller = {
+						OR = {
+							alliance_with = ROOT
+							is_subject_of = ROOT
+						}
+					}
+				}
+				type = all
+			}
+		}
+
+		effect = {
+			white_peace = SIL
+			create_subject = {
+				who = SIL
+				subject_type = crownland_subject
+			}
+			add_country_modifier = {
+				name = "boh_sil_hus_mod"
+				duration = 14600
+			}
+		}
+	}
+
+	boh_sil_fiefs = {
+		icon = take_silesia
+		position = 5
+		required_missions = { boh_sil } 
+		provinces_to_highlight = {  } 
+
+		trigger = {
+			OR = {
+				AND = {
+					NOT = { exists = SIL } 
+					owns_core_province = 264
+					owns_core_province = 4723
+					owns_core_province = 263
+				}
+				AND = {
+					SIL = {
+						is_subject_of = ROOT
+						is_subject_of_type = crownland_subject
+						has_opinion = {
+							who = ROOT
+							value = 200
+						}
+					}
+				}
+			}
+		}
+
+		effect = {
+			custom_tooltip = boh_sil.tt
+			hidden_effect = {
+				if = {
+					limit = { exists = SIL } 
+					country_event = { id = aetas_boh.100 } 
+				}
+			}
+			264 = { add_province_triggered_modifier = boh_rc_mod } #missing loc
+			4723 = { add_province_triggered_modifier = boh_rc_mod } #missing loc
+			263 = { add_province_triggered_modifier = boh_rc_mod } #missing loc
+		}
+	}
+
+	boh_uph = {
+		icon = claim_the_borderlands
+		position = 6
+		required_missions = { boh_hus_win } 
+		provinces_to_highlight = {
+			OR = {
+				province_id = 5464
+				province_id = 5467
+				province_id = 5466
+				province_id = 5468
+				province_id = 1318
+				province_id = 5470
+				province_id = 5472
+			}
+			NOT = {
+				OR = {
+					controlled_by = ROOT
+					controller = {
+						OR = {
+							alliance_with = ROOT
+							is_subject_of = ROOT
+						}
+					}
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+
+		trigger = {
+			if = {
+				limit = { NOT = { exists = UPH }  } 
+				5464 = {
+					OR = {
+						controlled_by = ROOT
+						controller = {
+							OR = {
+								alliance_with = ROOT
+								is_subject_of = ROOT
+							}
+						}
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				5466 = {
+					OR = {
+						controlled_by = ROOT
+						controller = {
+							OR = {
+								alliance_with = ROOT
+								is_subject_of = ROOT
+							}
+						}
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				5467 = {
+					OR = {
+						controlled_by = ROOT
+						controller = {
+							OR = {
+								alliance_with = ROOT
+								is_subject_of = ROOT
+							}
+						}
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				5468 = {
+					OR = {
+						controlled_by = ROOT
+						controller = {
+							OR = {
+								alliance_with = ROOT
+								is_subject_of = ROOT
+							}
+						}
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				1318 = {
+					OR = {
+						controlled_by = ROOT
+						controller = {
+							OR = {
+								alliance_with = ROOT
+								is_subject_of = ROOT
+							}
+						}
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				5470 = {
+					OR = {
+						controlled_by = ROOT
+						controller = {
+							OR = {
+								alliance_with = ROOT
+								is_subject_of = ROOT
+							}
+						}
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				5472 = {
+					OR = {
+						controlled_by = ROOT
+						controller = {
+							OR = {
+								alliance_with = ROOT
+								is_subject_of = ROOT
+							}
+						}
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			}
+			else = {
+				slovakia_area = {
+					country_or_non_sovereign_subject_holds = ROOT
+					type = all
+				}
+				upper_hungary_area = {
+					country_or_non_sovereign_subject_holds = ROOT
+					type = all
+				}
+			}
+		}
+
+		effect = {
+			if = {
+				limit = { NOT = { exists = UPH }  } 
+				upper_hungary_area = { province_event = { id = aetas_boh.29 } }
+			}
+			alfold_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			transdanubia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			add_casus_belli = {
+				target = HUN
+				type = cb_restore_personal_union
+				months = 480
+			}
+		}
+	}
+
+	boh_hun = {
+		icon = king_of_hungary
+		position = 7
+		required_missions = { boh_uph } 
+		provinces_to_highlight = {
+			OR = {
+				area = alfold_area
+				area = transdanubia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+		}
+
+		trigger = {
+			alfold_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			transdanubia_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "boh_hun_mod"
+				duration = -1
+			}
+		}
+	}
+}

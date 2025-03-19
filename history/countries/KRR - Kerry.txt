@@ -1,0 +1,23 @@
+government = monarchy
+add_government_reform = hiberno_norman_reform
+government_rank = 1
+technology_group = western
+religion = catholic
+primary_culture = hiberno_norman
+add_accepted_culture = irish
+capital = 5176
+
+# FitzMaurices Earls of Kerry
+
+1399.1.1 = {
+	monarch = {
+		name = "Thomas II"
+		dynasty = "FitzMaurice"
+		culture = hiberno_norman
+		birth_date = 1392.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+

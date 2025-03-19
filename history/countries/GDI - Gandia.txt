@@ -1,0 +1,22 @@
+government = monarchy
+add_government_reform = appanage_reform
+government_rank = 1
+primary_culture = catalan
+add_accepted_culture = aragonese 
+add_accepted_culture = mudejar
+religion = catholic
+technology_group = western
+capital = 3360 #Gandia
+fixed_capital = 3360
+
+1412.1.1 = { 
+	monarch = { 
+		name = "Alfons II" #Alfons V as Count of Ribagorça
+		dynasty = "de Barcelona"
+		birth_date = 1358.1.1
+		death_date = 1422.1.1
+		adm = 3
+		dip = 3
+		mil = 1
+	}
+}

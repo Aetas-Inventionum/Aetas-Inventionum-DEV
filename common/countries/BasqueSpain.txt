@@ -1,0 +1,138 @@
+#Country Name: Please see filename.
+
+graphical_culture = latingfx
+
+color = { 252  233  58 } 
+revolutionary_colors = { 5 8 5 }
+
+historical_idea_groups = {
+	maritime_ideas
+	religious_ideas
+	defensive_ideas
+	economic_ideas
+	innovativeness_ideas
+	spy_ideas
+	offensive_ideas
+	diplomatic_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	spanish_tercio
+	french_caracolle
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Eneko #1" = 1 #Eneko // Inico
+	"Gartzea #4" = 10 #Gartzea // García
+	"Orti #1" = 10 #Orti // Fortún
+	"Antso #7" = 10 # Antso // Sancho
+	"Semeno #1" = 5 #Semeno // Ximeno
+	"Petri #1" = 5 #Petri // Pero
+	"Alfontso #1" = 5 #Alfontso // Alifonso
+	"Tibalt #2" = 5 #Tibalt // Teobaldo
+	"Henrike #1"= 5 #Henrike // Henrique
+	"Filipe #3" = 15 #Filipe // Celipe
+	"Febo #0" = 5
+	"Luis #1" = 5 #Koldobika // Luís
+	"Joanes #1" = 0 #Joanes // Chuan
+	"Karlos #3" = 25 #Karlos // Carlos
+	"Oier #0" = 0
+	"Aimar #0" = 0
+	"Antoni #0" = 0 #Antoni
+	"Beñat #0" = 0 #Beñat // Beñat
+	"Gaizka #0" = 0 #Gaizka // Salbador
+	"Gorka #0" = 0 #Gorka // Chorche
+	"Gotzon #0" = 0
+	"Ibai #0" = 0
+	"Iker #0" = 0 #Iker // Visitación
+	"Imanol #0" = 0 #Imanol // Manuel
+	"Ximen #0" = 0 #Ximen // Simeón
+	"Josetxu #0" = 0 #Josetxu // Chosé
+	"Chosu #0" = 0 
+	"Mikel #0" = 0 #Mikel // Miguel
+	"Txiki #0" = 0 #Txiki // Pequeño
+	"Patxi #0" = 10 #Patxi // Francho
+	"Paco #0" = 0 #Patxi
+	"Urtzi #0" = 0
+	"Xabier #0" = 0
+	"Betran #0" = 0
+	"Errodigo #0" = 0
+	"Marko #0" = 0 #Marco
+	"Lantzelot #0" = 5
+	"Gartzea #0 Lopitz" = 0
+	"Fernando #0" = 0
+	"Godofre #0" = 5
+	"Leonel #0" = 5
+	"Jakue #0" = 2
+	"Pierres #0" = 0
+	"Gaston #0" = 0
+	"Martin #0" = 0
+	"Luis #0 Karlitz" = 0
+	"Arnaldo #0" = 0
+	"Joanes #0 Enrikez" = 0
+	"Tristan #0" = 0
+	"Lope #0" = 0
+	"Lope #0 Enekoitz" = 0
+	"Eneko #0 Lopitz" = 0
+	"Petri #0 Peritz" = 0
+	"Martin #0 Enrikez" = 0
+	"Diego #0 Lopitz" = 0
+ 
+	"Joana #2" = -10 #Joana // Chuana
+	"Ana #0" = -1
+	"Margarita #0" = -1
+	"Beatriz #0" = 0
+	"Blanka #0" = -10 #Zuria // Blanca
+	"Maria #0 Mikel" = -1
+	"Leonor #0" = -1 #Leonor // Alionor
+	"Maria #0" = -1
+	"Joana #0 Enrikez" = -1
+	"Klara #0" = -1
+	"Magdalena #0" = -1
+	"Katalina #0" = -5
+	"Antsa #0" = -1
+	"Henriketa #0" = -1
+}
+
+leader_names = {
+	#all names from historical mentions and assosciated noble families of the kingdom of navarre
+	Aibar Aiarakoa Agaramontekoa "d'Artieda" 
+	Barasoaingoa Baldakoa Baztangoa Beaumontekoa Belasgoa Beltzuntze Butroekoa
+	Callejakoa
+	Enbeita Enparankoa "d'Esparza" Ezpeletakoa
+	Garrokoa Gebarakoa Gomez
+	Harokoa
+	Idiakez Iruñekoa
+	Lakarrakoa Lazkanokoa Lehetekoa "de Lizarazu" "de Lizásoain" Loiolakoa 
+	Maulekoa Markesgoa Mendoza
+	Nuñez
+	Oñacino Orbe Ordóñez Ortiz "d'Otza"
+	Peraltakoa
+}
+
+ship_names = {
+	Atlántida "Conde de Evreux" "Conde de Foix" "Conde de Guenduláin" "Conde de Lerín"
+	"Don Jimeno" "Duque de Armagnac" "Duque de Champaña"
+	"El Agramontés" "El Beaomontés" "El Bearnés" "El Cruzado Navarro" "El Montañés" "El Navarro" "El Salvador" "El Trobador" "El Viñador" "Emperador Hispánico" Europa
+	"Mar de Navarra" "Nuestra Sra de Leyre" "Príncipe de Viana"
+	"Reina Juana" "Rey Enrique" "Rey García" "Rey Sancho" "Reyno de Navarra" "Reyno de Pamplona"
+	"San Agustín" "San Andrés" "San Antonio" "San Carlos" "San Enrique" "San Esteban" "San Fermín" "San Francisco" "San Francisco Xabier" "San Gregorio" "San Juan" "San León" "San Miguel Arcángel" "San Raimundo" "San Virila"
+	"Santa Ana" "Santa Catalina" "Santa Juana" "Santa Leonor" "Santísima Trinidad" "Señor de Tudela"
+	Vasconia
+}
+
+army_names = { 
+	"Nafarroako Armada" "$PROVINCE$ko Armada"
+}

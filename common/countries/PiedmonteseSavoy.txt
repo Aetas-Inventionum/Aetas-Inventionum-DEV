@@ -1,0 +1,129 @@
+#Country Name: Please see filename.
+
+graphical_culture = latingfx
+
+color = { 201 119 115 }	#previous 235  196 231
+
+revolutionary_colors = { 5  13  6 } #Republic of Alba
+
+historical_idea_groups = {
+	administrative_ideas
+	defensive_ideas
+	diplomatic_ideas
+	offensive_ideas
+	trade_ideas
+	economic_ideas
+	innovativeness_ideas
+	quality_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	italian_condotta
+	french_caracolle
+	anglofrench_line
+	french_dragoon
+	french_bluecoat
+	french_carabinier
+	french_impulse
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Amedeo #8" = 40
+	"Carlo #0" = 40
+	"Ludovico #0" = 20
+	"Filiberto #0" = 40
+	"Carlo Emanuele #0" = 40
+	"Umberto #3" = 5
+	"Pietro #2" = 5
+	"Emanuele Filiberto #0" = 10
+	"Tomasso #2" = 1
+	"Filippo #1" = 5
+	"Aimone #2" = 1
+	"Edoardo #1" = 1
+	"Francesco Giacinto #0" = 5
+	"Gian #0" = 0
+	"Gian Amedeo #0" = 0
+	"Bonifacio #1" = 1
+	"Vittorio Emanuele #0" = 5
+	"Vittorio Amedeo #0" = 10
+	"Vittorio #0" = 5
+	"Luis Emanuele #0" = 1
+	"Carlo Felice #0" = 1
+	"Agosto #0" = 0
+	"Giuseppe #0" = 0
+	"Baroldo #0" = 0
+	"Teobaldo #0" = 0
+	"Grimaldi #0" = 0
+	"Antonio #0" = 0
+	"Gulielm #0" = 0
+	"Roberto #0" = 0
+	"Andrea #0" = 0
+	"Francesco #0" = 0
+	"Giacomo #0" = 0
+	"Alessandro #0" = 0
+	"Gabriel #0" = 0
+	"Enrico #0" = 0
+
+	"Adelaide #0" = -1
+	"Carolina #0" = -1
+	"Maria Cristina #0" = -5
+	"Bona #0" = -1
+	"Anna #0" = -1
+	"Bianca #0" = -1
+	"Maria Vittoria #0" = -1
+	"Maria Clotilde #0" = -1
+	"Alissandra #0" = -1
+	"Luisa #0" = -1
+	"Margherita #0" = -1
+	"Teresa #0" = -1
+	"Giovanna #0" = -1
+}
+
+leader_names = {
+	"di Asti" "di Acquabella"
+	"di Belforte" Boetto Borgonio "di Brissogne"
+	"di Castel del Monte" "del Canavese" "di Challant" "di Cly" "di Conflans" "di Cuneo" "di Cumiana" Cusani
+	Fabri "di Farian" "di Fossigni" 
+	"di Ginevra" "di Gignod" "di Gruyères" Grimaldi
+	"di Lanzo" "di Leinì" "di Losanna"
+	"di Massran" "di Mentone" "di Monfrà"
+	"di Nizza" Novarina "di Nus"
+	"di Osta"
+	Roncas
+	"di Piemonte" "di Prangins"
+	"di Sarre" "di Savoia" "di Susa"
+	Tassoni "di Torino"
+}
+
+ship_names = { 
+	"Adelaide di Susa" Albane Aimone "Amedeo Coda" Annecy
+	Bauges Bellevaux Biancamano Bonifacio
+	"Casa di Savoia" Chablais Chambéry Contamine-sur-Arve
+	"Dora Riparia"
+	Edoardo Entremont
+	Faucigny Filippo
+	Genevois Giacomo Jaquerio
+	Hautecombe
+	"Umberto Sabaudia" 
+	"Lac du Bourget" Leysse  
+	Maurienne  
+	Oddone 
+	"Pietro I" Piemonte "fiume Po"
+	"Sacra Sindone" "San Domenico" "San Donato" "San Paolo" "Santa Rita" "San Salvario" "Stura di Lanzo" Sangone 
+	Talloires Tamié Tommaso Tarentaise Torino
+	"Val d'Aosta" 
+}
+
+army_names = {
+	"Corpo Savoiardo" "Armata Piemontese" "Armata di $PROVINCE$"
+}
+fleet_names = { 
+	"Flotta di $PROVINCE$"
+}

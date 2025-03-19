@@ -1,0 +1,39 @@
+#1774 - Treviso
+#Area - Venetia
+#Region - Italy
+
+#Core Details
+capital = "Treviso"
+is_city = yes
+owner = VEN
+controller = VEN
+
+#Demographics
+culture = venetian
+religion = catholic
+
+#Development and Trade
+base_tax = 5
+base_production = 5
+base_manpower = 5
+trade_goods = books
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = VEN
+add_core = TVO
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+
+#Special Modifiers
+seat_in_parliament = yes
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

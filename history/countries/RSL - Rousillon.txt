@@ -1,0 +1,7 @@
+government = monarchy
+add_government_reform = appanage_reform
+primary_culture = catalan
+religion = catholic
+technology_group = western
+capital = 197 #rousillon
+fixed_capital = 197

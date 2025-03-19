@@ -1,0 +1,8 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+primary_culture = ubykh
+religion = xabzist
+secondary_religion = orthodox
+technology_group = eastern
+capital = 6226 #sochi

@@ -1,0 +1,38 @@
+#6550 - Noia
+#Area - Galicia
+#Region - Iberia
+
+#Core Details
+capital = "Muros"   #and Noia
+is_city = yes
+owner = TTA
+controller = TTA
+
+#Demographics
+culture = galician
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 3
+base_manpower = 2
+trade_goods = fish   #many fishing harbours in those rias, mainly sardines
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = TTA
+add_core = GAL
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

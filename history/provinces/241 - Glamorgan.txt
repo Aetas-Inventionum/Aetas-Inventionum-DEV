@@ -1,0 +1,39 @@
+#241 - Glamorgan
+#Area - Wales
+#Region - British Isles
+
+#Core Details
+capital = "Cardiff"
+is_city = yes
+owner = WLM
+controller = WLM
+
+#Demographics
+culture = cambro_norman
+religion = catholic
+
+#Development and Trade
+base_tax = 1
+base_production = 2
+base_manpower = 2
+trade_goods = iron  #forest of dean iron ores
+latent_trade_goods = { coal }
+
+#Cores and Occupation (Alphabetical after current)
+add_core = WLM
+add_core = WLS
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

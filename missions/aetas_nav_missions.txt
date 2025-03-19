@@ -1,0 +1,2567 @@
+ai_nav_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = NAV  
+			AND = { 
+				was_tag = NAV 
+				tag = SPA 
+			}
+		}
+	} 
+
+	nav_marriage = {
+		icon = mission_blanka
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = blanka_married.tt
+				OR = { 
+					has_country_flag = nav_foix_missions_flag
+					has_country_flag = nav_trastamara_missions_flag
+					has_country_flag = nav_evreux_missions_flag
+				}
+			}
+		} 
+
+		effect = {  
+			add_stability = 1
+			add_country_modifier = { 
+				name = nav_celebrations
+				duration = 1825
+			}
+		} 
+	}
+}
+ai_nav_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = NAV  
+			AND = { 
+				was_tag = NAV 
+				tag = SPA 
+			}
+		}
+	} 
+
+	nav_merindades = {
+		icon = mission_navarre_fueros
+		position = 1
+		provinces_to_highlight = {  
+			area = basque_country
+			owned_by = ROOT 
+			NOT = { has_state_edict = edict_navarrese_fueros }
+		} 
+
+		trigger = {  
+			has_reform = nav_fueros_reform
+			basque_country = { has_state_edict = edict_navarrese_fueros }
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = nav_fueros_mod2
+				duration = 18250
+			}
+		} 
+	}
+
+	nav_cortes = {
+		icon = immaculate_government
+		position = 2
+		required_missions = {
+			nav_merindades
+			nav_marriage
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 70
+			}
+			NOT = {
+				estate_influence = {
+					estate = estate_burghers 
+					influence = 40
+				}
+			}
+			estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 70
+			}
+			NOT = {
+				estate_influence = {
+					estate = estate_nobles
+					influence = 40
+				}
+			}
+			estate_loyalty = {
+				estate = estate_church
+				loyalty = 70
+			}
+			NOT = {
+				estate_influence = {
+					estate = estate_church
+					influence = 40
+				}
+			}
+			if = { 
+				limit = { has_parliament = yes }
+				num_of_owned_provinces_with = { 
+					has_seat_in_parliament = yes
+					value = 4
+				}
+				is_variable_equal = { 
+					which = nav_issues_passed
+					value = 5
+				}
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = hiru_estatuak
+				duration = -1
+			}
+		} 
+	}
+
+	nav_eliminate_factionalism = {
+		icon = mission_jacquerie_nav
+		position = 3
+		required_missions = { nav_cortes } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			NOT = { 
+				any_country = { has_disaster = war_of_the_bands }
+			}
+			stability = 3
+			adm_power = 100
+		} 
+
+		effect = {  
+			add_adm_power = -100
+			remove_faction = agramonts
+			remove_faction = beaumonts
+		} 
+	}
+}
+ai_nav_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = NAV  
+			AND = { 
+				was_tag = NAV 
+				tag = SPA 
+			}
+		}
+	} 
+
+	nav_st_james_caminos = {
+		icon = show_piety
+		position = 1
+		provinces_to_highlight = {  
+			province_id = 3266
+			NOT = { 
+				AND = { 
+					owned_by = ROOT 
+					is_core = ROOT 
+					has_trade_building_trigger = yes 
+					num_of_times_improved = 3
+				}
+			}
+		} 
+
+		trigger = {  
+			owns_core_province = 3266
+			3266 = { 
+				has_trade_building_trigger = yes 
+				num_of_times_improved = 3
+			}
+		} 
+
+		effect = {  
+			3266 = { 
+				remove_province_modifier = ai_camino_frances
+				add_permanent_province_modifier = { 
+					name = nav_camino_mod
+					duration = -1
+				}
+			}
+		} 
+	}
+
+	nav_canals = {
+		icon = develop_the_po_valley
+		position = 2
+		required_missions = {
+			nav_unite_boroughs
+			nav_st_james_caminos
+		}
+		provinces_to_highlight = {  
+			OR = { 
+				province_id = 210
+				province_id = 3369
+			}
+			NOT = { 
+				AND = { 
+					owned_by = ROOT 
+					is_core = ROOT 
+					num_of_times_improved = 5
+				}
+			}
+		} 
+
+		trigger = {  
+			owns_core_province = 210 
+			210 = { num_of_times_improved = 5 }
+			owns_core_province = 3369
+			3369 = { num_of_times_improved = 5 }
+		} 
+
+		effect = {  
+			210 = { add_building = mb_canal }
+			3369 = { add_building = mb_canal }
+		} 
+	}
+
+	nav_erribera_castles = {
+		icon = mission_olite
+		position = 2
+		required_missions = { nav_canals } 
+		provinces_to_highlight = {  
+			province_id = 3368
+			NOT = { 
+				AND = { 
+					owned_by = ROOT 
+					is_core = ROOT 
+					has_great_project = {
+						type = ai_palace_olite
+						tier = 3
+					}
+				}
+			}
+		} 
+
+		trigger = {  
+			owns_core_province = 3368
+			3368 = { 
+				has_great_project = {
+					type = ai_palace_olite
+					tier = 3
+				}
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = {
+				name = nav_castles
+				duration = -1
+			}
+		} 
+	}
+
+	nav_tudela = {
+		icon = return_visby_to_the_league
+		position = 4
+		provinces_to_highlight = {  
+			province_id = 3368
+			NOT = { 
+				AND = { 
+					owned_by = ROOT 
+					is_core = ROOT 
+				}
+			}
+		} 
+
+		trigger = {  
+			stability = 1 
+			owns_core_province = 3368
+			3368 = { religion = jewish }
+		} 
+
+		effect = { country_event = { id = aetas_nav.1 } } 
+	}
+}
+nav_tudela_branching_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = { 
+			tag = NAV  
+			AND = { 
+				was_tag = NAV 
+				tag = SPA 
+			}
+		}
+		NOT = {
+			OR = {
+				has_country_flag = nav_tolerance_missions_flag
+				has_country_flag = nav_expulsion_missions_flag
+			}
+		}
+	}
+
+	nav_locked_4d = {
+		icon = mission_unknown_mission
+		position = 5
+		required_missions = { nav_tudela } 
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = nav_tutera_branching.tt
+		} 
+	}
+}
+nav_jewish_tudela_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = NAV
+		has_country_flag = nav_tolerance_missions_flag
+	}
+
+	nav_tudela_refugees = {
+		icon = mission_cope_with_refugees
+		position = 5
+		required_missions = { nav_tudela } 
+		provinces_to_highlight = {  
+			province_id = 3368
+			NOT = { 
+				AND = { 
+					owned_by = ROOT 
+					is_core = ROOT
+					religion = jewish 
+					AND = { 
+						province_is_or_accepts_culture = yes 
+						culture = sephardic
+					}
+				}
+			}
+		} 
+
+		trigger = {  
+			has_idea_group = humanist_ideas
+			owns_core_province = 3368
+			3368 = { 
+				religion = jewish
+				AND = { 
+					province_is_or_accepts_culture = yes 
+					culture = sephardic
+				}
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = tutera_refugees.tt
+			set_country_flag = tutera_refugees_flag
+		} 
+	}
+}
+nav_catholic_tudela_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = { 
+			tag = NAV  
+			AND = { 
+				was_tag = NAV 
+				tag = SPA 
+			}
+		}
+		has_country_flag = nav_expulsion_missions_flag
+	}
+
+	nav_tudela_expel = {
+		icon = mission_expel_the_moriscos
+		position = 5
+		required_missions = { nav_tudela } 
+		provinces_to_highlight = {  
+			province_id = 3368
+			NOT = { 
+				AND = { 
+					owned_by = ROOT 
+					is_core = ROOT 
+					religion = catholic 
+				}
+			}
+		} 
+
+		trigger = {  
+			owns_core_province = 3368
+			3368 = { religion = catholic }
+		} 
+
+		effect = {  
+			3368 = { 
+				if = { 
+					limit = { culture = sephardic }
+					change_culture = ROOT 
+				}
+				add_province_modifier = { 
+					name = repop_tutera
+					duration = 7300
+				}
+			}
+		} 
+	}
+}
+ai_nav_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = NAV  
+			AND = { 
+				was_tag = NAV 
+				tag = SPA 
+			}
+		}
+	} 
+
+	nav_unite_boroughs = {
+		icon = mission_karlos_good
+		position = 1
+		provinces_to_highlight = {  
+			province_id = 210 
+			NOT = { 
+				AND = { 
+					owned_by = ROOT 
+					is_core = ROOT 
+					is_capital = yes  
+				}
+			}
+		} 
+
+		trigger = {  
+			owns_core_province = 210 
+			capital = 210
+			stability = 1
+			estate_loyalty = { 
+				estate = estate_burghers
+				loyalty  = 60
+			}
+		} 
+
+		effect = { country_event = { id = aetas_nav.8 } } 
+	}
+
+	nav_st_mary = {
+		icon = mission_pamplona_cathedral
+		position = 2
+		required_missions = { nav_unite_boroughs } 
+		provinces_to_highlight = {  
+			province_id = 210
+			NOT = { 
+				AND = { 
+					owned_by = ROOT
+					is_core = ROOT 
+					is_capital = yes 
+					has_tax_building_trigger = yes 
+					num_of_times_improved = 5
+				}
+			}
+		} 
+
+		trigger = {  
+			owns_core_province = 210 
+			capital = 210 
+			210 = {
+				has_tax_building_trigger = yes 
+				num_of_times_improved = 5
+			}
+		} 
+
+		effect = {  
+			210 = { 
+				add_building = cathedral
+				add_province_modifier = { 
+					name = pamplona_cat_mod
+					duration = -1
+				}
+			}
+		} 
+	}
+
+	nav_brocario = {
+		icon = mission_brocario
+		position = 3
+		required_missions = { nav_st_mary } 
+		provinces_to_highlight = {  
+			province_id = 210 
+			NOT = { 
+				AND = { 
+					owned_by = ROOT 
+					is_core = ROOT 
+					has_production_building_trigger = yes 
+				}
+			}
+		} 
+
+		trigger = {  
+			is_institution_enabled = printing_press
+			owns_core_province = 210
+			210 = { has_production_building_trigger = yes }
+		} 
+
+		effect = { country_event = { id = aetas_nav.11 } } 
+	}
+
+	nav_religion = {
+		icon = mission_spread_the_reformation
+		position = 5
+		required_missions = {
+			nav_tudela
+			nav_brocario
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			is_religion_enabled = reformed 
+			OR = { 
+				any_province = { 
+					OR = { 
+						region = france_region
+						region = iberia_region
+					}
+					religion = reformed 
+				}
+				religion = reformed
+			}
+		} 
+
+		effect = {  
+			if = { 
+				limit = { religion = reformed }
+				custom_tooltip = nav_huguenot_missions.tt
+				set_country_flag = nav_huguenot_missions_flag
+				swap_non_generic_missions = yes 
+			}
+			else = { country_event = { id = aetas_nav.12 } }
+		} 
+	}
+}
+nav_branching_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = { 
+			tag = NAV  
+			AND = { 
+				was_tag = NAV 
+				tag = SPA 
+			}
+		}
+		NOT = {
+			OR = {
+				has_country_flag = nav_trastamara_missions_flag
+				has_country_flag = nav_foix_missions_flag
+				has_country_flag = nav_evreux_missions_flag
+			}
+		}
+	}
+
+	nav_locked_1a = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { nav_marriage } 
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = nav_branching.tt
+		} 
+	}
+
+	nav_locked_1b = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { nav_locked_1a } 
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = nav_branching.tt
+		} 
+	}
+
+	nav_locked_1c = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = { nav_locked_1b } 
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = nav_branching.tt
+		} 
+	}
+
+	nav_locked_1d = {
+		icon = mission_unknown_mission
+		position = 5
+		required_missions = {
+			nav_locked_1c
+			nav_locked_2c
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = nav_branching.tt
+		}  
+	}
+}
+nav_branching_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = { 
+			tag = NAV  
+			AND = { 
+				was_tag = NAV 
+				tag = SPA 
+			}
+		}
+		NOT = {
+			OR = {
+				has_country_flag = nav_trastamara_missions_flag
+				has_country_flag = nav_foix_missions_flag
+				has_country_flag = nav_evreux_missions_flag
+			}
+		}
+	}
+
+	nav_locked_2a = {
+		icon = mission_unknown_mission
+		position = 2
+		required_missions = { nav_marriage } 
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = nav_branching.tt
+		} 
+	}
+
+	nav_locked_2b = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { nav_locked_2a } 
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = nav_branching.tt
+		} 
+	}
+
+	nav_locked_2c = {
+		icon = mission_unknown_mission
+		position = 4
+		required_missions = { nav_locked_2b } 
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = nav_branching.tt
+		} 
+	}
+}
+ai_nav_trastamara_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = { 
+			tag = NAV  
+			AND = { 
+				was_tag = NAV 
+				tag = SPA 
+			}
+		}
+		has_country_flag = nav_trastamara_missions_flag
+	}
+
+	nav_viana = {
+		icon = mission_viana
+		position = 2
+		required_missions = { nav_marriage } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = { 
+				tooltip = nav_chose_viana.tt
+				has_country_flag = nav_viana_flag
+				has_country_flag = ara_nav_reaction_flag
+			}
+			OR = { 
+				dynasty = ARA
+				dynasty = "de Trastámara"
+			}
+			is_lesser_in_union = no 
+			is_at_war = no 
+		} 
+
+		effect = {  
+			add_stability = 1
+			if = { 
+				limit = { 
+					exists = ARA 
+					NOT = { senior_union_with = ARA }
+				}
+				add_casus_belli = {
+					target = ARA
+					type = cb_restore_personal_union
+					months = 480
+				}
+			}
+			else = { 
+				aragon_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+				catalonia_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+				valencia_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+				baleares_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		} 
+	}
+
+	nav_ara_union = {
+		icon = mission_ferrando_ii
+		position = 3
+		required_missions = { nav_viana } 
+		provinces_to_highlight = {  
+			OR = { 
+				area = aragon_area
+				area = catalonia_area
+				area = valencia_area
+				area = baleares_area
+				owned_by = ARA 
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			if = { 
+				limit = { 
+					exists = ARA 
+					NOT = { senior_union_with = ARA }
+				}
+				senior_union_with = ARA 
+			}
+			else = { 
+				aragon_area = { 
+					country_or_non_sovereign_subject_holds = ROOT 
+					type = all 
+				}
+				catalonia_area = { 
+					country_or_non_sovereign_subject_holds = ROOT 
+					type = all 
+				}
+				valencia_area = { 
+					country_or_non_sovereign_subject_holds = ROOT 
+					type = all 
+				}
+				baleares_area = { 
+					country_or_non_sovereign_subject_holds = ROOT 
+					type = all 
+				}
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = nav_ara_union_mod
+				duration = -1
+			}
+		} 
+	}
+
+	nav_cas = {
+		icon = mission_castillian_aggression
+		position = 4
+		required_missions = {
+			nav_old
+			nav_ara_union
+		}
+		provinces_to_highlight = {  
+			OR = { 
+				area = castille_area
+				area = leon_area
+				area = asturias_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			castille_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+			leon_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+			asturias_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = basque_conquests
+				duration = 18250
+			}
+			galicia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			extremadura_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			lamancha_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			murcia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			upper_andalucia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			lower_andalucia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			granada_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	nav_bsp = {
+		icon = mission_subjugate_navarra
+		position = 5
+		required_missions = { nav_cas } 
+		provinces_to_highlight = {  
+			OR = { 
+				area = galicia_area
+				area = extremadura_area
+				area = lamancha_area
+				area = murcia_area
+				area = upper_andalucia_area
+				area = lower_andalucia_area
+				area = granada_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			galicia_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+			extremadura_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+			lamancha_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+			murcia_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+			upper_andalucia_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+			lower_andalucia_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+			granada_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+			NOT = { 
+				OR = { 
+					exists = CAS 
+					exists = SPA 
+					exists = SPN 
+				}
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = basque_hispania
+				duration = -1
+			}
+			iberia_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+}
+ai_nav_trastamara_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = { 
+			tag = NAV  
+			AND = { 
+				was_tag = NAV 
+				tag = SPA 
+			}
+		}
+		has_country_flag = nav_trastamara_missions_flag
+	}
+
+	nav_gpk = {
+		icon = mission_gipuzkoa
+		position = 2
+		required_missions = { nav_marriage } 
+		provinces_to_highlight = {  
+			province_id = 4961
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			4961 = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		effect = {  
+			4961 = { 
+				add_permanent_province_modifier = { 
+					name = gpk_mod
+					duration = -1
+				}
+			}
+			basque_country = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	nav_old = {
+		icon = mission_unite_home_region
+		position = 3
+		required_missions = { nav_gpk } 
+		provinces_to_highlight = {  
+			area = basque_country
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			basque_country = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = nav_basques
+				duration = 7300
+			}
+			castille_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			leon_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			asturias_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	nav_bilbao = {
+		icon = mission_early_game_buildings
+		position = 4
+		required_missions = { nav_old } 
+		provinces_to_highlight = {  
+			province_id = 209 
+			NOT = { 
+				AND = { 
+					country_or_non_sovereign_subject_holds = ROOT 
+					has_shipyard_building_trigger = yes 
+					base_production = 10 
+				}
+			}
+		} 
+
+		trigger = {  
+			209 = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				has_shipyard_building_trigger = yes 
+				base_production = 10 
+			}
+		} 
+
+		effect = {  
+			209 = { 
+				add_permanent_province_modifier = { 
+					name = bilbao_port
+					duration = -1
+				}
+			}
+		} 
+	}
+}
+nav_evreux_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = { 
+			tag = NAV  
+			AND = { 
+				was_tag = NAV 
+				tag = SPA 
+			}
+		}
+		has_country_flag = nav_evreux_missions_flag
+	}
+
+	nav_ancestral_domains = {
+		icon = mission_karlos_bad
+		position = 2
+		required_missions = { nav_marriage } 
+		provinces_to_highlight = {  
+			OR = { 
+				province_id = 3234
+				province_id = 3228
+				province_id = 3226
+				province_id = 3221
+				province_id = 3223
+				province_id = 4385
+			}
+			NOT = { owned_by = ROOT }
+		} 
+
+		trigger = {  
+			OR = { 
+				AND = { 
+					owns_core_province = 3234
+					owns_core_province = 3228
+					owns_core_province = 3226
+					owns_core_province = 3221
+					owns_core_province = 3223
+					owns_core_province = 4385
+				}
+				AND = { 
+					is_at_war = no 
+					alliance_with = FRA 
+					FRA = { 
+						is_at_war = no 
+						has_opinion = { 
+							who = ROOT 
+							value = 190
+						}
+						owns_core_province = 3234
+						owns_core_province = 3228
+						owns_core_province = 3226
+						owns_core_province = 3221
+						owns_core_province = 3223
+						owns_core_province = 4385
+					}
+				}
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = nav_evreux_domains.tt
+			hidden_effect = { 
+				if = { 
+					limit = { 
+						NOT = { 
+							AND = { 
+								owns_core_province = 3234
+								owns_core_province = 3228
+								owns_core_province = 3226
+								owns_core_province = 3221
+								owns_core_province = 3223
+								owns_core_province = 4385
+							}
+						}
+					}
+					FRA = { country_event = { id = aetas_nav.13 } }
+				}
+				else = { 
+					3226 = { 
+						add_province_modifier = { 
+							name = chez_evreux
+							duration = -1
+						}
+					}
+				}
+			}
+		} 
+	}
+
+	nav_loyal_barons = {
+		icon = unite_the_wittelsbachs
+		position = 3
+		required_missions = { nav_ancestral_domains } 
+		provinces_to_highlight = {  
+			owned_by = ROOT 
+			culture = normand
+			NOT = { has_fort_building_trigger = yes }
+		} 
+
+		trigger = {  
+			accepted_culture = normand
+			num_of_owned_provinces_with = { 
+				OR = { 
+					area = lower_normandy_area
+					area = normandy_area
+				}
+				has_fort_building_trigger = yes 
+				value = 3
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = norman_barons.tt
+			hidden_effect = { 
+				add_country_modifier = { 
+					name = norman_barons_mod
+					duration = -1
+				}
+			}
+			normandy_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			lower_normandy_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	nav_nrm = {
+		icon = protect_against_austria
+		position = 4
+		required_missions = { nav_loyal_barons } 
+		provinces_to_highlight = {  
+			OR = { 
+				area = normandy_area
+				area = lower_normandy_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			normandy_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+			lower_normandy_area = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				type = all 
+			}
+		} 
+
+		effect = {  
+			if = { 
+				limit = { 
+					exists = FRA 
+					NOT = { senior_union_with = FRA }
+				}
+				add_casus_belli = {
+					target = FRA
+					type = cb_restore_personal_union
+					months = 480
+				}
+			}
+			else = { 
+				183 = { add_core = ROOT }
+				ile_de_france_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+				beauce_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+				orleans_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+				loire_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+				saintonge_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+				guyenne_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+				languedoc_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+				lower_languedoc_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		} 
+	}
+
+	nav_claim = {
+		icon = mission_empire
+		position = 5
+		required_missions = { nav_nrm nav_manpower } 
+		provinces_to_highlight = {  
+			OR = { 
+				region = france_region
+				owned_by = FRA 
+			}
+		} 
+
+		trigger = {  
+			OR = { 
+				senior_union_with = FRA 
+				AND = { 
+					NOT = { exists = FRA }
+					owns_core_province = 183
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { 
+						region = france_region
+						value = 75
+					}
+				}
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = evr_france
+				duration = -1
+			}
+		} 
+	}
+}
+nav_evreux_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = { 
+			tag = NAV  
+			AND = { 
+				was_tag = NAV 
+				tag = SPA 
+			}
+		}
+		has_country_flag = nav_evreux_missions_flag
+	}
+
+	nav_brie = {
+		icon = reclaim_the_ducal_lands
+		position = 2
+		required_missions = { nav_marriage } 
+		provinces_to_highlight = {  
+			OR = { 
+				province_id = 3233
+				province_id = 3246
+				province_id = 3247
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				OR = { 
+					province_id = 3233
+					province_id = 3246
+					province_id = 3247
+				}
+				value = 2
+			}
+		} 
+
+		effect = {  
+			brie_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			champagne_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+
+	nav_chp = {
+		icon = mission_wine_monopolies
+		position = 3
+		required_missions = { nav_brie } 
+		provinces_to_highlight = {  
+			OR = {
+				area = brie_area
+				area = champagne_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { 
+				OR = { 
+					area = brie_area
+					area = champagne_area
+				}
+				value = 10
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = nav_chp_mod
+				duration = 18250
+			}
+		} 
+	}
+
+	nav_manpower = {
+		icon = mission_peasantry
+		position = 4
+		provinces_to_highlight = {  
+			area = basque_country
+			owned_by = ROOT 
+			has_manpower_building_trigger = no
+		} 
+
+		trigger = {  
+			num_of_owned_provinces_with = { 
+				area = basque_country
+				has_manpower_building_trigger = yes 
+				value = 4
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = nav_manpower_mod
+				duration = 36500
+			}
+		} 
+	}
+}
+ai_nav_foix_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = { 
+			tag = NAV  
+			AND = { 
+				was_tag = NAV 
+				tag = SPA 
+			}
+		}
+		has_country_flag = nav_foix_missions_flag
+	}
+
+	nav_foi = {
+		icon = mission_febus
+		position = 2
+		required_missions = { nav_marriage } 
+		provinces_to_highlight = {  
+			OR = { 
+				owned_by = FOI 
+				province_id = 176
+				province_id = 3265
+				province_id = 4694
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			OR = { 
+				dynasty = "de Fois"
+				senior_union_with = FOI
+				AND = { 
+					176 = { country_or_non_sovereign_subject_holds = ROOT }
+					3265 = { country_or_non_sovereign_subject_holds = ROOT }
+					4694 = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+			}
+		} 
+
+		effect = {  
+			add_prestige = 15
+			add_country_modifier = { 
+				name = foix_union
+				duration = 7300
+			}
+		} 
+	}
+
+	nav_bea = {
+		icon = mission_pau1
+		position = 3
+		required_missions = { nav_foi } 
+		provinces_to_highlight = {  
+			province_id = 176
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			stability = 1
+			adm_power = 100
+			dip_power = 100
+			is_at_war = no 
+			176 = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		effect = {  
+			custom_tooltip = nav_inherit_foix.tt
+			if = { 
+				limit = { senior_union_with = FOI }
+				inherit = FOI 
+			}
+			else_if = {
+				limit = { 
+					NOT = { owns = 176 }
+					176 = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				176 = { 
+					cede_province = ROOT 
+					add_core = ROOT 
+				}
+			}
+			add_accepted_culture = gascon
+			custom_tooltip = nav_gascon.tt
+			hidden_effect = { 
+				add_country_modifier = { 
+					name = nav_gascon_mod
+					duration = -1
+				}
+			}
+		} 
+	}
+
+	nav_lmg = {
+		icon = mission_dalbret
+		position = 4
+		required_missions = { nav_abt } 
+		provinces_to_highlight = {  
+			OR = { 
+				province_id = 195
+				province_id = 3271
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			195 = { country_or_non_sovereign_subject_holds = ROOT }
+			3271 = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		effect = {  
+			if = { 
+				limit = { exists = BRI }
+				add_casus_belli = {
+					target = BRI
+					type = cb_restore_personal_union
+					months = 480
+				}
+			}
+			else = { 
+				brittany_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+				lower_brittany_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		} 
+	}
+
+	nav_fra = {
+		icon = mission_henri_navarre
+		position = 5
+		required_missions = {
+			nav_bou
+		}
+		provinces_to_highlight = {  
+			OR = { 
+				region = france_region
+				owned_by = FRA 
+			}
+		} 
+
+		trigger = {  
+			OR = { 
+				senior_union_with = FRA 
+				AND = { 
+					NOT = { exists = FRA }
+					owns_core_province = 183
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { 
+						region = france_region
+						value = 75
+					}
+				}
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = nav_fra_destiny_mod
+				duration = -1
+			}
+		} 
+	}
+}
+ai_nav_foix_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = { 
+			tag = NAV  
+			AND = { 
+				was_tag = NAV 
+				tag = SPA 
+			}
+		}
+		has_country_flag = nav_foix_missions_flag
+	}
+
+	nav_dynastic_ties = {
+		icon = the_viennese_waltz
+		position = 2
+		required_missions = { nav_marriage } 
+		provinces_to_highlight = {  
+			owner = { 
+				government = monarchy 
+				culture_group = occitain_group
+			}
+		} 
+
+		trigger = {  
+			calc_true_if = { 
+				all_country = { 
+					culture_group = occitain_group
+					marriage_with = ROOT 
+				}
+				amount = 3
+			}
+		} 
+
+		effect = {  
+			if = { 
+				limit = { exists = ABT }
+				custom_tooltip = nav_abt_decision.tt
+				set_country_flag = nav_abt_decision_flag
+			}
+			else = { 
+				every_province = { 
+					limit = { is_core = ABT }
+					add_core = ROOT 
+				}
+			}
+		} 
+	}
+
+	nav_abt = {
+		icon = mission_albret
+		position = 3
+		required_missions = {
+			nav_dynastic_ties
+			nav_foi
+		}
+		provinces_to_highlight = {  
+			OR = { 
+				province_id = 3261
+				owned_by = ABT 
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			OR = { 
+				AND = { 
+					dynasty = "de Labrit"
+					senior_union_with = ABT 
+				}
+				AND = { 
+					NOT = { exists = ABT }
+					owns_core_province = 3261
+				}
+			}
+		} 
+
+		effect = {  
+			if = { 
+				limit = { NOT = { exists = ABT } }
+				set_dynasty = "de Labrit" #set a dynasty name
+			}
+			define_heir = { 
+				name = "Joana"
+				monarch_name = "Joana III"
+				dynasty = "de Labrit"
+				culture = gascon 
+				claim = 95
+				age = 10
+				female = yes
+				adm = 5
+				dip = 5
+				mil = 5
+			}
+			if = { 
+				limit = { exists = BOU }
+				custom_tooltip = nav_bou_decision.tt
+				set_country_flag = nav_bou_decision_flag
+			}
+			else = { 
+				every_province = { 
+					limit = { is_core = BOU }
+					add_core = ROOT 
+				}
+			}
+		} 
+	}
+
+	nav_bou = {
+		icon = mission_antoine_bourbon
+		position = 4
+		required_missions = { nav_abt } 
+		provinces_to_highlight = {  
+			OR = { 
+				is_core = BOU 
+				owned_by = BOU 
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			OR = { 
+				AND = { 
+					dynasty = "de Bourbon"
+					senior_union_with = BOU 
+				}
+				AND = { 
+					NOT = { exists = ABT }
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { 
+						is_core = BOU 
+						value = 4
+					}
+				}
+			}
+		} 
+
+		effect = {  
+			if = { 
+				limit = { 
+					NOT = {
+						AND = { 
+							dynasty = "de Bourbon" 
+							OR = { 
+								exists = BOU 
+								BOU = { is_lesser_in_union = yes }
+							}
+						} 
+					}
+				}
+				set_dynasty = "de Bourbon"
+			}
+			define_heir = { 
+				name = "Henrike"
+				monarch_name = "Henrike II"
+				dynasty = "de Bourbon"
+				culture = cosmopolitan_french
+				age = 10
+				claim = 95
+				adm = 6
+				dip = 6
+				mil = 4
+			}
+			if = { 
+				limit = { 
+					exists = FRA 
+					NOT = { senior_union_with = FRA }
+				}
+				add_casus_belli = {
+					target = FRA
+					type = cb_restore_personal_union
+					months = 480
+				}
+			}
+			else = { 
+				183 = { add_core = ROOT }
+				ile_de_france_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+				beauce_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+				orleans_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+				loire_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+				saintonge_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+				guyenne_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+				languedoc_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+				lower_languedoc_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		} 
+	}
+}
+ai_nav_naval_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = { 
+			tag = NAV  
+			AND = { 
+				was_tag = NAV 
+				tag = SPA 
+			}
+		}
+	} 
+
+	nav_cod_king = {
+		icon = mission_rb_cod_wars
+		position = 6
+		required_missions = { nav_open_waters } 
+		provinces_to_highlight = {  
+			trade_goods = fish
+		} 
+
+		trigger = { production_leader = { trade_goods = fish } } 
+
+		effect = {  
+			add_country_modifier = { 
+				name = nav_cod_king_mod
+				duration = -1
+			}
+		} 
+	}
+}
+ai_nav_naval_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = NAV  
+			AND = { 
+				was_tag = NAV 
+				tag = SPA 
+			}
+		}
+	} 
+
+	nav_open_waters = {
+		icon = mission_launch_a_flagship
+		position = 5
+		required_missions = { nav_sea } 
+		provinces_to_highlight = {  
+			area = iceland_aetas_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			treasury = 100
+			if = { 
+				limit = { exists = ICE }
+				ICE = { 
+					has_opinion = { 
+						who = ROOT 
+						value = 150
+					}
+				}
+			}
+			else = { 
+				6003 = { 
+					owner = { 
+						has_opinion = { 
+							who = ROOT 
+							value = 150
+						}
+					}
+				}
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = nav_waters.tt
+			if = { 
+				limit = {
+					exists = ICE 
+				}
+				ICE = { country_event = { id = aetas_nav.16 } }
+			}
+			else = { 
+				6003 = { 
+					owner = { country_event = { id = aetas_nav.16 } }
+				}
+			}
+		} 
+	}
+
+	nav_biskai_berria = {
+		icon = mission_pol_tend_east
+		position = 6
+		required_missions = { nav_ternua } 
+		provinces_to_highlight = {  
+			OR = { 
+				area = northeast_mexico_area
+				area = durango_area
+			}
+			NOT = {
+				AND = {
+					is_city = yes
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		} 
+
+		trigger = {  
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				OR = {
+					area = northeast_mexico_area
+					area = durango_area
+				}
+				is_city = yes
+				value = 5
+			}
+			4647 = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				is_city = yes 
+			}
+		} 
+
+		effect = {  
+			4647 = { 
+				if = { 
+					limit = { NOT = { trade_goods = iron } }
+				}
+				change_trade_goods = iron 
+				add_permanent_province_modifier = { 
+					name = durango_mines
+					duration = -1
+				}
+			}
+			# add_country_modifier = { #no modifier
+			# 	name = new_biscay_mod
+			# 	duration = -1
+			# }
+		} 
+	}
+}
+ai_nav_naval_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { 
+		OR = { 
+			tag = NAV  
+			AND = { 
+				was_tag = NAV 
+				tag = SPA 
+			}
+		}
+	} 
+
+	nav_sea = {
+		icon = mission_whaling
+		position = 4
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			any_owned_province = { has_port = yes }
+		} 
+
+		effect = {  
+			custom_tooltip = nav_port.tt
+			hidden_effect = { 
+				if = { 
+					limit = { owns = 4961 }
+					4961 = { 
+						add_province_modifier = { 
+							name = nav_port
+							duration = -1
+						}
+					}
+				}
+				else_if = { 
+					limit = { owns = 173 }
+					173 = { 
+						add_province_modifier = {
+							name = nav_port
+							duration = -1
+						}
+					}
+				}
+				else = { 
+					random_owned_province = { 
+						limit = { has_port = yes }
+						add_province_modifier = { 
+							name = nav_port
+							duration = -1
+						}
+					}
+				}
+			}
+		} 
+	}
+
+	nav_ternua = {
+		icon = mission_rb_colonise_canada
+		position = 5
+		required_missions = { nav_sea } 
+		provinces_to_highlight = {  
+			OR = { 
+				area = newfoundland_area
+				area = cote_nord_area
+				area = notre_dame_mountains_area
+				area = upper_acadia_area
+				area = lower_acadia_area
+			}
+			NOT = { 
+				AND = { 
+					is_city = yes 
+					country_or_non_sovereign_subject_holds = ROOT 
+				}
+			}
+		} 
+
+		trigger = {  
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { 
+				OR = { 
+					area = newfoundland_area
+					area = cote_nord_area
+					area = notre_dame_mountains_area
+					area = upper_acadia_area
+					area = lower_acadia_area
+				}
+				is_city = yes 
+				value = 5
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = nav_fisheries
+				duration = 7300
+			}
+		} 
+	}
+
+	nav_caracas = {
+		icon = mission_orozco
+		position = 6
+		required_missions = { nav_ternua } 
+		provinces_to_highlight = {  
+			province_id = 831
+			NOT = { 
+				AND = { 
+					country_or_non_sovereign_subject_holds = ROOT 
+					is_city = yes 
+					has_trade_building_trigger = yes 
+					has_manufactory_trigger = yes 
+				}
+			}
+		} 
+
+		trigger = {  
+			831 = { 
+				country_or_non_sovereign_subject_holds = ROOT 
+				is_city = yes 
+				has_trade_building_trigger = yes 
+				has_manufactory_trigger = yes 
+			}
+		} 
+
+		effect = {  
+			country_event = { id = aetas_nav.17 }
+		} 
+	}
+}
+nav_branching_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = { 
+			tag = NAV  
+			AND = { 
+				was_tag = NAV 
+				tag = SPA 
+			}
+		}
+		NOT = {
+			OR = {
+				has_country_flag = nav_huguenot_missions_flag
+				has_country_flag = nav_cr_missions_flag
+			}
+		}
+	}
+
+	nav_locked_4e = {
+		icon = mission_unknown_mission
+		position = 6
+		required_missions = { nav_religion } 
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = nav_religious_branching.tt
+		} 
+	}
+}
+nav_branching_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = { 
+			tag = NAV  
+			AND = { 
+				was_tag = NAV 
+				tag = SPA 
+			}
+		}
+		NOT = {
+			OR = {
+				has_country_flag = nav_huguenot_missions_flag
+				has_country_flag = nav_cr_missions_flag
+			}
+		}
+	}
+
+	nav_locked_5e = {
+		icon = mission_unknown_mission
+		position = 6
+		required_missions = { nav_religion } 
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = nav_religious_branching.tt
+		}  
+	}
+
+	nav_locked_5f = {
+		icon = mission_unknown_mission
+		position = 7
+		required_missions = { nav_locked_5e } 
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = nav_religious_branching.tt
+		} 
+	}
+}
+nav_counter_cath_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = { 
+			tag = NAV  
+			AND = { 
+				was_tag = NAV 
+				tag = SPA 
+			}
+		}
+		has_country_flag = nav_cr_missions_flag
+	}
+
+	nav_new_inquisition = {
+		icon = spread_piety
+		position = 6
+		required_missions = { nav_religion } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			papal_influence = 50
+			advisor = inquisitor
+		} 
+
+		effect = {  
+			add_ruler_modifier = { 
+				name = nav_inquisition
+				duration = -1
+			}
+		} 
+	}
+}
+nav_counter_cath_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = { 
+			tag = NAV  
+			AND = { 
+				was_tag = NAV 
+				tag = SPA 
+			}
+		}
+		has_country_flag = nav_cr_missions_flag
+	}
+
+	nav_jesuits = {
+		icon = mission_petrus
+		position = 6
+		required_missions = { nav_religion } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			papal_influence = 75
+			current_age = age_of_reformation
+			OR = { 
+				4961 = { 
+					owner = { 
+						has_opinion = { 
+							who = ROOT 
+							value = 125
+						}
+					}
+				}
+				owns_core_province = 4961
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = jesuits.tt
+			set_country_flag = enable_jesuit_order_flag
+		} 
+	}
+
+	nav_holy_league = {
+		icon = crush_heretic_strongholds
+		position = 7
+		required_missions = { nav_jesuits } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			calc_true_if = { 
+				all_country = { 
+					alliance_with = ROOT
+					religion = catholic 
+					is_great_power = yes 
+				}
+				amount = 2
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = nav_holy_league
+				duration = -1
+			}
+		} 
+	}
+}
+nav_calvinism_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = { 
+			tag = NAV  
+			AND = { 
+				was_tag = NAV 
+				tag = SPA 
+			}
+		}
+		has_country_flag = nav_huguenot_missions_flag
+	}
+
+	foi_bea_academy = {
+		icon = patronize_the_scuole_grandi
+		position = 6
+		required_missions = { nav_religion } 
+		provinces_to_highlight = {  
+			province_id = 176
+			NOT = { 
+				AND = { 
+					owned_by = ROOT
+					is_core = ROOT 
+					num_of_times_improved = 5
+					has_tax_building_trigger = yes 
+					OR = { 
+						religion = reformed
+						religion = protestant 
+					}
+					AND = { 
+						province_is_or_accepts_culture = yes 
+						culture = gascon
+					}
+				}
+			}
+		} 
+
+		trigger = {  
+			176 = { 
+				owned_by = ROOT
+				is_core = ROOT 
+				num_of_times_improved = 5
+				has_tax_building_trigger = yes 
+				OR = { 
+					religion = reformed
+					religion = protestant 
+				}
+				AND = { 
+					province_is_or_accepts_culture = yes 
+					culture = gascon
+				}
+			}
+		} 
+
+		effect = { country_event = { id = aetas_nav.18 } } 
+	}
+}
+nav_calvinism_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = { 
+			tag = NAV  
+			AND = { 
+				was_tag = NAV 
+				tag = SPA 
+			}
+		}
+		has_country_flag = nav_huguenot_missions_flag
+	}
+
+	nav_catechism = {
+		icon = geneva_conventions
+		position = 6
+		required_missions = { nav_religion } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			adm = 5
+			fervor = 50
+			owns_core_province = 176
+		} 
+
+		effect = {  
+			176 = {
+				add_reform_center = reformed
+			}
+		} 
+	}
+
+	nav_huguenot_league = {
+		icon = mission_jeanne_albret
+		position = 7
+		required_missions = { nav_catechism } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			OR = { 
+				calc_true_if = { 
+					all_country = { 
+						alliance_with = ROOT 
+						OR = { 
+							religion = protestant
+							religion = reformed 
+						}
+						is_great_power = yes 
+					}
+					amount = 2
+				}
+				calc_true_if = { 
+					all_country = { 
+						alliance_with = ROOT 
+						OR = { 
+							religion = protestant
+							religion = reformed 
+						}
+					}
+					amount = 4
+				}
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = huguenot_league_mod
+				duration = -1
+			}
+		} 
+	}
+}

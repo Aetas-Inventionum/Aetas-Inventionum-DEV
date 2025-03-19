@@ -1,0 +1,38 @@
+#2992 - Albenga
+#Area - Liguria
+#Region - Italy
+
+#Core Details
+capital = "Albenga"
+is_city = yes
+owner = GEN
+controller = GEN
+
+#Demographics
+culture = ligurian
+religion = catholic
+
+#Development and Trade
+base_tax = 3
+base_production = 4
+base_manpower = 3
+trade_goods = stone	#Finale stone
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = GEN
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

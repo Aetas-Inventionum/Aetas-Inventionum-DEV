@@ -1,0 +1,614 @@
+#AI Update
+# = { "x" "x" }
+#PLEASE ORGANIZE BY ##REGION // #AREA WHEN POSSIBLE <3
+#WHEN MODIFYING PREVIOUS DPN PLEASE ADD A # NOTE TO THE RIGHT OR BELOW <3
+
+#Cyprus - by Math
+321 = { "Nicosie" "Nicosie" }
+4998 = { "Carpas" "Cérines" }
+5000 = { "Limasson" "Limasson" }
+5001 = { "Saint-Ladre" "Saint-Ladre" }  #Name of Larnaca's harbour. Alternatively: Salines, Port-Saline, Lazare, etc... Saint-Ladre sounds badass. 
+5002 = { "Famagouste" "Famagouste" }
+5690 = { "Courc" "Courc" }  #Or Corc
+
+#Anatolia - by Math
+2298 = { "Satalie" "Satalie" } 
+5337 = { "Tarse" "Tarse" } 
+5678 = { "Saint-Pierre" "Saint-Pierre" }
+5687 = { "L'Escandelour" "L'Escandelour" } 
+
+#cilicia by pleib
+327 = { "Addane" "Addane" }
+3215 = { "Haut Château" "Sis" } #or Haut-Chateau, Bartzebert
+4298 = { "Verdun Turc" "Aïntab" }
+4999 = { "Mersine" "Mersine" }
+5700 = { "Ravendel" "Ravendel" }
+5707 = { "Aïouse" "Aïouse" } #adaption of italian naming
+5337 = { "Tarse" "Tarse" }
+5371 = { "Pozante" "Pozante" }
+
+##Egypt - by Math but pleib was here :)
+#west nile delta
+358 = { "Alexandrie" "Alexandrie" } 
+362 = { "Rosette" "Rosette" } 
+6119 = { "Saint-Macaire" "Saint-Macaire" }
+#east nile delta
+363 = { "Damiette" "Damiette" } 
+4316 = { "La Massoure" "La Massoure" } 
+#lower egypt
+361 = { "Le Caire" "Le Caire" }
+
+##Levant - by Math (a lil by pleibos)
+#sinai
+4268 = { "Elyn" "Elyn" } #see etymology of Aqaba
+6130 = { "Catiée" "Catiée" }
+6131 = { "Larisse" "Larisse" }  #Or Laris
+6132 = { "Grande-Berrie" "Eauze" }  #Invented - Elusa (al-Khalasa) is the ancient name of a city in Gascony translated as Eauze in French. 
+#palestine
+364 = { "Gadres" "Gadres" }
+379 = { "Jérusalem" "Jérusalem" } #fomerly Judée
+1854 = { "Naplouse" "Naplouse" }
+1855 = { "Seyde" "Seyde" }  #Or Sidon/Sayette/Sagette
+6144 = { "Saint-Abraham" "Saint-Abraham" }  #Or Hébron
+6145 = { "Japhé" "Japhé" }  #Or Joppé/Jophé
+6146 = { "Acre" "Saint-Jean-d'Acre" }
+6147 = { "Galilée" "Saphet" }
+6152 = { "Ramle" "Ramle" } #or Ramle
+#balqa
+380 = { "Le Crac" "Le Crac de Moab" } 
+2327 = { "Le Val-Moïse" "Le Val-Moïse" }    #or Le Vaux-Moïse
+6149 = { "Sault" "Sault" }    #Invented - from its latin etymology saltus // 'Sault' is late medieval French word same origin
+6153 = { "Montréal" "Montréal" }   #or Mont Royal
+6157 = { "Catragne" "Catragne" }    #Invented - sounds sick (from Qatranah)
+#syria
+381 = { "Agelon" "Agelon" } 
+382 = { "Damas" "Damas" }  
+6150 = { "Busseret" "Busseret" } 
+6151 = { "Darie" "Darie" } 
+#lebanon
+378 = { "Triple" "Triple" } 
+6148 = { "Barout" "Barout" }  #Or Béryte/Barout/Barut/Barouth // preferred the omission of the 'h' for consistency
+6154 = { "Chouf" "Cave de Tyron" }  #Nearby crusader fortress
+6155 = { "Balbec" "Balbec" } 
+6156 = { "Gibelet" "Gibelet" }  #Or Giblet
+#jabal bahra
+2313 = { "Antioche" "Antioche" } 
+6162 = { "Margat" "Margat" } 
+6164 = { "Lattaquié" "Lattaquié" }    #Or Laodicée 
+6166 = { "Saint-Siméon" "Saint-Siméon" }    #Or Soldin/Saint-Syméon
+6167 = { "Alexandrette" "Alexandrette" }  
+#badiya
+405 = { "Palmyre" "Palmyre" }  
+4297 = { "Émèse" "Émèse" }
+#thughur
+377 = { "Alep" "Alep" }   
+2308 = { "Édesse" "Édesse" } 
+6171 = { "Elbire" "Elbire" } 
+6172 = { "Charran" "Charran" } 
+
+#Catalonia - by Math
+212 = { "Gérone" "Gérone" }
+213 = { "Barcelone" "Barcelone" }
+2987 = { "Urgell" "La Seu d'Urgell" }
+2988 = { "Tarragone" "Tarragone" }
+3354 = { "Pallars" "Sort-sur-Noguère" } #Invented
+3355 = { "Ampourdan" "Figuières" }
+3356 = { "Cerdagne" "Puycerdan" }
+3357 = { "Léride" "Léride" }    #Invented
+3358 = { "Tortose" "Tortose" }
+3392 = { "Manrèse" "Manrèse" }
+
+#Baleares - by Math
+333 = { "Majorque" "Palme" }
+4559 = { "Minorque" "Port-Mahon" }
+4560 = { "Yvice" "Yvice" }
+
+#Aragon - by Math
+211 = { "L'Oscque" "L'Oscque" } #Invented
+214 = { "Saragosse" "Saragosse" }
+220 = { "Valence" "Valence" }
+1750 = { "Alicante" "Alicante" }
+3360 = { "Gandie" "Gandie" }
+3362 = { "Albarazin" "Albarazin" }
+3365 = { "Caspé" "Caspé" }  #Invented
+3366 = { "Ribagorce" "Bénabarre" }
+3367 = { "Aragon" "Chaque-la-Montagne" } #Invented
+4550 = { "Castillon" "Castillon" }  
+5611 = { "Carignan" "Carignan" }
+
+#Navarre - by Math
+209 = { "Biscaye" "Bilbao" }
+210 = { "Pampelune" "Pampelune" }
+2989 = { "Logrogne" "Logrogne" }
+3266 = { "Deça-Ports" "Saint-Jean" }
+3368 = { "Tudèle" "Tudèle" }
+3369 = { "Saint-Gosse" "Saint-Gosse" }
+3370 = { "L'Étoile" "L'Étoile" }  #Invented
+4958 = { "Nagare" "Nagare" }    #Invented
+4959 = { "Mirande" "Mirande" }
+4961 = { "Guipuscoa" "Saint-Sébastien" }
+
+#Macaronesia - by Math
+366 = { "Canarie" "Talde" }
+367 = { "Açores Orientales" "Villefranche" }    #Invented
+368 = { "Madère" "Fenouillet" } #Invented
+4565 = { "Ténériffe" "Sainte-Croix" }
+5708 = { "Açores Occidentales" "Tercère" }  #Name of the island - Angra is the city. 
+5709 = { "Lancerotte" "Rubicon" }
+5710 = { "Fortaventure" "Béthencourt" }
+5711 = { "Gomère" "Saint-Sébastien-de-Gomère" }
+
+##Britain - by Math 
+235 = { "Cantorbéry" "Cantorbéry" } 
+236 = { "Londres" "Londres" } 
+244 = { "Lancastre" "Lancastre" }   #historical
+245 = { "Évrevic" "Évrevic" } #fictional #adapted from contemporary Norman name 'Évèroui' - Évrevic, old french name in a poem, or Evroyc, Evroïc
+246 = { "Durême" "Durême" } #from older norman
+247 = { "Cardeuil" "Cardeuil" }     #actually an old name - prev. Charlîle. Or Carduel
+248 = { "Édimbourg" "Édimbourg" } 
+249 = { "Glasgovie" "Glasgovie" } #historical
+251 = { "Aberdon" "Aberdon" }   #historical
+3309 = { "Hastingues" "Hastingues" }    #english imported this name in gascony and it turned out like this
+3311 = { "Boucquinguan" "Boucquinguan" }    #historical
+3315 = { "Alfort" "Alfort" }  #similar place name construction in france
+3317 = { "Astaffort" "Astaffort" }  #similar place name construction in france
+3325 = { "Candale" "Candale" }    #same - prev Chendale
+3327 = { "Neufchâtel" "Neufchâtel" }
+3381 = { "Barvicq" "Barvicq" }  #historical
+3385 = { "Plémue" "Plémue" }    #historical
+4372 = { "Coventre" "Coventre" }    #historical
+4375 = { "Chestres" "Chestres" }    #similar place name construction in france
+5137 = { "Galvois" "La Chapelle-Saint-Cuthbert" }  #old name, also Galvyte, Galvaide, Galvide, Galvinde - the latter invented
+5153 = { "Vicêtre" "Vicêtre" }  #historical
+6535 = { "Velles" "Velles" }    #similar place name construction in france
+6537 = { "Vic" "Neuport" }  #similar place name construction in france
+6538 = { "Lèves" "Lèves" }  #similar place name construction in france
+6545 = { "Vindesor" "Vindesor" }    #historical
+
+4110 = { "Sollin" "Dornach" }    #or Surclin, Suillyn, Solin, Sorlinc, Solyn...
+
+5159 = { "Quatenasse" "Thurseau" }  #old name, latter invented
+
+
+#Scandinavia - by Math 
+3 = { "Calmar" "Calmar" } 
+6 = { "Londe" "Malmogie" }  
+12 = { "Copenhague" "Copenhague" }     
+1984 = { "Albourg" "Albourg" }
+4149 = { "Coldingue" "Coldingue" } 
+5138 = { "Helsimbourg" "Helsimbourg" } 
+5614 = { "Flensbourg" "Flensbourg" } 
+5616 = { "Tondre" "Tondre" }      
+5617 = { "Appenrade" "Appenrade" } 
+5618 = { "Haderslèbe" "Haderslèbe" } 
+5621 = { "Callumbourg" "Callumbourg" } 
+5624 = { "Vendille" "Héringue" }    #Invented - from latin Heringa and from the old renderings of Wendsyssel: Wendel, Vendill/Vandill, Wendila
+5626 = { "Schève" "Schève" } 
+5627 = { "Vibourg" "Vibourg" } 
+5629 = { "Rypen" "Rypen" } 
+6019 = { "Upsal" "Upsal" } 
+
+#Germany, Austria & Bohemia - by Math  ##also organized into geran categories below
+44 = { "Hambourg" "Hambourg" } 
+52 = { "Magdebourg" "Magdebourg" } 
+53 = { "Lunebourg" "Lunebourg" } 
+61 = { "Dresde" "Dresde" } 
+65 = { "Munich" "Munich" } 
+67 = { "Nuremberg" "Nuremberg" } 
+74 = { "Bade" "Bade" } 
+76 = { "Salzbourg" "Salzbourg" } 
+79 = { "Wurtzbourg" "Wurtzbourg" } 
+86 = { "Moutier" "Moutier" }    #Münster, Alsace = Moutier - I applied the same here
+134 = { "Vienne" "Vienne" } 
+266 = { "Prague" "Prague" } 
+1758 = { "Hanovre" "Hanovre" } 
+1762 = { "Cassel" "Cassel" } 
+1868 = { "Augsbourg" "Augsbourg" } 
+1872 = { "Oulm" "Oulm" } 
+1874 = { "Brême" "Brême" } 
+1876 = { "Francfort" "Francfort" } 
+2957 = { "Ratisbonne" "Ratisbonne" } 
+4141 = { "Dithmarse" "Meldorp" } 
+4237 = { "Olomouc" "Olomouc" } 
+4710 = { "Brégence" "Brégence" } 
+4768 = { "Juliers" "Juliers" } 
+4774 = { "Fulde" "Fulde" } 
+5354 = { "Sigbourg" "Sigbourg" } 
+5357 = { "La Marc" "La Marc" } 
+
+#Poland, Baltica & Hungary
+254 = { "Posnan" "Posnan" } 
+257 = { "Varsovie" "Varsovie" } 
+262 = { "Cracovie" "Cracovie" } 
+1772 = { "Presbourg" "Presbourg" } 
+1841 = { "Marienbourg" "Marienbourg" } 
+4240 = { "Albe-Royale" "Albe-Royale" } 
+5458 = { "Bude" "Bude" } 
+
+#Low Countries - by pleibos
+90 = { "Bruges" "Bruges" }
+92 = { "Bruxelles" "Bruxelles" }
+94 = { "Luxembourg" "Luxembourg" }
+95 = { "Bréda" "Bréda" }
+96 = { "Zélande" "Middelbourg" }
+100 = { "Frise" "Leuvarde" }
+1743 = { "Cambrai" "Cambrai" } #modern french spelling for sake of consistency
+1744 = { "Anvers" "Anvers" }
+1865 = { "Gand" "Gand" }
+2974 = { "Looz" "Looz" } 
+3303 = { "Ypres" "Ypres" }
+3330 = { "Yvois" "Montmédy" }
+3331 = { "Arlon" "Arlon" }
+3332 = { "Bastogne" "Bastogne" }
+3333 = { "Thionville" "Thionville" }
+3348 = { "Dort" "Dort" }
+3351 = { "Nimègue" "Nimègue" }
+3363 = { "Bitbourg" "Bitbourg" }
+4382 = { "Groningue" "Groningue" }
+4383 = { "La Haye" "La Haye" }
+4769 = { "Lille" "Lille" }
+5011 = { "Douai" "Douai" }
+5012 = { "Courtrai" "Courtrai" }
+5013 = { "Alost" "Alost" }
+5015 = { "Malines" "Malines" }
+5025 = { "Leyde" "Leyde" }
+5227 = { "Ath" "Ath" }
+
+#Low Countries follow up - by Math
+3349 = { "Frise-Occidentale" "Harlem" }
+3350 = { "Drenthe" "Couvorde" }
+1742 = { "Haute-Gueldre" "Ruremonde" }
+2975 = { "Clèves" "Clèves" } 
+3346 = { "Limbourg" "Maëstricht" }
+4770 = { "Bois-le-Duc" "Bois-le-Duc" }
+
+#savoie
+205 = { "Savoie" "Chambéry" }
+1867 = { "Lausanne" "Lausanne" }
+1871 = { "Haut-Valais" "Sion" }
+4719 = { "Bresse" "Bourg" }
+4720 = { "Genève" "Genève" }
+4995 = { "Genevois" "Annecy" }
+5028 = { "Nyon" "Nyon" }
+5029 = { "Bas-Valais" "Saint-Maurice" }
+5030 = { "Neuchâtel" "Neuchâtel" }
+
+
+#Italy & Switzerland by math 
+104 = { "Milan" "Milan" }
+108 = { "Vérone" "Vérone" } 
+110 = { "Trente" "Trente" } 
+112 = { "Venice" "Venice" } 
+1774 = { "Trévise" "Trévise" }
+1873 = { "Coire" "Coire" }
+4729 = { "Padoue" "Padoue" }  
+4739 = { "Bergame" "Bergame" }
+5033 = { "Bâle" "Bâle" }
+5060 = { "Valteline" "Sondrio" }
+5094 = { "Vicence" "Vicence" } 
+5099 = { "Bellune" "Bellune" }
+5104 = { "Aquilée" "Aquilée" }
+
+#upper piedmont
+103 = { "Turin" "Turin" }
+5041 = { "Quiers" "Quiers" }
+5043 = { "Pignerol" "Pignerol" }
+5044 = { "Suse" "Suse" }
+5045 = { "Aoste" "Aoste" }
+5046 = { "Ivrée" "Ivrée" } 
+5047 = { "Bielle" "Bielle" }
+#lower piedmont + a fix by Math
+1875 = { "Coni" "Coni" }
+5040 = { "Mont-Royal" "Mont-de-Village" } #area known as Montregale, but city is from latin Mons + Vicus, Mons de Vico, mondovi
+5049 = { "Aste" "Aste" }
+5050 = { "Albe" "Albe" }
+#western lombardy  + a couple fixes by Math
+2979 = { "Novare" "Novare" }
+2981 = { "Montferrat" "Casal" }
+5048 = { "Verceil" "Verceil" }
+5055 = { "Ossole" "Dôme-d'Ossole" }
+#campania + fixes by Math
+121 = { "Naples" "Naples" }
+2983 = { "Salerne" "Salerne" }
+4734 = { "Avellin" "Avellin" }
+5097 = { "Gaète" "Gaète" }  #Or Gaëte
+5111 = { "Capoue" "Capoue" }
+5112 = { "Bénévent" "Bénévent" }
+5113 = { "Arrian" "Arrian" }
+5114 = { "Chilente" "Vallon de Lucanie" } #'ch' is a transliteration of italian 'ci' - math: vallo means vallon
+#abruzzo  + math fixes and additions
+120 = { "L'Aigle" "L'Aigle" }
+4733 = { "Château-Bas" "Château-Bas" }
+5115 = { "Térame" "Térame" } 
+5116 = { "Avezzane" "Avezzane" }
+5117 = { "Thiette" "Thiette" } #re-enabled. Can confirm through etymology and 'Theatins'. Or Thiène - found the old toponym Thiette or Thyette
+5118 = { "Le Gât" "Le Gât d'Aymon" }  #verified old french is 'gast', now gât. See 'Gâtinais's French etymology for an official example
+#capitanate
+5119 = { "Saint-Séverin" "Saint-Séverin" }
+5120 = { "Lucère" "Lucère" } #luceran name of Lucera, very compatible with French orthographie
+5121 = { "Gargan" "Manfredoine" }
+#apulia
+122 = { "Tarente" "Tarente" }
+1933 = { "Bare" "Bare" } #fictional, following typical transformations of latin into french
+2985 = { "Fouge" "Fouge" } #pleib : Fogée, adapted from Foggia + Phocée 
+5122 = { "Barlette" "Barlette" }
+5123 = { "Andrie" "Andrie" }
+5124 = { "Brindes" "Brindes" }
+5125 = { "Lèce" "Lèce" } #fictional
+#calabre
+123 = { "Rège" "Rège en Calabre" }
+1934 = { "Potence" "Potence" }
+2984 = { "Cosence" "Cosence" }
+5126 = { "Matère" "Matère" }
+5127 = { "Melphe" "Melphe" }
+5128 = { "Ruscie" "Ruscie" } #Jusqu'au xixe siècle, les historiens français lui donnèrent le nom de Ruscie.
+5130 = { "Cathacem" "Cathacem" } #from the norman period
+#sicily
+125 = { "Palerme" "Palerme" }
+126 = { "Malte" "Médina" }
+2982 = { "Syracuse" "Syracuse" }
+4736 = { "Drépane" "Drépane" }
+4737 = { "Girgente" "Girgente" }
+5131 = { "Catane" "Catane" }
+5132 = { "Cephalu" "Cephalu" }
+5133 = { "Modique" "Modique" }
+5135 = { "Caltanissette" "Caltanissette" }
+#Corsica 
+1247 = { "Cap Corse" "Bastie" } #Or La Bastie, La Bastide, Bastille
+5003 = { "Balagne" "Calvy" }   
+5004 = { "La Hiace" "La Hiace" }    #Or La Yasse, Layasse
+5005 = { "Boniface" "Boniface" }    #Or Saint-Boniface
+#Tuscany 
+115 = { "Pise" "Pise" }
+116 = { "Florence" "Florence" }
+117 = { "Sienne" "Sienne" }
+2980 = { "Lucques" "Lucques" }
+5066 = { "Masse" "Masse" }
+5067 = { "Pistoie" "Pistoie" }
+5068 = { "Volterre" "Volterre" }
+5070 = { "Cortone" "Cortone" }
+5071 = { "Piombin" "Piombin" }
+5073 = { "Orbitelle" "Orbitelle" }
+#Umbria
+2976 = { "Pérouse" "Pérouse" }
+4731 = { "Spolète" "Spolète" }
+5075 = { "Ville-de-Châtel" "Ville-de-Châtel" } #translation of italian name
+5083 = { "Foligne" "Foligne" } #fictional
+5085 = { "Terny" "Terny" } #fictional
+5086 = { "Riète" "Riète" } #fictional
+#Lazio 
+118 = { "Rome" "Rome" }
+4732 = { "Terracine" "Terracine" }
+5087 = { "Orviète" "Orviète" }
+5088 = { "Viterbe" "Viterbe" }
+5089 = { "Cité-Vieille" "Cité-Vieille" }
+#Marche
+119 = { "Ancône" "Ancône" }
+2977 = { "Urbin" "Urbin" }
+5079 = { "Pésare" "Pésare" } #fictional, could be Pisare
+5080 = { "Maceratte" "Maceratte" } #fictional
+5081 = { "Firme" "Firme" } #fictional but following etymological evolution
+5082 = { "Camerin" "Camerin" } #fictional
+#Romagna 
+113 = { "Ferrare" "Ferrare" }
+114 = { "Ravenne" "Ravenne" }
+4730 = { "Bologne" "Bologne" }
+5062 = { "Faïence" "Faïence" }
+5063 = { "Forly" "Forly" }
+5064 = { "Remne" "Remne" } #fictional
+
+#Emilia
+105 = { "Parme" "Parme" }
+106 = { "Modène" "Modène" }
+5058 = { "Plaisance" "Plaisance" }
+5065 = { "Rège" "Rège-en-Émilie" }
+
+#Western Lombardy
+104 = { "Milan" "Milan" }
+2979 = { "Novare" "Novare" }
+4729 = { "Pavie" "Pavie" }
+4740 = { "Côme" "Côme" }
+5039 = { "Bellinzone" "Bellinzone" }
+5054 = { "Lomelline" "Vigevan" }  #Or Laumelline
+5056 = { "Tortone" "Tortone" }
+
+#Eastern Lombardy
+107 = { "Bresce" "Bresce" } #Or Bresse
+109 = { "Mantoue" "Mantoue" }
+1862 = { "Crémone" "Crémone" }
+
+#Trent 
+110 = { "Trente" "Trente" }
+5108 = { "Bolzane" "Bolzane" }
+
+#Venetia 
+5099 = { "Bellune" "Bellune" }
+
+#Frioul 
+1769 = { "Gorice" "Gorice" }
+
+#Piedmont
+4727 = { "Saluces" "Saluces" }
+
+#Sicily 
+124 = { "Messine" "Messine" }
+
+#Liguria 
+101 = { "Gênes" "Gênes" }
+2992 = { "Albengue" "Albengue" }
+5042 = { "Oneille" "Oneille" }
+5051 = { "Savone" "Savone" }  #Or Savonne
+5052 = { "L'Épice" "L'Épice" }  #Or L'Espécie, Lespece
+#Sardinia 
+127 = { "Sassary" "Sassary" } #fictional
+2986 = { "Caillery" "Caillery" } #fictional, based in etymology and current transformations of the name. French is actually Caillery or Caglier
+4735 = { "Orîtan" "Orîtan" }  #Or L'Oristan
+5007 = { "Gallure" "Terreneuve" } #fictional but based in etymology and french patterns
+5008 = { "Nuore" "Nuore" } #fictional
+5009 = { "Tortuelle" "Tortuelle" } #fictional, inspired by its sardinian
+5010 = { "Sulcie" "Églises" } #fictional, but latter is not
+
+##Balkans
+#Albania 
+143 = { "Valone" "Valone" }
+4174 = { "Duras" "Duras" }
+4175 = { "Lisse" "Lisse" } #fictional, based on latin
+4750 = { "Croïa" "Croïa" }
+5433 = { "Bérat" "Bérat" } #fictional
+5435 = { "Laberie" "Chimarre" } #Fictional, latter based on Greek
+5436 = { "Argentecastre" "Argentecastre" } #Argirocastro
+5437 = { "Buthrote" "Buthrote" }
+6322 = { "Choufade" "Choufade" } #fictional
+6323 = { "Struge" "Struge" } #fictional
+#Zachlumia 
+137 = { "Raguse" "Raguse" }
+#Epirus
+142 = { "Corfou" "Corfou" }
+5565 = { "Bogoïs" "Parga" }
+#AEtolia
+4698 = { "Céphalonie" "Argostole" }
+5551 = { "Zante" "La Ville de Zante" }
+
+##Maghreb misc
+#Africa 
+341 = { "Tunis" "Tunis" }
+2455 = { "Biserte" "Biserte" }
+5797 = { "Tabarque" "Tabarque" }
+
+#Byzancena
+2453 = { "Fascq" "Fascq" }   #les Fascq
+5819 = { "Monastier" "Monastier" }  #Invented
+
+#Numidia
+1882 = { "Bône" "Bône" }
+5796 = { "La Calle" "La Calle" }
+
+#Kabylia
+339 = { "Bougie" "Bougie" }
+5792 = { "Colle" "Colle" }
+5793 = { "Rusicade" "Rusicade" }
+
+#Dahra-Mitidja 
+338 = { "Alger" "Alger" }
+5771 = { "Tedelle" "Tedelle" }
+
+#Morocco 
+5727 = { "La Mamore" "La Mamore" }
+
+##french below
+##all "ois". "ais" names and others like Berry are HISTORICAL PROVINCES but I will be very strict with their usage.
+##^^^they must also be close to approximate size 
+#picardy
+89 = { "Amiens" "Amiens" }
+#burgundy
+191 = { "Nevers" "Nevers" }
+3241 = { "Châtillon" "Châtillon" }  #-sous-Bagneux
+3244 = { "Mâcon" "Mâcon" }
+3397 = { "Château-Chinon" "Château-Chinon" }
+3298 = { "Revermont" "Lons" }   #-le-Saunier
+3299 = { "Dole" "Dole" }
+3300 = { "Pontarlier" "Pontarlier" } #Doubs is a département
+3394 = { "Luxeuil" "Luxeuil" }  #-les-Bains
+3398 = { "Montbéliard" "Montbéliard" }
+4764 = { "Salins" "Salins" }    #-les-Bains
+#upper normandy
+3229 = { "Dieppe" "Dieppe" } #could ALMOST be caux
+3230 = { "Eu" "Eu" } #almost bray
+#lower normandy
+3222 = { "Avranches" "Avranches" } #Almost identical to Avranchin. While Mortain is traditionally included, Mortain usually has its own pays. However, its not 100% identical either way.
+3224 = { "Bayeux" "Bayeux" } #Close to Bessin
+3225 = { "Lisieux" "Lisieux" } #could be Auge = almost entire historical region, Lisieux being traditional capital`
+3238 = { "Îles de la Manche" "Saint-Hélier" }
+#champaigne
+3246 = { "Provins" "Provins" } 
+3247 = { "Meaux" "Meaux" } 
+3251 = { "Langres" "Langres" }
+4392 = { "Auxerre" "Auxerre" }
+5223 = { "Bar-sur-Aube" "Bar-sur-Aube" } #sur-Aube ending dates from middle ages`
+#anjou-maine
+3198 = { "Mauges" "Cholet" } #etymology stems from 9th century and used since
+3201 = { "Saumur" "Saumur" } #Nearly identical to Saumurois proper
+5220 = { "Craon" "Craon" } #old regional name of Craonnais
+#orléanais
+179 = { "Bourges" "Bourges" }
+184 = { "Orléans" "Orléans" }
+3214 = { "Châteauroux" "Châteauroux" }
+4389 = { "Tours" "Tours" }
+#poitou
+4386 = { "Fontenay" "Fontenay" } #close to identical to Bas-Poitou
+#auvergne
+190 = { "Moulins" "Moulins" } #d'Après Bourbon l'Archambault // also nucleus of Bourbonnais
+3286 = { "Montluçon" "Montluçon" } 
+#limousin
+195 = { "Haut-Limousin" "Limoges" }
+3271 = { "Brive" "Brive" } #Could be named Turenne after the important viscounty which ruled the area
+3272 = { "Bas-Limousin" "Tulle" } #lots of other cities as relevant as Tulle like Ventadour so its a nice way to cover these bases. Region is also very close to province scope
+4697 = { "Haute-Marche" "Guéret" }
+5221 = { "Basse-Marche" "Bellac" }
+#lyonnais
+203 = { "Lyon" "Lyon" }
+#Upper Languedoc
+3273 = { "Albi" "Albi" } #near identical to Albigeois but Albi for consistency
+#Lower Languedoc 
+2753 = { "Narbonne" "Narbonne" }
+4391 = { "Viviers" "Viviers" }
+#guyenne
+3263 = { "Périgord" "Périgueux" }
+4112 = { "Cahors" "Cahors" } #almost quercy but Montauban also in Quercy
+#lorraine
+187 = { "Bar" "Bar" } #Barrois Mouvant // Bar-le-duc not necessary here as it is with Bar-sur-Aube
+3334 = { "Sarrebourg" "Sarrebourg" }
+3336 = { "Mirecourt" "Mirecourt" } #Vôges is historical bailwick
+3337 = { "Épinal" "Épinal" }
+3339 = { "Pont-à-Mousson" "Pont-à-Mousson" } #Barrois Non Mouvant // Top name could be shortened to Mousson, after the important Château as well as visual appearance (far easier to read when shorter)
+3386 = { "Saint-Dié" "Saint-Dié" }  #-des-Vosges
+#Dauphiné
+204 = { "Grenoble" "Grenoble" }
+3287 = { "Vienne" "Vienne" }
+3288 = { "Valence" "Valence" }
+3289 = { "Montélimar" "Montélimar" }
+3291 = { "Gap" "Gap" } #province resembles Gapençais
+3292 = { "Briançon" "Briançon" } #province resembles Briançonnais
+5224 = { "Die" "Die" }
+5225 = { "Embrun" "Embrun" } #province resembles Embrunnais
+#provence
+201 = { "Aix" "Aix-en-Provence" }
+202 = { "Venaissin" "Avignon" } #alternatively can be "Le Comtat" after the areas common toponym "Comtat Venaissin" often shortened to "Il Comtat" or, in this case "Le Comtat"
+2991 = { "Forcalquier" "Forcalquier" }
+3293 = { "Arles" "Arles" }
+3294 = { "Marseille" "Marseille" }
+3295 = { "Grasse" "Grasse" }
+3296 = { "Draguignan" "Draguignan" }
+3297 = { "Barcelonette" "Barcelonette" }
+4696 = { "Toulon" "Toulon" }
+##South Germany
+#alsace
+75 = { "Strasbourg" "Strasbourg" }
+1880 = { "Haute-Alsace" "Altkirch" }
+3340 = { "Haguenau" "Haguenau" }
+3341 = { "Sélestat" "Sélestat" }
+3342 = { "Colmar" "Colmar" }
+3343 = { "Wissembourg" "Wissembourg" }
+3393 = { "Sarreguemines" "Sarreguemines" }
+4765 = { "Mulhouse" "Mulhouse" }
+#baden
+72 = { "Brisgau" "Fribourg-en-Brisgau" }
+#lower palatinate
+78 = { "Mayence" "Mayence" }
+1761 = { "Caseloutre" "Caseloutre" }
+4767 = { "Deux-Ponts" "Deux-Ponts" }
+5020 = { "Villeneuve" "Villeneuve sur la route du vin" }
+5021 = { "Sarrebruck" "Sarrebruck" }
+5023 = { "Spire" "Spire" }
+5024 = { "Vormes" "Vormes" } 
+##North Germany
+#west Rhineland
+80 = { "Trèves" "Trèves" }
+85 = { "Cologne" "Cologne" }
+1760 = { "Coblence" "Coblence" }
+1878 = { "Aix-la-Chapelle" "Aix-la-Chapelle" }
+3335 = { "Prume" "Prume" }
+3389 = { "Dur" "Dur" } #from Durus, Marcodurum or Villa Duria are its Latin names
+3390 = { "Bonne" "Bonne" }
+3391 = { "Nuys" "Nuys" }
+4768 = { "Juliers" "Juliers" }

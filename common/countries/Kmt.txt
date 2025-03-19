@@ -1,0 +1,84 @@
+#Country Name: Please see filename.
+
+graphical_culture = muslimgfx
+
+color = { 153  145  148 } 
+
+historical_idea_groups = {
+	maritime_ideas
+	defensive_ideas
+	religious_ideas
+	expansion_ideas
+	administrative_ideas
+	offensive_ideas
+	trade_ideas
+	economic_ideas
+}
+
+historical_units = {
+	mamluk_archer
+	mamluk_cavalry_charge
+	mamluk_duel
+	mamluk_musket_charge
+	muslim_mass_infantry
+	muslim_dragoon
+	ali_bey_reformed_infantry
+}
+
+monarch_names = {
+	"Pahom #0" = 10
+	"Petre #0" = 10
+	"Khael #0" = 10
+	"Ermoklas #0" = 10
+	"Iosep #0" = 10
+	"Tawadros #0" = 10
+	"Ramessuw #11" = 20
+	"Markou #0" = 10
+	"Ouriel #0" = 10
+	"Paule #0" = 10
+	"Paape #0" = 10
+	"Thetmosi #0" = 10
+	"Ammon #0" = 20
+	"Atoum #0" = 10
+	"Hieraks #0" = 10
+	"Horiese #0" = 10
+	"Hol #0" = 10
+	"Herouosh #0" = 10
+	"Pleraklas #0" = 10
+	"Askla #0" = 10
+	"Kalashire #0" = 10
+	"Kleupatros #0" = 10
+	"Bes #0" = 10
+	"Antone #0" = 20
+	"Paxom #0" = 20
+	"Shenouti #0" = 20 
+	"Sarapammon #0" = 10
+	"Mikhail #0" = 10
+	"Aleksandros #0" = 10
+	
+	"Kleupatra #0" = 10
+	"Diane #0" = 10
+	"Sarra #0" = 10
+	"Taphammon #0" = 10
+	"Aleksandra #0" = 10
+}
+
+leader_names = {
+	Sahiri
+	Haida
+	Sellami
+	Arazi
+	Berui
+	Lahsini
+	Skah
+	Barek
+	Alami
+	Behar
+}
+
+ship_names = {
+	Tawwab Muntaqim Afuww Fa'uf "Malik Mulk"
+	"Jalal Ikram" Muqsit Jami Ghani Mughni
+	Mani Darr Nafi Nur Hadi Badi Baqi Warith
+	Rashid Sabur "Fazl Azim"
+}

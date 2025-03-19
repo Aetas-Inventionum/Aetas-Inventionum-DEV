@@ -1,0 +1,38 @@
+#27 - Finland
+#Area - Finland
+#Region - Scandinavia 
+
+#Core Details
+capital = "Åbo"
+is_city = yes
+owner = SWE 
+controller = SWE 
+
+#Demographics
+culture = finlandic
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 3
+base_manpower = 2
+trade_goods = grain
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = SWE
+add_core = FIN
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+center_of_trade = 2
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+
+#Histories

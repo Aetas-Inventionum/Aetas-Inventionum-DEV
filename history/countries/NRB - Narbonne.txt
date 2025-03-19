@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = fief_reform
+government_rank = 1
+technology_group = western
+religion = catholic
+primary_culture = occitain
+capital = 2753	# Narbonne
+fixed_capital = 2753 # Cannot move capital away from this province & no power cost to move to it
+
+1397.1.1 = {
+	monarch = {
+		name = "Guillem II"
+		dynasty ="de Lara"
+		birth_date = 1390.1.1 #approx
+		dip = 1
+		adm = 2
+		mil = 3
+	}
+}

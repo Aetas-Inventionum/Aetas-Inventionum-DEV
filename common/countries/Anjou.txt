@@ -1,0 +1,131 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+color = { 93  140  173 }	#156 42 128 // 177 110 188 // dark musky purple 142 80 195
+revolutionary_colors = { 0 14 0 }
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	religious_ideas
+	diplomatic_ideas
+	economic_ideas
+	innovativeness_ideas
+	offensive_ideas
+	spy_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	dutch_maurician
+	french_caracolle
+	anglofrench_line
+	french_dragoon
+	french_bluecoat
+	french_cuirassier
+	french_impulse
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Charles #3" = 40
+	"Louis #2" = 60
+	"Jean #2" = 10
+	"René #0" = 40
+	"Nicolas #0" = 10
+	"Philippe #1" = 10
+	"Foulques #5" = 5
+	"François #0" = 5
+	#older angevin names
+	"Henri #1" = 5
+	"Geoffroy #5" = 5
+	#misc
+	"Arnaud #0" = 0
+	"Béranger #0" = 0
+	"Bernard #0" = 0
+	"Guillaume #0" = 0
+	"Guy #0" = 0
+	"Henri #0" = 0
+	"Jacques #0" = 0
+	"Michel #0" = 0
+	"Pierre #0" = 0
+	"Raymond #0" = 0
+	"Prigent #0" = 0
+	"Renault #0" = 0
+	"Georges #0" = 0
+	"Gaston #0" = 0
+	"Philippe-Charles #0" = 0
+	"Louis-François #0" = 0
+	"Guy #0" = 0
+	"Gilles #0" = 0
+	"Tanneguy #0" = 0
+	"Fouquet #0" = 0
+	"Simon #0" = 0
+	"Arnoul #0" = 0
+	
+	"Agnès #0" = -1
+	"Jeanne #0" = -5
+	"Marguerite #1" = -5
+	"Marie #0" = -1
+	"Anne #0" = -1
+	"Isabelle #0" = -1
+	"Yolande #0" = -1
+	"Béatriz #0" = -1
+	"Emma #0" = -1
+	"Louise #0" = -5
+}
+
+leader_names = {
+	"d'Agoult" "d'Andigné" "d'Audiffret"
+	"des Baux" "de Beaumanoir" "de Beaumont" "de Beauvau" "du Bellay" "de Blois" "de Brée" "de Brézé" "de Bueil"
+	Cesbron "de Chambes" "Le Clerc" "de Coëtivy" "de Cossé" "de Craon"
+	"de Farcy" Fouquet "de Froulay"
+	"de Gâvre" Gréban
+	"de Lantivy" "de Laval"
+	"de Maillé" "de Malherbe" "de Meaulne" "de Montecler" "de Montesson" "de Montfort" "de Montmorency" "de La Motte-Baracé"
+	"de Nos"
+	"du Plessis" "de La Poëze" "de La Pommeraie" "de Préaulx" 
+	"de Quatrebarbes"
+	"de Rougé"
+	"de Sabran" "de Sainte-Marthe" "de Sillé" Sorel
+	"de La Tour-Landry" Turpin
+	"de Vassé"
+}
+
+ship_names = {
+	Achille Agréable "Aigle Volant" Alcyon Alouette
+	Altier Aquilon Ardente Assuré Avenant
+	Aventurier Baleine Bécasse Bienvenu Bizarre
+	Borée "Branche d'Olivier" Brillant Bucentaure Caché
+	Caille Capable Centaure César "Cheval Marin"
+	Coche "Commerce de Marseille" "Commerce de Montpellier" "Comte de Provence" Conquérant
+	Constant Content Croissant Dauphine Diamant
+	Dieppoise Dur Dromadaire Eclatant Eole
+	Espérance Fantasque Ferme Fidèle Fier
+	Florissant Formidable Fort Foudroyant Gaillard
+	Heureux Héros Jason Lion Mignon
+	Minerve Océan Orphée Parfait Phénix
+	Poli Pompeux Portefaix Protecteur Provençal
+	Provence Prudent Puissant Réale Redoutable
+	Requin "Royal Louis" Sage Sagittaire "Royal Thérèse"
+	"Saint Esprit" "Saint Joseph" "Saint Philippe" Sardine Sceptre
+	Séduisant Seine Sérieux Solide Souverain
+	Suffisant Téméraire Terrible Tigre Tonnant
+	Toulon Toulouse Trident Triomphant Triton
+	Union Vaillant Vigilant Volontaire Zélé
+}
+
+army_names = {
+	"Armée angevine" "Armée de $PROVINCE$"
+}
+
+fleet_names = { 
+	"Flotte de Provence" "Flotte de Sicile" "Flotte de $PROVINCE$"
+}

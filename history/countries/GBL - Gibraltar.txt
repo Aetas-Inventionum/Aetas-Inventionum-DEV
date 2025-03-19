@@ -1,0 +1,8 @@
+government = republic
+add_government_reform = oligarchy_reform
+primary_culture = andalucian
+add_accepted_culture = sephardic
+religion = catholic
+technology_group = western
+capital = 226
+fixed_capital = 226

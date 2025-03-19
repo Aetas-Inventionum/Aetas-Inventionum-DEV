@@ -1,0 +1,38 @@
+#6538 - Lewes
+#Area - Sussex
+#Region - British Isles
+
+#Core Details
+capital = "Lewes"
+is_city = yes
+owner = ENG
+controller = ENG
+
+#Demographics
+culture = kentish
+religion = catholic
+
+#Development and Trade
+base_tax = 1
+base_production = 2
+base_manpower = 1
+trade_goods = iron	    #iron industry along the Ouse river
+
+#Cores and Occupation (Alphabetical after current)
+add_core = ENG
+add_core = SSX
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

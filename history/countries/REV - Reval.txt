@@ -1,0 +1,18 @@
+government = republic
+add_government_reform = merchants_reform
+government_rank = 1
+primary_culture = prussian
+add_accepted_culture = estonian
+religion = catholic
+technology_group = western
+capital = 36
+
+1410.1.1 = {
+	monarch = {
+		name = "Arnold" #random
+		birth_date = 1389.1.1
+		adm = 1
+		dip = 2
+		mil = 2
+	}
+}

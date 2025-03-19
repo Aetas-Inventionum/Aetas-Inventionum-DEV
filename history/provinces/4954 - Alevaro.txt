@@ -1,0 +1,39 @@
+#4954 - Alevaro
+#Area - Old Castile
+#Region - Iberia
+
+#Core Details
+capital = "Arévalo"
+is_city = yes
+owner = CAS
+controller = CAS
+
+#Demographics
+culture = mudejar
+religion = sunni
+
+#Development and Trade
+#by 1463, only exceeded in tax by: Ávila, Guadalajara, Toledo and Sevilla
+base_tax = 3
+base_production = 3
+base_manpower = 2
+trade_goods = grain 
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = CAS
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+add_province_triggered_modifier = mudejar_community
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

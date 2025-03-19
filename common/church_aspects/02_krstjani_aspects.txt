@@ -1,0 +1,52 @@
+church_slavonic_aspect = {
+	cost = 100
+	modifier = {
+		idea_cost = -0.05
+	}
+}
+
+latin_bishops_aspect = {
+	cost = 100
+	modifier = {
+		tolerance_heretic = 1
+		diplomatic_reputation = 1
+	}
+}
+
+stylized_codexes_aspect = {
+	cost = 100
+	modifier = {
+		global_unrest = -1 
+		prestige_decay = -0.025
+	}
+}
+
+organized_storjnici_aspect = {
+	cost = 100
+	modifier = {
+		church_loyalty_modifier = 0.05
+		tolerance_own = 1
+	}
+}
+
+resident_gost_aspect = {
+	cost = 100
+	modifier = {
+		advisor_cost = -0.1
+	}
+}
+
+sponsored_hize_aspect = {
+	cost = 100
+	modifier = {
+		global_trade_goods_size_modifier = 0.075
+	}
+}
+
+stecak_burial_aspect = {
+	cost = 100
+	modifier = {
+		stability_cost_modifier = -0.1
+		global_prosperity_growth = 0.05
+	}
+}

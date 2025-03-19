@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = principality
+government_rank = 1
+technology_group = eastern
+religion = orthodox
+primary_culture = cossack 
+add_accepted_culture = ruthenian
+capital = 6206 #Hlynsk
+
+
+1412.1.1 = {
+	monarch = {
+		name = "Aleska I"
+		dynasty = "Mamay"
+		birth_date = 1390.1.1   #???
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	clear_scripted_personalities = yes
+}

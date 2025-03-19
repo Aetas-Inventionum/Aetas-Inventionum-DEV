@@ -1,0 +1,36 @@
+#6350 -  Arzamas
+#Area - Rudnya
+#Region - Russia
+
+#Core Details
+capital = "Arzamas"
+is_city = yes
+owner = MRZ
+controller = MRZ 
+
+#Demographics
+culture = mordvin
+religion = tengri_pagan_reformed
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = fur
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = MRZ
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = ottoman
+discovered_by = nomad_group
+
+#Histories

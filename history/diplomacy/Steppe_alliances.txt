@@ -1,0 +1,129 @@
+#golden horde-kazan
+march = {
+	first = GLH
+	second = KAZ 
+	start_date = 1415.1.1
+	end_date = 1431.1.1
+}
+
+#golden horde-nogai
+march = {
+	first = GLH
+	second = NOG
+	start_date = 1415.1.1
+	end_date = 1431.1.1
+}
+
+#golden horde-crimea
+march = {
+	first = GLH
+	second = CRI
+	start_date = 1415.1.1
+	end_date = 1420.7.21
+}
+
+# Qasim or Giray dynasty rulers of Kazan
+alliance = {
+	first = QAS
+	second = KAZ
+	start_date = 1519.4.1
+	end_date = 1521.5.1
+}
+
+alliance = {
+	first = CRI
+	second = KAZ
+	start_date = 1521.5.1
+	end_date = 1532.1.1
+}
+
+alliance = {
+	first = QAS
+	second = KAZ
+	start_date = 1532.1.1
+	end_date = 1535.1.1
+}
+
+alliance = {
+	first = CRI
+	second = KAZ
+	start_date = 1535.5.1
+	end_date = 1551.8.1
+}
+
+union = {
+	first = QAS
+	second = KAZ
+	start_date = 1551.8.1
+	end_date = 1552.3.1
+}
+
+# Nogais enter service of Russian tsars
+vassal = {
+	first = RUS
+	second = NOG
+	start_date = 1557.1.1
+	end_date = 1634.1.1
+}
+
+# Khiva subjugated by Nadir Shah
+vassal = {
+	first = PER
+	second = KHI
+	start_date = 1740.1.1
+	end_date = 1747.6.19
+}
+
+#GLH - MOS
+dependency = {
+	subject_type = "tributary_state"
+	first = GLH 
+	second = MOS
+	start_date = 1250.1.1
+	end_date = 1517.1.22
+}
+
+#GLH - Ryazan
+dependency = {
+	subject_type = "tributary_state"
+	first = GLH 
+	second = RYA
+	start_date = 1250.1.1
+	end_date = 1517.1.22
+}
+
+#glh - murunza
+dependency = {
+	subject_type = "tributary_state"
+	first = GLH 
+	second = MRZ
+	start_date = 1250.1.1
+	end_date = 1517.1.22
+}
+
+#glh - white horde
+dependency = {
+	subject_type = "tributary_state"
+	first = GLH 
+	second = WHH
+	start_date = 1250.1.1
+	end_date = 1517.1.22
+}
+
+#glh - bashkiria
+dependency = {
+	subject_type = "tributary_state"
+	first = GLH 
+	second = BSH
+	start_date = 1250.1.1
+	end_date = 1517.1.22
+}
+
+#glh - sibir
+dependency = {
+	subject_type = "tributary_state"
+	first = GLH 
+	second = SIB
+	start_date = 1250.1.1
+	end_date = 1517.1.22
+}

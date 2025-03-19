@@ -1,0 +1,41 @@
+#3404 - Llerena
+#Area - Extremadura
+#Region - Iberia
+
+#Core Details
+capital = "Llerena"
+is_city = yes
+owner = CAS
+controller = CAS
+
+#Demographics
+culture = sephardic
+religion = jewish 
+
+#Development and Trade
+base_tax = 2
+base_production = 1
+base_manpower = 1
+trade_goods = livestock
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = CAS
+add_core = STG
+add_core = LON
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+add_province_triggered_modifier = stg_order
+add_province_triggered_modifier = jewish_community
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

@@ -1,0 +1,4594 @@
+ai_bonn_minster = {
+	start = 3390 #bonn
+	date = 1480.01.01 #later date just so it can be built/placed via event 
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 1
+	type = monument
+	build_trigger = { 
+		owner = { 
+			OR = { 
+				tag = KOL 
+				was_tag = KOL 
+			}
+		}
+	}
+	can_be_moved = no
+	on_built = { 
+	}
+	on_destroyed = { }
+	can_use_modifiers_trigger = { 
+		province_is_or_accepts_religion_group = {
+			religion_group = christian
+		}
+		is_capital = yes 
+	}
+	can_upgrade_trigger = { 
+		province_is_or_accepts_religion_group = {
+			religion_group = christian
+		}
+		is_capital = yes 
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = { 
+			local_tax_modifier = 0.05
+		}
+		area_modifier = {
+			local_prosperity_growth = 0.025
+		}
+		country_modifiers = { 
+		}
+		on_upgraded = {
+			add_building = cathedral
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = { 
+			local_tax_modifier = 0.1
+		}
+		area_modifier = {
+			local_prosperity_growth = 0.05
+			local_governing_cost = -0.075
+		}
+		country_modifiers = { 
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = { 
+			local_tax_modifier = 0.15
+		}
+		area_modifier = {
+			local_prosperity_growth = 0.1
+			local_governing_cost = -0.15
+		}
+		country_modifiers = { 
+			religious_unity = 0.1
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+ai_leine_palace = {
+	start = 1758 #hanover
+	date = 1600.01.01 
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 0
+	type = monument
+	build_trigger = { 
+		owner = {
+			OR = { 
+				tag = HAN
+				was_tag = HAN 
+				AND = { 
+					tag = CLB 
+					mission_completed = clb_hannover
+				}
+				mission_completed = han_leine_palace
+				has_country_flag = test_han_flag
+			}
+		}
+	}
+	can_be_moved = no
+	on_built = { 
+	}
+	on_destroyed = { }
+	can_use_modifiers_trigger = { 
+		owner = { 
+			OR = { 
+				tag = CLB 
+				was_tag = CLB
+				tag = HAN 
+				was_tag = HAN 
+			}
+		}
+		AND = { 
+			province_is_or_accepts_culture = yes
+			culture = eastphalian
+		}
+		is_capital = yes 
+	}
+	can_upgrade_trigger = { 
+		owner = { 
+			OR = { 
+				tag = CLB 
+				was_tag = CLB
+				tag = HAN 
+				was_tag = HAN 
+			}
+		}
+		AND = { 
+			province_is_or_accepts_culture = yes
+			culture = eastphalian
+		}
+		is_capital = yes 
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = { 
+		}
+		area_modifier = {
+			local_centralize_state_cost = -0.05
+			trade_value_modifier = 0.1
+		}
+		country_modifiers = { 
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = { 
+			allowed_num_of_buildings = 1
+		}
+		area_modifier = {
+			local_centralize_state_cost = -0.1
+			trade_value_modifier = 0.15
+		}
+		country_modifiers = { 
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = { 
+			allowed_num_of_buildings = 1
+		}
+		area_modifier = {
+			local_centralize_state_cost = -0.15
+			trade_value_modifier = 0.2
+		}
+		country_modifiers = { 
+			max_absolutism = 5
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+ai_hildesheim = {
+	start = 5380 #hildesheim
+	date = 1831.01.01 
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 2
+	type = monument
+	build_trigger = { 
+		always = no
+	}
+	can_be_moved = no
+	on_built = { 
+		add_building = cathedral
+	}
+	on_destroyed = { }
+	can_use_modifiers_trigger = { 
+		province_is_or_accepts_religion_group = {
+			religion_group = christian
+		}
+	}
+	can_upgrade_trigger = { 
+		province_is_or_accepts_religion_group = {
+			religion_group = christian
+		}
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = { 
+		}
+		area_modifier = {
+			local_tax_modifier = 0.075
+			local_monthly_devastation = -0.05
+		}
+		country_modifiers = { 
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = { 
+		}
+		area_modifier = {
+			local_tax_modifier = 0.15
+			local_monthly_devastation = -0.1
+		}
+		region_modifier = {
+			global_unrest = -1 
+		}
+		country_modifiers = { 
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = { 
+		}
+		area_modifier = {
+			local_tax_modifier = 0.25
+			local_monthly_devastation = -0.15
+		}
+		region_modifier = {
+			global_unrest = -2
+		}
+		country_modifiers = { 
+			tolerance_own = 1
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+ai_spiessturm = {
+	start = 1762 #Kassel. It's south of the proper city in the countryside
+	date = 1831.01.01 
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 0
+	type = monument
+	build_trigger = { 
+		always = no
+	}
+	can_be_moved = no
+	on_built = { 
+	}
+	on_destroyed = { }
+	can_use_modifiers_trigger = { 
+		AND = { 
+			culture = palatinehessian
+			province_is_or_accepts_culture = yes
+		}
+	}
+	can_upgrade_trigger = { 
+		AND = { 
+			culture = palatinehessian
+			province_is_or_accepts_culture = yes
+		}
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = { 
+		}
+		area_modifier = {
+			local_unrest = -1
+			local_state_maintenance_modifier = -0.05
+		}
+		country_modifiers = { 
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = { 
+		}
+		area_modifier = {
+			local_unrest = -2
+			local_state_maintenance_modifier = -0.1
+			local_friendly_movement_speed = 0.1	
+		}
+		country_modifiers = { 
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = { 
+		}
+		area_modifier = {
+			local_unrest = -3
+			local_state_maintenance_modifier = -0.15
+			local_friendly_movement_speed = 0.15
+		}
+		country_modifiers = { 
+			parliament_effect_duration = 5
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+ai_ludwigsberg = {
+	start = 72
+	date = 1831.01.01 #spawnable via missions
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 0
+	type = monument
+	build_trigger = { 
+		OR = {
+			current_age = age_of_absolutism 
+			current_age = age_of_revolutions
+		}
+	}
+	can_be_moved = no
+	on_built = { 
+	}
+	on_destroyed = { }
+	can_use_modifiers_trigger = {
+		OR = {
+			current_age = age_of_absolutism 
+			current_age = age_of_revolutions
+		}
+		is_capital = yes 
+		AND = { 
+			culture = swabian
+			province_is_or_accepts_culture = yes
+		}
+	}
+	can_upgrade_trigger = { 
+		OR = {
+			current_age = age_of_absolutism 
+			current_age = age_of_revolutions
+		}
+		is_capital = yes 
+		AND = { 
+			culture = swabian
+			province_is_or_accepts_culture = yes
+		}
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = { 
+		}
+		area_modifier = {
+			local_prosperity_growth = 0.05
+			local_tax_modifier = 0.1
+		}
+		country_modifiers = { 
+			max_absolutism = 2.5
+		}
+		on_upgraded = {
+			change_trade_goods = chinaware
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = { 
+			allowed_num_of_buildings = 1
+		}
+		area_modifier = {
+			local_prosperity_growth = 0.1
+			local_tax_modifier = 0.15
+		}
+		country_modifiers = { 
+			max_absolutism = 5
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = { 
+			allowed_num_of_buildings = 1
+		}
+		area_modifier = {
+			local_prosperity_growth = 0.15
+			local_tax_modifier = 0.25
+		}
+		country_modifiers = { 
+			max_absolutism = 10
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+ai_bonn = {
+	start = 3390
+	date = 1831.01.01 #spawnable via missions
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 0
+	type = monument
+	build_trigger = { 
+		OR = {
+			current_age = age_of_absolutism 
+			current_age = age_of_revolutions
+		}
+	}
+	can_be_moved = no
+	on_built = { 
+	}
+	on_destroyed = { }
+	can_use_modifiers_trigger = {
+		OR = {
+			current_age = age_of_absolutism 
+			current_age = age_of_revolutions
+		}
+		is_capital = yes 
+		owner = { 
+			OR = { 
+				is_elector = yes 
+				AND = { 
+					is_part_of_hre = no 
+					government_rank = 2
+				}
+			}
+		}
+		AND = { 
+			culture = hessian
+			province_is_or_accepts_culture = yes
+		}
+	}
+	can_upgrade_trigger = { 
+		OR = {
+			current_age = age_of_absolutism 
+			current_age = age_of_revolutions
+		}
+		is_capital = yes 
+		owner = { 
+			OR = { 
+				is_elector = yes 
+				AND = { 
+					is_part_of_hre = no 
+					government_rank = 2
+				}
+			}
+		}
+		AND = { 
+			culture = hessian
+			province_is_or_accepts_culture = yes
+		}
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = { 
+		}
+		area_modifier = {
+			local_institution_spread = 0.05
+		}
+		country_modifiers = { 
+			max_absolutism = 2.5
+		}
+		on_upgraded = {
+			add_building = university
+			add_building = courthouse
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = { 
+		}
+		area_modifier = {
+			local_institution_spread = 0.10
+		}
+		country_modifiers = { 
+			max_absolutism = 5
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = { 
+		}
+		area_modifier = {
+			local_institution_spread = 0.2
+		}
+		country_modifiers = { 
+			max_absolutism = 10
+			idea_cost = -0.05
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+ai_ehrenbreitstein = {
+	start = 1760 #right bank of kolbenz, which drawn province includes thankfully
+	date = 1831.01.01 #spawnable
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 0
+	type = monument
+	build_trigger = { NOT = { current_age = age_of_discovery } }
+	can_be_moved = no
+	on_built = { 
+	}
+	on_destroyed = { }
+	can_use_modifiers_trigger = {
+		AND = { 
+			culture_group = germanic 
+			province_is_or_accepts_culture = yes
+		}
+	}
+	can_upgrade_trigger = { 
+		has_fort_building_trigger = yes
+		AND = { 
+			culture_group = germanic 
+			province_is_or_accepts_culture = yes
+		}
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = { 
+			garrison_size = 0.1
+		}
+		area_modifier = {
+			defensiveness = 0.075
+		}
+		country_modifiers = { }
+		on_upgraded = {
+			add_building = fort_16th
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = { 
+			garrison_size = 0.15
+		}
+		area_modifier = {
+			defensiveness = 0.15
+			hostile_attrition = 1
+		}
+		region_modifier = {
+		}
+		country_modifiers = { 
+		}
+		on_upgraded = {
+			add_building = fort_17th
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = { 
+			garrison_size = 0.25
+		}
+		area_modifier = {
+			defensiveness = 0.25
+			hostile_attrition = 2
+		}
+		region_modifier = {
+		}
+		country_modifiers = { 
+			build_cost = -0.15
+		}
+		on_upgraded = {
+			add_building = fort_18th
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+ai_leipzig = {
+	start = 62
+	date = 1484.01.01 
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 0
+	type = monument
+	build_trigger = { 
+		owner = { 
+			mission_completed = sax_high_court
+		}
+		AND = { 
+			culture = saxon
+			province_is_or_accepts_culture = yes
+		}
+	}
+	can_be_moved = no
+	on_built = { 
+	}
+	on_destroyed = { }
+	can_use_modifiers_trigger = {
+		AND = { 
+			culture = saxon
+			province_is_or_accepts_culture = yes
+		}
+	}
+	can_upgrade_trigger = { 
+		owner = { 
+			mission_completed = sax_high_court
+		}
+		AND = { 
+			culture = saxon
+			province_is_or_accepts_culture = yes
+		}
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = { 
+		}
+		area_modifier = {
+			trade_value_modifier = 0.075
+		}
+		country_modifiers = { 
+			global_autonomy = -0.025
+			monthly_reform_progress_modifier = 0.075
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = { 
+		}
+		area_modifier = {
+			trade_value_modifier = 0.15
+		}
+		country_modifiers = { 
+			global_autonomy = -0.05
+			monthly_reform_progress_modifier = 0.15
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = { 
+		}
+		area_modifier = {
+			trade_value_modifier = 0.15
+		}
+		country_modifiers = { 
+			global_autonomy = -0.075
+			monthly_reform_progress_modifier = 0.25
+			innovativeness_gain = 0.15
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+ai_johannisburg = {
+	start = 4718
+	date = 1550.01.01 #can build from this date
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 0
+	type = monument
+	build_trigger = { NOT = { current_age = age_of_discovery } }
+	can_be_moved = no
+	on_built = { 
+	}
+	on_destroyed = { }
+	can_use_modifiers_trigger = {
+		AND = { 
+			culture = palatinehessian 
+			province_is_or_accepts_culture = yes
+		}
+	}
+	can_upgrade_trigger = { 
+		NOT = { current_age = age_of_discovery }
+		has_fort_building_trigger = yes
+		owner = { primary_culture = palatinehessian }
+		AND = { 
+			culture = palatinehessian
+			province_is_or_accepts_culture = yes
+		}
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = { 
+			fort_level = 1
+		}
+		area_modifier = {
+			defensiveness = 0.075
+		}
+		country_modifiers = { }
+		on_upgraded = {
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = { 
+			fort_level = 1
+		}
+		area_modifier = {
+			defensiveness = 0.15
+			hostile_attrition = 1
+		}
+		region_modifier = {
+		}
+		country_modifiers = { 
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = { 
+			fort_level = 1
+		}
+		area_modifier = {
+			defensiveness = 0.25
+			hostile_attrition = 2
+		}
+		region_modifier = {
+		}
+		country_modifiers = { 
+			fort_maintenance_modifier = -0.15
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+ai_trier = {
+	start = 80
+	date = 1.01.01
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 2
+	type = monument
+	build_trigger = { }
+	can_be_moved = no
+	on_built = { 
+		add_building = cathedral
+	}
+	on_destroyed = { }
+	can_use_modifiers_trigger = {
+		AND = { 
+			culture = hessian
+			province_is_or_accepts_culture = yes
+		}
+		province_is_or_accepts_religion_group = {
+			religion_group = christian
+		}
+	}
+	can_upgrade_trigger = { 
+		owner = { 
+			primary_culture = hessian 
+		}
+		AND = { 
+			culture = hessian
+			province_is_or_accepts_culture = yes
+		}
+		province_is_or_accepts_religion_group = {
+			religion_group = christian
+		}
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = { 
+		}
+		area_modifier = {
+			local_tax_modifier = 0.1
+		}
+		country_modifiers = { 
+			tolerance_own = 1
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = { 
+		}
+		area_modifier = {
+			local_tax_modifier = 0.2
+			global_unrest = -1
+		}
+		country_modifiers = { 
+			tolerance_own = 1
+			papal_influence = 0.5
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = { 
+		}
+		area_modifier = {
+			local_tax_modifier = 0.33
+			global_unrest = -2
+		}
+		country_modifiers = { 
+			tolerance_own = 2
+			papal_influence = 1
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+ai_heidelberger_schloss = {
+	start = 77
+	date = 1.01.01
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 1
+	type = monument
+	build_trigger = { }
+	can_be_moved = no
+	on_built = { 
+	}
+	on_destroyed = { }
+	can_use_modifiers_trigger = {
+		is_capital = yes 
+		owner = { 
+			OR = { 
+				is_emperor = yes 
+				has_reform = palatine_county_reform
+				has_reform = electoral_palatinate_reform
+			}
+		}
+		AND = { 
+			culture_group = germanic 
+			province_is_or_accepts_culture = yes
+		}
+	}
+	can_upgrade_trigger = { 
+		is_capital = yes 
+		owner = { 
+			OR = { 
+				is_emperor = yes 
+				has_reform = palatine_county_reform
+				has_reform = electoral_palatinate_reform
+			}
+		}
+		AND = { 
+			culture_group = germanic 
+			province_is_or_accepts_culture = yes
+		}
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = { 
+			fort_level = 1
+			local_development_cost_modifier = -0.075
+		}
+		area_modifier = {
+			defensiveness = 0.075
+		}
+		country_modifiers = { }
+		on_upgraded = {
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = { 
+			fort_level = 1
+			local_development_cost_modifier = -0.15
+		}
+		area_modifier = {
+			defensiveness = 0.15
+		}
+		region_modifier = {
+		}
+		country_modifiers = { 
+			max_absolutism = 5
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = { 
+			fort_level = 1
+			local_development_cost_modifier = -0.25
+		}
+		area_modifier = {
+			defensiveness = 0.25
+		}
+		region_modifier = {
+		}
+		country_modifiers = { 
+			max_absolutism = 10
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+ai_heidelberg_university = {
+	start = 77
+	date = 1831.01.01
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 1
+	type = monument
+	build_trigger = { always = no }
+	can_be_moved = no
+	on_built = { 
+		add_building = university
+	}
+	on_destroyed = { }
+	can_use_modifiers_trigger = {
+		owner = {
+			religion_group = christian
+		}
+	}
+	can_upgrade_trigger = { }
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = { }
+		area_modifier = {
+			local_institution_spread = 0.05
+			local_unrest = -1
+		}
+		country_modifiers = { }
+		on_upgraded = {
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = { }
+		area_modifier = {
+			local_institution_spread = 0.1
+			local_unrest = -1
+		}
+		region_modifier = {
+			local_missionary_maintenance_cost = -0.075
+		}
+		country_modifiers = { }
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = { }
+		area_modifier = {
+			local_institution_spread = 0.20
+			local_unrest = -1
+		}
+		region_modifier = {
+			local_missionary_maintenance_cost = -0.15
+		}
+		country_modifiers = {
+			idea_cost = -0.05
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+
+ai_ingolstadt = {
+	start = 2955
+	date = 1515.01.01 #1549
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 0
+	type = monument
+	build_trigger = { 
+		NOT = { current_age = age_of_discovery }
+	}
+	can_be_moved = no
+	on_built = { 
+	}
+	on_destroyed = { }
+	can_use_modifiers_trigger = {
+		religion = catholic
+		owner = { religion = catholic }
+	}
+	can_upgrade_trigger = { 
+		religion = catholic
+		owner = { religion = catholic }
+	}
+	keep_trigger = { owner = { religion = catholic } }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = { }
+		area_modifier = {
+			local_institution_spread = 0.05
+			local_religious_conversion_resistance = 0.1
+		}
+		country_modifiers = { 
+			establish_order_cost = -0.05
+		}
+		on_upgraded = {
+			add_building = university
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = { }
+		area_modifier = {
+			local_institution_spread = 0.1
+			local_religious_conversion_resistance = 0.25
+		}
+		country_modifiers = { 
+			establish_order_cost = -0.10
+		}
+		on_upgraded = {
+			change_trade_goods = books
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = { }
+		area_modifier = { 
+			local_institution_spread = 0.15
+		}
+		region_modifier = {
+			local_religious_conversion_resistance = 0.25
+		}
+		country_modifiers = { 
+			establish_order_cost = -0.15
+			technology_cost = -0.025
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+
+ai_aachen = {
+	start = 1878
+	date = 1.01.01
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 2
+	type = monument
+	build_trigger = { }
+	can_be_moved = no
+	on_built = { 
+		add_building = cathedral
+	}
+	on_destroyed = { }
+	can_use_modifiers_trigger = {
+		owner = {
+			religion_group = christian
+			OR = { 
+				is_emperor = yes 
+				culture_group = germanic 
+			}
+		}
+	}
+	can_upgrade_trigger = { 
+		owner = {
+			OR = { 
+				is_emperor = yes 
+				government_rank = 3
+			}
+		}
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = { 
+			local_tax_modifier = 0.1
+			local_development_cost_modifier = -0.025
+		}
+		area_modifier = {
+		}
+		country_modifiers = { }
+		on_upgraded = {
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = { 
+			local_development_cost_modifier = -0.075
+		}
+		area_modifier = {
+			local_tax_modifier = 0.15
+		}
+		country_modifiers = { 
+			free_city_imperial_authority = 0.05
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = { 
+			local_development_cost_modifier = -0.15
+		}
+		area_modifier = {
+			local_tax_modifier = 0.25
+		}
+		country_modifiers = { 
+			free_city_imperial_authority = 0.1
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+
+ambras_castle = {
+	start = 73
+	date = 1480.01.01
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 0
+	type = monument
+	build_trigger = { }
+	can_be_moved = no
+	on_built = { 
+	}
+	on_destroyed = { }
+	can_use_modifiers_trigger = {
+		owner = {
+			culture_group = germanic 
+		}
+		NOT = { current_age = age_of_discovery }
+	}
+	can_upgrade_trigger = { 
+		owner = {
+			culture_group = germanic 
+		}
+		NOT = { current_age = age_of_discovery }
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = { }
+		area_modifier = {
+			local_institution_spread = 0.05
+			local_defensiveness = 0.1
+		}
+		country_modifiers = { }
+		on_upgraded = {
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = { }
+		area_modifier = {
+			local_institution_spread = 0.1
+			local_defensiveness = 0.15
+		}
+		country_modifiers = { 
+			prestige = 0.1
+			drill_gain_modifier = 0.1
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = { }
+		area_modifier = {
+			local_institution_spread = 0.20
+			local_unrest = -1
+		}
+		country_modifiers = {
+			prestige = 0.25
+			drill_gain_modifier = 0.3
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+
+ai_basel = {
+	start = 5033
+	date = 1831.01.01
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 0
+	type = monument
+	build_trigger = { always = no }
+	can_be_moved = no
+	on_built = { 
+	}
+	on_destroyed = { }
+	can_use_modifiers_trigger = {
+		culture = swiss 
+		owner = { primary_culture = swiss }
+	}
+	can_upgrade_trigger = { 
+		culture = swiss 
+		owner = { primary_culture = swiss }
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = { 
+			trade_goods_size = 1
+		}
+		area_modifier = {
+			local_institution_spread = 0.05
+		}
+		country_modifiers = { 
+			technology_cost = -0.01
+		}
+		on_upgraded = {
+			add_building = university
+			change_trade_goods = books
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = { 
+			trade_goods_size = 2
+		}
+		area_modifier = {
+			local_institution_spread = 0.15
+		}
+		country_modifiers = { 
+			technology_cost = -0.025
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = { 
+			trade_goods_size = 3
+		}
+		area_modifier = {
+			local_institution_spread = 0.25
+			local_production_efficiency = 0.15
+		}
+		country_modifiers = { 
+			technology_cost = -0.05
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+
+ai_zytglogge = {
+	start = 165
+	date = 1831.01.01
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 0 #cut for now
+	type = monument
+	build_trigger = { always = no }
+	can_be_moved = no
+	on_built = { 
+	}
+	on_destroyed = { }
+	can_use_modifiers_trigger = {
+		owner = {
+			primary_culture = swiss
+		}
+	}
+	can_upgrade_trigger = { 
+		owner = {
+			primary_culture = swiss
+		}
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = { }
+		area_modifier = {
+			local_development_cost_modifier = -0.1
+			local_unrest = -1
+		}
+		country_modifiers = { }
+		on_upgraded = {
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = { }
+		area_modifier = {
+			local_development_cost_modifier = -0.15
+			local_unrest = -1
+		}
+		country_modifiers = { 
+			expand_infrastructure_cost_modifier = -0.1
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = { }
+		area_modifier = {
+			local_development_cost_modifier = -0.25
+			local_unrest = -2
+		}
+		country_modifiers = {
+			expand_infrastructure_cost_modifier = -0.25
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+
+ai_munich = { #not active, but very pretty picture
+	start = 65
+	date = 1831.01.01
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 1
+	type = monument
+	build_trigger = { always = no }
+	can_be_moved = no
+	on_built = { 
+	}
+	on_destroyed = { }
+	can_use_modifiers_trigger = {
+		owner = {
+			OR = { 
+				primary_culture = bavarian 
+				primary_culture = austrian
+			}
+		}
+		AND = { 
+			culture = bavarian 
+			province_is_or_accepts_culture = yes 
+		}
+	}
+	can_upgrade_trigger = { 
+		owner = {
+			OR = { 
+				primary_culture = bavarian 
+				primary_culture = austrian
+			}
+		}
+		AND = { 
+			culture = bavarian 
+			province_is_or_accepts_culture = yes 
+		}
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = { 
+			local_development_cost_modifier = -0.05
+		}
+		area_modifier = {
+			local_production_efficiency = 0.075
+		}
+		country_modifiers = { }
+		on_upgraded = {
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = { 
+			local_development_cost_modifier = -0.075
+		}
+		area_modifier = {
+			local_production_efficiency = 0.15
+			local_prosperity_growth = 0.1
+		}
+		country_modifiers = { 
+			global_unrest = -1
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = { 
+			local_development_cost_modifier = -0.1
+		}
+		area_modifier = {
+			local_production_efficiency = 0.15
+			local_prosperity_growth = 0.1
+		}
+		country_modifiers = { 
+			global_unrest = -2
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+
+ai_nurnberg_castle = {
+	start = 67
+	date = 1831.01.01
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 2
+	type = monument
+	build_trigger = { always = no } #disabled for now
+	can_be_moved = no
+	on_built = { 
+	}
+	on_destroyed = { }
+	can_use_modifiers_trigger = {
+		owner = {
+			OR = { 
+				culture_group = germanic
+				is_emperor = yes
+			}
+		}
+		AND = { 
+			culture_group = germanic
+			province_is_or_accepts_culture = yes 
+		}
+	}
+	can_upgrade_trigger = { 
+		owner = {
+			OR = { 
+				culture_group = germanic
+				is_emperor = yes
+			}
+		}
+		AND = { 
+			culture_group = germanic
+			province_is_or_accepts_culture = yes 
+		}
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = { 
+			fort_level = 1
+		}
+		area_modifier = {
+			local_production_efficiency = 0.075
+		}
+		country_modifiers = { }
+		on_upgraded = {
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = { 
+			fort_level = 1
+		}
+		area_modifier = {
+			local_production_efficiency = 0.15
+			local_prosperity_growth = 0.1
+		}
+		region_modifier = {
+		}
+		country_modifiers = { 
+			free_city_imperial_authority = 0.025
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = { 
+			fort_level = 1
+		}
+		area_modifier = {
+			local_production_efficiency = 0.25
+			local_prosperity_growth = 0.2
+		}
+		region_modifier = {
+		}
+		country_modifiers = {
+			free_city_imperial_authority = 0.05
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+
+ai_nuremberg_hospital = {
+	start = 67
+	date = 1.01.01
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 1
+	type = monument
+	build_trigger = { }
+	can_be_moved = no
+	on_built = { }
+	on_destroyed = { }
+	can_use_modifiers_trigger = { }
+	can_upgrade_trigger = { }
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = { }
+		area_modifier = {
+			local_monthly_devastation = -0.05
+			local_unrest = -0.5
+		}
+		country_modifiers = { }
+		on_upgraded = {
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = {
+			local_manpower_modifier = 0.1
+		}
+		area_modifier = {
+			local_monthly_devastation = -0.1
+			local_unrest = -0.75
+		}
+		country_modifiers = { }
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = {
+			local_manpower_modifier = 0.15
+		}
+		area_modifier = {
+			local_monthly_devastation = -0.15
+			local_unrest = -1
+		}
+		country_modifiers = {
+			monarch_lifespan = 0.1
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+
+ai_munchen_residenz = {
+	start = 65
+	date = 1.01.01
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 1
+	type = monument
+	build_trigger = { }
+	can_be_moved = no
+	on_built = { }
+	on_destroyed = { }
+	can_use_modifiers_trigger = { 
+		owner = {
+			OR = { 
+				primary_culture = bavarian 
+				primary_culture = austrian
+			}
+		}
+		AND = { 
+			culture = bavarian 
+			province_is_or_accepts_culture = yes 
+		}
+	}
+	can_upgrade_trigger = { 
+		owner = {
+			OR = { 
+				primary_culture = bavarian 
+				primary_culture = austrian
+			}
+		}
+		AND = { 
+			culture = bavarian 
+			province_is_or_accepts_culture = yes 
+		}
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = { 
+			local_development_cost_modifier = -0.05
+		}
+		area_modifier = {
+			local_institution_spread = 0.05
+		}
+		country_modifiers = { }
+		on_upgraded = {
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = { 
+			local_development_cost_modifier = -0.075
+		}
+		area_modifier = {
+			local_institution_spread = 0.1
+			local_autonomy = -0.025
+		}
+		country_modifiers = { }
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = { 
+			local_development_cost_modifier = -0.1
+		}
+		area_modifier = {
+			local_institution_spread = 0.1
+			local_autonomy = -0.05
+		}
+		country_modifiers = {
+			max_absolutism = 10
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+ai_prague_castle = {
+	start = 266
+	date = 1.01.01
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 1
+	type = monument
+	build_trigger = { }
+	can_be_moved = no
+	on_built = { 
+		add_building = cathedral
+	}
+	on_destroyed = { }
+	can_use_modifiers_trigger = {
+		owner = {
+			OR = { 
+				culture_group = germanic
+				primary_culture = czech 
+				is_emperor = yes
+			}
+		}
+	}
+	can_upgrade_trigger = { 
+		owner = {
+			OR = { 
+				culture_group = germanic
+				primary_culture = czech 
+				is_emperor = yes
+			}
+		}
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = { 
+			fort_level = 1
+		}
+		area_modifier = {
+			local_tax_modifier = 0.075
+		}
+		country_modifiers = { }
+		on_upgraded = {
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = { 
+			fort_level = 1
+		}
+		area_modifier = {
+			local_tax_modifier = 0.15
+		}
+		region_modifier = {
+		}
+		country_modifiers = { 
+			imperial_authority = 0.075
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = { 
+			fort_level = 1
+		}
+		area_modifier = {
+			local_tax_modifier = 0.25
+			local_autonomy = -0.01
+		}
+		region_modifier = {
+		}
+		country_modifiers = {
+			imperial_authority = 0.15
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+ai_charles_bridge = {
+	start = 266 #Prague
+	date = 01.01.01
+	time = { months = 0	}
+	build_cost = 1000
+	can_be_moved = no
+	move_days_per_unit_distance = 10
+	starting_tier = 1
+	type = monument
+
+	build_trigger = { }
+
+	on_built = { }
+
+	on_destroyed = { }
+
+	can_use_modifiers_trigger = {
+		AND = { 
+			culture = czech
+			province_is_or_accepts_culture = yes 
+		}
+	}
+
+	can_upgrade_trigger = {
+		AND = { 
+			culture = czech
+			province_is_or_accepts_culture = yes 
+		}
+	}
+
+	keep_trigger = {		
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 80
+		}
+		cost_to_upgrade = {
+			factor = 750
+		}
+		province_modifiers = {
+			local_development_cost_modifier = -0.05
+		}
+		area_modifier = {
+			local_friendly_movement_speed = 0.025
+			local_development_cost_modifier = -0.025
+		}
+		country_modifiers = { }
+		on_upgraded = {
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 160
+		}
+		cost_to_upgrade = {
+			factor = 1500
+		}
+		province_modifiers = {
+			local_development_cost_modifier = -0.1
+		}
+		area_modifier = {
+			local_friendly_movement_speed = 0.05
+			local_development_cost_modifier = -0.05
+		}
+		country_modifiers = { }
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 320
+		}
+		cost_to_upgrade = {
+			factor = 3000
+		}
+		province_modifiers = {
+			local_development_cost_modifier = -0.15
+		}
+		area_modifier = {
+			local_friendly_movement_speed = 0.1
+			local_development_cost_modifier = -0.075
+		}
+		country_modifiers = {
+			global_prov_trade_power_modifier = 0.1
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+ai_karolinum = {
+	start = 266
+	date = 1831.01.01
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 1
+	type = monument
+	build_trigger = { always = no } #disabled for now
+	can_be_moved = no
+	on_built = { 
+		add_building = university
+	}
+	on_destroyed = { }
+	can_use_modifiers_trigger = {
+		owner = {
+			OR = { 
+				primary_culture = czech 
+				is_emperor = yes
+			}
+		}
+	}
+	can_upgrade_trigger = { 
+		owner = {
+			OR = { 
+				primary_culture = czech 
+				is_emperor = yes
+			}
+		}
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = { 
+			institution_growth = 0.1
+		}
+		area_modifier = {
+			local_institution_spread = 0.15
+		}
+		country_modifiers = { }
+		on_upgraded = {
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = { 
+			institution_growth = 0.25
+		}
+		area_modifier = {
+			local_institution_spread = 0.25
+		}
+		country_modifiers = { 
+			innovativeness_gain = 0.15
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = { 
+			institution_growth = 0.5
+		}
+		area_modifier = {
+			local_institution_spread = 0.5
+		}
+		country_modifiers = { 
+			innovativeness_gain = 0.25
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+ai_karlstejn = {
+	start = 5244
+	date = 1831.01.01
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 1
+	type = monument
+	build_trigger = { always = no } #disabled for now
+	can_be_moved = no
+	on_built = { 
+	}
+	on_destroyed = { }
+	can_use_modifiers_trigger = {
+		owner = {
+			OR = { 
+				culture_group = germanic
+				primary_culture = czech 
+				is_emperor = yes
+			}
+		}
+	}
+	can_upgrade_trigger = { 
+		owner = {
+			OR = { 
+				culture_group = germanic
+				primary_culture = czech 
+				is_emperor = yes
+			}
+		}
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = { 
+			local_defensiveness = 0.1
+		}
+		area_modifier = {
+			local_unrest = -1
+		}
+		country_modifiers = { 
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = { 
+			local_defensiveness = 0.15
+		}
+		area_modifier = {
+			local_unrest = -2
+			local_manpower_modifier = 0.05
+		}
+		country_modifiers = { 
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = { 
+			fort_level = 1
+		}
+		area_modifier = {
+			local_unrest = -3
+			local_manpower_modifier = 0.1
+		}
+		country_modifiers = { 
+			monarch_lifespan = 0.25
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+ai_hofburg = {
+	start = 134 #Wien
+	date = 01.01.01
+	time = { months = 0	}
+	build_cost = 1000
+	can_be_moved = no
+	move_days_per_unit_distance = 10
+	starting_tier = 1
+	type = monument
+
+	build_trigger = { }
+
+	on_built = { }
+
+	on_destroyed = { }
+
+	can_use_modifiers_trigger = {
+	}
+
+	can_upgrade_trigger = {
+		owner = { 
+			OR = { 
+				culture_group = west_slavic 
+				culture_group = germanic
+			}
+		}
+	}
+
+	keep_trigger = {		
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 80
+		}
+		cost_to_upgrade = {
+			factor = 750
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+			local_tax_modifier = 0.075
+			local_state_maintenance_modifier = -0.05
+		}
+		country_modifiers = { 
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 160
+		}
+		cost_to_upgrade = {
+			factor = 1500
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+			local_tax_modifier = 0.15
+			local_state_maintenance_modifier = -0.15
+		}
+		country_modifiers = { 
+			monthly_reform_progress_modifier = 0.1
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 320
+		}
+		cost_to_upgrade = {
+			factor = 3000
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+			local_tax_modifier = 0.25
+			local_state_maintenance_modifier = -0.25
+		}
+		country_modifiers = {
+			monthly_reform_progress_modifier = 0.2
+			max_absolutism = 10
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+ai_schlossberg = {
+	start = 1863 #graz
+	date = 1831.01.01
+	time = { months = 0	}
+	build_cost = 1000
+	can_be_moved = no
+	move_days_per_unit_distance = 10
+	starting_tier = 1
+	type = monument
+
+	build_trigger = { always = no } #cut for now
+
+	on_built = { }
+
+	on_destroyed = { }
+
+	can_use_modifiers_trigger = {
+	}
+
+	can_upgrade_trigger = {
+		owner = {
+			OR = { 
+				culture_group = west_slavic 
+				culture_group = germanic
+			}
+		}
+	}
+
+	keep_trigger = {		
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 80
+		}
+		cost_to_upgrade = {
+			factor = 750
+		}
+		province_modifiers = {
+			local_defensiveness = 0.075
+		}
+		area_modifier = {
+			local_production_efficiency = 0.075
+		}
+		country_modifiers = { 
+			tolerance_heathen = 1
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 160
+		}
+		cost_to_upgrade = {
+			factor = 1500
+		}
+		province_modifiers = {
+			local_defensiveness = 0.15
+			fort_level = 1
+		}
+		area_modifier = {
+			local_production_efficiency = 0.15
+			local_prosperity_growth = 0.05
+		}
+		country_modifiers = { 
+			tolerance_heathen = 2
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 320
+		}
+		cost_to_upgrade = {
+			factor = 3000
+		}
+		province_modifiers = {
+			local_defensiveness = 0.25
+			fort_level = 1
+		}
+		area_modifier = {
+			local_production_efficiency = 0.25
+			local_prosperity_growth = 0.1
+		}
+		country_modifiers = {
+			tolerance_heathen = 3
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+ai_zeughaus = {
+	start = 1863 #graz
+	date = 01.01.01
+	time = { months = 0	}
+	build_cost = 1000
+	can_be_moved = no
+	move_days_per_unit_distance = 10
+	starting_tier = 1
+	type = monument
+
+	build_trigger = { }
+
+	on_built = { }
+
+	on_destroyed = { }
+
+	can_use_modifiers_trigger = {
+	}
+
+	can_upgrade_trigger = {
+		owner = {
+			OR = { 
+				culture_group = west_slavic 
+				culture_group = germanic
+			}
+		}
+	}
+
+	keep_trigger = {		
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+
+	tier_1 = {
+		upgrade_time = {
+			months = 80
+		}
+		cost_to_upgrade = {
+			factor = 750
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+			local_regiment_cost = -0.1
+			local_manpower_modifier = 0.05
+		}
+		country_modifiers = { 
+			land_maintenance_modifier = -0.025
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = {
+			months = 160
+		}
+		cost_to_upgrade = {
+			factor = 1500
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+			local_regiment_cost = -0.15
+			local_manpower_modifier = 0.1
+		}
+		country_modifiers = { 
+			land_maintenance_modifier = -0.05
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = {
+			months = 320
+		}
+		cost_to_upgrade = {
+			factor = 3000
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+			local_regiment_cost = -0.25
+			local_manpower_modifier = 0.15
+		}
+		country_modifiers = {
+			land_maintenance_modifier = -0.1
+			infantry_fire = 1 
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+ai_nonnberg = {
+	start = 76
+	date = 1831.01.01
+	time = { months = 0	}
+	build_cost = 1000
+	can_be_moved = no
+	move_days_per_unit_distance = 10
+	starting_tier = 2
+	type = monument
+	build_trigger = {	
+		always = no 	
+	}
+	on_built = { 
+	}
+	on_destroyed = { }
+
+	can_use_modifiers_trigger = {
+		religion = catholic 
+		owner = { 
+			religion = catholic
+		}
+	}
+
+	can_upgrade_trigger = {
+		religion = catholic 
+		owner = { 
+			religion = catholic
+		}
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = {
+		}
+		area_modifier = {
+			local_production_efficiency = 0.075
+		}
+		country_modifiers = {
+			female_advisor_chance = 0.075
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = {
+		}
+		area_modifier = {
+			local_production_efficiency = 0.15
+		}
+		country_modifiers = {
+			papal_influence = 1
+			female_advisor_chance = 0.15
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = {
+		}
+		area_modifier = {
+			local_production_efficiency = 0.30
+		}
+		country_modifiers = {
+			papal_influence = 2
+			female_advisor_chance = 0.25
+			may_recruit_female_generals = yes
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+ulm_minster_great_project = {
+	start = 1872 #ulm.
+	date = 1.01.01
+	time = { months = 0	}
+	build_cost = 1000
+	can_be_moved = no
+	move_days_per_unit_distance = 10
+	starting_tier = 1
+	type = monument
+	build_trigger = {		
+	}
+	on_built = { 
+	}
+	on_destroyed = { }
+
+	can_use_modifiers_trigger = {
+		religion = catholic 
+		owner = { 
+			religion = catholic
+		}
+	}
+
+	can_upgrade_trigger = {
+		religion = catholic 
+		owner = { 
+			religion = catholic
+		}
+	}
+
+	keep_trigger = {
+	}
+
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = {
+		}
+		area_modifier = {
+			local_tax_modifier = 0.05
+		}
+		country_modifiers = {
+			church_loyalty_modifier = 0.05
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = {
+		}
+		area_modifier = {
+			local_tax_modifier = 0.1
+		}
+		country_modifiers = {
+			free_city_imperial_authority = 0.1
+			tolerance_own = 0.5
+			church_loyalty_modifier = 0.1
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = {
+		}
+		area_modifier = {
+			local_tax_modifier = 0.15
+		}
+		country_modifiers = {
+			tolerance_own = 1
+			church_loyalty_modifier = 0.15
+			free_city_imperial_authority = 0.2
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+ai_lubeck = {
+	start = 45
+	date = 1.01.01
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 2
+	type = monument
+	build_trigger = { }
+	can_be_moved = no
+	on_built = { }
+	on_destroyed = { }
+	can_use_modifiers_trigger = { }
+	can_upgrade_trigger = { }
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = { 
+			trade_goods_size_modifier = 0.05
+		}
+		area_modifier = {
+			local_production_efficiency = 0.1
+		}
+		country_modifiers = { }
+		on_upgraded = {
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = { 
+			trade_goods_size_modifier = 0.1
+		}
+		area_modifier = {
+			local_production_efficiency = 0.1
+			local_development_cost_modifier = -0.1
+		}
+		country_modifiers = { }
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = {
+			trade_goods_size_modifier = 0.1
+		}
+		area_modifier = {
+			local_production_efficiency = 0.1
+			local_development_cost_modifier = -0.1
+		}
+		country_modifiers = {
+			mercantilism_cost = -0.25
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+ai_holstentor = {
+	start = 45
+	date = 1831.01.01
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 1
+	type = monument
+	build_trigger = { always = no }
+	can_be_moved = no
+	on_built = { }
+	on_destroyed = { }
+	can_use_modifiers_trigger = { }
+	can_upgrade_trigger = { }
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = { }
+		area_modifier = {
+			local_build_cost = -0.05
+			local_defensiveness = 0.075
+		}
+		country_modifiers = { }
+		on_upgraded = {
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = {
+			local_development_cost_modifier = -0.1
+		}
+		area_modifier = {
+			local_build_cost = -0.1
+			local_defensiveness = 0.15
+		}
+		country_modifiers = { }
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = {
+			local_development_cost_modifier = -0.15
+		}
+		area_modifier = {
+			local_build_cost = -0.2
+			local_defensiveness = 0.25
+		}
+		country_modifiers = {
+			fort_maintenance_modifier = -0.1
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+ai_bremen = {
+	start = 1874 #bremen
+	date = 1831.01.01
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 2
+	type = monument
+	build_trigger = { always = no }
+	can_be_moved = no
+	on_built = { }
+	on_destroyed = { }
+	can_use_modifiers_trigger = { }
+	can_upgrade_trigger = { }
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = { 
+			trade_goods_size_modifier = 0.05
+		}
+		area_modifier = {
+			local_production_efficiency = 0.1
+		}
+		country_modifiers = { }
+		on_upgraded = {
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = { 
+			trade_goods_size_modifier = 0.1
+		}
+		area_modifier = {
+			local_production_efficiency = 0.1
+			local_development_cost_modifier = -0.1
+		}
+		country_modifiers = { }
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = {
+			trade_goods_size_modifier = 0.1
+		}
+		area_modifier = {
+			local_production_efficiency = 0.1
+			local_development_cost_modifier = -0.1
+		}
+		country_modifiers = {
+			mercantilism_cost = -0.1
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+ai_berlin = {
+	start = 50 #berlin
+	date = 1.01.01
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 0
+	type = monument
+	build_trigger = { }
+	can_be_moved = no
+	on_built = { }
+	on_destroyed = { }
+	can_use_modifiers_trigger = { 
+		culture_group = germanic 
+		is_capital = yes 
+	}
+	can_upgrade_trigger = { 
+		culture_group = germanic 
+		owner = { 
+			culture_group = germanic 
+		}
+		is_capital = yes
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = { 
+		}
+		area_modifier = {
+			local_autonomy = -0.025
+			local_development_cost_modifier = -0.075
+		}
+		country_modifiers = { }
+		on_upgraded = {
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = { 
+		}
+		area_modifier = {
+			local_autonomy = -0.05
+			local_development_cost_modifier = -0.15
+		}
+		country_modifiers = { }
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = {
+		}
+		area_modifier = {
+			local_autonomy = -0.1
+			local_development_cost_modifier = -0.25
+		}
+		country_modifiers = {
+			max_absolutism = 10
+			yearly_absolutism = 0.1
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+brandenburg_gate = {
+	start = 50 #berlin
+	date = 1788.01.01
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 0
+	type = monument
+	build_trigger = { }
+	can_be_moved = no
+	on_built = { }
+	on_destroyed = { }
+	can_use_modifiers_trigger = { }
+	can_upgrade_trigger = { }
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = { 
+		}
+		area_modifier = {
+			regiment_recruit_speed = -0.075
+			local_regiment_cost = -0.075
+		}
+		country_modifiers = { 
+			monthly_militarized_society = 0.01
+			prestige_from_land = 0.5	
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = { 
+		}
+		area_modifier = {
+			regiment_recruit_speed = -0.15
+			local_regiment_cost = -0.15
+		}
+		country_modifiers = { 
+			monthly_militarized_society = 0.02	
+			prestige_from_land = 1
+			army_tradition_from_battle = 0.25
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = {
+		}
+		area_modifier = {
+			regiment_recruit_speed = -0.25
+			local_regiment_cost = -0.25
+		}
+		country_modifiers = {
+			monthly_militarized_society = 0.05
+			prestige_from_land = 1.5
+			army_tradition_from_battle = 0.5
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+ai_sanssouci = {
+	start = 1759 #potsdam
+	date = 1745.01.01
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 0
+	type = monument
+	build_trigger = { }
+	can_be_moved = no
+	on_built = { }
+	on_destroyed = { }
+	can_use_modifiers_trigger = { 
+		owner = { 
+			tag = PRU 
+			government = monarchy
+		}
+		NOT = { 
+			OR = { 
+				current_age = age_of_discovery
+				current_age = age_of_reformation
+			}
+		}
+	}
+	can_upgrade_trigger = { 
+		owner = { 
+			tag = PRU 
+			government = monarchy
+		}
+		NOT = { 
+			OR = { 
+				current_age = age_of_discovery
+				current_age = age_of_reformation
+			}
+		}
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = { 
+		}
+		area_modifier = {
+			local_prosperity_growth = 0.075
+			local_development_cost_modifier = -0.075
+		}
+		country_modifiers = { 
+			stability_cost_modifier = -0.075
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = { 
+		}
+		area_modifier = {
+			local_prosperity_growth = 0.15
+			local_development_cost_modifier = -0.15
+		}
+		country_modifiers = { 
+			stability_cost_modifier = -0.075
+			idea_cost = -0.05
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = {
+		}
+		area_modifier = {
+			local_prosperity_growth = 0.25
+			local_development_cost_modifier = -0.25
+		}
+		country_modifiers = {
+			max_absolutism = 10
+			stability_cost_modifier = -0.25
+			idea_cost = -0.1
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+ai_wittenberg = {
+	start = 59
+	date = 1504.01.01
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 0
+	type = monument
+	build_trigger = { }
+	can_be_moved = no
+	on_built = { 
+		add_building = university
+	}
+	on_destroyed = { }
+	can_use_modifiers_trigger = {
+		owner = {
+			has_institution = renaissance
+			culture_group = germanic
+		}
+	}
+	can_upgrade_trigger = { 
+		owner = {
+			has_institution = renaissance
+			culture_group = germanic
+		}
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = { }
+		area_modifier = {
+			local_institution_spread = 0.05
+			local_unrest = -1
+		}
+		country_modifiers = { }
+		on_upgraded = {
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = { 
+			institution_growth = 0.5
+		}
+		area_modifier = {
+			local_institution_spread = 0.1
+			local_unrest = -1
+		}
+		region_modifier = {
+		}
+		country_modifiers = { }
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = { 
+			institution_growth = 1
+		}
+		area_modifier = {
+			local_institution_spread = 0.20
+			local_unrest = -1
+		}
+		region_modifier = {
+		}
+		country_modifiers = {
+			church_power_modifier = 0.25
+			monthly_fervor_increase = 0.25
+			curia_powers_cost = -0.25
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+cologne_cathedral = {
+	start = 85
+	date = 1.01.01
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 0
+	type = monument
+	build_trigger = { }
+	can_be_moved = no
+	on_built = { 
+		show_ambient_object = cologne_cathedral
+	}
+	on_destroyed = { 
+		hide_ambient_object = cologne_cathedral
+	}
+	can_use_modifiers_trigger = {
+		province_is_or_accepts_religion_group = {
+			religion_group = christian
+		}
+	}
+	can_upgrade_trigger = { 
+		province_is_or_accepts_religion_group = {
+			religion_group = christian
+		}
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = { 
+		}
+		area_modifier = {
+			local_tax_modifier = 0.075
+		}
+		country_modifiers = { 
+			papal_influence = 0.5
+			monthly_fervor_increase = 0.25
+			church_power_modifier = 0.05
+			enforce_religion_cost = -0.1
+		}
+		on_upgraded = {
+			add_building = cathedral
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = { 
+		}
+		area_modifier = {
+			local_tax_modifier = 0.15
+		}
+		region_modifier = {
+		}
+		country_modifiers = { 
+			papal_influence = 1
+			monthly_fervor_increase = 0.5
+			church_power_modifier = 0.1
+			enforce_religion_cost = -0.25
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = { 
+		}
+		area_modifier = {
+			local_tax_modifier = 0.25
+		}
+		region_modifier = {
+		}
+		country_modifiers = {
+			papal_influence = 2
+			monthly_fervor_increase = 1
+			church_power_modifier = 0.15
+			enforce_religion_cost = -0.33
+		}
+		on_upgraded = {
+			owner = {
+				country_event = { id = aetas_kol.12 }
+				add_prestige = 20
+			}
+		}
+	}
+}
+ai_dresden = {
+	start = 61 #dresden
+	date = 1.01.01
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 0
+	type = monument
+	build_trigger = { }
+	can_be_moved = no
+	on_built = { }
+	on_destroyed = { }
+	can_use_modifiers_trigger = {  
+		owner = {
+			primary_culture = saxon
+			OR = { 
+				tag = SAX 
+				was_tag = SAX 
+			}
+		}
+		is_capital = yes 
+	}
+	can_upgrade_trigger = { 
+		owner = {
+			primary_culture = saxon 
+			OR = { 
+				tag = SAX 
+				was_tag = SAX 
+			}
+		}
+		is_capital = yes
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = { 
+			local_development_cost_modifier = -0.075
+		}
+		area_modifier = {
+			local_institution_spread = 0.075
+		}
+		country_modifiers = { }
+		on_upgraded = {
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = { 
+			local_development_cost_modifier = -0.15
+			local_build_cost = -0.1
+		}
+		area_modifier = {
+			local_institution_spread = 0.15
+		}
+		country_modifiers = { }
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = {
+			local_development_cost_modifier = -0.25
+			local_build_cost = -0.2
+		}
+		area_modifier = {
+			local_institution_spread = 0.25
+		}
+		country_modifiers = {
+			monthly_splendor = 1
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+ai_juleum = {
+	start = 57
+	date = 1831.01.01
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 0
+	type = monument
+	build_trigger = { always = no }
+	can_be_moved = no
+	on_built = { 
+	}
+	on_destroyed = { }
+	can_use_modifiers_trigger = {
+			owner = {
+				culture_group = germanic
+				OR = { 
+					religion = reformed
+					religion = protestant
+				}
+			}
+			culture_group = germanic
+			OR = { 
+				religion = reformed
+				religion = protestant
+			}
+		}
+	can_upgrade_trigger = { 
+		owner = {
+			culture_group = germanic
+			OR = { 
+				religion = reformed
+				religion = protestant
+			}
+		}
+		culture_group = germanic
+		OR = { 
+			religion = reformed
+			religion = protestant
+		}
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = { 
+			institution_growth = 0.25
+		}
+		area_modifier = {
+			local_institution_spread = 0.1
+		}
+		country_modifiers = { 
+			global_missionary_strength = 0.01
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 5
+			}
+			add_building = university
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = { 
+			institution_growth = 0.5
+		}
+		area_modifier = {
+			local_institution_spread = 0.25
+		}
+		country_modifiers = { 
+			global_missionary_strength = 0.02
+			embracement_cost = -0.1
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = { 
+			institution_growth = 1
+		}
+		area_modifier = {
+			local_institution_spread = 0.5
+		}
+		country_modifiers = { 
+			global_missionary_strength = 0.03
+			embracement_cost = -0.25
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+ai_hannover_rathaus = {
+	start = 1758
+	date = 1831.01.01
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 1
+	type = monument
+	build_trigger = { always = no } #cut for now
+	can_be_moved = no
+	on_built = { 
+	}
+	on_destroyed = { }
+	can_use_modifiers_trigger = {
+			owner = {
+				culture_group = germanic
+			}
+			culture_group = germanic
+		}
+	can_upgrade_trigger = { 
+		owner = {
+			culture_group = germanic
+		}
+		culture_group = germanic
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = { 
+			trade_goods_size_modifier = 0.075
+		}
+		area_modifier = {
+			local_production_efficiency = 0.075
+		}
+		country_modifiers = { 
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = { 
+			trade_goods_size_modifier = 0.15
+		}
+		area_modifier = {
+			local_production_efficiency = 0.15
+		}
+		country_modifiers = { 
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = { 
+			trade_goods_size_modifier = 0.25
+		}
+		area_modifier = {
+			local_production_efficiency = 0.25
+		}
+		country_modifiers = { 
+			trade_steering = 0.25
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+ai_regensburg_bridge = {
+	start = 2957
+	date = 1831.01.01
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 2
+	type = monument
+	build_trigger = { always = no } #disabled for now
+	can_be_moved = no
+	on_built = { 
+	}
+	on_destroyed = { }
+	can_use_modifiers_trigger = {
+			owner = {
+				culture_group = germanic
+			}
+			culture_group = germanic
+		}
+	can_upgrade_trigger = { 
+		owner = {
+			culture_group = germanic
+		}
+		culture_group = germanic
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = { 
+		}
+		area_modifier = {
+			local_friendly_movement_speed = 0.075
+		}
+		country_modifiers = { 
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = { 
+		}
+		area_modifier = {
+			local_friendly_movement_speed = 0.15
+			local_development_cost_modifier = -0.075
+		}
+		country_modifiers = { 
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = { 
+		}
+		area_modifier = {
+			local_friendly_movement_speed = 0.25
+			local_development_cost_modifier = -0.15
+			province_trade_power_modifier = 0.15
+		}
+		country_modifiers = { 
+			trade_efficiency = 0.1
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+ai_mainz = {
+	start = 78
+	date = 1.01.01
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 2
+	type = monument
+	build_trigger = { }
+	can_be_moved = no
+	on_built = { 
+		add_building = cathedral
+	}
+	on_destroyed = { 
+	}
+	can_use_modifiers_trigger = {
+		province_is_or_accepts_religion_group = {
+			religion_group = christian
+		}
+	}
+	can_upgrade_trigger = { 
+		province_is_or_accepts_religion_group = {
+			religion_group = christian
+		}
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = { 
+		}
+		area_modifier = {
+			local_tax_modifier = 0.075
+		}
+		country_modifiers = { 
+			papal_influence = 0.5
+			monthly_fervor_increase = 0.25
+			church_power_modifier = 0.05
+			enforce_religion_cost = -0.1
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = { 
+		}
+		area_modifier = {
+			local_tax_modifier = 0.15
+		}
+		region_modifier = {
+		}
+		country_modifiers = { 
+			papal_influence = 1
+			monthly_fervor_increase = 0.5
+			church_power_modifier = 0.1
+			enforce_religion_cost = -0.25
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = { 
+		}
+		area_modifier = {
+			local_tax_modifier = 0.25
+		}
+		region_modifier = {
+		}
+		country_modifiers = {
+			papal_influence = 2
+			monthly_fervor_increase = 1
+			church_power_modifier = 0.15
+			enforce_religion_cost = -0.33
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+ai_romerberg = {
+	start = 1876
+	date = 1.01.01
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 1
+	type = monument
+	build_trigger = { }
+	can_be_moved = no
+	on_built = { 
+	}
+	on_destroyed = { }
+	can_use_modifiers_trigger = {
+		owner = { 
+			OR = { 
+				AND = { 
+					government_rank = 3
+					OR = { 
+						culture_group = germanic 
+						is_emperor = yes 
+					}
+				}
+				AND = { 
+					government = republic
+					capital = 1876
+				}
+			}
+		}
+		AND = { 
+			culture = palatinehessian 
+			province_is_or_accepts_culture = yes 
+		}
+	}
+	can_upgrade_trigger = { 
+		owner = { 
+			OR = { 
+				AND = { 
+					government_rank = 3
+					OR = { 
+						culture_group = germanic 
+						is_emperor = yes 
+					}
+				}
+				AND = { 
+					government = republic
+					capital = 1876
+				}
+			}
+		}
+		AND = { 
+			culture = palatinehessian 
+			province_is_or_accepts_culture = yes 
+		}
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = { 
+			trade_goods_size_modifier = 0.1
+		}
+		area_modifier = {
+			local_production_efficiency = 0.075
+		}
+		country_modifiers = { 
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = { 
+			trade_goods_size_modifier = 0.20
+		}
+		area_modifier = {
+			local_production_efficiency = 0.15
+			local_development_cost_modifier = -0.075
+		}
+		country_modifiers = { 
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = { 
+			trade_goods_size_modifier = 0.33
+		}
+		area_modifier = {
+			local_production_efficiency = 0.25
+			local_development_cost_modifier = -0.15
+		}
+		country_modifiers = { 
+			global_own_trade_power = 0.1
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+ai_durkheim = {
+	start = 5020
+	date = 1831.01.01
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 0
+	type = monument
+	build_trigger = { always = no } #disabled for now
+	can_be_moved = no
+	on_built = { 
+	}
+	on_destroyed = { 
+	}
+	can_use_modifiers_trigger = {
+		culture_group = germanic 
+		owner = { 
+			culture_group = germanic
+		}
+	}
+	can_upgrade_trigger = { 
+		culture_group = germanic 
+		owner = { 
+			culture_group = germanic
+		}
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = { 
+			trade_goods_size = 2.5
+		}
+		area_modifier = {
+			local_production_efficiency = 0.075
+			province_trade_power_modifier = 0.075
+		}
+		country_modifiers = { 
+		}
+		on_upgraded = {
+			change_trade_goods = salt
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = { 
+			trade_goods_size = 4
+		}
+		area_modifier = {
+			local_production_efficiency = 0.15
+			province_trade_power_modifier = 0.15
+		}
+		country_modifiers = { 
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = { 
+			trade_goods_size = 6
+		}
+		area_modifier = {
+			local_production_efficiency = 0.25
+			province_trade_power_modifier = 0.25
+		}
+		region_modifier = {
+		}
+		country_modifiers = {
+			global_trade_goods_size_modifier = 0.1
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+ai_grossmunster = {
+	start = 1869
+	date = 1.01.01
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 2
+	type = monument
+	build_trigger = { }
+	can_be_moved = no
+	on_built = { add_building = cathedral }
+	on_destroyed = { }
+	can_use_modifiers_trigger = { }
+	can_upgrade_trigger = { }
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = { }
+		area_modifier = {
+			local_monthly_devastation = -0.05
+			local_tax_modifier = 0.1
+		}
+		country_modifiers = { }
+		on_upgraded = {
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = {
+		}
+		area_modifier = {
+			local_monthly_devastation = -0.1
+			local_tax_modifier = 0.15
+		}
+		country_modifiers = { 
+			papal_influence = 1
+			church_power_modifier = 0.25
+			monthly_fervor_increase = 1
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = {
+		}
+		area_modifier = {
+			local_monthly_devastation = -0.15
+			local_tax_modifier = 0.15
+		}
+		country_modifiers = {
+			papal_influence = 2
+			church_power_modifier = 0.5
+			monthly_fervor_increase = 2
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+ai_wien_university = {
+	start = 134
+	date = 1831.01.01
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 1
+	type = monument
+	build_trigger = { always = no }
+	can_be_moved = no
+	on_built = { 
+		add_building = university
+	}
+	on_destroyed = { }
+	can_use_modifiers_trigger = { 
+		culture_group = germanic 
+		owner = { 
+			culture_group = germanic 
+		}
+	}
+	can_upgrade_trigger = { 
+		culture_group = germanic 
+		owner = { 
+			culture_group = germanic 
+		}
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = { }
+		area_modifier = {
+			local_institution_spread = 0.05
+		}
+		country_modifiers = { 
+			innovativeness_gain = 0.025
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = {
+		}
+		area_modifier = {
+			local_institution_spread = 0.15
+			local_prosperity_growth = -0.1
+		}
+		country_modifiers = { 
+			innovativeness_gain = 0.05
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = {
+			institution_growth = 1
+		}
+		area_modifier = {
+			local_institution_spread = 0.25
+			local_prosperity_growth = -0.15
+		}
+		country_modifiers = { 
+			innovativeness_gain = 0.1
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}
+ai_kramerbrucke = {
+	start = 63
+	date = 1.01.01
+	time = { months = 0 }
+	build_cost = 1000
+	starting_tier = 1
+	type = monument
+	build_trigger = { }
+	can_be_moved = no
+	on_built = { 
+	}
+	on_destroyed = { }
+	can_use_modifiers_trigger = {
+		AND = { 
+			culture_group = germanic 
+			province_is_or_accepts_culture = yes
+		}
+	}
+	can_upgrade_trigger = { 
+		AND = { 
+			culture_group = germanic 
+			province_is_or_accepts_culture = yes
+		}
+	}
+	keep_trigger = { }
+	tier_0 = {
+		upgrade_time = { months = 0 }
+		cost_to_upgrade = { factor = 0 }
+		province_modifiers = { }
+		area_modifier = { }
+		country_modifiers = { }
+		on_upgraded = { }
+	}
+	tier_1 = {
+		upgrade_time = { months = 80 }
+		cost_to_upgrade = { factor = 750 }
+		province_modifiers = { 
+			local_development_cost_modifier = -0.05
+		}
+		area_modifier = {
+			local_production_efficiency = 0.075
+		}
+		country_modifiers = { }
+		on_upgraded = {
+			owner = {
+				add_prestige = 5
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 160 }
+		cost_to_upgrade = { factor = 1500 }
+		province_modifiers = { 
+			local_development_cost_modifier = -0.1
+			trade_goods_size = 1
+		}
+		area_modifier = {
+			local_production_efficiency = 0.15
+		}
+		country_modifiers = { 
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 10
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 320 }
+		cost_to_upgrade = { factor = 3000 }
+		province_modifiers = { 
+			local_development_cost_modifier = -0.15
+			trade_goods_size = 2
+		}
+		area_modifier = {
+			local_production_efficiency = 0.25
+		}
+		country_modifiers = { 
+			merchants = 1
+		}
+		on_upgraded = {
+			owner = {
+				add_prestige = 20
+			}
+		}
+	}
+}

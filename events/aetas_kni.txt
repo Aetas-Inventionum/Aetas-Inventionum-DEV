@@ -1,0 +1,290 @@
+namespace = aetas_kni
+normal_or_historical_nations = yes
+
+# Hospitaller Election
+country_event = {
+	id = aetas_kni.1
+	title = aetas_kni.1.t
+	desc = aetas_kni.1.d
+	picture = CITY_VIEW_eventPicture
+	
+	is_triggered_only = yes 
+
+	option = { #auvergne langue
+		name = "aetas_kni.1.a"
+		random_list = { 
+			1 = { 
+				define_ruler = { 
+					culture = auvergnat
+				}
+				every_country = { 
+					limit = { culture_group = occitain_group }
+					add_opinion = { 
+						WHO = ROOT 
+						modifier = kni_langue
+					}
+				}
+			}
+			1 = {
+				define_ruler = { 
+					culture = limousin
+				}
+				every_country = { 
+					limit = { culture_group = occitain_group }
+					add_opinion = { 
+						WHO = ROOT 
+						modifier = kni_langue
+					}
+				}
+			}
+			1 = {
+				define_ruler = { 
+					culture = cosmopolitan_french
+				}
+				every_country = { 
+					limit = { culture_group = french }
+					add_opinion = { 
+						WHO = ROOT 
+						modifier = kni_langue
+					}
+				}
+			}
+			1 = {
+				define_ruler = { 
+					culture = arpitan
+				}
+				every_country = { 
+					limit = { culture_group = french }
+					add_opinion = { 
+						WHO = ROOT 
+						modifier = kni_langue
+					}
+				}
+			}
+			1 = {
+				define_ruler = { 
+					culture = burgundian
+				}
+				every_country = { 
+					limit = { culture_group = french }
+					add_opinion = { 
+						WHO = ROOT 
+						modifier = kni_langue
+					}
+				}
+			}
+		}
+		add_ruler_modifier = { 
+			name = auvergnat_langue
+			duration = -1
+		}
+	}
+	option = { #francien langue
+		name = "aetas_kni.1.b"
+		random_list = { 
+			1 = { 
+				define_ruler = { 
+					culture = cosmopolitan_french
+				}
+			}
+			1 = { 
+				define_ruler = { 
+					culture = poitevin
+				}
+			}
+			1 = { 
+				define_ruler = { 
+					culture = normand
+				}
+			}
+			1 = { 
+				define_ruler = { 
+					culture = angevin
+				}
+			}
+			1 = { 
+				define_ruler = { 
+					culture = breton
+				}
+			}
+			1 = { 
+				define_ruler = { 
+					culture = champenois
+				}
+			}
+			1 = { 
+				define_ruler = { 
+					culture = picard
+				}
+			}
+			1 = { 
+				define_ruler = { 
+					culture = lorrain
+				}
+			}
+		}
+		add_ruler_modifier = { 
+			name = francien_langue
+			duration = -1
+		}
+		every_country = { 
+			limit = { culture_group = french }
+			add_opinion = { 
+				WHO = ROOT 
+				modifier = kni_langue
+			}
+		}
+	}
+	option = { #prov langue
+		name = "aetas_kni.1.c"
+		define_ruler = { 
+			culture = provencal
+		}
+		add_ruler_modifier = { 
+			name = provencal_langue
+			duration = -1
+		}
+		every_country = { 
+			limit = { culture_group = occitain_group }
+			add_opinion = { 
+				WHO = ROOT 
+				modifier = kni_langue
+			}
+		}
+	}
+	option = { #english langue
+		name = "aetas_kni.1.dd"
+		define_ruler = { 
+			culture = english
+		}
+		add_ruler_modifier = { 
+			name = english_langue
+			duration = -1
+		}
+		every_country = { 
+			limit = { culture_group = british }
+			add_opinion = { 
+				WHO = ROOT 
+				modifier = kni_langue
+			}
+		}
+	}
+	option = { #italian langue
+		name = "aetas_kni.1.e"
+		random_list = { 
+			1 = { 
+				define_ruler = { 
+					culture = venetian
+				}
+			}
+			1 = { 
+				define_ruler = { 
+					culture = ligurian
+				}
+			}
+			1 = { 
+				define_ruler = { 
+					culture = neapolitan
+				}
+			}
+			1 = { 
+				define_ruler = { 
+					culture = tuscan
+				}
+			}
+			1 = { 
+				define_ruler = { 
+					culture = piedmontese
+				}
+			}
+		}
+		add_ruler_modifier = { 
+			name = italian_langue
+			duration = -1
+		}
+		every_country = { 
+			limit = { culture_group = latin }
+			add_opinion = { 
+				WHO = ROOT 
+				modifier = kni_langue
+			}
+		}
+	}
+	option = { #german langue
+		name = "aetas_kni.1.f"
+		random_list = { 
+			1 = { 
+				define_ruler = { 
+					culture = austrian
+				}
+			}
+			1 = { 
+				define_ruler = { 
+					culture = bavarian
+				}
+			}
+			1 = { 
+				define_ruler = { 
+					culture = franconian
+				}
+			}
+			1 = { 
+				define_ruler = { 
+					culture = prussian
+				}
+			}
+			1 = { 
+				define_ruler = { 
+					culture = hungarian
+				}
+			}
+			1 = { 
+				define_ruler = { 
+					culture = polish
+				}
+			}
+		}
+		add_ruler_modifier = { 
+			name = german_langue
+			duration = -1
+		}
+		every_country = { 
+			limit = { culture_group = germanic }
+			add_opinion = { 
+				WHO = ROOT 
+				modifier = kni_langue
+			}
+		}
+	}
+	option = { #langue of aragon
+		name = "aetas_kni.1.g"
+		random_list = { 
+			1 = { 
+				define_ruler = { 
+					culture = aragonese
+				}
+			}
+			1 = { 
+				define_ruler = { 
+					culture = castillian
+				}
+			}
+			1 = { 
+				define_ruler = { 
+					culture = catalan
+				}
+			}
+		}
+		add_ruler_modifier = { 
+			name = aragon_langue
+			duration = -1
+		}
+		every_country = { 
+			limit = { culture_group = iberian }
+			add_opinion = { 
+				WHO = ROOT 
+				modifier = kni_langue
+			}
+		}
+	}
+}

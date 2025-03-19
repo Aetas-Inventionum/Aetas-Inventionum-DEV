@@ -1,0 +1,9 @@
+government = monarchy 
+add_government_reform = shurafa_reform
+government_rank = 1
+primary_culture = moroccan
+religion = sunni
+technology_group = muslim
+capital = 5714	# Chefchaouen
+fixed_capital = 5714 # Cannot move capital away from this province & no power cost to move to it
+religious_school = maliki_school

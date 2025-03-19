@@ -1,0 +1,100 @@
+#Country Name: Please see filename.
+
+graphical_culture = easterngfx
+
+color = { 85 75 150 } # 98 127 40
+revolutionary_colors = { 15 8 5 }
+
+historical_idea_groups = {
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	trade_ideas
+	diplomatic_ideas
+	economic_ideas
+	administrative_ideas
+	quality_ideas
+}
+
+historical_units = {
+	eastern_medieval_infantry
+	eastern_knights
+	slavic_stradioti
+	eastern_militia
+	ottoman_sekban
+	ottoman_reformed_spahi
+	ottoman_reformed_janissary
+	ottoman_toprakli_hit_and_run
+	ottoman_nizami_cedid
+	ottoman_toprakli_dragoon
+	eastern_skirmisher
+	eastern_uhlan
+	eastern_carabinier
+	ottoman_new_model
+	ottoman_lancer
+}
+
+monarch_names = {
+	#historical Domni of Moldavia
+	"Dragosh #1" = 15
+	"Sas #1" = 5
+	"Balc #1" = 5
+	"Bogdan #1" = 20
+	"Petru #2" = 100
+	"Latcu #1" = 5
+	"Roman #1" = 20
+	"Shtefan #1" = 70
+	"Iuga #1" = 5
+	"Iliash #0" = 20
+	"Ilie #0" = 30
+	"Ioan #0" = 10
+	"Aran #0" = 10
+	"Ieremia #0" = 5
+	"Constantin #0" = 10
+	"Radu #0" = 20
+	"Gaspar #0" = 10
+	"Miron #0" = 5
+	"Moise #0" = 5
+	"Vasile #0" = 5
+	"Gheorghe #0" = 5
+	"Mihai #0" = 20
+
+
+	#misc moldavian and romanian names relevant to time period
+	"Luca #0" = 5
+	"Costea #0" = 5
+	
+	"Camelia #0" = -1
+	"Doina #0" = -1
+	"Olga #0" = -1
+}
+
+leader_names = {
+	Arbore
+	Bogdaneshti Bratianu Buzeshti
+	Calmashu Callimachi Cantemir
+	Dragosh
+	Flondor
+	Ghica
+	Hâjdau
+	Hanco
+	Keshco
+	Miclescu Mushatin Moruzi Movila Mushat
+	Racovita Rashcanu Rosetti
+	Soldan Sturdza
+}
+
+ship_names = {
+	"Athleta Christi"
+	Baia "Bogdan I"
+	Iuga
+	Moldova
+	"Râul Prut"
+	"Stefan cel Mare" Suceava
+	"Târgul Moldovei"
+	Vaslui
+}
+
+army_names = {
+	"Oastea de $PROVINCE$" 
+}

@@ -1,0 +1,858 @@
+namespace = aetas_hab
+normal_or_historical_nations = yes
+
+# Albrechts death and Inner-Austrian leadership O.o
+country_event = {
+	id = aetas_hab.1
+	title = aetas_hab.1.t
+	desc = aetas_hab.1.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	immediate = {
+		hidden_effect = { 
+			if = {
+				limit = {
+					NOT = {
+						has_ruler = "Friedrich"
+					}
+				}
+				define_ruler = { 
+				name = "Friedrich III"
+				dynasty = "von Habsburg"
+				adm = 3
+				dip = 6
+				mil = 1
+				}
+				remove_heir = {}
+			}
+			clr_country_flag = hab_friedrich_destiny #no modifier??
+			set_country_flag = hab_friedrich_destiny_succession
+		}
+	}
+
+	option = { #rise, friedrich
+		name = "aetas_hab.1.a"
+		hidden_effect = { 
+			inherit = STY 
+			set_capital = 1863
+		}
+		custom_tooltip = aetas_hab.1.tt
+		change_tag = STY 
+		change_country_color = { 
+			color = { 59  126  59 }
+		}
+		hidden_effect = {
+			austria_proper_area = { 
+				limit = { owned_by = ROOT }
+				add_core = HAB 
+				remove_core = STY 
+			}
+			upper_austria_area = { 
+				limit = { owned_by = ROOT }
+				add_core = HAB 
+				remove_core = STY
+			}
+			release = HAB 
+		}
+		create_union = HAB 
+	}
+}
+country_event = { #heir of destiny aka friedrich o'clock
+	id = aetas_hab.2
+	title = aetas_hab.2.t
+	desc = aetas_hab.2.d
+	picture = NEW_HEIR_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = { 
+		tag = STY
+	}
+
+	mean_time_to_happen= {
+		months = 2
+	}
+
+	option = { #it is friedrich's destiny to unite both austrias
+		name = "aetas_hab.2.a"
+		define_heir = { 
+			name = "Friedrich"
+			monarch_name = "Friedrich V"
+			dynasty = "von Habsburg"
+			birth_date = 1415.9.21
+			#death_date = 1493.8.77
+			adm = 6
+			dip = 6
+			mil = 1
+			block_disinherit = yes 
+		}
+		set_heir_flag = fred_v_flag
+		#set_country_flag = hab_friedrich_destiny
+		#custom_tooltip = aetas_hab.2.a.tt
+	}
+}
+country_event = { #permanent return of bavarian tirol
+	id = aetas_hab.3
+	title = aetas_hab.3.t
+	desc = aetas_hab.3.d
+	picture = TRADE_GOODS_METALS_AND_MINING_EQUIPENT_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = { 
+		tag = HAB 
+		is_year = 1500
+		any_country = { 
+			primary_culture = bavarian
+			5184 = {
+				country_or_non_sovereign_subject_holds = ROOT				
+			}
+		}
+	}
+
+	mean_time_to_happen = { 
+		months = 30
+	}
+
+	option = { 
+		name = "aetas_hab.3.a"
+		5184 = { 
+			province_event = { id = aetas_hab.4 }
+		}
+	}
+}
+
+province_event = { #bavarian country's answer
+	id = aetas_hab.4
+	title = aetas_hab.4.t
+	desc = aetas_hab.4.d
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes 
+
+	option = { #yes
+		name = "aetas_hab.4.a"
+		ai_chance = { factor = 1 }
+		HAB = { 
+			country_event = { id = aetas_hab.5 }
+		}
+	}
+
+	option = { #no
+		name = "aetas_hab.4.b"
+		ai_chance = { factor = 0 }
+		HAB = { 
+			country_event = { id = aetas_hab.6 }
+		}
+	}
+}
+country_event = { #bavarian country said yes
+	id = aetas_hab.5
+	title = aetas_hab.5.t
+	desc = aetas_hab.5.d
+	picture = CORRUPTION_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes 
+
+	option = { #yay hand it over
+		name = "aetas_hab.5.a"
+		if = { 
+			limit = { 
+				exists = TIR 
+				TIR = { 
+					is_subject_of = HAB 
+				}
+			}
+			5184 = { 
+				cede_province = TIR 
+				add_core = TIR 
+			}
+		}
+		else = { 
+			5184 = { 
+				cede_province = HAB 
+				add_core = HAB 
+			}
+		}
+	}
+}
+country_event = { #bavarian country said no
+	id = aetas_hab.6
+	title = aetas_hab.6.t
+	desc = aetas_hab.6.d
+	picture = ACCUSATION_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes 
+
+	option = { #bastards
+		name = "aetas_hab.6.a"
+		if = { 
+			limit = { 
+				exists = TIR 
+				TIR = { 
+					is_subject_of = HAB 
+				}
+			}
+			5184 = { 
+				add_core = TIR  
+			}
+		}
+		else = { 
+			5184 = { 
+				add_core = HAB 
+			}
+		}
+	}
+}
+country_event = { #cilli inherits ortenberg
+	id = aetas_hab.7
+	title = aetas_hab.7.t
+	desc = aetas_hab.7.d
+	picture = CITY_VIEW_eventPicture
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_hab.7.a
+		inherit = ORT
+		add_prestige = 10
+	}
+}
+#hungarian wedding
+country_event = {
+	id = aetas_hab.8
+	title = aetas_hab.8.t
+	desc = aetas_hab.8.d
+	picture = FEAST_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes 
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			is_neighbor_of = ROOT 
+			tag = HAB 
+			is_subject_of = HAB
+		}
+	}
+
+	option = { 
+		name = aetas_hab.8.a #we accept Albrecht's offer
+		ai_chance = { 
+			factor = 50
+			modifier = { 
+				factor = 100
+				has_opinion = { 
+					who = HAB 
+					value = 125
+				}
+			}
+			modifier = { 
+				factor = 100
+				alliance_with = HAB
+			}
+		}
+		create_marriage = HAB
+		HAB = { 
+			define_consort = {
+				name = "Erzsébet"
+				dynasty = "vu Lëtzebuerg"
+				culture = hessian
+				birth_date = 1409.10.7
+				#death_date = 1442.12.19
+				female = yes
+				country_of_origin = HUN
+				adm = 3
+				dip = 3
+				mil = 2
+			}
+		}
+		define_heir = { 
+			name = "Albert"
+			monarch_name = "Albert I"
+			dynasty = "von Habsburg"
+			birth_date = 1397.8.10
+			#death_date = 1439.10.27
+			culture = austrian
+			claim = 60
+			adm = 1
+			dip = 3
+			mil = 3
+		}
+		set_country_flag = albrecht_hun
+		custom_tooltip = albrecht_hun.tt
+	}
+	option = { 
+		name = aetas_hab.8.b #reject his offer
+		ai_chance = { 
+			factor = 25
+		}
+		custom_tooltip = aetas_hab.8.b.tt #upon Zsigmond's death, the event 'Succession of Zsigmond I' will occur as normal.
+		set_country_flag = albrecht_rejected
+	}
+}
+#rudolf's will
+country_event = {
+	id = aetas_hab.9
+	title = aetas_hab.9.t
+	desc = aetas_hab.9.d
+	picture = BIG_BOOK_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes 
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			is_subject_of = HAB 
+			is_neighbor_of = HAB
+		}
+	}
+
+	option = { 
+		name = aetas_hab.9.a 
+		STY = { 
+			grant_independence = yes 
+		}
+		custom_tooltip = hab_sty_cores.tt
+		hidden_effect = { 
+			every_province = { 
+				limit = { 
+					OR = { 
+						owned_by = STY 
+						owned_by = TIR 
+					}
+				}
+				if = { 
+					limit = { 
+						OR = { 
+							is_permanent_claim = ROOT 
+							is_claim = ROOT 
+						}
+					}
+					remove_claim = ROOT 
+				}
+				add_core = ROOT
+			}
+		}
+	}
+}
+#fall of leopoldian styria
+country_event = {
+	id = aetas_hab.10
+	title = aetas_hab.10.t
+	desc = aetas_hab.10.d
+	picture = BORDER_TENSION_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes 
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			tag = STY 
+			is_subject_of = STY
+			is_subject_of = ROOT
+			is_neighbor_of = ROOT 
+		}
+	}
+
+	option = { 
+		name = aetas_hab.10.a #finally, my will is done.
+		every_country = { 
+			limit = { 
+				AND = { 
+					alliance_with = STY 
+					OR = { 
+						defensive_war_with = ROOT 
+						offensive_war_with = ROOT
+					}
+					defensive_war_with = ROOT
+				}
+			}
+			white_peace = ROOT 
+		}
+		every_country = { 
+			limit = { 
+				is_subject_of = STY 
+				is_subject_of_type = fief 
+			}
+			create_subject = { 
+				subject = PREV 
+				subject_type = fief
+			}
+		}
+		inherit = STY 
+	}
+}
+#fate of tyrol
+country_event = {
+	id = aetas_hab.11
+	title = aetas_hab.11.t
+	desc = aetas_hab.11.d
+	picture = CONQUEST_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_hab.11.a #unite the leopoldian domains
+		inherit = TIR 
+	}
+	option = { 
+		name = aetas_hab.11.b #The counts are indispensable in Tyrol.
+		every_province = { 
+			limit = { 
+				owned_by = TIR 
+				OR = { 
+					area = upper_swabia_area
+					area = lower_swabia_area
+					area = upper_rhineland_area
+					area = alsace_area
+					area = switzerland_area
+				}
+			}
+			cede_province = ROOT 
+			add_core = ROOT
+			remove_core = TIR
+		}
+		create_march = TIR 
+		custom_tooltip = tir_march.tt #missed loc
+		set_country_flag = tir_march_flag
+		add_country_modifier = { 
+			name = tir_march_mod
+			duration = -1
+		}
+	}
+}
+#status of jews in Judenberg
+country_event = {
+	id = aetas_hab.12
+	title = aetas_hab.12.t
+	desc = aetas_hab.12.d
+	picture = DEBATE_REPUBLICAN_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_hab.12.a #allow them to stay with full rights
+		add_stability = -1
+		add_accepted_culture = askhenazic
+		custom_tooltip = accepting_juden.tt
+		hidden_effect = {
+			add_country_modifier = { 
+				name = accepted_juden
+				duration = -1
+			}
+			set_country_flag = sty_protect_jews
+			swap_non_generic_missions = yes 
+		}
+	}
+	option = { 
+		name = aetas_hab.12.b #expel them at once
+		add_stability = 1
+		every_owned_province = { 
+			limit = { religion = jewish }
+			add_province_modifier = {
+				name = anti_judenberg
+				duration = 7300
+			}
+		}
+		hidden_effect = { 
+			set_country_flag = sty_no_jews
+			swap_non_generic_missions = yes
+		}
+	}
+}
+#subjugating the counts of cilli
+country_event = {
+	id = aetas_hab.13
+	title = aetas_hab.13.t
+	desc = aetas_hab.13.d
+	picture = DIPLOMACY_eventPicture
+
+	is_triggered_only = yes 
+	fire_only_once = yes 
+
+	option = { 
+		name = aetas_hab.13.a #we've had enough of their shenanigans
+		create_subject = { 
+			subject = CLI 
+			subject_type = fief 
+		}
+		CLI = { set_country_flag = sty_cli_flag }
+		custom_tooltip = sty_cilli.tt
+	}
+}
+#wiener gesera
+country_event = {
+	id = aetas_hab.14
+	title = aetas_hab.14.t
+	desc = aetas_hab.14.d
+	picture = CATHOLICS_PERSECUTION_eventPicture
+
+	fire_only_once = yes
+	trigger = { 
+		primary_culture = austrian 
+		owns = 134
+		is_year = 1420
+	}
+	mean_time_to_happen = { 
+		months = 40
+	}
+
+	option = { 
+		name = aetas_hab.14.a #support the mob and expel the jews of Wien
+		ai_chance = { factor = 75 }
+		134 = { 
+			add_base_tax = -1
+			add_province_modifier = {
+				name = wiener_gesera
+				duration = 3650
+			}
+		}
+	}
+	option = { 
+		name = aetas_hab.14.b #not very nice that
+		ai_chance = { factor = 25 }
+		add_stability = -1
+		134 = { 
+			add_province_modifier = { 
+				name = wien_jews
+				duration = 3650
+			}
+		}
+	}
+}
+
+#imperial council 1
+country_event = {
+	id = aetas_hab.15
+	title = aetas_hab.15.t
+	desc = aetas_hab.15.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes 
+
+	option = {
+		name = aetas_hab.15.a
+		add_country_modifier = { 
+			name = review_hre_law
+			duration = 3650
+		}
+	}
+	option = { 
+		name = aetas_hab.15.b
+		add_country_modifier = {
+			name = hre_bishop_law
+			duration = 3650
+		}
+	}
+	option = { 
+		name = aetas_hab.15.c
+		add_country_modifier = { 
+			name = hre_new_deputies
+			duration = 3650
+		}
+	}
+}
+#imperial council 2
+country_event = {
+	id = aetas_hab.16
+	title = aetas_hab.16.t
+	desc = aetas_hab.16.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes 
+
+	option = {
+		name = aetas_hab.16.a
+		add_country_modifier = { 
+			name = hre_levy_tax
+			duration = 3650
+		}
+	}
+	option = { 
+		name = aetas_hab.16.b
+		add_country_modifier = {
+			name = hre_fuggers
+			duration = 3650
+		}
+	}
+	option = { 
+		name = aetas_hab.16.c
+		add_country_modifier = { 
+			name = hre_subjects
+			duration = 3650
+		}
+	}
+}
+#imperial council 3
+country_event = {
+	id = aetas_hab.17
+	title = aetas_hab.17.t
+	desc = aetas_hab.17.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes 
+
+	option = {
+		name = aetas_hab.17.a
+		add_country_modifier = { 
+			name = hre_fort_construction
+			duration = 3650
+		}
+	}
+	option = { 
+		name = aetas_hab.17.b
+		add_country_modifier = {
+			name = hre_army_equipment
+			duration = 3650
+		}
+	}
+	option = { 
+		name = aetas_hab.17.c
+		add_country_modifier = { 
+			name = hre_war_plans
+			duration = 3650
+		}
+	}
+}
+
+# skipped other events from pleibos branch for now -sc
+
+country_event = {
+	id = aetas_hab.19
+	title = aetas_hab.19.t
+	desc = aetas_hab.19.d
+	picture = POPE_PREACHING_eventPicture
+
+	is_triggered_only = yes 
+	fire_only_once = yes #one chance
+	major = yes 
+	major_trigger = { 
+		any_owned_province = { 
+			OR = { 
+				area = lower_styria_area
+				area = carinthia_area
+				area = real_carinthia_area
+			}
+		}
+	}
+
+	trigger = { 
+		tag = STY
+		strong_bishops_austria_trigger = yes
+	}
+
+	option = { 
+		name = aetas_hab.19.a
+		custom_tooltip = while_hab_bishop
+		
+		set_estate_privilege = estate_church_strong_bishops_austria
+		# TO-TEST: should give the province modifiers in its on_granted block -sc
+	}
+}
+
+country_event = {
+	id = aetas_hab.20 
+	title = aetas_hab.20.t
+	desc = aetas_hab.20.d
+	picture = CIVIL_WAR_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes 
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			is_neighbor_of = ROOT 
+			is_subject_of = HAB 
+			tag = HAB
+		}
+	}
+
+	option = { 
+		name = aetas_hab.20.a #let them walk away
+		ai_chance = { 
+			factor = 25
+			modifier = { 
+				factor = 75 
+				HAB = { 
+					army_size = 50
+				}
+			}
+		}
+		release = ZUR 
+		HAB = { 
+			create_subject = {
+			subject = ZUR 
+			subject_type = fief
+			}
+			add_country_modifier = { 
+				name = zur_subject
+				duration = -1
+			}
+		}
+		hidden_effect = { 
+			ZUR = { 
+				change_country_color = { 
+					color = { 
+						213  202  202
+					}
+				}
+			}
+		}
+	}
+
+	option = { 
+		name = aetas_hab.20.b #make them fight for it!
+		release = ZUR 
+		ZUR = { 
+			declare_war_with_cb = {
+				who = ZUR
+				casus_belli = cb_independence_war
+			}
+		}
+		HAB = { 
+			join_all_defensive_wars_of = ZUR
+		}
+		set_global_flag = zur_war
+	}
+}
+#habsburgs win
+country_event = {
+	id = aetas_hab.21
+	title = aetas_hab.21.t
+	desc = aetas_hab.21.d
+	picture = HRE_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes 
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			is_neighbor_of = ROOT 
+			is_subject_of = HAB 
+			tag = HAB
+		}
+	}
+
+	option = { 
+		name = aetas_hab.21.a 
+		white_peace = SWI 
+		every_country = { 
+			limit = { 
+				defensive_war_with = SWI 
+				OR = { 
+					is_subject_of = HAB 
+					alliance_with = HAB 
+					tag = ZUR
+				}
+			}
+			white_peace = SWI 
+		}
+		create_subject = {
+			subject = ZUR 
+			subject_type = fief
+		}
+		custom_tooltip = zur_subject.tt
+		hidden_effect = { 
+			add_country_modifier = { 
+				name = zur_subject
+				duration = -1
+			}
+		}
+	}
+}
+country_event = {
+	id = aetas_hab.22
+	title = aetas_hab.22.t
+	desc = aetas_hab.22.d
+	picture = HRE_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes 
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			is_neighbor_of = ROOT 
+			is_subject_of = HAB 
+			tag = HAB
+		}
+	}
+
+	option = { 
+		name = aetas_hab.22.a
+		white_peace = ZUR 
+		every_country = { 
+			limit = { 
+				OR = { 
+					tag = HAB 
+					is_subject_of = HAB 
+				}
+			}
+			white_peace = ROOT 
+		}
+		inherit = ZUR
+	}
+}
+#form austria instantly for testing
+country_event = {
+	id = aetas_hab.23
+	title = aetas_hab.23.t
+	desc = aetas_hab.23.d
+	picture = POPE_PREACHING_eventPicture
+
+	is_triggered_only = yes 
+
+	option = {
+		name = aetas_hab.23.a 
+		if = { 
+			limit = { tag = STY }
+			inherit = HAB 
+			change_tag = HAB 
+			add_government_reform = austrian_archduchy_reform
+			set_country_flag = archduchy_created
+			set_capital = 134
+			swap_non_generic_missions = yes
+		}
+		if = { 
+			limit = { tag = HAB }
+			inherit = STY 
+			add_government_reform = austrian_archduchy_reform
+			set_country_flag = archduchy_created
+			swap_non_generic_missions = yes
+		}
+	}
+}
+#habsburg marriage to burgundy 
+country_event = {
+	id = aetas_hab.24
+	title = aetas_hab.24.t
+	desc = aetas_hab.24.d
+	picture = INFANTES_ARAGON_eventPicture
+
+	is_triggered_only = yes 
+	fire_only_once = yes 
+	major = yes 
+
+	option = { 
+		name = aetas_hab.24.a #yes 
+		custom_tooltip = hab_marie.tt
+		set_country_flag = hab_marie_flag
+	}
+	option = {
+		name = aetas_hab.24.b #no way
+		trigger = { ai = no }
+	}
+}

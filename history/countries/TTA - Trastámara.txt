@@ -1,0 +1,33 @@
+government = monarchy
+add_government_reform = appanage_reform
+government_rank = 1
+primary_culture = castillian
+add_accepted_culture = galician
+religion = catholic
+technology_group = western
+capital = 206 #A Coruña 
+
+1400.5.2 = { 
+	monarch = { 
+		name = "Fadrique Enriquez I"
+		dynasty = "de Trastámara"
+		birth_date = 1388.1.1
+		death_date = 1430.1.1
+		adm = 2
+		dip = 1
+		mil = 3
+	}
+}
+1405.1.1 = { 
+	queen = { 
+		name = "Aldonza"
+		dynasty = "de Mendoza"
+		culture = castillian 
+		female = yes 
+		birth_date = 1380.1.1
+		death_date = 1430.1.1
+		adm = 1
+		dip = 2
+		mil = 2
+	}
+}

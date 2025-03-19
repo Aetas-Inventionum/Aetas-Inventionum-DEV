@@ -1,0 +1,29 @@
+#WLD - Waldburg
+
+#Political Situation
+capital = 5349
+fixed_capital = 5349
+
+#Government
+government_rank = 1
+government = monarchy
+add_government_reform = swabian_principality_reform
+
+#Demographics
+primary_culture = swabian
+religion = catholic
+
+#Tech and Military
+technology_group = western
+
+#History
+1361.1.1 = {
+	monarch = {
+		name = "Johann II"
+		dynasty = "von Waldburg"
+		birth_date = 1350.1.1
+		adm = 4
+		dip = 3
+		mil = 2
+	}
+}

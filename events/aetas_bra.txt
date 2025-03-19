@@ -1,0 +1,457 @@
+namespace = aetas_bra
+normal_or_historical_nations = yes
+
+# Start of a New Hohenzollern Era
+country_event = {
+	id = aetas_bra.1
+	title = aetas_bra.1.t
+	desc = aetas_bra.1.d
+	picture = CITY_VIEW_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = BRA
+		NOT = { capital = 50 }
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = { #A new dawn for Brandenburg!
+		name = "aetas_bra.1.a"
+		set_capital = 50
+		50 = {
+			add_base_tax = 1
+			add_province_modifier = {
+				name = "bra_new_capital_mod"
+				duration = -1
+			}
+		}
+	}
+}
+#sale of cottbus
+country_event = {
+	id = aetas_bra.2
+	title = aetas_bra.2.t
+	desc = aetas_bra.2.d
+	picture = CITY_VIEW_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			tag = BRA 
+			tag = BOH 
+			is_neighbor_of = ROOT
+		}
+	}
+
+	option = { #we accept bra's offer
+		name = aetas_bra.2.a
+		ai_chance = { factor = 100 }
+		add_treasury = 100
+		BRA = { add_treasury = -100 }
+		1763 = { 
+			cede_province = BRA 
+			add_core = BRA 
+			remove_core = ROOT
+		}
+	}
+}
+#rise of potsdam
+country_event = {
+	id = aetas_bra.3
+	title = aetas_bra.3.t
+	desc = aetas_bra.3.d
+	picture = CITY_VIEW_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = { #cool
+		name = aetas_bra.2.a
+		ai_chance = { factor = 100 }
+		1759 = { 
+			change_province_name = "Potsdam"
+			rename_capital = "Potsdam"
+			add_province_modifier = {
+				name = hoh_pots
+				duration = -1
+			}
+		}
+	}
+}
+# Start of a New Hohenzollern Era
+country_event = {
+	id = aetas_bra.4
+	title = aetas_bra.4.t
+	desc = aetas_bra.4.d
+	picture = CITY_VIEW_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = BRA
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = { #A new dawn for Brandenburg!
+		name = "aetas_bra.4.a"
+		add_country_modifier = { 
+			name = bra_elector
+			duration = -1
+		}
+	}
+}
+# Dispotitia Achillea
+country_event = {
+	id = aetas_bra.5
+	title = aetas_bra.5.t
+	desc = aetas_bra.5.d
+	picture = CITY_VIEW_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Institute the reforms
+		name = aetas_bra.5.a
+		ai_chance = { factor = 50 }
+		create_subject = { 
+			subject = ANS 
+			subject_type = fief 
+		}
+		ANS = { 
+			define_ruler = { 
+				name = "Friedrich I"
+				dynasty = "von Hohenzollern"
+				adm = 3
+				dip = 3
+				mil = 3
+				age = 30
+			}
+		}
+		hidden_effect = { 
+			ANS = { 
+				change_country_color = { 
+					color = { 166 53 45 }
+				}
+			}
+		}
+		create_subject = { 
+			subject = BYT 
+			subject_type = fief 
+		}
+		BYT = { 
+			define_ruler = { 
+				name = "Johann IV"
+				dynasty = "von Hohenzollern"
+				adm = 5
+				dip = 2
+				mil = 2
+				age = 30
+			}
+		}
+		hidden_effect = { 
+			BYT = { 
+				change_country_color = { 
+					color = { 146 33 25 }
+				}
+			}
+		}
+	}
+	option = { 
+		name = aetas_bra.5.b 
+		ai_chance = { factor = 50 }
+	}
+}
+# generalfinanzdirektoriums Interaction
+country_event = {
+	id = aetas_bra.6
+	title = aetas_bra.6.t
+	desc = aetas_bra.6.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes 
+
+	option = { #institute akzsinwesen
+		name = aetas_bra.6.a
+		add_country_modifier = { 
+			name = akzsinwesen
+			duration = 3650
+		}
+	}
+	option = { #innenpolitik
+		name = aetas_bra.6.b
+		add_country_modifier = { 
+			name = innenpolitik
+			duration = 3650
+		}
+	}
+	option = { #pragung
+		name = aetas_bra.6.c
+		add_country_modifier = { 
+			name = pragung
+			duration = 3650
+		}
+	}
+}
+# Conseil des Affaires Interaction
+country_event = {
+	id = aetas_bra.7 
+	title = aetas_bra.7.t
+	desc = aetas_bra.7.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes 
+
+	option = { #walder
+		name = aetas_bra.7.a
+		add_country_modifier = { 
+			name = walder
+			duration = 3650
+		}
+	}
+	option = { #mining
+		name = aetas_bra.7.b
+		add_country_modifier = { 
+			name = bergwerkswesen
+			duration = 3650
+		}
+	}
+	option = { #zollwesen
+		name = aetas_bra.7.c
+		add_country_modifier = { 
+			name = zollwesen
+			duration = 3650
+		}
+	}
+}
+# general war comissariat
+country_event = {
+	id = aetas_bra.8 
+	title = aetas_bra.8.t
+	desc = aetas_bra.8.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes 
+
+	option = { #promote junkers
+		name = aetas_bra.8.a
+		add_country_modifier = { 
+			name = junker_prom
+			duration = 3650
+		}
+	}
+	option = { #metallurgy
+		name = aetas_bra.8.b
+		add_country_modifier = {
+			name = huttenwesen
+			duration = 3650
+		}
+	}
+	option = { #offiziere
+		name = aetas_bra.8.c
+		add_country_modifier = { 
+			name = pru_offiziere
+			duration = 3650
+		}
+	}
+}
+# eve of the silesian wars
+country_event = {
+	id = aetas_bra.9
+	title = aetas_bra.9.t
+	desc = aetas_bra.9.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_bra.9.a
+		silesia_area = { 
+			limit = { 
+				NOT = { owned_by = ROOT }
+			}
+			add_core = ROOT 
+		}
+		upper_silesia_area = { 
+			limit = { 
+				NOT = { owned_by = ROOT }
+			}
+			add_core = ROOT 
+		}
+	}
+}
+#form prussia cheat
+country_event = {
+	id = aetas_bra.100
+	title = aetas_bra.100.t
+	desc = aetas_bra.100.d
+	picture = CITY_VIEW_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes 
+	
+	option = { 
+		name = aetas_bra.100.a 
+		set_capital = 50
+		hidden_effect = {
+			west_prussia_area = {
+				limit = { owned_by = TEU }
+				cede_province = POL 
+				add_core = POL 
+			}
+			5830 = { 
+				cede_province = POL
+				add_core = POL 
+			}
+			pomesania_area = {
+				limit = { 
+					owned_by = TEU 
+					NOT = { province_id = 5833 }
+				}
+				cede_province = POL 
+				add_core = POL 
+			}
+			5831 = { 
+				cede_province = TEU 
+				add_core = TEU 
+			}
+			POL = { inherit = WRM }
+			TEU = { inherit = SMA }
+			5832 = { 
+				cede_province = POL 
+				add_core = POL
+			}
+		}
+		inherit = TEU 
+		change_tag = PRU 
+		change_religion = protestant
+		add_government_reform = prussian_monarchy
+		if = {
+			limit = {
+				has_custom_ideas = no
+				NOT = { has_idea_group = ai_PRU_ideas }
+			}
+			country_event = { id = ideagroups.1 } #Swap Ideas
+		}
+		swap_non_generic_missions = yes
+		set_government_rank = 2
+	}
+}
+#fate of kulmbach-bayreuth
+country_event = {
+	id = aetas_bra.10
+	title = aetas_bra.10.t
+	desc = aetas_bra.10.d
+	picture = DEATH_OF_HEIR_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_bra.10.a #rule bayreuth in personal union
+		ai_chance = { factor = 2 }
+		create_union = BYT 
+	}
+	option = { 
+		name = aetas_bra.10.b #grant the principality to another hohenzollern
+		ai_chance = { factor = 8 }
+		create_subject = { 
+			who = BYT 
+			subject_type = fief 
+		}
+		BYT = { 
+			define_ruler = { 
+				name = "Johann IV"
+				dynasty = "von Hohenzollern"
+				age = 35
+				adm = 3 #alchemist
+				dip = 1
+				mil = 1
+			}
+		}
+	}
+	option = { 
+		name = aetas_bra.10.c #kulmbach belongs directly to brandenburg!
+		ai_chance = { factor = 1 }
+		inherit = BYT 
+		every_neighbor_country = { 
+			limit = { is_part_of_hre = yes }
+			reverse_add_opinion = { 
+				who = ROOT 
+				modifier = annexed_byt
+			}
+		}
+	}
+	after = { 
+		hidden_effect = { set_country_flag = death_of_byt_flag }
+	}
+}
+#bugraviate of nuremberg
+country_event = {
+	id = aetas_bra.11
+	title = aetas_bra.11.t
+	desc = aetas_bra.11.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes 
+
+	option = { 
+		name = aetas_bra.11.a #restore the bugraviate!
+		ai_chance = { factor = 1 }
+		franconia_area = { 
+			cede_province = NUM 
+			add_core = NUM 
+		}
+		NUM = { 
+			change_government = monarchy
+			add_government_reform = feudalism_reform 
+		}
+		create_union = NUM 
+	}
+	option = { 
+		name = aetas_bra.11.b #keep it an honorific
+		ai_chance = { factor = 10 }
+		add_country_modifier = { 
+			name = num_bugr_mod
+			duration = -1 
+		}
+	}
+}
+#inheritance of krosno
+country_event = {
+	id = aetas_bra.12
+	title = aetas_bra.12.t
+	desc = aetas_bra.12.d
+	picture = COURT_eventPicture
+
+	fire_only_once = yes 
+	is_triggered_only = yes 
+
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			tag = ZAG 
+			tag = BOH
+		}
+	}
+
+	option = { 
+		name = aetas_bra.12.a #excellent!
+		ai_chance = { factor = 1 }
+		add_prestige = 5
+		5262 = { 
+			cede_province = ROOT 
+			add_core = ROOT 
+		}
+		add_truce_with = BOH 
+	}
+}

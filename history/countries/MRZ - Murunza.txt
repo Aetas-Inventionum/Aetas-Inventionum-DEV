@@ -1,0 +1,19 @@
+government = tribal
+add_government_reform = steppe_horde
+government_rank = 1
+primary_culture = mishary
+add_accepted_culture = mordvin 
+religion = tengri_pagan_reformed
+secondary_religion = sunni
+technology_group = nomad_group
+capital = 6311	# Temnikov
+
+1415.1.1 = {
+	monarch = {
+		name = "Bexan I"
+		dynasty = "Kügesheyler"
+		adm = 1
+		dip = 1
+		mil = 2
+	}
+}

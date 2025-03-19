@@ -1,0 +1,37 @@
+#6496 - Lyskovo
+#Area - Nizhny Novgorod
+#Region - Russia 
+
+#Core Details
+capital = "Lyskovo" 
+is_city = yes
+owner = MOS
+controller = MOS
+
+#Demographics
+culture = russian
+religion = orthodox
+
+#Development and Trade
+base_tax = 2
+base_production = 2
+base_manpower = 1
+trade_goods = fish
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = MOS
+add_core = NZH
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = nomad_group
+
+#Histories

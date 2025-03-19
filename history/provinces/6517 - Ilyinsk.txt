@@ -1,0 +1,36 @@
+#6517 - Ilyinsk
+#Area - Vychegda Valley
+#Region - Russia 
+
+#Core Details
+capital = "Ilyinsk" 
+is_city = yes
+owner = VYC
+controller = VYC
+
+#Demographics
+culture = zyryan
+religion = orthodox
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = tar
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = VYC
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = nomad_group
+
+#Histories

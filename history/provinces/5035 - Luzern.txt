@@ -1,0 +1,39 @@
+#5035 - Luzern
+#Area - Switzerland
+#Region - South Germany
+
+#Core Details
+capital = "Luzern"
+is_city = yes
+owner = SWI
+controller = SWI
+
+#Demographics
+culture = swiss
+religion = catholic
+
+#Development and Trade
+base_tax = 3
+base_production = 4
+base_manpower = 2
+trade_goods = livestock
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = SWI
+add_core = LUZ
+
+#Other Political
+hre = yes
+seat_in_parliament = yes
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

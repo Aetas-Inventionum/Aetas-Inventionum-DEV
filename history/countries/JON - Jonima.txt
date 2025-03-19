@@ -1,0 +1,20 @@
+government = monarchy
+add_government_reform = albanian_lordship_reform
+government_rank = 1
+primary_culture = gheg
+religion = catholic
+technology_group = eastern
+capital = 6322
+
+
+1408.1.1 = {
+	monarch = {
+		name = "Stefan I" #son of dmitry
+		dynasty = "Jonima"	
+		birth_date = 1395.1.1
+		death_date = 1431.1.1 #guess, little is known on his life
+		adm = 1
+		dip = 4
+		mil = 2
+	}
+}

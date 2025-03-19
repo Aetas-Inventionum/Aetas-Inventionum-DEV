@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = appanage_reform
+government_rank = 1
+technology_group = eastern
+primary_culture = byelorussian
+add_accepted_culture = ruthenian
+religion = orthodox
+capital = 4545
+
+
+1412.1.1 = {
+	monarch = {
+		name = "Olelko I"
+		dynasty = "Olelkovich"
+		birth_date = 1395.1.1   
+		adm = 3
+		dip = 3
+		mil = 2
+	}
+	clear_scripted_personalities = yes
+}

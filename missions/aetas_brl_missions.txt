@@ -1,0 +1,2373 @@
+ai_pre_brl_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = no
+	potential = {
+		OR = {
+			tag = BRL
+			tag = BRU
+			tag = GTT
+			tag = LUN
+			tag = CLB
+			tag = HAN
+		}
+	}
+
+	brl_shl = {
+		icon = mission_erik
+		position = 1
+		provinces_to_highlight = { owned_by = SHL } 
+
+		trigger = {  
+			OR = { 
+				NOT = { exists = SHL }
+				SHL = { is_free_or_tributary_trigger = no }
+				AND = { 
+					alliance_with = SHL 
+					reverse_has_opinion = { 
+						who = SHL 
+						value = 150
+					}
+				}
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = shl_friend 
+				duration = 7300
+			}
+		} 
+	}
+
+	brl_hsa = {
+		icon = adjust_the_general_means
+		position = 2
+		required_missions = { brl_shl } 
+		provinces_to_highlight = {  
+			is_capital = yes
+			OR = { 
+				owned_by = HAM 
+				owned_by = BRE 
+				owned_by = HSA
+			}
+		} 
+
+		trigger = {  
+			OR = { 
+				reverse_has_opinion = { 
+					who = BRE 
+					value = 125
+				}
+				reverse_has_opinion = { 
+					who = HAM 
+					value = 125
+				}
+				reverse_has_opinion = { 
+					who = HSA
+					value = 125
+				}
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = han_hsa_mod
+				duration = 7300
+			}
+		} 
+	}
+
+	brl_hsa_posts = {
+		icon = mission_hanseatic_city
+		position = 3
+		required_missions = { brl_hsa } 
+		provinces_to_highlight = {  
+			OR = { 
+				province_id = 57
+				province_id = 53
+			}
+			NOT = { 
+				AND = { 
+					owned_by = ROOT
+					is_core = ROOT 
+					province_has_center_of_trade_of_level = 3
+				}
+			}
+		} 
+
+		trigger = {  
+			OR = { 
+				57 = { 
+					owned_by = ROOT
+					is_core = ROOT 
+					province_has_center_of_trade_of_level = 3
+				}
+				53 = { 
+					owned_by = ROOT
+					is_core = ROOT 
+					province_has_center_of_trade_of_level = 3
+				}
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = brl_hsa_merchants
+				duration = 36500
+			}
+		} 
+	}
+}
+ai_pre_brl_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = no
+	potential = {
+		OR = {
+			tag = BRL
+			tag = BRU
+			tag = GTT
+			tag = LUN
+			tag = CLB
+			tag = HAN
+		}
+	}
+
+	brl_hussite_wars = {
+		icon = mission_hussites
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			OR = { 
+				is_year = 1430
+				custom_trigger_tooltip = { 
+					tooltip = brl_hussite_wars.tt
+					has_global_flag = hussite_wars_flag 
+				}
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = brl_joined_hussite_war.tt
+			hidden_effect = { 
+				if = { 
+					limit = { offensive_war_with = BOH }
+					add_country_modifier = { 
+						name = brl_hus
+						duration = 18250
+					}
+				}
+			}
+		} 
+	}
+
+	brl_controversy = {
+		icon = chivalry_is_not_dead
+		position = 2
+		required_missions = { brl_hussite_wars } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			is_religion_enabled = protestant 
+			OR = { 
+				religion = protestant
+				religion = reformed 
+				AND = { 
+					religion = catholic
+					OR = {
+						is_council_enabled = yes 
+						is_year = 1550
+						is_papal_controller = yes 
+					}
+				}
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = brl_religion.tt
+			hidden_effect = { 
+				if = { 
+					limit = { 
+						OR = { 
+							religion = protestant
+							religion = reformed 
+						}
+					}
+					set_country_flag = brl_protestant_flag
+				}
+				else = { set_country_flag = brl_cathohlic_flag }
+			}
+			swap_non_generic_missions = yes
+		} 
+	}
+}
+brl_branching_branch_2a = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = no
+	potential = {
+		OR = {
+			tag = BRL
+			tag = BRU
+			tag = GTT
+			tag = LUN
+			tag = CLB
+			tag = HAN
+		}
+		NOT = {
+			OR = {
+				has_country_flag = brl_catholic_flag #missed loc
+				has_country_flag = brl_protestant_flag
+			}
+		}
+	}
+
+	brl_branching_2aa = {
+		icon = mission_unknown_mission
+		position = 3
+		required_missions = { brl_controversy } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no
+			}
+		} 
+
+		effect = {  } 
+	}
+
+	brl_survive_league_wars1 = {
+		icon = balance_the_estates
+		position = 4
+		required_missions = { brl_branching_2aa } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			OR = { 
+				is_in_league_war = yes 
+				hre_religion_treaty = yes 
+				NOT = { hre_size = 1 }
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = brl_league_war
+				duration = 10950
+			}
+		} 
+	}
+}
+ai_brl_protestant_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = BRL
+			tag = BRU
+			tag = GTT
+			tag = LUN
+			tag = CLB
+			tag = HAN
+		}
+		has_country_flag = brl_protestant_flag
+	}
+
+	brl_protestant_bishops = {
+		icon = mission_bridge_the_heresy
+		position = 3
+		required_missions = { brl_controversy } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			calc_true_if = { 
+				all_subject_country = { 
+					government = theocracy 
+					OR = { 
+						religion = protestant 
+						religion = reformed 
+					}
+				}
+				amount = 2
+			}
+		} 
+
+		effect = { add_government_reform = protestant_bishops_reform } 
+	}
+
+	brl_protestant_league_wars = {
+		icon = balance_the_estates
+		position = 4
+		required_missions = { brl_protestant_bishops } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			OR = { 
+				is_in_league_war = yes 
+				hre_religion_treaty = yes 
+				NOT = { hre_size = 1 }
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = brl_league_war
+				duration = 10950
+			}
+		} 
+	}
+}
+ai_brl_catholic_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = BRL
+			tag = BRU
+			tag = GTT
+			tag = LUN
+			tag = CLB
+			tag = HAN
+		}
+		has_country_flag = brl_cathohlic_flag
+	}
+
+	brl_holy_orders = {
+		icon = restore_the_hospitallers
+		position = 3
+		required_missions = { brl_controversy } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			religion = catholic
+			OR = { 
+				is_papal_controller = yes 
+				num_of_cardinals = 1
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = brl_orders.tt
+			set_country_flag = brl_orders_flag
+			add_country_modifier = { 
+				name = brl_orders_mod
+				duration = 7300
+			}
+		} 
+	}
+
+	brl_catholic_league_wars = {
+		icon = balance_the_estates
+		position = 4
+		required_missions = { brl_holy_orders } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			OR = { 
+				is_in_league_war = yes 
+				hre_religion_treaty = yes 
+				NOT = { hre_size = 1 }
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = brl_league_war
+				duration = 10950
+			}
+		} 
+	}
+}
+ai_pre_brl_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = no
+	potential = {
+		OR = {
+			tag = BRL
+			tag = BRU
+			tag = GTT
+			tag = LUN
+			tag = CLB
+			tag = HAN
+		}
+	}
+
+	brl_welfs = {
+		icon = mission_bernhard_brl
+		position = 1
+		provinces_to_highlight = {  
+			is_capital = yes 
+			OR = { 
+				owned_by = LUN
+				owned_by = BRU 
+				owned_by = CLB 
+				owned_by = GTT 
+			}
+			NOT = { owned_by = ROOT }
+		} 
+
+		trigger = {  
+			calc_true_if = { 
+				all_neighbor_country = { 
+					dynasty = ROOT 
+					OR = { 
+						is_enemy = ROOT 
+						alliance_with = ROOT 
+					}
+				}
+				amount = 2
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = brl_dip
+				duration = 7300
+			}
+		} 
+	}
+
+	brl_upperhand = {
+		icon = regal_splendour
+		position = 2
+		required_missions = { brl_welfs } 
+		provinces_to_highlight = {  
+			OR = { 
+				province_id = 57
+				province_id = 4772
+				province_id = 1758
+				province_id = 4773
+				province_id = 5379
+				province_id = 5378
+				province_id = 53
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { 
+				OR = { 
+					province_id = 57
+					province_id = 4772
+					province_id = 1758
+					province_id = 4773
+					province_id = 5379
+					province_id = 5378
+					province_id = 53
+				}
+				value = 4
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = {
+				name = brl_grow
+				duration = 18250
+			}
+		} 
+	}
+
+	brl_brl = {
+		icon = mission_otto_child
+		position = 4
+		required_missions = { brl_upperhand } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			tag = BRL 
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = brl_duchy_mod
+				duration = 18250
+			}
+		} 
+	}
+}
+ai_pre_brl_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = no
+	potential = {
+		OR = {
+			tag = BRL
+			tag = BRU
+			tag = GTT
+			tag = LUN
+			tag = CLB
+			tag = HAN
+		}
+	}
+
+	brl_army = {
+		icon = fra_refine_bombards
+		position = 1
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			army_size_percentage = 1
+			manpower_percentage = 0.9
+		} 
+
+		effect = { 
+			2971 = { add_permanent_claim = ROOT } 
+			if = { 
+				limit = { 
+					OR = { 
+						tag = BRU 
+						was_tag = BRU 
+						tag = CLB
+						was_tag = CLB
+						tag = GTT
+						was_tag = GTT 
+					}
+				}
+				if = { 
+					limit = { exists = HLD }
+					add_casus_belli = {
+						target = HLD
+						type = cb_vassalize_mission
+						months = 1200
+					}
+				}
+				else = { 5380 = { add_permanent_claim = ROOT } }
+			}
+			else_if = { 
+				limit = { 
+					OR = { 
+						tag = LUN 
+						was_tag = LUN 
+					}
+				}
+				if = { 
+					limit = { exists = LAU }
+					add_casus_belli = {
+						target = LAU
+						type = cb_restore_personal_union
+						months = 480
+					}
+				}
+				else = { 1857 = { add_permanent_claim = ROOT } }
+			}
+			if = { 
+				limit = { 
+					OR = { 
+						tag = CLB
+						was_tag = CLB 
+					}
+				}
+				4773 = { add_core = ROOT }
+			}
+		} 
+	}
+
+	brl_hoy = {
+		icon = mission_hoya
+		position = 2
+		required_missions = {
+			brl_army
+			brl_welfs
+		}
+		provinces_to_highlight = {  
+			province_id = 2971
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			2971 = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		effect = {  
+			if = { 
+				limit = { exists = MND }
+				add_casus_belli = {
+					target = MND
+					type = cb_vassalize_mission
+					months = 1200
+				}
+			}
+			else = { 5377 = { add_permanent_claim = ROOT } }
+		} 
+	}
+
+	brl_mnd = {
+		icon = mission_julius
+		position = 3
+		required_missions = {
+			brl_hoy
+		}
+		provinces_to_highlight = {  
+			province_id = 5377
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = { 5377 = { country_or_non_sovereign_subject_holds = ROOT } } 
+
+		effect = {  
+			if = { 
+				limit = { exists = OSN  }
+				add_casus_belli = {
+					target = OSN
+					type = cb_vassalize_mission
+					months = 1200
+				}
+			}
+			else = { 56 = { add_permanent_claim = ROOT } }
+		} 
+	}
+
+	brl_osn = {
+		icon = mission_osnabruck
+		position = 4
+		required_missions = { brl_mnd } 
+		provinces_to_highlight = {  
+			province_id = 56
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			56 = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		effect = {  
+			north_westphalia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+		} 
+	}
+}
+clb_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = CLB
+			AND = {
+				was_tag = CLB
+				tag = BRL
+			}
+			AND = {
+				was_tag = CLB
+				tag = HAN
+			}
+			AND = {
+				tag = HAN
+				NOT = {
+					OR = {
+						was_tag = BRU
+						was_tag = LUN
+					}
+				}
+			}
+		}
+	}
+
+	clb_gtt = {
+		icon = alpine_defenses
+		position = 1
+		provinces_to_highlight = {  
+			province_id = 4773
+			NOT = { 
+				AND = { 
+					owned_by = ROOT
+					is_core = ROOT 
+				}
+			}
+		} 
+
+		trigger = { owns_core_province = 4773 } 
+
+		effect = {  
+			4773 = { change_province_name = "Oberwald" }
+			add_country_modifier = { 
+				name = gtt_mod
+				duration = 7300
+			}
+		} 
+	}
+
+	clb_hld = {
+		icon = mission_hildesheim
+		position = 2
+		required_missions = {
+			brl_army
+			clb_gtt
+		}
+		provinces_to_highlight = {  
+			province_id = 5380
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			5380 = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		effect = {  
+			add_country_modifier = {
+				name = hld_dispute
+				duration = 18250
+			}
+			if = { 
+				limit = { exists = LAU }
+				add_casus_belli = {
+					target = LAU
+					type = cb_restore_personal_union
+					months = 480
+				}
+			}
+			else = { 
+				1857 = { add_core = ROOT } 
+				5289 = { add_core = ROOT }
+			}
+		} 
+	}
+
+	clb_lau = {
+		icon = mission_lauenburg
+		position = 3
+		required_missions = { clb_hld } 
+		provinces_to_highlight = {  
+			OR = { 
+				owned_by = LAU 
+				province_id = 1857
+				province_id = 5289
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			if = { 
+				limit = { exists = LAU }
+				senior_union_with = LAU 
+			}
+			else = { 
+				1857 = { country_or_non_sovereign_subject_holds = ROOT }
+				5289 = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = brl_lau
+				duration = 18250
+			}
+		} 
+	}
+
+	clb_calenberg = {
+		icon = powerhouse_of_the_north
+		position = 4
+		provinces_to_highlight = {  
+			province_id = 1758
+			NOT = { 
+				AND = { 
+					owned_by = ROOT 
+					is_core = ROOT 
+					is_capital_of = ROOT 
+				}
+			}
+		} 
+
+		trigger = {  
+			1758 = { 
+				owned_by = ROOT 
+				is_core = ROOT 
+				is_capital_of = ROOT 
+			}
+		} 
+
+		effect = {  
+			1758 = {
+				add_province_triggered_modifier = calenberg_residenz
+			}
+		} 
+	}
+
+	clb_invest = {
+		icon = invest_in_the_provinces
+		position = 5
+		required_missions = { clb_calenberg } 
+		provinces_to_highlight = {  
+			OR = { 
+				province_id = 1758
+				province_id = 4773
+			}
+			NOT = { 
+				AND = { 
+					owned_by = ROOT
+					is_core = ROOT 
+					num_of_times_improved = 6
+				}
+			}
+		} 
+
+		trigger = {  
+			1758 = { 
+				owned_by = ROOT
+				is_core = ROOT 
+				num_of_times_improved = 6
+			}
+			4773 = { 
+				owned_by = ROOT
+				is_core = ROOT 
+				num_of_times_improved = 6
+			}
+		} 
+
+		effect = {  
+			1758 = { 
+				add_province_modifier = { 
+					name = clb_dev
+					duration = 18250
+				}
+			}
+			4773 = { 
+				add_province_modifier = { 
+					name = clb_dev
+					duration = 18250
+				}
+			}
+		} 
+	}
+}
+clb_branch_5b = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = CLB
+			AND = {
+				tag = BRL
+				was_tag = CLB
+			}
+		}
+	}
+
+	clb_hannover = {
+		icon = mission_marburg2
+		position = 6
+		required_missions = { clb_invest } 
+		provinces_to_highlight = {  
+			province_id = 1758
+			NOT = { 
+				AND = { 
+					owned_by = ROOT
+					is_core = ROOT
+					is_capital_of = ROOT 
+					development = 25 
+					renaissance = 100
+				}
+			}
+		} 
+
+		trigger = {  
+			1758 = { 
+				owned_by = ROOT
+				is_core = ROOT
+				is_capital_of = ROOT 
+				has_tax_building_trigger = yes 
+				development = 25 
+				renaissance = 100
+			}
+			treasury = 500
+		} 
+
+		effect = {  
+			add_treasury = -500
+			1758 = { 
+				remove_province_triggered_modifier = calenberg_residenz
+				change_province_name = "Hannover"
+				add_great_project = {
+					type = ai_leine_palace
+					instant = yes
+				}
+			}
+		} 
+	}
+}
+lun_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = LUN
+			AND = {
+				was_tag = LUN
+				tag = BRL
+			}
+			AND = {
+				was_tag = LUN
+				tag = HAN
+			}
+		}
+	}
+
+	lun_lau = {
+		icon = mission_lauenburg
+		position = 2
+		required_missions = { brl_army } 
+		provinces_to_highlight = {  
+			OR = { 
+				owned_by = LAU 
+				province_id = 1857
+				province_id = 5289
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			if = { 
+				limit = { exists = LAU }
+				senior_union_with = LAU 
+			}
+			else = { 
+				1857 = { country_or_non_sovereign_subject_holds = ROOT }
+				5289 = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = brl_lau
+				duration = 18250
+			}
+			if = {
+				limit = { exists = SWB }
+				add_casus_belli = {
+					target = SWB
+					type = cb_restore_personal_union
+					months = 480
+				}
+			}
+			else_if = { 
+				limit = { exists = SAX }
+				add_casus_belli = {
+					target = SAX
+					type = cb_restore_personal_union
+					months = 480
+				}
+			}
+			else_if = { 
+				limit = { 
+					NOT = { 
+						OR = { 
+							exists = SAX
+							exists = SWB 
+						}
+					}
+					senior_union_with = LAU 
+				}
+				59 = { add_core = LAU }
+				61 = { add_core = LAU }
+				5297 = { add_core = LAU }
+			}
+			else = { 
+				59 = { add_core = ROOT }
+				61 = { add_core = ROOT }
+				5297 = { add_core = ROOT }
+			}
+		} 
+	}
+
+	lun_sax = {
+		icon = mission_luneburg_war
+		position = 3
+		required_missions = { lun_lau } 
+		provinces_to_highlight = {  
+			OR = { 
+				province_id = 59
+				province_id = 5299
+				province_id = 5297
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			OR = { 
+				59 = { country_or_non_sovereign_subject_holds = ROOT }
+				5299 = { country_or_non_sovereign_subject_holds = ROOT }
+				5297 = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = lun_swb
+				duration = -1
+			}
+		} 
+	}
+
+	lun_celle = {
+		icon = develop_our_capital
+		position = 4
+		provinces_to_highlight = {  
+			province_id = 4772
+			NOT = {
+				AND = { 
+					owned_by = ROOT
+					is_core = ROOT 
+					is_capital_of = ROOT
+					has_tax_building_trigger = yes 
+					has_trade_building_trigger = yes 
+					num_of_times_improved = 5
+				}
+			}
+		} 
+
+		trigger = {  
+			4772 = { 
+				owned_by = ROOT
+				is_core = ROOT 
+				is_capital_of = ROOT
+				has_tax_building_trigger = yes 
+				has_trade_building_trigger = yes 
+				num_of_times_improved = 5
+			}
+		} 
+
+		effect = { country_event = { id = aetas_brl.7 } } 
+	}
+
+	lun_salt = {
+		icon = mission_pol_tend_east
+		position = 5
+		required_missions = { lun_celle } 
+		provinces_to_highlight = {  
+			province_id = 53
+			NOT = { 
+				AND = { 
+					owned_by = ROOT
+					is_core = ROOT 
+					has_production_building_trigger = yes 
+					has_manufactory_trigger = yes 
+					base_production = 10
+				}
+			}
+		} 
+
+		trigger = {  
+			53 = { 
+				owned_by = ROOT
+				is_core = ROOT 
+				has_production_building_trigger = yes 
+				has_manufactory_trigger = yes 
+				base_production = 10
+			}
+		} 
+
+		effect = {  
+			53 = { 
+				remove_province_modifier = ai_luneburg_saltworks
+				add_province_modifier = { 
+					name = ai_luneburg_saltworks2
+					duration = -1
+				}
+			}
+		} 
+	}
+}
+lun_branch_5b = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = LUN
+			AND = {
+				tag = BRL
+				was_tag = LUN
+			}
+		}
+	}
+
+	lun_lun = {
+		icon = mission_luneburg
+		position = 6
+		required_missions = { lun_salt } 
+		provinces_to_highlight = {  
+			province_id = 53
+			NOT = { 
+				AND = { 
+					owned_by = ROOT
+					is_core = ROOT 
+					local_autonomy = 0 
+				}
+			}
+		} 
+
+		trigger = {  
+			53 = { 
+				owned_by = ROOT
+				is_core = ROOT 
+				local_autonomy = 0 
+			}
+			reform_level = 10
+		} 
+
+		effect = {  
+			country_event = { id = aetas_brl.8 }
+		} 
+	}
+}
+bru_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = BRU
+			AND = {
+				was_tag = BRU
+				tag = BRL
+			}
+			AND = {
+				was_tag = BRU
+				tag = HAN
+			}
+		}
+	}
+
+	bru_gtt = {
+		icon = alpine_defenses
+		position = 1
+		provinces_to_highlight = {  
+			province_id = 4773
+			NOT = { 
+				AND = { 
+					owned_by = ROOT
+					is_core = ROOT 
+				}
+			}
+		} 
+
+		trigger = { owns_core_province = 4773 } 
+
+		effect = {  
+			add_country_modifier = { 
+				name = gtt_mod
+				duration = 7300
+			}
+		} 
+	}
+
+	bru_hld = {
+		icon = mission_hildesheim
+		position = 2
+		required_missions = {
+			brl_army
+			bru_gtt
+		}
+		provinces_to_highlight = {  
+			province_id = 5380
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			5380 = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		effect = {  
+			add_country_modifier = {
+				name = hld_dispute
+				duration = 18250
+			}
+			if = { 
+				limit = { exists = GOS }
+				add_casus_belli = {
+					target = GOS
+					type = cb_vassalize_mission
+					months = 120
+				}
+			}
+			else = { 
+				4742 = { add_permanent_claim = ROOT }
+			}
+		} 
+	}
+
+	bru_gos = {
+		icon = mission_goslar
+		position = 3
+		required_missions = { bru_hld } 
+		provinces_to_highlight = {  
+			province_id = 4742
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			OR = { 
+				4742 = { country_or_non_sovereign_subject_holds = ROOT }
+				AND = { 
+					treasury = 1000
+					GOS = { 
+						has_reform = free_city
+						owns_core_province = 4742
+						has_opinion = { 
+							who = ROOT
+							value = 190
+						}
+					}
+				}
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = bru_gos.tt
+			add_country_modifier = { 
+				name = bru_gos_mod
+				duration = -1
+			}
+		} 
+	}
+
+	bru_wolfenbuttel = {
+		icon = mission_wolfenbuttel
+		position = 4
+		provinces_to_highlight = { province_id = 57 } 
+
+		trigger = {  
+			owns_core_province = 57
+			custom_trigger_tooltip = { 
+				tooltip = bru_wolfenbuttel.tt
+				57 = { has_province_modifier = wolfenbuttel_mod }
+			}
+		} 
+
+		effect = {  
+			57 = { 
+				add_province_modifier = { 
+					name = bru_wolf_dev
+					duration = 7300
+				}
+			}
+		} 
+	}
+
+	bru_library = {
+		icon = mission_bibliotheca_augusta
+		position = 5
+		required_missions = { bru_wolfenbuttel } 
+		provinces_to_highlight = {  
+			province_id = 57
+		} 
+
+		trigger = {  
+			owns_core_province = 57
+			has_idea_group = innovativeness_ideas
+		} 
+
+		effect = { country_event = { id = aetas_brl.5 } } 
+	}
+}
+bru_branch_5b = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = BRU
+			AND = {
+				tag = BRL
+				was_tag = BRU
+			}
+		}
+	}
+
+	bru_bru = {
+		icon = mission_braunschweig
+		position = 6
+		required_missions = { bru_library } 
+		provinces_to_highlight = {  
+			province_id = 57
+			NOT = { 
+				AND = { 
+					owned_by = ROOT
+					is_core = ROOT 
+					local_autonomy = 0 
+				}
+			}
+		} 
+
+		trigger = {  
+			57 = { 
+				owned_by = ROOT
+				is_core = ROOT 
+				local_autonomy = 0 
+			}
+			reform_level = 10
+		} 
+
+		effect = {  
+			country_event = { id = aetas_brl.6 }
+		} 
+	}
+}
+ai_brl_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = BRL
+			tag = HAN
+		}
+	}
+
+	brl_hsa_league = {
+		icon = chater_the_voc
+		position = 4
+		required_missions = { brl_hsa_posts } 
+		provinces_to_highlight = {  
+			OR = { 
+				province_id = 1874
+				province_id = 44
+				province_id = 45
+			}
+			NOT = {  
+				AND = { 
+					owned_by = ROOT
+					is_core = ROOT 
+				} 
+			} 
+		} 
+
+		trigger = {  
+			OR = { 
+				owns_core_province = 1874
+				owns_core_province = 44
+				owns_core_province = 45
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = brl_hsa_league_mod
+				duration = -1
+			}
+		} 
+	}
+
+	brl_new_bru = {
+		icon = mission_rb_colonise_canada
+		position = 5
+		required_missions = {
+			brl_hsa_league
+			brl_brl
+		}
+		provinces_to_highlight = {  
+			OR = { 
+				area = st_john_valley_area
+				area = upper_acadia_area
+			}
+			NOT = { 
+				AND = { 
+					is_city = yes 
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		} 
+
+		trigger = {  
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { 
+				OR = { 
+					area = st_john_valley_area
+					area = upper_acadia_area
+				}
+				is_city = yes 
+				value = 5
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = brl_new_bru_mod
+				duration = -1
+			}
+		} 
+	}
+}
+ai_brl_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = BRL
+			tag = HAN
+		}
+	}
+
+	brl_hre = {
+		icon = centralized_empire
+		position = 5
+		required_missions = { brl_brl } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			OR = { 
+				is_emperor = yes 
+				AND = { 
+					government_rank = 3
+					NOT = { hre_size = 1 }
+				}
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = guelph_kaiser
+				duration = -1
+			}
+		} 
+	}
+}
+ai_brl_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = BRL
+			tag = HAN
+		}
+	}
+
+	brl_han = {
+		icon = mission_ernst_august
+		position = 5
+		required_missions = { brl_brl } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			is_elector = yes 
+			tag = HAN 
+		} 
+
+		effect = {  
+			change_adm = 1
+			change_dip = 1
+			change_mil = 1
+			1758 = { 
+				add_great_project_tier = { 
+					type = ai_leine_palace
+					tier = 1
+				}
+			}
+		} 
+	}
+}
+ai_brl_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		OR = {
+			tag = BRL
+			tag = HAN
+		}
+	}
+
+	brl_gov = {
+		icon = mission_georg
+		position = 5
+		required_missions = { brl_brl } 
+		provinces_to_highlight = {  } 
+
+		trigger = { has_reform = han_primogeniture_reform } 
+
+		effect = {  
+			add_country_modifier = { 
+				name = brl_gov_mod
+				duration = 7300
+			}
+		} 
+	}
+}
+ai_han_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = HAN } 
+
+	han_dip = {
+		icon = mission_rb_invade_england
+		position = 6
+		required_missions = { brl_han } 
+		provinces_to_highlight = {  
+			OR = { 
+				owned_by = ENG
+				owned_by = GBR 
+				owned_by = AVE 
+			}
+		} 
+
+		trigger = {  
+			if = { 
+				limit = { exists = AVE }
+				marriage_with = AVE                 
+				reverse_has_opinion = { 
+					who = AVE 
+					value = 125
+				}
+			}
+			else_if = { 
+				limit = { exists = GBR }
+				marriage_with = GBR                 
+				reverse_has_opinion = { 
+					who = GBR
+					value = 125
+				}
+			}
+			else_if = {
+				limit = { exists = ENG } 
+				marriage_with = ENG                 
+				reverse_has_opinion = { 
+					who = ENG
+					value = 125
+				}
+			}
+			else = { 
+				any_country = { 
+					capital_scope = { 
+						region = british_isles_region
+					}
+					is_great_power = yes 
+					marriage_with = ROOT
+					has_opinion = { 
+						who = ROOT 
+						value = 125
+					}
+				}
+			}
+		} 
+
+		effect = {  
+			if = { 
+				limit = { exists = AVE }
+				add_casus_belli = {
+					target = AVE
+					type = cb_restore_personal_union
+					months = 480
+				}
+			}
+			else_if = { 
+				limit = { exists = GBR }
+				add_casus_belli = {
+					target = GBR
+					type = cb_restore_personal_union
+					months = 480
+				}
+			}
+			else_if = {
+				limit = { exists = ENG } 
+				add_casus_belli = {
+					target = ENG
+					type = cb_restore_personal_union
+					months = 480
+				}
+			}
+			else = { 
+				british_isles_region = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		} 
+	}
+
+	han_crown = {
+		icon = mission_georg_gbr
+		position = 7
+		required_missions = { han_dip } 
+		provinces_to_highlight = {  
+			region = british_isles_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			if = {
+				limit = { exists = AVE }
+				senior_union_with = AVE 
+			}
+			else_if = {
+				limit = { exists = GBR }
+				senior_union_with = GBR 
+			}
+			else_if = {
+				limit = { exists = ENG }
+				senior_union_with = ENG 
+			}
+			else = { 
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { 
+					region = british_isles_region 
+					value = 20
+				}
+			}
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = han_king_gbr
+				duration = -1
+			}
+		} 
+	}
+}
+ai_han_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = HAN } 
+
+	han_weser = {
+		icon = mission_plzen
+		position = 6
+		required_missions = { brl_han } 
+		provinces_to_highlight = {  
+			OR = { 
+				province_id = 4771
+				province_id = 5383
+				province_id = 54
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			4771 = { country_or_non_sovereign_subject_holds = ROOT }
+			5383 = { country_or_non_sovereign_subject_holds = ROOT }
+			54 = { country_or_non_sovereign_subject_holds = ROOT }
+			1874 = { country_or_non_sovereign_subject_holds = ROOT } 
+		} 
+
+		effect = { 
+			add_country_modifier = { 
+				name = han_bremen1
+				duration = -1
+			}
+		} 
+	}
+
+	han_port = {
+		icon = ansbach_succession
+		position = 7
+		required_missions = { han_weser } 
+		provinces_to_highlight = {  
+			province_id = 1874
+			NOT = { 
+				AND = { 
+					owned_by = ROOT
+					is_core = ROOT 
+				}
+			}
+		} 
+
+		trigger = {  
+			owns_core_province = 1874
+		} 
+
+		effect = {  
+			1874 = { add_province_triggered_modifier = han_bremen2 }
+		} 
+	}
+}
+ai_han_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = HAN } 
+
+	han_han = {
+		icon = mission_hannover1
+		position = 6
+		required_missions = { brl_han } 
+		provinces_to_highlight = {  
+			province_id = 1758
+			NOT = { 
+				AND = { 
+					owned_by = ROOT
+					is_core = ROOT 
+					is_capital_of = ROOT 
+					development = 35
+					province_has_center_of_trade_of_level = 3
+				}
+			}
+		} 
+
+		trigger = {  
+			1758 = { 
+				owned_by = ROOT
+				is_core = ROOT 
+				is_capital_of = ROOT 
+				development = 35
+				province_has_center_of_trade_of_level = 3
+			}
+		} 
+
+		effect = { 
+			#1758 = { add_province_triggered_modifier = han_han_mod } #nonexisting modifier
+		} 
+	}
+}
+ai_han_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = HAN } 
+
+	han_absolutism = {
+		icon = mission_empire
+		position = 6
+		required_missions = {
+			brl_han
+			brl_gov
+		}
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			legitimacy = 100
+			absolutism = 50
+		} 
+
+		effect = {  
+			add_country_modifier = { 
+				name = han_abs
+				duration = 18250
+			}
+		} 
+	}
+}
+ai_han_branch_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = { tag = HAN } 
+
+	han_leine_palace = {
+		icon = mission_hannover2
+		position = 6
+		required_missions = { brl_han } 
+		provinces_to_highlight = {  
+			province_id = 1758
+			NOT = { 
+				AND = { 
+					owned_by = ROOT
+					is_core = ROOT
+					is_capital_of = ROOT 
+					base_tax = 12
+				}
+			}
+		} 
+
+		trigger = {  
+			treasury = 1000
+			1758 = { 
+				owned_by = ROOT
+				is_core = ROOT
+				is_capital_of = ROOT 
+				base_tax = 12
+				has_great_project = {
+					type = ai_leine_palace
+					tier = 2
+				}
+			}
+		} 
+
+		effect = {  
+			1758 = { 
+				add_great_project_tier = {
+					type = ai_leine_palace
+					tier = 1
+				}
+			}
+		} 
+	}
+}
+brl_han_locked_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = no
+	potential = {
+		OR = {
+			tag = BRU
+			tag = CLB
+			tag = LUN
+			tag = GTT
+		}
+	}
+
+	brl_locked_1a = {
+		icon = mission_locked_mission
+		position = 4
+		required_missions = { brl_hsa_posts } 
+		provinces_to_highlight = {  
+			OR = { 
+				province_id = 1874
+				province_id = 44
+				province_id = 45
+			}
+			NOT = {  
+				AND = { 
+					owned_by = ROOT
+					is_core = ROOT 
+				} 
+			} 
+		} 
+
+		trigger = {  
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no
+			}
+			OR = { 
+				owns_core_province = 1874
+				owns_core_province = 44
+				owns_core_province = 45
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = brl_unlock_mission.tt
+			add_country_modifier = { 
+				name = brl_hsa_league_mod
+				duration = -1
+			}
+		} 
+	}
+
+	brl_locked_1b = {
+		icon = mission_locked_mission
+		position = 5
+		required_missions = {
+			brl_locked_1a
+			brl_brl
+		}
+		provinces_to_highlight = {  
+			OR = { 
+				area = st_john_valley_area
+				area = upper_acadia_area
+			}
+			NOT = { 
+				AND = { 
+					is_city = yes 
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		} 
+
+		trigger = {  
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { 
+				OR = { 
+					area = st_john_valley_area
+					area = upper_acadia_area
+				}
+				is_city = yes 
+				value = 5
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = brl_unlock_mission.tt
+			add_country_modifier = { 
+				name = brl_new_bru_mod
+				duration = -1
+			}
+		} 
+	}
+}
+brl_han_locked_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = no
+	potential = {
+		OR = {
+			tag = BRU
+			tag = CLB
+			tag = LUN
+			tag = GTT
+		}
+	}
+
+	brl_locked_2a = {
+		icon = mission_locked_mission
+		position = 5
+		required_missions = { brl_brl } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no
+			}
+			OR = { 
+				is_emperor = yes 
+				AND = { 
+					government_rank = 3
+					NOT = { hre_size = 1 }
+				}
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = brl_unlock_mission.tt
+			add_country_modifier = { 
+				name = guelph_kaiser
+				duration = -1
+			}
+		} 
+	}
+}
+brl_han_locked_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = no
+	potential = {
+		OR = {
+			tag = BRU
+			tag = CLB
+			tag = LUN
+			tag = GTT
+		}
+	}
+
+	brl_locked_3a = {
+		icon = mission_locked_mission
+		position = 5
+		required_missions = { brl_brl } 
+		provinces_to_highlight = {  } 
+
+		trigger = {  
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no
+			}
+			is_elector = yes 
+			tag = HAN 
+		} 
+
+		effect = {  
+			custom_tooltip = brl_unlock_mission.tt
+			change_adm = 1
+			change_dip = 1
+			change_mil = 1
+		} 
+	}
+}
+brl_han_locked_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = no
+	potential = {
+		OR = {
+			tag = BRU
+			tag = CLB
+			tag = LUN
+			tag = GTT
+		}
+	}
+
+	brl_locked_4a = {
+		icon = mission_locked_mission
+		position = 5
+		required_missions = { brl_brl } 
+		provinces_to_highlight = {  } 
+
+		trigger = { 
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no
+			}
+			has_reform = han_primogeniture_reform 
+		} 
+
+		effect = {  
+			custom_tooltip = brl_unlock_mission.tt
+			add_country_modifier = { 
+				name = brl_gov_mod
+				duration = 7300
+			}
+		} 
+	}
+}
+han_locked_branch_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = no
+	potential = {
+		OR = {
+			tag = BRL
+			tag = BRU
+			tag = CLB
+			tag = LUN
+			tag = GTT
+		}
+	}
+
+	han_locked_1a = {
+		icon = mission_locked_mission
+		position = 6
+		required_missions = {
+			brl_han
+			brl_locked_3a
+		}
+		provinces_to_highlight = {  
+			OR = { 
+				owned_by = ENG
+				owned_by = GBR 
+				owned_by = AVE 
+			}
+		} 
+
+		trigger = {  
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no
+			}
+			if = { 
+				limit = { exists = AVE }
+				marriage_with = AVE                 
+				reverse_has_opinion = { 
+					who = AVE 
+					value = 125
+				}
+			}
+			else_if = { 
+				limit = { exists = GBR }
+				marriage_with = GBR                 
+				reverse_has_opinion = { 
+					who = GBR
+					value = 125
+				}
+			}
+			else_if = {
+				limit = { exists = ENG } 
+				marriage_with = ENG                 
+				reverse_has_opinion = { 
+					who = ENG
+					value = 125
+				}
+			}
+			else = { 
+				any_country = { 
+					capital_scope = { 
+						region = british_isles_region
+					}
+					is_great_power = yes 
+					marriage_with = ROOT
+					has_opinion = { 
+						who = ROOT 
+						value = 125
+					}
+				}
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = han_unlock_mission.tt
+			if = { 
+				limit = { exists = AVE }
+				add_casus_belli = {
+					target = AVE
+					type = cb_restore_personal_union
+					months = 480
+				}
+			}
+			else_if = { 
+				limit = { exists = GBR }
+				add_casus_belli = {
+					target = GBR
+					type = cb_restore_personal_union
+					months = 480
+				}
+			}
+			else_if = {
+				limit = { exists = ENG } 
+				add_casus_belli = {
+					target = ENG
+					type = cb_restore_personal_union
+					months = 480
+				}
+			}
+			else = { 
+				british_isles_region = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT } 
+						NOT = { is_core = ROOT } 
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		} 
+	}
+
+	han_locked_1b = {
+		icon = mission_locked_mission
+		position = 7
+		required_missions = { han_locked_1a } 
+		provinces_to_highlight = {  
+			region = british_isles_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no
+			}
+			if = {
+				limit = { exists = AVE }
+				senior_union_with = AVE 
+			}
+			else_if = {
+				limit = { exists = GBR }
+				senior_union_with = GBR 
+			}
+			else_if = {
+				limit = { exists = ENG }
+				senior_union_with = ENG 
+			}
+			else = { 
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = { 
+					region = british_isles_region 
+					value = 20
+				}
+			}
+		} 
+
+		effect = {  
+			custom_tooltip = han_unlock_mission.tt
+			add_country_modifier = { 
+				name = han_king_gbr
+				duration = -1
+			}
+		} 
+	}
+}
+han_locked_branch_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = no
+	potential = {
+		OR = {
+			tag = BRL
+			tag = BRU
+			tag = CLB
+			tag = LUN
+			tag = GTT
+		}
+	}
+
+	han_locked_2a = {
+		icon = mission_locked_mission
+		position = 6
+		required_missions = {
+			brl_han
+			brl_locked_3a
+		}
+		provinces_to_highlight = {  
+			OR = { 
+				province_id = 4771
+				province_id = 5383
+				province_id = 54
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		} 
+
+		trigger = {  
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no
+			}
+			4771 = { country_or_non_sovereign_subject_holds = ROOT }
+			5383 = { country_or_non_sovereign_subject_holds = ROOT }
+			54 = { country_or_non_sovereign_subject_holds = ROOT }
+			1874 = { country_or_non_sovereign_subject_holds = ROOT } 
+		} 
+
+		effect = { 
+			custom_tooltip = han_unlock_mission.tt
+			add_country_modifier = { 
+				name = han_bremen1
+				duration = -1
+			}
+		} 
+	}
+
+	han_locked_2b = {
+		icon = mission_locked_mission
+		position = 7
+		required_missions = { han_locked_2a } 
+		provinces_to_highlight = {  
+			province_id = 1874
+			NOT = { 
+				AND = { 
+					owned_by = ROOT
+					is_core = ROOT 
+				}
+			}
+		} 
+
+		trigger = {  
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no
+			}
+			owns_core_province = 1874
+		} 
+
+		effect = {  
+			custom_tooltip = han_unlock_mission.tt
+			1874 = { add_province_triggered_modifier = han_bremen2 }
+		} 
+	}
+}
+han_locked_branch_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	has_country_shield = no
+	potential = {
+		OR = {
+			tag = BRL
+			tag = BRU
+			tag = CLB
+			tag = LUN
+			tag = GTT
+		}
+	}
+
+	han_locked_3a = {
+		icon = mission_locked_mission
+		position = 6
+		required_missions = {
+			brl_han
+			brl_locked_3a
+		}
+		provinces_to_highlight = {  
+			province_id = 1758
+			NOT = { 
+				AND = { 
+					owned_by = ROOT
+					is_core = ROOT 
+					is_capital_of = ROOT 
+					development = 35
+					province_has_center_of_trade_of_level = 3
+				}
+			}
+		} 
+
+		trigger = {  
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no
+			}
+			1758 = { 
+				owned_by = ROOT
+				is_core = ROOT 
+				is_capital_of = ROOT 
+				development = 35
+				province_has_center_of_trade_of_level = 3
+			}
+		} 
+
+		effect = { 
+			custom_tooltip = han_unlock_mission.tt
+			#1758 = { add_province_triggered_modifier = han_han_mod } #nonexisting modifier
+		} 
+	}
+}
+han_locked_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = no
+	potential = {
+		OR = {
+			tag = BRL
+			tag = BRU
+			tag = CLB
+			tag = LUN
+			tag = GTT
+		}
+	}
+
+	han_locked_4a = {
+		icon = mission_locked_mission
+		position = 6
+		required_missions = {
+			brl_han
+			brl_gov
+			brl_locked_3a
+			brl_locked_4a
+		}
+		provinces_to_highlight = {  
+		} 
+
+		trigger = {  
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+				always = no
+			}
+			legitimacy = 100
+			absolutism = 50
+		} 
+
+		effect = {  
+			custom_tooltip = han_unlock_mission.tt
+			add_country_modifier = { 
+				name = han_abs
+				duration = 18250
+			}
+		} 
+	}
+}

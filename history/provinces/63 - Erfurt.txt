@@ -1,0 +1,39 @@
+#63 - Erfurt
+#Area - Thuringia
+#Region - North Germany
+
+#Core Details
+capital = "Erfurt"
+is_city = yes
+owner = ERF
+controller = ERF 
+
+#Demographics
+culture = saxon
+religion = catholic
+
+#Development and Trade
+base_tax = 5
+base_production = 5
+base_manpower = 5
+trade_goods = dyes	#Woad, also a center for glassmaking
+
+#Cores and Occupation (Alphabetical after current)
+add_core = ERF
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+center_of_trade = 3
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

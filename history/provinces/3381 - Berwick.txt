@@ -1,0 +1,39 @@
+#3381 - Berwick
+#Area - Northumberland
+#Region - British Isles
+
+#Core Details
+capital = "Berwick"
+is_city = yes
+owner = NBL
+controller = NBL    #warden of the east march, which berwick was a part of
+
+#Demographics
+culture = scottish
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 1
+base_manpower = 1
+trade_goods = fish
+
+#Cores and Occupation (Alphabetical after current)
+add_core = NBL
+add_core = SCO
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

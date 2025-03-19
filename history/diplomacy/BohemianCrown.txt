@@ -1,0 +1,119 @@
+# Bohemia-Moravia
+dependency = { 
+	subject_type = crownland_subject 
+	first = BOH 
+	second = MVA 
+	start_date = 1415.1.1 #to prevent super early inheritance
+	end_date = 1500.1.1
+}
+
+# Bohemia-Lower Lusatia
+dependency = {
+	subject_type = crownland_subject
+	first = BOH
+	second = LWW
+	start_date = 1367.1.1
+	end_date = 1500.1.1
+}
+
+dependency = {
+	subject_type = crownland_subject
+	first = BOH
+	second = ULT
+	start_date = 1367.1.1
+	end_date = 1500.1.1
+}
+
+#Bohemia-Silesia (crownland)
+dependency = {
+	subject_type = crownland_subject
+	first = BOH
+	second = SIL
+	start_date = 1367.1.1
+	end_date = 1500.1.1
+}
+
+# Bohemia-Silesia
+dependency = {
+	subject_type = fief
+	first = BOH
+	second = ZAG 
+	start_date = 1335.1.1
+	end_date = 1500.1.1
+}
+dependency = {
+	subject_type = fief
+	first = BOH
+	second = GLG
+	start_date = 1335.1.1
+	end_date = 1500.1.1
+}
+alliance = {
+	first = GLG
+	second = ZAG 
+	start_date = 1335.1.1
+	end_date = 1500.1.1
+}
+dependency = {
+	subject_type = fief
+	first = BOH
+	second = BZG 
+	start_date = 1335.1.1
+	end_date = 1500.1.1
+}
+
+dependency = {
+	subject_type = fief
+	first = BOH
+	second = OEL 
+	start_date = 1335.1.1
+	end_date = 1500.1.1
+}
+
+dependency = {
+	subject_type = fief
+	first = BOH
+	second = OPL
+	start_date = 1335.1.1
+	end_date = 1500.1.1
+}
+
+dependency = {
+	subject_type = fief
+	first = BOH
+	second = TPL
+	start_date = 1335.1.1
+	end_date = 1500.1.1
+}
+
+dependency = {
+	subject_type = fief
+	first = BOH
+	second = NYS
+	start_date = 1335.1.1
+	end_date = 1500.1.1
+}
+
+dependency = {
+	subject_type = fief
+	first = BOH
+	second = RTB 
+	start_date = 1335.1.1
+	end_date = 1500.1.1
+}
+
+dependency = {
+	subject_type = fief
+	first = BOH
+	second = AUZ
+	start_date = 1335.1.1
+	end_date = 1500.1.1
+}
+
+dependency = {
+	subject_type = fief
+	first = BOH
+	second = TCH 
+	start_date = 1335.1.1
+	end_date = 1500.1.1
+}

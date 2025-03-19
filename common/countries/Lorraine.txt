@@ -1,0 +1,109 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+color = { 208 178 138 } #115 142 205 // 198 168 138
+revolutionary_colors = { 8 1 8 }
+
+historical_idea_groups = {
+	defensive_ideas
+	trade_ideas
+	economic_ideas
+	diplomatic_ideas
+	innovativeness_ideas
+	offensive_ideas
+	spy_ideas
+	religious_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	dutch_maurician
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	prussian_uhlan
+	french_impulse
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Gérard #1" = 0
+	"Thierry #2" = 5
+	"Simon #2" = 5
+	"Mathieu #2" = 10
+	"Ferry #4" = 5
+	"Thiébaud #2" = 5
+	"Raoul #1" = 5
+	"Jean #1" = 5
+	"Charles #2" = 60
+	"René #0" = 40
+	"Nicolas #0" = 25
+	"Antoine #0" = 25
+	"François #0" = 15
+	"Henri #0" = 15
+	"Nicolas-François #0" = 10
+	"Léopold #0"= 5
+	#misc nobles, bailiffs
+	"André #0" = 0
+	"Liébaut #0" = 0
+	"Collignon #0" = 0
+	"Jacques #0" = 0
+	"Errard #0" = 0
+	"Olry #0" = 0
+	"Gaspard #0" = 0
+	"Guillaume #0" = 0
+	"Adam #0"= 0
+	"Renault #0" = 0
+	"Paul #0" = 0
+	"Gaston-Jean-Baptiste #0" = 0
+	"Georges #0" = 0
+	"Christophe #0" = 0
+	
+	"Isabelle #0" = -15
+	"Yolande #0" = -5
+	"Nicole #0"= -10
+	"Marguerite #0" = -1
+	"Marie-Thionette #0" = -1
+}
+
+leader_names = { 
+	"d'Apremont" "d'Arc"
+	"de Bauffremont" "de Bazelaire" "de Beauvau" "de Bioncourt" "Boudet de Puymaigre" "de Bouxieres" "de Bresson"
+	Catoire "du Châtelet" "de Choiseul" "de Custine"
+	Exelmans "d'Everlange"
+	"de Finance"
+	"du Gaillard" "Goullet de Rugy" "de Gourcy" "de Gournay" "Guerrier de Dumast"
+	"d'Haraucourt" "d'Haussonville"
+	"de Lambertye" "de Larminat" "de Lavaulx" "Le Bègue de Germiny" "Le Clerc" "de Ligniville" "de Linange" "de Lorraine" "de Ludre"
+	"de Maigret" "de Martimprey"
+	Ney
+	"de Pallant" "de Pange" "de Pimodan"
+	"de Rémerville"
+	"de Saintignon" "de Savigny" "de Scarpone"
+	"de Toullon"
+	"de Vaudémont" "de Vigneulles"
+	"de Wendel"
+}
+
+ship_names = {
+	"l'Empereur Lothaire" "le Lorraine"
+	"le René II de Lorraine" "le Barrois" "le Metz"
+	"Toul" "le Verdun" "le Warding" "le Skirmjan"
+	"le Bera" "le Scoc" "le Sekjan"
+}
+
+army_names = {
+	"Armée ducale" "Armée de Nancy" "Armée de Vôges" "Armée d'Allemagne" "Armée de $PROVINCE$"
+}
+
+fleet_names = { 
+	"Flotte de $PROVINCE$"
+}

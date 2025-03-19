@@ -1,0 +1,37 @@
+#6450 - Zhizhec
+#Area - Rzhev
+#Region - Ruthenia 
+
+#Core Details
+capital = "Zhizhec"
+is_city = yes
+owner = LIT
+controller = LIT
+
+#Demographics
+culture = byelorussian
+religion = orthodox
+
+#Development and Trade
+base_tax = 1
+base_production = 2
+base_manpower = 2
+trade_goods = glass
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = LIT
+add_core = SMO
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = nomad_group
+
+#Histories

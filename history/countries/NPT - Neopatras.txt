@@ -1,0 +1,9 @@
+government = monarchy
+add_government_reform = frankokratic_reform
+government_rank = 1
+primary_culture = greek 
+add_accepted_culture = catalan
+religion = catholic
+technology_group = western
+capital = 5571	#Neopatras
+fixed_capital = 5571 # Cannot move capital away from this province & no power cost to move to it

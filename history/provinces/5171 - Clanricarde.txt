@@ -1,0 +1,41 @@
+#5171 - Clanricarde
+#Area - Connacht
+#Region - British Isles
+
+#Core Details
+capital = "Galway"
+is_city = yes
+owner = CNN
+controller = CNN
+
+#Demographics
+culture = hiberno_norman
+religion = catholic
+
+#Development and Trade
+base_tax = 3
+base_production = 3
+base_manpower = 2
+trade_goods = cloth
+
+#Cores and Occupation (Alphabetical after current)
+add_core = CNN
+add_core = GLW
+add_core = MYO
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes 
+
+#Special Modifiers
+center_of_trade = 2
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

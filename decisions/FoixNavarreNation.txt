@@ -1,0 +1,123 @@
+country_decisions = {
+	foix_navarre_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_navarre_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			OR = { 
+				tag = FOI
+				tag = BEA
+				tag = ABT 
+				tag = BOU 
+			}
+			is_colonial_nation = no			
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 3266 #Lower Navarre
+				province_id = 210 #Pamplona
+				province_id = 3369 #Sangüesa
+				province_id = 3368 #Tudela
+				province_id = 3370 #Estella
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		allow = {
+			OR = { 
+				senior_union_with = NAV 
+				AND = { 
+					3266 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					210 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					3369 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					3368 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					3370 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			}
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+		}
+		effect = {
+			custom_tooltip = foi_nav_form.tt
+			hidden_effect = { 
+				if = { 
+					limit = { senior_union_with = NAV }
+					inherit = NAV
+				}
+			}
+			change_tag = NAV
+			on_change_tag_effect = yes
+			restore_country_name_effect = yes
+			capital_scope = {
+				add_base_tax = 1
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = { 
+				limit = { primary_culture = gascon }
+				change_primary_culture = basque 
+				add_accepted_culture = gascon 
+			}
+			else_if = { 
+				limit = { NOT = { primary_culture = basque } }
+				change_primary_culture = basque
+			}
+			basque_country = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			set_country_flag = formed_navarre_flag
+			add_prestige = 25
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+					is_part_of_hre = no
+				}
+				set_government_rank = 2
+			}
+			add_government_reform = courts_of_navarra #basque_monarchy, error is false positive i think
+			set_country_flag = nav_foix_missions_flag
+			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					is_playing_custom_nation = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,104 @@
+#Country Name: Please see filename.
+
+graphical_culture = latingfx
+
+color = { 155  99  60 }	#previous 105  106  182
+revolutionary_colors = { 8 5 8 }
+
+preferred_religion = reformed
+
+historical_idea_groups = {
+	defensive_ideas
+	offensive_ideas
+	trade_ideas
+	religious_ideas
+	diplomatic_ideas
+	economic_ideas
+	innovativeness_ideas
+	spy_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	dutch_maurician
+	french_caracolle
+	anglofrench_line
+	french_dragoon
+	french_bluecoat
+	french_cuirassier
+	french_impulse
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Rogièr #4" = 15
+	"Rogièr Bernat #3" = 10
+	"Ramon Rogièr #1" = 5
+	"Gaston #3" = 60
+	"Matèu #1" = 50
+	"Archambaud #1" = 5
+	"Joan #1" = 15
+	"Francés #1" = 60
+	"Febus #0" = 10
+	"Enric #0" = 25
+	"Antòni #0" = 2
+	"Loís #0" = 25
+	"Pèira #0" = 5
+	"Felip #0" = 0
+	"Guilhèm #0" = 5
+	"Audoard #0" = 0
+	"Bernat #0" = 5
+	"Jacòb #0" = 1
+	"Ramon #0" = 0
+	"Centolh #5" = 1
+	"Garcia #0" = 5
+	"Peranudet #0" = 5
+
+	"Joana #0" = -5
+	"Catarina #0" = -1
+	"Aglaé #0" = -1
+	"Blanche #0" = -1
+	"Étiennette #0" = -1
+	"Isabèu #0" = -10
+	"Alienòr #0" = -5
+}
+
+leader_names = {
+	d'Andòrra d'Apchièr d'Artès
+	"de Labrit"
+	"de Batz" "de Bearn" "de Bigòrra" "de Borbon"
+	"de Carcassona" "de Cardona" "de Castèlbon" "de Coarraze" "de Comenge"
+	"de Fois"
+	"de Gassion" "de Grailly"
+	"de Lom d'Arce"
+	"de Ravat"
+	"deu Peirèr"
+}
+
+ship_names = {
+	Adour Albret Anie Ansabère Arlas Arrens Arriel Arros Aspe Aspin Aure Ayous
+	Balaïtous Barétous Béarn Bigorre  
+	Carrau Castelbon Cauteret Chaussenque Comminges Couserans 
+	Estats
+	Foix 
+	Gavarnie Ger "Grand Tapou"
+	Labourd
+	"Midi d'Ossau" Moncade Montcalm Montferrat Montvallier
+	Navarre Néouvielle
+	Oloron  Orhy
+	Palas "Pique Longue"
+	Rieutort
+	Sabine Sesques Soule Soulorn 
+	Thoumasset Tourmalet "Trois Seigneurs"
+	Vic-Bilh Vic-Montaner Vignemale
+}
+
+army_names = {
+	 "Armada de $PROVINCE$" 
+}

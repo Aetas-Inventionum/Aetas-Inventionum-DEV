@@ -1,0 +1,125 @@
+conspiracy_of_the_barons = {
+	ended_by_country_breaking_to_rebels = no
+	potential = {
+		tag = NAP
+		NOT = { has_country_flag = conspiracy_happened }
+		is_free_or_tributary_trigger = yes
+		is_lesser_in_union = no
+		normal_or_historical_nations = yes
+	}
+
+	can_start = {
+		NOT ={ has_estate_privilege = estate_baron_privileges }
+	}
+	
+	can_stop = {
+		NOT = { num_of_subjects = 2 }
+	}
+	
+	progress = {
+		modifier = {
+			factor = 1
+			NOT = { legitimacy = 50 }
+		} 
+		modifier = {
+			factor = 1
+			NOT = { stability = 0 }
+		}
+		modifier = {
+			factor = 1
+			has_government_power = {
+				mechanic_type = crown_vs_corts
+				power_type = crown_power
+				value = -25
+			}
+		}
+		modifier = {
+			factor = 1
+			has_government_power = {
+				mechanic_type = crown_vs_corts
+				power_type = crown_power
+				value = -50
+			}
+		}
+		modifier = {
+			factor = 1
+			has_government_power = {
+				mechanic_type = crown_vs_corts
+				power_type = crown_power
+				value = 25
+			}
+		}
+		modifier = {
+			factor = 1
+			has_government_power = {
+				mechanic_type = crown_vs_corts
+				power_type = crown_power
+				value = 50
+			}
+		}
+		modifier = {
+			factor = 1
+			current_debate = support_ruling_dynasty
+		}
+		modifier = {
+			factor = 1
+			war_exhaustion = 5
+		} 
+	}
+	
+	modifier = {
+		global_unrest = 10
+		legitimacy = -1
+		republican_tradition = -0.5
+	}	
+	
+	can_end = {
+		if = { 
+			limit = { has_country_flag = ara_supports_royalists }
+			legitimacy = 100 
+			stability = 3
+			NOT = { num_of_rebel_armies = 1 }
+			NOT = { num_of_rebel_controlled_provinces = 1 }
+			NOT = { average_unrest = 1 }
+			NOT = { 
+				any_province = { has_province_modifier = cat_council }
+			}
+			hidden_trigger = {
+				NOT = { has_country_modifier = just_lost_to_rebels }
+				NOT = { has_country_flag = catalan_civil_war_start_event }
+			}
+		}
+		else = { 
+			NOT = { num_of_rebel_armies = 1 }
+			NOT = { num_of_rebel_controlled_provinces = 1 }
+			NOT = { average_unrest = 1 }
+			stability = 2
+			hidden_trigger = {
+				NOT = { has_country_modifier = just_lost_to_rebels }
+				NOT = { has_country_flag = catalan_civil_war_start_event }
+			}
+		}
+	}
+	
+	on_start = catalan_civil_war.1
+	on_end = catalan_civil_war.10 #neutral end, primarily for pactists
+	
+	on_monthly = {
+		events = { 
+			catalan_civil_war.2 #Council of the Principality Established (if supports royalists)
+			catalan_civil_war.4 #Plot of San Matías (if supports royalists)
+			catalan_civil_war.6 #Secession of Catalonia (if supports royalists)
+			catalan_civil_war.8 #Pro-Royalist End of the Civil War
+			catalan_civil_war.12 #Castile's & France's Reaction // only if supports pactists
+		}
+		random_events = {
+			1000 = 0
+			100 = catalan_civil_war.3 #remença rebellion // repeating but does not repeat after War of the Remences // any choice
+			100 = catalan_civil_war.5 #Treaty of Bayonne // fires only once // any choice
+			100 = catalan_civil_war.11 #Local Infante Revolts // repeating // only if supports pactists
+			100 = catalan_civil_war.15 #War of the Remences // fires only once // only if supports pactists 
+			100 = catalan_civil_war.16 #Price of Sicily's Loyalty // fires only once // any choice
+		}
+	}
+}
+

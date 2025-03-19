@@ -1,0 +1,38 @@
+#5216 - Wels
+#Area - Upper Austria
+#Region - South Germany
+
+#Core Details
+capital = "Wels"
+is_city = yes
+owner = HAB
+controller = HAB 
+
+#Demographics
+culture = austrian
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 3
+base_manpower = 2
+trade_goods = stone
+
+#Cores and Occupation (Alphabetical after current)
+add_core = HAB
+add_core = SCM
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

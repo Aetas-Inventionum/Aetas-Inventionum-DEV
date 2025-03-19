@@ -1,0 +1,8 @@
+# change_estate_land_share = {
+#     estate = estate_burghers
+#     share = -10
+# }
+# change_estate_land_share = {
+#     estate = estate_peasants
+#     share = 10 #Completely made up. This puts Iceland at 17/17/25/10 crownland, which I like.
+# }

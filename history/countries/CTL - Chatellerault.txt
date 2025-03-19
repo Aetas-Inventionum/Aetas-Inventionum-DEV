@@ -1,0 +1,8 @@
+government = monarchy
+add_government_reform = appanage_reform
+government_rank = 1
+primary_culture = poitevin
+religion = catholic
+technology_group = western
+capital = 3211 # Chatellerault
+fixed_capital = 3211 # Cannot move capital away from this province & no power cost to move to it

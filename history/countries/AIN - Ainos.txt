@@ -1,0 +1,94 @@
+government = monarchy
+add_government_reform = frankokratic_reform
+government_rank = 1
+mercantilism = 10 #was 0.1, im guessing thats 10?
+primary_culture = ligurian
+add_accepted_culture = greek
+religion = catholic
+technology_group = eastern
+historical_friend = BYZ
+capital = 5540	# Ainos
+fixed_capital = 5540 # Cannot move capital away from this province & no power cost to move to it
+
+
+1404.1.1 = {
+	monarch = {
+		name = "Palamede I"
+		dynasty = "Gattilusio"
+		adm = 1
+		dip = 2
+		mil = 1
+	}
+}
+
+1404.1.1 = {
+	heir = {
+		name = "Giorgio"
+		monarch_name = "Giorgio I"
+		dynasty = "Gattilusio"
+		birth_date = 1390.1.1
+		death_date = 1449.1.1
+		claim = 95
+		adm = 2
+		dip = 1
+		mil = 1
+	}
+}
+
+1428.1.1 = {
+	monarch = {
+		name = "Dorino I"
+		dynasty = "Gattilusio"
+		adm = 2
+		dip = 3
+		mil = 3
+	}
+}
+
+1428.1.1 = {
+	heir = {
+		name = "Domenico"
+		monarch_name = "Domenico"
+		dynasty = "Gattilusio"
+		birth_date = 1404.1.1
+		death_date = 1458.1.1
+		claim = 95
+		adm = 1
+		dip = 4
+		mil = 2
+	}
+}
+		
+1455.1.1 = {
+	monarch = {
+		name = "Domenico"
+		dynasty = "Gattilusio"
+		adm = 1
+		dip = 4
+		mil = 2
+	}
+}
+
+1455.1.1 = {
+	heir = {
+		name = "Niccolò"
+		monarch_name = "Niccolò "
+		dynasty = "Gattilusio"
+		birth_date = 1420.1.1
+		death_date = 1462.11.1
+		claim = 95
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+
+1458.1.1 = {
+	monarch = {
+		name = "Niccolò"
+		dynasty = "Gattilusio"
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}

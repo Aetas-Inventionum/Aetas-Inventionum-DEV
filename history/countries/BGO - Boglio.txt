@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+primary_culture = ligurian 
+add_accepted_culture = provencal
+religion = catholic
+technology_group = western
+capital = 102 #nice
+fixed_capital = 102
+
+1388.1.1 = { 
+	monarch = { 
+		name = "Giovanni I"
+		dynasty = "Grimaldi"
+		adm = 3
+		dip = 4
+		mil = 3
+		birth_date = 1375.1.1 #approx!
+	}
+}
+1415.1.1 = {
+	heir = {
+		name = "Pietro"
+		monarch_name = "Pietro I"
+		dynasty = "Grimaldi"
+		adm = 2
+		dip = 3
+		mil = 1
+		birth_date = 1397.1.1
+		death_date = 1457.1.1
+	}
+}

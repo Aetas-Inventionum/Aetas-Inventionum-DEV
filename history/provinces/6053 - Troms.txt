@@ -1,0 +1,36 @@
+#6053 - Troms
+#Area - Finnmark
+#Region - Scandinavia 
+
+#Core Details
+capital = "Tromso"
+is_city = yes
+owner = NOR 
+controller = NOR 
+
+#Demographics
+culture = sapmi
+religion = animism
+
+#Development and Trade
+base_tax = 1
+base_production = 2
+base_manpower = 1
+trade_goods = whaling
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = NOR
+add_core = SMI
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+
+#Histories

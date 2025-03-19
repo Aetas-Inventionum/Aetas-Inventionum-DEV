@@ -1,0 +1,28 @@
+#name = "Second Danish-Holstein War over Slesvig"
+#war_goal = {
+#	type = wg_holstein
+#	casus_belli = cb_holstein
+#	tag = SHL
+#}
+
+# Dispute between Denmark and Holstein over the Duchy of Slesvig
+#1413.1.1 = {
+#	add_attacker = SHL 
+#	add_attacker = HSA 
+#	add_attacker = HAM 
+#	add_attacker = LUN
+#	add_defender = DAN 
+#	add_defender = NOR
+#	add_defender = SWE
+#}
+
+# Ceasefire
+#1417.1.1 = {
+#	rem_attacker = SHL
+#	rem_attacker = HSA 
+#	rem_attacker = HAM 
+#	rem_attacker = LUN
+#	rem_defender = DAN 
+#	rem_defender = NOR 
+#	rem_defender = SWE
+#}

@@ -1,0 +1,359 @@
+#Teutons vassals
+# Warmia
+dependency = {
+	subject_type = fief
+	first = TEU
+	second = WRM
+	start_date = 1243.1.1
+	end_date = 1464.1.1
+}
+
+# Sambia
+dependency = {
+	subject_type = fief
+	first = TEU
+	second = SMA
+	start_date = 1243.1.1
+	end_date = 1464.1.1
+}
+
+# Pomesania
+dependency = {
+	subject_type = fief
+	first = TEU
+	second = PMS
+	start_date = 1243.1.1
+	end_date = 1464.1.1
+}
+
+# Kulm
+dependency = {
+	subject_type = fief
+	first = TEU
+	second = KUM
+	start_date = 1243.1.1
+	end_date = 1464.1.1
+}
+
+# Terra Mariana
+
+#Dorpat #de facto independent of livonian order
+alliance = {
+	first = RIG
+	second = DRP 
+	start_date = 1243.1.1
+	end_date = 1464.1.1
+}
+
+#Osel-Wielk
+dependency = {
+	subject_type = fief
+	first = RIG 
+	second = OSL
+	start_date = 1243.1.1
+	end_date = 1464.1.1
+}
+
+#Courland
+dependency = {
+	subject_type = fief
+	first = LIV 
+	second = KUR 
+	start_date = 1243.1.1
+	end_date = 1464.1.1
+}
+
+#Reval
+dependency = {
+	subject_type = fief
+	first = LIV 
+	second = REV
+	start_date = 1243.1.1
+	end_date = 1464.1.1
+}
+
+#Riga #independent sovereignty equal if not higher than/to livonian order
+alliance = {
+	first = LIV 
+	second = RIG
+	start_date = 1243.1.1
+	end_date = 1464.1.1
+}
+
+# Lithuanian vassals
+
+# Hlynsk
+march = {
+	first = LIT
+	second = HLS 
+	start_date = 1362.12.12
+	end_date = 1497.12.31
+}
+
+# Kiev
+dependency = {
+	subject_type = march
+	first = LIT
+	second = KIE
+	start_date = 1362.1.1
+	end_date = 1471.1.1
+}
+
+# Kursk
+dependency = {
+	subject_type = fief
+	first = LIT
+	second = KRU
+	start_date = 1350.1.1
+	end_date = 1503.1.1
+}
+
+#Vyshnivets
+dependency = {
+	subject_type = fief
+	first = LIT
+	second = VYS 
+	start_date = 1415.1.1
+	end_date = 1503.1.1
+}
+
+#turov
+dependency = {
+	subject_type = fief
+	first = LIT
+	second = TVR
+	start_date = 1350.1.1
+	end_date = 1503.1.1
+}
+
+# Podolia
+dependency = {
+	subject_type = fief
+	first = LIT
+	second = PDL
+	start_date = 1394.1.1
+	end_date = 1434.1.1
+}
+
+# Ostrog
+dependency = {
+	subject_type = fief
+	first = LIT
+	second = OSG
+	start_date = 1392.1.1
+	end_date = 1452.1.1
+}
+
+# Samogitia
+dependency = {
+	subject_type = fief
+	first = LIT
+	second = SMG
+	start_date = 1410.1.1
+	end_date = 1795.1.1
+}
+
+# Slutsk
+dependency = {
+	subject_type = fief
+	first = LIT
+	second = SLT
+	start_date = 1320.1.1
+	end_date = 1612.1.1
+}
+
+# Mstislav
+dependency = {
+	subject_type = fief
+	first = LIT
+	second = MST
+	start_date = 1320.1.1
+	end_date = 1612.1.1
+}
+
+# Bryansk
+dependency = {
+	subject_type = appanage
+	first = LIT
+	second = BRY
+	start_date = 1320.1.1
+	end_date = 1612.1.1
+}
+
+# Polish vassal
+dependency = {
+	subject_type = fief
+	first = POL
+	second = MAZ
+	start_date = 1385.1.1
+	end_date = 1526.3.9
+}
+# Polish vassal
+dependency = {
+	subject_type = fief
+	first = POL
+	second = RAW
+	start_date = 1385.1.1
+	end_date = 1526.3.9
+}
+#Moldavia 'vassal' of Wladislaw II, but in practice had extreme autonomy
+dependency = {
+	subject_type = feudal_tributary_state
+	first = POL 
+	second = MOL  
+	start_date = 1387.9.26
+	end_date = 1453.4.22
+}
+#Poland - Anna of Cilli Marriage
+royal_marriage = {
+	first = POL 
+	second = CLI 
+	start_date = 1402.1.29
+	end_date = 1416.5.21
+}
+
+# Poland and Stolp positive alliance/relationship
+alliance = {
+	first = POL
+	second = STP
+	start_date = 1409.11.8 #grunwald where stolp helped poland
+	end_date = 1471.8.11
+}
+
+# Polish guarantee/tribute
+guarantee = {
+	first = POL
+	second = MOL
+	start_date = 1444.1.1
+	end_date = 1447.12.12
+}
+
+# Polish vassal
+march = {
+	first = POL
+	second = MOL
+	start_date = 1447.12.12
+	end_date = 1497.12.31
+}
+
+# Polish vassal
+vassal = {
+	first = POL
+	second = TEU
+	start_date = 1466.10.19
+	end_date = 1525.1.1
+}
+
+# Polish vassal
+vassal = {
+	first = POL
+	second = PRU
+	start_date = 1525.1.1
+	end_date = 1569.7.1
+}
+
+# Polish vassal
+vassal = {
+	first = PLC
+	second = PRU
+	start_date = 1569.7.1
+	end_date = 1618.8.28
+}
+
+# Polish vassal
+vassal = {
+	first = PLC
+	second = BRA
+	start_date = 1618.8.28
+	end_date = 1657.9.19
+}
+
+# Polish vassal
+vassal = {
+	first = POL
+	second = ZAZ
+	start_date = 1555.1.1
+	end_date = 1569.7.1
+}
+
+# Polish vassal
+vassal = {
+	first = PLC
+	second = ZAZ
+	start_date = 1569.7.1
+	end_date = 1648.1.1
+}
+
+# Polish vassal
+vassal = {
+	first = POL
+	second = KUR
+	start_date = 1561.11.28
+	end_date = 1569.7.1
+}
+
+# Polish vassal
+vassal = {
+	first = PLC
+	second = KUR
+	start_date = 1569.7.1
+	end_date = 1795.3.28
+}
+
+# Poland and Sweden
+union = {
+	first = PLC
+	second = SWE
+	start_date = 1592.1.1
+	end_date = 1598.9.17
+}
+
+# Polish-Lithuania
+
+dependency = {
+	subject_type = lithuania_union
+	first = POL 
+	second = LIT
+	start_date = 1243.1.1
+	end_date = 1464.1.1
+}
+
+# Polish-Lithuania
+union = {
+	first = POL
+	second = LIT
+	start_date = 1447.6.25
+	end_date = 1569.7.1
+}
+
+# Poland and Novgorod
+alliance = {
+	first = POL
+	second = NOV
+	start_date = 1470.11.8
+	end_date = 1471.8.11
+}
+
+# First northern war
+alliance = {
+	first = PLC
+	second = BRA
+	start_date = 1655.1.1
+	end_date = 1656.1.17
+}
+
+# Lithuania and Tver
+vassal = {
+	first = LIT
+	second = TVE
+	start_date = 1449.8.31
+	end_date = 1454.1.1
+}
+
+# Poland and Golden Horde
+alliance = {
+	first = POL
+	second = GOL
+	start_date = 1472.1.1
+	end_date = 1481.1.6
+}

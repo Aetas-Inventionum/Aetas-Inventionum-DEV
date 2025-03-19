@@ -1,0 +1,7 @@
+government = monarchy
+add_government_reform = scots_gaelic_monarchy_reform
+primary_culture = highland_scottish
+religion = catholic
+technology_group = western
+capital = 250 #Perth
+government_rank = 2

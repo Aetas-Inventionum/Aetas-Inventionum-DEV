@@ -1,0 +1,36 @@
+#6483 - OkaPeremyshl
+#Area - Upper Oka
+#Region - Russia 
+
+#Core Details
+capital = "Peremyshl"  
+is_city = yes
+owner = VNS
+controller = VNS
+
+#Demographics
+culture = ryazanian
+religion = orthodox
+
+#Development and Trade
+base_tax = 1
+base_production = 2
+base_manpower = 1
+trade_goods = beer
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = VNS
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = nomad_group
+
+#Histories

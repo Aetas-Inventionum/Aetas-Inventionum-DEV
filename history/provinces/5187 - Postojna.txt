@@ -1,0 +1,38 @@
+#5187 - Postojna
+#Area - Carniola
+#Region - South Germany
+
+#Core Details
+capital = "Postojna"
+is_city = yes
+owner = STY
+controller = STY
+
+#Demographics
+culture = slovene
+religion = catholic
+
+#Development and Trade
+base_tax = 1
+base_production = 3
+base_manpower = 1
+trade_goods = mercury 
+
+#Cores and Occupation (Alphabetical after current)
+add_core = STY
+add_core = CNL
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

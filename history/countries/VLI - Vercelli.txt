@@ -1,0 +1,7 @@
+government = theocracy
+add_government_reform = leading_clergy_reform 
+technology_group = western
+religion = catholic
+primary_culture = piedmontese
+capital = 5048	# Vercelli
+fixed_capital = 5048 # Cannot move capital away from this province & no power cost to move to it

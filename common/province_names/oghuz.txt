@@ -1,0 +1,636 @@
+##Turkey
+#optimatoi
+316 = { "Izmit" "Izmit" }
+317 = { "Hüdavendigar" "Bursa" }
+5630 = { "Kocaeli" "Üsküdar" } #name of the penninsula
+5631 = { "Kandïra" "Kefken Adasï" }
+5632 = { "Akçakoca" "Akçakoca" }
+5633 = { "Karadeniz Eregli" "Karadeniz Eregli" }
+5634 = { "Yalïova" "Yalakabad" }
+5635 = { "Iznik" "Iznik" }
+5636 = { "Bilecik" "Bilecik" }
+5637 = { "Bey Sögüdü" "Bey Sögüdü" }
+#mysia
+5660 = { "Karacabey" "Mihaliç" }
+5661 = { "Çanakkalesi" "Sultaniye Kalesi" }
+5662 = { "Edremit" "Edremit" }
+5663 = { "Karesi" "Karesi" }
+5665 = { "Bugadiç" "Bugadiç" }
+5685 = { "Ayvalïk" "Ayvalïk" }
+#ionia
+318 = { "Gavur Ïzmir" "Ïzmir" }
+2297 = { "Saruhan" "Manisa" }
+4309 = { "Aydïn" "Güzelhisar" }
+5680 = { "Ayasolug" "Ayasolug" }
+5681 = { "Çeshme" "Çeshme" }
+5684 = { "Foça" "Foça" }
+#caria
+5678 = { "Bodrum" "Bodrum" }
+5679 = { "Milas" "Milas" }
+#pisidia
+2298 = { "Antalya" "Antalya" }
+5674 = { "Elmalï" "Elmalï" }
+5675 = { "Meghri" "Meghri" }
+#phrygia
+4312 = { "Sultanönü" "Sultanönü" }
+5668 = { "Ushak" "Ushak" }
+5669 = { "Ayfon" "Karahisar-i Sahip" }
+#pamphylia
+5687 = { "Alâiye" "Alâiye" }
+5688 = { "Musa Çay" "Gazipasha" } #Also can be Gazipasha, but Musa Çay is on top of Selinus
+5690 = { "Kïz Kalesi" "Kïz Kalesi" }
+#lycaonia
+5695 = { "Eregli" "Eregli" }
+5698 = { "Sultanhanï" "Sultanhanï" }
+5699 = { "Koçhisar" "Koçhisar" }
+#galatia
+326 = { "Engürü" "Engürü" }
+2299 = { "Bolu" "Bolu" }
+2300 = { "Yozgat" "Yozgat" }
+4313 = { "Çankïrï" "Çankïrï" }
+4314 = { "Kïrshehir" "Kïrshehir" }
+5638 = { "Çerkesh" "Çerkesh" }
+5647 = { "Polatlï" "Polatlï" }
+#paphlagonia
+5640 = { "Amasra" "Amasra" }
+#cilicia
+3215 = { "Kozan" "Kozan" }
+4298 = { "Antab" "Antab" } 
+4999 = { "Mersin" "Mersin" }
+5337 = { "Tarsus" "Tarsus" }
+5371 = { "Pozantï" "Pozantï" }
+5707 = { "Osmaniye" "Yumurtalïk" }
+#cappadocia
+5656 = { "Gedük" "Shehr-ï Kishla" }
+5657 = { "Sungurlu" "Terzili" }
+5658 = { "Bogazlyïan" "Bogazlyïan" }
+5697 = { "Nevshehir" "Nevshehir" }
+5706 = { "Pïnarbashï" "Pïnarbashï" }
+#west pontus
+2304 = { "Samsun" "Samsun" }
+5653 = { "Boleman" "Fatsa" }
+5654 = { "Gümüshhane" "Milas" }
+5659 = { "Ordu" "Ordu" }
+#pontus
+360 = { "Tara Bozan" "Tara Bozan" }
+#little armenia
+5655 = { "Akshar" "Akshar" }
+#commagene
+5702 = { "Adiyaman" "Adiyaman" }
+
+##balkans
+#thrace
+149 = { "Edirne" "Edirne" }
+151 = { "Kostantiniyye" "Kostantiniyye" }
+5540 = { "Enez" "Enez" }
+4779 = { "Gelibolu" "Gelibolu"}
+5524 = { "Vize" "Vize" }
+5525 = { "Silivri" "Silivri" }
+5526 = { "Midye" "Kïyïköy" }
+5523 = { "Sizebolu" "Sizebolu"}
+5537 = { "Kïrk Kilise" "Kïrk Kilise" }
+5538 = { "Rodosçuk" "Rodosçuk" }
+5539 = { "Hayrabolu" "Hayrabolu" }
+5541 = { "Dimetoka" "Dimetoka" }
+#north greece
+148 = { "Selanik" "Selanik"}
+1853 = { "Kesriye" "Kesriye" }
+5553 = { "Halkidikya" "Aynoroz"}
+5556 = { "Serfiçe" "Serfiçe" }
+#central greece
+146 = { "Attike" "Atina" }
+5566 = { "Kervansaray" "Kervansaray" }
+5567 = { "Aynabahti" "Aynabahti" }
+5571 = { "Patracik" "Patracik"}
+5572 = { "Saline" "Saline" }
+5573 = { "Livadya" "Livadya" }
+5574 = { "Istefe" "Istefe" }
+5575 = { "Bati Attike" "Megara" }
+#crete
+163 = { "Kandiye" "Kandiye" }
+5585 = { "Hanya" "Hanya" }
+5586 = { "Resmo" "Resmo" }
+5587 = { "Estiye" "Estiye" }
+#misc. aegean
+164 = { "Naksha" "Naksha" }
+320 = { "Rodos" "Rodos"}
+2348 = { "Sakiz" "Sakiz" }
+3003 = { "Halkis" "Halkis" }
+4700 = { "Midilli" "Midilli" }
+5500 = { "Limni" "Miyirna" }
+5576 = { "Kizilhisar" "Kizilhisar" }
+5588 = { "Andira" "Andira" }
+#epirus
+144 = { "Yanya" "Yanya" }
+4698 = { "Kefaloniye" "Argostolion" }
+4699 = { "Narda" "Narda" }
+5551 = { "Izakilise" "Izakilise" }
+5564 = { "Maçova" "Maçova" }
+5565 = { "Vayonetiya" "Pargali" }
+5566 = { "Kervansaray" "Kervansaray" }
+5568 = { "Karlieli" "Imrahor" }
+5589 = { "Akarnaniya" "Enkili-Kastri" }
+#Thessaly
+147 = { "Tirhala" "Tirhala" }
+5557 = { "Pieriya" "Katrin" }
+5558 = { "Magneziya" "Golos" }
+5559 = { "Ízdin" "Ízdin" }
+5569 = { "Yenishehir-i Fener" "Yenishehir-i Fenir" }
+5570 = { "Çatalca" "Çatalca" }
+#peloponnese
+145 = { "Mizistre" "Mizistre" }
+1773 = { "Ahaya" "Ahaya" }
+4701 = { "Gordes" "Gordes" }
+5577 = { "Íliya" "Larinçe" }
+5578 = { "Arkadiya" "Arkadiya" }
+5580 = { "Baliyabadra" "Baliyabadra" }
+5581 = { "Íç Arkadiya" "Kartina" }
+5582 = { "Benefçe" "Benefçe" }
+5583 = { "Anabolu" "Anabolu" }
+5584 = { "Mesinya" "Kalavrata" }
+5515 = { "Çuha" "Çuha" }
+#north macedonia
+3001 = { "Üsküb" "Üsküb" }
+4780 = { "Ohri" "Ohri" }
+5560 = { "Manastir" "Manastir" }
+5563 = { "Karatova" "Karatova" }
+#cyprus
+321 = { "Lefkosha" "Lefkosha" }
+4998 = { "Karpaz" "Girne" }
+5000 = { "Limasol" "Limasol" }
+5001 = { "Larnaka" "Larnaka" }
+5002 = { "Gazimagusa" "Gazimagusa" }
+5690 = { "Kïzkalesi" "Kïzkalesi" }
+#moesia
+5532 = { "Lofça" "Lofça" }
+150 = { "Plevne" "Plevne" }
+5527 = { "Shumnu" "Shumnu" }
+5528 = { "Istanbulluk" "Istanbulluk" } #ottoman
+5529 = { "Hezargrad" "Hezargrad" }
+5530 = { "Kizilagaç" "Kizilagaç" }
+5531 = { "Sarïbayïr" "Rusçuk" }
+5533 = { "Nigbolu" "Nigbolu" }
+#hemimont
+1764 = { "Burgaz" "Burgaz" }
+5522 = { "Misivri" "Misivri" }
+5534 = { "Karïnovasï" "Karinabad" } #the 2 nmes
+5535 = { "Yambolu" "Yambolu" }
+5536 = { "Islimiye" "Islimiye" }
+5546 = { "Zagra" "Eski Zagra" }
+#bulgaria
+1765 = { "Serdika" "Sofya" }
+4703 = { "Köstendil" "Köstendil" }
+4704 = { "Tïrnova" "Tïrnova" }
+5548 = { "Göpsa" "Göpsa" } #turkish adaption of Kopsis. Later becomes Kalïova
+5549 = { "Samoku" "Samoku" }
+5552 = { "Pernikkalesi" "Pernikkalesi" } #play off of Pernik Fortress
+#rhodope
+2750 = { "Filibe" "Filibe" }
+4705 = { "Gümülcine" "Gümülcine"}
+5542 = { "Kavala" "Kavala" }
+5543 = { "Dirama" "Dirama" }
+5544 = { "Iskeçe" "Iskeçe" }
+5545 = { "Hasköy" "Hasköy" }
+#iron gates
+3000 = { "Nish" "Nish" }
+5425 = { "Isferlik" "Shehirköy" }  #Or Kimera
+5502 = { "Gurgusofça" "Gurgusofça" }
+5503 = { "Kutlofça" "Kutlofça" }
+5504 = { "Ivraçe" "Ivraçe" }
+#Silistria
+159 = { "Silistre" "Silistre" }
+5516 = { "Ishakçi" "Ishakçi" }
+5517 = { "Hirshova" "Hirshova" }
+5518 = { "Kostençe" "Kostençe" }
+5520 = { "Kuyuköy" "Kuyuköy" }
+5519 = { "Kelegra Burun" "Kelegra Burun" }
+#West Muntenia
+4531 = { "Yergögü" "Yergögü" }
+5506 = { "Deli Orman" "Kule" }
+#East Muntenia
+2998 = { "Buza" "Buza" }
+5510 = { "Bükresh" "Bükresh" }
+5512 = { "Yalomiça" "Floçi" }
+5513 = { "Ibrail" "Ibrail" }
+5514 = { "Remnik" "Remnik" }
+#oltenia
+169 = { "Krayova" "Krayova" }
+5499 = { "Kalafat" "Kalafat" }
+5501 = { "Kara Kale" "Kara Kale" }
+#bessarabia 
+1756 = { "Akkerman" "Akkerman" }
+2405 = { "Bender" "Bender" }
+5591 = { "Ismailiye" "Ismailiye" }
+5592 = { "Tigeçi" "Tigeçi" }
+5597 = { "Kalas" "Kalas" }
+#Moldova    
+5593 = { "Shehirçedid" "Shehirçedid" } #name of local golden horde fort
+5594 = { "Suriyaka" "Suriyaka" }
+5595 = { "Balçik" "Balçik" }
+5597 = { "Kalas" "Kalas" }
+5601 = { "Fokshan" "Fokshan" }
+5602 = { "Baka" "Baka" }
+#bukovina
+5596 = { "Hotin" "Hotin" }
+5604 = { "Radoviçe" "Radoviçe" }
+5605 = { "Çernivtsi" "Çernivtsi" }
+5606 = { "Kolomïya" "Kolomïya" }
+#yedisan
+282 = { "Hacïbey" "Hacïbey" }
+2406 = { "Herson" "Herson" } #keep just for turkish, more modern name
+6188 = { "Dubasarï" "Dubasarï" } #moldavian root + tatar root
+6189 = { "Chicha Klei" "Chicha Klei" }
+6190 = { "Özü" "Özü" } #Ochakiv
+#albania
+5436 = { "Ergiri" "Ergiri" }
+5435 = { "Laplïk" "Kimera" }
+5434 = { "Görce" "Görce" }
+5433 = { "Belgrad-i Arnavud" "Belgrad-i Arnavud" }
+5432 = { "Debre-i Zir" "Debre-i Zir" }
+5430 = { "Debre-i Bala" "Debre-i Bala" }
+4750 = { "Akçahisar" "Akçahisar" }
+4174 = { "Duraç" "Duraç" }
+4175 = { "Lesh" "Lesh" }
+143 = { "Avlonya" "Avlonya" }
+6322 = { "Izmi" "Shufada" }
+6323 = { "Ishkomi" "Ustruga" }
+#dardania
+1766 = { "Kosova" "Prishtina" }
+5421 = { "Pirzerin" "Pirzerin" }
+5422 = { "Novar" "Novar" }
+5423 = { "Ipek" "Ipek" }
+5424 = { "Ivranya" "Ivranya" }
+#serbia
+141 = { "Semendire" "Semendire" }
+1827 = { "Yeni Pazar" "Yeni Pazar" } 
+4176 = { "Alacahisar" "Alacahisar" }
+5426 = { "Ürgüb" "Ürgüb" }
+5427 = { "Öziçe" "Öziçe" }
+5429 = { "Sivirce Hisar" "Sivirce Hisar" }
+5431 = { "Güvercinlik" "Güvercinlik Kalesi" }
+#diocletia
+138 = { "Karadag" "Bögürtlen" }
+1831 = { "Kala-i Novi" "Kala-i Novi" }
+4754 = { "Kïyïsal" "Kotor" }
+5284 = { "Ishkodra" "Ishkodra" }
+5352 = { "Piran" "Piran" }
+5413 = { "Nikshïk" "Onogosht" }
+#zachlumia
+137 = { "Ragüsa" "Ragüsa" } #fictional accent for spice
+139 = { "Köprühisar" "Köprühisar" }
+5410 = { "Balagay" "Balagay" }
+5411 = { "Koniça" "Koniça" }
+5412 = { "Güzelhisar" "Güzelhisar" }
+5415 = { "Trebin" "Trebin" }
+#bosna 
+140 = { "Doboy" "Doboy" }
+3002 = { "Bosna" "Visoka" }
+5414 = { "Semi Pazar" "Semi Pazar" }
+5416 = { "Srepniçe" "Srepniçe" }
+5417 = { "Kreshevo" "Kreshevo" }
+5418 = { "Bobovaç" "Bobovaç" }
+#donji kraji
+140 = { "Doboya" "Doboya" }
+5398 = { "Dubiça" "Dubiça" }
+5404 = { "Berbir" "Berbir" }
+5406 = { "Köluyc" "Köluyc" }
+5407 = { "Yajçe" "Yajçe" }
+5409 = { "Kozarçe" "Kozarçe" }
+#dalmata
+136 = { "Ispelet" "Ispelet" }
+1826 = { "Tenin" "Tenin" }
+4753 = { "Zadar" "Zadar" }
+5392 = { "Çetina" "Sinç" }
+5393 = { "Shibinik" "Shibinik" }
+5395 = { "Braç" "Bol" }
+5407 = { "Ihlivne" "Trablus" }
+5408 = { "Sedidzedid" "Sedidzedid" }
+#croatia
+4753 = { "Cara" "Cara" }
+4756 = { "Kirzeviçe" "Kirzeviçe" }
+5389 = { "Sanyaba" "Sanyaba" }
+5391 = { "Beke" "Beke" }
+#slavonia
+131 = { "Agram" "Agram" } #german name used in turkish historiography
+152 = { "Versedin" "Versedin" }
+5399 = { "Siska" "Siska" }
+5400 = { "Arka Ülke" "Krapina" } #meaning in turkish
+5401 = { "Kopronica" "Kopronica" }
+#syrmia
+1767 = { "Valkovar" "Valkovar" }
+1954 = { "Beçkerek" "Beçkerek" }
+4126 = { "Baç" "Baç" }
+4173 = { "Sirem" "Dimitrofça" }
+4239 = { "Belgrad" "Belgrad" }
+4757 = { "Valva" "Valva" }
+5396 = { "Uyluk" "Uyluk" }
+5403 = { "Pojega" "Pojega" }
+5419 = { "Memlehai" "Memlehai" }
+5428 = { "Maçva" "Bögürdelen" }
+5438 = { "Pancova" "Pancova" }
+#banat
+156 = { "Tïmïshvar" "Tïmïshvar" }
+5438 = { "Pançova" "Pançova" }
+5439 = { "Reshce" "Reshce" }
+5440 = { "Adakele" "Adakele" }
+5441 = { "Logosh" "Logosh" }
+5443 = { "Çanad" "Çanad" }
+#afold
+153 = { "Peshte" "Peshte" }
+4125 = { "Sonluk" "Sonluk" }
+4240 = { "Istolni Belgrad" "Istolni Belgrad" }
+5444 = { "Bodrogu" "Zenta" }
+5445 = { "Segedin" "Segedin" }
+5446 = { "Kuçuk Kumanya" "Kiskunfélegyháza" }
+5448 = { "Sekçay" "Sekçay" }
+5449 = { "Peçuy" "Peç" }
+5458 = { "Budin" "Budin" }
+#upper hungary
+5460 = { "Egri" "Egri" }
+5758 = { "Canfeda" "Canfeda" }
+#lower hungary
+154 = { "Hond" "Hond" }
+1318 = { "Sepesh" "Sepesh" }
+5461 = { "Vaç" "Vaç" }
+5462 = { "Uyvar" "Uyvar" }
+5464 = { "Kremniça" "Kremniça" }
+5468 = { "Rojna" "Rojna" }
+#pannonia
+135 = { "Sobran" "Sobran" }
+1864 = { "Kaposhvar" "Kaposhvar" }
+5450 = { "Kanije" "Kanije" }
+5452 = { "Egersek" "Egersek" }
+5453 = { "Güns" "Güns" }
+5454 = { "Sunbuthel" "Sunbuthel" }
+5455 = { "Besprim" "Besprim" }
+5456 = { "Yanik" "Yanik" }
+5457 = { "Komran" "Komran" }
+#crisania 
+155 = { "Göle" "Göle" }
+1953 = { "Saboç" "Saboç" }
+5475 = { "Karsak" "Karsak" }
+5476 = { "Varat" "Varat" }
+#marmatia
+1952 = { "Maramarosh" "Maramarosh" }
+5477 = { "Belnosh" "Belnosh" }
+5479 = { "Karolvar" "Karolvar" }
+5480 = { "Satmar" "Satmar" }
+5481 = { "Banya" "Banya" }
+5484 = { "Munkaç" "Munkaç" }
+5485 = { "Husvar" "Husvar" }
+#Math DPN 
+5555 = { "Vodina" "Vodina" }
+5562 = { "Ishtip" "Ishtip" }
+5550 = { "Pïrïn" "Nevrokop" }
+5561 = { "Pirlepe" "Pirlepe" }
+5554 = { "Kïlkïsh" "Kïlkïsh" }
+5559 = { "Izzeddin" "Izzeddin" }
+#podolia
+281 = { "Kamaniçe" "Kamaniçe" }
+1943 = { "Breshlav" "Breshlav" }
+4540 = { "Vinniçe" "Vinniçe" }
+5939 = { "Mecïbiç" "Mecïbiç" }
+5940 = { "Kara Yol" "Kimilnik" }
+5942 = { "Rogatin" "Rogatin" }
+5943 = { "Iskala" "Iskala" }
+5944 = { "Kuçuk Istanbul" "Kuçuk Istanbul" }
+
+#Fix 
+5545 = { "Hasköy" "Hasköy" }
+5547 = { "Hasat" "Hasat" }
+
+#Palestine/Israel/Jordan
+364 = { "Gaze" "Gaze" }
+379 = { "Kudüs" "Kudüs" }
+380 = { "Kerek" "Kerek" }
+381 = { "Aclun" "Aclun" }
+1854 = { "Nablus" "Nablus" }
+2327 = { "Maan" "Maan" }
+
+#Hejaz 
+383 = { "Tebük" "Tebük" }
+384 = { "Medine" "Medine" }
+385 = { "Mekke" "Mekke" } 
+2328 = { "Ala" "Ala" }
+2329 = { "Yenbe'ül-Bahr" "Yenbe" }
+2330 = { "Medayin-i Salih" "Medayin-i Salih" }
+2331 = { "Cidde" "Cidde" }
+4269 = { "Vecih" "Vecih" }
+4278 = { "Kunfüze" "Kunfüze" }
+
+#Yemen
+387 = { "Meha" "Meha" }
+388 = { "Adeyn" "Adeyn" }
+390 = { "San'a" "San'a" }
+391 = { "Necran" "Necran" }
+2344 = { "Maghirib" "Maghirib" }
+2346 = { "Eharish" "Eharish" }
+4282 = { "Sade" "Sade" }
+
+#Syria/Lebanon
+377 = { "Halep" "Halep" }
+378 = { "Trablussham" "Trablussham" }
+382 = { "Sham" "Dimeshk" }
+405 = { "Tedmür" "Tedmür" }
+1855 = { "Sayda" "Sayda" }
+2313 = { "Antakiya" "Antakiya" }
+4297 = { "Humus" "Humus" }
+
+#Egypt by pleib
+358 = { "Iskenderiye" "Iskenderiye" }
+359 = { "Feyyum" "Feyyum" }
+361 = { "Kahire" "Kahire" }
+362 = { "Rashit" "Rashit" }
+363 = { "Dimyat" "Dimyat" } 
+1231 = { "Asvan" "Asvan" }
+2315 = { "Süveysh" "Süveysh" }
+2316= { "Mahalletü'l Kebir" "Mahalletü'l Kebir" }
+2321 = { "Kusayr" "Kusayr" }
+4316 = { "Mensoure" "Mensoure" }
+4317 = { "Demenhhur" "Demenhur" }
+4320 = { "Circe" "Circe" }
+6115 = {  "Selum" "Selum" }
+6120 = { "Gize" "Gize" }
+6124 = { "Minye" "Minye" }
+6126 = { "Menufiye" "Menufiye" }
+6130 = { "Katya" "Katya" }
+6131 = { "Arish" "Arish" }
+
+#libya by pleib
+354 = { "Trablusgarb" "Trablusgarb" }
+355 = { "Surt" "Surt"}
+356 =  { "Bingazi" "Bingazi" }
+357 = { "Derne" "Derne" }
+2448 = { "Murzuk" "Murzuk" }
+2450 = { "Gadamis" "Gadamis" }
+2451 = { "Masurata" "Masurata" }
+2452 = { "Zaviye" "Zaviye" }
+4567 = { "Sebha" "Sebha" }
+6083 = { "Terhune" "Terhune" }
+6092 = { "Gat" "Gat" }
+6097 = { "Beni Velid" "Beni Velid" }
+6108 = { "Cüdabiye" "Cüdabiye" }
+6109 = { "Berke" "Berke" }
+6111 = { "Tobruk" "Tobruk" }
+
+#tunisia by pleib
+341 = { "Tunus" "Tunus" }
+352 = { "Kafsa" "Kafsa" }
+353 = { "Tatavin" "Tatavin" }
+2453 = { "Isfakus" "Isfakus" }
+2454 = { "Kâf maa Amdûn" "Kâf" }
+2455 = { "Bekzert" "Bekzert" }
+2954 = { "Cerbe" "Cerbe" }
+4566 = { "Kayrevân" "Kayrevân" }
+5797 = { "Tabarka" "Tabarka" }
+5798 = { "Bace" "Bace" }
+5803 = { "Kal'a-i Hamâme" "Kal'a-i Hamâme" }
+5809 = { "Tuzer" "Tuzer" }
+5810 = { "Kabili" "Kabili" }
+5818 = { "Mehdiye" "Mehdiye" }
+5821 = { "Kassarin" "Kassarin" }
+5822 = { "Zaguvan" "Zaguvan" }
+
+#Algeria by pleib
+336 = { "Telmesan" "Telmesan" }
+337 = { "Vahran" "Vahran" }
+338 = { "Cezayir" "Cezayir" }
+339 = { "Becaye" "Becaye" }
+340 = { "Kosantina" "Kosantina" }
+351 = { "Biskira" "Biskira" }
+1882 = { "Annabe" "Annabe" }
+2461 = { "Müstaganem" "Müstaganem" }
+4562 = { "Mersel Kebir" "Mersel Kebir" }
+5769 = { "Shershel" "Shershel" }
+5771 = { "Tillis" "Tillis" }
+5774 = { "Midye" "Midye" }
+5775 = { "Milyana" "Milyana" }
+5789 = { "Cicel" "Cicel" }
+5790 = { "Satif" "Satif" }
+5793 = { "Sakika" "Sakika" }
+
+##levant
+#jabal bahra
+2313 = { "Anteke" "Anteke" }
+6162 = { "Markab" "Markab" }
+6163 = { "Masyaf" "Masyaf" }
+6164 = { "Lazkiye" "Lazkiye" }
+6165 = { "Idlip" "Idlip" }
+6166 = { "Süveydiye" "Süveydiye" }
+6167 = { "Iskenderun" "Iskenderun" }
+#thughur
+377 = { "Halep" "Halep" }
+407 = { "Rakka" "Rakka" }
+2308 = { "Urfa" "Urfa" }
+6168 = { "Hanesir" "Hanesir" }
+6169 = { "Baliz" "Baliz" }
+6170 = { "Münbiç" "Münbiç" }
+6171 = { "Biretül-Firat" "Birecik" }
+#badiya
+405 = { "Tedmür" "Tedmür" }
+1849 = { "Hama" "Hama" }
+4271 = { "Süknah" "Süknah" }
+4297 = { "Humus" "Humus" }
+6159 = { "Cebel-i Kalmun" "Nabek" }
+6160 = { "Selimye" "Selimye" }
+#al jazira
+2314 = { "Rahba Kalesi" "Rahba Kalesi" }
+6173 = { "Deyrizor" "Deyrizor" }
+#lebanon
+378 = { "Trablussham" "Trablus" }
+6148 = { "Beyrut" "Beyrut" }
+6154 = { "Lübnan Dagi" "Baakline" } 
+6155 = { "Balbek" "Balbek" }
+6156 = { "Cübayl" "Cübayl" }
+#syria
+381 = { "Aclun" "Aclun" }
+382 = { "esh-Sham" "Sham" } 
+4270 = { "Azrak" "Azrak" }
+6150 = { "Busra" "Busra" }
+6151 = { "Dera" "Dera" }
+#palestine
+364 = { "Gazze" "Gazze" }
+379 = { "Küdus" "Küdus" }
+1854 = { "Nablus" "Nablus" }
+1855 = { "Shayda" "Shayda" }
+6144 = { "Halilü'r Rahman" "Halilü'r Rahman" }
+6145 = { "Yafa" "Yafa" }
+6146 = { "Akka" "Akka" }
+6147 = { "Celile" "Safet" }
+6152 = { "Ramle" "Ramle" }
+#balqa
+2327 = { "Maan" "Maan" }
+4268 = { "Ayla" "Ayla" }
+6149 = { "Salt" "Salt" }
+6153 = { "Shavbak" "Shavbak" }
+#sinai
+365 = { "Zaytindagi" "Zaytindagi" }
+6127 = { "Elemek" "Elemek" }
+6128 = { "Musa Kuyusu" "Katerina Manastiri" }
+6130 = { "Katya" "Katya" }
+6131 = { "Arish" "Arish" }
+6132 = { "Birüsshebi" "Birüsshebi" }
+##egypt
+#east  nile delta
+363 = { "Dimyat" "Dimyat" }
+2315 = { "Süveysh" "Süveysh" }
+2316 = { "Garbiya" "Mahalla" }
+4316 = { "Dakala" "Mansure" }
+6122 = { "Belbeys" "Belbeys" }
+#west nile delta
+358 = { "Iskenderiye" "Iskenderiye" }
+362 = { "Rashit" "Rashit" }
+4317 = { "Demenhur" "Demenhur" }
+6126 = { "Menufiye" "Menuf" }
+6174 = { "Füwwah" "Füwwah" }
+#lower egypt
+359 = { "Feyyum" "Feyyum" }
+361 = { "Kahire" "Kahire" }
+#need 4318
+6120 = { "Cize" "Cize" }
+6121 = { "Beni Süveyf" "Beni Süveyf" }
+6177 = { "Memfis" "Dammuh" }
+#middle egypt
+2317 = { "Ashmunein" "Ashmunein" }
+2319 = { "Ahmim" "Ahmim" }
+6123 = { "Banasa" "Banasa" }
+6124 = { "Minye" "Minye" }
+6125 = { "Asyut" "Asyut" }
+6139 = { "Sevhac" "Sevhac" }
+6175 = { "Ebutig" "Ebutig" }
+#upper egypt
+360 = { "Cüs" "Cüs" } 
+1231 = { "Asvan" "Asvan" }
+4319 = { "Esna" "Esna" }
+4320 = { "Circe" "Circe" }
+6140 = { "Kina" "Kina" }
+6141 = { "Hu" "Hu" }
+6142 = { "Edfu" "Edfu" }
+6143 = { "Kom Ombo" "Kom Ombo" }
+6176 = { "Uksur" "Uksur" }
+#red sea hills
+2321 = { "Kusayr" "Kusayr" }
+6135 = { "Bur Safaga" "Bur Safaga" }
+6136 = { "Vereníki" "Vereníki" }
+#wahat
+1233 = { "Harga" "Harga" }
+2318 = { "Banasa Vahasi" "Banasa Vahasi" }
+6117 = { "Farafra Çölü" "Farafra Çölü" }
+#marmarica
+2326 = { "Burdiye" "Burdiye" }
+6115 = { "Selum" "Selum" }
+6118 = { "Alameyn" "Alameyn" }
+
+#crimea
+284 = { "Çufut Kale" "Çufut Kale" }
+285 = { "Kefe" "Kefe" }
+2410 = { "Mangup" "Mangup" }
+6181 = { "Balyk Yuva" "Balyk Yuva" }
+6182 = { "Sudak" "Sudak" }
+6183 = { "Kerç" "Kerç" }
+6184 = { "Kïrïm" "Kïrïm" }
+6185 = { "Karasuvbazar" "Karasuvbazar" }
+6187 = { "Gözleve" "Gözleve" }
+
+#lower austria
+134 = { "Beç" "Viyana" }

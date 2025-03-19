@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = principality
+government_rank = 1
+primary_culture = ryazanian
+add_accepted_culture = russian
+religion = orthodox
+technology_group = eastern
+capital = 6473 # Serpukhov
+fixed_capital = 6473 # Cannot move capital away from this province & no power cost to move to it
+
+1410.1.1 = { 
+	monarch = { 
+		name = "Ivan I"
+		dynasty = "Rurikovich"
+		birth_date = 1381.1.1 
+		death_date = 1422.7.10 
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}

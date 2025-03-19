@@ -1,0 +1,39 @@
+#107 - Brescia
+#Area - East Lombardy
+#Region - Italy
+
+#Core Details
+capital = "Brescia"
+is_city = yes
+owner = BRC
+controller = BRC
+
+#Demographics
+culture = lombard
+religion = catholic
+
+#Development and Trade
+base_tax = 5
+base_production = 5
+base_manpower = 5
+trade_goods = wine
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = BRC
+add_core = MLO
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+
+#Special Modifiers
+center_of_trade = 1
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

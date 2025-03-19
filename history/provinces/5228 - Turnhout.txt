@@ -1,0 +1,37 @@
+#5228 - Turnhout
+#Area - Brabant
+#Region - Low Countries
+
+#Core Details
+capital = "Turnhout"
+is_city = yes
+owner = BRB
+controller = BRB
+
+#Demographics
+culture = brabantian
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 2
+base_manpower = 2
+trade_goods = beer
+
+#Cores and Occupation (Alphabetical after current)
+add_core = BRB
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

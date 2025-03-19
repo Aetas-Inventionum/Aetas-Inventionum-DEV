@@ -1,0 +1,133 @@
+# Country name see file name.
+
+graphical_culture = westerngfx # was britishgfx # UPE compatibility
+
+color = { 80  112  150 }
+
+#preferred_religion = protestant			
+
+historical_idea_groups = {
+	defensive_ideas
+	aristocracy_ideas
+	economic_ideas
+	administrative_ideas
+	quantity_ideas
+	maritime_ideas
+	humanist_ideas
+	spy_ideas
+}	#Ideas changed by Draiocht. designed with a Acendancy-ruled, English-allied, ANI
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	gaelic_galloglaigh
+	gaelic_mercenary
+	gaelic_free_shooter
+	irish_charge
+	anglofrench_line
+	british_redcoat
+	british_hussar
+	british_square
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Gerald #2" = 60
+	"Maurice #2" = 40
+	"Thomas #1" = 40
+	"John #2" = 40
+	"Richard #2" = 20
+	"Henry #0" = 20
+	"William #0" = 20
+	"George #0" = 20
+	"Wentworth #0" = 1
+	"Robert #0" = 1
+	"James #0" = 0
+	"Lettice #0" = 0
+	"Edward #0" = 0
+	"Augustus #0" = 0
+	
+	"Margeret #0" = -1
+	"Elisabeth #0" = -1
+	"Margery #0" = -1
+	"Maud #0" = -1
+	"Alice #0" = -1
+	"Joan #0" = -1
+	"Anne #0" = -1
+	"Hermoine #0" = -1
+}
+
+#pleibos custom below. notable families with holdings in the pale as well as kildare
+leader_names = {
+	"d'Arcy" Archibold
+	"de Barnival" Bellew Bellingham Bermingham Bigod Butler Brabazon
+	Cheevers "de Clare" Cusack Cornwalsh
+	Dowdall Dillon "de Devereux"
+	Eustace "d'Exetor"
+	FitzGerald FitzMaurice FitzPeter FitzWilliam
+	"le Gros" "de Geneville"
+	Hereford "de Harold"
+	"de Kenley" 
+	"de Lacy" Locke Loffus "de Loundres" Lawless
+	Mortimer
+	"de Nangle" "de Nungent"
+	"de Vesey"
+	Riddlesford
+	"le Petit" "le Poer"
+	"St Laurence" Sherlock
+	Talbot Taaffe Townley Taylor "de Taghmon" Tuite
+	Walsh White Warren Wogan
+}
+
+ship_names = {
+	Naas
+	Tara
+	Trim
+	Aoife
+	Ciara Connacht
+	Eithne Emer
+	Leinster
+	Munster
+	Niamh
+	Orla
+	Roisin
+	Ulster
+	Athlone
+	Ballina
+	Ballinrobe
+	Ballyhaunis
+	Boyle
+	Castlebar
+	Galway
+	Connemara
+	Mayo
+	Roscommon
+	Clare Cork
+	Kerry 
+	Limerick
+	Tipperary
+	Waterford
+	Carlow
+	Dublin
+	Kildare Kilkenny
+	Laios Longford Louth
+	Meath
+	Offaly 
+	Westmeath Wexford Wicklow
+	Aedh
+	Baedan
+	Colman Cookstown 
+	Donal
+	Eogan 
+	Fergal Fergus
+	Niall
+	Omagh
+	Strabane Suibne
+}
+
+army_names = {
+	"Army of $PROVINCE$" 
+}

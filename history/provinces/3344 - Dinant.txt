@@ -1,0 +1,37 @@
+#3344 - Dinant
+#Area - Wallonia
+#Region - Low Countries
+
+#Core Details
+capital = "Dinant"
+is_city = yes
+owner = LIE
+controller = LIE
+
+#Demographics
+culture = wallonian
+religion = catholic
+
+#Development and Trade
+base_tax = 3
+base_production = 2
+base_manpower = 3
+trade_goods = iron
+
+#Cores and Occupation (Alphabetical after current)
+add_core = LIE
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

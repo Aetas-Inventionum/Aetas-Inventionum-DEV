@@ -1,0 +1,154 @@
+#Country Name: Please see filename.
+
+graphical_culture = latingfx #westerngfx
+
+color = { 205 184 54 } 
+
+historical_score = 850
+
+historical_idea_groups = {
+	trade_ideas
+	plutocracy_ideas
+	administrative_ideas
+	maritime_ideas
+	innovativeness_ideas
+	defensive_ideas
+	economic_ideas
+	quality_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	italian_condotta
+	spanish_tercio
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	#Doges of Genoa followed by frequency in name #start at 10, for every additional count past i add 5 // not counting repeat reigns
+	"Simone #1" = 15 #ii
+	"Giovanni #2" = 40 #vii
+	"Gabriele #1" = 10 #i
+	"Domenico #1" = 20 #iii
+	"Antoniotto #2" = 20 #iii
+	"Nicolò #2" = 25 #iv
+	"Federico #1" = 20 #iii
+	"Leonardo #1" = 20 #iii
+	"Giacomo #1" = 30 #v
+	"Pietro #1" = 30 #v
+	"Clemente #1" = 10 #i
+	"Francesco #1" = 15 #ii
+	"Antonio #1" = 25 #iv
+	"Giorgio #1" = 15 #ii
+	"Barnaba #1" = 15 #ii
+	"Tomaso #1" = 15 #ii
+	"Isnardo #0" = 10 #i
+	"Battista #0" = 30 #v
+	"Raffaele #0" = 10 #i
+	"Giano #0" = 15 #ii
+	"Lodovico #0" = 15 #ii
+	"Prospero #0" = 15 #ii
+	"Spinetta #0" = 10 #i
+	"Paolo #0" = 20 #iii
+	"Ottaviano #0" = 10 #i
+	"Oberto #0" = 10 #i
+	"Cristoforo #0" = 10 #i
+	"Giannandrea #0" = 10 #i
+	"Andrea #0" = 15 #ii
+	"Benedetto #0" = 10 #i
+	"Gaspare #0" = 10 #i
+	"Luca #0" = 25 #iv
+	"Agostino #0" = 40 #vii
+	"Girolamo #0" = 25 #iv
+	"Ottavio #0" = 10 #i
+	"Giannotto #0" = 10 #i
+	"Gerolamo #0" = 20 #iii
+	"Ambrogio #0" = 20 #iii
+	"Davide #0" = 10 #i
+	"Giovanni Agostino #0" = 15 #ii
+	"Matteo #0" = 15 #ii
+	"Lazzaro #0" = 10 #i
+	"Lorenzo #0" = 20 #iii
+	"Silvestro #0" = 10 #i
+	"Alessandro #0" = 20 #iii
+	"Bernardo #0" = 10 #i
+	"Giovanni Giacomo #0" = 10 #i
+	"Gioavnni Luca #0" = 10 #i
+	"Giovanni Stefano #0" = 10 #i
+	"Giovanni Francesco #0" = 15 #ii
+	"Giovanni Battista #0" = 35 #vi
+	"Giulio #0" = 10 #i
+	"Gian Bernardo #0" = 10 #i
+	"Stefano #0" = 20 #iii
+	"Cesare #0" = 25 #iv
+	"Giannettino #0" = 10 #i
+	"Luca Maria #0" = 10 #i
+	"Francesco Maria #0" = 25 #iv
+	"Domenico Maria #0" = 15 #ii
+	"Vincenzo #0" = 10 #i
+	"Stefano Onorato #0" = 10 #I
+	"Giovanni Antonio #0" = 10 #i
+	"Costantino #0" = 10 #i
+	"Gian Giacomo #0" = 10 #i
+	"Giovanni Giacomo #0" = 10 #i
+	"Rodolfo Emilio #0" = 10 #i
+	"Marcello #0" = 10 #i
+	"Ferdinando #0" = 10 #i
+	"Pier Francesco #0" = 10 #i
+	"Brizio #0" = 10 #i
+	"Giuseppe #0" = 10 #i
+	"Giacomo Maria #0" = 20 #iii
+	"Marco Antonio #0" = 10 #i
+	"Gian Carlo #0" = 10 #i
+	"Raffaele Agostino #0" = 10 #i
+	"Alerame Maria #0" = 10 #i
+	"Michelangelo #0" = 10 #i
+	"Giuseppe Maria #0" = 10 #i
+
+	"Milena #0" = -1
+	"Priscilla #0" = -1
+	"Teodora #0" = -1
+}
+
+leader_names = {
+	#Essential Alberghi of the Republic of Genoa
+	Adorna
+	Brignole Boccanegra
+	Cattaneo Cavanna Centurione Cicala Colombo Cybo
+	"Di Negri" Doria
+	Fattinanti Fieschi "dei Fornari" Fregoso
+	Gattilusio "de Ghisolfi" Giustiniani Grillo Grimaldi Guarco
+	Imperiali Interiano
+	Lercari Lomellini
+	"da Mare"
+	Negrone
+	"delle Piane" Pinelli
+	Soprani Spinola
+	Usodimare
+	Vacca Vivaldi
+	Zaccaria
+}
+
+ship_names = {
+	Baccana Bastarda Bechignana Brave Capitana Concezione Diana Donzella Doria Ferme Fortuna Furia Giano Giustizia Hardie Intrepido Ira Levriero
+	Libertà Liguria Lomellina Marchesa "Marchese Doria" Monagina Monarca Negrona "Nostra Signora del Soccorso" "Nostra Signora delle Vigne" Oliva
+	Oltremare Padrona Perla Piramide Prima Pynele Raggia "San Antonio" "San Bartolomeo" "San Francesco de Paulo" "San Giacomo" "San Giorgio" "San Vittorio"
+	"Santa Maria" Seconda Temperanza Tigre Urania Vendicatore Vigilante "Virgo Potens" Vittoria
+}
+
+army_names = {
+	"Armata di $PROVINCE$"
+}
+fleet_names = { 
+	"Flotta Genovese" "Flotta Corsa" "Flotta dell'Egeo" "Flotta di San Giorgio" "Flotta di $PROVINCE$"
+}

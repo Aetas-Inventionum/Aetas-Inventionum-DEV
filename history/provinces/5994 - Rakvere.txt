@@ -1,0 +1,36 @@
+#5994 - Rakvere
+#Area - Estonia
+#Region - Baltica 
+
+#Core Details
+capital = "Rakvere"
+is_city = yes
+owner = LIV
+controller = LIV
+
+#Demographics
+culture = estonian
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 2
+base_manpower = 2
+trade_goods = naval_supplies
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = LIV
+add_core = EST
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+
+#Histories

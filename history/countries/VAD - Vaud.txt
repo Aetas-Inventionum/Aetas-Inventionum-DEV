@@ -1,0 +1,9 @@
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+primary_culture = arpitan
+add_accepted_culture = piedmontese
+add_accepted_culture = provencal
+religion = catholic
+technology_group = western
+capital = 1867 #Lausanne

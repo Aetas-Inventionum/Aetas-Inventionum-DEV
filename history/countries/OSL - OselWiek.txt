@@ -1,0 +1,30 @@
+government = theocracy
+add_government_reform = leading_clergy_reform
+government_rank = 1
+primary_culture = prussian
+add_accepted_culture = estonian
+add_accepted_culture = aibolander
+religion = catholic
+technology_group = western
+capital = 35
+
+
+1385.1.1 = {
+	monarch = {
+		name = "Winrich IV"
+		birth_date = 1340.1.1 #noooooo clue, but assuming that he is first mentioned in 1365 for another office, likely around this time...
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}
+
+1439.1.1 = {
+	monarch = {
+		name = "Ludolf Grove"
+		birth_date = 1389.1.1
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}

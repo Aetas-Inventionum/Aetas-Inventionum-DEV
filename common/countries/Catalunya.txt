@@ -1,0 +1,146 @@
+#Country Name: Please see filename.
+
+graphical_culture = latingfx #westerngfx
+
+color = { 209 100 81 }
+
+historical_idea_groups = {
+	trade_ideas
+	religious_ideas
+	maritime_ideas
+	economic_ideas
+	diplomatic_ideas
+	innovativeness_ideas
+	spy_ideas
+	defensive_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	spanish_tercio
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	#Kings of the Royal House of Aragon
+	"Alfons #4" = 25 
+	"Pere #4" = 10
+	"Jaume #2" = 5
+	"Ramir #2" = 5
+	"Joan #1" = 20
+	"Ferran #1" = 20
+	"Sanç #1" = 1
+	"Martí #1" = 15
+
+	#misc nobles
+	"Josep #0" = 0
+	"Llorens #0" = 0
+	"Vidal #0" = 0
+	"Arnau Guillem #0" = 0
+	"Francesc Berenguer #0" = 0
+	"Bernat #0" = 0
+	"Ramon Folc #0" = 0
+	"Hug #0" = 0
+	"Galceran #0" = 0
+	"Ferran Sanxis #0" = 0
+	"Ramon Alemany #0" = 0
+	"Guerau Alemany #0" = 0
+	"Guillem #0" = 0
+	"Riambau #0" = 0
+	"Francesc #0" = 0
+	"Josep Galceran #0" = 0
+	"Pere Galceran #0" = 0
+	"Ramon #0" = 0
+	"Martí Joan #0" = 0
+	"Onofre #0" = 0
+	"Manuel #0" = 0
+	"Mateu #0" = 0
+	"Mateu Florimon #0" = 0
+	"Nicolau #0" = 0
+	"Simó #0" = 0
+	"Tomàs #0" = 0
+	"Bertran #0" = 0
+	"Joan Antoni #0" = 0
+	"Fèlix #0" = 0
+	"Constança #0" = 0 #princely
+	"Ponç #0" = 0
+	"Climent #0" = 0
+	"Miquel #0" = 0
+	"Bonanat #0" = 0
+	"Ivany #0" = 0
+	"Francesc Oliver #0" = 0
+	"Lluís Oliver #0" = 0
+	"Dalmau #0" = 0
+	"Ènnec #0" = 0
+	"Joan Tomàs #0" = 0
+	"Roger Bernat #0" = 0
+	"Felip Dalmau #0" = 0
+	"Dalmau Climent #0" = 0
+	
+	"Teresa #0" =-1
+	"Caterina #0" = -1
+	"Margarida #0" = -1
+	"Alejandra #0" = -5
+	"Candela #0" = -5
+	"Estrella #0" = -5
+	"Joana #0" = -15
+	"Elisabet #0" = -1
+	"Aldonça #0" = -1
+	"Beatriù #0" = -1
+	"Guillema #0" = -1
+	"Cecília #0" = -1
+	"Blanca #0" = -1
+	"Elionor #0" = -1
+	"Elisava #0" = -1
+	"Elisenda #0" = -1
+	"Francesca #0" = -1
+	"Ramona #0" = -1
+	"Violant #0" = -1
+	"Lluïsa #0" = -1
+	"Violant Lluïsa #0" = -1
+}
+
+leader_names = {
+	d'Abella "d'Agulló" d'Amat
+	"de Banyuls" "de Barcelona" "de Bellera" "de Bell-lloc" "de Biure" "de Blanes" "de Borja" "de Bru"
+	"de Cabrera" "de Cardona" "de Castelvell" "de Castre" "de Cervelló" "de Cervera" "de Copons" "de Cortada"
+	Delgado Descoll Desgarrigues
+	d'Eimeric d'Empúries d'Entença
+	"de Fenollet" "de Ferrer" "de Fois"
+	Gassol "de Gras"
+	d'Híxar
+	"de Lanuza" "de Lloria" "de Luna"
+	"de Mataplana" "de Montbui" "de Montcada" "de Montserrat" "de Mur"
+	d'Olmera d'Olzinelles "d'Oms" d'Ortafà
+	"de Pacs" "de Peralta" "de Perellós" Pimentel "de Pinós" "de Poblet" Pont "de Pontós" "de Pròixida"
+	"de Queralt"
+	"de Relat" "de Requesens" "de Ribelles" "de Rocabertí"
+	Sacosta "de Salbà" "de Santcliment" "de Santmartí" "de Sant Vicenç"
+	"de Trastámara"
+	"de Vallterra" "de Vilamarí" "de Vilarresa"
+	d'Urtx d'Urgell
+}
+
+ship_names = {
+	"Blanca Aurora" "Sant Jacob" Flama Lleona Falcó "La Bonaventura" "Sant Antoni" 
+	"Sant Miquel" "Sant Bernat" "Sant Francesc" "Santa Ágata" "Santa Eulàlia" 
+	"Sant Gabriel" "Sant Climent" "Sant Jordi" "La Reial" Trinitat "Santa Creu" 
+	"Santa Maria" "Santa Caterina" "Sant Joan Evangelista" "Santa Bàrbara" 
+	"Sant Pere de Roma" "La Gasela" "Santa Magdalena" "Sant Víctor" Magnana 
+	"Santa Ventura" "Santa Coloma" "Sant Ambrós" Constança "Sant Ferran"
+	Invencible Telèmac Sobirà "Verge del Carme" "Verge de Montserrat" Juno
+	Vigilant Eclipsi "Sant Joan Baptista" "Santíssima Trinitat" Terrible
+	Temerària "Verge de les Neus" "Jaume el Conqueridor" Mart Alerta Ceres
+	Sorpresa Empordà Catalunya "Roger de Flor" "Roger de Llúria"
+	"La Garsa"
+}

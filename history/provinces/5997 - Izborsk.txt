@@ -1,0 +1,36 @@
+#5997 - Izborsk
+#Area - Pskov
+#Region - Baltica 
+
+#Core Details
+capital = "Izborsk"
+is_city = yes
+owner = PSK 
+controller = PSK 
+
+#Demographics
+culture = pskovian
+religion = orthodox
+
+#Development and Trade
+base_tax = 1
+base_production = 2
+base_manpower = 1
+trade_goods = apiculture
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = PSK
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = nomad_group
+
+#Histories

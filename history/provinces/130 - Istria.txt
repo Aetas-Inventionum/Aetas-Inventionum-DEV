@@ -1,0 +1,38 @@
+#130 - Istria
+#Area - Istria
+#Region - South Germany
+
+#Core Details
+capital = "Rovigno"
+is_city = yes
+owner = VEN
+controller = VEN
+
+#Demographics
+culture = istriot
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 2
+base_manpower = 1
+trade_goods = stone	#Prorec and Vrsar
+
+#Cores and Occupation (Alphabetical after current)
+add_core = VEN
+add_core = IST
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

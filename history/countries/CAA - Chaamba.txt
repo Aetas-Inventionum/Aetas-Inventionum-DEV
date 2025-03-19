@@ -1,0 +1,22 @@
+government = tribal
+add_government_reform = tribal_despotism
+government_rank = 1
+primary_culture = libyan
+add_accepted_culture = mozabite
+religion = sunni
+technology_group = muslim
+capital = 5805	# Metlili
+fixed_capital = 5805 # Cannot move capital away from this province & no power cost to move to it
+religious_school = maliki_school
+
+#fictional but known to be descended from Banu Sulaym
+1412.6.6 = {
+	monarch = {
+		name = "Ahmed"
+		dynasty = "Banu Sulaym"
+		birth_date = 1404.2.2
+		adm = 1
+		dip = 1
+		mil = 3
+	}
+}

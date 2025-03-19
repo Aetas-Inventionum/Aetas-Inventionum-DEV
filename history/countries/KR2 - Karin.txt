@@ -1,0 +1,7 @@
+government = tribal
+add_government_reform = steppe_horde
+government_rank = 1
+primary_culture = udmurt
+religion = tengri_pagan_reformed
+technology_group = nomad_group
+capital = 6352	# Karino

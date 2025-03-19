@@ -1,0 +1,496 @@
+#Copy-pasted then modified from vanilla's monopoly privileges written by Groogy.
+
+namespace = aetas_ioa
+
+# Coup of Tordesillas
+country_event = {
+	id = aetas_ioa.1
+	title = aetas_ioa.1.t
+	desc = aetas_ioa.1.d
+	picture = SPY_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes 
+	major = yes 
+
+	option = {
+		name = aetas_ioa.1.a #this is an absolute outrage!
+		set_country_flag = juan_kidnapped_flag
+		custom_tooltip = juan_kidnapped.tt
+		add_ruler_modifier = {
+			name = juan_ii_captive
+			duration = -1
+		}
+	}
+}
+#Forceful Proposal (Enrique gets Villena)
+country_event = {
+	id = aetas_ioa.2
+	title = aetas_ioa.2.t
+	desc = aetas_ioa.2.d
+	picture = BANKRUPTCY_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes 
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			dynasty = "de Trastámara"
+			is_subject_of = ROOT 
+		}
+	}
+
+	trigger = { has_country_flag = juan_kidnapped_flag }
+
+	immediate = { 
+		hidden_effect = { set_country_flag = abq_vll_flag }
+	}
+
+	option = { 
+		name = aetas_ioa.2.a #oh, how enrique twists the knife!
+		set_capital = 4551
+		ABQ = { 
+			define_consort = { 
+				name = "Catalina"
+				dynasty = "de Trastámara"
+				culture = castillian 
+				country_of_origin = CAS 
+				age = 17
+				adm = 1
+				dip = 2
+				mil = 1
+			}
+		}
+		custom_tooltip = abq_vll.tt
+		hidden_effect = { 
+			3371 = { 
+				cede_province = ABQ 
+				add_core = ABQ 
+			}
+			4547 = { 
+				cede_province = ABQ 
+				add_core = ABQ
+			}
+		}
+	}
+}
+#Rescue of Juan II
+country_event = {
+	id = aetas_ioa.3
+	title = aetas_ioa.3.t
+	desc = aetas_ioa.3.d
+	picture = ADVISOR_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes 
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			dynasty = "de Trastámara"
+			is_subject_of = ROOT 
+		}
+	}
+
+	trigger = { 
+		has_country_flag = juan_kidnapped_flag 
+		has_country_flag = abq_vll_flag
+	}
+
+	immediate = { 
+		hidden_effect = { 
+			clr_country_flag = juan_kidnapped_flag
+			set_country_flag = juan_freed_flag
+		}
+	}
+
+	option = { 
+		name = aetas_ioa.3.a #finally am i free from that devil's clutches!
+		set_capital = 4952
+		remove_country_modifier = juan_ii_captive
+		add_ruler_modifier = { 
+			name = alvaro_aid_mod
+			duration = -1
+		}
+		define_advisor = { 
+			name = "Álvaro de Luna"
+			type = theologian 
+			skill = 3
+			discount = yes 
+		}
+		define_general = {	
+			name = "Álvaro de Luna"	
+			#type = general	Not a valid field
+			fire = 2	
+			shock = 2	
+			manuever = 3	
+			siege = 1	
+			#death_date = 1453.6.2 } Not a valid field
+		}
+		custom_tooltip = cas_abq_plan.tt
+	}
+}
+#Arrest of Enrique
+country_event = {
+	id = aetas_ioa.4
+	title = aetas_ioa.4.t
+	desc = aetas_ioa.4.d
+	picture = ACCUSATION_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			dynasty = "de Trastámara"
+			is_subject_of = ROOT 
+		}
+		NOT = { tag = ARA } #surprise for dear aragon
+	}
+
+	option = { 
+		name = aetas_ioa.4.a #at least he's locked up!
+		3371 = { cede_province = ROOT }
+		4547 = { cede_province = ROOT }
+		PNF = { inherit = ABQ }
+		ARA = { 
+			country_event = { 
+				id = aetas_ioa.5
+				days = 5
+			}
+		}
+	}
+}
+#Aragon's response to Enrique's arrest
+country_event = {
+	id = aetas_ioa.5
+	title = aetas_ioa.5.t
+	desc = aetas_ioa.5.d
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes 
+
+	option = {
+		name = aetas_ioa.5.a #send word!
+		ai_chance = { 
+			factor = 10
+			modifier = { 
+				factor = 0 
+				is_at_war = yes 
+			}
+		}
+		CAS = { country_event = { id = aetas_ioa.6 } } #treaty of torre de arciel
+		custom_tooltip = ara_cas_enrique.tt
+	}
+	option = { 
+		name = aetas_ioa.5.b #sorry bud we cant rn
+		ai_chance = { 
+			factor = 1
+			modifier = { 
+				factor = 10
+				is_at_war = yes 
+			}
+		}
+		add_prestige = -25
+		add_stability = -1
+		set_country_flag = ara_steps_down_ioa
+	}
+}
+#Treaty of Torre de Arciel
+country_event = {
+	id = aetas_ioa.6
+	title = aetas_ioa.6.t
+	desc = aetas_ioa.6.d
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			dynasty = "de Trastámara"
+			is_subject_of = ROOT 
+		}
+	}
+
+	option = {
+		name = aetas_ioa.6.a #fine. whatever.
+		ai_chance = { factor = 10 } #historical
+		4942 = { 
+			cede_province = ABQ 
+			remove_core = PREV 
+		}
+		3371 = { cede_province = ABQ }
+		4547 = { cede_province = ABQ }
+		ABQ = { 
+			define_ruler = { 
+				name = "Enrique I de Aragón"
+				dynasty = "de Trastámara"
+				culture = castillian 
+				age = 28
+				adm = 2
+				dip = 1
+				mil = 3
+			}
+		}
+		create_subject = { 
+			subject = ABQ 
+			subject_type = fief 
+		}
+		add_truce_with = ABQ 
+		add_truce_with = ARA 
+		add_stability = -1
+		add_legitimacy = -10
+		hidden_effect = { set_country_flag = cas_treaty_tda_flag }
+	}
+	option = { 
+		name = aetas_ioa.6.b #no!
+		ai_chance = { factor = 1 } #historically unlikely
+		every_province = {
+			limit = { is_core = ABQ }
+			add_core = ARA 
+		}
+		ARA = { 
+			declare_war_with_cb = {
+				who = ROOT
+				casus_belli = cb_core 
+				war_goal_province = 4942
+			}
+		}
+	}
+}
+#Nobles' Petition (to remove Álvaro de Luna)
+country_event = {
+	id = aetas_ioa.7
+	title = aetas_ioa.7.t
+	desc = aetas_ioa.7.d
+	picture = DEBATE_REPUBLICAN_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	major = yes 
+	major_trigger = { 
+		is_subject_of = ROOT 
+	}
+
+	trigger = { has_country_flag = cas_treaty_tda_flag }
+
+	option = { 
+		name = aetas_ioa.7.a #sure
+		ai_chance = { factor = 10 } #historical
+		remove_country_modifier = alvaro_aid_mod
+		add_stability = 1
+		every_subject_country = { 
+			add_opinion = { 
+				who = ROOT 
+				modifier = removed_alvaro
+			}
+		}
+		custom_tooltip = alvaro_returns.tt
+		set_country_flag = alvaro_exiled_flag
+	}
+	option = { 
+		name = aetas_ioa.7.b #no!
+		ai_chance = { factor = 1 } #unlikely
+		add_stability = -1
+		add_country_modifier = { 
+			name = cas_disloyal_infantes
+			duration = 7300
+		}
+		set_country_flag = kept_alvaro_flag
+		custom_tooltip = cas_confront_infantes.tt
+	}
+}
+#Alvaro returns (and Fadrique arrested)
+country_event = {
+	id = aetas_ioa.8
+	title = aetas_ioa.8.t
+	desc = aetas_ioa.8.d
+	picture = REFORM_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	major = yes 
+	major_trigger = { 
+		is_subject_of = ROOT 
+	}
+
+	trigger = { has_country_flag = alvaro_exiled_flag }
+
+	immediate = { set_country_flag = alvaro_returned_flag }
+
+	option = {
+		name = aetas_ioa.8.a #hooray!!!
+		add_ruler_modifier = { 
+			name = alvaro_aid_mod
+			duration = -1 
+		}
+		inherit = TTA 
+		custom_tooltip = cas_confront_infantes.tt
+	}
+}
+#Destined Confrontation
+country_event = {
+	id = aetas_ioa.9
+	title = aetas_ioa.9.t
+	desc = aetas_ioa.9.d
+	picture = LAND_MILITARY_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			dynasty = "de Trastámara"
+			is_subject_of = ROOT 
+		}
+	}
+
+	trigger = { 
+		OR = { 
+			has_country_flag = kept_alvaro_flag
+			has_country_flag = alvaro_returned_flag
+		}
+		OR = { 
+			AND = { 
+				exists = PNF
+				PNF = { is_subject_of = ROOT }
+			}
+			AND = { 
+				exists = ABQ
+				ABQ = { is_subject_of = ROOT }
+			}
+		}
+	}
+
+	option = { 
+		name = aetas_ioa.9.a #to war we go
+		ai_chance = { factor = 10 } #historical
+		add_manpower = 15
+		add_legitimacy = 10
+		add_stability = 1
+		every_province = { 
+			limit = { 
+				OR = { 
+					owned_by = PNF
+					owned_by = ABQ 
+				}
+				NOT = { is_core = ROOT }
+			}
+			add_core = ROOT 
+		}
+		hidden_effect = { 
+			if = { 
+				limit = { 
+					ABQ = { 
+						exists = yes 
+						NOT = { alliance_with = PNF }
+					}
+				}
+				ABQ = { create_alliance = PNF }
+			}
+		}
+		if = { 
+			limit = { 
+				AND = { 
+					exists = PNF
+					PNF = { is_subject_of = ROOT }
+				}
+			}
+			PNF = { 
+				grant_independence = yes 
+				create_alliance = ARA 
+			}
+			declare_war_with_cb = {
+				who = PNF
+				casus_belli = cb_core 
+				war_goal_province = 4955
+			}
+			if = { 
+				limit = { 
+					AND = { 
+						exists = ABQ 
+						ABQ = { is_subject_of = ROOT }
+					}
+				}
+				ABQ = { join_all_defensive_wars_of = PNF }
+			}
+		}
+		else = { 
+			ABQ = { 
+				grant_independence = yes 
+				create_alliance = ARA 
+			}
+			declare_war_with_cb = {
+				who = ABQ
+				casus_belli = cb_core 
+				war_goal_province = 4942
+			}
+		}
+		custom_tooltip = cas_confrontation.tt
+		set_global_flag = cas_confront_flag
+	}
+	option = { 
+		name = aetas_ioa.9.b #not ready!
+		ai_chance = { factor = 0 }
+	}
+}
+#Treaty of Majano
+country_event = {
+	id = aetas_ioa.10
+	title = aetas_ioa.10.t
+	desc = aetas_ioa.10.d
+	picture = INFANTES_ARAGON_eventPicture
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	major = yes 
+
+	option = { 
+		name = aetas_ioa.10.a #finally, its over.
+		every_country = { 
+			limit = { 
+				OR = { 
+					alliance_with = ABQ
+					alliance_with = PNF 
+				}
+				defensive_war_with = ROOT 
+			}
+			white_peace = ROOT 
+		}
+		if = { 
+			limit = { offensive_war_with = PNF }
+			inherit = PNF 
+		}
+		if = { 
+			limit = { offensive_war_with = ABQ }
+			inherit = ABQ 
+		}
+		3371 = { 
+			cede_province = VLL 
+			add_core = VLL 
+		}
+		4547 = { 
+			cede_province = VLL 
+			add_core = VLL 
+		}
+		VLL = { 
+			define_ruler = { 
+				name = "Juan I"
+				dynasty = "Pacheco"
+				culture = castillian
+				age = 26
+				adm = 3
+				dip = 3
+				mil = 5
+			}
+		}
+		create_march = VLL 
+		if = { 
+			limit = { has_disaster = infantes_of_aragon }
+			end_disaster = infantes_of_aragon
+		}
+		change_adm = 1
+		remove_estate_privilege = estate_nobles_factionalist_nobility
+	}
+}

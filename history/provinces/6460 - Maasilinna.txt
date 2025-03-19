@@ -1,0 +1,37 @@
+#6460 - Maasilinna
+#Area - Moonsund Archipelago
+#Region - Baltica 
+
+#Core Details
+capital = "Maasilinna"
+is_city = yes
+owner = LIV
+controller = LIV
+
+#Demographics
+culture = oeselian
+religion = catholic
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = grain
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = LIV
+add_core = EST
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+
+#Histories

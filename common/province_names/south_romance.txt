@@ -1,0 +1,12 @@
+#sardinian dpn by pleibos
+#sardinia
+127 = { "Tataresu" "Tàtari" }
+2986 = { "Casteddu" "Casteddu" }
+4735 = { "Aristanis" "Aristanis" }
+5007 = { "Caddura" "Terranoa" }
+5008 = { "Nùgoro" "Nùgoro" }
+5009 = { "Tòrtuelie" "Tòrtuelie" }
+5010 = { "Maurreddia" "Igrèsias" }
+#corsca
+5004 = { "Ajacciu" "Ajacciu" }
+5005 = { "Bonifàtziu" "Bonifàtziu" }

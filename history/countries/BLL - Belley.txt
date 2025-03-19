@@ -1,0 +1,8 @@
+government_rank = 1
+government = theocracy
+add_government_reform = hre_bishopric_reform
+technology_group = western
+religion = catholic
+primary_culture = arpitan
+capital = 2994 
+fixed_capital = 2994

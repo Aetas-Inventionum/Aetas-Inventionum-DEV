@@ -1,0 +1,2111 @@
+
+spriteTypes = {
+	spriteType = {
+		name = "mission_messina"
+		texturefile = "gfx//interface//missions//messina.dds"
+	}
+	spriteType = {
+		name = "mission_palermo2"
+		texturefile = "gfx//interface//missions//palermo2.dds"
+	}
+	spriteType = {
+		name = "mission_siracusa"
+		texturefile = "gfx//interface//missions//siracusa.dds"
+	}
+	spriteType = {
+		name = "mission_antonii_panhormite"
+		texturefile = "gfx//interface//missions//antonii_panhormite.dds"
+	}
+	spriteType = {
+		name = "mission_alfons2"
+		texturefile = "gfx//interface//missions//alfons2.dds"
+	}
+	spriteType = {
+		name = "mission_ferrante1"
+		texturefile = "gfx//interface//missions//ferrante1.dds"
+	}
+	spriteType = {
+		name = "mission_naples2"
+		texturefile = "gfx//interface//missions//naples2.dds"
+	}
+	spriteType = {
+		name = "mission_naples1"
+		texturefile = "gfx//interface//missions//naples1.dds"
+	}
+	spriteType = {
+		name = "mission_palermo"
+		texturefile = "gfx//interface//missions//palermo.dds"
+	}
+	spriteType = {
+		name = "mission_marseille"
+		texturefile = "gfx//interface//missions//marseille.dds"
+	}
+	spriteType = {
+		name = "mission_aix"
+		texturefile = "gfx//interface//missions//aix.dds"
+	}
+	spriteType = {
+		name = "mission_castel_nuovo"
+		texturefile = "gfx//interface//missions//castel_nuovo.dds"
+	}
+	spriteType = {
+		name = "mission_apocalypse"
+		texturefile = "gfx//interface//missions//apocalypse.dds"
+	}
+	spriteType = {
+		name = "mission_occitania"
+		texturefile = "gfx//interface//missions//occitania.dds"
+	}
+	spriteType = {
+		name = "mission_toulon"
+		texturefile = "gfx//interface//missions//toulon.dds"
+	}
+	spriteType = {
+		name = "mission_carte_provence"
+		texturefile = "gfx//interface//missions//carte_provence.dds"
+	}
+	spriteType = {
+		name = "mission_toulouse2"
+		texturefile = "gfx//interface//missions//toulouse2.dds"
+	}
+	spriteType = {
+		name = "mission_toulouse1"
+		texturefile = "gfx//interface//missions//toulouse1.dds"
+	}
+	spriteType = {
+		name = "mission_tarascon"
+		texturefile = "gfx//interface//missions//tarascon.dds"
+	}
+	spriteType = {
+		name = "mission_angers"
+		texturefile = "gfx//interface//missions//angers.dds"
+	}
+	spriteType = {
+		name = "mission_rene"
+		texturefile = "gfx//interface//missions//rene.dds"
+	}
+	spriteType = {
+		name = "mission_orozco"
+		texturefile = "gfx//interface//missions//orozco.dds"
+	}
+	spriteType = {
+		name = "mission_jeanne_albret"
+		texturefile = "gfx//interface//missions//jeanne_albret.dds"
+	}
+	spriteType = {
+		name = "mission_brocario"
+		texturefile = "gfx//interface//missions//brocario.dds"
+	}
+	spriteType = {
+		name = "mission_dalbret"
+		texturefile = "gfx//interface//missions//dalbret.dds"
+	}
+	spriteType = {
+		name = "mission_antoine_bourbon"
+		texturefile = "gfx//interface//missions//antoine_bourbon.dds"
+	}
+	spriteType = {
+		name = "mission_pau1"
+		texturefile = "gfx//interface//missions//pau1.dds"
+	}
+	spriteType = {
+		name = "mission_henri_navarre"
+		texturefile = "gfx//interface//missions//henri_navarre.dds"
+	}
+	spriteType = {
+		name = "mission_pamplona_cathedral"
+		texturefile = "gfx//interface//missions//pamplona_cathedral.dds"
+	}
+	spriteType = {
+		name = "mission_jacquerie_nav"
+		texturefile = "gfx//interface//missions//jacquerie_nav.dds"
+	}
+	spriteType = {
+		name = "mission_viana"
+		texturefile = "gfx//interface//missions//viana.dds"
+	}
+	spriteType = {
+		name = "mission_blanka"
+		texturefile = "gfx//interface//missions//blanka.dds"
+	}
+	spriteType = {
+		name = "mission_karlos_bad"
+		texturefile = "gfx//interface//missions//karlos_bad.dds"
+	}
+	spriteType = {
+		name = "mission_navarre_fueros"
+		texturefile = "gfx//interface//missions//navarre_fueros.dds"
+	}
+	spriteType = {
+		name = "mission_karlos_good"
+		texturefile = "gfx//interface//missions//karlos_good.dds"
+	}
+	spriteType = {
+		name = "mission_olite1"
+		texturefile = "gfx//interface//missions//olite1.dds"
+	}
+	spriteType = {
+		name = "mission_gipuzkoa"
+		texturefile = "gfx//interface//missions//gipuzkoa.dds"
+	}
+	spriteType = {
+		name = "mission_pamplona1"
+		texturefile = "gfx//interface//missions//pamplona1.dds"
+	}
+	spriteType = {
+		name = "mission_karl_i"
+		texturefile = "gfx//interface//missions//karl_i.dds"
+	}
+	spriteType = {
+		name = "mission_felipe_v"
+		texturefile = "gfx//interface//missions//felipe_v.dds"
+	}
+	spriteType = {
+		name = "mission_alfonso_x"
+		texturefile = "gfx//interface//missions//alfonso_x.dds"
+	}
+	spriteType = {
+		name = "mission_kni_malta"
+		texturefile = "gfx//interface//missions//kni_malta.dds"
+	}
+	spriteType = {
+		name = "mission_felipe_I"
+		texturefile = "gfx//interface//missions//felipe_I.dds"
+	}
+	spriteType = {
+		name = "mission_cisneros"
+		texturefile = "gfx//interface//missions//cisneros.dds"
+	}
+	spriteType = {
+		name = "mission_reyes_catolicos"
+		texturefile = "gfx//interface//missions//reyes_catolicos.dds"
+	}
+	spriteType = {
+		name = "mission_madrid_plaza"
+		texturefile = "gfx//interface//missions//madrid_plaza.dds"
+	}
+	spriteType = {
+		name = "mission_ferrando_ii"
+		texturefile = "gfx//interface//missions//ferrando_ii.dds"
+	}
+	spriteType = {
+		name = "mission_chuan_ii"
+		texturefile = "gfx//interface//missions//chuan_ii.dds"
+	}
+	spriteType = {
+		name = "mission_ara_antipope"
+		texturefile = "gfx//interface//missions//ara_antipope.dds"
+	}
+	spriteType = {
+		name = "mission_aljaferia"
+		texturefile = "gfx//interface//missions//aljaferia.dds"
+	}
+	spriteType = {
+		name = "mission_emmanuel"
+		texturefile = "gfx//interface//missions//emmanuel.dds"
+	}
+	spriteType = {
+		name = "mission_sav_coa"
+		texturefile = "gfx//interface//missions//sav_coa.dds"
+	}
+	spriteType = {
+		name = "mission_anne_cyp"
+		texturefile = "gfx//interface//missions//anne_cyp.dds"
+	}
+	spriteType = {
+		name = "mission_felix_v"
+		texturefile = "gfx//interface//missions//felix_v.dds"
+	}
+	spriteType = {
+		name = "mission_amedeo_viii"
+		texturefile = "gfx//interface//missions//amedeo_viii.dds"
+	}
+	spriteType = {
+		name = "mission_gentile"
+		texturefile = "gfx//interface//missions//gentile.dds"
+	}
+	spriteType = {
+		name = "mission_mark_procession"
+		texturefile = "gfx//interface//missions//mark_procession.dds"
+	}
+	spriteType = {
+		name = "mission_padua"
+		texturefile = "gfx//interface//missions//padua.dds"
+	}
+	spriteType = {
+		name = "mission_fondaco"
+		texturefile = "gfx//interface//missions//fondaco.dds"
+	}
+	spriteType = {
+		name = "mission_tinto"
+		texturefile = "gfx//interface//missions//tinto.dds"
+	}
+	spriteType = {
+		name = "mission_enrico"
+		texturefile = "gfx//interface//missions//enrico.dds"
+	}
+	spriteType = {
+		name = "mission_polenta"
+		texturefile = "gfx//interface//missions//polenta.dds"
+	}
+	spriteType = {
+		name = "mission_franky"
+		texturefile = "gfx//interface//missions//franky.dds"
+	}
+	spriteType = {
+		name = "mission_aldine"
+		texturefile = "gfx//interface//missions//aldine.dds"
+	}
+	spriteType = {
+		name = "mission_ven_sg"
+		texturefile = "gfx//interface//missions//ven_sg.dds"
+	}
+	spriteType = {
+		name = "mission_ven_lagoon"
+		texturefile = "gfx//interface//missions//ven_lagoon.dds"
+	}
+	spriteType = {
+		name = "mission_marie_bur"
+		texturefile = "gfx//interface//missions//marie_bur.dds"
+	}
+	spriteType = {
+		name = "mission_public_weal"
+		texturefile = "gfx//interface//missions//public_weal.dds"
+	}
+	spriteType = {
+		name = "mission_adolf_kle"
+		texturefile = "gfx//interface//missions//adolf_kle.dds"
+	}
+	spriteType = {
+		name = "mission_bur_charles"
+		texturefile = "gfx//interface//missions//bur_charles.dds"
+	}
+	spriteType = {
+		name = "mission_graslei"
+		texturefile = "gfx//interface//missions//graslei.dds"
+	}
+	spriteType = {
+		name = "mission_bur_cambrai"
+		texturefile = "gfx//interface//missions//bur_cambrai.dds"
+	}
+	spriteType = {
+		name = "mission_gelre"
+		texturefile = "gfx//interface//missions//gelre.dds"
+	}
+	spriteType = {
+		name = "mission_eg"
+		texturefile = "gfx//interface//missions//eg.dds"
+	}
+	spriteType = {
+		name = "mission_hotel"
+		texturefile = "gfx//interface//missions//hotel.dds"
+	}
+	spriteType = {
+		name = "mission_friesland"
+		texturefile = "gfx//interface//missions//friesland.dds"
+	}
+	spriteType = {
+		name = "mission_david_bur"
+		texturefile = "gfx//interface//missions//david_bur.dds"
+	}
+	spriteType = {
+		name = "mission_lux"
+		texturefile = "gfx//interface//missions//lux.dds"
+	}
+	spriteType = {
+		name = "mission_mary_family"
+		texturefile = "gfx//interface//missions//mary_family.dds"
+	}
+	spriteType = {
+		name = "mission_great_council_bur"
+		texturefile = "gfx//interface//missions//great_council_bur.dds"
+	}
+	spriteType = {
+		name = "mission_anvers"
+		texturefile = "gfx//interface//missions//anvers.dds"
+	}
+	spriteType = {
+		name = "mission_brussel2"
+		texturefile = "gfx//interface//missions//brussel2.dds"
+	}
+	spriteType = {
+		name = "mission_brussel"
+		texturefile = "gfx//interface//missions//brussel.dds"
+	}
+	spriteType = {
+		name = "mission_liege"
+		texturefile = "gfx//interface//missions//liege.dds"
+	}
+	spriteType = {
+		name = "mission_brabantiae"
+		texturefile = "gfx//interface//missions//brabantiae.dds"
+	}
+	spriteType = {
+		name = "mission_hook_n_cod"
+		texturefile = "gfx//interface//missions//hook_n_cod.dds"
+	}
+	spriteType = {
+		name = "mission_kurkoln_armee"
+		texturefile = "gfx//interface//missions//kurkoln_armee.dds"
+	}
+	spriteType = {
+		name = "mission_clemens_august"
+		texturefile = "gfx//interface//missions//clemens_august.dds"
+	}
+	spriteType = {
+		name = "mission_essen"
+		texturefile = "gfx//interface//missions//essen.dds"
+	}
+	spriteType = {
+		name = "mission_luneburg_war"
+		texturefile = "gfx//interface//missions//luneburg_war.dds"
+	}
+	spriteType = {
+		name = "mission_lauenburg"
+		texturefile = "gfx//interface//missions//lauenburg.dds"
+	}
+	spriteType = {
+		name = "mission_osnabruck"
+		texturefile = "gfx//interface//missions//osnabruck.dds"
+	}
+	spriteType = {
+		name = "mission_hannover2"
+		texturefile = "gfx//interface//missions//hannover2.dds"
+	}
+	spriteType = {
+		name = "mission_hannover1"
+		texturefile = "gfx//interface//missions//hannover1.dds"
+	}
+	spriteType = {
+		name = "mission_celle"
+		texturefile = "gfx//interface//missions//celle.dds"
+	}
+	spriteType = {
+		name = "mission_luneburg"
+		texturefile = "gfx//interface//missions//luneburg.dds"
+	}
+	spriteType = {
+		name = "mission_julius"
+		texturefile = "gfx//interface//missions//julius.dds"
+	}
+	spriteType = {
+		name = "mission_hoya"
+		texturefile = "gfx//interface//missions//hoya.dds"
+	}
+	spriteType = {
+		name = "mission_hildesheim"
+		texturefile = "gfx//interface//missions//hildesheim.dds"
+	}
+	spriteType = {
+		name = "mission_goslar"
+		texturefile = "gfx//interface//missions//goslar.dds"
+	}
+	spriteType = {
+		name = "mission_braunschweig"
+		texturefile = "gfx//interface//missions//braunschweig.dds"
+	}
+	spriteType = {
+		name = "mission_bibliotheca_augusta"
+		texturefile = "gfx//interface//missions//bibliotheca_augusta.dds"
+	}
+	spriteType = {
+		name = "mission_wolfenbuttel"
+		texturefile = "gfx//interface//missions//wolfenbuttel.dds"
+	}
+	spriteType = {
+		name = "mission_georg_gbr"
+		texturefile = "gfx//interface//missions//georg_gbr.dds"
+	}
+	spriteType = {
+		name = "mission_ernst_august"
+		texturefile = "gfx//interface//missions//ernst_august.dds"
+	}
+	spriteType = {
+		name = "mission_georg"
+		texturefile = "gfx//interface//missions//georg.dds"
+	}
+	spriteType = {
+		name = "mission_erik_i"
+		texturefile = "gfx//interface//missions//erik_i.dds"
+	}
+	spriteType = {
+		name = "mission_bernhard_brl"
+		texturefile = "gfx//interface//missions//bernhard_brl.dds"
+	}
+	spriteType = {
+		name = "mission_otto_child"
+		texturefile = "gfx//interface//missions//otto_child.dds"
+	}
+	spriteType = {
+		name = "mission_sophie_brb"
+		texturefile = "gfx//interface//missions//sophie_brb.dds"
+	}
+	spriteType = {
+		name = "mission_katzenelnbogen"
+		texturefile = "gfx//interface//missions//katzenelnbogen.dds"
+	}
+	spriteType = {
+		name = "mission_wilhelm_ix"
+		texturefile = "gfx//interface//missions//wilhelm_ix.dds"
+	}
+	spriteType = {
+		name = "mission_prot_princes"
+		texturefile = "gfx//interface//missions//prot_princes.dds"
+	}
+	spriteType = {
+		name = "mission_marburg_uni"
+		texturefile = "gfx//interface//missions//marburg_uni.dds"
+	}
+	spriteType = {
+		name = "mission_kraft"
+		texturefile = "gfx//interface//missions//kraft.dds"
+	}
+	spriteType = {
+		name = "mission_wilhelm_ii"
+		texturefile = "gfx//interface//missions//wilhelm_ii.dds"
+	}
+	spriteType = {
+		name = "mission_lippe"
+		texturefile = "gfx//interface//missions//lippe.dds"
+	}
+	spriteType = {
+		name = "mission_lippe"
+		texturefile = "gfx//interface//missions//lippe.dds"
+	}
+	spriteType = {
+		name = "mission_darmstadt"
+		texturefile = "gfx//interface//missions//darmstadt.dds"
+	}
+	spriteType = {
+		name = "mission_hessian2"
+		texturefile = "gfx//interface//missions//hessian2.dds"
+	}
+	spriteType = {
+		name = "mission_hessian"
+		texturefile = "gfx//interface//missions//hessian.dds"
+	}
+	spriteType = {
+		name = "mission_fulda"
+		texturefile = "gfx//interface//missions//fulda.dds"
+	}
+	spriteType = {
+		name = "mission_frankfurt"
+		texturefile = "gfx//interface//missions//frankfurt.dds"
+	}
+	spriteType = {
+		name = "mission_amalie"
+		texturefile = "gfx//interface//missions//amalie.dds"
+	}
+	spriteType = {
+		name = "mission_marburg3"
+		texturefile = "gfx//interface//missions//marburg3.dds"
+	}
+	spriteType = {
+		name = "mission_marburg"
+		texturefile = "gfx//interface//missions//marburg.dds"
+	}
+	spriteType = {
+		name = "mission_marburg2"
+		texturefile = "gfx//interface//missions//marburg2.dds"
+	}
+	spriteType = {
+		name = "mission_kassel"
+		texturefile = "gfx//interface//missions//kassel.dds"
+	}
+	spriteType = {
+		name = "mission_katz_town"
+		texturefile = "gfx//interface//missions//katz_town.dds"
+	}
+	spriteType = {
+		name = "mission_katz"
+		texturefile = "gfx//interface//missions//katz.dds"
+	}
+	spriteType = {
+		name = "mission_ziegenhain"
+		texturefile = "gfx//interface//missions//ziegenhain.dds"
+	}
+	spriteType = {
+		name = "mission_wilhelm_iv"
+		texturefile = "gfx//interface//missions//wilhelm_iv.dds"
+	}
+	spriteType = {
+		name = "mission_philipp"
+		texturefile = "gfx//interface//missions//philipp.dds"
+	}
+	spriteType = {
+		name = "mission_ulm"
+		texturefile = "gfx//interface//missions//ulm.dds"
+	}
+	spriteType = {
+		name = "mission_swabia"
+		texturefile = "gfx//interface//missions//swabia.dds"
+	}
+	spriteType = {
+		name = "mission_ulrich"
+		texturefile = "gfx//interface//missions//ulrich.dds"
+	}
+	spriteType = {
+		name = "mission_bannerbearer"
+		texturefile = "gfx//interface//missions//bannerbearer.dds"
+	}
+	spriteType = {
+		name = "mission_wur_castle"
+		texturefile = "gfx//interface//missions//wur_castle.dds"
+	}
+	spriteType = {
+		name = "mission_swa_leg"
+		texturefile = "gfx//interface//missions//swa_leg.dds"
+	}
+	spriteType = {
+		name = "mission_ludwigsburg"
+		texturefile = "gfx//interface//missions//ludwigsburg.dds"
+	}
+	spriteType = {
+		name = "mission_eber_lud"
+		texturefile = "gfx//interface//missions//eber_lud.dds"
+	}
+	spriteType = {
+		name = "mission_wur_arms"
+		texturefile = "gfx//interface//missions//wur_arms.dds"
+	}
+	spriteType = {
+		name = "mission_konrad_sic"
+		texturefile = "gfx//interface//missions//konrad_sic.dds"
+	}
+	spriteType = {
+		name = "mission_staufen"
+		texturefile = "gfx//interface//missions//staufen.dds"
+	}
+	spriteType = {
+		name = "mission_wur_kirchen"
+		texturefile = "gfx//interface//missions//wur_kirchen.dds"
+	}
+	spriteType = {
+		name = "mission_furstenberg_habsburg"
+		texturefile = "gfx//interface//missions//furstenberg_habsburg.dds"
+	}
+	spriteType = {
+		name = "mission_herzog_wur"
+		texturefile = "gfx//interface//missions//herzog_wur.dds"
+	}
+	spriteType = {
+		name = "mission_stuttgart"
+		texturefile = "gfx//interface//missions//stuttgart.dds"
+	}
+	spriteType = {
+		name = "mission_urach"
+		texturefile = "gfx//interface//missions//urach.dds"
+	}
+	spriteType = {
+		name = "mission_eberhard"
+		texturefile = "gfx//interface//missions//eberhard.dds"
+	}
+	spriteType = {
+		name = "mission_henriette"
+		texturefile = "gfx//interface//missions//henriette.dds"
+	}
+	spriteType = {
+		name = "mission_eberhard_iii"
+		texturefile = "gfx//interface//missions//eberhard_iii.dds"
+	}
+	spriteType = {
+		name = "mission_rupprecht_iii"
+		texturefile = "gfx//interface//missions//rupprecht_iii.dds"
+	}
+	spriteType = {
+		name = "mission_mannheim"
+		texturefile = "gfx//interface//missions//mannheim.dds"
+	}
+	spriteType = {
+		name = "mission_heidelberg_castle"
+		texturefile = "gfx//interface//missions//heidelberg_castle.dds"
+	}
+	spriteType = {
+		name = "mission_ottheinrich"
+		texturefile = "gfx//interface//missions//ottheinrich.dds"
+	}
+	spriteType = {
+		name = "mission_fred_wise"
+		texturefile = "gfx//interface//missions//fred_wise.dds"
+	}
+	spriteType = {
+		name = "mission_christoph"
+		texturefile = "gfx//interface//missions//christoph.dds"
+	}
+	spriteType = {
+		name = "mission_mbc_otto"
+		texturefile = "gfx//interface//missions//mbc_otto.dds"
+	}
+	spriteType = {
+		name = "mission_zwe_stefan"
+		texturefile = "gfx//interface//missions//zwe_stefan.dds"
+	}
+	spriteType = {
+		name = "mission_nmk_johann"
+		texturefile = "gfx//interface//missions//nmk_johann.dds"
+	}
+	spriteType = {
+		name = "mission_stettin"
+		texturefile = "gfx//interface//missions//stettin.dds"
+	}
+	spriteType = {
+		name = "mission_nuremberg"
+		texturefile = "gfx//interface//missions//nuremberg.dds"
+	}
+	spriteType = {
+		name = "mission_ernst"
+		texturefile = "gfx//interface//missions//ernst.dds"
+	}
+	spriteType = {
+		name = "mission_moritz"
+		texturefile = "gfx//interface//missions//moritz.dds"
+	}
+	spriteType = {
+		name = "mission_august"
+		texturefile = "gfx//interface//missions//august.dds"
+	}
+	spriteType = {
+		name = "mission_johann_georg"
+		texturefile = "gfx//interface//missions//johann_georg.dds"
+	}
+	spriteType = {
+		name = "mission_dresden2"
+		texturefile = "gfx//interface//missions//dresden2.dds"
+	}
+	spriteType = {
+		name = "mission_dresden1"
+		texturefile = "gfx//interface//missions//dresden1.dds"
+	}
+	spriteType = {
+		name = "mission_leipzig"
+		texturefile = "gfx//interface//missions//leipzig.dds"
+	}
+	spriteType = {
+		name = "mission_saxfred"
+		texturefile = "gfx//interface//missions//saxfred.dds"
+	}
+	spriteType = {
+		name = "mission_konstanz"
+		texturefile = "gfx//interface//missions//konstanz.dds"
+	}
+	spriteType = {
+		name = "mission_geneva"
+		texturefile = "gfx//interface//missions//geneva.dds"
+	}
+	spriteType = {
+		name = "mission_basel"
+		texturefile = "gfx//interface//missions//basel.dds"
+	}
+	spriteType = {
+		name = "mission_zurich_war"
+		texturefile = "gfx//interface//missions//zurich_war.dds"
+	}
+	spriteType = {
+		name = "mission_zurich"
+		texturefile = "gfx//interface//missions//zurich.dds"
+	}
+	spriteType = {
+		name = "mission_bern"
+		texturefile = "gfx//interface//missions//bern.dds"
+	}
+	spriteType = {
+		name = "mission_charles_bold"
+		texturefile = "gfx//interface//missions//charles_bold.dds"
+	}
+	spriteType = {
+		name = "mission_zwingli"
+		texturefile = "gfx//interface//missions//zwingli.dds"
+	}
+	spriteType = {
+		name = "mission_johannisburg"
+		texturefile = "gfx//interface//missions//johannisburg.dds"
+	}
+	spriteType = {
+		name = "mission_gutenberg"
+		texturefile = "gfx//interface//missions//gutenberg.dds"
+	}
+	spriteType = {
+		name = "mission_kolndom"
+		texturefile = "gfx//interface//missions//kolndom.dds"
+	}
+	spriteType = {
+		name = "mission_bonn_minster"
+		texturefile = "gfx//interface//missions//bonn_minster.dds"
+	}
+	spriteType = {
+		name = "mission_bonn_palace"
+		texturefile = "gfx//interface//missions//bonn_palace.dds"
+	}
+	spriteType = {
+		name = "mission_mai_lothar"
+		texturefile = "gfx//interface//missions//mai_lothar.dds"
+	}
+	spriteType = {
+		name = "mission_mainz_albrecht"
+		texturefile = "gfx//interface//missions//mainz_albrecht.dds"
+	}
+	spriteType = {
+		name = "mission_mainzdom"
+		texturefile = "gfx//interface//missions//mainzdom.dds"
+	}
+	spriteType = {
+		name = "mission_philippsburg"
+		texturefile = "gfx//interface//missions//philippsburg.dds"
+	}
+	spriteType = {
+		name = "mission_trierdom"
+		texturefile = "gfx//interface//missions//trierdom.dds"
+	}
+	spriteType = {
+		name = "mission_engelbert"
+		texturefile = "gfx//interface//missions//engelbert.dds"
+	}
+	spriteType = {
+		name = "mission_josef_clemens"
+		texturefile = "gfx//interface//missions//josef_clemens.dds"
+	}
+	spriteType = {
+		name = "mission_waldburg"
+		texturefile = "gfx//interface//missions//waldburg.dds"
+	}
+	spriteType = {
+		name = "mission_king_bav"
+		texturefile = "gfx//interface//missions//king_bav.dds"
+	}
+	spriteType = {
+		name = "mission_petrus"
+		texturefile = "gfx//interface//missions//petrus.dds"
+	}
+	spriteType = {
+		name = "mission_albrecht_iv_bav"
+		texturefile = "gfx//interface//missions//albrecht_iv_bav.dds"
+	}
+	spriteType = {
+		name = "mission_albrecht_bav"
+		texturefile = "gfx//interface//missions//albrecht_bav.dds"
+	}
+	spriteType = {
+		name = "mission_max_i"
+		texturefile = "gfx//interface//missions//max_i.dds"
+	}
+	spriteType = {
+		name = "mission_munich"
+		texturefile = "gfx//interface//missions//munich.dds"
+	}
+	spriteType = {
+		name = "mission_wilno"
+		texturefile = "gfx//interface//missions//wilno.dds"
+	}
+	spriteType = {
+		name = "mission_korybut"
+		texturefile = "gfx//interface//missions//korybut.dds"
+	}
+	spriteType = {
+		name = "mission_hussites"
+		texturefile = "gfx//interface//missions//hussites.dds"
+	}
+	spriteType = {
+		name = "mission_taborites"
+		texturefile = "gfx//interface//missions//taborites.dds"
+	}
+	spriteType = {
+		name = "mission_plzen"
+		texturefile = "gfx//interface//missions//plzen.dds"
+	}
+	spriteType = {
+		name = "mission_kutna_hora"
+		texturefile = "gfx//interface//missions//kutna_hora.dds"
+	}
+	spriteType = {
+		name = "mission_prague1"
+		texturefile = "gfx//interface//missions//prague1.dds"
+	}
+	spriteType = {
+		name = "mission_karel_iv"
+		texturefile = "gfx//interface//missions//karel_iv.dds"
+	}
+	spriteType = {
+		name = "mission_whaling"
+		texturefile = "gfx//interface//missions//whaling.dds"
+	}
+	spriteType = {
+		name = "mission_cat_company"
+		texturefile = "gfx//interface//missions//cat_company.dds"
+	}
+	spriteType = {
+		name = "mission_juan_ii_nav"
+		texturefile = "gfx//interface//missions//juan_ii_nav.dds"
+	}
+	spriteType = {
+		name = "mission_pau"
+		texturefile = "gfx//interface//missions//pau.dds"
+	}
+	spriteType = {
+		name = "mission_albret"
+		texturefile = "gfx//interface//missions//albret.dds"
+	}
+	spriteType = {
+		name = "mission_febus"
+		texturefile = "gfx//interface//missions//febus.dds"
+	}
+	spriteType = {
+		name = "mission_olite"
+		texturefile = "gfx//interface//missions//olite.dds"
+	}
+	spriteType = {
+		name = "mission_pamplona"
+		texturefile = "gfx//interface//missions//pamplona.dds"
+	}
+	spriteType = {
+		name = "mission_kilwa_city"
+		texturefile = "gfx//interface//missions//kilwa_city.dds"
+	}
+	spriteType = {
+		name = "mission_casadaguine"
+		texturefile = "gfx//interface//missions//casadaguine.dds"
+	}
+	spriteType = {
+		name = "mission_lisbon"
+		texturefile = "gfx//interface//missions//lisbon.dds"
+	}
+	spriteType = {
+		name = "mission_joana"
+		texturefile = "gfx//interface//missions//joana.dds"
+	}
+	spriteType = {
+		name = "mission_eng_trade"
+		texturefile = "gfx//interface//missions//eng_trade.dds"
+	}
+	spriteType = {
+		name = "mission_afonso"
+		texturefile = "gfx//interface//missions//afonso.dds"
+	}
+	spriteType = {
+		name = "mission_caravel"
+		texturefile = "gfx//interface//missions//caravel.dds"
+	}
+	spriteType = {
+		name = "mission_por_ren"
+		texturefile = "gfx//interface//missions//por_ren.dds"
+	}
+	spriteType = {
+		name = "mission_madeira2"
+		texturefile = "gfx//interface//missions//madeira2.dds"
+	}
+	spriteType = {
+		name = "mission_ceuta"
+		texturefile = "gfx//interface//missions//ceuta.dds"
+	}
+	spriteType = {
+		name = "mission_moor"
+		texturefile = "gfx//interface//missions//moor.dds"
+	}
+	spriteType = {
+		name = "mission_gra7"
+		texturefile = "gfx//interface//missions//gra7.dds"
+	}
+	spriteType = {
+		name = "mission_gra6"
+		texturefile = "gfx//interface//missions//gra6.dds"
+	}
+	spriteType = {
+		name = "mission_gra5"
+		texturefile = "gfx//interface//missions//gra5.dds"
+	}
+	spriteType = {
+		name = "mission_alhambra"
+		texturefile = "gfx//interface//missions//alhambra.dds"
+	}
+	spriteType = {
+		name = "mission_gra4"
+		texturefile = "gfx//interface//missions//gra4.dds"
+	}
+	spriteType = {
+		name = "mission_gra3"
+		texturefile = "gfx//interface//missions//gra3.dds"
+	}
+	spriteType = {
+		name = "mission_gra2"
+		texturefile = "gfx//interface//missions//gra2.dds"
+	}
+	spriteType = {
+		name = "mission_almanzor"
+		texturefile = "gfx//interface//missions//almanzor.dds"
+	}
+	spriteType = {
+		name = "mission_gra1"
+		texturefile = "gfx//interface//missions//gra1.dds"
+	}
+	spriteType = {
+		name = "mission_andalusi_arches"
+		texturefile = "gfx//interface//missions//andalusi_arches.dds"
+	}
+	spriteType = {
+		name = "mission_mozarabic"
+		texturefile = "gfx//interface//missions//mozarabic.dds"
+	}
+	spriteType = {
+		name = "mission_plovdiv"
+		texturefile = "gfx//interface//missions//plovdiv.dds"
+	}
+	spriteType = {
+		name = "mission_bul_tsar"
+		texturefile = "gfx//interface//missions//bul_tsar.dds"
+	}
+	spriteType = {
+		name = "mission_bul_simeon1"
+		texturefile = "gfx//interface//missions//bul_simeon1.dds"
+	}
+	spriteType = {
+		name = "mission_bul_ga"
+		texturefile = "gfx//interface//missions//bul_ga.dds"
+	}
+	spriteType = {
+		name = "mission_sofiya"
+		texturefile = "gfx//interface//missions//sofiya.dds"
+	}
+	spriteType = {
+		name = "mission_tsarevets"
+		texturefile = "gfx//interface//missions//tsarevets.dds"
+	}
+	spriteType = {
+		name = "mission_bul_cav"
+		texturefile = "gfx//interface//missions//bul_cav.dds"
+	}
+	spriteType = {
+		name = "mission_euthy"
+		texturefile = "gfx//interface//missions//euthy.dds"
+	}
+	spriteType = {
+		name = "mission_baba_vida"
+		texturefile = "gfx//interface//missions//baba_vida.dds"
+	}
+	spriteType = {
+		name = "mission_lazar"
+		texturefile = "gfx//interface//missions//lazar.dds"
+	}
+	spriteType = {
+		name = "mission_knin_fort"
+		texturefile = "gfx//interface//missions//knin_fort.dds"
+	}
+	spriteType = {
+		name = "mission_knin_old"
+		texturefile = "gfx//interface//missions//knin_old.dds"
+	}
+	spriteType = {
+		name = "mission_ragusa"
+		texturefile = "gfx//interface//missions//ragusa.dds"
+	}
+	spriteType = {
+		name = "mission_sibenik2"
+		texturefile = "gfx//interface//missions//sibenik2.dds"
+	}
+	spriteType = {
+		name = "mission_bihac"
+		texturefile = "gfx//interface//missions//bihac.dds"
+	}
+	spriteType = {
+		name = "mission_frk"
+		texturefile = "gfx//interface//missions//frk.dds"
+	}
+	spriteType = {
+		name = "mission_cro_ren"
+		texturefile = "gfx//interface//missions//cro_ren.dds"
+	}
+	spriteType = {
+		name = "mission_sibenik"
+		texturefile = "gfx//interface//missions//sibenik.dds"
+	}
+	spriteType = {
+		name = "mission_zagreb"
+		texturefile = "gfx//interface//missions//zagreb.dds"
+	}
+	spriteType = {
+		name = "mission_cro_tomi"
+		texturefile = "gfx//interface//missions//cro_tomi.dds"
+	}
+	spriteType = {
+		name = "mission_illyria"
+		texturefile = "gfx//interface//missions//illyria.dds"
+	}
+	spriteType = {
+		name = "mission_srebrenik"
+		texturefile = "gfx//interface//missions//srebrenik.dds"
+	}
+	spriteType = {
+		name = "mission_kotromanic"
+		texturefile = "gfx//interface//missions//kotromanic.dds"
+	}
+	spriteType = {
+		name = "mission_krstjani"
+		texturefile = "gfx//interface//missions//krstjani.dds"
+	}
+	spriteType = {
+		name = "mission_bobovac"
+		texturefile = "gfx//interface//missions//bobovac.dds"
+	}
+	spriteType = {
+		name = "mission_lezhe"
+		texturefile = "gfx//interface//missions//lezhe.dds"
+	}
+	spriteType = {
+		name = "mission_arianiti"
+		texturefile = "gfx//interface//missions//arianiti.dds"
+	}
+	spriteType = {
+		name = "mission_skanderun"
+		texturefile = "gfx//interface//missions//skanderun.dds"
+	}
+	spriteType = {
+		name = "mission_kruje"
+		texturefile = "gfx//interface//missions//kruje.dds"
+	}
+	spriteType = {
+		name = "mission_tripoli"
+		texturefile = "gfx//interface//missions//tripoli.dds"
+	}
+	spriteType = {
+		name = "mission_acre"
+		texturefile = "gfx//interface//missions//acre.dds"
+	}
+	spriteType = {
+		name = "mission_sepulchre"
+		texturefile = "gfx//interface//missions//sepulchre.dds"
+	}
+	spriteType = {
+		name = "mission_famagusta"
+		texturefile = "gfx//interface//missions//famagusta.dds"
+	}
+	spriteType = {
+		name = "mission_nicosia2"
+		texturefile = "gfx//interface//missions//nicosia2.dds"
+	}
+	spriteType = {
+		name = "mission_nicosia"
+		texturefile = "gfx//interface//missions//nicosia.dds"
+	}
+	spriteType = {
+		name = "mission_qaitbay"
+		texturefile = "gfx//interface//missions//qaitbay.dds"
+	}
+	spriteType = {
+		name = "mission_bahr_yussef"
+		texturefile = "gfx//interface//missions//bahr_yussef.dds"
+	}
+	spriteType = {
+		name = "mission_aleppo"
+		texturefile = "gfx//interface//missions//aleppo.dds"
+	}
+	spriteType = {
+		name = "mission_karaman"
+		texturefile = "gfx//interface//missions//karaman.dds"
+	}
+	spriteType = {
+		name = "mission_candar"
+		texturefile = "gfx//interface//missions//candar.dds"
+	}
+	spriteType = {
+		name = "mission_uzunkopru"
+		texturefile = "gfx//interface//missions//uzunkopru.dds"
+	}
+	spriteType = {
+		name = "mission_topkapi"
+		texturefile = "gfx//interface//missions//topkapi.dds"
+	}
+	spriteType = {
+		name = "mission_bosnasaray"
+		texturefile = "gfx//interface//missions//bosnasaray.dds"
+	}
+	spriteType = {
+		name = "mission_white_tower"
+		texturefile = "gfx//interface//missions//white_tower.dds"
+	}
+	spriteType = {
+		name = "mission_chilia"
+		texturefile = "gfx//interface//missions//chilia.dds"
+	}
+	spriteType = {
+		name = "mission_stefan_mol"
+		texturefile = "gfx//interface//missions//stefan_mol.dds"
+	}
+	spriteType = {
+		name = "mission_lajos_ii"
+		texturefile = "gfx//interface//missions//lajos_ii.dds"
+	}
+	spriteType = {
+		name = "mission_skanderberg"
+		texturefile = "gfx//interface//missions//skanderberg.dds"
+	}
+	spriteType = {
+		name = "mission_east_hun"
+		texturefile = "gfx//interface//missions//east_hun.dds"
+	}
+	spriteType = {
+		name = "mission_fruzhin"
+		texturefile = "gfx//interface//missions//fruzhin.dds"
+	}
+	spriteType = {
+		name = "mission_murad"
+		texturefile = "gfx//interface//missions//murad.dds"
+	}
+	spriteType = {
+		name = "mission_mehmed_i"
+		texturefile = "gfx//interface//missions//mehmed_i.dds"
+	}
+	spriteType = {
+		name = "mission_gattilusio"
+		texturefile = "gfx//interface//missions//gattilusio.dds"
+	}
+	spriteType = {
+		name = "mission_gallipoli"
+		texturefile = "gfx//interface//missions//gallipoli.dds"
+	}
+	spriteType = {
+		name = "mission_mfa"
+		texturefile = "gfx//interface//missions//mfa.dds"
+	}
+	spriteType = {
+		name = "mission_golden_horn"
+		texturefile = "gfx//interface//missions//golden_horn.dds"
+	}
+	spriteType = {
+		name = "mission_uskudar"
+		texturefile = "gfx//interface//missions//uskudar.dds"
+	}
+	spriteType = {
+		name = "mission_galata"
+		texturefile = "gfx//interface//missions//galata.dds"
+	}
+	spriteType = {
+		name = "mission_pal_ren"
+		texturefile = "gfx//interface//missions//pal_ren.dds"
+	}
+	spriteType = {
+		name = "mission_naxos"
+		texturefile = "gfx//interface//missions//naxos.dds"
+	}
+	spriteType = {
+		name = "mission_cyprus"
+		texturefile = "gfx//interface//missions//cyprus.dds"
+	}
+	spriteType = {
+		name = "mission_halic"
+		texturefile = "gfx//interface//missions//halic.dds"
+	}
+	spriteType = {
+		name = "mission_byz_friend"
+		texturefile = "gfx//interface//missions//byz_friend.dds"
+	}
+	spriteType = {
+		name = "mission_messembria"
+		texturefile = "gfx//interface//missions//messembria.dds"
+	}
+	spriteType = {
+		name = "mission_hagia"
+		texturefile = "gfx//interface//missions//hagia.dds"
+	}
+	spriteType = {
+		name = "mission_ioannes3"
+		texturefile = "gfx//interface//missions//ioannes3.dds"
+	}
+	spriteType = {
+		name = "mission_ioannes2"
+		texturefile = "gfx//interface//missions//ioannes2.dds"
+	}
+	spriteType = {
+		name = "mission_andronikos"
+		texturefile = "gfx//interface//missions//andronikos.dds"
+	}
+	spriteType = {
+		name = "mission_nicaea"
+		texturefile = "gfx//interface//missions//nicaea.dds"
+	}
+	spriteType = {
+		name = "mission_nicomedia"
+		texturefile = "gfx//interface//missions//nicomedia.dds"
+	}
+	spriteType = {
+		name = "mission_thessalonica"
+		texturefile = "gfx//interface//missions//thessalonica.dds"
+	}
+	spriteType = {
+		name = "mission_athos"
+		texturefile = "gfx//interface//missions//athos.dds"
+	}
+	spriteType = {
+		name = "mission_thomas_p"
+		texturefile = "gfx//interface//missions//thomas_p.dds"
+	}
+	spriteType = {
+		name = "mission_ioannes"
+		texturefile = "gfx//interface//missions//ioannes.dds"
+	}
+	spriteType = {
+		name = "mission_targovishte"
+		texturefile = "gfx//interface//missions//targovishte.dds"
+	}
+	spriteType = {
+		name = "mission_vlad_dracul"
+		texturefile = "gfx//interface//missions//vlad_dracul.dds"
+	}
+	spriteType = {
+		name = "mission_impaler"
+		texturefile = "gfx//interface//missions//impaler.dds"
+	}
+	spriteType = {
+		name = "mission_ctitor"
+		texturefile = "gfx//interface//missions//ctitor.dds"
+	}
+	spriteType = {
+		name = "mission_mirc"
+		texturefile = "gfx//interface//missions//mirc.dds"
+	}
+	spriteType = {
+		name = "mission_wal_boyars"
+		texturefile = "gfx//interface//missions//wal_boyars.dds"
+	}
+	spriteType = {
+		name = "mission_school_of_athens"
+		texturefile = "gfx//interface//missions//school_of_athens.dds"
+	}
+	spriteType = {
+		name = "mission_acropolis"
+		texturefile = "gfx//interface//missions//acropolis.dds"
+	}
+	spriteType = {
+		name = "mission_kells"
+		texturefile = "gfx//interface//missions//kells.dds"
+	}
+	spriteType = {
+		name = "mission_ani_tower"
+		texturefile = "gfx//interface//missions//ani_tower.dds"
+	}
+	spriteType = {
+		name = "mission_high_king_ire"
+		texturefile = "gfx//interface//missions//high_king_ire.dds"
+	}
+	spriteType = {
+		name = "mission_rath"
+		texturefile = "gfx//interface//missions//rath.dds"
+	}
+	spriteType = {
+		name = "mission_ballycarbery"
+		texturefile = "gfx//interface//missions//ballycarbery.dds"
+	}
+	spriteType = {
+		name = "mission_ferns"
+		texturefile = "gfx//interface//missions//ferns.dds"
+	}
+	spriteType = {
+		name = "mission_tulach"
+		texturefile = "gfx//interface//missions//tulach.dds"
+	}
+	spriteType = {
+		name = "mission_james_vi"
+		texturefile = "gfx//interface//missions//james_vi.dds"
+	}
+	spriteType = {
+		name = "mission_boece"
+		texturefile = "gfx//interface//missions//boece.dds"
+	}
+	spriteType = {
+		name = "mission_holyrood"
+		texturefile = "gfx//interface//missions//holyrood.dds"
+	}
+	spriteType = {
+		name = "mission_covenanter"
+		texturefile = "gfx//interface//missions//covenanter.dds"
+	}
+	spriteType = {
+		name = "mission_perth"
+		texturefile = "gfx//interface//missions//perth.dds"
+	}
+	spriteType = {
+		name = "mission_edinburgh"
+		texturefile = "gfx//interface//missions//edinburgh.dds"
+	}
+	spriteType = {
+		name = "mission_james_i"
+		texturefile = "gfx//interface//missions//james_i.dds"
+	}
+	spriteType = {
+		name = "mission_stockholm"
+		texturefile = "gfx//interface//missions//stockholm.dds"
+	}
+	spriteType = {
+		name = "mission_frederiksborg"
+		texturefile = "gfx//interface//missions//frederiksborg.dds"
+	}
+	spriteType = {
+		name = "mission_erik"
+		texturefile = "gfx//interface//missions//erik.dds"
+	}
+	spriteType = {
+		name = "mission_christiani"
+		texturefile = "gfx//interface//missions//christiani.dds"
+	}
+	spriteType = {
+		name = "mission_corvinus"
+		texturefile = "gfx//interface//missions//corvinus.dds"
+	}
+	spriteType = {
+		name = "mission_ferdinandi"
+		texturefile = "gfx//interface//missions//ferdinandi.dds"
+	}
+	spriteType = {
+		name = "mission_maxi"
+		texturefile = "gfx//interface//missions//maxi.dds"
+	}
+	spriteType = {
+		name = "mission_hermann"
+		texturefile = "gfx//interface//missions//hermann.dds"
+	}
+	spriteType = {
+		name = "mission_ljubljana"
+		texturefile = "gfx//interface//missions//ljubljana.dds"
+	}
+	spriteType = {
+		name = "mission_graz"
+		texturefile = "gfx//interface//missions//graz.dds"
+	}
+	spriteType = {
+		name = "mission_youngfred"
+		texturefile = "gfx//interface//missions//youngfred.dds"
+	}
+	spriteType = {
+		name = "mission_aeiou"
+		texturefile = "gfx//interface//missions//aeiou.dds"
+	}
+	spriteType = {
+		name = "mission_linz"
+		texturefile = "gfx//interface//missions//linz.dds"
+	}
+	spriteType = {
+		name = "mission_ladislaus"
+		texturefile = "gfx//interface//missions//ladislaus.dds"
+	}
+	spriteType = {
+		name = "mission_sigi"
+		texturefile = "gfx//interface//missions//sigi.dds"
+	}
+	spriteType = {
+		name = "mission_hussite_wars2"
+		texturefile = "gfx//interface//missions//hussite_wars2.dds"
+	}
+	spriteType = {
+		name = "mission_friediii"
+		texturefile = "gfx//interface//missions//friediii.dds"
+	}
+	spriteType = {
+		name = "mission_rudolf"
+		texturefile = "gfx//interface//missions//rudolf.dds"
+	}
+	spriteType = {
+		name = "mission_albertv"
+		texturefile = "gfx//interface//missions//albertv.dds"
+	}
+	spriteType = {
+		name = "mission_pigtail"
+		texturefile = "gfx//interface//missions//pigtail.dds"
+	}
+	spriteType = {
+		name = "mission_catalan_company"
+		texturefile = "gfx//interface//missions//catalan_company.dds"
+	}
+	spriteType = {
+		name = "mission_arborea"
+		texturefile = "gfx//interface//missions//arborea.dds"
+	}	
+	spriteType = {
+		name = "mission_split"
+		texturefile = "gfx//interface//missions//split.dds"
+	}	
+	spriteType = {
+		name = "mission_cattaro"
+		texturefile = "gfx//interface//missions//cattaro.dds"
+	}	
+	spriteType = {
+		name = "mission_paulii"
+		texturefile = "gfx//interface//missions//paulii.dds"
+	}	
+	spriteType = {
+		name = "mission_kaffa"
+		texturefile = "gfx//interface//missions//kaffa.dds"
+	}	
+	spriteType = {
+		name = "mission_pisa"
+		texturefile = "gfx//interface//missions//pisa.dds"
+	}
+	spriteType = {
+		name = "mission_uffizi"
+		texturefile = "gfx//interface//missions//uffizi.dds"
+	}
+	spriteType = {
+		name = "mission_david"
+		texturefile = "gfx//interface//missions//david.dds"
+	}
+	spriteType = {
+		name = "mission_machiavelli"
+		texturefile = "gfx//interface//missions//machiavelli.dds"
+	}
+	spriteType = {
+		name = "mission_medici"
+		texturefile = "gfx//interface//missions//medici.dds"
+	}
+	spriteType = {
+		name = "mission_donatello"
+		texturefile = "gfx//interface//missions//donatello.dds"
+	}
+	spriteType = {
+		name = "mission_arti"
+		texturefile = "gfx//interface//missions//arti.dds"
+	}
+	spriteType = {
+		name = "mission_jeanneii"
+		texturefile = "gfx//interface//missions//jeanneii.dds"
+	}
+	spriteType = {
+		name = "mission_vespers"
+		texturefile = "gfx//interface//missions//vespers.dds"
+	}
+	spriteType = {
+		name = "mission_louis_ii"
+		texturefile = "gfx//interface//missions//louis_ii.dds"
+	}
+	spriteType = {
+		name = "mission_npi_ferd"
+		texturefile = "gfx//interface//missions//npi_ferd.dds"
+	}
+	spriteType = {
+		name = "mission_pontano"
+		texturefile = "gfx//interface//missions//pontano.dds"
+	}
+	spriteType = {
+		name = "mission_bari"
+		texturefile = "gfx//interface//missions//bari.dds"
+	}
+	spriteType = {
+		name = "mission_salerno"
+		texturefile = "gfx//interface//missions//salerno.dds"
+	}
+	spriteType = {
+		name = "mission_reggio"
+		texturefile = "gfx//interface//missions//reggio.dds"
+	}
+	spriteType = {
+		name = "mission_umbria"
+		texturefile = "gfx//interface//missions//umbria.dds"
+	}
+	spriteType = {
+		name = "mission_murata"
+		texturefile = "gfx//interface//missions//murata.dds"
+	}
+	spriteType = {
+		name = "mission_arbeda"
+		texturefile = "gfx//interface//missions//arbeda.dds"
+	}
+	spriteType = {
+		name = "mission_pio_appiani"
+		texturefile = "gfx//interface//missions//pio_appiani.dds"
+	}
+	spriteType = {
+		name = "mission_lucca"
+		texturefile = "gfx//interface//missions//lucca.dds"
+	}
+	spriteType = {
+		name = "mission_po_valley"
+		texturefile = "gfx//interface//missions//po_valley.dds"
+	}
+	spriteType = {
+		name = "mission_bologna"
+		texturefile = "gfx//interface//missions//bologna.dds"
+	}
+	spriteType = {
+		name = "mission_forli"
+		texturefile = "gfx//interface//missions//forli.dds"
+	}
+	spriteType = {
+		name = "mission_fran_sforza"
+		texturefile = "gfx//interface//missions//fran_sforza.dds"
+	}
+	spriteType = {
+		name = "mission_pavia"
+		texturefile = "gfx//interface//missions//pavia.dds"
+	}
+	spriteType = {
+		name = "mission_condot"
+		texturefile = "gfx//interface//missions//condot.dds"
+	}
+	spriteType = {
+		name = "mission_gian"
+		texturefile = "gfx//interface//missions//gian.dds"
+	}
+	spriteType = {
+		name = "mission_old_milan"
+		texturefile = "gfx//interface//missions//old_milan.dds"
+	}
+	spriteType = {
+		name = "mission_umbria"
+		texturefile = "gfx//interface//missions//umbria.dds"
+	}
+	spriteType = {
+		name = "mission_murata"
+		texturefile = "gfx//interface//missions//murata.dds"
+	}
+	spriteType = {
+		name = "mission_arbeda"
+		texturefile = "gfx//interface//missions//arbeda.dds"
+	}
+	spriteType = {
+		name = "mission_pio_appiani"
+		texturefile = "gfx//interface//missions//pio_appiani.dds"
+	}
+	spriteType = {
+		name = "mission_lucca"
+		texturefile = "gfx//interface//missions//lucca.dds"
+	}
+	spriteType = {
+		name = "mission_po_valley"
+		texturefile = "gfx//interface//missions//po_valley.dds"
+	}
+	spriteType = {
+		name = "mission_bologna"
+		texturefile = "gfx//interface//missions//bologna.dds"
+	}
+	spriteType = {
+		name = "mission_forli"
+		texturefile = "gfx//interface//missions//forli.dds"
+	}
+	spriteType = {
+		name = "mission_fran_sforza"
+		texturefile = "gfx//interface//missions//fran_sforza.dds"
+	}
+	spriteType = {
+		name = "mission_pavia"
+		texturefile = "gfx//interface//missions//pavia.dds"
+	}
+	spriteType = {
+		name = "mission_condot"
+		texturefile = "gfx//interface//missions//condot.dds"
+	}
+	spriteType = {
+		name = "mission_gian"
+		texturefile = "gfx//interface//missions//gian.dds"
+	}
+	spriteType = {
+		name = "mission_old_milan"
+		texturefile = "gfx//interface//missions//old_milan.dds"
+	}
+	spriteType = {
+		name = "mission_martinus"
+		texturefile = "gfx//interface//missions//martinus.dds"
+	}
+	spriteType = {
+		name = "mission_raphael"
+		texturefile = "gfx//interface//missions//raphael.dds"
+	}
+	spriteType = {
+		name = "mission_sistine"
+		texturefile = "gfx//interface//missions//sistine.dds"
+	}
+	spriteType = {
+		name = "mission_roma"
+		texturefile = "gfx//interface//missions//roma.dds"
+	}
+	spriteType = {
+		name = "mission_roma2"
+		texturefile = "gfx//interface//missions//roma2.dds"
+	}
+	spriteType = {
+		name = "mission_bethencourt"
+		texturefile = "gfx//interface//missions//bethencourt.dds"
+	}
+	spriteType = {
+		name = "mission_royal_gm"
+		texturefile = "gfx//interface//missions//royal_gm.dds"
+	}
+	spriteType = {
+		name = "mission_alcantara"
+		texturefile = "gfx//interface//missions//alcantara.dds"
+	}
+	spriteType = {
+		name = "mission_calatrava"
+		texturefile = "gfx//interface//missions//calatrava.dds"
+	}
+	spriteType = {
+		name = "mission_santiago"
+		texturefile = "gfx//interface//missions//santiago.dds"
+	}
+	spriteType = {
+		name = "mission_madrid"
+		texturefile = "gfx//interface//missions//madrid.dds"
+	}
+	spriteType = {
+		name = "mission_alhambra_decree"
+		texturefile = "gfx//interface//missions//alhambra_decree.dds"
+	}
+	spriteType = {
+		name = "mission_granada"
+		texturefile = "gfx//interface//missions//granada.dds"
+	}
+	spriteType = {
+		name = "mission_spa_habs"
+		texturefile = "gfx//interface//missions//spa_habs.dds"
+	}
+	spriteType = {
+		name = "mission_iberian_wedding"
+		texturefile = "gfx//interface//missions//iberian_wedding.dds"
+	}
+	spriteType = {
+		name = "mission_isabella"
+		texturefile = "gfx//interface//missions//isabella.dds"
+	}
+	spriteType = {
+		name = "mission_enrique_iv"
+		texturefile = "gfx//interface//missions//enrique_iv.dds"
+	}
+	spriteType = {
+		name = "mission_infantes_ara"
+		texturefile = "gfx//interface//missions//infantes_ara.dds"
+	}
+	spriteType = {
+		name = "mission_alvaro"
+		texturefile = "gfx//interface//missions//alvaro.dds"
+	}
+	spriteType = {
+		name = "mission_toledo"
+		texturefile = "gfx//interface//missions//toledo.dds"
+	}
+	spriteType = {
+		name = "mission_ciudadreal"
+		texturefile = "gfx//interface//missions//ciudadreal.dds"
+	}
+	spriteType = {
+		name = "mission_alcazar"
+		texturefile = "gfx//interface//missions//alcazar.dds"
+	}
+	spriteType = {
+		name = "mission_almargo"
+		texturefile = "gfx//interface//missions//almargo.dds"
+	}
+	spriteType = {
+		name = "mission_burgos"
+		texturefile = "gfx//interface//missions//burgos.dds"
+	}
+	spriteType = {
+		name = "mission_valladolid"
+		texturefile = "gfx//interface//missions//valladolid.dds"
+	}
+	spriteType = {
+		name = "mission_salamanco"
+		texturefile = "gfx//interface//missions//salamanco.dds"
+	}
+	spriteType = {
+		name = "mission_juan_ii"
+		texturefile = "gfx//interface//missions//juan_ii.dds"
+	}
+	spriteType = {
+		name = "mission_cortes"
+		texturefile = "gfx//interface//missions//cortes.dds"
+	}
+	spriteType = {
+		name = "mission_palais_dla_cite"
+		texturefile = "gfx//interface//missions//palais_dla_cite.dds"
+	}
+	spriteType = {
+		name = "mission_tolosa"
+		texturefile = "gfx//interface//missions//tolosa.dds"
+	}
+	spriteType = {
+		name = "mission_sorbonne"
+		texturefile = "gfx//interface//missions//sorbonne.dds"
+	}
+	spriteType = {
+		name = "mission_nemours"
+		texturefile = "gfx//interface//missions//nemours.dds"
+	}
+	spriteType = {
+		name = "mission_chenonceau"
+		texturefile = "gfx//interface//missions//chenonceau.dds"
+	}
+	spriteType = {
+		name = "mission_charlesvii"
+		texturefile = "gfx//interface//missions//charlesvii.dds"
+	}
+	spriteType = {
+		name = "mission_renaissance_fra"
+		texturefile = "gfx//interface//missions//renaissance_fra.dds"
+	}
+	spriteType = {
+		name = "mission_gendarmerie"
+		texturefile = "gfx//interface//missions//gendarmerie.dds"
+	}
+	spriteType = {
+		name = "mission_brest"
+		texturefile = "gfx//interface//missions//brest.dds"
+	}
+	spriteType = {
+		name = "mission_edict_nantes"
+		texturefile = "gfx//interface//missions//edict_nantes.dds"
+	}
+	spriteType = {
+		name = "mission_henry_iv"
+		texturefile = "gfx//interface//missions//henry_iv.dds"
+	}
+	spriteType = {
+		name = "mission_seine"
+		texturefile = "gfx//interface//missions//seine.dds"
+	}
+	spriteType = {
+		name = "mission_nantes"
+		texturefile = "gfx//interface//missions//nantes.dds"
+	}
+	spriteType = {
+		name = "mission_francoys"
+		texturefile = "gfx//interface//missions//francoys.dds"
+	}
+	spriteType = {
+		name = "mission_lyon"
+		texturefile = "gfx//interface//missions//lyon.dds"
+	}
+	spriteType = {
+		name = "mission_troyes"
+		texturefile = "gfx//interface//missions//troyes.dds"
+	}
+	spriteType = {
+		name = "mission_three_bis"
+		texturefile = "gfx//interface//missions//three_bis.dds"
+	}
+	spriteType = {
+		name = "mission_claude"
+		texturefile = "gfx//interface//missions//claude.dds"
+	}
+	spriteType = {
+		name = "mission_young_charles"
+		texturefile = "gfx//interface//missions//young_charles.dds"
+	}
+	spriteType = {
+		name = "mission_fra_cw"
+		texturefile = "gfx//interface//missions//fra_cw.dds"
+	}
+	spriteType = {
+		name = "mission_reims_coronation"
+		texturefile = "gfx//interface//missions//reims_coronation.dds"
+	}
+	spriteType = {
+		name = "mission_prince_hal"
+		texturefile = "gfx//interface//missions//prince_hal.dds"
+	}
+	spriteType = {
+		name = "mission_mag_siege"
+		texturefile = "gfx//interface//missions//mag_siege.dds"
+	}
+	spriteType = {
+		name = "mission_bayreuth"
+		texturefile = "gfx//interface//missions//bayreuth.dds"
+	}
+	spriteType = {
+		name = "mission_bra_moonlight"
+		texturefile = "gfx//interface//missions//bra_moonlight.dds"
+	}
+	spriteType = {
+		name = "mission_bra_winter"
+		texturefile = "gfx//interface//missions//bra_winter.dds"
+	}
+	spriteType = {
+		name = "mission_bra_kapelle"
+		texturefile = "gfx//interface//missions//bra_kapelle.dds"
+	}
+	spriteType = {
+		name = "mission_mewe"
+		texturefile = "gfx//interface//missions//mewe.dds"
+	}
+	spriteType = {
+		name = "mission_pru_fredii"
+		texturefile = "gfx//interface//missions//fredii.dds"
+	}
+	spriteType = {
+		name = "mission_pru_fief"
+		texturefile = "gfx//interface//missions//pru_fief.dds"
+	}
+	spriteType = {
+		name = "mission_mark"
+		texturefile = "gfx//interface//missions//mark.dds"
+	}
+	spriteType = {
+		name = "mission_alb_pru"
+		texturefile = "gfx//interface//missions//alb_pru.dds"
+	}
+	spriteType = {
+		name = "mission_kleves"
+		texturefile = "gfx//interface//missions//kleves.dds"
+	}
+	spriteType = {
+		name = "mission_ruppin"
+		texturefile = "gfx//interface//missions//ruppin.dds"
+	}
+	spriteType = {
+		name = "mission_bamberg"
+		texturefile = "gfx//interface//missions//bamberg.dds"
+	}
+	spriteType = {
+		name = "mission_ansbach"
+		texturefile = "gfx//interface//missions//ansbach.dds"
+	}
+	spriteType = {
+		name = "mission_fredbook"
+		texturefile = "gfx//interface//missions//fredbook.dds"
+	}
+	spriteType = {
+		name = "mission_berlin_schloss"
+		texturefile = "gfx//interface//missions//berlin_schloss.dds"
+	}
+	spriteType = {
+		name = "mission_berlin_town_hall"
+		texturefile = "gfx//interface//missions//berlin_town_hall.dds"
+	}
+	spriteType = {
+		name = "mission_burgraviate"
+		texturefile = "gfx//interface//missions//burgraviate.dds"
+	}
+	spriteType = {
+		name = "mission_sanssouci"
+		texturefile = "gfx//interface//missions//sanssouci.dds"
+	}
+	spriteType = {
+		name = "mission_freddy_great"
+		texturefile = "gfx//interface//missions//freddy_great.dds"
+	}
+	spriteType = {
+		name = "mission_king_in_prussia"
+		texturefile = "gfx//interface//missions//king_in_prussia.dds"
+	}
+	spriteType = {
+		name = "mission_auftragstaktik"
+		texturefile = "gfx//interface//missions//auftragstaktik.dds"
+	}
+	spriteType = {
+		name = "mission_potsdam_giants"
+		texturefile = "gfx//interface//missions//potsdam_giants.dds"
+	}
+	spriteType = {
+		name = "mission_cottbus"
+		texturefile = "gfx//interface//missions//cottbus.dds"
+	}
+	spriteType = {
+		name = "mission_potsdam_cool"
+		texturefile = "gfx//interface//missions//potsdam_cool.dds"
+	}
+	spriteType = {
+		name = "mission_swan"
+		texturefile = "gfx//interface//missions//swan.dds"
+	}
+	spriteType = {
+		name = "mission_achilles"
+		texturefile = "gfx//interface//missions//achilles.dds"
+	}
+	spriteType = {
+		name = "mission_freddy_one"
+		texturefile = "gfx//interface//missions//freddy_one.dds"
+	}
+	spriteType = {
+		name = "mission_jogaila"
+		texturefile = "gfx//interface//missions//jogaila.dds"
+	}
+	spriteType = {
+		name = "mission_hrvoje"
+		texturefile = "gfx//interface//missions//hrvoje.dds"
+	}
+	spriteType = {
+		name = "mission_eng_london_icon"
+		texturefile = "gfx//interface//missions//eng_london_icon.dds"
+	}
+	spriteType = {
+		name = "mission_guyenne"
+		texturefile = "gfx//interface//missions//guyenne.dds"
+	}
+	spriteType = {
+		name = "mission_siege_orleans"
+		texturefile = "gfx//interface//missions//siege_orleans.dds"
+	}
+	spriteType = {
+		name = "mission_charles_vii"
+		texturefile = "gfx//interface//missions//charles_vii.dds"
+	}
+	spriteType = {
+		name = "mission_fra_paix"
+		texturefile = "gfx//interface//missions//fra_paix.dds"
+	}
+	spriteType = {
+		name = "mission_bri_duc"
+		texturefile = "gfx//interface//missions//bri_duc.dds"
+	}
+	spriteType = {
+		name = "mission_agincourt"
+		texturefile = "gfx//interface//missions//agincourt.dds"
+	}
+	spriteType = {
+		name = "mission_giovanna"
+		texturefile = "gfx//interface//missions//giovanna.dds"
+	}
+	spriteType = {
+		name = "mission_ferran"
+		texturefile = "gfx//interface//missions//ferran.dds"
+	}
+	spriteType = {
+		name = "mission_alfons"
+		texturefile = "gfx//interface//missions//alfons.dds"
+	}
+	spriteType = {
+		name = "mission_brussels"
+		texturefile = "gfx//interface//missions//brussels.dds"
+	}
+	spriteType = {
+		name = "mission_mechelen"
+		texturefile = "gfx//interface//missions//mechelen.dds"
+	}
+	spriteType = {
+		name = "mission_sundgau_sale"
+		texturefile = "gfx//interface//missions//sundgau_sale.dds"
+	}
+	spriteType = {
+		name = "mission_ai_fleece"
+		texturefile = "gfx//interface//missions//ai_fleece.dds"
+	}
+	spriteType = {
+		name = "mission_egmond"
+		texturefile = "gfx//interface//missions//egmond.dds"
+	}
+	spriteType = {
+		name = "mission_bruges"
+		texturefile = "gfx//interface//missions//bruges.dds"
+	}
+	spriteType = {
+		name = "mission_bur_brb"
+		texturefile = "gfx//interface//missions//bur_brb.dds"
+	}
+	spriteType = {
+		name = "mission_flanders"
+		texturefile = "gfx//interface//missions//flanders.dds"
+	}
+	spriteType = {
+		name = "mission_jacobaa"
+		texturefile = "gfx//interface//missions//jacobaa.dds"
+	}
+	spriteType = {
+		name = "mission_nijmegen"
+		texturefile = "gfx//interface//missions//nijmegen.dds"
+	}
+	spriteType = {
+		name = "mission_zutphen"
+		texturefile = "gfx//interface//missions//zutphen.dds"
+	}
+	spriteType = {
+		name = "mission_armorial"
+		texturefile = "gfx//interface//missions//armorial.dds"
+	}
+	spriteType = {
+		name = "mission_gel_quarts_mission"
+		texturefile = "gfx//interface//missions//gel_quarts_mission.dds"
+	}
+	spriteType = {
+		name = "mission_maarten"
+		texturefile = "gfx//interface//missions//maarten.dds"
+	}
+	spriteType = {
+		name = "mission_boh_cup_hold"
+		texturefile = "gfx//interface//missions//boh_cup_hold.dds"
+	}
+	spriteType = {
+		name = "mission_wenzel"
+		texturefile = "gfx//interface//missions//wenzel.dds"
+	}
+	spriteType = {
+		name = "mission_war_wagon"
+		texturefile = "gfx//interface//missions//war_wagon.dds"
+	}
+	spriteType = {
+		name = "mission_huss_wars"
+		texturefile = "gfx//interface//missions//huss_wars.dds"
+	}
+	spriteType = {
+		name = "mission_hussite"
+		texturefile = "gfx//interface//missions//hussite.dds"
+	}
+	spriteType = {
+		name = "mission_kongo_kingdom"
+		texturefile = "gfx//interface//missions//kongo_kingdom.dds"
+	}
+	spriteType = {
+		name = "mission_sao_tome"
+		texturefile = "gfx//interface//missions//sao_tome.dds"
+	}
+	spriteType = {
+		name = "mission_madeira"
+		texturefile = "gfx//interface//missions//madeira.dds"
+	}
+	spriteType = {
+		name = "mission_ribeira"
+		texturefile = "gfx//interface//missions//ribeira.dds"
+	}
+	spriteType = {
+		name = "mission_azores"
+		texturefile = "gfx//interface//missions//azores.dds"
+	}
+	spriteType = {
+		name = "mission_prenaissance"
+		texturefile = "gfx//interface//missions//prenaissance.dds"
+	}
+	spriteType = {
+		name = "mission_lisboa"
+		texturefile = "gfx//interface//missions//lisboa.dds"
+	}
+	spriteType = {
+		name = "mission_henrique"
+		texturefile = "gfx//interface//missions//henrique.dds"
+	}
+	spriteType = {
+		name = "mission_willem"
+		texturefile = "gfx//interface//missions//willem.dds"
+	}
+	spriteType = {
+		name = "mission_grotius"
+		texturefile = "gfx//interface//missions//grotius.dds"
+	}
+	spriteType = {
+		name = "mission_dutch_art"
+		texturefile = "gfx//interface//missions//dutch_art.dds"
+	}
+	spriteType = {
+		name = "mission_electoral_palatine"
+		texturefile = "gfx//interface//missions//palatine_electoral.dds"
+	}
+	spriteType = {
+		name = "mission_palatine_renaissance"
+		texturefile = "gfx//interface//missions//palatine_renaissance.dds"
+	}
+	spriteType = {
+		name = "mission_winter_crown"
+		texturefile = "gfx//interface//missions//winter_crown.dds"
+	}
+	spriteType = {
+		name = "mission_ruperts_legacy"
+		texturefile = "gfx//interface//missions//pal_mission.dds"
+	}
+	spriteType = {
+		name = "mission_jan_van_eyck"
+		texturefile = "gfx//interface//missions//jan_van_eyck.dds"
+	}
+	spriteType = {
+		name = "mission_conquer_gelre"
+		texturefile = "gfx//interface//missions//gelre.dds"
+	}
+	spriteType = {
+		name = "mission_jacobaa_van_beieren"
+		texturefile = "gfx//interface//missions//jacobaa_van_beieren.dds"
+	}
+	spriteType = {
+		name = "mission_frisian_grutte_pier"
+		texturefile = "gfx//interface//missions//frisian_grutte_pier.dds"
+	}
+}

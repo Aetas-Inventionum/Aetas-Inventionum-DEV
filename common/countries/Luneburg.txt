@@ -1,0 +1,99 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+color = { 161  137  64 } #135 109 147
+revolutionary_colors = { 2 0 2 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	religious_ideas
+	economic_ideas
+	diplomatic_ideas
+	innovativeness_ideas
+	spy_ideas
+	offensive_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	dutch_maurician
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	prussian_frederickian
+	prussian_uhlan
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	#Middle House of Welf
+	"Johann #0" = 0
+	"Otto #0" = 35
+	"Wilhelm #1" = 5
+	"Heinrich #1" = 10
+	"Friedrich #0" = 15
+	"Bernhard #1" = 25
+	"Franz #0" = 25
+	"Franz Otto #0" = 5
+	"Ernst #0" = 10
+	"Christian #0" = 5
+	"August #0" = 15
+	"Christian Ludwig #0" = 5
+	"Johann Friedrich #0" = 5
+	"Georg Wilhelm #0" = 5
+	"Georg #0" = 5
+	"Albrecht #0" = 0
+	"Ludwig #0" = 0
+	"Ulrich #0" = 0
+	"Anton #0" = 0
+	
+	"Ingrid #0" = -1
+	"Katinka #0" = -1
+	"Martina #0" = -1
+	"Elisabeth #0" = -1
+	"Marie #0" = -1
+	"Augusta #0" = -1
+	"Rixa #0" = -1
+	"Margarete #0" = -1
+	"Amalia #0" = -1
+	"Cornelia #0" = -1
+	"Gerhild #0" = -1
+	"Sophia #0" = -1
+}
+
+leader_names = {
+	#list of knightly nobility from Lüneburg from 1860 whose lineage traces back to at the latest the 16th century unless extremely notable. This register's families are spread throughout Welf domains
+	"von Behr" "von Bernstorff" "von Beulwitz" Bothmer Bremer Bussche "von Bülow" "Bock von Wülfingen"
+	"von Campe" "von Cramm"
+	"von Dannenberg"
+	Estorff
+	"von Gadenstedt" "von Grote"
+	"von Hammerstein" "von Harling" "von Hodenberg" "von Hohnhorst" "von Hohnstedt"
+	"von Kerssenbrock" "von Kettenburg" Kielmannsegg "von dem Knesebeck" "von Kniphausen"
+	"von Laffert" "von Lenthe"
+	"von Mahrenholtz" "von Mandelsloh" Meding "von Meltzing" Möller
+	"von Oberg" "von Olds"
+	"von Platen" "von Plato"
+	"von Schack" "von Schlepegrell" "von Schoolenburg" "von Schwicheldt" "von Spörcken" "von Stralenheim"
+	Talk
+	"von Wallmoden" Wasmer "von Welf" "von der Wense" "von Wow"
+}
+
+ship_names = {
+	"Markgraf Billung" "Bischof Amelung"
+	"St. Michaelis" "Luniburcs" "Herzog Otto"
+	Kalkberg Illmenau "Herzog Wilhelm"
+	"Magnus Torquatus" "Herzog Ernst"
+}
+
+army_names = {
+	"Armee von $PROVINCE$" 
+}

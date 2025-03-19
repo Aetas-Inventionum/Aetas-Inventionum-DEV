@@ -1,0 +1,21 @@
+government = monarchy
+add_government_reform = tanistry_reform
+government_rank = 1
+technology_group = western
+primary_culture = irish
+religion = catholic
+capital = 376	# Mayo
+fixed_capital = 376
+
+#Formerly a Mayo Burke tag,  but Draiocht changed it to a Ó Flaithbheartaigh tag based on HR idea.
+#Reverted back to a Mayo Burke tag with the addition of WCO (West Connacht) 
+
+1402.1.1 = {
+	monarch = {
+		name = "Ualtar I"
+		dynasty = "de Burgh"
+		adm = 1
+		dip = 3
+		mil = 5
+	}
+}

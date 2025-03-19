@@ -1,0 +1,168 @@
+namespace = aetas_cor
+normal_or_historical_nations = yes
+
+#Crisis in Corsica
+country_event = {
+	id = aetas_cor.1
+	title = aetas_cor.1.t
+	desc = aetas_cor.1.d
+	picture = BORDER_TENSION_eventPicture
+
+	is_triggered_only = yes 
+	trigger = { 
+		OR = { 
+			tag = COR 
+			tag = GEN
+		}
+	}
+
+	immediate = { hidden_effect = { set_global_flag = cor_gen_crisis_flag } }
+
+	option = { #Vincentello will be vanquished...
+		name = aetas_cor.1.a
+		trigger = { tag = GEN }
+		custom_tooltip = cor_crisis.1.tt
+	}
+	option = { #The Terra di Comune will be retaken!
+		name = aetas_cor.1.b 
+		ai_chance = { factor = 1 }
+		trigger = { tag = COR }
+		custom_tooltip = cor_crisis.1.tt
+	}
+	option = { 
+		name = aetas_cor.1.c #Call upon Aragon if they will accept us as their fief in return
+		ai_chance = { factor = 5 }
+		trigger = { tag = COR }
+		custom_tooltip = cor_crisis.2.tt
+		ARA = { 
+			country_event = { 
+				id = aetas_cor.2
+				days = 14
+			}
+		}
+	}
+}
+#Corsica's Call (to Aragon)
+country_event = {
+	id = aetas_cor.2
+	title = aetas_cor.2.t
+	desc = aetas_cor.2.d
+	picture = ITALIAN_wars_eventPicture
+
+	is_triggered_only = yes 
+	fire_only_once = yes 
+	major = yes 
+	major_trigger  ={ 
+		OR = { 
+			tag = COR 
+			tag = GEN 
+		}
+	}
+
+	option = { 
+		name = aetas_cor.2.a #we accept
+		ai_chance = { 
+			factor = 1
+			modifier = { 
+				factor = 5
+				is_at_war = no 
+			}
+			modifier = { 
+				factor = 2
+				any_province = { 
+					AND = {
+						area = corsica_sardinia_area
+						country_or_non_sovereign_subject_holds = ROOT 
+					}
+				}
+			}
+		}
+		hidden_effect = { set_global_flag = ara_help_cor_flag }
+		join_all_defensive_wars_of = COR 
+		create_subject = { 
+			who = COR 
+			subject_type = fief 
+		}
+		custom_tooltip = cor_crisis.1.tt
+		hidden_effect = { 
+			COR = { change_country_color = { color = { 200 133 45 } } }
+		}
+	}
+	option = { 
+		name = aetas_cor.2.b #no thanks
+		ai_chance = { 
+			factor = 1 
+			modifier = { 
+				factor = 5
+				is_at_war = yes 
+			}
+		}
+		add_truce_with = GEN
+	}
+}
+#Victory for Vincentello
+country_event = {
+	id = aetas_cor.3
+	title = aetas_cor.3.t
+	desc = aetas_cor.3.d
+	picture = ITALIAN_wars_eventPicture
+
+	is_triggered_only = yes 
+	fire_only_once = yes 
+	major = yes 
+	major_trigger  ={ 
+		OR = { 
+			tag = GEN 
+			if = { 
+				limit = { has_global_flag = ara_help_cor_flag }
+				tag = COR 
+			}
+		}
+	}
+
+	option = { 
+		name = aetas_cor.3.a #hooray!
+		every_province = { 
+			limit = { 
+				area = corsica_area 
+				owner = { tag = GEN }
+			}
+			cede_province = COR 
+		}
+		if = { 
+			limit = { is_subject = yes }
+			overlord = { white_peace = GEN }
+		}
+		else = { white_peace = GEN }
+	}
+}
+#Genoa crushes Corsica
+country_event = {
+	id = aetas_cor.4
+	title = aetas_cor.4.t
+	desc = aetas_cor.4.d
+	picture = COUNTRY_COLLAPSE_eventPicture
+
+	is_triggered_only = yes 
+	fire_only_once = yes 
+	major = yes 
+	major_trigger  ={ 
+		OR = { 
+			tag = COR 
+			if = { 
+				limit = { has_global_flag = ara_help_cor_flag }
+				tag = ARA 
+			}
+		}
+	}
+
+	option = { 
+		name = aetas_cor.4.a #hooray!
+		if = { 
+			limit = { has_global_flag = ara_help_cor_flag }
+			white_peace = ARA 
+		}
+		else = { white_peace = COR }
+		inherit = COR 
+	}
+}

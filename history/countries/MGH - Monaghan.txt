@@ -1,0 +1,20 @@
+capital = 5164 #Monaghan, Monaghan
+
+technology_group = western
+
+government = monarchy
+add_government_reform = tanistry_reform
+government_rank = 1
+religion = catholic
+primary_culture = irish
+
+1403.1.1 = {
+	monarch = {
+		name = "Ardghail"
+		dynasty = "Mac Mathghamhna"
+		birth_date = 1423.1.1
+		adm = 4
+		dip = 1
+		mil = 2
+	}
+}

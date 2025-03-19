@@ -1,0 +1,18 @@
+government = monarchy
+government_rank = 1
+add_government_reform = appanage_reform
+primary_culture = austrian
+add_accepted_culture = croatian
+religion = catholic
+technology_group = western
+capital = 4752
+
+1395.8.29 = {
+	monarch = {
+		name = "Ulrich IV"
+		dynasty = "von Walsee"
+		adm = 1
+		dip = 1
+		mil = 3
+	}
+}

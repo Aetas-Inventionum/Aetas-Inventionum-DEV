@@ -1,0 +1,38 @@
+#4718 - Aschaffenburg
+#Area - Main Valley
+#Region - South Germany
+
+#Core Details
+capital = "Aschaffenburg"
+is_city = yes
+owner = MAI
+controller = MAI
+
+#Demographics
+culture = palatinehessian
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 2
+base_manpower = 2
+trade_goods = naval_supplies
+
+#Cores and Occupation (Alphabetical after current)
+add_core = MAI
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

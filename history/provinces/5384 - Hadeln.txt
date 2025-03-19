@@ -1,0 +1,38 @@
+#5384 - Hadeln
+#Area - Weser Estuary
+#Region - North Germany
+
+#Core Details
+capital = "Otterndorf"
+is_city = yes
+owner = LAU
+controller = LAU 
+
+#Demographics
+culture = lower_saxon
+religion = catholic
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = grain
+
+#Cores and Occupation (Alphabetical after current)
+add_core = LAU
+add_core = HAM
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

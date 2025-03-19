@@ -1,0 +1,159 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+color = { 149 141 44 } #green 45 158 58, blue 77 165 205
+
+preferred_religion = reformed
+
+historical_idea_groups = {
+	administrative_ideas
+	defensive_ideas
+	exploration_ideas
+	offensive_ideas
+	economic_ideas
+	maritime_ideas
+	trade_ideas
+	innovativeness_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	gaelic_galloglaigh
+	gaelic_mercenary
+	gaelic_free_shooter
+	irish_charge
+	scottish_highlander
+	british_redcoat
+	british_hussar
+	british_square
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Somairle #1" = 5
+	"Raghnall #1" = 10
+	"DÚmhnall #2" = 20
+	"Aonghus MÛr #1" = 5
+	"EÚin #1" = 10
+	"Aonghas “g #0" = 10
+	"Alasdair #3" = 10	# Alexander
+	"Artair #0" = 10		# Arthur
+	"Bhaltair #0" = 10	# Walter
+	"Tearlach #0" = 5	# Charles
+	"Calum #0" = 10		# Malcolm
+	"Daidh #0" = 1		# David
+	"Donnchadh #0" = 1	# Duncan
+	"Coinneach #0" = 5	# Kenneth
+	"Connal #0" = 10	# Conall
+	"Dughlas #0" = 10	# Douglas
+
+	"Mairi #0" = -5		# Mary
+	"Beitiris #0" = -1
+	"Diorbhail #0" = -1		# 
+
+	"Absolon #0" = 0
+	"Ailpein #0" = 0
+	"Cormac #0" = 0
+	"Cresdean #0" = 0
+	"Eideard #0" = 0
+	"Faolan #0" = 0
+	"Feaghas #0" = 0
+	"Frangan #0" = 0
+	"Greum #0" = 0
+	"Hamish #0" = 0
+	"Ianatan #0" = 0
+	"Iosag #0" = 0
+	"Iosaph #0" = 0
+	"Iona #0" = 0
+	"Labhrainn #0" = 0
+	"Lucais #0" = 0
+	"Luthais #0" = 0
+	"Marcus #0" = 0
+	"Martain #0" = 0
+	"Mascual #0" = 0
+	"Mata #0" = 0
+	"Mecheil #0" = 0
+	"Morgan #0" = 0
+	"Mungan #0" = 0
+	"Murchadh #0" = 0
+	"Neacal #0" = 0
+	"Niall #0" = 0
+	"Oilbhreis #0" = 0
+	"Oisean #0" = 0
+	"Padruig #0" = 0
+	"Parlan #0" = 0
+	"Peadar #0" = 0
+	"Pol #0" = 0
+	"Ruiseart #0" = 0
+	"Samuel #0" = 0
+	"Seoras #0" = 0
+	"Solamn #0" = 0
+	"Tadhg #0" = 0
+	"Thomais #0" = 0
+	"Torcall #0" = 0
+	"Tormod #0" = 0
+	"Uilleam #0" = 0
+}
+
+leader_names = {
+	#Highlands Clans
+	Caimbeulaich #Campbells
+	Choinnich #Mackenzies
+	"Mac DÚmhnaill" #donald
+	Camshronaich #cameron
+	Greumaich #Graham
+	Moireach #Murray
+	Ogilvy
+	"Mac IllEathain" #Maclean
+	Donnchaidh #Robertson
+	Ph‡rlain #MacFarlane
+	MËinnear #Menzies
+	"Mac an TÚisich" #MacIntosh
+	"Mac Dh‡ghaill" #Mac Dougal
+	Fhearchair #Farquharson
+	"Mac Ghille Sheathanaich" #Shaw
+	GÚrdan #Gordan
+	Grannd #Grant
+	Chatain #Chattan
+	"Mac a' Phearsain" #macferson
+	Friseal #Fraser
+	Airchart #Urquhart
+	Siosal #Chisholm
+	Ce‡rda #Sinclair
+	"Mac Aoidh" #Mackay
+	Sutharlan #Sutherland
+	Guinnich #Gunn
+	Rothaich #Munro
+	Mhathain #Matheson
+}
+
+ship_names = {
+	Alba Asainte "Abscissa Virescit" "Amo Probos" "Aonaibh Ri Ch√©ile" Avance "Accendit Cantu" Audaciter
+	"Andreas de Atholia" Abraruadh
+	"Baile Inneraora" Baideanach Berowald "Buaidh No Bas"
+	Caledonia Cruachan "Consilio Non Petu" Confido "Clar Innes" Clut "Caisteal Dhuni" "Cair Chaladain"
+	"Calum Cille"
+	"Dun Bheagain" "Donnchadh na-Adh" "Dominus Fecit" "De Bonnaire" "Diriget Deus" Deoradh "Donnchadh Reamhar"
+	Dalriada "Domhnall mac Raghnaill" "Deus Juvat"
+	"Earra-Ghaidheal"
+	"Fide Et Opera" Fuimus "Feros Ferio" Freskin "Fergus Mor" "Fraoch Eilean" Findanus
+	"Gleann Eagas" "Ghift Dhe Agus An Righ"
+	"Hoc Securior" "Hugh de Paduinan"
+	"Innse Gall" "Invictus Maneo" Iagan
+	"Johannes Del Crag"
+	"Loyal Au Mort" "Loch Abar" "Loch Laomainn" Lochiel Lannraig "Loch Moigh"
+	Muriel "Marte Suo Tutus" Merito Macbeatha
+	"Ne Obliviscaris" Niseag Nectan
+	"Petit Alta" Preseverando "Paratus Sum" "Petrus de Haga"
+	"Qui Conducit"
+	"Raibeart Bruis" Reviresco
+	Scitis "Salus Per Christum" Sruighlea "Serva Jugum" Somairle
+	"Toom Tabard" "Tout Jour Prest" "Tulach Ard" Tavis
+	"Uilleam Uallas"
+	"Vincit Veritas" "Virtutis Gloria Merces" "Vive Ut Vivas"
+}

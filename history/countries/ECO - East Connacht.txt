@@ -1,0 +1,21 @@
+capital = 5169 #Roscommon, Castlerea
+
+technology_group = western
+
+government = monarchy
+add_government_reform = tanistry_reform
+government_rank = 1
+religion = catholic
+primary_culture = irish
+
+1404.1.1 = {
+	monarch = {
+		name = "Cathal X" #yep i counted all of them
+		dynasty = "Ó Conchobhair"
+		birth_date = 1395.1.1 #approx?
+		death_date = 1421.1.1
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}

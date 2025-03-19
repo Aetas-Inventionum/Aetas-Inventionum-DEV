@@ -1,0 +1,37 @@
+#5919 - Ezerichtche
+#Area - Daugava Valley
+#Region - Ruthenia 
+
+#Core Details
+capital = "Ezerichtche"
+is_city = yes
+owner = LIT
+controller = LIT
+
+#Demographics
+culture = byelorussian
+religion = orthodox
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = wool
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = LIT
+add_core = PLT
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = nomad_group
+
+#Histories

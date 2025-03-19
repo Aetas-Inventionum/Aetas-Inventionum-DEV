@@ -1,0 +1,40 @@
+#113 - Ferrara
+#Area - Romagna
+#Region - Italy
+
+#Core Details
+capital = "Ferrara"
+is_city = yes
+owner = FER
+controller = FER
+
+#Demographics
+culture = romagnan
+religion = catholic
+
+#Development and Trade
+base_tax = 4
+base_production = 5
+base_manpower = 5
+trade_goods = cloth
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = FER
+
+#Other Political
+hre = yes #more-or-less. made part of HRE in AI as compromise
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+center_of_trade = 1
+add_province_triggered_modifier = castello_estense
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

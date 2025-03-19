@@ -1,0 +1,38 @@
+#5767 - Breshk
+#Area - Dahra-Mitidja
+#Region - Maghreb
+
+#Core Details
+capital = "Breshk"
+is_city = yes
+owner = TLC
+controller = TLC
+
+#Demographics
+culture = shenwa
+religion = sunni
+
+#Development and Trade
+base_tax = 2
+base_production = 3
+base_manpower = 2
+trade_goods = apiculture
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = TLC
+
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = eastern
+
+#Histories

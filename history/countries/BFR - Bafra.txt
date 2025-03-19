@@ -1,0 +1,18 @@
+government = monarchy
+add_government_reform = beylik_government
+government_rank = 1
+primary_culture = chepni
+religion = sunni
+technology_group = ottoman
+capital = 5648 #bafra
+religious_school = hanafi_school
+
+1405.1.1 = {
+	monarch = {
+		name = "Selim I" #made up but dynasty is bafra
+		dynasty = "Bafra"
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}

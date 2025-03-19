@@ -1,0 +1,29 @@
+government = monarchy
+government_rank = 1 #tsardom in name only
+add_government_reform = bulgarian_appanage_reform
+technology_group = eastern
+primary_culture = bulgarian
+religion = orthodox
+capital = 2746
+historical_friend = HUN
+
+1397.1.1 = {
+	monarch = {
+		name = "Konstantin II"
+		dynasty = "Sratsimir"
+		birth_date = 1373.1.1
+		adm = 1
+		dip = 3
+		mil = 4
+	}
+	heir = { 
+		name = "Fruzhin"
+		monarch_name = "Fruzhin II"
+		dynasty = "Sratsimir"
+		birth_date = 1385.1.1
+		death_date = 1460.1.1
+		adm = 2
+		dip = 4
+		mil = 5
+	}
+}

@@ -1,0 +1,35 @@
+#6045 - Aredalen
+#Area - Jamtland
+#Region - Scandinavia 
+
+#Core Details
+capital = "Aredalen"
+is_city = yes
+owner = JMT
+controller = JMT 
+
+#Demographics
+culture = jamtlandic
+religion = catholic
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = naval_supplies
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = JMT 
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+
+#Histories

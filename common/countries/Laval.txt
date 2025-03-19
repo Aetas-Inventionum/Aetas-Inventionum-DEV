@@ -1,0 +1,121 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+color = { 192 145 215 }	
+
+revolutionary_colors = { 1  0  1 } #Black/White/Black - common colors of Brittany. 
+
+preferred_religion = catholic
+
+historical_score = 25
+
+historical_idea_groups = {
+	naval_ideas
+	trade_ideas
+	religious_ideas
+	exploration_ideas
+	diplomatic_ideas
+	economic_ideas
+	innovativeness_ideas
+	offensive_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	chevauchee
+	western_men_at_arms
+	swiss_landsknechten
+	dutch_maurician
+	french_caracolle
+	anglofrench_line
+	french_dragoon
+	french_bluecoat
+	french_cuirassier
+	french_impulse
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Guy #13" = 90
+	"Hamon #1" = 5
+	"François #0" = 10
+	"Louis #0" = 15
+	"Jean #0" = 5
+	"Henri #0" = 5
+	"Robert #0" = 0
+	"Pierre #0" = 5
+	"Jacques #0" = 5
+	"Hugues #0" = 1
+	"Gabriel #0" = 1
+	"Gilles #0" = 10
+	"Claude #0" = 1
+	"Mathieu #1" = 5
+	"Thibault #1" = 5
+ 
+	"Jeanne #0" = -5
+	"Anne #1"= -20
+	"Emma #1" = -10
+	"Béatrix #0" = -5
+	"Catherine #0" = -5
+	"Claudine #0" = -1
+	"Charlotte #0" = -5
+	"Louise #0" = -5
+	"Renée #0" = -10
+	"Gabrielle #0" = -1
+}	
+
+leader_names = {
+	"de Beaumont" "de Brée"
+	"de Clérembault" "de Clisson" "de Coligny"
+	"de Dinan"
+	"de Gâvre"
+	"de Laval" "de Lohéac"
+	"de Monfort" "de Montmorency"
+	"de Rieux" "de Rohan"
+	Sauvage
+	"de La Trémoïlle"
+}
+
+ship_names = {
+	#Religious names
+	"l'Ave-Maria" "le Bienheureux" "le Catholique" "la Cordelière" "la Dieu-Donnée" 
+	"la Dieu-la-Garde" "la Notre-Dame" "le Paradis" "le Sainte-Anne" "le Saint-Armel"
+	"le Saint-Aubin" "le Saint-Brieuc" "le Saint-Corentin" "la Sainte-Croix"
+	"le Saint-Esprit" "le Saint-Guénolé" "le Saint-Gildas" "le Saint-Guillaume"
+	"le Saint-Jacques" "le Saint-Jean" "le Saint-Malo" "la Sainte-Marie"
+	"le Saint-Michel" "la Sainte-Nonne" "le Saint-Nicolas" "le Saint-Patern"
+	"le Saint-Pierre" "le Saint-Pol" "le Saint-Ronan" "le Saint-Samson"
+	"le Saint-Sauveur" "le Saint-Thuriau" "le Saint-Tugdual" "le Saint-Vincent"
+	"le Saint-Yves"
+	#Lay names
+	"l'Armorique" "le Barbetorte" "le Bonaventure" "le Broërec" "le Connétable" 
+	"le Cornouaille" "la Croix-Noire" "la Duchesse" "le Duc de Bretagne" "l'Erispoë" 
+	"l'Ésperance" "la Flamme" "la Frégate de Saint-Malo" "le Gagne-Pain" "l'Hermine"
+	"l'Iroise" "le Jean V" "la Jeannette" "le Justicier" "le Léon" "le Loup-de-Mer"
+	"le Marchand" "la Mariotte" "le Mériadec" "le Morvan" "le Navire-du-Duc"
+	"la Nef-Blanche" "la Nef-d'Écosse" "le NominoÎ" "la Passe-Rose" "la Pélerine"
+	"le Penthièvre" "le Poher" "le Porte-Joie" "le Richemont" "le Roi Arthur"
+	"le Rohan" "le Salomon" "le Sept-Saints" "le Trégor" "la Vilaine" "la Vinetière"
+	"l'Ys" 
+	#Vanilla
+	"l'Aimable" "l'Alliance" "l'Audacieux" "l'Avenant" "la Barbue" "le Belliqueux"
+	"le Bien-Aimé" "le Bienfaisant" "le Bon" "la Bretonne" "la Bretagne" "le Brillant"
+	"le Célèbre" "le Comte" "le Courage" "le Défenseur" "le Diadème" "le Diligent" "le Duc"
+	"le Fleuron" "le Formidable" "le Fortuné" "le Fougueux" "le Furieux" "le Glorieux"
+	"la Grande Hermine" "l'Impétueux" "l'Idomptable" "la Loire" "la Petite Hermine"
+	"le Sévère" "le Solide" "le Solitaire" "le Souverain" "le Superbe" "le Téméraire"
+	"le Terrible" "l'Union" "le Vaillant" "le Vengeur"  "la Victoire" "le Vigilant"
+	"la Volante"
+}	#Some new religious and lay names for ships in order to better fit to Brittany.
+
+army_names = {
+	"Armée de $PROVINCE$"
+}
+
+fleet_names = {
+	"Flotte de $PROVINCE$"
+}	

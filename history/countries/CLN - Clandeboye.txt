@@ -1,0 +1,48 @@
+government = monarchy
+add_government_reform = tanistry_reform
+government_rank = 1
+technology_group = western
+primary_culture = irish
+religion = catholic
+capital = 4121	# Ulster
+fixed_capital = 4121
+historical_friend = TYR
+historical_friend = TRY
+historical_rival = ENG			#Trying to prevent England from suiciding by alliance with Irish OPMs
+
+# Kings of Clandeboye O Neills, information largely made up as historical information wasnt easy to find
+#idk who said that ^but there almost certainly historical, concrete kings listed in several places...
+
+1395.1.1 = { #clandeboye king
+	monarch = {
+		name = "Brian Ballach"
+		dynasty = "Ó Néill"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1443.1.1 = {
+	heir = {
+		name = "Áed"
+		monarch_name = "Áed"
+		dynasty = "Ó Néill"
+		birth_date = 1443.1.1
+		death_date = 1487.1.1
+		claim = 95
+		adm = 1
+		dip = 2
+		mil = 3
+	}
+}
+		
+1487.1.1 = {
+	monarch = {
+		name = "Regency"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}

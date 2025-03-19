@@ -1,0 +1,2 @@
+#transferred to illyrian
+126 = { "Malta" "L-Imdina" }

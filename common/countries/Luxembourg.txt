@@ -1,0 +1,96 @@
+#Country Name: Seeee the Name of this File.
+
+graphical_culture = westerngfx
+
+color = { 53  140  73 }
+revolutionary_colors = { 16 0 14 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	diplomatic_ideas
+	economic_ideas
+	innovativeness_ideas
+	offensive_ideas
+	administrative_ideas
+	spy_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	dutch_maurician
+	french_caracolle
+	anglofrench_line
+	french_dragoon
+	french_bluecoat
+	french_cuirassier
+	french_impulse
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	#monarchs of luxemburg
+	"Siegfried #1" = 5
+	"Heinrich #7" = 35
+	"Giselbert #1" = 5
+	"Konrad #1" = 5
+	"Wëllem #1" = 25
+	"Othon #1" = 5
+	"Theobald #1" = 5
+	"Walram #3" = 10
+	"Jang #1" = 25
+	"Karel #1" = 7
+	"Wenzel #2" = 25
+	"Sigismund #1" = 25
+	#misc
+	"Adolphe #0" = 10
+	"Philippe #0" = 0
+	"Balduin #0" = 10
+	"Luduig #0" = 0
+	"Alexander #0" = 5
+	"Theodorich #0" = 5
+	"Thielmann #0" = 5
+	"Ierwin #0" = 5
+	"Jakemin #0" = 5
+	"Simon #0" = 7
+	"Jakob #0" = 0
+	"Herbrand #0" = 0
+	"Godefroid #0" = 0
+	"Arnoul #0" = 0
+	"Jobst #0" = 5
+	"Thiébaut #0" = 5
+	
+	"Beatrix #0" = -2
+	"Ermesinde #1" = -5
+	"Elizabeth #0" = -15
+	"Marie #0" = -1
+	"Margret #0" = -1
+	"Felicitas #0" = -1
+	"Jeanne #0" = -1
+	"Isabelle #0" = -1
+	"Philippa #0" = -1
+}
+
+leader_names = {
+	"vun Avesnes"
+	"vu Bar" "vu Beetebuerg" "vu Bieles" "vun der Bourgogne"
+	"vu Chêne"
+	"vu Falkesteen"
+	"vu Hënchereng" "vun Huelmes" 
+	"vu Käerch"
+	"vu Lëtzebuerg" "vu Limbuerg"
+	"vun Nassau"
+	"vu Preisch"
+	"vun Zolwer"
+}
+
+ship_names = {
+	Clervaux Diekirch Redange Vianden Wiltz
+	Echternach Grevenmacher Remich Capellen
+	Mersch Feulen "Esch-sur-Alzette"
+}

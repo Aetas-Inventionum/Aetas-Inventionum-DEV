@@ -1,0 +1,124 @@
+#Country Name: Please see filename.
+
+graphical_culture = latingfx #easterngfx
+
+color = { 185  55  51 }
+
+historical_idea_groups = {
+	defensive_ideas
+	religious_ideas
+	offensive_ideas
+	spy_ideas
+	trade_ideas
+	innovativeness_ideas
+	economic_ideas
+	quantity_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	french_caracolle
+	anglofrench_line
+	french_dragoon
+	prussian_frederickian
+	prussian_uhlan
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Raymond #3" = 50
+	"Alfonso #1" = 10
+	"Bohémond #7" = 80
+	#koj kings
+	"Godefroy #0" = 5
+	"Baudouin #0" = 5
+	"Amaury #0" = 5
+	"Foulque #0" = 10
+	"Guy #0" = 5
+	"Conrad #0" = 5
+	"Henri #0" = 5
+	"Jean #0" = 5
+	"Frédéric #0" = 0
+	"Hugues #0" = 5
+
+	#misc
+	"Eustache #0" = 0
+	"Guillaume #0" = 5
+	"Gauthier #0" = 5
+	"Balian #0" = 1
+	"Tancrède #0" = 5
+	"Gervaise #0" = 0
+	"Josselin #0" = 5
+	"Elinard #0" = 2
+	"Odo #0" = 3
+	"Raoul #0" = 0
+	"Renaud #0" = 5
+	"Hamo #0" = 0
+	"Onfroy #0" = 3
+	"Galdemar #0" = 0
+	"Gilles #0" = 0
+	"Julien #0" = 0
+	"Romain #0" = 0
+	"Adhémar #0" = 0
+	"Maurice #0" = 0
+	"Miles #0" = 0
+	"Payen #0" = 0
+	"Geoffroy #0" = 0
+	"Daniel #0" = 0
+	"Guermond #0" = 0
+	"Thibaut #0" = 0
+	"Pierre #0" = 0
+	"Philippe #0" = 0
+
+	"Adelaide #0" = -1
+	"Melisende #1" = -5
+	"Sibylla #1" = -5
+	"Isabelle #2" = -5
+	"Yolande #0" = -1
+	"Marie #1" = -5
+	"Alice #0" = -1
+	"Plaisance #0" = -1
+	"Agnes #0" = -1
+	"Ide #0" = -1
+	"Marguerite #0" = -1
+	"Julienne #0" = -1
+}
+
+ship_names = {
+	"l'Ave-Maria" "le Bienheureux" "le Catholique" "la Cordelière" "la Dieu-Donnée" 
+	"la Dieu-la-Garde" "la Notre-Dame" "le Paradis" "le Sainte-Anne" "la Sainte-Croix"
+	"le Saint-Esprit" "le Saint-Guillaume" "le Saint-Pierre" "le Saint-Sauveur" 
+	"le Saint-Jacques" "le Saint-Jean" "la Sainte-Marie"
+	"le Saint-Michel" "la Sainte-Nonne" "le Saint-Nicolas"
+}
+
+leader_names = {
+	Aleman "d'Avesnes"
+	Berlais "de Blois" "de Boulogne" "de Brienne" "Brisbarre" "de Bures" "Le Bouteiller"
+	"de Caffran" "de Chappes" "de Châtillon" "de Courc" "de Courtenay"
+	"de Fauquembergues"
+	"de Saint-Gilles" "Granier" "de Guînes"
+	"de Hanouse" "de Hauteville" "de Hierges" "de Hortalls"
+	"d'Ibelin"
+	"de Lairon" "de Lampron" "de Lusignan" 
+	"de Milly" "de Montbéliard" "de Monteil" "de Montferrat" "de Montfort" "de Montréal"
+	"de Norès"
+	"de Rethel" "de la Roche"
+	"de Plancy" "du Plessy" "du Puiset" "du Puy"
+	"de Sagette" "de Saint-Omer" 
+	"de Terremonde" "Le Thor" "de Toron" "de Toulouse" "de Tyr"
+}
+
+army_names = { 
+	"Armée de la Sainte Vierge" "Armée de Japhé" "Armée de la Sainte Croix"  "Armée de Tyr" "Armée de Galilée" "Armée de Terre Sainte" "Armée de Nazareth" "Armée de $PROVINCE$"
+}
+
+fleet_names = { 
+	"Escadre du Saint Voyage"
+}

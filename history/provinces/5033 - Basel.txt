@@ -1,0 +1,41 @@
+#5033 - Basel
+#Area - Switzerland
+#Region - South Germany
+
+#Core Details
+capital = "Basel"
+is_city = yes
+owner = BSL
+controller = BSL
+
+#Demographics
+culture = swiss
+religion = catholic
+
+#Development and Trade
+base_tax = 5
+base_production = 5
+base_manpower = 5
+trade_goods = cloth #printing in the 1460s
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = BSL
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+fort_15th = yes
+university = yes
+
+#Special Modifiers
+center_of_trade = 3
+add_province_triggered_modifier = basel_university
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

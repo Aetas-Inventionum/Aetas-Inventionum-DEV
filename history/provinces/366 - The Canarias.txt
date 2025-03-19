@@ -1,0 +1,35 @@
+#366 - The Canarias
+#Area - Macaronesia
+#Region - Iberia
+
+#Core Details
+capital = "Las Palmas"
+owner = CRY 
+controller = CRY
+
+#Demographics
+culture = guanche
+religion = animism
+
+#Development and Trade
+base_tax = 3
+base_production = 2
+base_manpower = 2
+trade_goods = livestock #becomes sugar
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = CRY
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = GUN
+discovered_by = POR #found them first
+discovered_by = CAE 
+discovered_by = CAS
+discovered_by = GMR 

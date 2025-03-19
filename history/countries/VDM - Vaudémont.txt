@@ -1,0 +1,32 @@
+government = monarchy
+add_government_reform = appanage_reform
+government_rank = 1
+primary_culture = lorrain
+religion = catholic
+technology_group = western
+capital = 3336 #Mirecourt/Vaudémont proper
+
+1393.1.1 = { 
+	monarch = { 
+		name = "Ferry I"
+		dynasty = "de Lorraine"
+		birth_date = 1368.1.1
+		death_date = 1415.10.25
+		adm = 3
+		dip = 4
+		mil = 2
+	}
+}
+1400.1.1 = { 
+	heir = { 
+		name = "Antoine"
+		monarch_name = "Antoine I"
+		dynasty = "de Lorraine"
+		birth_date = 1400.1.1
+		death_date = 1458.5.22
+		claim = 95
+		adm = 2
+		dip = 3
+		mil = 4
+	}
+}

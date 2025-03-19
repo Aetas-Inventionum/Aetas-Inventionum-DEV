@@ -1,0 +1,23 @@
+government = monarchy
+add_government_reform = autocracy_reform
+government_rank = 1
+primary_culture = serbian 
+add_accepted_culture = albanian
+religion = orthodox
+technology_group = eastern
+capital = 143
+
+1414.1.1 = {
+	monarch = {
+		name = "Rudjina I"
+		dynasty = "Balshic"
+		culture = serbian
+		birth_date = 1396.1.1		
+		female = yes 
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = silver_tongue_personality
+}

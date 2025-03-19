@@ -1,0 +1,38 @@
+#308 - Yaroslavl
+#Area - Yaroslavl
+#Region - Russia 
+
+#Core Details
+capital = "Yaroslavl"   
+is_city = yes
+owner = YAR
+controller = YAR
+
+#Demographics
+culture = russian
+religion = orthodox
+
+#Development and Trade
+base_tax = 3
+base_production = 3
+base_manpower = 4
+trade_goods = leather
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = YAR
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+center_of_trade = 1
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = nomad_group
+
+#Histories

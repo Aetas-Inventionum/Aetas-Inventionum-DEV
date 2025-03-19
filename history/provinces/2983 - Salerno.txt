@@ -1,0 +1,40 @@
+#2983 - Salerno
+#Area - Campania
+#Region - Italy
+
+#Core Details
+capital = "Salerno"
+is_city = yes
+owner = NAP
+controller = NAP
+
+#Demographics
+culture = neapolitan
+religion = catholic
+
+#Development and Trade
+base_tax = 5
+base_production = 4
+base_manpower = 3
+trade_goods = books
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = NAP
+add_core = SLR
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+university = yes
+
+#Special Modifiers
+add_province_triggered_modifier = salerno_mod
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

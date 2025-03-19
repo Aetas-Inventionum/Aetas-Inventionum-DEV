@@ -1,0 +1,39 @@
+#5152 - Banff
+#Area - Grampians
+#Region - British Isles
+
+#Core Details
+capital = "Elgin"
+is_city = yes
+owner = MRS 
+controller = MRS 
+
+#Demographics
+culture = highland_scottish
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 1
+base_manpower = 1
+trade_goods = apiculture     #bee boles of scotland
+
+#Cores and Occupation (Alphabetical after current)
+add_core = MRS
+add_core = DUN #de jure earls of moray
+add_core = HSC
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

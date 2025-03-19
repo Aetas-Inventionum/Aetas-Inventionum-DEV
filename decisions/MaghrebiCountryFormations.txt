@@ -1,0 +1,740 @@
+country_decisions = {
+
+	moroccan_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_morocco_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { tag = MOR }
+			NOT = { tag = TUN }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			OR = {
+				primary_culture = moroccan
+				primary_culture = hassanya
+				primary_culture = shilha 
+				primary_culture = atlasic 
+				primary_culture = riffian
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 10	#Any big Moroccan tag will try to usurp the title
+				}
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 343 #Fez
+				province_id = 344 #Marrekech
+				province_id = 342 #Rabat
+				province_id = 2467 #Meknes
+				AND = {
+                    province_id = 5752
+                    ROOT = { NOT = { owns_core_province = 2466 } }
+                }
+				AND = {
+                    province_id = 2466
+                    ROOT = { NOT = { owns_core_province = 5752 } }
+                }
+				AND = {
+                    province_id = 345
+                    ROOT = { 
+						NOT = { 
+							OR = { 
+								owns_core_province = 1110
+								owns_core_province = 5738 
+							}
+						} 
+					}
+                }
+				AND = {
+                    province_id = 1110
+                    ROOT = { 
+						NOT = { 
+							OR = { 
+								owns_core_province = 345
+								owns_core_province = 5738 
+							}
+						} 
+					}
+                }
+				AND = {
+                    province_id = 5738
+                    ROOT = { 
+						NOT = { 
+							OR = { 
+								owns_core_province = 1110
+								owns_core_province = 345
+							}
+						} 
+					}
+                }
+				#AND = {
+                #    province_id = 348
+                #    ROOT = { NOT = { owns_core_province = 346 } }
+                #}
+                #AND = {
+                #    province_id = 346
+                #    ROOT = { NOT = { owns_core_province = 348 } }
+                #}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = MOR }
+			NOT = { has_reform = wattasid_vizier_reform }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			#four imperial cities must be cores
+			owns_core_province = 343 	#Fez
+			owns_core_province = 344 	#Marrekech
+			owns_core_province = 342	#Rabat
+			owns_core_province = 2467	#Meknes
+			OR = {
+				owns_core_province = 5752 #Sijilmasa
+				owns_core_province = 2466 #Tajamadart
+			}
+			OR = { 
+				owns_core_province = 345 #Asafi
+				owns_core_province = 1110 #Agadir
+				owns_core_province = 5738 #Tafrawt
+			}
+			OR = { 
+				mission_completed = dra_fez 
+				mission_completed = fez_unite
+			}
+		}
+		effect = {
+			#344 = {
+			#	move_capital_effect = yes
+			#}
+			change_tag = MOR
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			tafilalt_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = MOR
+			}
+			sus_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = MOR
+			}
+			marrekesh_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = MOR
+			}
+			western_morocco_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = MOR
+			}
+			southern_morocco_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = MOR
+			}
+			northern_morocco_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = MOR
+			}
+			add_prestige = 25
+			#if = {
+			#	limit = { NOT = { has_reform = celestial_empire } }
+			#	change_government = monarchy
+			#	#set_legacy_government = despotic_monarchy
+			#}
+			change_primary_culture = moroccan
+			set_country_flag = formed_morocco_flag
+			if = {
+				limit = { 
+					has_custom_ideas = no
+					NOT = { 
+						OR = { 
+							has_idea_group = MOR_ideas 
+							has_idea_group = DRA_ideas 
+							has_idea_group = TFL_ideas 
+							has_idea_group = FEZ_ideas 
+							has_idea_group = MRK_ideas 
+							has_idea_group = RIF_ideas
+						}
+					}
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	fez_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_fez_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { tag = MOR }
+			NOT = { tag = FEZ }
+			NOT = { tag = TUN }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			OR = {
+				primary_culture = moroccan
+				primary_culture = hassanya
+				primary_culture = shilha 
+				primary_culture = atlasic 
+				primary_culture = riffian
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 10	#Any big Moroccan tag will try to usurp the title
+				}
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 343 #Fez
+				province_id = 342 #Rabat
+				province_id = 2467 #Meknes
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = FEZ }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			#four imperial cities must be cores
+			owns_core_province = 343 	#Fez
+			owns_core_province = 342	#Rabat
+			owns_core_province = 2467	#Meknes
+		}
+		effect = {
+			343 = {
+				move_capital_effect = yes
+			}
+			change_tag = FEZ
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			tafilalt_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = MOR
+			}
+			sus_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = MOR
+			}
+			marrekesh_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = MOR
+			}
+			western_morocco_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = MOR
+			}
+			southern_morocco_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = MOR
+			}
+			northern_morocco_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = MOR
+			}
+			add_prestige = 25
+			#if = {
+			#	limit = { NOT = { has_reform = celestial_empire } }
+			#	change_government = monarchy
+			#	#set_legacy_government = despotic_monarchy
+			#}
+			#change_primary_culture = moroccan
+			set_country_flag = formed_fez_flag
+			if = {
+				limit = { 
+					has_custom_ideas = no
+					NOT = { 
+						has_idea_group = FEZ_ideas
+					}
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+	algiers_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_algiers_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { tag = MOR }
+			NOT = { tag = TUN }
+			NOT = { tag = TLC }
+			NOT = { tag = ALG }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			OR = {
+				primary_culture = algerian
+				AND = {
+					primary_culture = berber
+					capital_scope = { area = algiers_area }
+				}
+				AND = {
+					primary_culture = berber
+					capital_scope = { area = hautes_plaines_area }
+				}
+				AND = {
+					primary_culture = berber
+					capital_scope = { area = ouled_nail_area }
+				}
+				AND = {
+					primary_culture = berber
+					capital_scope = { area = kabylia_area }
+				}
+				AND = {
+					primary_culture = berber
+					capital_scope = { area = north_saharan_area }
+				}
+			}
+			OR = {
+				ai = no
+				AND = {
+					NOT = { exists = ALG }
+					ai = yes
+					num_of_cities = 5
+				}
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 338
+				province_id = 2461
+				AND = {
+                    province_id = 336
+                    ROOT = { NOT = { owns_core_province = 339 } }
+                }
+                AND = {
+                    province_id = 339
+                    ROOT = { NOT = { owns_core_province = 336 } }
+                }
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = ALG }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			owns_core_province = 2461 	#Dahra
+			owns_core_province = 338 	#Algiers
+			338 = {						#Algiers
+				is_state = yes
+			}
+			OR = {
+				owns_core_province = 336 #Tlemcen
+				owns_core_province = 339 #Kabylia
+			}
+		}
+		effect = {
+			338 = {
+				move_capital_effect = yes
+			}
+			change_tag = ALG
+			on_change_tag_effect = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			change_primary_culture = algerian
+			algiers_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ALG
+			}
+			north_saharan_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ALG
+			}
+			hautes_plaines_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ALG
+			}
+			ouled_nail_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ALG
+			}
+			kabylia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ALG
+			}
+			if = {
+				limit = {
+					is_tribal = yes	#Desert tribes settling down.
+				}
+				change_government = monarchy
+				#set_legacy_government = despotic_monarchy
+			}
+			add_prestige = 25
+			set_country_flag = formed_algiers_flag
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = berber_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	tunisian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_tunisia_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { tag = MOR }
+			NOT = { tag = TUN }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			OR = {
+				primary_culture = tunisian
+				primary_culture = berber
+			}
+			OR = {
+				ai = no
+				AND = {
+					NOT = { exists = TUN }
+					ai = yes
+					num_of_cities = 5
+				}
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 341
+				province_id = 2473
+				AND = {
+                    province_id = 2454
+                    ROOT = { NOT = { owns_core_province = 354 } }
+                }
+                AND = {
+                    province_id = 354
+                    ROOT = { NOT = { owns_core_province = 2454 } }
+                }
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = TUN }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			owns_core_province = 2473	#Souss
+			owns_core_province = 341 	#Tunis
+			341 = {						#Tunis
+				is_state = yes
+			}
+			OR = {
+				owns_core_province = 2454 #Kef
+				owns_core_province = 354 #Tripoli
+			}
+		}
+		effect = {
+			341 = {
+				move_capital_effect = yes
+			}
+			change_tag = TUN
+			on_change_tag_effect = yes
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			change_primary_culture = tunisian
+			tunisia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = TUN
+			}
+			if = {
+				limit = {
+					is_tribal = yes
+				}
+				change_government = monarchy
+				#set_legacy_government = despotic_monarchy
+			}
+			add_prestige = 25
+			set_country_flag = formed_tunisia_flag
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = TUN_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	tripoli_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_tripoli_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			NOT = { tag = MOR }
+			NOT = { tag = TUN }
+			NOT = { tag = TLC }
+			NOT = { tag = ALG }
+			NOT = { tag = TRP }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			OR = {
+				primary_culture = tunisian
+				primary_culture = berber
+			}
+			capital_scope = {
+				OR = {
+					area = tripolitania_area
+					area = fezzan_area
+				}
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 354
+				province_id = 2451
+				AND = {
+                    province_id = 355
+                    ROOT = { NOT = { owns_core_province = 353 } }
+                }
+                AND = {
+                    province_id = 353
+                    ROOT = { NOT = { owns_core_province = 355 } }
+                }
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = TRP }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			owns_core_province = 2451 	#Thubaqt
+			owns_core_province = 354	#Tripoli
+			354 = {						#Tripoli
+				is_state = yes
+			}
+			OR = {
+				owns_core_province = 355 #Sirt
+				owns_core_province = 353 #Djerba
+			}
+		}
+		effect = {
+			354 = {
+				move_capital_effect = yes
+			}
+			change_tag = TRP
+			on_change_tag_effect = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			change_primary_culture = tunisian
+			tripolitania_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = TRP
+			}
+			if = {
+				limit = {
+					is_tribal = yes #Desert tribes settling down.
+				}
+				change_government = monarchy
+				#set_legacy_government = despotic_monarchy
+			}
+			add_prestige = 25
+			set_country_flag = formed_tripoli_flag
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = berber_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		#ai_importance = 400
+	}
+	
+}

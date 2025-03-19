@@ -1,0 +1,146 @@
+#AI Update
+# = { "x" "x" }
+##region // #area <3
+##tartary
+#crimea
+284 = { "Qïrq Yer" "Qïrq Yer" }
+285 = { "Qefe" "Qefe" }
+2410 = { "Mangup" "Mangup" }
+6181 = { "Baliqlava" "Baliqlava" }
+6182 = { "Sudaq" "Sudaq" }
+6183 = { "Qeriç" "Qeriç" }
+6184 = { "Qïrïm" "Qïrïm" }
+6185 = { "Qarasuvbazar" "Qarasuvbazar" }
+6187 = { "Qizlev" "Qizlev" }
+#taurida
+1974 = { "Islam Kermen" "Islam Kermen" }
+6192 = { "Kïlburun" "Kïlburun" }
+6193 = { "Oleshqï" "Oleshqï" }
+6194 = { "Çenishke" "Çenishke" }
+6195 = { "Qïz Yar" "Qïz Yar" }
+6196 = { "Qutur Ogly" "Qutur Ogly" }
+#yedisn
+282 = { "Xajibey" "Xajibey" }
+2406 = { "Iyen Qul" "Iyen Qul" } #old name of the two rivers ingul and ingulets
+6188 = { "Dubïsari" "Dubïsari" }
+6189 = { "Çiçaq Kale" "Çiçaq Kale" } #think Chichaklei is Çiçak + Kale
+6190 = { "Özü Kale" "Özü Kale" }
+6191 = { "Qïzï Kermen" "Qïzï Kermen" }
+#zaporizhia
+283 = { "Hortisa" "Hortisa" }
+6197 = { "Miqitasheer" "Miqitasheer" }
+6198 = { "Tumak" "Tumak Yurtu" }
+6199 = { "Köydak" "Köydak" }
+6201 = { "Sheer-i Desht" "Sheer-i Desht" } #Stepohrad means 'City of the Steppe' in Ukrainian. Shehir-i Desht is Turkic equivalent
+6202 = { "Gulaypole" "Gulaypole" }
+6203 = { "Samar-i Özü" "Samar-i Özü" } #Samara of the Dnieper to prevent confusion with more relevent Samara in Kazan
+6204 = { "Çigirin" "Çigirin" }
+#wild fields
+2409 = { "Baxmut" "Baxmut" }
+2411 = { "Desht-i Don" "Desht-i Don" } #Field of the Don
+6209 = { "Divar-i Cïlan" "Divar-i Cïlan" } #same etymology as Zmiiv, meaning 'Serpent's Wall'
+6211 = { "Tuz" "Tuz" } #salt
+6270 = { "Ïzium" "Ïzium" }
+6271 = { "Baxtin" "Baxtinsheer" } #major river // city of bakhtin
+6272 = { "Qïzïl Çöl" "Qïzil Çöl" } #red field, based off of Krasna river
+#meotyda 
+286 = { "Azaq" "Azaq" }
+2413 = { "Gündorköy" "Gündorköy" } #fictional, köy meaning village
+6213 = { "Çöl Tatarlï" "Kalmius" }
+#6214 = could not find
+6216 = { "Taygan" "Taygan" }
+6217 = { "Pisa Liman" "Pisa Liman" }
+6218 = { "Çerkas" "Çerkas" }
+#upper volga
+466 = { "Saray Berke" "Saray Berke" }
+1971 = { "Kamïshin" "Kamïshin" }
+6254 = { "Gülistan" "Gülistan" }
+6256 = { "Qara Blöf" "Qara Blöf" }
+6259 = { "Sary Su" "Sarigshïn" } #was referred to as the fortress of Sary Su, of yellow water. Sarigsin also means Yellow Tomb or Throne
+6267 = { "Kalaç" "Kalaç" }
+6292 = { "Tuzgöl" "Tuzgöl" } #salt lake
+6293 = { "Ilovla" "Ilovla" }
+#volga delta
+464 = { "Xaçitarxan" "Xaçitarxan" }
+6253 = { "Saray Batu" "Saray Batu" }
+6258 = { "Ätil" "Ätil" }
+6261 = { "Buzan" "Buzan" }
+6288 = { "Aq Saray" "Aq Saray" }
+#lower khazaria
+2208 = { "Terk" "Terk" }
+2416 = { "Masar" "Masar" }
+6248 = { "Koçubeg" "Koçubeg" }
+6249 = { "Suxaya" "Suxaya" }
+6250 = { "Çemrek" "Çemrek" }
+#upper khazaria
+288 = { "Sym-i Xazar" "Sym-i Xazar" } #going off of possible theory that Tsimla is a derivative of Sym, meaning grave or monument. Grave or Monument of the Khazars due to nearby capital Sarkel
+468 = { "Manïç" "Manïç" }
+6251 = { "Sala" "Sala" }
+6252 = { "Aq Yort" "Aq Yort" } #sharkil, which means Aq Yort in Tatar
+6262 = { "Ergnin" "Ergnin" }
+#kuban
+2424 = { "Qoban" "Qoban" }
+5233 = { "Balzimaçi" "Balzimaçi" } #based off of genoese colony at Yeisk
+6234 = { "Çelbas" "Çelbas" }
+#lower chernozemie
+291 = { "Boguçar" "Boguçar" }
+6268 = { "Sag Yalï" "Sag Yalï" } #right bank of the don
+6269 = { "Qara Kayaly" "Qara Kayaly" }
+6297 = { "Vöshenskaya" "Vöshenskaya" }
+6298 = { "Köy-i Mihail" "Köy-i Mihail" }
+6299 = { "Urüpin" "Urüpin" }
+#upper chernozemie
+299 = { "Voronej" "Voronej" }
+467 = { "Lesneproezjiy" "Lesneproezjiy" }
+2415 = { "Kopyor" "Kopyor" }
+6300 = { "Telleorman" "Telleorman" } #famed forest
+6302 = { "Rossoshi" "Rossoshi" }
+6303 = { "Rovenkï" "Rovenkï" }
+6304 = { "Kiçik Kale" "Kiçik Kale" } #little castle
+6310 = { "Qizil Tïynaq" "Qizil Tïynaq" }
+#khvakinsk hills or smth
+303 = { "Sari Tau" "Sari Tau" }
+2418 = { "Ükäk" "Ükäk" }
+6295 = { "Sari Idil" "Sari Idil" }
+6308 = { "Balashau" "Balashau" }
+6309 = { "Etqari" "Etqari" }
+6314 = { "Malyqau" "Malyqau" }
+#mordovia
+2423 = { "Ulatar" "Ulatar" }
+6311 = { "Tümen" "Tümen" }
+6350 = { "Tësha" "Tësha" }
+6349 = { "Moxshi" "Moxshi" }
+#volga bulgaria
+473 = { "Samar" "Samar" }
+1081 = { "Çemper" "Çemper" } #from chuvashi
+2419 = { "Çam Ada" "Çam Ada" } #pine island, sosnovy ostrov
+6335 = { "Sïzrany"  "Sïzrany"}
+6336 = { "Haçsheher" "Haçsheher" }
+6337 = { "Nur" "Nur" }
+#kazan
+2421 = { "Jükëtau" "Jükëtau" }
+2422 = { "Çabaqsar" "Çabaqsar" }
+4264 = { "Tëtesh" "Tëtesh" }
+6339 = { "Yar Çally" "Yar Çally" }
+6340 = { "Arça" "Arça" }
+6345 = { "Urys Alaty" "Urys Alaty" }
+6346 = { "Yäshel Üzän" "Yäshel Üzän" }
+#udmurtia
+1972 = { "Ishau" "Ishau" }
+6342 = { "Yelabuga" "Yelabuga" }
+#caspian saline lakes
+469 = { "Qïzil Bas" "Qïzil Bas" }
+2365 = { "Qese Uzen" "Qese Uzen" }
+6291 = { "Altyn Nor" "Altyn Nor" }
+6294 = { "Meçetney" "Meçetney" }
+6296 = { "Çertanla" "Çertanla" }
+#lower yaik
+465 = { "Sarayçïq" "Sarayçïq" }
+2367 = { "Köshim" "Köshim" }
+6279 = { "Aqtöbe" "Aqtöbe" }
+#upper yaik
+6326 = { "Or Kale" "Or Kale" }
+#bashkiria
+475 = { "Dürtöylö" "Dürtöylö" }
+2444 = { "Üfü" "Üfü" }
+4265 = { "Ar Çally" "Ar Çally" }

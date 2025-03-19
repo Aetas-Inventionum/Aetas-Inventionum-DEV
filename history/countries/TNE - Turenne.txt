@@ -1,0 +1,41 @@
+government = monarchy
+add_government_reform = fief_reform
+government_rank = 1
+primary_culture = limousin
+religion = catholic
+technology_group = western
+capital = 3271 # Turenne
+fixed_capital = 3271 # Cannot move capital away from this province & no power cost to move to it
+
+1348.1.1 = { 
+	monarch = { 
+		name = "Nicolas II"
+		dynasty = "Roger de Beaufort"
+		birth_date = 1340.1.1
+		death_date = 1415.11.1
+		adm = 3
+		dip = 2
+		mil = 4
+	}
+}
+1413.1.1 = { 
+	queen = { 
+		name = "Mathe"
+		dynasty = "de Montaut"
+		birth_date = 1340.1.1
+		adm = 1
+		dip = 2
+		mil = 1
+	}
+	heir = { 
+		name = "Pierre"
+		monarch_name = "Pierre I"
+		dynasty = "Roger de Beaufort"
+		claim = 95
+		birth_date = 1413.1.1
+		death_date = 1473.1.1
+		adm = 4
+		dip = 3
+		mil = 3
+	}
+}

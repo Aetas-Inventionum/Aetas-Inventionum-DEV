@@ -1,0 +1,153 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+color = { 110 218 100 }	#previous 235  196 231
+
+revolutionary_colors = { 5  13  6 } #Republic of Alba
+
+historical_idea_groups = {
+	administrative_ideas
+	defensive_ideas
+	diplomatic_ideas
+	offensive_ideas
+	trade_ideas
+	economic_ideas
+	innovativeness_ideas
+	quality_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	italian_condotta
+	french_caracolle
+	anglofrench_line
+	french_dragoon
+	french_bluecoat
+	french_carabinier
+	french_impulse
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Charles #0" = 60
+	"Amédée #7" = 40
+	"Charles-Emmanuel #0" = 40
+	"Carlo Giovanni #0" = 10
+	"Philibert #0" = 40
+	"Victor-Amédée #0" = 40
+	"Philippe #1" = 20
+	"Emmanuel-Philibert #0" = 10
+	"François-Hyacinthe #0" = 10
+	"Louis #0" = 10
+	"Antoine #0" = 0
+	"Bernard #0" = 0
+	"Philippe-Emmanuel #0" = 15
+	"Jacques-Louis #0" = 0
+	"Pierre #2" = 5
+	"Thomas #1" = 5
+	"Édouard #1" = 1
+	"Adrien #0" = 0
+	"Aimon #0" = 0
+	"Emmanuel #0" = 0
+	"François #0" = 2
+	"Jacques #0" = 0
+	"Jean-Claude #0" = 0
+	"Jean-Marie #0" = 0
+	"Jean #0" = 0
+	"Jean-Amédée #0" = 0
+	"Jean-Louis #0" = 0
+	"Hieronyme #0" = 0
+	"Janus #0" = 0
+	"Maurice #0" = 0
+	"Augustin #0" = 0
+	"Edmonde #0" = 0
+	"Gennaro #0" = 0
+	"Julien #0" = 0
+	"Laurent #0" = 0
+	"Sébastien #0" = 0
+	"Victor #0" = 0
+	"Humbert #3" = 5
+	"Boniface #1" = 2
+	"Guillaume #0" = 2
+	"Rodolphe #0" = 0
+	"Raimond #0" = 0
+	"Othon #0" = 0
+	"Girard #0" = 0
+	"Robert #0" = 0
+	"Gaspard #0" = 0
+	"Miolans #0" = 0
+	"Henri #0" = 0
+	"Lambert #0" = 0
+	"Claude #0" = 0
+	"Amé #0" = 0
+	"Rolet #0" = 0
+	"René #0" = 0
+	
+	"Cécile #0" = -1
+	"Sandra #0" = -1
+	"Alice #0" = -1
+	"Barbara #0" = -1
+	"Béatrice #0" = -1
+	"Marie #0" = -1
+	"Jeanne #0" = -1
+	"Marguerite #0" = -1
+	"Agnès #0" = -1
+	"Bonne #0" = -1
+	"Laure #0" = -1
+	"Blanche #0" = -1
+}
+
+leader_names = {
+	#confirmed noblesse of Savoie, Vaud, Bourge et Belley
+	d'Alby "de L'Alée" d'Ameysin Andrevet d'Angeville d'Arlod d'Arvillard "d'Aspremont" d'Avalon
+	"de Ballaison" "de La Balme" "des Baux" "de Bavoz" "de Beaufort" "de Bellegarde" "de Belletruche" "de Berry" "de Bertrand" "de Bettens" "de Blonay" "de Briançon" "de Boëge" "de Bonivard" "de Bourgogne"
+	"de Candie" "de Cervens" "de Chabod" "de Challes" "de la Chambre" "de Charansonay" "de Château-vieux" "de Châtillon" "de Chevelu" "de Chissé"  "de Clermont-Mont-Saint-Jean" "des Clets" "du Clos" 
+	"de Colombier" "de Compey" "de Confignon" "de Conzié" "de Coppier" "de Corbeau" "de Cordon" "de Cornillon" "Costa de Beauregard" "de Crans" Coudrée "de Cuines"
+	"de Dérée" "de Divonne" "de Duin"
+	"de Faucigny" Favre "de La Faverge" "de La Fléchère" "de Foras" "de La Forest Divonne" "de La Frasse"
+	"de Gay" "de Gemilly" "de Genève" "de Gerbais" "de Gex" "de Gilly" "de Gingins" "de Grandson" "de Granville" "de Greyfié" "de Grésy" "de Grolée" "de Gruyère"
+	d'Hauteville d'Humilly
+	"de Juge"
+	"de Lachanel" "de Langin" "de Lausanne" "de Lescheraine" "de Livron" "de Loche" "de Luyrieux"
+	Mareschal "de Martin" Mayor "de Menthon" "de Miolans" Monet "de Montbel" "de Montfalcon" "de Montfort" "de Montmayeur" "de Monthoux" "de Montvuagnard" "de Mulessan"`
+	Noyel
+	Oddinet "d'Orville"
+	"de La Palud" "de Piémont" "de Pingon" "du Pont"
+	"de La Ravoire" "de Reydet" "de Rivoire" "de La Rochette" "de Rolland"
+	"de Sacconay" "de Saint-Jeoire" "de Sales" "du Saix" "de Savoie" "de Seyssel" "de Syons"
+	"de Thiollaz" "de Thoire" "de Thuny"
+	"de Varax" "de Verboz" "de Vidomne" "de Villars" "de Villarzel" "de Viry"
+}
+
+ship_names = { 
+	"Adelaide di Susa" Albane Aimone "Amedeo Coda" Annecy
+	Bauges Bellevaux Biancamano Bonifacio
+	"Casa di Savoia" Chablais Chambéry Contamine-sur-Arve
+	"Dora Riparia"
+	Edoardo Entremont
+	Faucigny Filippo
+	Genevois Giacomo Jaquerio
+	Hautecombe
+	"Umberto Sabaudia" 
+	"Lac du Bourget" Leysse  
+	Maurienne  
+	Oddone 
+	"Pietro I" Piemonte "fiume Po"
+	"Sacra Sindone" "San Domenico" "San Donato" "San Paolo" "Santa Rita" "San Salvario" "Stura di Lanzo" Sangone 
+	Talloires Tamié Tommaso Tarentaise Torino
+	"Val d'Aosta" 
+}
+
+army_names = {
+	"Corps Savoyard" "Corps Piémontais" "Corps Vaudois" "Corps Bourgignon" "Armée de Genevois" "Armée de Faucigny" "Armée de Chablais" "Armée de Maurienne" "Armée de Tarentaise" "Armée d'Aosta" "Armée de $PROVINCE$"
+}
+
+fleet_names = { 
+	"Escadre Niçois" "Escadre d'Achaïe" "Escadre de $PROVINCE$"
+}

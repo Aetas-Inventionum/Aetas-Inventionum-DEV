@@ -1,0 +1,40 @@
+#87 - Calais
+#Area - Picardy
+#Region - France
+
+#Core Details
+capital = "Calais"
+is_city = yes
+owner = ENG
+controller = ENG
+
+#Demographics
+culture = flemish
+religion = catholic
+
+#Development and Trade
+base_tax = 4
+base_production = 4
+base_manpower = 4
+trade_goods = wool
+
+#Cores and Occupation (Alphabetical after current)
+add_core = ENG
+add_core = FRA
+add_core = PIC
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

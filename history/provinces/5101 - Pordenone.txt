@@ -1,0 +1,38 @@
+#5101 - Pordenone
+#Area - Frioul
+#Region - Italy
+
+#Core Details
+capital = "Pordenone"
+is_city = yes
+owner = STY
+controller = STY
+
+#Demographics
+culture = friulan
+religion = catholic
+
+#Development and Trade
+base_tax = 3
+base_production = 3
+base_manpower = 3
+trade_goods = glass
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = STY
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

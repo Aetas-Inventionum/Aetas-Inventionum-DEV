@@ -1,0 +1,227 @@
+namespace = aetas_hsa_cities
+normal_or_historical_nations = yes
+
+# Hanseatic League Requests Privileges in (Province)
+province_event = {
+	id = aetas_hsa_cities.1
+	title = aetas_hsa_cities.1.t
+	desc = aetas_hsa_cities.1.d
+	picture = GREAT_BUILDING_eventPicture
+
+	#major = yes 
+	#major_trigger = {
+	#	any_country = {
+	#		tag = HSA
+	#	}
+	#}
+
+	trigger = {
+		OR = { 
+			#Scandies
+			province_id = 1 #Stockholm, City
+			province_id = 6014 #Nykoping, City
+			province_id = 3 #Kalmar, City
+			province_id = 4163 #Lodose, Post
+			province_id = 4165 #Ahus, Post
+			province_id = 4980 #Ystad, Post
+			province_id = 6 #Malmo/Falsterbo, Post
+			province_id = 5138 #Helsingborg, post
+			province_id = 12 #Copenhagen, post
+			province_id = 1981 #Ronne, post
+			province_id = 5629 #Ribe, post
+			province_id = 1775 #Kiel, City
+			province_id = 6026 #Tonsberg, Post
+			province_id = 17 #Oslo, Post
+			province_id = 23 #Bergen, Kontor 
+			province_id = 25 #Visby, City
+			province_id = 27 #Abo/Turku, Post
+			province_id = 6075 #Raseborg, Post
+			province_id = 30 #Viborg, Post
+			#Rus
+			province_id = 310 #Novgorod, Kontor
+			province_id = 1842 #Narva, Post
+			province_id = 274 #Pskov, Post
+			#Baltics
+			province_id = 1834 #Dorpat, City
+			province_id = 37 #Fellin, City
+			province_id = 5987 #Pernau, City
+			province_id = 36 #Reval, City
+			province_id = 38 #Riga, City
+			province_id = 5971 #Windau, City
+			province_id = 293 #Smolensk, Post
+			province_id = 275 #Polotsk, Post
+			province_id = 272 #Vilnius, Post
+			province_id = 1936 #Kaunas, Post
+			province_id = 41 #Konigsberg, Post
+			#province_id = 43 #Danzig, Principle City to add as modifier at start
+			province_id = 5834 #Elbing, Post
+			province_id = 5830 #Thorn, Post
+			province_id = 262 #Krakow, City
+			province_id = 264 #Wroclaw, City
+			#Germany
+			province_id = 5285 #Koslin, City
+			province_id = 48 #Kolberg, City
+			province_id = 1858 #Stettin, City
+			province_id = 47 #Straslund, City
+			province_id = 46 #Rostock, City
+			province_id = 2996 #Wismar, City
+			#province_id = 45 #Lubeck, Principle City to add as modifier at start
+			province_id = 50 #Berlin-Colln, City
+			#province_id = 52 #Magdeburg, Principle City
+			#province_id = 57 #Braunschweig, Principle City
+			province_id = 1857 #Lauenburg, City
+			province_id = 44 #Hamburg, City
+			province_id = 1758 #Hanover, City
+			province_id = 1874 #Bremen, City
+			province_id = 86 #Munster, City
+			#province_id = 69 #Dortmund, Principle City
+			#province_id = 85 #Koln, Principle City
+			province_id = 84 #Dusseldorf, City
+			province_id = 63 #Erfurt, City
+			#Low Countries
+			province_id = 4382 #Groningen, City
+			province_id = 100 #Fryslan/Stavoren, City
+			province_id = 97 #Amsterdam, Post
+			province_id = 98 #Utrecht, Post
+			province_id = 3348 #Dordrecht, Post
+			province_id = 96 #Bergen/Zeeland, Post
+			province_id = 1865 #Ghent, Post
+			province_id = 3344 #Dinant, City
+			province_id = 1744 #Antwerp, Kontor
+			province_id = 90 #Brugges, Kontor
+			#England
+			province_id = 235 #Sandwich/Kent, Post
+			province_id = 242 #London, Kontor 
+			province_id = 238 #Colchester/Essex, Post
+			province_id = 3313 #Ipswich, Post
+			province_id = 1860 #Norwich, Post
+			province_id = 3384 #Lynn, Post
+			province_id = 3383 #Boston, Post
+			province_id = 4367 #Hull, Post
+			province_id = 245 #York, Post
+			province_id = 5179 #Scarborough, Post
+			province_id = 3327 #Newcastle, Post
+			province_id = 3306 #Bristol, Post
+			#Scotland
+			province_id = 248 #Edinburgh, Post
+		}
+		NOT = { 
+			OR = {
+				OR = { 
+					has_province_flag = hsa_declined
+					has_province_modifier = hsa_city 
+					has_province_modifier = hsa_post 
+					has_province_modifier = hsa_kontor
+				}
+				owner = { 
+					has_country_flag = hsa_expelled
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = { 
+		months = 50
+	}
+
+	option = { #We will allow the Hansa to operate here
+		name = "aetas_hsa_cities.1.a"
+		ai_chance = { factor = 1 }
+		if = { #Hansa City
+			limit = { 
+				OR = {
+					#Scandies
+					province_id = 1 #Stockholm, City
+					province_id = 6014 #Nykoping, City
+					province_id = 3 #Kalmar, City
+					province_id = 1775 #Kiel, City
+					province_id = 25 #Visby, City
+					#Baltics
+					province_id = 1834 #Dorpat, City
+					province_id = 37 #Fellin, City
+					province_id = 5987 #Pernau, City
+					province_id = 36 #Reval, City
+					province_id = 38 #Riga, City
+					province_id = 5971 #Windau, City
+					#Poland and Silesia
+					province_id = 262 #Krakow, City
+					province_id = 264 #Wroclaw, City
+					#Germany
+					province_id = 5285 #Koslin, City
+					province_id = 48 #Kolberg, City
+					province_id = 1858 #Stettin, City
+					province_id = 47 #Straslund, City
+					province_id = 46 #Rostock, City
+					province_id = 2996 #Wismar, City
+					province_id = 50 #Berlin-Colln, City
+					province_id = 1857 #Lauenburg, City
+					province_id = 44 #Hamburg, City
+					province_id = 1758 #Hanover, City
+					province_id = 1874 #Bremen, City
+					province_id = 86 #Munster, City
+					province_id = 84 #Dusseldorf, City
+					province_id = 63 #Erfurt, City
+					#Low Countries
+					province_id = 4382 #Groningen, City
+					province_id = 100 #Fryslan/Stavoren, City
+					province_id = 3344 #Dinant, City
+					province_id = 3351 #Nijmegan, City
+					province_id = 99 #Arnhem, City 
+				}
+			}
+			add_province_modifier = { 
+				name = "hsa_city"
+				duration = -1
+			}
+			custom_tooltip = hsa_post.tt
+			add_trade_modifier = { 
+				WHO = HSA 
+				duration = 17500
+				power = 10
+				key = HANSA_CITY
+			}
+		}
+		else_if = { #Kontor
+			limit = { 
+				OR = {
+					province_id = 242 #London, Kontor 
+					province_id = 1744 #Antwerp, Kontor
+					province_id = 90 #Brugges, Kontor
+					province_id = 310 #Novgorod, Kontor
+					province_id = 23 #Bergen, Kontor
+				} 
+			}
+			add_province_modifier = { 
+				name = "hsa_kontor"
+				duration = -1
+			}
+			custom_tooltip = hsa_post.tt
+			add_trade_modifier = { 
+				WHO = HSA 
+				duration = 17500
+				power = 15
+				key = HANSA_KONTOR
+			}
+		}
+		else = { 
+			add_province_modifier = { 
+				name = "hsa_post"
+				duration = -1
+			}
+			custom_tooltip = hsa_post.tt
+			add_trade_modifier = { 
+				WHO = HSA 
+				duration = 17500 
+				power = 5
+				key = HANSA_POST
+			}
+		}
+	}
+	option = { #no thanks
+		name = "aetas_hsa_cities.1.b"
+		owner = {
+			add_prestige = 25
+		}
+		set_province_flag = hsa_declined
+	}
+}

@@ -1,0 +1,12 @@
+government = monarchy
+add_government_reform = welf_principality_reform
+government_rank = 1
+technology_group = western
+primary_culture = eastphalian
+religion = catholic
+capital = 1758 # Hannover
+fixed_capital = 1758
+historical_rival = HLD
+historical_friend = GTT
+historical_friend = LUN
+historical_friend = BRU

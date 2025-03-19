@@ -1,0 +1,21 @@
+government = theocracy
+add_government_reform = leading_clergy_reform
+government_rank = 1
+primary_culture = wallonian
+add_accepted_culture = flemish
+religion = catholic
+technology_group = western
+capital = 3304
+fixed_capital = 3304
+
+
+#History not yet done
+1410.1.1 = {
+	monarch = {
+		name = "Jean de Thoisy"
+		birth_date = 1380.1.1
+		adm = 2
+		dip = 4
+		mil = 2
+	}
+}

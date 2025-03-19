@@ -1,0 +1,90 @@
+#Country Name: Please see filename
+
+graphical_culture = greekgfx
+
+color = { 192  78 70 }
+
+historical_idea_groups = {
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	trade_ideas
+	diplomatic_ideas
+	religious_ideas
+	economic_ideas
+	quantity_ideas
+}
+
+historical_units = {
+	eastern_medieval_infantry
+	eastern_knights
+	slavic_stradioti
+	eastern_militia
+	ottoman_sekban
+	ottoman_reformed_spahi
+	ottoman_reformed_janissary
+	ottoman_toprakli_hit_and_run
+	ottoman_nizami_cedid
+	ottoman_toprakli_dragoon
+	eastern_skirmisher
+	eastern_uhlan
+	eastern_carabinier
+	ottoman_new_model
+	ottoman_lancer
+}
+
+monarch_names = {
+	#list of princes of kosacha
+	"Vuk #1" = 10
+	"Vlatko #1" = 20
+	"Hrana #1" = 20
+	"Sandalj #1" = 20
+	"Radich #0" = 5
+	"Vuk #0" = 5
+	"Vukac #0" = 10
+	"Stjepan Vukchic #0" = 10
+	"Balsha #0" = 10
+	"Petar #0" = 10
+
+	"Jelena #1" = -1
+	"Doroteja #0" = -1
+	"Vitacha #0" = -1
+	"Kujava #0" = -1
+	"Katarina #0" = -1
+	"Marija #0" = -1
+}
+
+leader_names = {
+	Berislavic Branivojevic
+	Chengic
+	Dinjchic
+	Gradashchevic
+	Hrvatinic
+	Kosacha Kotromanic Kulinic
+	Ljubibratic
+	Miloradovic Mirkovic
+	Nikolic
+	Pavlovic
+	Radosalic
+	Sankovic
+	Zlatanosovic
+}
+
+ship_names = {
+	Bosna Bileca Blagaj
+	Drijeva
+	"Herceg Novi"
+	Onogost
+	Rastislav
+	Soko Ston "Sveti Sava"
+	Travunia Tjentiste
+	Zachlumia
+}
+
+army_names = { 
+	"Svetog Save vojska" "Herceg vojska" "$PROVINCE$ vojska"
+}
+
+fleet_names = { 
+	"Humska flota" "$PROVINCE$ flota"
+}

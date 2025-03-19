@@ -1,0 +1,38 @@
+#3339 - PontaMousson
+#Area - Lorraine
+#Region - France
+
+#Core Details
+capital = "Pont-à-Mousson"
+is_city = yes
+owner = BAR
+controller = BAR
+
+#Demographics
+culture = lorrain
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 3
+base_manpower = 2
+trade_goods = cloth #drapers of saint-mihiel
+
+#Cores and Occupation (Alphabetical after current)
+add_core = BAR
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

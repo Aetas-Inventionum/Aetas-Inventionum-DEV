@@ -1,0 +1,39 @@
+#4977 - Braga
+#Area - Trás-os-Montes
+#Region - Iberia
+
+#Core Details
+capital = "Braga"
+is_city = yes
+owner = POR
+controller = POR
+
+#Demographics
+culture = galician
+religion = catholic
+
+#Development and Trade
+base_tax = 3
+base_production = 3
+base_manpower = 2
+trade_goods = fruit
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = POR
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+temple = yes 
+
+#Special Modifiers
+add_province_triggered_modifier = bom_jesus
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

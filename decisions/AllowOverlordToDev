@@ -1,0 +1,34 @@
+# # Decision to swap between overlord developing and subject
+# country_decisions = {
+	# allow_overlord_to_develop = {
+		# potential = {
+			# ai = 
+		# }
+		# allow = {
+			# army_professionalism = 0.40
+		# }
+		# effect = {
+			# custom_tooltip = allow_overlord_to_develop_tooltop
+			# set_country_flag = jewish_advisor 
+		# }
+		# ai_will_do = {
+			# factor = 0 # 
+		# }
+	# }
+	
+	# stop_overlord_from_developing = {
+		# potential = {
+			# has_country_modifier = let_player_overlord_dev
+		# }
+		# allow = {
+			# has_country_modifier = let_player_overlord_dev
+		# }
+		# effect = {
+			# custom_tooltip = explain_state_firearm_regiments
+			# clr_country_flag = jewish_advisor
+		# }
+		# ai_will_do = {
+			# factor = 100 #Ai should do this if a player stops controlling the nation.
+		# }
+	# }
+# }

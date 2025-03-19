@@ -1,0 +1,17 @@
+bookmark =
+{
+	name = "STAGNATING_LEVANT"
+	desc = "STAGNATING_LEVANT_DESC"
+	date = 1415.8.22
+	
+	center = 6148 #Bayrut, decent central spot
+	
+	country = MAM
+	country = KAR
+	country = CND
+	country = AYD
+	country = TKK
+	country = RAM 
+	country = DUL
+	country = CYP
+}

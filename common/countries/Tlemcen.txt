@@ -1,0 +1,90 @@
+#Country Name: Please see filename.
+
+graphical_culture = muslimgfx
+
+color = { 100 140 50 }
+#color = { 154 168 121 } 
+revolutionary_colors = { 0  13  0 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	religious_ideas
+	naval_ideas	
+	administrative_ideas
+	offensive_ideas
+	economic_ideas
+	expansion_ideas
+}
+
+historical_units = {
+	mamluk_archer
+	muslim_cavalry_archers
+	mamluk_duel
+	mamluk_musket_charge
+	muslim_mass_infantry
+	muslim_dragoon
+	ali_bey_reformed_infantry
+}
+
+monarch_names = {
+	"Yahya #1" = 20
+	"'Uthman #2" = 40
+	"Zayyan #2" = 20
+	"Hammu #2" = 20
+	"Tashufin #1" = 5
+	"Thabid #1" = 5
+	"Hadjdjadj #1" = 30
+	"Muhammad #1" = 10
+	"Abdallah #1" = 40
+	"al-Rahman #1" = 20
+	"Malik #1" = 20
+
+	"'Abd al-Karim #0" = 0
+	"Barakat #0" = 0
+	"Basir #0" = 0
+	"Dawud #0" = 0
+	"Faris #0" = 0
+	"Haidar #0" = 0
+	"Hashim #0" = 0
+	"Jabbar #0" = 0
+	"Jamal #0" = 0
+	"Junayd #0" = 0
+	"Najib #0" = 0
+	"Qasim #0" = 0
+	"Rahim #0" = 0
+	"Rashîd #0" = 0
+	"Safi #0" = 0
+	"Sakhr #0" = 0
+	"Wahid #0" = 0
+	"Zahir #0" = 0
+	
+	"Randa #0" = -1
+	"Tabassum #0" = -1
+	"Daïkra #0" = -1
+}
+
+leader_names = {
+	"Banu 'Amir"
+	"'Awlad Djerir"
+	Ghenanma
+	"Banu Hafs" Hamyanv "Banu Hassan" "Banu Hilal" "Banu Hudhayl"
+	"Dawi-Mani"
+	"'Awlad Naïl"
+	"Banu Rashid" Riyah
+	"Banu Sulaym"
+	"Banu Tamim" "al-Tha'alabi"
+	"Banu Ziyan" Zughba
+}
+
+ship_names = {
+	Barr Muta'al Wali Batin Zahir Akhir Awwal
+	Mu'akhkhir Muqaddim Muqtadir Qadir Samad
+	Wahid Majid Wajed Qayyum Hayy Mumit Muhyi
+	Mu'id Mubdi Muhsi Hamid Waliyy Matin Qawiyy
+	Wakil Haqq Shahid Ba'ith
+}
+
+army_names = { 
+	"Jaysh al-$PROVINCE$"
+}

@@ -1,0 +1,38 @@
+#4380 - Donegal
+#Area - Ulster
+#Region - British Isles
+
+#Core Details
+capital = "Kilmacrenan"
+is_city = yes
+owner = TRY
+controller = TRY
+
+#Demographics
+culture = norse_gael
+religion = catholic
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = livestock
+
+
+#Cores and Occupation (Alphabetical after current)
+add_core = TRY
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

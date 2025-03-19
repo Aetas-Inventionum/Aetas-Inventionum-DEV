@@ -1,0 +1,64 @@
+#palestine
+364 = { "Gaddat" "Gaddat" }
+379 = { "Hierusalim" "Hierusalim" }
+1854 = { "Mbartha" "Mbartha" }
+1855 = { "Djedwna" "Djedwna" } #or Djedouna, but vowels are vocalized not written
+6144 = { "Hbr" "Hbr" }
+6145 = { "Yapu" "Yapu" }
+6146 = { "Aak" "Aak" }
+6147 = { "Sef" "Sef" }
+6152 = { "Lydda" "Lydda" } #lydda
+#balqa
+4268 = { "Ela" "Ela" }
+6149 = { "Salts" "Salts" }
+6153 = { "Sela" "Sela" }
+#sinai
+6127 = { "Du Mafkat" "Du Mafkat" }
+6131 = { "Šorpo" "Šorpo" }
+6132 = { "Halusa" "Halusa" }
+##gypt
+#east nile delta
+363 = { "Tamiati" "Tamiati" }
+2315 = { "Peklousma" "Peklousma" }
+2316 = { "ti-Šairi" "Theodosiu" }
+4316 = { "Tkehli" "Tkehli" }
+6122 = { "Phelbes" "Phelbes" }
+#west nile delta
+358 = { "Rakote" "Alexandria" }
+362 = { "ti-Rašit" "ti-Rašit" }
+4317 = { "p-Timinhor" "p-Timinhor" }
+6119 = { "Šihet" "Šihet" }
+6126 = { "Panouf" "Panouf" }
+6174 = { "Phoya" "Phoya" }
+#lower egypt
+359 = { "Phiom" "Phiom" }
+361 = { "ti-Kešr?mi" "ti-Kešr?mi" }
+4318 = { "Petpeh" "Petpeh" }
+6120 = { "ti-Persioi" "ti-Persioi" }
+6121 = { "Manlau" "Manlau" }
+6177 = { "Memfi" "Tammau" }
+#middle egypt
+2317 = { "Šmun" "Šmun" }
+2319 = { "Khmin" "Khmin" }
+6123 = { "Pemdje" "Pemdje" }
+6124 = { "Tmone" "Tmone" }
+6125 = { "Siowt" "Siowt" }
+6139 = { "Tmupaie" "Tmupaie" }
+6175 = { "Tapotheke" "Tapotheke" }
+#upper egypt
+360 = { "Kus Berbir" "Kus Berbir" }
+1231 = { "Souan" "Souan" }
+4319 = { "Sne" "Sne" }
+4320 = { "Tarje" "Tarje" }
+6140 = { "Kone" "Kone" }
+6141 = { "Hu" "Hu" }
+6142 = { "Tbo" "Tbo" }
+6143 = { "Mbo" "Mbo" }
+6176 = { "Waset" "Waset" } #or Pape
+#red sea hills
+2321 = { "Tchau" "Tchau" }
+#al wahat
+1233 = { "Dowah Enhib" "Dowah Enhib" }
+2318 = { "Tast" "Tast" }
+4323 = { "Dowah Etekhau" "Dowah Etekau" }
+6117 = { "ti-Djou" "ti-Djou" }

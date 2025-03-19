@@ -1,0 +1,8 @@
+government = republic
+add_government_reform = trading_city
+government_rank = 1
+primary_culture = turkish 
+religion = sunni
+technology_group = ottoman
+capital = 326 #ankara
+religious_school = hanafi_school

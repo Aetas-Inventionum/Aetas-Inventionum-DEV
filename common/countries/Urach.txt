@@ -1,0 +1,93 @@
+# Wurttemberg
+
+graphical_culture = westerngfx
+
+color = { 111  162  128 }
+revolutionary_colors = { 1 16 1 }
+
+historical_idea_groups = {
+	trade_ideas
+	defensive_ideas
+	religious_ideas
+	economic_ideas
+	diplomatic_ideas
+	spy_ideas
+	offensive_ideas
+	quality_ideas
+}
+
+historical_units = {
+	halberd_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	dutch_maurician
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Eberhard #0" = 75
+	"Ulrich #0" = 50
+	"Ludwig #0" = 25
+	"Heinrich #0" = 5
+	"Georg #0" = 5
+	"Christoph #0" = 5
+	"Friedrich #0" = 10
+	"Johann Friedrich #0" = 5
+	"Carl Alexander #0" = 5
+	"Wilhelm Ludwig #0" = 5
+	"Eberhard Ludwig #0" = 5
+	"Carl Eugen #0" = 5
+	"Carl #0" = 0
+	"Johann #0" = 0
+	"Wilhelm #0" = 0
+	"Hans #0" = 0
+	
+	"Antonia #0" = -1
+	"Sophie #0" = -1
+	"Auguste #0" = -1
+	"Charlotte #0" = -1
+	"Feodora #0" = -1
+	"Renata #0" = -1
+	"Sieglinde #0" = -1
+	"Ulrike #0" = -1
+}
+
+leader_names = {
+	#majority are noble families represented in Eberhard III's council
+	"von Anweil" "von Asch"
+	"von Berg" "von Blankenstein" "von Bubenhofen"
+	"von Eberstein" "von Emershofen" "von Enzberg"
+	"von Freiburg"
+	"von Geroldsdeck" "von Grüningen-Landau" "von Gütlingen" "von Gundelfingen"
+	"von Helfenstein" "Truchseß von Höfingen" "von Hohenstein" "von Hornberg"
+	"von Kirchberg" "von Klingenberg"
+	"von Lichtenberg" "von Löwenstein" "von Lupfen"
+	"von Mansberg"
+	"von Nellenberg" "Nothaft von Hohenberg"
+	"von Oettingen"
+	"von Rechberg"
+	"von Schenkenberg" "von Sperberseck" "von Spät" "von Stain" "von Stammheim" "Sturmfeder" "von Sulz"
+	"Thumb von Neuburg"
+	"von Urslingen"
+	"von Württemberg"
+}
+
+ship_names = {
+	Wirtemberg "Konrad Wirtemberg" "Graf Ulrich I"
+	"Gräfin Mechthild" Stuttgart "Graf Ulrich III"
+	"Graf Eberhard III" "Gräfin Henriette"
+	Marbach Neuffen Balingen Mömpelgard
+}
+
+army_names = {
+	"Armee von $PROVINCE$" 
+}

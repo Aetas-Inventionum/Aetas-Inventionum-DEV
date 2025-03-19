@@ -1,0 +1,38 @@
+#5132 - Cefalu
+#Area - Sicily
+#Region - Italy
+
+#Core Details
+capital = "Cefalù"
+is_city = yes
+owner = SIC
+controller = SIC 
+
+#Demographics
+culture = sicilian
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 2
+base_manpower = 1
+trade_goods = grain
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = SIC
+
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

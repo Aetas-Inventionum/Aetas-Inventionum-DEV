@@ -1,0 +1,22 @@
+government = monarchy
+add_government_reform = tanistry_reform
+government_rank = 1
+technology_group = western
+primary_culture = irish
+religion = catholic
+capital = 4119	# Sligo
+
+# Estimated birth and death dates.
+
+1390.1.1 = {
+	monarch = {
+		name = "Briain I"
+		dynasty = "Ó Conchobhair"
+		birth_date = 1380.1.1 #guess based off of death date
+		death_date = 1440.1.1
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}
+

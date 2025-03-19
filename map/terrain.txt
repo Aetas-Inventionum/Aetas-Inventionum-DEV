@@ -1,0 +1,1229 @@
+##################################################################
+### Terrain Categories
+###
+### Terrain types: plains, mountains, hills, desert, artic, forest, jungle, marsh, pti
+### Types are used by the game to apply certain bonuses/maluses on movement/combat etc.
+###
+### Sound types: plains, forest, desert, sea, jungle, mountains
+
+categories =  {
+	pti = {
+		type = pti
+	}
+
+	ocean = {
+		color = { 255 255 255 }
+
+		sound_type = sea
+		is_water = yes
+
+		movement_cost = 1.0
+	}
+
+	inland_ocean = {
+		color = { 0 0 200 }
+
+		sound_type = sea
+		is_water = yes
+		inland_sea = yes
+
+		movement_cost = 1.0
+	}	
+
+	glacier = {
+		color = { 235 235 235 }
+
+		sound_type = desert
+
+		defence = 1
+		movement_cost = 1.25
+		supply_limit = 2
+		local_development_cost_modifier = 0.8
+		nation_designer_cost_multiplier = 0.75		
+		#New BT stuff		
+		local_dev_points_modifier = -0.30
+		local_autonomy = 0.3
+		local_fort_maintenance_modifier  = 0.5	
+		
+		terrain_override = {		
+			1034 1035 1104 1105 2074 2128 2129 2025 2440 2574
+			1038 #Typus
+		}
+	}
+
+	farmlands = {
+		color = { 179 255 64 }
+
+		type = plains
+		sound_type = plains
+
+		movement_cost = 1.10
+		local_development_cost = 0.1
+		local_development_cost_modifier = -0.1
+		supply_limit = 10
+		
+		allowed_num_of_buildings = 1
+		nation_designer_cost_multiplier = 1.05
+		#New BT stuff
+		local_dev_points_modifier = 0.10
+		
+		terrain_override = {
+			104 109 108 1744
+			
+			45 44 1874 113 172 
+			
+			161 2998 160 125
+			
+			506 507 510 522 523 524 532 540 555 556 558 561 563 2026 2044 2045 2047 2060 2063 2075 2095
+			
+			115 117 118 121 1862
+			
+			
+			916 917 920 925 930 2532
+			
+			584 600 
+			
+			153 1772
+			
+			613 2380
+			
+			180 167 183 192 200 2753 
+			
+			1868 68 77 70 65 78 1841 266 
+			255 254 258 259 260 134 151 152 1767 1954 150 268 280 1876
+			
+			245 248 
+			410 415 2310
+			
+			186 92 88 182 12 14 289 2407 279 
+			
+			695 696 1816 2137 690 691 2138 2139 2140 685 1821 1822 2141 2142 2145 1838 2143 2144  
+			684 2148 2149 2150 687 688 692 1836 2175 2176 671 672 682 683 2151 2172 679
+			665 667 2156 2157 2159 2163 700
+			
+			 2312 257 2033 148
+			64 2955 2957 267 2979 2980 2981
+			
+			#Sorted from here:
+			
+			194 4384 4390 #France
+			
+			43 97 98 4382 4383 #Netherlands
+			
+			235 236 4367 #British isles
+			
+			358 359 361 363 2316 4316 #Egypt
+			
+			264 4126 4173 4240 #Central Europe
+			
+			4194 4195 4196 4197 4212 4213 #Greater China
+			1020 1021 1028 1030 #Japan
+			735 2745 #Korea
+			
+			581 4396 585 586 # Burma
+			2076 4415 4416 4428 4476 4479 4487 4489 4490 4496 4497 4510 4513 #India
+
+			4831 4832 # Mandala
+			
+			#Aetas Inventionum
+			168 171 177 178 262 272 3201 3226 3227 
+			88 89 3253 3256 3257 3219 4776 3243 3299
+			4389 184 3231 3234 3235 3232 3233 3237 3247 3246 3245 3249
+			203 3258 3259 174 173 3277 3276
+			201 202 185 196 3306 3312 3313 4372 3329
+			188 189 94 4388
+			#bosnia
+			137
+			#ai bulgaria 
+			5533
+			#ai thrace
+			149 5525
+			#ai anatolia
+			318 327 5630 5707
+			#ai maghreb
+			337 338 341 342 343 344 1882 4563 5719 5720 6109
+			#ai egypt
+			362 4317 6174 6121 6122 6124 6125 6126 6139
+			#ai england & wales
+			241 243 3310 3315 3382 4371 4373 5612
+			#ai scotland
+			250
+			#ai france
+			87 175 176 179 199 3205 3220 3224 3225 3269 3228 3229 3230 3236 3278 3287 3288 3294 3302 3306 4111 4720 5014 5220 3223
+			1879
+			#ai brittany
+			170 3192 
+			#ai italy
+			103 105 106 111 112 114 116 1774 4727 4730 5058 5062 5094
+			#ai hungary
+			156 1864 5442 5444 5448 5450 5458 5460 5461
+			#ai south italy
+			122 1933 2982 2983 4736 5111
+			#ai spain
+			208 213 214 224 227 333 1746 1749 2751 3358 3365 3368 3370 3403 4552 4985 220 3360
+			#germany
+			57 61 62 85 1758 1762 1872 1878 2975 3346 3390 4768 5238 5239 5252 5367 5374 4743 79 5329 67 5297 86 56 4713 63
+			#slovakia
+			5462
+			#silesie
+			4238 4723 5258
+			#denmark
+			1983 4149 5619 5621
+			#sweden
+			1 6013 6016 6018 6019
+			#poland prussia
+			41 256 259 1939 1940 2424 2960 2961 4523 4526 4528 5831 5834 5851 5855 5856 5857 5858 5865 5870 5871 5873
+			#ai low cuntries
+			90 93 1866 3303 3348 3351 1931 100
+			#ai ireland
+			373 5168 5169 5174 5175 5178
+			#ai balkans
+			141 4239 4532 4704 5428
+			#cyp
+			321
+			#ai levant 
+			377 378 382 6145 6146 6147 6148
+			#albania
+			143 4174
+			#bulgaria
+			2476
+			#bosnia
+			3002
+			#croatia
+			131 136 1826 4753 5393 5396 5399 5401 5402
+			#bulgaria
+			159 2746 2750 5503 5504 5517 5518 5519 5520 5546
+			#azores
+			367 5708
+			#ukraine
+			1945
+			#volga delta
+			464 6253 6288
+			#lithuania
+			1936
+			#switzerland
+			165 1867 4712 5037
+			#alsace
+			1880 4765
+		}		
+	}
+	forest = {
+		color = { 18 74 9 }
+
+		type = forest
+		sound_type = forest
+		
+		movement_cost = 1.25
+		defence = 1
+		supply_limit = 4
+		local_development_cost = 0.2
+		nation_designer_cost_multiplier = 0.9
+		#New BT stuff
+		local_autonomy = 0.04
+		local_dev_points_modifier = 0.10
+		
+		terrain_override = { 
+			2 4 8 9 11 18 29 30 31 315 4123 4124 # Sweden
+			309 1955 #Russia
+			2611 996 997 998 2575 #n am
+			
+			1054 1046 10
+			993 1011 2572 2583 2671
+			
+			978 980 2022 2517 2573 2582 2593
+			960
+			1085 1246
+			1026 4187 #Japan
+			312 #Eastern Europe
+			
+			4151 1777 1776 313 4152 19 32 1961 4259 
+			314 305 1067 1780 2431 1061 
+		    1069 1070 1073 1059 2430 2436 2437 1045 2438 1051 2434 4114 4113 4258 1958 #Typus
+			#ai greece
+			147
+			#ai france
+			181 3217 3261 3265 3344
+			#ai low countries 
+			3332 3363 3380
+			#ai galicia
+			4558
+			#spain
+			4958
+			#hungary
+			5469 5758
+			#pologne
+			5868
+			#lithuania
+			4537 5888
+			#germany
+			4718 4747 4766
+			#sweden
+			3 5138 4164 6068 6070 6073 28 6077 6063 6065 6066 6024 6045
+			#ireland
+			4379 5166
+			#portugal 
+			228
+			#germany  
+			5262 2969 60 51 5299 5366 5379 83
+		}                                      
+	}
+	
+	hills = {
+		color = { 113 176 151 }
+
+		type = hills
+		sound_type = mountains
+
+		movement_cost = 1.40
+		defence = 1
+		local_defensiveness = 0.1
+		local_development_cost_modifier = 0.2
+		nation_designer_cost_multiplier = 0.85
+		supply_limit = 5
+		#New BT stuff
+		local_autonomy = 0.05
+		local_dev_points_modifier = 0.10
+		local_fort_maintenance_modifier  = 0.1
+		
+		
+		terrain_override = {
+			508 509 511 515 525 527 530 545 550 554 557 1947 2036 
+			2037 2040 2043 2056 2058 2069 2070 2071 2080 2090 2092 2097
+			
+			107 1844  
+			
+			1827 63
+			
+			488 489 837 839 841 844 847 849 851 854 855 899 911 959 966 981 992 994 995 2023 2515 
+			2518 2557 2558 2562 2565 2567 2571 2577 2579 2627 2638 2640 2642 2648 2653 2657 2660
+			
+			931 935 949 951 961 964 969 972 986 2580 2011 2012 2509 2527 2531 2548 2552 2553 2555 2556 2559 2563 2607 2608
+			1117 1121
+			
+			1016 2373 1022 1823 604 609 615 611 2382 608 2379 
+			2299
+			2606 2658
+			
+			102 198 325
+			101
+			140
+			123 1934 119
+			
+			669 670 681 686 1824 1829 1833 1840
+			2146 2147 2152 2153 2158 2171 2173 2174 
+			652 657 658 2697 2698 2701 
+			
+			2976 2977 2978 2984 2991
+			4366 #British Isles
+			1792 4023 #Madagascar
+			4046 4050 4063 4066 4068 4069 4070 4072 4098 4102 #Central Africa
+			156 1951 #Carpathians
+			4144 4145 #Scandinavia
+			232 #Iberia
+			733 2694 2742 2744 4229 4231 #Korea
+			1018 1025 1029 1820 1830 1832 1843 1852 4180 4183 4185 4188 4191 4192 #Japan
+			#Balkans
+			1856 #Caucasus & Anatolia
+			4449 4483 4484 4485 4491 4492 4493 4511 #North India
+			521 548 559 740 4430 4434 4453 4459 4462 4465 4466 4467 4480 4500 #Central India
+			518 529 531 533 538 1949 2027 2030 2032 2083 2089 4414 4420 4425 4426 4427 4429 #South India
+
+			4764 # Salins
+			
+			4840 # Mandala
+			
+			4856
+			
+			2439 1036 #Typus
+			
+			#Aetas Inventionum
+			3242 3300 3298 3272 3281 3275 3274 3280
+			4391 3296 3284 3285 3325 3326
+			#maghreb
+			2454 2462 5764 5765 5774 5794 5797 5799 5803 5822
+			#ai england/wales
+			233 242 1861 3323 4785 5180
+			#ai italy
+			2992 5042 5051 5052 5084 5087 5088 5113 5118 5120
+			#germany
+			4717 4724 5242 5243 5244 5249 5250 5364 5382 4716
+			3387 1760
+			5303 1771 5237 5236 5020 5331 2972 4773 5333 80 5381 5385
+			#spain
+			2989 3402 4788 4961 4550 3359
+			#france
+			3244 3279 3282 3283 4695 4777 4983 5226
+			#slovakia
+			154 162 1318 4236 5464 5465
+			#ireland
+			376 4121 4378 4380 5161 5170
+			#ai balkans
+			1831 4757 5410 5415 5426 5427
+			#albania
+			4750 5435 6322
+			#more bosnia
+			139 4755 5416 5419
+			#croatia
+			5386 5392
+			#hungary 
+			5451 5455
+			#portugal
+			4975 4976 4979 4981 4993
+			#low countries
+			#swiss
+			1870 5034 5035 5033 5030
+		}
+	}
+
+	
+	woods = {
+		color = { 41 155 22 }
+
+		type = forest
+		sound_type = forest
+
+		movement_cost = 1.10
+		defence = 1
+		local_development_cost = 0.1
+		nation_designer_cost_multiplier = 0.9
+		supply_limit = 6
+		#New BT stuff
+		local_dev_points_modifier = 0.10
+		local_autonomy = 0.02
+		
+		terrain_override = {
+			206 1851 # Spain
+			374 375 376 4118 4120 #Ireland
+			129  # Balkans
+			968 970
+			58
+			130
+			4148 #Russia
+			
+			141
+			859 918 919 939 940 944 946 947 948 963 987 988 2560 2585 2586 2639
+			
+			1765 2750
+
+			895 914 933 934 937 941 943 954 955 958 956 965 967 989 2010 2528 2529 2523 2524 2525 2526 2540 2541 2544 2545 2549 2584 2670
+			
+			2014 2665 1937
+			
+			
+			1834 37 273 271 770 275 771 311 1960 274 34 310 1752 1959 
+			
+			40 1938 261 316 317 178 184 187 
+			181 72 69 176 66 81 84 86
+			56 82 
+			50 1759 48 49 1763 59 
+			38 296 297 298 372 247 1863 2 1985 2749 1753 307 1956 1754 
+			2423 306 1957 1083 1079 1972 2427 1074 2428 2433 2429 1068 1064 480 1065 
+			2432 2443 1062 1063 1060 2442 2435 1056 2446 
+			2551 2013 971 2566 2570 985 984 2569 2568 945 2521 2522 2587 912 2487 973 874 873 2482 
+			276 2304
+		 
+			767
+			
+			727 731 1033 1049 1050 1053 2102 2106
+			2964  2970 2974 2975 2995 2997 3000 4112 4116 4117
+			1084 1093 1094 1107 2730 2733 #Australia
+			1982 4165 4166 #Scandinavia
+			1014 1027 1819 1835 4181 4182 4184 4186 4189 #Japan
+			4127 4241 4243 4251 4252 4253 4254 4260 4266 #Eastern Europe
+			240 244 4377 #Britain
+			4389 #France & Low Countries
+
+			4767
+			
+			4853 4852 4864
+			
+			#Aetas Inventionum
+			3191 3301 3271 3263 3295 4696
+			3289 3251 234 238 3318 3317 4368 4375 3241
+			3337
+			#ai anatolia
+			5634 5660
+			#ai greece
+			3003 5557 5558 5559 5582
+			#ai north macedonia
+			5560
+			#ai bosnia
+			5418 5420
+			#ai england
+			3305 3307 3314 3316
+			#ai france
+			191 193 195 3199 3221 3262 3270 3286 3397 4697 3294
+			#germany
+			2966 4749 5265 5274 5275 5283 5285 5296 5313 5332 5345 5825 5828 5847 71 5326 5290 74 5369 53
+			#pologne prussie
+			4527 5836 5837 5862 5867
+			#denmark
+			5627
+			#lithuania
+			5885 5902 5903 5904
+			#belarus 
+			770 4544 5874 5895 5896 5903 5908 5909 5910 5914 5915 5916 5929 5930
+			#sweden
+			16 4163 6012
+			#ireland
+			4119 5173 5176
+			#upper volga
+			6315
+			#ukraine
+			293 5924 5925 5931 5926 5938 5950 5956
+			#switzerland
+			166 4721
+			#iberia
+			212 3392
+		}
+	}
+	
+	mountain = {
+		color = { 105 24 4 }
+
+		type = mountains
+		sound_type = mountains
+
+		movement_cost = 1.5
+		defence = 2
+		local_defensiveness = 0.25
+		local_development_cost = 0.2
+		local_development_cost_modifier = 0.2
+		nation_designer_cost_multiplier = 0.75
+		supply_limit = 4
+		#New BT stuff
+		local_dev_points_modifier = -0.20
+		local_fort_maintenance_modifier  = 0.25
+		local_autonomy = 0.1
+		local_build_time = 0.25
+		local_build_cost = 0.25
+		
+		
+		terrain_override = {
+			210	# Spain
+			138  #Balkans
+			158 1952 #Hungary
+			4236 #Slovakia
+			974 975 976 977 2003 2020 2480 2481 2486 2609 2610 2612 2613 936  #North America
+			2154 2155 #East Asia
+			808 814 2825 #South America
+			452 2073 #Tibet
+			1078
+			4198 4201 4205 4206 4210 4214 4215 4216 4217 4211 4222 #Greater China
+			
+			1787 1788
+			
+			120
+			783 794 802 824 856 857 860 871 875 878 879 880 2477 2484 2485 2491 2493 2494 2495 2605 2617 2618 2813 2817 2824 2826 2871
+			2874 2395 2396 583 587 872 2505 2604 2877 2873
+			1180
+			
+			2371 2381 330 
+			785 
+			2564
+			204 
+			144
+			124
+			2305 331 2306 
+			703
+			2327 383
+
+			680 689 693 694 697 702 2136 2169 2177 2178 2179 2180 2181 
+			716 718 719 1066 2117 2189 2190 2125 2127 
+			565 676 677 2074 2128 2129 2130
+			
+			2103 1048 2104 2105 729 2186 1850 2107 2108 2111 2112 222
+			732 734 2743 4232 #Korea
+			4131 #Japan
+			1109 #New Zeeland
+			1273 #Mount Kilimanjaro
+			4128 #Carpathians
+			20 22 #Norway
+			422 2201 2198 4301 4306 #Caucasus
+			384 385 386 390 2332 2345 4280 4281 4282 #Hejaz Range
+			435 436 #Khorasan
+			4348
+			4404 # Burma
+			4514 4515 4516 4517 4518 4519 4520 4521 #tibet
+			
+			2444 4717 205 1873 73 110 4759 132 128 #Typus
+			
+			#Aetas Inventionum
+			3266 3297 3291 3292 3354 2987 
+			#ai anatolia
+			329 4308 4311 4313 4315 5656 5706
+			#ai maghreb
+			5774 5779
+			#ai scotland
+			5154 5155 5156 5158
+			#ai italy
+			4731 4733 5110 5112 5114
+			#alps
+			1768 1871 4722 4758 4997 5055 5060 5096 5109 5182 5183 5185 5201
+			#austria
+			5194 5198
+			#cyprus
+			5000
+			#albania
+			5430
+			#bosnia
+			1828 5406 5413 5414 5417
+			#croatia 
+			5407
+			#bulgaria
+			5543 5544 5548 5550
+			#spain
+			2990 3356 3361 3367 3369 4551 4964 3366 223
+			#france
+			197
+			#canaries
+			366 4565
+		}
+	}
+
+	impassable_mountains = {
+		color = { 128 128 128 }
+
+		sound_type = desert
+
+		movement_cost = 8.0
+		defence = 6
+		local_development_cost = 10		
+	}
+
+	grasslands = {
+		color = { 90 235 27 }
+
+		type = plains
+		sound_type = plains
+		
+		movement_cost = 1
+		supply_limit = 8
+		
+		allowed_num_of_buildings = 1
+		nation_designer_cost_multiplier = 1
+		
+		terrain_override = {
+			2666 # North America
+			526 #India
+			417 4341 #Iran
+			2386 593 2376 2391 2394  #Sout East Asia
+			
+			# Balkans	
+
+			373 # Ireland			
+					
+			149
+			1943
+			
+			516 517 539 543 552 549 562 572 1948 2046 2055 2057 2059 2061 2062 2081 
+			2082 2084 2094 2101
+			
+			114
+			
+			772 773 778 898 905 2632 2848
+			2851 2852 
+			328
+			2399 2390 
+			1953 155
+			
+			896
+			890 891 901 903 2016 2511 2598 2602 
+			1177 2850
+			
+			71 79
+			2728 1086
+			1859
+			2739
+			2296 318
+			1170 2949 798 2948
+			2673 617 636 596 597
+			641
+			
+			704 726 730 2110 2113
+			42
+			4150 #Iberia
+			1017 1012 1019 1023 1024 1818 1825 1837 1839 1847 4359 4360 #Japan
+			737 1013 1845 4227 4230 #Korea
+			4394 # Burma
+			
+			#Aetas Inventionum
+			87 170 3190 3192 3204 3255
+			181 190 3208 3211 3308 
+			#ai greece
+			146 4175 4702 4750 4779 5284 5437 5544 5565 5569 5570
+			#ai bulgaria
+			5503
+			#ai albania
+			143
+			#bosnia
+			140
+			#croatia
+			#aimaghreb
+			334 356 5713 5718 5727 5728 5731
+			#ai anatolia
+			4309 5631 5632 5633 5640 5648 5661 5679 5680 5682 5684 5685 
+			#ai england/wales
+			239 3327 4376
+			#ai scotland
+			249 251 5145
+			#ai france
+			1743 1877 3193 3197 3202 3203 3207 3209 3210 3213 3214 3216
+			3222 3239 3240 3248 3250 3252 3264 3273 3336 3338 3396 3399 4385 4387 4392
+			5223 5338 3220 5229 3268
+			#ai italy
+			4732 5070 5089 5091 5097 5122
+			#portugal
+			4556 4973 4974 4993
+			#spain
+			207 209 211 226 2988 3355 3357 3401 3406 4970 215 4971 4553 4969 216 4972
+			#france
+			169 177 3194 3200 3254
+			#germany
+			1775 1857 1858 2971 2973 2993 3333 3339 4741 4744 4768 4786 5272 5276 5277 5286 5287 5288 5289 
+			5306 5314 5326 5329 5375 4775 5334 55 5376 5311 2965 5368 53
+			#denmark
+			15 1984 5614 5617 5618 5623 5624 5629
+			#scania 
+			6 
+			#poland
+			5853
+			#low
+			93 1742 5013 3345
+			#ireland
+			5172
+			#serbia
+			3000
+			#cyprus
+			4998
+			#levant
+			6152
+			#egypt
+			360 2317 2319 4318 4320 6121 6175
+			#montenegro 
+			4754
+			#croatia
+			5388 5398
+			#low countries
+			3347 5015
+			#scands
+			6026 17 24
+		}
+	}
+
+	jungle = {
+		color = { 98 163 18 }
+
+		type = jungle
+		sound_type = jungle
+
+		movement_cost = 1.5
+		defence = 1
+		local_development_cost = 0.30
+		nation_designer_cost_multiplier = 0.8
+		supply_limit = 5
+		#New BT stuff
+		local_dev_points_modifier = 0.10
+		local_autonomy = 0.05
+		local_defender_dice_roll_bonus = 1
+		
+		terrain_override = {
+			1237 1245 2703 #South East Asia
+			746 838 #South America
+			 553 564 566 567 568 570 571 573 1950 2042
+			 2091 2096
+			2039
+			486 490 743 745 748 826 835 840 846 848 2630 2637 2641 2647 2654 2655 2659 2664 2819 2927
+			
+			582 2397 2398 579 2402 1815 590 2403 2400 589 602 1817 2389 2388 592 591 2404 843
+			789 1151 1181 1182 1183 2952
+			
+			616 2372 610 2377
+			756 759 757 765 2894 2896 2914 2929 
+			1125 1138 1139 1162 1249
+			1118
+			
+			660 663 664 666 2160 2161 2162 2164 2166
+			546 547 551 560 1946 2034 2038 2048 2049 2098 4431 4432 4433 4448 4450 4451 4468 4470 4471 4472 4478 #Central India
+			534 535 537 2028 2029 2050 4410 4412 4413 4438 4439 4444 #South India
+			2099 2100 4407 4408 4409 #Ceylon
+			2731 2732 #Australia
+			4021 4024 4025 4026 #Madagascar
+			4090 4105 4109 #Central Africa
+		}
+	}	
+	
+	marsh = {
+		color = { 13 189 130 }
+
+		type = marsh
+		sound_type = forest
+
+		movement_cost = 1.3
+		defence = 1
+		local_development_cost = 0.50
+		local_development_cost_modifier = -0.2
+		nation_designer_cost_multiplier = 0.85
+		supply_limit = 5
+		#New BT stuff
+		local_dev_points_modifier = 0.10
+		local_fort_maintenance_modifier  = 0.1
+		local_defensiveness = 0.1
+		local_autonomy = 0.05
+		
+		terrain_override = {
+			1860 #England
+			96 4381 #Netherlands
+			 #Austria
+			893
+			950 #n am
+			2857 2890 #South America
+			927 928 2534 2536 2537 2516
+			749 758 775 777 999 1000 1003 1004 1005 1006 2592 2599 2600
+			1217 2259 2261 2286 2287 2759
+			277 4141
+			3212 4386 #France
+			1031 #Japan
+			408 2311 4288 4290 #Middle East
+			462 #Caucasus
+			#Egypt
+			2702 #Philippines
+			
+			1072 #Typus
+			
+			#Aetas Inventionum
+			3195 3293 243
+			#ai england
+			3383
+			#ai low countries
+			95 99 3349 4770
+			#ai germany
+			46 47 2996 5294 5279
+			#lithuania, belarus, etc
+			270 1941 1942 4115 4242 4247 4545 5886 5887 5889 5890 5912 5933 5934 5935 5957
+			#portugal
+			4787
+			#france
+			3196 3198 3212
+			#italy
+			5072 5073
+		}
+	}
+	
+	desert = {
+		color = { 242 242 111 }
+
+		type = desert
+		sound_type = desert
+
+		movement_cost = 1.05
+		supply_limit = 4
+		local_development_cost = 0.2
+		local_development_cost_modifier = 0.2
+		nation_designer_cost_multiplier = 0.8
+		#New BT stuff
+		local_dev_points_modifier = -0.20
+		local_autonomy = 0.1
+		local_build_time = 0.25
+		local_build_cost = 0.25
+		
+		terrain_override = {
+			503 2078 2088 #India
+			
+			4207 4221 4223 4693 #Greater China
+			
+			512 513 514 2064 2066 2086
+			867 2844
+			2490
+			350 1115 2244 2271 2272 2767 2773
+			1176
+			1231
+			715 710 711 712 2121 2123 2191 2192 706 707 708 698 701 709 720 2193 2747 
+			2216
+			#ai maghreb 
+			346 352 5717 5809 5820 6083
+			#levant
+			407 2314 6132
+			#egypt
+			6177
+		}
+	}
+	
+	coastal_desert = {
+		color = { 255 211 110 }
+
+		type = desert
+		sound_type = desert
+
+		movement_cost = 1.0
+		local_development_cost = 0.1
+		local_development_cost_modifier = 0.1
+		
+		nation_designer_cost_multiplier = 0.9		
+		supply_limit = 4
+		#New BT stuff
+		local_dev_points_modifier = -0.10
+		local_autonomy = 0.05
+
+		terrain_override = {
+			792 793 796 805 806 2821 2822 2840 2841
+			2324
+			1212 1215 1230 1232 2315 2320 2321 2765 2786 2788 2789
+			1174 #Angra Pequena
+			865 866 
+			1206 1209 2024 2790 2793
+			782 
+			389 394 395 396 397 398 399 400 401 402 1099 2329 2331 2333 2340 2341 2342 2347 4269 4278 4283 4284 #Arabia
+			4286
+			
+			4867 4866 4865 2726 4849 4848 4847
+			#ai maghreb 
+			355 357 2451 2452 5815 5817 6088 6108 6111
+			#ai egypt
+			2325 2326 6115 6118 6129 6130 6131 6134 6135 6136 6137
+		}	
+	}
+	
+	coastline = {
+		color = { 49 175 191 }
+
+		sound_type = sea
+
+		movement_cost = 1.0
+		local_development_cost_modifier = 0.1
+		nation_designer_cost_multiplier = 0.85		
+		supply_limit = 6
+
+		
+		terrain_override = {
+			957 962 2554 2561 2578 #n am
+			
+			112
+			487 492 497 498 499 500 501 502
+			982 
+			
+			788 1186 1192 1195 1196 1197 1198 1199 1200 1202 1203 1204 2796  
+			
+			938 2547 
+			368 1098 1095 1103 1102 1100 1101 1999 1998 2679 2678 
+			647 634 645 2741 1994 1992 1986 1242 1989 1988 979 1240 491
+			
+			4049
+			253 4364 4365 #Britain
+			653 655 656 2699 2700 654 4349 4350 4351 4352 4353 4354 4355 4356 #Philippines
+			642 643 644 648 649 650 2713 2714 2716 2717 2718 2725 #Moluccas & Sulawesi
+			1015 4193 #Japan
+			387 4279 #Tihama al yemen
+			
+			#Aetas Inventionum
+			3238 242
+			#ai greece
+			5579
+			#ai lowcountries
+			96
+		}
+	}	
+	
+	drylands = {
+		color = { 232 172 102 }		
+
+		type = plains
+		sound_type = plains
+
+		movement_cost = 1.00
+		local_development_cost = -0.1
+		local_development_cost_modifier = 0.1
+		nation_designer_cost_multiplier = 0.95
+		supply_limit = 7
+		allowed_num_of_buildings = 1
+		#New BT stuff
+		local_dev_points_modifier = -0.10
+
+		terrain_override = { 
+			221 1750 
+			2754
+			2297 411 2199 2208 4314 2300 #Turkey and Caucasus
+			420 421 425 2203 2307 4307 #Caucasus
+			428 429 454 442 441 1973 444 445 446 450 453 2213 2214 2215 2228 2362 2370 4343 4337 #Iran, Transoxiana & Balkh
+			504 505 519 528 541 569 2031 2051 2052 2053 2054 2065 2067 2072
+			2999
+			751 752 753 790 799 858 882 2498 2614 2620 2643 2668 2842 2854 2865 
+			2868 2878 2883 2885 2915 2917 2922 
+			750 2863
+			1178 2764 2768 2797 2798 2801 2864
+			754 755 786 862 868 876 1809 2492 2507 2619 2667 2846 2861 2912 2913 2921 
+			1172 2682 2503 2068
+			
+			322
+			2308 2309 377
+			2356 739
+			
+			699 713 2122 2124 2182 2184 2302
+			#Egypt
+			4209 #Greater China
+			338 345 1110 2461 2466 2469 #Maghreb
+			1089 1091 #Australia
+			382 406 412 430 431 1855 2219 4292 4297 4298 #Levant
+			1222 4040 #Central Africa
+			4411 4421 4435 4437 4454 4455 4456 4463 4503 4504 4505 4509 #India
+			457 1967 458 #Typus
+			#ai anatolia 
+			4312 5651 5635 5647 5664 5665 5676 5678 5686 5694
+			#ai maghreb
+			354 4566 5768 5771 5792 6085
+			#ai egypt
+			4319 6120 6123 6140 6141 6176
+			#ai levant
+			364 379 1849 1854 2313 6144 6145 6146 6151 6159 6163 6168 6170 
+			#ai hispania. semi-arid drylands 
+			217 219 2755 3371 3372 3404 3405 3409 3410 3411 3413 3414 4547 4549 4560 4944 4945 4946 4947 4948
+			4950 4951 4952 4953 4954 4955 4956 3407
+			225 3408 218 4942 4548 1747 3412
+			#portugal
+			229 4150 4986 4987 4988 4990 4991
+			#oases in algeria
+			2456 2457 5766
+			#maghreb
+			340 352 2453 2473 5746 5767 5793 5796 5809 5816 5818 5819
+			#caucasus
+			6243 6244 6247 6263 6276 6277 6278
+			#nogai
+			465 6279 6280
+			#canaries
+			5710
+		}
+	}
+
+	highlands = {
+		color = { 176 129 21 }
+
+		type = hills
+		sound_type = mountains
+		
+		supply_limit = 6
+		movement_cost = 1.40
+		defence = 1
+		local_defensiveness = 0.1
+		local_development_cost = 0.2
+		nation_designer_cost_multiplier = 0.9	
+		#New BT stuff	
+		local_fort_maintenance_modifier  = 0.1
+		local_autonomy = 0.05
+
+		terrain_override = {
+			520 536 542 544 578 2035 2077 2079 2085 2087 2093
+			850 852 853 2018 2621 2622 2623 2626 2628 2629 2644 2646 2645 
+			588 2401 2301 324 1224 
+			869 2006 2019 2483 2488 2496 2501 2624
+			335 336 339 348 1171 1184 1185 1188 1207 1208 1211 1218 1219 1227 1751 2274 2458 
+			2464 2756 2757 2758 2762 2763 2766 2770 2771 2772 2778 2779 2781 2787 2792 2950 2951
+			326 332 418 1846 
+			2303
+			2478 2489 2504 	 
+			252 784 2946 823
+			1773 127 1247
+			1766
+			319 2298 
+			371 163
+			661 662 673 674 675 678 705
+			2131 2132 2133 2134 2135 2165 2167 2168 2170 2748 2183 
+			3001 4176 #Balkans
+			4199 #Greater China
+			145 365 2209 2235 4293 4294 4295 4298 #Middle East
+			1108 1090 2734 2738 #Australia & New Zeeland
+			458 1968 #Central Asia
+			4027 4029 4030 #Madagascar
+			798 4053 4055 4056 4057 4059 4067 4073 4077 4084 4100 4101 4103 #Africa
+			4110 #Scotland
+			23 370 2752 #Norway
+			#Iberia
+			323 2202 4299 4305 #Anatolia and Caucasus
+			736 1047 4228  #Korea & Manchuria
+			2986 4391 #Italy & France
+			4406 4398 # Burma
+			4422 4436 4464 #Central India
+			#ai north macedonia
+			5555 5561
+			#ai greece 
+			1853 5556 5574 5575
+			#ai maghreb 
+			2448 2467 2468 5716 5721 5763 5775 5776 5783 5789 5791 5795 
+			5802 5821 6092
+			#ai anatolia
+			1848 3215 4999 5637 5639 5641 5642 5643 5645 5657 5658 5662 5667 5668 5671 5675 5683 5687 5690 5697 5699
+			#ai levant
+			380 381 6127 6128 6145 6149 6160 6163 6165
+			#ai scotland
+			5147 5148 5151 5152 
+			#ai iceland
+			6001 6003 6004
+			#sicily
+			5134 5135
+			#spain
+			3362 3364 4557 4943 5611 4789 4546 1748
+			#portugal
+			230 4989
+			#granada
+			222 3373 3375 3378 3379
+			#serbia
+			4176 5422 5423 5429
+			#cyp
+			5001
+			#croatia
+			#albania
+			4750
+			#canaries
+			5709
+		}
+	}
+
+	savannah = {
+		color = { 248 199 23  }
+
+		sound_type = plains
+		type = plains
+
+		supply_limit = 6
+		movement_cost = 1.00
+		local_development_cost_modifier = 0.2
+		nation_designer_cost_multiplier = 0.95	
+		#New BT stuff	
+		local_dev_points_modifier = -0.10
+		
+		terrain_override = {
+			768 776 1800 2805 2809 2810 2812 2814 2815 2855 2859 2879 2884 2887 
+			2893 2895 2897 2908 2909 2910 2918 2923 2925 2926 2939 
+
+			1113 1116 1123 1131 1134 1135 1140 1142 1148 1146 1149 1144 1155 1159 2237 2239 2245 2250 2263 2265 2270 2278 
+			2279 2280 2283 2291 
+			
+			607 2374 606 605 2378 614 2386 603 612
+			484 485 870 883 884 887 888 894 897 900 902 915 922 923 924 926 932 942 1008 1010 2017 2021 2479 2513 2514 2520
+			2530 2533 2535 2538 2542 2543 2546 2596 2669 2853 2888 2891 2892 2906 2907 2911 2919 2920 
+			
+			1114 1120 1122 1124 1136 1137 1143 1145 1150 1152 1154 1160 1161
+			2238 2240 2241 2248 2249 2252 2254 2253 2256 2267 2281 2285 2292 2293 2295
+			1167 1168 1190 1191 1193 1194 2774 2775 2794
+			913 929 1153 2266 2519 2597 2656 2886 2924 1187 1189
+			1088 2736 2726 2729 #Australia
+			1925 #Kenya
+			4022 4028 4031 4032 #Madagascar
+			2948 4034 4035 4036 4037 4038 4039 4041 4042 4043 4044 4045 4047 4048 4058 4061 4062 4064 4065 4071 4074 4075 4076 4082 4083 4091
+			4092 4093 4094 4095 4096 4097 4099 4104 4105 4106 4107 4108 #Central Africa
+			
+		}		
+	}
+	
+	steppe = {
+		color = { 147 200 83  }
+		type = plains
+		sound_type = plains
+
+		movement_cost = 1.00
+		local_development_cost_modifier = 0.1
+		nation_designer_cost_multiplier = 0.9	
+		supply_limit = 6
+		#New BT stuff	
+		local_dev_points_modifier = -0.20
+		local_autonomy = 0.02
+		
+		terrain_override = {
+			2195 463 2197 2417 466 2367 470 472 2353 2369 2358 476 2354 479 2357 1966 2420
+
+			284 1974 2412 2413 286 2414 287 2447 283 2406 282 1756 
+			
+			301 300 1778 304 303 2415 302 2408 299 2409 285 291 2411 467 
+			1081 473 2421 1971 288 468 2418 2419 474 2366 1965 1082 475 2441 2359
+			2360 478 2355 2422
+			
+			2416
+			1057 
+			
+			2434 1076 1075 1071
+			889 2004 2009 2625 2672 
+			4033
+			
+			885 886 892 906 1226 2500 2118
+			
+			774 1132 1133 1156 1157 1158 1205 1216 1221 1225 2243 2246 2260 2262 2264 2268 2269 2273 2276 2282 2284 2288 2776 2777 2799 2780 2784 2783 2785 2795 
+			2800 2802 2932
+			
+			779 780 781 2008 2497 2499 2510 2502 2666 2860 2866 2869 2870 2875 2876
+			833 1175 1179
+			2880 
+			4255 4264 4265 4267 # Russia
+			
+			459 2126 2368 
+			717 721 722 723 724 725 728 1058 2109 2114 2115 2116 2185 2187 2188
+			2727 #Australia
+			
+			4200 4202 4203 4218 4219 4220 #Greater China
+			#AI Maghreb
+			2459 5732 5733 5734 5735 5736 5781 5790
+			#pontic steppe
+			290 1944 2365 2405 4542 5591 5945 5946 5947 5948 5949 6183 6184 6185 6187 6188 6189 6190 6191 6195 6196 6197 6198 6199 6200 6201 6202 6203 6204 6205 6206 6207 6208
+			6209 6210 6211 6213 6214 6216 6217 6218 6219 6220 6221 6224 6230 6233 6234 6235 6245 6246 6248 6249 6250 6251 6252 6254 6255 6256 6259
+			6262 6267 6268 6269 6270 6271 6272 6281 6282 6289 6290 6291 6292 6293 6294 6295 6296 6297 6298 6299 6300 6301 6302 6303 6304
+			6305 6306 6307 6308 6309 6310 6311 6312 6313 6314 6320 6321 6324 6325 6326 6328 6330 6331 6332 6333 6335 6336 6337 6338 6339 
+			6340 6341 6342 6343 6344 6345 6346 6347 6348 6349 6350 6351
+		}	
+	}	
+}
+	
+##################################################################
+### Graphical terrain
+###		type	=	refers to the terrain defined above, "terrain category"'s 
+### 	color 	= 	index in bitmap color table (see terrain.bmp)
+###
+
+terrain = {
+	grasslands			= { type = grasslands		color = { 	0	 } }
+	hills				= { type = hills			color = { 	1	 } }
+	desert_mountain		= { type = mountain			color = { 	2	 } }
+	desert				= { type = desert			color = { 	3	 } }
+
+	plains				= { type = grasslands		color = { 	4	 } }
+	terrain_5			= { type = grasslands		color = { 	5	 } }
+	mountain			= { type = mountain			color = { 	6	 } }
+	desert_mountain_low	= { type = desert			color = { 	7	 } }
+
+	terrain_8			= { type = hills			color = { 	8	 } }
+	marsh				= { type = marsh			color = { 	9	 } }
+	terrain_10			= { type = farmlands		color = { 	10	 } }
+	terrain_11			= { type = farmlands		color = { 	11	 } }
+
+	forest_12			= { type = forest			color = { 	12	 } }
+	forest_13			= { type = forest			color = { 	13	 } }
+	forest_14			= { type = forest			color = { 	14	 } }
+	ocean				= { type = ocean			color = { 	15	 } }
+
+	snow				= { type = mountain 		color = { 	16	 } } # (SPECIAL CASE) Used to identify permanent snow
+	inland_ocean_17 	= { type = inland_ocean		color = {	17	 } }
+
+	coastal_desert_18	= { type = coastal_desert	color = { 	19	 } }
+	coastline			= { type = coastline		color = { 	35	 } }
+	
+	savannah			= { type = savannah 		color = {	20	 } }
+	drylands			= { type = drylands			color = {	22	 } }
+	highlands			= { type = highlands		color = {	23	 } }
+	dry_highlands		= { type = highlands		color = {	24	 } }
+	
+	woods				= { type = woods			color = { 	255	 } }
+	jungle				= { type = jungle			color = { 	254	 } }
+	
+	terrain_21			= { type = farmlands		color = { 	21	 } }	
+}
+
+##################################################################
+### Tree terrain
+###		terrain	=	refers to the terrain tag defined above
+### 	color 	= 	index in bitmap color table (see tree.bmp)
+###
+
+tree = {
+	forest				= { terrain = forest 			color = { 	3 4 6 7 19 20	} }
+	woods				= { terrain = woods 			color = { 	2 5 8 18	} }
+	jungle				= { terrain = jungle 			color = { 	13 14 15	} }
+	palms				= { terrain = desert 			color = { 	12	} }
+	savana				= { terrain = grasslands 		color = { 	27 28 29 30	} }
+}

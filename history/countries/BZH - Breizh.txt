@@ -1,0 +1,7 @@
+government = monarchy
+add_government_reform = bretonstate_reform
+government_rank = 1
+primary_culture = celtic_breton
+religion = catholic
+technology_group = western
+capital = 171 #Vannes, could be Dol where ancient kings of brittany were coronated

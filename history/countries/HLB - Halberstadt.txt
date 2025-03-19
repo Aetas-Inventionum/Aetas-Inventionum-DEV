@@ -1,0 +1,29 @@
+#HLB - Halberstadt
+
+#Political Situation
+capital = 5385
+fixed_capital = 5385 #Cannot move capital away from this province & no power cost to move to it
+
+#Government
+government_rank = 1
+government = theocracy
+add_government_reform = hre_bishopric_reform
+
+#Demographics
+primary_culture = eastphalian
+religion = catholic
+
+#Tech and Military
+technology_group = western
+
+#History
+1411.1.1 = {
+	monarch = {
+		name = "Albrecht IV"
+		dynasty = "von Stolberg"
+		birth_date = 1360.1.1
+		adm = 3
+		dip = 2
+		mil = 2
+	}
+}

@@ -1,0 +1,39 @@
+#2980 - Lucca
+#Area - Northern Tuscany
+#Region - Italy
+
+#Core Details
+capital = "Lucca"
+is_city = yes
+owner = LUC
+controller = LUC
+
+#Demographics
+culture = tuscan
+religion = catholic
+
+#Development and Trade
+base_tax = 6
+base_production = 5
+base_manpower = 5
+trade_goods = silk
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = LUC
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+center_of_trade = 2
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

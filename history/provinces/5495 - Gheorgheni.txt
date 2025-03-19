@@ -1,0 +1,43 @@
+#5495 - Gheorgheni
+#Area - 
+#Region - Carpathians
+
+#Core Details
+capital = "Gheorgheni"
+is_city = yes
+owner = SZK
+controller = SZK
+
+#Demographics
+culture = szekely
+religion = catholic
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 2
+trade_goods = naval_supplies
+
+#Cores and Occupation (Alphabetical after current)
+add_core = SZK
+add_core = TRA
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = KAZ
+discovered_by = CRI
+discovered_by = GOL
+discovered_by = AST
+discovered_by = QAS
+
+#Histories

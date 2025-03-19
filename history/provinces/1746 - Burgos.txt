@@ -1,0 +1,41 @@
+#1746- Burgos
+#Area - Old Castile
+#Region - Iberia
+
+#Core Details
+capital = "Burgos"
+is_city = yes
+owner = CAS
+controller = CAS
+
+#Demographics
+culture = castillian
+religion = catholic
+
+#Development and Trade
+base_tax = 4
+base_production = 4
+base_manpower = 4
+trade_goods = wool
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = CAS
+add_core = BGS
+
+#Other Political
+hre = no
+seat_in_parliament = yes
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+center_of_trade = 2
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

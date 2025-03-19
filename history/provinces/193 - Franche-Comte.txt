@@ -1,0 +1,39 @@
+#193 - Franche-Comte
+#Area - Franche-Comté
+#Region - France
+
+#Core Details
+capital = "Besançon"
+is_city = yes
+owner = BSA
+controller = BSA
+
+#Demographics
+culture = burgundian
+religion = catholic
+
+#Development and Trade
+base_tax = 4
+base_production = 4
+base_manpower = 4
+trade_goods = wine
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = BSA
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+center_of_trade = 1
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

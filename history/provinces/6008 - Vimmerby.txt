@@ -1,0 +1,38 @@
+#6008 - Vimmerby
+#Area - Smaland
+#Region - Scandinavia 
+
+#Core Details
+capital = "Vimmerby"
+is_city = yes
+owner = SWE 
+controller = SWE 
+
+#Demographics
+culture = geatish
+religion = catholic
+
+#Development and Trade
+base_tax = 1
+base_production = 2
+base_manpower = 1
+trade_goods = glass
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = SWE
+add_core = GTA
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

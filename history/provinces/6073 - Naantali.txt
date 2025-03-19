@@ -1,0 +1,36 @@
+#6073 - Naantali
+#Area - Finland
+#Region - Scandinavia 
+
+#Core Details
+capital = "Naantali"
+is_city = yes
+owner = SWE 
+controller = SWE 
+
+#Demographics
+culture = finnish
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 2
+base_manpower = 1
+trade_goods = paper
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = SWE
+add_core = FIN
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+
+#Histories

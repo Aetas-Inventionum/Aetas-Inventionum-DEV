@@ -1,0 +1,36 @@
+#6513 - Kotelnich
+#Area - Vyatka Land
+#Region - Russia 
+
+#Core Details
+capital = "Kotelnich" 
+is_city = yes
+owner = VYA
+controller = VYA
+
+#Demographics
+culture = mari
+religion = tengri_pagan_reformed
+
+#Development and Trade
+base_tax = 1
+base_production = 2
+base_manpower = 1
+trade_goods = livestock
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = VYA
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = nomad_group
+
+#Histories

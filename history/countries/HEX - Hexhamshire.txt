@@ -1,0 +1,8 @@
+government = monarchy
+add_government_reform = appanage_reform
+mercantilism = 25
+technology_group = western
+primary_culture = northumbrian
+government_rank = 1
+religion = catholic
+capital = 3326

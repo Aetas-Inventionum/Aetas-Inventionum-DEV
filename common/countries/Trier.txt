@@ -1,0 +1,86 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+color = { 208  104  44 }
+revolutionary_colors = { 5  8  5 }
+
+historical_idea_groups = {
+	trade_ideas
+	religious_ideas
+	economic_ideas
+	defensive_ideas
+	diplomatic_ideas
+	innovativeness_ideas
+	offensive_ideas
+	spy_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	dutch_maurician
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	prussian_uhlan
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Johann #1" = 50
+	"Theodorich #1" = 0
+	"Arnold #2" = 0
+	"Heinrich #2" = 0
+	"Boemund #2" = 0
+	"Diether #1" = 5
+	"Balduin #1" = 5
+	"Kuno #2" = 0
+	"Werner #1" = 10
+	"Otto #0" = 10
+	"Rhaban #0" = 10
+	"Jakob #0" = 10
+	"Richard #0" = 10
+	"Lothar #0" = 5
+	"Philipp #0" = 10
+	"Karl Kaspar #0" = 5
+	"Karl Josef #0" = 5
+	"Johann Hugo #0" = 5
+	"Franz Ludwig #0" = 5
+	"Franz Georg #0" = 5
+	"Clemens Wenzeslaus #0" = 5
+	
+	"Kasimira #0" = -1
+	"Lydia #0" = -1
+	"Nicola #0" = -1
+}
+
+leader_names = {
+	"von Baden"
+	"von Falkenstein"
+	"von Helmstätt"
+	"von Isenberg"
+	"von der Leyen"
+	"von Metternich" "von Metzenhausen"
+	"von Orsbeck"
+	"von Schönberg" "von Schönborn" "von Sötern"
+	"von Walderdoff"
+	"von Ziegenhain"
+}
+
+ship_names = {
+	Schweich Kenn Longuich Mertesdorf Kasel
+	Waldrach Morscheid Korlingen Gusterath
+	Hockweiler Igel Aach Newel Kordel Zemmer
+}
+
+army_names = {
+	"Erzbischofliche Garde" "Armee von $PROVINCE$" 
+}

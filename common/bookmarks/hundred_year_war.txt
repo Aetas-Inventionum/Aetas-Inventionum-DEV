@@ -1,0 +1,16 @@
+bookmark =
+{
+	name = "HUNDRED_YEAR_WAR"
+	desc = "HUNDRED_YEAR_WAR_DESC"
+	date = 1415.8.22
+	
+	center = 183
+	
+	country = FRA
+	country = ENG
+	country = SCO
+	country = BUR
+	country = BRI
+	country = FOI
+	country = ANJ
+}

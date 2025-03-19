@@ -1,0 +1,45 @@
+government = monarchy
+add_government_reform = beylik_government
+government_rank = 1
+primary_culture = turkish
+add_accepted_culture = greek
+religion = sunni
+technology_group = ottoman
+capital = 5680 #Ayasoluk, the second and later capital of the Aydinids
+religious_school = hanafi_school
+
+1402.1.1 = {
+	monarch = {
+		name = "Umar II"
+		dynasty = "Aydïnoglu"
+		adm = 1
+		dip = 2
+		mil = 0
+	}
+	add_piety = 0.3
+}
+
+1402.1.1 = {
+	heir = {
+		name = "Cüneyd"
+		monarch_name = "Cüneyd I"
+		dynasty = "Aydïnoglu"
+		birth_date = 1380.1.1
+		death_date = 1425.1.1
+		claim = 95
+		adm = 3
+		dip = 1
+		mil = 2
+	}
+}
+
+1405.1.1 = {
+	monarch = {
+		name = "Cüneyd I"
+		#monarch_name = "Cüneyd I" errors
+		dynasty = "Aydïnoglu"
+		adm = 3
+		dip = 1
+		mil = 2
+	}
+}

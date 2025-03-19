@@ -1,0 +1,10 @@
+government = monarchy
+add_government_reform = bulgarian_empire_reform
+technology_group = eastern
+primary_culture = bulgarian
+religion = orthodox
+capital = 5533 #so that player can move capital to tarnovo manually
+government_rank = 3
+historical_friend = HUN 
+historical_rival = BYZ
+historical_rival = TUR

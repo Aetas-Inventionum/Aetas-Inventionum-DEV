@@ -1,0 +1,38 @@
+#5087 - Orvieto
+#Area - Lazio
+#Region - Italy
+
+#Core Details
+capital = "Orvieto"
+is_city = yes
+owner = ORV
+controller = ORV 
+
+#Demographics
+culture = umbrian
+religion = catholic
+
+#Development and Trade
+base_tax = 3
+base_production = 2
+base_manpower = 3
+trade_goods = glass
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = ORV
+add_core = TUC
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

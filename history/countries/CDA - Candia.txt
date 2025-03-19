@@ -1,0 +1,26 @@
+government = republic
+add_government_reform = venetocracy_reform
+government_rank = 2
+technology_group = western
+primary_culture = venetian
+add_accepted_culture = greek
+religion = catholic
+capital = 163 # Candia
+historical_friend = LES
+
+mercantilism = 25
+
+historical_friend = VEN
+
+1415.1.1 = { #closest historical 'Duke of Crete'
+	monarch = {
+		name = "Edigio"
+		dynasty = "Morsini"
+		birth_date = 1365.1.1
+		adm = 3
+		dip = 3
+		mil = 1
+	}
+}
+
+#History, currently empty.

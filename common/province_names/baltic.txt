@@ -1,0 +1,192 @@
+#AI Update 
+# = { "x" "x" } #e with a dot on top is essentially è and can be transliterated as such
+##balticum
+#lithuania
+272 = { "Vilnius" "Vilnius" }
+770 = { "Breslauja" "Breslauja" }
+4536 = { "Lyda" "Lyda" }
+4537 = { "Naugardukas" "Naugardukas" }
+5903 = { "Shvenchionys" "Shvenchionys" }
+5904 = { "Ashmena" "Ashmena" }
+5907 = { "Krèvas" "Krèvas" }
+5908 = { "Medilas" "Medilas" }
+#aukstaija
+4534 = { "Uptè" "Uptè" }
+4535 = { "Vilkmergè" "Vilkmergè" }
+5902 = { "Utena" "Utena" }
+#samogita
+40 = { "Klaipèda" "Klaipèda" }
+271 = { "Medininkai" "Medininkai" }
+5885 = { "Telshiai" "Telshiai" }
+5887 = { "Shiauliai" "Shiauliai" }
+5889 = { "Kèdainiai" "Kèdainiai" }
+#sudovia
+1936 = { "Kaunas" "Kaunas" }
+1937 = { "Gardinas" "Gardinas" }
+5891 = { "Seinai" "Seinai" }
+5893 = { "Merkine" "Merkine" }
+5895 = { "Valkaviskas" "Valkaviskas" }
+5896 = { "Slanimas" "Slanimas" }
+5901 = { "Eishishkes" "Eishishkes" }
+#courland
+35 = { "Sarema" "Kuresare" }
+39 = { "Kuldiga" "Kuldiga" }
+5864 = { "Hyjuma" "Keina" }
+5969 = { "Grubina" "Grubina" }
+5970 = { "Ozputè" "Ozputè" }
+5971 = { "Vänta" "Vänta" }
+5972 = { "Piltene" "Piltene" }
+5973 = { "Kundaga" "Kundaga" }
+5974 = { "Kandava" "Kandava" }
+#semigallia
+38 = { "Riga" "Riga" }
+1935 = { "Mintauja" "Mintauja" }
+5976 = { "Bauska" "Bauska" }
+5977 = { "Selija" "Selpilis" }
+5978 = { "Daugavgriva" "Daugavgriva" }
+5979 = { "Koknese" "Koknese" }
+#latgale
+273 = { "Daugapilis" "Daugapilis" }
+5980 = { "Krustpilis" "Krustpilis" }
+5983 = { "Vilakas" "Vilakas" }
+5984 = { "Rezekne" "Rezekne" }
+#livonia
+37 = { "Vilande" "Vilande" }
+4241 = { "Venden" "Venden" }
+5981 = { "Valmiera" "Valmiera" }
+5982 = { "Limbazi" "Limbazi" }
+5985 = { "Rauna" "Rauna" }
+5986 = { "Aluksne" "Aluksne" }
+5987 = { "Pernu" "Pernu" }
+5995 = { "Otepe" "Otepe" }
+#estonia
+5989 = { "Hapsalu" "Haspalu" }
+5990 = { "Leale" "Leale" }
+5991 = { "Keila" "Keila" } 
+5992 = { "Rapla" "Rapla" }
+5993 = { "Paidè" "Paidè" }
+
+##ruthenia
+#podlasie
+269 = { "Belskas" "Belskas" }
+277 = { "Lietuvos Brasta" "Lietuvos Brasta" }
+5894 = { "Goniondas" "Goniondas"}
+5897 = { "Kobrynas" "Kobrynas" }
+5898 = { "Mielnikas" "Mielnikas" }
+5899 = { "Drohichinas" "Drohichinas" }
+#volhynia
+279 = { "Volodymyras" "Volodymyras" }
+2962 = { "Rovnas" "Rovnas" }
+4539 = { "Kremenecas" "Kremenecas" }
+5874 = { "Ratne" "Ratne" }
+5934 = { "Kovelis" "Kovelis" }
+5936 = { "Luckas" "Luckas" }
+5937 = { "Ostrogas" "Ostrogas" }
+5938 = { "Iziaslavas" "Iziaslavas" }
+5941 = { "Zviagelis" "Zviagelis" }
+#podolia 
+281 = { "Kamenecas" "Kamenecas" }
+1943 = { "Braclavas" "Braclavas" }
+4540 = { "Vinica" "Vinica" }
+5939 = { "Mezhibizhas" "Mezhybizhas" }
+5940 = { "Ploskiriv" "Ploskiriv" }
+5942 = { "Baras" "Baras" }
+5943 = { "Skale" "Skale" }
+5944 = { "Shargoroda" "Shargoroda" }
+5946 = { "Savranas" "Savranas" }
+5947 = { "Karavulas" "Karavulas" }
+#polesia
+278 = { "Pinskas" "Pinskas" }
+1941 = { "Turovas" "Turovas" }
+1942 = { "Zhitomyras" "Zhitomyras" }
+4115 = { "Mozyrius" "Mozyrius" }
+4247 = { "Òvruchas" "Òvruchas" }
+5900 = { "Davýd Haradòkas" "Davýd Haradòkas" }
+5905 = { "Astravas" "Astravas" }
+5912 = { "Ivanovas" "Ivanovas" }
+5923 = { "Petrykovas" "Petrykovas" }
+5935 = { "Chortoryiskas" "Chortoryiskas" }
+5957 = { "Korostenis" "Korostenis" }
+#west white rus
+276 = { "Minskas" "Minskas" }
+4242 = { "Babruiskas" "Babruiskas" }
+4544 = { "Barysavas" "Barysavas" }
+4545 = { "Slùckas" "Slùckas" }
+5906 = { "Klèckas" "Klèckas" }
+5909 = { "Lahoiskas" "Lahoiskas" }
+5911 = { "Kapylius" "Kapylius" }
+5916 = { "Drutskas" "Drutskas" }
+5933 = { "Svislochius" "Svislochius" }
+#east white rus
+292 = { "Mogiliavas" "Mogiliavas" }
+4246 = { "Mstislavlis" "Mstislavlis" }
+5917 = { "Òrshas" "Òrshas" }
+5926 = { "Roslavlis" "Roslavlis" }
+5927 = { "Gomelis" "Gomelis" }
+5928 = { "Rèchyca" "Rèchyca" }
+5929 = { "Rahachovas" "Rahachovas" }
+5930 = { "Chacherskas" "Chacherskas"}
+5931 = {  "Prapoiskas" "Prapoiskas"} 
+5932 = { "Mglina" "Mglina"}
+#ukraine
+280 = { "Kijevas" "Kijevas" }
+1944 = { "Cherkasai" "Cherkasai" }
+2407 = { "Perejaslavas" "Perejaslavas" }
+5945 = { "Jvenygorodkas" "Jvenygorodkas" }
+5949 = { "Kanivas" "Kanivas" }
+5950 = { "Chernobylis" "Chernobylis" }
+5951 = { "Bila Cerkva" "Bila Cerkva" }
+5952 = { "Osteras" "Osteras" }
+5954 = { "Brahinas" "Brahinas" }
+5955 = { "Liubeckas" "Liubeckas" }
+5956 = { "Berdychivas" "Berdychivas" }
+6356 = { "Dubrovycia" "Dubrovycia" }
+#sloboda
+290 = { "Poltavas" "Poltavas" }
+4542 = { "Lubnai" "Lubnai" }
+5948 = { "Myrgorodas" "Myrgorodas" }
+5953 = { "Romus" "Romus" }
+5959 = { "Putivlas" "Putivlas" }
+6205 = { "Saltivas" "Saltivas" }
+6206 = { "Hlynskas" "Hlynskas" }
+#severia
+289 = { "Chernihivas" "Chernihivas" }
+297 = { "Brianskas" "Brianskas" }
+1945 = { "Nauhorod Siverskas" "Nauhorod Siverskas" }
+4244 = { "Trubchevskas" "Trubchevskas" }
+5958 = { "Starodubas" "Starodubas" } 
+5960 = { "Pochepas" "Pochepas" }
+5961 = { "Sevskas" "Sevskas" }
+#kursk
+298 = { "Kurskas" "Kurskas" }
+4543 = { "Rylskas" "Rylskas" }
+6207 = { "Belgorodas" "Belgorodas" }
+##russia
+#upper daugauva
+275 = { "Polockas" "Polockas" }
+771 = { "Vitebskas" "Vitebskas" }
+5913 = { "Sebejas" "Sebejas" }
+5914 = { "Drisa" "Drisa" }
+5915 = { "Chashnikai" "Chashnikai" }
+5918 = { "Usviatiai" "Usviatiai" } #semi-fictional
+5919 = { "Haradokas" "Haradokas" }
+5920 = { "Glubokas" "Glubokas" }
+5921 = { "Rudnyas" "Rudnyas" }
+#smolensk
+293 = { "Smolenskas" "Smolenskas" }
+1752 = { "Rzjevas" "Rzjevas" }
+4243 = { "Toropecas" "Toropecas" }
+4245 = { "Viazma" "Viazma" }
+5922 = { "Baltas" "Baltas" }
+5924 = { "Dorogobuzjas" "Dorogobuzjas" }
+5925 = { "Yelnskas" "Yelnskas" }
+##tatary
+#yedisan 
+282 = { "Chadzibèjumi" "Chadzibèjumi" }
+2406 = { "Inhulas" "Inhulas" }
+6188 = { "Dubesaris" "Dubesaris" }
+6189 = { "Sokolec" "Sokolec" } #founded by vytautas ontop of chichaklei
+6191 = { "Beryslavas" "Beryslavas" }
+#zaporichia
+283 = { "Zaporoze" "Zaporoze" }
+6199 = { "Kudakas" "Kudakas" }

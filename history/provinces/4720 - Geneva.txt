@@ -1,0 +1,40 @@
+#4720 - Geneva
+#Area - Romandie
+#Region - South Germany
+
+#Core Details
+capital = "Genève"
+is_city = yes
+owner = GNV
+controller = GNV
+
+#Demographics
+culture = arpitan
+religion = catholic
+
+#Development and Trade
+base_tax = 4
+base_production = 4
+base_manpower = 4
+trade_goods = cloth
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = GNV
+add_core = GVS
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+center_of_trade = 3
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

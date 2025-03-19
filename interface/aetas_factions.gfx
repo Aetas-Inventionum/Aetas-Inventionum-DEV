@@ -1,0 +1,58 @@
+	
+	
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_faction_bg_aetas_armagnacs"	
+		texturefile = "gfx//interface//faction_blue_frame.dds"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_aetas_armagnacs"	
+		texturefile = "gfx//interface//aristocrats_icon.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_aetas_burgundians"	
+		texturefile = "gfx//interface//faction_red_frame.dds"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_aetas_burgundians"	
+		texturefile = "gfx//interface//aristocrats_icon.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_aetas_cods"	
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_aetas_cods"	
+		texturefile = "gfx//interface//traders_icon.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_aetas_hooks"	
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_aetas_hooks"	
+		texturefile = "gfx//interface//aristocrats_icon.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_beaumonts"	
+		texturefile = "gfx//interface//faction_blue_frame.dds"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_beaumonts"	
+		texturefile = "gfx//interface//aristocrats_icon.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_agramonts"	
+		texturefile = "gfx//interface//faction_red_frame.dds"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_agramonts"	
+		texturefile = "gfx//interface//aristocrats_icon.tga"
+	}
+}

@@ -1,0 +1,37 @@
+#6490 - Kadom
+#Area - Rudnya
+#Region - Russia 
+
+#Core Details
+capital = "Kadom" 
+is_city = yes
+owner = MRZ
+controller = MRZ
+
+#Demographics
+culture = mordvin
+religion = tengri_pagan_reformed
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 2
+trade_goods = apiculture    #beekeeping production center
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = MRZ
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = western
+discovered_by = eastern
+discovered_by = nomad_group
+
+#Histories

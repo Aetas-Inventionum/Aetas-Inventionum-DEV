@@ -1,0 +1,5 @@
+on_yearly_pulse_2 = {
+	events = {
+		ai_expand_infrastructure.2
+	}
+}

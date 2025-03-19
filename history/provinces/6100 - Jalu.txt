@@ -1,0 +1,32 @@
+#6100 - Jalu
+#Area - Kufrah
+#Region - Egypt
+
+#Core Details
+capital = "Jalu"
+
+#Demographics
+culture = tawjilit
+religion = sunni
+native_size = 2
+native_ferocity = 2
+native_hostileness = 3
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = unknown 
+
+#Cores and Occupation (Alphabetical after current) 
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+
+#Histories

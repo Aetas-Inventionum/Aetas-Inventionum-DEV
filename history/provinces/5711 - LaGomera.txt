@@ -1,0 +1,36 @@
+#5711 - LaGomera
+#Area - Macaronesia
+#Region - Iberia
+
+#Core Details
+capital = "La Gomera"
+owner = GMR 
+controller = GMR
+
+#Demographics
+culture = guanche
+religion = animism
+
+#Development and Trade
+base_tax = 1
+base_production = 2
+base_manpower = 1
+trade_goods = livestock
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = GMR
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = GUN
+discovered_by = POR #found them first
+discovered_by = CAE 
+discovered_by = CAS
+discovered_by = CRY 
+discovered_by = GMR

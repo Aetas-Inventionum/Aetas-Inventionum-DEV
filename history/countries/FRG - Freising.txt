@@ -1,0 +1,31 @@
+#FRG - Freising
+
+#Political Situation
+capital = 4708
+fixed_capital = 4708
+
+#Government
+government_rank = 1
+government = theocracy
+add_government_reform = hre_bishopric_reform
+
+#Demographics
+primary_culture = bavarian
+religion = catholic
+add_accepted_culture = austrian
+
+#Tech and Military
+technology_group = western
+
+#History
+1412.1.1 = {
+	monarch = {
+		name = "Hermann I"
+		dynasty = "von Cilli"
+		birth_date = 1383.1.1
+		culture = austrian
+		adm = 3
+		dip = 2
+		mil = 1
+	}
+}

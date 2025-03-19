@@ -1,0 +1,17 @@
+bookmark =
+{
+	name = "RISE_OTTOMANS"
+	desc = "RISE_OTTOMANS_DESC"
+	date = 1415.8.22
+	
+	center = 149 #edirne to lean a little more to the Balkans
+	
+	country = TUR
+	country = BYZ
+	country = SER
+	country = BOS
+	country = DJK
+	country = KST
+	country = WAL
+	country = MOL
+}

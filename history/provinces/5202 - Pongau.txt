@@ -1,0 +1,37 @@
+#5202 - Pongau
+#Area - Salzburg
+#Region - South Germany
+
+#Core Details
+capital = "Sankt Johann"
+is_city = yes
+owner = SLZ
+controller = SLZ
+
+#Demographics
+culture = austrian
+religion = catholic
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = copper
+
+#Cores and Occupation (Alphabetical after current)
+add_core = SLZ
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

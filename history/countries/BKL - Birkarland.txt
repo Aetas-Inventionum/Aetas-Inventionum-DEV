@@ -1,0 +1,6 @@
+government = republic
+primary_culture = swedish
+add_accepted_culture = sapmi 
+religion = catholic
+technology_group = western
+capital = 4114 

@@ -1,0 +1,40 @@
+#2754 - La Mancha
+#Area - La Mancha
+#Region - Iberia
+
+#Core Details
+capital = "Villa Real"
+is_city = yes
+owner = CAS
+controller = CAS
+
+#Demographics
+culture = manchego
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 1
+base_manpower = 2
+trade_goods = wine
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = CAS
+add_core = CLT
+add_core = TLD
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+add_province_triggered_modifier = clv_order
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

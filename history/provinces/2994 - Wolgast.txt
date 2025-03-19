@@ -1,0 +1,38 @@
+#2994 - Wolgast
+#Area - Fore Pomerania
+#Region - North Germany
+
+#Core Details
+capital = "Wolgast"
+is_city = yes
+owner = WOL
+controller = WOL
+
+#Demographics
+culture = pommeranian
+religion = catholic
+
+#Development and Trade
+base_tax = 3
+base_production = 2
+base_manpower = 2
+trade_goods = glass
+
+#Cores and Occupation (Alphabetical after current)
+add_core = WOL
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

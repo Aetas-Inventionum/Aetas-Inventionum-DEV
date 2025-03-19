@@ -1,0 +1,140 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+color = { 62 157 62 } 
+revolutionary_colors = { 0  9  0 }
+
+historical_idea_groups = {	
+	diplomatic_ideas
+	economic_ideas
+	defensive_ideas
+	influence_ideas
+	offensive_ideas
+	trade_ideas
+	administrative_ideas
+	quality_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	swiss_landsknechten
+	dutch_maurician
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	#in order from oldest to most recent
+	"Leopold #3" = 30
+	"Heinrich #2" = 5
+	"Friedrich #4" = 30
+	"Albrecht #5" = 30
+	"Rudolf #4" = 30
+	"Otto #1" = 10
+	"Ernst #1" = 10
+	"Siegmund #0" = 10
+	#post archduchy names
+	"Maximilian #0" = 15
+	"Karl #0" = 10
+	"Ferdinand #0" = 15
+	"Matthias #0" = 5
+	"Josef #0" = 5
+	"Ferdinand Karl #0" = 5
+	"Franz Karl #0" = 5
+	"Franz #0" = 5
+
+
+	#misc.
+	"Hermann #0" = 0
+	"Hubert #0" = 0
+	"Adolf #0" = 0
+	"Alfred #0" = 0
+	"Benno #0" = 0
+	"Bruno #0" = 0
+	"Cristoph #0" = 0
+	"Clemens #0" = 0
+	"Florian #0" = 0
+	"Gerhard #0" = 0
+	"Günther #0" = 0
+	"Jakob #0" = 0
+	"Joachim #0" = 0
+	"Georg #0" = 0
+	"Michael #0" = 0
+	"Oskar #0" = 0
+	"Siegfried #0" = 0
+	"Stefan #0" = 0
+	"Ulrich #0" = 0
+	"Viktor #0" = 0
+	"Wilhelm #0" = 0
+	"Wolfgang #0" = 0
+	
+	"Maria Theresia #0" = -15
+	"Maria Elisabeth #0" = -1
+	"Maria Anna #0" = -1
+	"Maria Carolina #0" = -1
+	"Maria Amalia #0" = -1
+	"Maria Josepha #0" = -1
+	"Maria Antonia #0" = -1
+	"Johanna #0" = -1
+	"Theresa Benedicta #0" = -1
+	"Walburga #0" = -1
+	"Maximiliane #0" = -1
+	"Maria Margaret #0" = -1
+	"Maria Magdalena #0" = -1
+	"Cecilia Renata  #0" = -1
+	"Anna #0" = -1
+	"Eleanor #0" = -1
+	"Barbara #0" = -1
+	"Helena #0" = -1
+	"Joanna #0" = -1
+	"Elisabeth #0" = -1
+	"Maria #0" = -1
+	"Kunigunde #0" = -1
+}
+
+leader_names = {
+	"von Abensperg und Traun" "von Auersperg"	
+	"Clary und Aldringen" "von Collalto" "von Croÿ"
+	"von Dietrichstein"
+	"von Eggenberg"
+	"von Fürstenberg"
+	"von Habsburg" "von Harrach" "von Henneberg" "von Hohenberg" "zu Hohenlohe"
+	"In der Maur"
+	"Khuen"
+	"von Lamberg" "von Lichtenstein"
+	"von Manfeld" "Motzhardt"
+	"von Puechhaim"
+	"von Rappach" "von Rosenberg"
+ 	"von Schallenberg" "von Schaunberg" "von Schärffenberg" "von Starhemberg" "von Strein"
+	"von Thun"
+	"von Walsee" "Wild und Rheingrafen" "von Windisch-Grätz"
+	"von Zelcking" "von Zinzendorf"
+}
+
+ship_names = {
+	"Viribus Unitis" Theresia Austria Habsburg Tirol "Baron Bruck" "Baron Call" Belvedre
+	Pannonia Salzach Wien Pustazer Traisen "Erzherzog Ferdinand" Herkules Lacroma
+	Triest "Plus Ultra" Aurora Albatros Saida Novara Imperator Trinitas Doppeladler 
+	"Sankt Stephan" Felix "Austria Imperare" Lachs Leitha Goliath Samson Vindobona
+	Inexhaustus Invulnerabilis Pavidarus Fortitas Emenentius "Sankt Wolfgang" 
+	Vigilatia Möwe "Fides et Spes" Nixe Natter Nymphe Taurus "Kaiserin Maria Theresia" Wachau Donau Inn Lindwurm Zenta Zara Fiume Arpad Babenberg Zrinyi
+	Pola Tiger Panther Leopard Trabant Satellit
+}
+
+army_names = {
+	"K.u.K Armee" "Habsburgische Armee" "Kaiserliche Armee" "Armee von Böhmen" "Armee von Ungarn" "Armee von Italien" "Armee von Schlesien" "Armee von $PROVINCE$"
+}
+
+fleet_names = {
+	"Adriatik Flotte" "Habsburgische Flotte" "Kaiserliche Flotte"
+}

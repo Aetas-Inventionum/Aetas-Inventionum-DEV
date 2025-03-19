@@ -1,0 +1,18 @@
+#cilician pog
+#cappadocia
+5705 = { "Kokisun" "Kokisun" }
+#cilicia 
+327 = { "Adaniyya" "Adana" }
+3215 = { "Sis" "Sis" }
+5337 = { "Tarson" "Tarson" }
+5707 = { "Ayas" "Ayas" }
+5371 = { "Pozandi" "Pozandi" }
+#pamphlyia
+2302 = { "Isavria" "Karkara" }
+5688 = { "Selinis" "Selinis" }
+5689 = { "Selevkia" "Selevkia" }
+5690 = { "Korrikos" "Korrikos" }
+5691 = { "Mud" "Mud" }
+#jabal bahra
+6166 = { "Svetia" "Svetia" }
+6167 = { "Alek'sandretta" "Alek'sandretta" }

@@ -1,0 +1,41 @@
+#199 - Auvergne
+#Area - Auvergne
+#Region - France
+
+#Core Details
+capital = "Clermont"
+is_city = yes
+owner = BER 
+controller = BER 
+
+#Demographics
+culture = auvergnat
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 3
+base_manpower = 3
+trade_goods = grain
+
+#Cores and Occupation (Alphabetical after current)
+add_core = BER
+add_core = AUV
+add_core = CLR
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+fort_15th = yes
+
+#Special Modifiers
+center_of_trade = 1
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

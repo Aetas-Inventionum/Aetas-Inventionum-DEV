@@ -1,0 +1,65 @@
+#AI Update
+# = { "x" "x" }
+
+12 = { "København" "København" }
+#scandinavian misc britain by pleibos
+369 = { "Orknøjar" "Kirkavå" }
+1978 = { "Hjaltland" "Skálavágr" }
+5159 = { "Katanes" "Thurso" }
+
+#scandinavian iceland by pleibos
+370 = { "Reykjavík" "Reykjavík" }
+371 = { "Norðurland" "Hólar" }
+5999 = { "Suðurland" "Heimaey" }
+6000 = { "Austfirðir" "Djúpivogur" }
+#6001 = localized
+6002 = { "Vestfirðir" "Ísafjörður" }
+6003 = { "Þingvellir" "Þingvellir" }
+##germany
+#fore pomerania
+47 = { "Strålsund" "Strålsund" }
+4745 = { "Rygen" "Bergen" } 
+#slesvig
+5614 = { "Flensborg" "Flensborg" }
+5615 = { "Nordfrisland" "Nordfrisland" }
+5616 = { "Tønder" "Tønder" }
+#holstein
+4141 = { "Ditmarsken" "Meldorf" }
+5293 = { "Rendsborg" "Rendsborg" }
+#misc denmark
+15 = { "Ringkøbing" "Ringkøbing" }
+1983 = { "Laaland" "Nykøbing" }
+#scania
+1981 = { "Borghandæholm" "Rønne" }
+4980 = { "Ysted" "Ysted" } #danish
+#gotland
+25 = { "Gotland" "Visby" }
+#gotaland
+16 = { "Båhuslen" "Båhus" }
+#ostlandet
+22 = { "Hedemarken" "Hamar" }
+4143 = { "Borgarsyssel" "Sarpsborg" } #Borgarsyssel used until replaced in 17th century
+6025 = { "Vinger" "Vinger" }
+6026 = { "Tønsberg" "Tønsberg" }
+6028 = { "Hadaland" "Mjøskastellet" }
+6037 = { "Ringerike" "Njardarhov" }
+#agder
+4144 = { "Bratsberg" "Skien" } #Skiensyssel seems to be older, while Skiensfjorden seems more contemporary. Also Grenland or Bratsberg
+4145 = { "Nedenæs" "Arendal" }
+6029 = { "Råbyggelaget" "Evje" }
+6030 = { "Lister" "Lister" }
+#jamtland
+6024 = { "Sårna" "Sårna" }
+6040 = { "Herjådalen" "Herjådalen" }
+#vestlandet
+23 = { "Bergenhus" "Bergen" }
+6032 = { "Søndhordlen" "Kvinnherad" }
+6035 = { "Sunnmøre" "Borgund" }
+#trondelag
+20 = { "Trøndelag" "Trondheim" }
+6048 = { "Fosen" "Austråttborgen" }
+6049 = { "Innherred" "Levanger" }
+6050 = { "Gaudalen" "Røros" }
+#finnmark
+315 = { "Finnmark" "Vardøhus" }
+6053 = { "Tromsø" "Troms" }

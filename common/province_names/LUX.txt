@@ -1,0 +1,26 @@
+###rare case of standardized gemanic dialect into language. wanted it in. - pleib
+#luxemburg
+94 = { "Lëtzebuerg" "Lëtzebuerg" }
+3332 = { "Baaschtnech" "Baaschtnech" }
+3333 = { "Diddenuewen" "Diddenuewen" }
+3363 = { "Béibreg" "Béibreg" }
+#west rhineland
+80 = { "Tréier" "Tréier" }
+1760 = { "Kowelenz" "Kowelenz" }
+1878 = { "Oochen" "Oochen" }
+3387 = { "Cocheim" "Cocheim" }
+3389 = { "Düre" "Düre" }
+4768 = { "Jöllesch" "Jöllesch" }
+#east rhineland
+5355 = { "Buerg" "Buerg" }
+#lower palatinate
+5020 = { "Neustadt" "Neustadt op der Wäistrooss" }
+5021 = { "Saarbrécken" "Saarbrécken" }
+#liège
+93 = { "Léck" "Léck" }
+1866 = { "Namouer" "Namouer" }
+3346 = { "Limbuerg" "Limbuerg" }
+#lorraine
+189 = { "Nanzeg" "Nanzeg" }
+#ile de france
+183 = { "Paräis" "Paräis" }

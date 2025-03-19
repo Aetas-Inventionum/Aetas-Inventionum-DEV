@@ -1,0 +1,37 @@
+#5272 - Oderberg
+#Area - Mittelmark
+#Region - North Germany
+
+#Core Details
+capital = "Oderberg"
+is_city = yes
+owner = BRA
+controller = BRA
+
+#Demographics
+culture = markish
+religion = catholic
+
+#Development and Trade
+base_tax = 1
+base_production = 2
+base_manpower = 2
+trade_goods = apiculture
+
+#Cores and Occupation (Alphabetical after current)
+add_core = BRA
+
+#Other Political
+hre = yes
+
+#Fort/Other Buildings
+
+#Special Modifiers
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

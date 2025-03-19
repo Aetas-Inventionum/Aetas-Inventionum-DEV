@@ -1,0 +1,140 @@
+#Country Name: Please see filename.
+
+graphical_culture = westerngfx
+
+color = { 14  84  157 }
+revolutionary_colors = { 15 0 15 }
+
+preferred_religion = reformed
+
+historical_idea_groups = {
+	administrative_ideas
+	defensive_ideas
+	exploration_ideas
+	offensive_ideas
+	economic_ideas
+	maritime_ideas
+	trade_ideas
+	innovativeness_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	gaelic_galloglaigh
+	gaelic_mercenary
+	gaelic_free_shooter
+	irish_charge
+	scottish_highlander
+	british_redcoat
+	british_hussar
+	british_square
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+leader_names = {
+	#Lowland Clans
+	Armstrong
+	Baird Barclay Bruce Boyd
+	Cunningham
+	Douglas Duncan
+	Elliott Erskine
+	Ferguson Forbes Fraser
+	Hamilton Hay 
+	Innes
+	Johnston
+	Keith Kennedy Kerr
+	Leslie Lindsay Livingstone
+	MacDuff Melville Montgomery
+	Napier Nesbitt
+	Ramsay
+	Scott Skene Stewart Swinton
+	Wallace
+	#Clans both in High and Low lands
+	Graham Murray Ogilvy Gordan
+}
+
+monarch_names = {
+	#Pre-Stewart Names, more rare in probability
+	"Alexander #3" = 3
+	"William #1" = 1
+	"Malcom #4" = 4
+	"Edgar #1" = 0 #disputed
+	"Duncan #2" = 2
+	"Donald #3" = 3
+	"Macbeth #1" = 1
+	"Lulach #1" = 1
+
+	"Robert #3" = 10
+	"David #2" = 5
+	"James #1" = 30 #6 total James throughout Scottish history, especially amongst late Stewarts
+
+	"Mary #0" = -10
+	"Margaret #1" = -5
+	"Annabella #0" = -1
+	"Eleanor #0" = -1
+	"Elizabeth #0" = -1
+	"Euphemia #0" = -1
+	"Isabella #0" = -1
+	"Joan #0" = -1
+
+	#names of nobility in scotland under stewarts and other noble scottish names
+	"Alan #0" = 0
+	"John #0" = 0
+	"Walter #0" = 0
+	"Jordan #0" = 0
+	"Simon #0" = 0
+	"Arthur #0" = 0
+	"Murdoch #0" = 0
+	"James #0 Mor" = 0
+	"Edward #0" = 0
+	"Archibald #0" = 0
+	"Thomas #0" = 0
+	"Colin #0" = 0
+	"Matthew #0" = 0
+	"Andrew #0" = 0
+	"Maxwell #0" = 0
+	"George #0" = 0
+	"Patrick #0" = 0
+	"Dub #0" = 0
+	"Gilbert #0" = 0
+
+}
+
+ship_names = {
+	#AI
+	"Caledonia" "Alba" "King's Carvel" "Flower" "Christopher" "Lion" "Jenny Pirwin"
+	"Eagle" "Towaich" "Treasurer" "Margaret" "Unicorn" "James" "Michael" "Salamander of Leith"
+	"Pelican" "Janet" "Lamb of Glasgow" "William" "Mary" "Nicholas" "Katherine" "Peter" "Edmond"
+	"Magdalene" "Trinity" "Handmaid" "Spirist" "Grace Dieu" "Welfare" "Godale" "Blithe"
+
+	#Vanilla
+	"Alexander Gaily" "Ann of Anstruther" "Ann of Caledonia" Annandale Anthony
+	Bonaventure Bosse "Christian of Bo'ness" Continent David "Dogarvine of Londonderry" 
+	Dolphin "Duke of Hamilton" "Dumbarton Castle" Eagle "Effenying Castle" Elizabeth Endeavour
+	Fortune "Good Fortune" "Great Lyon" "Great Spaniard" "Great Unicorn" Greentree
+	Hope "Hope of Bo'ness" "Hopeful Beginning" Instauration "James of Anstruther"
+	"Lamb of Leith" Lesley "Little Unicorn" "Margaret of Peterhead" "Mary Willoughby"
+	"Olive Branch" "Mary Walsingham" Mercury Moriset Morton Phoenix "Prince Rupert" 
+	"Providence of Dundee" "Providence of Kirkcaldy" Venture "Phoenix of Glasgow"
+	Rainbow "Reid Lyon" "Rising Sun" Rothes "Royal Mary" "Royal William" Union
+	"Saint Andrew" Salamander Society Speedwell "Speedy Return" "Yellow Carvel"
+	Thistle Wemyss "William and George" "William and Mary" 
+}
+
+army_names = {
+	#Cultural names
+	"Lowland Airmy" "Kingis Airmy" "Airmy off the Douglas"
+	#Generic placeholder for when above runs out
+	"Airmy of $PROVINCE$"
+}	#Some simple army names adapted to Scotland.
+
+fleet_names = {
+	#Cultural names
+	"Scots Navy" "Kingis Navy" "Ireland Sea Squadron" "Navy off the Furth of Clyde" "Firth of Forth Navy"
+	#Generic placeholder for when above runs out
+	"$PROVINCE$ 's Navy"
+}	#Some simple fleet names adapted to Scotland.

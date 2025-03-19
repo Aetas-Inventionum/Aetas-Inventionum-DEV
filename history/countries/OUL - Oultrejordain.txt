@@ -1,0 +1,8 @@
+government = monarchy
+add_government_reform = latin_crusader_reform
+primary_culture = hierosolymitan
+religion = catholic
+technology_group = western
+government_rank = 1 
+capital = 380
+

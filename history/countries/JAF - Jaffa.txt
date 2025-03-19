@@ -1,0 +1,9 @@
+government = monarchy
+add_government_reform = jerusalem_monarchy_reform
+primary_culture = hierosolymitan
+religion = catholic
+technology_group = western
+government_rank = 1
+capital = 6145 #Jaffa
+fixed_capital = 6145
+

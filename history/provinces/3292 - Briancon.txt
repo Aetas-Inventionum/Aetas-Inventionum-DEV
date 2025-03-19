@@ -1,0 +1,40 @@
+#3292 - Briancon
+#Area - Dauphiné
+#Region - France
+
+#Core Details
+capital = "Briançon"
+is_city = yes
+owner = FRA
+controller = FRA
+
+#Demographics
+culture = provencal
+religion = waldensian
+
+#Development and Trade
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = livestock
+latent_trade_goods = { coal }
+
+#Cores and Occupation (Alphabetical after current)
+add_core = FRA 
+add_core = DAU
+
+#Other Political
+hre = yes #still de jure part of the HRE arguably // becomes relevant in Lancastrian phase of HYW as well.
+
+#Fort/Other Buildings
+
+#Special Modifiers
+add_local_autonomy = 25 #Dauphiné
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

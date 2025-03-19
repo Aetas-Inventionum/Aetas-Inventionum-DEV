@@ -1,0 +1,40 @@
+#1933 - Bari
+#Area - Apulia
+#Region - Italy
+
+#Core Details
+capital = "Bari"
+is_city = yes
+owner = NAP
+controller = NAP 
+
+#Demographics
+culture = neapolitan
+religion = catholic
+
+#Development and Trade
+base_tax = 3
+base_production = 3
+base_manpower = 3
+trade_goods = oils
+
+#Cores and Occupation (Alphabetical after current) 
+add_core = NAP
+add_core = ARI
+add_core = LCC #several fiefdoms in the area
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+center_of_trade = 2
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

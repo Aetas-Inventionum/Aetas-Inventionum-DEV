@@ -1,0 +1,107 @@
+#Country Name: Please see filename
+
+graphical_culture = latingfx
+
+color = { 187  49  49 }
+
+revolutionary_colors = { 13 0 8 }
+
+historical_idea_groups = {
+	defensive_ideas
+	offensive_ideas
+	spy_ideas
+	trade_ideas
+	diplomatic_ideas
+	religious_ideas
+	economic_ideas
+	quantity_ideas
+}
+
+historical_units = {
+	eastern_medieval_infantry
+	eastern_knights
+	slavic_stradioti
+	eastern_militia
+	ottoman_sekban
+	ottoman_reformed_spahi
+	ottoman_reformed_janissary
+	ottoman_toprakli_hit_and_run
+	ottoman_nizami_cedid
+	ottoman_toprakli_dragoon
+	eastern_skirmisher
+	eastern_uhlan
+	eastern_carabinier
+	ottoman_new_model
+	ottoman_lancer
+}
+
+monarch_names = {
+	#kings of bosnia
+	"Stjepan Tvrtko #1" = 20
+	"Stjepan Dabisha #1" = 10
+	"Stjepan Ostoja #1" = 20
+	"Stjepan Radivoj #0" = 5 #anti-king
+	"Stjepan Tomas #0" = 20
+	"Stjepan #0" = 80 #ostovic and tomasevic were just stjepan. rest used stjepan as an honorific
+	#claimant grand dukes of bosnia
+	"Hrana #0" = 0
+	"Pavle #0" = 0
+	"Hrvoje #0" = 0
+	"Sandalj #0" = 0
+	"Petar #0" = 0
+	"Radislav #0" = 0
+	"Stjepan Vukchic #0" = 5
+	"Ivanish #0" = 0
+	"Vladislav #0" = 0
+	#misc. knez/princes of bosnia
+	"Dragisha #0" = 0
+	"Radich #0" = 0
+	"Vuk #0" = 0
+	"Vukac #0" = 0
+	"Balsha #0" = 0
+	"Vojislav #0" = 0
+	"Matija #0" = 0 
+	"Vukashin #0" = 0
+	"Vukmir #0" = 0
+
+	"Jelena #1" = -10
+	"Doroteja #0" = -1
+	"Vitacha #0" = -1
+	"Kujava #0" = -1
+	"Katarina #0" = -1
+	"Marija #0" = -1
+}
+
+leader_names = {
+	Berislavic Branivojevic
+	Chengic
+	Dinjchic
+	Gradashchevic
+	Hrvatinic
+	Kosacha Kotromanic Kulinic
+	Ljubibratic
+	Miloradovic Mirkovic
+	Nikolic
+	Pavlovic
+	Radosalic
+	Sankovic
+	Zlatanosovic
+}
+
+ship_names = {
+	Bosna Bosni
+	Dalmacija
+	"Gazi Husrev-beg"
+	"Kotromanici" "Kulin ban"
+	Miljacka
+	Sarajevo "Stjepan II"
+	"Tvrtko I"
+}
+
+army_names = { 
+	"Bosanska vojska" "$PROVINCE$ vojska"
+}
+
+fleet_names = { 
+	"Bosanska flota" "$PROVINCE$ flota"
+}

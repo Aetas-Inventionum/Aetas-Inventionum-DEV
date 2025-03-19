@@ -1,0 +1,849 @@
+#written by sim, except 1, 2 and 3 at the end, those are pleibian
+namespace = aetas_utr
+normal_or_historical_nations = yes
+
+#aetas_utr.15 is in the section "Hooks, Cods & Utrecht"
+
+#################################
+#            SET-UP             #
+#################################
+#Prologue
+country_event = {
+    id = aetas_utr.13
+    title = aetas_utr.13.t
+    desc = aetas_utr.13.d
+    picture = PROTESTANT_CATHOLIC_DEBATE_eventPicture
+
+    fire_only_once = yes
+    trigger = {
+        tag = UTR
+    }
+
+    mean_time_to_happen = {
+        days = 1
+    }
+
+    option = { #Horrid.
+        name = aetas_utr.13.a
+        add_faction = aetas_hooks
+        add_faction = aetas_cods
+        add_country_modifier = {
+            name = utr_lacklustre_control
+            duration = -1 #will be removed via missions.
+        }
+        ai_chance = {
+            factor = 100
+        }
+    }
+}
+
+#################################
+# WESTERN SCHISM & MUNSTER FEUD #
+#################################
+#the election after Van Blankenheims death. Starts Utrechtian Shism chain
+country_event = { 
+	id = aetas_utr.14
+	title = aetas_utr.14.t
+	desc = aetas_utr.14.d
+	picture = DEATH_OF_HEIR_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes #on_monarch_death, remember to check if it still fires after two monarch deaths
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = { #GELREEEEE I CHOSE ZWEDER
+		name = aetas_utr.14.a
+		hidden_effect = {
+			PAP = {
+				country_event = { 
+					id = aetas_utr.4
+					days = 16
+				}
+			}
+			set_country_flag = utr_chose_zweder
+		}
+		ai_chance = {
+			factor = 50
+		}
+		define_ruler = {
+			name = "Zweder"
+			dynasty = "van Culemborg"
+			adm = 1 #homicides during his short reign in Utrecht, no support in Utrecht
+			dip = 4 #Gelderian support, convinced rhabanus to sell his titles to him
+			mil = 2 #limited military succes after first victory
+			claim = 80
+		}
+        custom_tooltip = utr_schism_election_tooltip
+		add_faction_influence = {
+			faction = aetas_cods
+			influence = 60
+		}
+	}
+
+	option = { #Rudolf v Diepholt
+		name = aetas_utr.14.b
+		hidden_effect = {
+			PAP = {
+				country_event = { 
+					id = aetas_utr.4
+					days = 16
+				}
+			}
+			set_country_flag = utr_chose_rudolf
+		}
+		ai_chance = {
+			factor = 50
+		}
+		define_ruler = {
+			name = "Rudolf"
+			dynasty = "van Diepholt"
+			adm = 4 #Full support of Utrecht
+			dip = 1 #limited support outside Utrecht
+			mil = 5 #crushed Zweders rebellion and won the Schism
+			claim = 80
+		}
+        custom_tooltip = utr_schism_election_tooltip
+		add_faction_influence = {
+			faction = aetas_hooks
+			influence = 60
+		}
+	}
+}
+
+#pope response to the above
+country_event = {
+	id = aetas_utr.4
+	title = aetas_utr.4.t
+	desc = aetas_utr.4.d
+	picture = BAD_POPE_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = { #but my rhabanus van helmstatt >:(
+		name = aetas_utr.4.a
+		custom_tooltip = utr_pope_rhabanus_tooltip
+		hidden_effect = {
+			add_casus_belli = {
+				target = UTR
+				type = cb_vassalize_mission
+				months = 240
+			} 
+			UTR = {
+				country_event = { 
+					id = aetas_utr.5
+					days = 16
+				}
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+
+	option = { #dont care didnt ask
+		name = aetas_utr.4.b
+		add_prestige = -10
+	}
+}
+
+#Utrecht responds to their elected ruler becoming an antibishop
+country_event = {
+	id = aetas_utr.5
+	title = aetas_utr.5.t
+	desc = aetas_utr.5.d
+	picture = PRINCE_BISHOP_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = { #We decide who gets to rule us.
+		name = aetas_utr.5.a
+		add_country_modifier = {
+			name = utr_schism
+			duration = -1
+		}
+		if = {
+			limit = {
+				has_country_flag = utr_chose_zweder
+			}
+			capital_scope = {
+				spawn_rebels = {
+					type = pretender_rebels
+					size = 1
+					leader = "Rudolf"
+					leader_dynasty = "van Diepholt"
+					win = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = utr_chose_rudolf
+			}
+			capital_scope = {
+				spawn_rebels = {
+					type = pretender_rebels
+					size = 1
+					leader = "Zweder"
+					leader_dynasty = "van Culemborg"
+					win = yes
+					friend = GEL
+				}
+			}
+		}
+		if = {
+			limit = {
+				faction_in_power = aetas_cods
+			}
+			add_faction_influence = {
+				faction = aetas_cods
+				influence = 25
+			}
+			else = {
+				add_faction_influence = {
+					faction = aetas_hooks
+					influence = 25
+				}
+			}
+		}
+		add_stability = -3
+		ai_chance = {
+			factor = 50
+		}
+	}
+
+	option = { #give up <:(
+		name = aetas_utr.5.b
+		add_country_modifier = { #did you really think you could avoid the disaster like that? hell naw
+			name = utr_schism
+			duration = -1
+		}
+		if = {
+			limit = {
+				has_country_flag = utr_chose_rudolf
+			}
+			define_ruler = {
+				name = "Zweder"
+				dynasty = "van Culemborg"
+				adm = 1 #homicides during his short reign in Utrecht, no support in Utrecht
+				dip = 4 #Gelderian support, convinced rhabanus to sell his titles to him
+				mil = 2 #limited military succes after first victory
+				claim = 80
+			}
+			hidden_effect = {
+				clr_country_flag = utr_chose_rudolf
+				set_country_flag = utr_swapped_to_zweder
+			}
+		}
+		else = {
+			define_ruler = {
+				name = "Rudolf"
+				dynasty = "van Diepholt"
+				adm = 4 #Full support of Utrecht
+				dip = 1 #limited support outside Utrecht
+				mil = 5 #crushed Zweders rebellion and won the Schism
+				claim = 80
+			}
+			hidden_effect = {
+				clr_country_flag = utr_chose_zweder
+				set_country_flag = utr_swapped_to_rudolf
+			}
+		}
+		if = {
+			limit = {
+				owns = 5026 #Twente
+			}
+			5026 = {
+				spawn_rebels = {
+					type = pretender_rebels
+					size = 2
+					leader = "Walraven"
+					leader_dynasty = "von Moers"
+				}
+			}
+			set_country_flag = schism_in_walraven_phase
+		}
+		else = {
+			capital_scope = {
+				spawn_rebels = {
+					type = pretender_rebels
+					size = 2
+					leader = "Walraven"
+					leader_dynasty = "von Moers"
+				}
+			}
+			set_country_flag = schism_in_walraven_phase
+		}
+		if = {
+			limit = {
+				faction_in_power = aetas_cods
+			}
+			add_faction_influence = {
+				faction = aetas_hooks
+				influence = 25
+			}
+			else = {
+				add_faction_influence = {
+					faction = aetas_cods
+					influence = 25
+				}
+			}
+		}
+		add_stability = -3
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+#Gueldres wants Utrecht; Zweder in charge version
+country_event = {
+	id = aetas_utr.6
+	title = aetas_utr.6.t
+	desc = aetas_utr.6.d
+	picture = RELIGIOUS_WARS_eventPicture
+
+	fire_only_once = yes
+	trigger = {
+		tag = GEL
+		UTR = {
+			OR = {
+				has_country_flag = utr_swapped_to_zweder
+				has_country_flag = utr_chose_zweder
+				NOT = {
+					has_country_flag = schism_in_walraven_phase
+				}
+				has_ruler = "Zweder"
+			}
+			NOT = {
+				has_spawned_rebels = pretender_rebels
+			}
+			has_country_modifier = utr_schism
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1488
+	}
+
+	option = { #send ultimatum
+		name = aetas_utr.6.a
+		custom_tooltip = aetas_utr.6.atooltip
+		UTR = {
+			country_event = {
+				id = aetas_utr.8
+				days = 1
+			}
+		}
+		break_alliance = UTR
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 3
+				is_at_war = no
+			}
+			modifier = {
+				factor = 0
+				is_at_war = yes
+			}
+		}
+	}
+
+	option = { #we got other problems
+		name = aetas_utr.6.b
+		add_casus_belli = {
+			target = UTR
+			type = cb_vassalize_mission
+			months = 480
+		}
+		add_prestige = 10
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 4
+				is_at_war = yes
+			}
+		}
+	}
+}
+
+#Gueldres wants Utrecht; Rudolf in charge version
+country_event = {
+	id = aetas_utr.7
+	title = aetas_utr.7.t
+	desc = aetas_utr.7.d
+	picture = NOBLE_ESTATE_eventPicture
+
+	fire_only_once = yes
+	trigger = {
+		tag = GEL
+		UTR = {
+			OR = {
+				has_country_flag = utr_swapped_to_rudolf
+				has_country_flag = utr_chose_rudolf
+				NOT = { 
+					has_country_flag = schism_in_walraven_phase #Was set_ but I dont think that's the intent here and caused errors
+				}
+				has_ruler = "Rudolf"
+			}
+			NOT = {
+				has_spawned_rebels = pretender_rebels
+			}
+			has_country_modifier = utr_schism
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1488
+	}
+
+	option = { #send ultimatum
+		name = aetas_utr.7.a
+		custom_tooltip = aetas_utr.7.atooltip
+		UTR = {
+			country_event = {
+				id = aetas_utr.8
+				days = 1
+			}
+		}
+		break_alliance = UTR
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 3
+				is_at_war = no
+			}
+			modifier = {
+				factor = 0
+				is_at_war = yes
+			}
+		}
+	}
+
+	option = { #we got other problems
+		name = aetas_utr.7.b
+		add_casus_belli = {
+			target = UTR
+			type = cb_vassalize_mission
+			months = 480
+		}
+		add_prestige = 10
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 4
+				is_at_war = yes
+			}
+		}
+	}
+}
+
+#Guelderian intervention; the ultimatum
+country_event = {
+	id = aetas_utr.8
+	title = aetas_utr.8.t
+	desc = aetas_utr.8.d
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = { #never
+		name = aetas_utr.8.a
+		GEL = {
+			declare_war_with_cb = {
+				who = UTR
+				casus_belli = cb_vassalize_mission
+			}
+		}
+		set_country_flag = utr_zweder_gel_war
+		ai_chance = {
+			factor = 99
+		}
+	}
+
+	option = { #concede
+		name = aetas_utr.8.b
+		
+		if = {
+			limit = {
+				NOT = {
+					has_ruler = "Zweder"
+				}	
+			}
+			define_ruler = {
+				name = "Zweder"
+				dynasty = "van Culemborg"
+				adm = 1 #homicides during his short reign in Utrecht, no support in Utrecht
+				dip = 4 #Gelderian support, convinced rhabanus to sell his titles to him
+				mil = 2 #limited military succes after first victory
+				claim = 80
+			}
+		}
+		GEL = {
+			vassalize = UTR
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+#Walraven van Meurs
+country_event = {
+	id = aetas_utr.9
+	title = aetas_utr.9.t
+	desc = aetas_utr.9.d
+	picture = POPE_PREACHING_eventPicture
+
+	fire_only_once = yes
+	trigger = {
+		has_country_modifier = utr_schism
+		NOT = {
+			AND = {
+				has_country_flag = utr_swapped_to_rudolf
+				has_country_flag = utr_swapped_to_zweder
+				has_spawned_rebels = pretender_rebels
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 3650
+	}
+
+	option = {
+		name = aetas_utr.9.a
+		set_country_flag = schism_in_walraven_phase
+		if = {
+			limit = {
+				owns = 5026 #Twente
+			}
+			5026 = {
+				spawn_rebels = {
+					type = pretender_rebels
+					size = 2
+					leader = "Walraven"
+					leader_dynasty = "von Moers"
+				}
+			}
+		}
+		else = {
+			capital_scope = {
+				spawn_rebels = {
+					type = pretender_rebels
+					size = 2
+					leader = "Walraven"
+					leader_dynasty = "von Moers"
+				}
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+#Munster Feud START
+country_event = {
+	id = aetas_utr.10
+	title = aetas_utr.10.t
+	desc = aetas_utr.10.d
+	picture= CIVIL_WAR_eventPicture
+
+	fire_only_once = yes
+	trigger = {
+		UTR = {
+			has_country_flag = schism_in_walraven_phase
+		}
+		tag = MUN
+	}
+	mean_time_to_happen = {
+		days = 365
+	}
+
+	option = {
+		name = aetas_utr.10.a
+		define_heir = {
+			name = "Erik"
+			dynasty = "von Hoya"
+		}
+		capital_scope = {
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 2
+				leader = "Walram"
+				leader_dynasty = "von Moers"
+			}
+		}
+		add_country_modifier = {
+			name = mun_feud
+			duration = -1
+		}
+		hidden_effect = {
+			UTR = {
+				country_event = {
+					id = aetas_utr.11
+					days = 365
+				}
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+		name = aetas_utr.10.b
+		define_heir = {
+			name = "Walram"
+			dynasty = "von Moers"
+		}
+		capital_scope = {
+			spawn_rebels = {
+				type = pretender_rebels
+				size = 2
+				leader = "Erik"
+				leader_dynasty = "von Hoya"
+			}
+		}
+		add_country_modifier = {
+			name = mun_feud
+			duration = -1
+		}
+		hidden_effect = {
+			UTR = {
+				country_event = {
+					id = aetas_utr.11
+					days = 365
+				}
+			}
+		}
+	}
+}
+
+#Koenraad van Diepholt/An unexpected offer
+country_event = {
+	id = aetas_utr.11
+	title = aetas_utr.11.t
+	desc = aetas_utr.11.d
+	picture = RELIGIOUS_WARS_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = aetas_utr.11.a
+		remove_country_modifier = utr_schism
+		add_years_of_income = -0.5
+	}
+
+	option = {
+		name = aetas_utr.11.b
+		declare_war_with_cb = {
+			who = MUN
+			casus_belli = cb_vassalize_mission
+		}
+		custom_tooltip = utr_koenraad_tooltip
+	}
+}
+
+#Treaty of Kranenburg
+country_event = {
+	id = aetas_utr.12
+	title = aetas_utr.12.t
+	desc = aetas_utr.12.d
+	picture = DIPLOMACY_eventPicture
+
+	fire_only_once = yes
+	trigger = {
+		has_country_modifier = mun_feud
+	}
+	mean_time_to_happen = {
+		days = 1460
+	}
+
+	option = {
+		name = aetas_utr.12.a
+		remove_country_modifier = mun_feud
+		add_years_of_income = -0.5
+	}
+}
+
+#################################
+# FALL OF UTRECHT , PLEIB CHAIN #
+#################################
+#The Bastard of Burgundy
+country_event = {
+	id = aetas_utr.1
+	title = aetas_utr.1.t
+	desc = aetas_utr.1.d
+	picture = BAD_WITH_MONARCH_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			tag = BUR 
+			was_tag = BUR 
+			is_subject_of = BUR 
+		}
+	}
+
+	option = { 
+		name = aetas_utr.1.a #okay.
+		ai_chance = { factor = 20 }
+		define_ruler = { 
+			name = "David I"
+			dynasty = "de Bourgogne"
+			culture = burgundian 
+			age = 31
+			adm = 3
+			dip = 2
+			mil = 2
+		}
+		FROM = { 
+			create_subject = { 
+				who = ROOT 
+				subject_type = tributary_state
+			}
+		}
+	}
+	option = { 
+		name = aetas_utr.1.b #no!
+		ai_chance = { factor = 80 } #historical
+		FROM = { country_event = { id = aetas_utr.2 } }
+	}
+}
+#utrecht defies our will
+country_event = {
+	id = aetas_utr.2
+	title = aetas_utr.2.t
+	desc = aetas_utr.2.d
+	picture = CIVIL_WAR_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			tag = UTR 
+			is_subject_of = UTR 
+			is_subject_of = ROOT 
+		}
+	}
+
+	option = {
+		name = aetas_utr.2.a #they will become subject to burgundy whether they like it or not
+		ai_chance = { 
+			factor = 75
+			modifier = { 
+				factor = 0 
+				is_at_war = yes 
+			}
+		}
+		declare_war_with_cb = {
+			who = UTR
+			casus_belli = cb_disloyal_vassal
+		}
+		custom_tooltip = bur_utr_war.tt #by occupying their capital can we install our choice of bishop and now enforce their vassalage
+		set_global_flag = bur_utr_war_flag
+	}
+	option = { 
+		name = aetas_utr.2.b #show them mercy, for now.
+		ai_chance = { factor = 25 }
+	}
+	after = { hidden_effect = { clr_global_flag = bur_utr_war_flag } }
+}
+
+#fall of utrecht
+country_event = {
+	id = aetas_utr.3
+	title = aetas_utr.3.t
+	desc = aetas_utr.3.d
+	picture = CONQUEST_eventPicture
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			tag = UTR 
+			is_subject_of = UTR 
+			is_subject_of = ROOT 
+		}
+	}
+
+	option = {
+		name = aetas_utr.3.a #they asked for it
+		white_peace = UTR 
+		UTR = { 
+			define_ruler = { 
+				name = "David I"
+				dynasty = "de Bourgogne"
+				culture = burgundian 
+				age = 31
+				adm = 3
+				dip = 2
+				mil = 2
+			}
+			hidden_effect = { change_country_color = { color = { 149 55 67 } } }
+		}
+		create_subject = { 
+			who = UTR
+			subject_type = fief 
+		}
+	}
+	after = { hidden_effect = { clr_global_flag = bur_lie_war_flag } }
+}
+
+#################################
+#    UTRECHT, HOOKS & CODS      #
+#################################
+
+#Jan van Schaffelaar, Hook version
+country_event = { #Cod version maybe later
+    id = aetas_utr.15
+    title = aetas_utr.15.t
+    desc = aetas_utr.15.d
+    picture = FORT_eventPicture
+
+    fire_only_once = yes
+    is_triggered_only = yes
+
+    mean_time_to_happen = {
+        days = 1
+    }
+
+    option = {
+        name = aetas_utr.15.a
+        add_manpower = 0.019
+        add_faction_influence = {
+            faction = aetas_hooks
+            influence = 25
+        }
+        98 = {
+            add_building = glorious_monument
+        }
+        ai_chance = {
+            factor = 100
+        }
+    }
+}

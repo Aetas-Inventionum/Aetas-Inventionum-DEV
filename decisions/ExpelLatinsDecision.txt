@@ -1,0 +1,29 @@
+country_decisions = {
+	expel_latins_decision = {
+		potential = {
+			any_owned_province = { 
+				OR = { 
+					has_province_modifier = latin_quarter
+				}
+			}
+		}
+		allow = {
+			mercantilism = 30
+		}
+		effect = {
+			every_owned_province = { 
+				limit = { has_province_modifier = latin_quarter }
+				remove_province_modifier = latin_quarter
+			}
+			add_country_modifier = { 
+				name = "expelled_latins"
+				duration = 7300
+			}
+			custom_tooltip = latins_expelled.tt
+			set_country_flag = latins_expelled
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

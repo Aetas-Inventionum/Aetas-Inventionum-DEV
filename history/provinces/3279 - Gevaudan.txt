@@ -1,0 +1,39 @@
+#3279 - Gevaudan
+#Area - Lower Languedoc
+#Region - France
+
+#Core Details
+capital = "Mende"
+is_city = yes
+owner = FRA
+controller = FRA
+
+#Demographics
+culture = auvergnat
+religion = catholic
+
+#Development and Trade
+base_tax = 2
+base_production = 1
+base_manpower = 1
+trade_goods = wool
+
+#Cores and Occupation (Alphabetical after current)
+add_core = FRA
+add_core = GEV
+
+#Other Political
+hre = no
+
+#Fort/Other Buildings
+
+#Special Modifiers
+add_local_autonomy = 25 #Count-bishop of Gévaudan
+
+#Discoveries
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+#Histories

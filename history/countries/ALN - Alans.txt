@@ -1,0 +1,7 @@
+government = tribal 
+add_government_reform = tribal_federation		#Had been a monarchy in the past, by this time it had devolved into a group of four tribal societies
+mercantilism = 10 #was 0.1, im guessing thats 10?
+primary_culture = ossetian
+religion = orthodox
+technology_group = muslim
+capital = 2201 # Alania

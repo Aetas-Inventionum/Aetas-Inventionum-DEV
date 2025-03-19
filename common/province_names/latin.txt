@@ -1,0 +1,485 @@
+#AI Update
+# = { "x" "x" }
+##NOTES FOR GENERAL:
+#ANY AND ALL 'LATIN' DPN MUST BE IN STANDARDIZED ITALIAN LANGUAGE UNLESS RECEIVED PERMISSION FROM MATH TO DO SO IN A SEPERATE FILE
+###ORGANIZATION:
+##REGION
+#area (provinces below)
+
+#PLEASE FOLLOW ORGANIZATION FORMAT FOR SAKE OF CLARITY
+
+##ITALY
+#frioul
+111 = { "Udine" "Udine" }
+1769 = { "Gorizia" "Gorizia" }
+4738 = { "Trieste" "Trieste" }
+5100 = { "Cadore" "Pieve di Cadore" }
+5101 = { "Pordenone" "Pordenone" }
+5103 = { "Tolmezzo" "Tolmezzo" }
+5104 = { "Aquileia" "Aquileia" }
+5105 = { "Cividale" "Cividale del Friuli" }
+5106 = { "Tolmino" "Tolmino" }
+#veneto
+108 = { "Verona" "Verona" }
+112 = { "Venezia" "Venezia" }
+1774 = { "Treviso" "Treviso" }
+4729 = { "Padova" "Padova" }
+5078 = { "Chioggia" "Chioggia" }
+5094 = { "Vicenza" "Vicenza" }
+5095 = { "Schio" "Schio" }
+5098 = { "Feltre" "Feltre" }
+5099 = { "Belluno" "Belluno" }
+#trentino
+110 = { "Trentino" "Trento" }
+5093 = { "Rovereto" "Rovereto" } #Vallagrina
+5096 = { "Riva" "Riva del Garda" }
+5107 = { "Merano" "Merano" }
+5108 = { "Bolzano" "Bolzano" }
+5109 = { "Bressanone" "Bressanone" }
+#east lombardy
+107 = { "Brescia" "Brescia" }
+109 = { "Mantova" "Mantova" }
+1862 = { "Cremona" "Cremona" }
+4739 = { "Bergamo" "Bergamo" }
+5060 = { "Sondrio" "Sondrio" }
+5061 = { "Valcamonica" "Breno" }
+#lombardy
+104 = { "Milano" "Milano" }
+2979 = { "Novara" "Novara" }
+4728 = { "Pavia" "Pavia" }
+4740 = { "Como" "Como" }
+5039 = { "Ticino" "Bellinzona" }
+5054 = { "Lomellina" "Vigevano" }
+5055 = { "Ossola" "Domodossola" }
+5056 = { "Tortona" "Tortona" }
+5059 = { "Lodi" "Lodi" }
+#upper piedmont
+103 = { "Torino" "Torino" }
+2981 = { "Monferrato" "Casale Monferrato" }
+5041 = { "Chieri" "Chieri" }
+5043 = { "Pinerolo" "Pinerolo" }
+5044 = { "Susa" "Susa" }
+5045 = { "Aosta" "Aosta" }
+5046 = { "Ivrea" "Ivrea" }
+5047 = { "Biella" "Biella" }
+5048 = { "Vercelli" "Vercelli" }
+#lower piedmont
+102 = { "Nizza" "Nizza" }
+1875 = { "Cuneo" "Cuneo" }
+4727 = { "Saluzzo" "Saluzzo" }
+5040 = { "Monteregale" "Mondovì" }
+5049 = { "Asti" "Asti" }
+5050 = { "Alba" "Alba" }
+5053 = { "Alessandria" "Alessandria" }
+#liguria
+101 = { "Genova" "Genova" } #standard italian over Zêna
+2992 = { "Albenga" "Albenga" }
+5042 = { "Oneglia" "Oneglia" }
+5051 = { "Savona" "Savona" }
+5052 = { "La Spezia" "La Spezia" }
+#emilia
+105 = { "Parma" "Parma" }
+106 = { "Modena" "Modena" }
+5057 = { "Bardi" "Bardi" }
+5058 = { "Piacenza" "Piacenza" }
+5065 = { "Reggio" "Reggio" }
+#romagna
+113 = { "Ferrara" "Ferrara" }
+114 = { "Ravenna" "Ravenna" }
+4730 = { "Bologna" "Bologna" }
+5062 = { "Faenza" "Faenza" }
+5063 = { "Forlì" "Forlì" }
+5064 = { "Rimini" "Rimini" }
+5076 = { "Polesine" "Rovigo" }
+5077 = { "Comacchio" "Comacchio" }
+#north tuscany
+115 = { "Pisa" "Pisa" }
+116 = { "Firenze" "Firenze" }
+2978 = { "Arezzo" "Arezzo" }
+2980 = { "Lucca" "Lucca" }
+5066 = { "Massa" "Massa" }
+5067 = { "Pistoia" "Pistoia" }
+5068 = { "Volterra" "Volterra" }
+5069 = { "Prato" "Prato" }
+#south tuscany
+117 = { "Siena" "Siena" }
+5070 = { "Cortona" "Cortona" }
+5071 = { "Piombino" "Piombino" }
+5072 = { "Grosseto" "Grosseto" }
+5073 = { "Orbetello" "Orbetello" }
+5074 = { "Chiusi" "Chiusi" }
+#marche
+119 = { "Ancona" "Ancona" }
+2977 = { "Urbino" "Urbino" }
+5079 = { "Pesaro" "Pesaro" }
+5080 = { "Macerata" "Macerata" }
+5081 = { "Fermo" "Fermo" }
+5082 = { "Camerino" "Camerino" }
+#umbria
+2976 = { "Perugia" "Perugia" }
+4731 = { "Spoleto" "Spoleto" }
+5075 = { "Città di Castello" "Città di Castello" }
+5083 = { "Foligno" "Foligno" }
+5084 = { "Todi" "Todi" }
+5085 = { "Terni" "Terni" }
+5086 = { "Rieti" "Rieti" }
+#Lazio
+118 = { "Roma" "Roma" }
+4732 = { "Terracina" "Terracina" }
+5087 = { "Orvieto" "Orvieto" }
+5088 = { "Viterbo" "Viterbo" }
+5089 = { "Civitavecchia" "Civitavecchia" }
+5090 = { "Tivoli" "Tivoli" }
+5091 = { "Velletri" "Velletri" }
+5092 = { "Alatri" "Alatri" }
+#abruzzo help 
+120 = { "L'Aquila" "L'Aquila" }
+4733 = { "Campobasso" "Campobasso" }
+5115 = { "Teramo" "Teramo" }
+5116 = { "Avezzano" "Avezzano" }
+5117 = { "Chieti" "Chieti" }
+5118 = { "Il Vasto" "Il Vasto d'Aimone" }
+#capitanate
+2985 = { "Foggia" "Foggia" }
+5119 = { "Sansevero" "Sansevero" }
+5120 = { "Lucera" "Lucera" }
+5121 = { "Gargano" "Manfredonia" }
+#apulia
+122 = { "Taranto" "Taranto" }
+1933 = { "Bari" "Bari" }
+5122 = { "Barletta" "Barletta" }
+5123 = { "Andria" "Andria" }
+5124 = { "Brindisi" "Brindisi" }
+5125 = { "Lecce" "Lecce" }
+#campania
+121 = { "Napoli" "Napoli" }
+2983 = { "Salerno" "Salerno" }
+4734 = { "Avellino" "Avellino" }
+5097 = { "Gaeta" "Gaeta" }
+5111 = { "Capua" "Capua" }
+5113 = { "Ariano" "Ariano di Puglia" }
+5114 = { "Cilento" "Vallo" }
+#calabria
+123 = { "Reggio" "Reggio" }
+1934 = { "Potenza" "Potenza" }
+2984 = { "Cosenza" "Cosenza" }
+5126 = { "Matera" "Matera" }
+5127 = { "Melfi" "Melfi" }
+5128 = { "Rossano" "Rossano" }
+5129 = { "Cotrone" "Cotrone" }
+5130 = { "Catanzaro" "Catanzaro" }
+#sicily
+126 = { "Malta" "Medina" }
+2982 = { "Siracusa" "Siracusa" }
+4737 = { "Agrigento" "Agrigento" }
+#sardinia
+127 = { "Sassarese" "Sassari" }
+2986 = { "Cagliari" "Cagliari" }
+4735 = { "Oristano" "Oristano" }
+5007 = { "Gallura" "Terranova Pausania" }
+5008 = { "Nuoro" "Nuoro" }
+5009 = { "Ogliastra" "Tortolì" }
+5010 = { "Carbonia" "Iglesias" }
+5405 = { "Planargia" "Bosa" }
+#corsica
+1247 = { "Bastia" "Bastia" }
+5003 = { "Calvi" "Calvi" }
+5004 = { "Cinarca" "Ajaccio" } #or Pomonte
+5005 = { "Bonifacio" "Bonifacio" }
+5006 = { "Corte" "Corte" }
+##BALKANS
+#istria
+130 = { "Rovigno" "Rovigno" }
+4752 = { "Fiume" "Fiume" }
+5188 = { "Pola" "Pola" }
+5189 = { "Pisino" "Pisino" }
+5190 = { "Pinguente" "Pinguente" }
+#croatia
+5386 = { "Valdivino" "Cittanova" }
+5387 = { "Veglia" "Veglia" }
+5388 = { "Modrussa" "Modrussa" } #from Latin
+5389 = { "Licca" "Segna" }
+5390 = { "Brigne" "Brigne" }
+5391 = { "Bihac" "Bihac" } #could use digging
+5394 = { "Udbina" "Udbina" } #could use digging
+#dalmatia 
+136 = { "Spalato" "Spalato" } #how tf did we not have this lmfao -pleibos, 4/1/2024
+1826 = { "Tenin" "Tenin" }
+4753 = { "Zara" "Zara" }
+5392 = { "Sign" "Sign" } #Anche o 'Signa'
+5393 = { "Sebenico" "Sebenico" }
+5395 = { "Brazza" "Vallo della Brazza" }
+5407 = { "Livano" "Livano" } #fictional
+5408 = { "Delminnio" "Delminio" }
+#zachlumia
+137 = { "Ragusa" "Ragusa" }
+5410 = { "Città di Stefano" "Città di Stefano" } #Stjepan Grad 
+5411 = { "Kognic" "Kognic" }
+5412 = { "Hocia" "Hocia" }
+5415 = { "Trebigne" "Trebigne" }
+#dioclea
+138 = { "Podgorizza" "Podgorizza" }
+1831 = { "Santo Stefano" "Santo Stefano" }
+4175 = { "Alessio" "Alessio" }
+4754 = { "Cattaro" "Cattaro" }
+5284 = { "Scutari" "Scutari" }    #Or Scodra
+5352 = { "Berane" "Berane" }
+5413 = { "Onogosto" "Onogosto" }
+#albania
+143 = { "Valona" "Valona" }
+4174 = { "Durazzo" "Durazzo" }
+4750 = { "Croia" "Croia" }
+5430 = { "Peskopia" "Peskopia" }
+5432 = { "Dibera" "Dibera" } #invented
+5433 = { "Berate" "Berate" }
+5435 = { "Laberia" "Himara" }
+6322 = { "Sciufada" "Sciufada" } #fictional
+#Epirus by pleibos
+142 = { "Corcira" "Corcira" }
+144 = { "Giànnina" "Giànnina" }
+5434 = { "Còriza" "Còriza" }
+5437 = { "Butrinto" "Butrinto" }
+5564 = { "Mezovo" "Mezovo" }
+5565 = { "Vagenetia" "Parga" }
+#aetolia
+4698 = { "Cefalonia" "Argostolio" }
+5551 = { "Zante" "Zante" }
+5566 = { "Amfilochia" "Amfilochia" }
+5567 = { "Lepanto" "Lepanto" }
+5568 = { "Vrachori" "Vrachori" }
+5571 = { "Neopatria" "Neopatria" }
+5572 = { "Focide" "La Sole" }
+5589 = { "Acarnània" "Vonizza" }
+#achaea
+1773 = { "Messenia" "Calamata" }
+5577 = { "Elide" "Clarenza" } 
+5578 = { "Archadia" "Archadia" }
+5579 = { "Corone" "Corone" } #was Gallo
+5580 = { "Patrasso" "Patrasso" }
+5584 = { "Calaurita" "Calaurita" } #see 'Territory of Kalavryta' in Greek
+#morea
+145 = { "Mistrá" "Mistrá" }
+4701 = { "Corinzia" "Corinto" }
+5515 = { "Cerigo" "Paliochora" }
+5581 = { "Escorta" "Caritaina" }    #Invented
+5582 = { "Malvasia" "Malvasia" }
+5583 = { "Argolide" "Napoli di Romania" }
+#hellas
+146 = { "Attica" "Atene" }
+3003 = { "Negroponte" "Negroponte" }
+5573 = { "Lebadia" "Lebadia" }
+5574 = { "Tebe" "Tebe" }
+5575 = { "Megaride" "Megara" }
+5576 = { "Caristo" "Caristo" }
+#thessaly
+147 = { "Triccala" "Triccala" }
+5558 = { "Magnesia" "Volo" }
+5559 = { "Ftia" "Citonia" }
+5569 = { "Larissa" "Larissa" }
+5570 = { "Farsaglia" "Farsaglia" }
+#macedonia
+148 = { "Salonicco" "Salonicco" }
+1853 = { "Kastoria" "Kastoria" }
+4702 = { "Serres" "Serres" }
+4780 = { "Oherido" "Oherido" } #invented
+5533 = { "Calcidica" "Geriso" }
+5554 = { "Kilkis" "Kilkis" }
+5555 = { "Vodena" "Vodena" }
+5556 = { "Servia" "Servia" }
+5557 = { "Pieria" "Berea" }
+5560 = { "Monastero" "Monastero" } #slightly invented
+#aegean archipelago
+164 = { "Nasso" "Chòra di Nasso" }
+320 = { "Rodos" "Rodos" }
+2348 = { "Scio" "Scio" }    #Or Chio
+4700 = { "Lesbo" "Metelino" }
+5500 = { "Lemno" "Mirina" }
+5540 = { "Eno" "Eno" }
+5588 = { "Andro" "Andro" }
+#crete
+163 = { "Candia" "Candia" }
+5585 = { "La Canea" "La Canea" }
+5586 = { "Rettimo" "Rettimo" }
+5587 = { "Settia" "Settia" }
+#thrace
+151 = { "Costantinopoli" "Costantinopoli" }
+4779 = { "Gallipoli" "Gallipoli" }
+5524 = { "Bizia" "Bizia" }
+5525 = { "Selimbria" "Selimbria" }
+5526 = { "Media" "Media" }
+5538 = { "Rodostos" "Rodostos" }
+5539 = { "Ciariopoli" "Ciariopoli" }
+5541 = { "Dimodica" "Dimodica" }
+#hemimont
+149 = { "Adrianopoli" "Adrianopoli" }
+1764 = { "Burgos" "Burgos" }
+5522 = { "Mesembria" "Mesembria" }
+5523 = { "Sozopoli" "Sozopoli" }
+5537 = { "Quaranta Chiese" "Quaranta Chiese" }
+#rhodope
+2750 = { "Filippopoli" "Filippopoli" }
+4705 = { "Komotini" "Komotini" }
+5542 = { "Christopoli" "Christopoli" }
+5545 = { "Marsa" "Marsa" }
+
+##CARPATHIA
+#bessarabia
+5590 = { "Licostomo" "Licostomo" }
+
+##ANATOLIA
+#Bithynia
+316 = { "Nicomedia" "Nicomedia" }
+317 = { "Prusa" "Prusa" }
+5630 = { "Scutari" "Scutari" }
+5631 = { "Kandara" "Kandara" }
+5634 = { "Pyle" "Pyle" }
+5635 = { "Nicea" "Nicea" }
+5636 = { "Vilocome" "Vilocome" }
+5637 = { "Thebasion" "Thebasion" }
+5640 = { "Amastri" "Amastri" }
+#mysia
+2296 = { "Spiga" "Spiga" }
+5660 = { "Miletopoli" "Miletopoli" }
+5661 = { "Dardanellia" "Dardanellia" }
+5662 = { "Eolide" "Adramittio" }
+5663 = { "Vecchiocastello" "Vecchiocastello" }
+5664 = { "Pergamo" "Pergamo" }
+5665 = { "Pegadia" "Pegadia" }
+5685 = { "Cundia" "Kydonies" }
+#ionia
+318 = { "Smirne" "Smirne" }
+2297 = { "Magnesia" "Magnesia" }
+4309 = { "Tralles" "Tralles" }
+5680 = { "Efeso" "Efeso" }
+5681 = { "Cesme" "Cesme" }
+5682 = { "Tyrra" "Tyrra" }
+5683 = { "Filadelfia" "Filadelfia" }
+5684 = { "Focea" "Focea" }
+#paphlagonia
+5633 = { "Pontarachia" "Pontarachia" }
+#pamphylia
+5690 = { "Corico" "Corico" }
+#caria
+5678 = { "Petronio" "Petronio" }
+
+##LEVANT
+#cyprus
+321 = { "Nicosia" "Nicosia" }
+4998 = { "Karpassia" "Kyrenia" }
+5000 = { "Limisso" "Limisso" }
+5001 = { "Cizio" "Cizio" }
+5002 = { "Famagosta" "Famagosta" }
+
+##TARTARY
+#meotyda
+286 = { "La Tana" "La Tana" }  
+6216 = { "Cobardi" "Cobardi" }  
+6217 = { "Porto Pisano" "Porto Pisano" }
+#kuban
+2447 = { "Matrega" "Matrega" } 
+6219 = { "Bacinaci" "Bacinaci" }
+6220 = { "Taro" "Taro" }
+6221 = { "Pesce" "Pesce" }
+#crimea
+285 = { "Caffa" "Caffa" }
+6181 = { "Cembalo" "Cembalo" }
+6182 = { "Soldaia" "Soldaia" }
+6183 = { "Cerchio" "Cerchio" }  #or Vosporo. Concretely mainly seen in texts specifying its Italian name as Cerchio under Genoa
+6184 = { "Solcata" "Solcata" }
+6187 = { "Lifetti" "Lifetti" }
+
+##CAUCASIA
+#imereti
+1856 = { "Savastopoli" "Savastopoli" }
+#circassia
+2195 = { "Nicopia" "Nicopia" }
+6223 = { "Batario" "Batario" } #Susaco is another name but not Genoese
+6224 = { "Sindica" "Sindica" }  #Invented, from Sindika
+6225 = { "Chacari" "Chacari" }
+6226 = { "Layso" "Layso" }
+6227 = { "Pezonda" "Pezonda" }
+6229 = { "Maurolaco" "Maurolaco" }
+
+#Macaronesia - by Math
+368 = { "Madera" "Finocchio" } #Invented
+5709 = { "Lancelotto" "Rubicone" }  #Invented
+5710 = { "Forteventura" "Betancuria" } #Invented
+
+##france
+#Savoy/Arpitan by pleibos
+205 = { "Savoia" "Ciamberì" }
+1867 = { "Losanna" "Losanna" }
+4719 = { "Bressa" "Borgo" }
+4995 = { "Ginevrese" "Annesì" }
+4996 = { "Chiablese" "Tonone" }
+4997 = { "Moriana" "San Giovanni" }
+5028 = { "Nione" "Nione" }
+#provence
+201 = { "Acqui" "Acqui di Provenza" }
+202 = { "Avignone" "Avignone" }
+2991 = { "Forno da Calce" "Forno da Calce" }
+3293 = { "Arli" "Arli" }
+3294 = { "Marsiglia" "Marsiglia" }
+3295 = { "Grassa" "Grassa" }
+3296 = { "Draguignan" "Draguignan" } #same as french
+3297 = { "Barcilona" "Barcilona de Provença" }
+4696 = { "Tolone" "Tolone" }
+#anjou-maine
+177 = { "Mansa" "Mansa" }
+178 = { "Angero" "Angero" } #or Angerso, Angiò (being Anjou)
+3198 = { "Mauge" "Coleto" }
+3201 = { "Salmuro" "Salmuro" }
+3202 = { "Lavalle" "Lavalle" }
+3203 = { "Sabbia" "Sabbia" } #just sand, like Sablé. I hate sand.
+3204 = { "Belmonte" "Belmonte" }
+5220 = { "Craone" "Craone" }
+#Dauphiné
+204 = { "Granopoli" "Granopoli" }
+3287 = { "Vienna" "Vienna del Delfinato" }
+3288 = { "Valenza" "Valenza nel Delfinato" }
+3289 = { "Montelimare" "Montelimare" }
+3291 = { "Gape" "Gape" }
+3292 = { "Brianzone" "Brianzone" }
+5224 = { "Dia" "Dia" }
+5225 = { "Ambrune" "Ambrune" }
+#lower languedoc
+200 = { "Mompellieri" "Mompellieri" }
+2753 = { "Narbona" "Narbona" }
+3276 = { "Besiera" "Besiera" }
+3277 = { "Nimme" "Nimme" }
+3279 = { "Gabalitano" "Menda" }
+3280 = { "Velesia" "Il Poggio" }
+4391 = { "Vivarese" "Vivierse" }
+##germany
+#romandie
+1867 = { "Losanna" "Losanna" }
+1871 = { "Alto Vallese" "Sìon" }
+4720 = { "Ginevra" "Ginevra" }
+5028 = { "Nione" "Nione" }
+5029 = { "Basso Vallese" "San Maurizio" }
+##maghreb
+#africa
+341 = { "Tunisi" "Tunisi" }
+2473 = { "Susa" "Susa" }
+#djerba
+2954 = { "Gerba" "Gerba" }
+#byzancena
+2453 = { "Safasso" "Safasso" }
+4556 = { "Cairoano" "Cairoano" } #semi fictional
+5818 = { "Mahdia" "Mahdia" }
+5819 = { "Monasterio" "Monasterio" }
+#tripolitania
+354 = { "Tripoli di Berberia" "Tripoli" }
+#historical barbary coast
+5789 = { "Djidjelli" "Djidjelli" }
+5796 = { "Marsacares" "Marsacares" }
+5797 = { "Tabarca" "Tabarca" }
+#albania
+143 = { "Valona" "Valona" }
+#macedonia
+4702 = { "Serres" "Serres" }
+5553 = { "Calcidica" "Acanthus" }
+5560 = { "Bitoli" "Bitoli" }
+5570 = { "Farsaglia" "Farsaglia" }
+#peloponnese
+145 = { "Mistra" "Mistra" }

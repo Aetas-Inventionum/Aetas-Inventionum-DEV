@@ -1,0 +1,114 @@
+#Country Name: Please see filename.
+
+graphical_culture = latingfx
+
+color = { 177 83 23 } #168 27 57 for red, 176 100 85 for irl aragon colour
+
+revolutionary_colors = { 4  8  4 }
+
+historical_score = 400
+
+historical_idea_groups = {
+	maritime_ideas
+	quantity_ideas
+	religious_ideas
+	trade_ideas
+	naval_ideas
+	economic_ideas
+	innovativeness_ideas
+	offensive_ideas
+}
+
+historical_units = {
+	western_medieval_infantry
+	western_medieval_knights
+	western_men_at_arms
+	spanish_tercio
+	french_caracolle
+	austrian_tercio
+	austrian_grenzer
+	austrian_hussar
+	austrian_white_coat
+	austrian_jaeger
+	mixed_order_infantry
+	open_order_cavalry
+	napoleonic_square
+	napoleonic_lancers
+}
+
+monarch_names = {
+	"Ramir #2" = 10
+	"Sanç #1" = 5
+	"Pere #4" = 15
+	"Jaume #2" = 15
+	"Joan #1" = 15
+	"Martí #1" = 15
+	"Alfons #4" = 40
+	"Ferran #1" = 10
+	"Lluís #0" = 5
+	"Felip #0" = 5
+	"Simó #0" = 0
+	"Tomàs #0" = 0
+	"Dídac #0" = 0
+	"García #0" = 0
+	"Ausiàs #0" = 0
+	"Gabriel #0" = 0
+	"Gauberte #0" = 0
+	"Ramon #0" = 0
+	"Franci #0" = 0
+	"Iñigo #0" = 0
+	"Galceran #0" = 0
+	"Bernat #0" = 0
+	"Antón #0" = 0
+	"Erasmo #0" = 0
+	"Eusebi #0" = 0
+	"Guillem #0" = 0
+	"Guifré #0" = 0
+	"Arnau #0" = 0
+	"Huguet #0" = 0
+	"Jofre #0" = 0
+	"Ponç #0" = 0
+	
+	"Alejandra #0" = -5
+	"Candela #0" = -5
+	"Estrella #0" = -5
+	"Joana #0" = -5
+	"Elisabet #0" = -1
+	"Aldonça #0" = -1
+}
+
+leader_names = {
+	d'Abella d'Acuña d'Agulló d'Alfaro d'Aragó d'Aux
+	Ballester "de Besalú" "de Bobadilla" Borràs
+	"de Cabrera" "de Castellví" "de Centelles" Cerdán "de la Cueva" "de Corella"
+	d'Éntença
+	"de Foixà"
+	"de Galba" "de Girona" "de Gothia" "de la Guàrdia" Güell
+	"de Híjar"
+	d'Ivora
+	"de Luna"
+	"de Mallorca" March "de Mataplana" Mòger
+	d'Ortafà
+	Perellós
+	Rejón "de Requesens" "de Ribagorça" "de Ribes"
+	"de Santa Coloma" "de Sant Jordi" 
+	"de Vagad" "de Vic" Vicent
+	"de Xèrica"
+}
+
+ship_names = {
+	"Blanca Aurora" "Sant Jacob" Flama Lleona Falcó "La Bonaventura" "Sant Antoni" 
+	"Sant Miquel" "Sant Bernat" "Sant Francesc" "Santa Ágata" "Santa Eulàlia" 
+	"Sant Gabriel" "Sant Climent" "Sant Jordi" "La Reial" Trinitat "Santa Creu" 
+	"Santa Maria" "Santa Caterina" "Sant Joan Evangelista" "Santa Bàrbara" 
+	"Sant Pere de Roma" "La Gasela" "Santa Magdalena" "Sant Víctor" Magnana 
+	"Santa Ventura" "Santa Coloma" "Sant Ambrós" "La Garsa"  
+}
+
+army_names = {
+	"Exèrcits de $PROVINCE$"
+}
+
+fleet_names = { 
+	"Estol de $PROVINCE$"
+}
