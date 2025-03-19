@@ -1,5 +1,0 @@
-#AI Update 
-# = { "x" "x" }
-
-#Simply to give them the accurate capital before Brittany takes over
-170  = { "Léon" "La Roche-Maurice" }

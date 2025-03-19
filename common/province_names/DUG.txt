@@ -1,5 +1,0 @@
-#AI Update 
-# = { "x" "x" }
-
-#Simply to give them the accurate capital before Scotland takes over
-5141  = { "Douglasdale" "Douglas" }

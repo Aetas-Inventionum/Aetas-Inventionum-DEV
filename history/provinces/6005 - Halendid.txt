@@ -1,4 +1,0 @@
-#Natural borders
-
-
-discovered_by = western

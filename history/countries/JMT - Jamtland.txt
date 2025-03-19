@@ -1,5 +1,0 @@
-government = republic
-primary_culture =jamtlandic
-religion = catholic
-technology_group = western
-capital = 10 #Jamtland
