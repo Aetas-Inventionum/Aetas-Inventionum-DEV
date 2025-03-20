@@ -5,25 +5,25 @@ Insert Manual install steps here
 
 Credits:
 
-Math5615
-Felis
-Pleibos
+Math5615,
+Felis,
+Pleibos,
 
-Andermann
-Dub
-Harbivore
-HertogSim
-Inferno
-Jackkade
-LordCitratus
-Neothiamin
-Schockocraft
-Vjw
+AdvocatusDiaboli,
+Andermann,
+Dub,
+Good Lookin,
+Harbivore,
+HertogSim,
+Inferno,
+Jackkade,
+LordCitratus,
+Neothiamin,
+Schockocraft,
+Vjw,
 
-AdvocatusDiaboli
-Good Lookin
-Jabberdrake
-P.Stein
+Jabberdrake,
+P.Stein,
 
 Other Mods:
 
