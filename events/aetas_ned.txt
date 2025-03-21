@@ -540,45 +540,46 @@ country_event = {
 		set_government_rank = 2
 	}
 }
-#herring fishing
-country_event = {
-	id = aetas_ned.22
-	title = aetas_ned.22.t
-	desc = aetas_ned.22.d
-	picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
-	
-	fire_only_once = yes
-	major = yes
-	
-	trigger = { 
-		owns_core_province = 97
-		tag = HOL 
-		NOT = { is_year = 1500 } #just to ensure it doesnt happen too late somehow
-	}
 
-	mean_time_to_happen = { 
-		days = 10
-	}
-
-	option = { 
-		name = aetas_ned.22.a
-		change_price = { 
-			trade_goods = fish 
-			key = herring_gibbing
-			value = 0.05
-			duration = 54750 #150 years?
-		}
-		change_price = { 
-			trade_goods = salt 
-			key = herring_gibbing
-			value = 0.05
-			duration = 54750 #150 years?
-		}
-		97 = { 
-			add_province_modifier = { 
-				name = amsterdam_herring
-				duration = -1
-			}
-		}
-	}
-}
+#herring fishing -- duplicate of event in _hol file? 
+#country_event = {
+#	id = aetas_ned.22
+#	title = aetas_ned.22.t
+#	desc = aetas_ned.22.d
+#	picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+#	
+#	fire_only_once = yes
+#	major = yes
+#	
+#	trigger = { 
+#		owns_core_province = 97
+#		tag = HOL 
+#		NOT = { is_year = 1500 } #just to ensure it doesnt happen too late somehow
+#	}
+#
+#	mean_time_to_happen = { 
+#		days = 10
+#	}
+#
+#	option = { 
+#		name = aetas_ned.22.a
+#		change_price = { 
+#			trade_goods = fish 
+#			key = herring_gibbing
+#			value = 0.05
+#			duration = 54750 #150 years?
+#		}
+#		change_price = { 
+#			trade_goods = salt 
+#			key = herring_gibbing
+#			value = 0.05
+#			duration = 54750 #150 years?
+#		}
+#		97 = { 
+#			add_province_modifier = { 
+#				name = amsterdam_herring
+#				duration = -1
+#			}
+#		}
+#	}
+#}

@@ -28,6 +28,7 @@ hre = no
 #Fort/Other Buildings
 
 #Special Modifiers
+add_province_triggered_modifier = jewish_community
 
 #Discoveries
 discovered_by = eastern
