@@ -1,4 +1,4 @@
-###Github Desktop Install Guide
+### Github Desktop Install Guide
 0. Make sure that you have "Europa Universalis IV" and "Github Desktop" installed.
 1. Launch the EU4 Launcher and navigate to the "Upload a Mod" button in "All installed mods", then click "Create a Mod". 
 2. In the following panel, name the folder that will be created "Aetas-Inventionum-DEV" (without the quotes). Tags, version, and name do not matter.
@@ -8,11 +8,11 @@
 6. Press "Clone", the blue button at the bottom of the "Clone a repository" panel, and then give the program time to copy the mod's files onto your computer.
 7. Navigate to the folder you made with the EU4 Launcher and move the "descriptor.mod" file back into it, you should now be able to launch the mod.
 
-###Insert Manual install steps here 
+### Insert Manual install steps here 
 <sup>(Playtesters & Contributors do NOT do this, use above method.)</sup>
 
 --------------------------------------------------------------------------------
-###Credits
+### Credits
 
 Math5615,
 Felis,
@@ -33,6 +33,6 @@ P.Stein,
 Schockocraft,
 Vjw,
 
-###Other Mods
+### Other Mods
 
 Typus Orbis Terarrum, Atlas Novum, Beyond Typus, In Fabulae, Cantons for Colonial Flags, Schocko's Outliner Fix, Governments Expanded, No More Border Gore!, No Province Flags, Beyond the Cape, The Succession (Original Main Theme).
