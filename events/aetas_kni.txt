@@ -10,6 +10,10 @@ country_event = {
 	
 	is_triggered_only = yes 
 
+	immediate = {
+		set_country_flag = kni_1_fix
+	}
+
 	option = { #auvergne langue
 		name = "aetas_kni.1.a"
 		random_list = { 
@@ -78,6 +82,7 @@ country_event = {
 			name = auvergnat_langue
 			duration = -1
 		}
+		clr_country_flag = kni_1_fix
 	}
 	option = { #francien langue
 		name = "aetas_kni.1.b"
@@ -134,6 +139,7 @@ country_event = {
 				modifier = kni_langue
 			}
 		}
+		clr_country_flag = kni_1_fix
 	}
 	option = { #prov langue
 		name = "aetas_kni.1.c"
@@ -151,6 +157,7 @@ country_event = {
 				modifier = kni_langue
 			}
 		}
+		clr_country_flag = kni_1_fix
 	}
 	option = { #english langue
 		name = "aetas_kni.1.dd"
@@ -168,6 +175,7 @@ country_event = {
 				modifier = kni_langue
 			}
 		}
+		clr_country_flag = kni_1_fix
 	}
 	option = { #italian langue
 		name = "aetas_kni.1.e"
@@ -209,6 +217,7 @@ country_event = {
 				modifier = kni_langue
 			}
 		}
+		clr_country_flag = kni_1_fix
 	}
 	option = { #german langue
 		name = "aetas_kni.1.f"
@@ -255,6 +264,7 @@ country_event = {
 				modifier = kni_langue
 			}
 		}
+		clr_country_flag = kni_1_fix
 	}
 	option = { #langue of aragon
 		name = "aetas_kni.1.g"
@@ -286,5 +296,6 @@ country_event = {
 				modifier = kni_langue
 			}
 		}
+		clr_country_flag = kni_1_fix
 	}
 }

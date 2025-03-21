@@ -1411,6 +1411,9 @@ on_monarch_death = {
 		limit = { 
 			tag = KNI 
 			has_reform = hospitaller_order_reform
+			NOT = {
+				has_country_flag = kni_1_fix
+			}
 		}
 		country_event =  { id = aetas_kni.1 }
 	}
