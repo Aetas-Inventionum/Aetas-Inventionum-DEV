@@ -8,6 +8,8 @@
 6. Press "Clone", the blue button at the bottom of the "Clone a repository" panel, and then give the program time to copy the mod's files onto your computer.
 7. Navigate to the folder you made with the EU4 Launcher and move the "descriptor.mod" file back into it, you should now be able to launch the mod.
 
+a. In order to update your install of the mod, you need to press the "Fetch origin" button to the right of the aforementioned "Current repository" button on Github Desktop. If you're a contributor, this same button is used to push commits you've made to the mod and you will need to pull all new changes from origin before you can push.
+
 ### Insert Manual install steps here 
 <sup>(Playtesters & Contributors do NOT do this, use above method.)</sup>
 
@@ -35,4 +37,4 @@ Vjw,
 
 ### Other Mods
 
-Typus Orbis Terarrum, Atlas Novum, Beyond Typus, In Fabulae, Cantons for Colonial Flags, Schocko's Outliner Fix, Governments Expanded, No More Border Gore!, No Province Flags, Beyond the Cape, The Succession (Original Main Theme).
+Typus Orbis Terarrum, Atlas Novum, Beyond Typus, In Fabulae, Cantons for Colonial Flags, Schocko's Outliner Fix, Governments Expanded (for our Byz Government), No More Border Gore!, No Province Flags, Beyond the Cape, The Succession (Original Main Theme).

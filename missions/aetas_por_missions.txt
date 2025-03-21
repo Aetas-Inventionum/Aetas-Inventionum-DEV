@@ -312,7 +312,14 @@ ai_por_branch_3a = {
 		required_missions = { por_ceuta } 
 		provinces_to_highlight = {  
 			area = macaronesia_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { 
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT 
+					province_id = 368 #Madeira
+					province_id = 367 #Azores East
+					province_id = 5708 #Azores West	
+				}
+			}
 		} 
 
 		trigger = {  
@@ -320,6 +327,13 @@ ai_por_branch_3a = {
 				value = 1 
 				area = macaronesia_area
 				is_city = yes 
+				NOT = {
+					OR = {
+						province_id = 368 #Madeira
+						province_id = 367 #Azores East
+						province_id = 5708 #Azores West	
+					}
+				}
 			}
 		} 
 
