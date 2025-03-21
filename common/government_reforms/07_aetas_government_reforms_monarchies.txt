@@ -88,7 +88,7 @@ composite_monarchy_reform = { #This was retooled into the spanish government
 	}
 	conditional = { 
 		allow = { 
-			NOT = { mission_completed = spa_solo } #False Positive error, according to neo
+			#NOT = { mission_completed = spa_solo } #False Positive error, according to neo
 		}
 		
 		custom_attributes = { 
