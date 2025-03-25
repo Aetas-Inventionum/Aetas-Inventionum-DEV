@@ -284,13 +284,11 @@ country_event = {
 	trigger = { 
 		tag = ENG 
 		NOT = { 
-			AND = {
-				is_in_war = { 
-					attacker_leader = ROOT 
-					defender_leader = FRA 
-				}
-				mission_completed = eng_dual_king
+			is_in_war = { 
+				attacker_leader = ROOT 
+				defender_leader = FRA 
 			}
+			mission_completed = eng_dual_king
 		}
 	}
 

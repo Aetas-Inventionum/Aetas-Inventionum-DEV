@@ -283,6 +283,10 @@ province_event = {
 		}
 	}
 
+	mean_time_to_happen = { 
+		months = 16
+	}
+
 	option = { 
 		name = aetas_cae.5.a #oh sweet sugar
 		change_trade_goods = sugar 
