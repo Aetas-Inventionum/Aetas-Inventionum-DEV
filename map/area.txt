@@ -1324,7 +1324,7 @@ graubunden_area = { #4
 }
 
 upper_rhineland_area = { #3 # now 'Baden'
-	72 74 4714 77 5336 5337 5339 5340 5332
+	72 74 4714 77 5336 5339 5340 5332
 }
 
 alsace_area = { #3
@@ -1348,7 +1348,7 @@ westphalia_area = { #3 (South Westphalia)
 }
 
 north_westphalia_area = { #4
-	56 86 2973 69 5367 5368 5369 5370 5371 5375
+	56 86 2973 69 5367 5368 5369 5370 5375
 }
 
 hesse_area = { #5
@@ -1616,7 +1616,7 @@ upper_khazaria_area = {
 ########################################
 
 cyprus_area = { #6
-	321 4998 4999 5000 5001 5002
+	321 4998 5000 5001 5002
 }
 
 rum_area = { #5
