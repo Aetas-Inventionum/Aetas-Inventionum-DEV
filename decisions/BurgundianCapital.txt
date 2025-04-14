@@ -4,6 +4,9 @@ country_decisions = {
 			tag = BUR 
 		}
 		allow = {
+			hidden_trigger = {
+				tag = BUR 
+			}
 			OR = { 
 				custom_trigger_tooltip = { 
 					tooltip = no_hotel.tt
