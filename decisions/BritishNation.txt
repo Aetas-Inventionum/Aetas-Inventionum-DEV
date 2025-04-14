@@ -75,15 +75,15 @@ country_decisions = {
 				move_capital_effect = yes
 			}
 			hidden_effect = {
-				complete_mission = eng_rb_war_of_roses
+				# complete_mission = eng_rb_war_of_roses
 			}
 			hidden_effect = {
 				if = {
 					limit = {
 						tag = SCO
 					}
-					complete_mission = eng_mighty_army
-					complete_mission = conquer_scotland
+					# complete_mission = eng_mighty_army
+					# complete_mission = conquer_scotland
 				}	
 			}
 			hidden_effect = {
@@ -91,9 +91,9 @@ country_decisions = {
 					limit = {
 						tag = IRE
 					}
-					complete_mission = eng_mighty_army
-					complete_mission = conquer_scotland
-					complete_mission = conquer_ireland
+					# complete_mission = eng_mighty_army
+					# complete_mission = conquer_scotland
+					# complete_mission = conquer_ireland
 				}	
 			}
 			change_tag = GBR
@@ -266,9 +266,9 @@ country_decisions = {
 					limit = {
 						tag = SCO
 					}
-					complete_mission = eng_mighty_army
-					complete_mission = conquer_scotland
-					complete_mission = eng_rb_war_of_roses
+					# complete_mission = eng_mighty_army
+					# complete_mission = conquer_scotland
+					# complete_mission = eng_rb_war_of_roses
 				}	
 			}
 			change_tag = GBR
