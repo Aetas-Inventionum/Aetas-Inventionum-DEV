@@ -2757,10 +2757,10 @@ ai_fra_wars_branch_2 = {
 				limit = {
 					PRO = {
 						is_subject_of = ROOT
-						NOT = { mission_completed = emp_pro_toulon } 
+						# NOT = { mission_completed = emp_pro_toulon } 
 					}
 				}
-				PRO = { complete_mission = emp_pro_toulon } 
+				# PRO = { complete_mission = emp_pro_toulon } 
 				201 = { add_base_production = 1 } 
 				4696 = { add_base_production = 1 } 
 			}
