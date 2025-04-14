@@ -116,24 +116,25 @@ country_decisions = {
 			225 = {	#Cordoba
 				move_capital_effect = yes
 			}
-			hidden_effect = {
-				if = {
-					limit = { 
-						tag = MOR 
-						has_dlc = "Golden Century"
-					}
-					complete_mission = gra_overcome_internal_strife
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = { 
-						tag = MOR 
-						has_dlc = "Golden Century"
-					}
-					complete_mission = gra_friends_in_high_places
-				}
-			}
+			
+ #			hidden_effect = {
+ #				if = {
+ #					limit = { 
+ #						tag = MOR 
+ #						has_dlc = "Golden Century"
+ #					}
+ #					complete_mission = gra_overcome_internal_strife
+ #				}
+ #			}
+ #			hidden_effect = {
+ #				if = {
+ #					limit = { 
+ #						tag = MOR 
+ #						has_dlc = "Golden Century"
+ #					}
+ #					complete_mission = gra_friends_in_high_places
+ #				}
+ #			}
 			change_tag = ADU
 			on_change_tag_effect = yes
 			swap_non_generic_missions = yes
