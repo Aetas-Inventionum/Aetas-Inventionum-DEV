@@ -261,7 +261,7 @@ estate_nobles = {
 			culture_group = iberian 
 			NOT = { 
 				OR = {
-					primary_culture = portuguese 
+					primary_culture = portugese 
 					primary_culture = aragonese
 				}
 			}
