@@ -5074,7 +5074,7 @@ estate_action_COMISSION_MERCHANT_SHIPS_FOR_WAR_BURGHERS = {
 	}
 	else = {
 		add_ship_construction_scaled_to_ports = {
-			type = heavy_ship
+			type = galley
 		}
 	}
 }
@@ -6211,7 +6211,7 @@ estate_action_COMISSION_MERCHANT_SHIPS_FOR_WAR_VAISYAS = {
 	#	loyalty = -15
 	#}
 	add_ship_construction_scaled_to_ports = {
-		type = heavy_ship
+		type = galley
 	}
 }
 estate_action_GRANT_QIZILBASH_HORSES = {
