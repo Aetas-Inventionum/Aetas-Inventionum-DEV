@@ -31,7 +31,6 @@ Jabberdrake,
 Jackkade,
 LordCitratus,
 Neothiamin,
-P.Stein,
 Schockocraft,
 Vjw,
 
