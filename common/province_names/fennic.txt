@@ -17,6 +17,7 @@
 6070 = { "Ulvila" "Ulvila" }
 6072 = { "Kokemäki" "Kokemäki" }
 6073 = { "Naantali" "Naantali" }
+6074 = { "Rauma" "Rauma" }
 6075 = { "Raasepori" "Raasepori" }
 6076 = { "Kirkkonummi" "Kirkkonummi" }
 #ostrobothnia
