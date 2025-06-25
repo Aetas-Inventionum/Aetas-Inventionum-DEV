@@ -6918,7 +6918,7 @@ por_acores = {
 	trade_goods_size = 1.5
 }
 eng_ally_mod = { 
-	prestige_decay = -0.1
+	prestige_decay = -0.005
 }
 eng_por_mod = { 
 	trade_efficiency = 0.1
