@@ -6802,7 +6802,7 @@
  nile_canal3_decision_desc:0 "By carrying out maintenance on our Nile canals and improving their structure and engineering, we could promote better results from the Nile flood cycle and potentially prevent increased maluses if we receive a poor flood from the cycle.\nCurrently we have §YLevel 2 Nile canals§!. The maximum is §YLevel 3§! canals."
  mam_stable_flooding:0 "Stable Flooding"
  aetas_mam.14.t:0 "Coptic Christian Policy"
- aetas_mam.14.d:0  "  From the time that the Rashidun Caliphate first stormed Roman Egypt, the Christians of Egypt have always required extra policy to handle. Being a large population, Muslim rulers have had a variety of policies, from following the established Umar Pact, which restricted their expansion but guaranteed their rights and protection, to fully persecuting them and enforcing forced conversions to Islam.\n  As [Root.Monarch.GetTitle], we must decide our policy on how to handle this population."
+ aetas_mam.14.d:0  "From the time that the Rashidun Caliphate first stormed Roman Egypt, the Christians of Egypt have always required extra policy to handle. Being a large population, Muslim rulers have had a variety of policies, from following the established Umar Pact, which restricted their expansion but guaranteed their rights and protection, to fully persecuting them and enforcing forced conversions to Islam.\n\nAs [Root.Monarch.GetTitle], we must decide our policy on how to handle this population."
  aetas_mam.14.a:0 "Grant them full and equal rights."
  aetas_mam.14.b:0 "Uphold the Pact of Umar"
  aetas_mam.14.c:0 "They cannot be tolerated any longer."
