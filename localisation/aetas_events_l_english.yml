@@ -729,7 +729,7 @@
  calenberg_residenz:0 "Calenberg Residenz"
  lun_swb:0 "Hegemony over the Askanier"
  ai_luneburg_saltworks2:0 "Lüneburg Saltworks"
- ai_luneburg_saltworks2_desc:0 "The Saltworks of Lüneburg have been operated since the first salt spring in the area was discovered in the 13th century. From that point forward, Lüneburg became the leading salt exporter of all Northern Europe and played a notable role in the development of the reknowned Skåne Market."
+ ai_luneburg_saltworks2_desc:0 "The Saltworks of Lüneburg have been operated since the first salt spring in the area was discovered in the 13th century. From that point forward, Lüneburg became the leading salt exporter of all Northern Europe and played a notable role in the development of the renowned Skåne Market."
  bru_gos.tt:0 "If we have completed this mission by improving relations with @GOS §YGoslar§!, then we will offer them our suzerainty.\n"
  bru_gos_mod:0 "Master of Rammelsberg" 
  bru_wolfenbuttel.tt:0 "The event '§YThe Move to Wolfenbüttel§!' has happened"
@@ -832,10 +832,10 @@
 
  #katz events
  aetas_ktz.1.t:0 "Origin of Riesling Wine"
- aetas_ktz.1.d:0 "Riesling wine, named after its special variety of grape, is a white wine reknowned throughout the entire world for its unique and delicious dry taste and durable longevity. It was first mentioned in history in the storage archives of Count Johann IV of Katzenelnbogen who had a reputation for growing the finest of grapes and experimenting with different soil types to that end. His success made the area around Katzenelnbogen a center for the production of the special wine and sealed the prestige of Katzenelnbogen forever."
+ aetas_ktz.1.d:0 "Riesling wine, named after its special variety of grape, is a white wine renowned throughout the entire world for its unique and delicious dry taste and durable longevity. It was first mentioned in history in the storage archives of Count Johann IV of Katzenelnbogen who had a reputation for growing the finest of grapes and experimenting with different soil types to that end. His success made the area around Katzenelnbogen a center for the production of the special wine and sealed the prestige of Katzenelnbogen forever."
  aetas_ktz.1.a:0 "Wonderful!"
  riesling_wine:0 "Vineyards of Riesling Wine"
- riesling_wine_desc:0 "Riesling wine, named after its special variety of grape, is a white wine reknowned throughout the entire world for its unique and delicious dry taste and durable longevity. It was first mentioned in history in the storage archives of Count Johann IV of Katzenelnbogen who had a reputation for growing the finest of grapes and experimenting with different soil types to that end. His success made the area around Katzenelnbogen a center for the production of the special wine and sealed the prestige of Katzenelnbogen forever."
+ riesling_wine_desc:0 "Riesling wine, named after its special variety of grape, is a white wine renowned throughout the entire world for its unique and delicious dry taste and durable longevity. It was first mentioned in history in the storage archives of Count Johann IV of Katzenelnbogen who had a reputation for growing the finest of grapes and experimenting with different soil types to that end. His success made the area around Katzenelnbogen a center for the production of the special wine and sealed the prestige of Katzenelnbogen forever."
  #swabian events 
  aetas_wur.1.t:0 "Assimilation of Montbéliard"
  aetas_wur.1.d:0 "  Since the marriage of Countess Henriette de Montfaucon of Montbéliard to Eberhard of Württemberg, son of Eberhard III, from 1407 Montbéliard has been de facto in personal union with the County of Württemberg. The personal union has brought with it extensive interaction and collaboration between the two counties who mutually benefit from the arrangement, enjoying one another's benevolent partnership.\n  With the death of Eberhard III, the union takes a step further to becoming an undeniable core asset of the County of Württemberg, as it is now ruled by his son and Count of Montbéliard, Eberhard IV, who's inauguration as Count of Württemberg effectively annexes Montbéliard to Württemberg. His talented spouse, the clever Henriette, has also agreed to the arrangement and now serves as Eberhard's most loyal companion and advisor in the Württemberger court."
