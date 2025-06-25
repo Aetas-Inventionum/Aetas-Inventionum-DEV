@@ -349,6 +349,9 @@
  #Government Reforms
  #moved to government names
  
+ #Modifiers
+ ai_tribal_activity:0 "Tribal Activity in Province"
+
  #Province special modifiers
  ai_catanzaro:0 "Silk Factories of Catanzaro"
  ai_catanzaro_desc:0 "Since the 9th century after having been introduced by the Eastern Roman Empire, Catanzaro has been producing raw silk. But, it was following the abduction of Greek silk artisans from Corinth and Thebes in the 11th century and settled in Catanzaro that its silk factories gained momentum, becoming the largest source of raw silk in Southern Italy soon after and for many centuries to come."
