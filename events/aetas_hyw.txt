@@ -27,7 +27,7 @@ country_event = {
 		}
 		custom_tooltip = aetas_hyw.1.tt
 		ALE = { kill_ruler = yes }
-		custom_tooltip = aetas_hyw.a.tt #duke of bourbon has been captured and brought to london
+		custom_tooltip = aetas_hyw.1.a.tt #duke of bourbon has been captured and brought to london
 		BAR = { 
 			kill_ruler = yes 
 		}
