@@ -239,12 +239,7 @@ country_event = {
 		}
 		swap_non_generic_missions = yes
 		add_government_reform = ai_sax_reform 
-		if = {
-			limit = {
-				is_elector = no
-			}
-			elector = yes 
-		}
+		elector = yes 
 		set_capital = 59
 		hidden_effect = { 
 			if = { 
