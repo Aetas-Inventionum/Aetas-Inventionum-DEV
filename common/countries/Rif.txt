@@ -27,12 +27,12 @@ historical_units = {
 
 monarch_names = {
 	"Muhammad #0" = 10
-	"Yûsuf #0" = 10
-	"‘Alî #0" = 10
-	"Sa‘d #0" = 10
-	"‘Ismâ‘îl #0" = 10
+	"Yï¿½suf #0" = 10
+	"ï¿½Alï¿½ #0" = 10
+	"Saï¿½d #0" = 10
+	"ï¿½Ismï¿½ï¿½l #0" = 10
 	"Nasr #0" = 10
-	"‘Abd al-Karim #0" = 10
+	"ï¿½Abd al-Karim #0" = 10
 	"Ayman #0" = 10
 	"Barakat #0" = 10
 	"Basir #0" = 10
@@ -53,5 +53,18 @@ leader_names = {
 	"Banu Hakan" "Banu Hammud" "Banu Hisam" "Banu Husayn"
 	"Banu Idris" "Banu Ishaq" "Banu Isma'il" "Banu al-Azafi" "Banu Ali"
 	"Banu Marwan" "Banu Muhammad" "Banu Nasr" "Banu Qasim" "Banu Sa'd" "Banu Sulayman"
-	"Banu Umar" "Banu Umayya" "Banu Utman" "Banu Ya'far" "Banu Yahyà" "Banu Yusuf"
+	"Banu Umar" "Banu Umayya" "Banu Utman" "Banu Ya'far" "Banu Yahyï¿½" "Banu Yusuf"
+}
+
+ship_names = {
+	Rif
+	Nekkour
+	Temsamane
+	Beni Urriaghel
+	Mellaliyin
+	Ghazzal
+	Tiddukt
+	Marinid
+	"Targuist Wind"
+	"Ajdir Star"
 }
