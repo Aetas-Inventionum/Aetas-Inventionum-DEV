@@ -72,5 +72,12 @@ ship_names = {
 	Ardon
 	Tsimiti
 	Beslan
+	Iron
+	Asdan
+	Dzaug
+	Nart
+	Soslan
+	"Alania Magna"
+	"Don Alan"
+	"Derbet Star"
 }
-
