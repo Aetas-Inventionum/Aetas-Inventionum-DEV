@@ -1,0 +1,27 @@
+government = monarchy
+add_government_reform = composite_monarchy_reform
+primary_culture = castillian
+add_accepted_culture = andalucian
+add_accepted_culture = mudejar
+add_accepted_culture = portugese
+add_accepted_culture = aragonese
+add_accepted_culture = catalan
+add_accepted_culture = sardinian
+religion = catholic
+technology_group = western
+historical_rival = FRA #balance
+historical_rival = ENG #balance
+capital = 215 # Valladolid
+
+add_army_professionalism = 0.1
+
+change_estate_land_share = {
+	estate = estate_nobles
+	share = 10
+}
+change_estate_land_share = {
+	estate = estate_church
+	share = -10
+}
+
+#Adjust this how you see fancy it was just missing..
