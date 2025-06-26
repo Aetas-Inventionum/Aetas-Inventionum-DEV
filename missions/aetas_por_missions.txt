@@ -102,7 +102,7 @@ ai_por_branch_1a = {
 		} 
 
 		trigger = {  
-			owns = 5173
+			owns = 5737
 			owns = 4564
 			owns = 5729
 			owns = 2469

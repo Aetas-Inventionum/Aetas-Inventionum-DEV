@@ -13,8 +13,12 @@ country_event = {
 			NOT = { has_province_modifier = ai_nomad_raid }
 		}
 		any_neighbor_province = {
-			OR = { 
-				is_city = no 
+			OR = {
+				AND = {
+					is_city = no
+					is_island = no
+					is_sea = no
+				}
 				owner = {
 					NOT = { is_subject_of = ROOT }
 					government = tribal
