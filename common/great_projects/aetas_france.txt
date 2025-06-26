@@ -1020,94 +1020,95 @@ ai_dijon_palace = {
 		}
 	}
 }
-notre_dame_cathedral = {
-	start = 183
-	date = 1.01.01
-	time = { months = 0 }
-	build_cost = 1000
-	starting_tier = 3
-	type = monument
-	build_trigger = { }
-	can_be_moved = no
-	on_built = { 
-		add_building = cathedral
-	}
-	on_destroyed = { }
-	can_use_modifiers_trigger = { 
-		province_is_or_accepts_religion_group = {
-			religion_group = christian
-		}
-	}
-	can_upgrade_trigger = { 
-		province_is_or_accepts_religion_group = {
-			religion_group = christian
-		}
-	}
-	keep_trigger = { }
-	tier_0 = {
-		upgrade_time = { months = 0 }
-		cost_to_upgrade = { factor = 0 }
-		province_modifiers = { }
-		area_modifier = { }
-		country_modifiers = { }
-		on_upgraded = { }
-	}
-	tier_1 = {
-		upgrade_time = { months = 80 }
-		cost_to_upgrade = { factor = 750 }
-		province_modifiers = { }
-		area_modifier = {
-			development_cost = -0.05
-			local_tax_modifier = 0.1
-		}
-		country_modifiers = { }
-		on_upgraded = {
-			owner = {
-				add_prestige = 5
-			}
-		}
-	}
-	tier_2 = {
-		upgrade_time = { months = 160 }
-		cost_to_upgrade = { factor = 1500 }
-		province_modifiers = {
-		}
-		area_modifier = {
-			development_cost = -0.1
-			local_tax_modifier = 0.2
-		}
-		country_modifiers = { 
-			papal_influence = 1
-			monthly_fervor_increase = 0.5
-			church_power_modifier = 0.1
-		}
-		on_upgraded = {
-			owner = {
-				add_prestige = 10
-			}
-		}
-	}
-	tier_3 = {
-		upgrade_time = { months = 320 }
-		cost_to_upgrade = { factor = 3000 }
-		province_modifiers = {
-		}
-		area_modifier = {
-			development_cost = -0.25
-			local_tax_modifier = 0.3
-		}
-		country_modifiers = { 
-			papal_influence = 2
-			monthly_fervor_increase = 1
-			church_power_modifier = 0.15
-		}
-		on_upgraded = {
-			owner = {
-				add_prestige = 20
-			}
-		}
-	}
-}
+#notre_dame_cathedral = {
+#	start = 183
+#	date = 1.01.01
+#	time = { months = 0 }
+#	build_cost = 1000
+#	starting_tier = 3
+#	type = monument
+#	build_trigger = { }
+#	can_be_moved = no
+#	on_built = { 
+#		add_building = cathedral
+#	}
+#	on_destroyed = { }
+#	can_use_modifiers_trigger = { 
+#		province_is_or_accepts_religion_group = {
+#			religion_group = christian
+#		}
+#	}
+#	can_upgrade_trigger = { 
+#		province_is_or_accepts_religion_group = {
+#			religion_group = christian
+#		}
+#	}
+#	keep_trigger = { }
+#	tier_0 = {
+#		upgrade_time = { months = 0 }
+#		cost_to_upgrade = { factor = 0 }
+#		province_modifiers = { }
+#		area_modifier = { }
+#		country_modifiers = { }
+#		on_upgraded = { }
+#	}
+#	tier_1 = {
+#		upgrade_time = { months = 80 }
+#		cost_to_upgrade = { factor = 750 }
+#		province_modifiers = { }
+#		area_modifier = {
+#			development_cost = -0.05
+#			local_tax_modifier = 0.1
+#		}
+#		country_modifiers = { }
+#		on_upgraded = {
+#			owner = {
+#				add_prestige = 5
+#			}
+#		}
+#	}
+#	tier_2 = {
+#		upgrade_time = { months = 160 }
+#		cost_to_upgrade = { factor = 1500 }
+#		province_modifiers = {
+#		}
+#		area_modifier = {
+#			development_cost = -0.1
+#			local_tax_modifier = 0.2
+#		}
+#		country_modifiers = { 
+#			papal_influence = 1
+#			monthly_fervor_increase = 0.5
+#			church_power_modifier = 0.1
+#		}
+#		on_upgraded = {
+#			owner = {
+#				add_prestige = 10
+#			}
+#		}
+#	}
+#	tier_3 = {
+#		upgrade_time = { months = 320 }
+#		cost_to_upgrade = { factor = 3000 }
+#		province_modifiers = {
+#		}
+#		area_modifier = {
+#			development_cost = -0.25
+#			local_tax_modifier = 0.3
+#		}
+#		country_modifiers = { 
+#			papal_influence = 2
+#			monthly_fervor_increase = 1
+#			church_power_modifier = 0.15
+#		}
+#		on_upgraded = {
+#			owner = {
+#				add_prestige = 20
+#			}
+#		}
+#	}
+#}
+
 ai_reims = {
 	start = 186
 	date = 1.01.01
