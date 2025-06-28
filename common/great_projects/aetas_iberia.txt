@@ -1904,7 +1904,7 @@ alhambra = {
 		}
 		province_modifiers = {
 			fort_level = 1 
-			local_development_cost_modifier = -0.075
+			local_development_cost = -0.075
 		}
 		area_modifier = {
 			local_defensiveness = 0.1
@@ -1926,7 +1926,7 @@ alhambra = {
 		}
 		province_modifiers = {
 			fort_level = 1
-			local_development_cost_modifier = -0.15
+			local_development_cost = -0.10
 		}
 		area_modifier = {
 			local_defensiveness = 0.15
@@ -1950,7 +1950,7 @@ alhambra = {
 		}
 		province_modifiers = {
 			fort_level = 1
-			local_development_cost_modifier = -0.1
+			local_development_cost = -0.15
 		}
 		area_modifier = {
 			local_defensiveness = 0.25
