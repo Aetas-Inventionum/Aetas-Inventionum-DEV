@@ -3429,7 +3429,7 @@
  #TRADE EVENTS
  aetas_trade_events.1.t:0 "Restoration of the African Terminus"
  aetas_trade_events.1.d:0 "For years now, [1751.GetName] and [334.GetName] have fought a brutal fight against one another for the domination over trade entering Europe from Africa. At times it felt unending, and the split of mercantile movement in the region has been devastating for both cities.\n\nBut now? They are together. Under one banner, our banner, we hold monopoly on trade entering Europe on this side of the Mediterranean. The gates to the road of growth on either side of the sea have been thrown open for our ambition. But first, we must make a decision.\n\nIt would make the most sense to centre our mercantile efforts in one city, not both, and we must decide which of the two to focus on..."
- aetas_trade_events.1.a:0 "I choose one the Pillars of Hercules as the jewel of our African expansion."
+ aetas_trade_events.1.a:0 "I choose the Pillars of Hercules as the jewel of our African expansion."
  aetas_trade_events.1.b:0 "I choose the Door of Africa as my entrance to the great bounties of the Maghreb."
  aetas_trade_events.1.a.tt:0 "\nWhatever §Y[1751.GetName]§! gains §Rwill be taken§! from §Y[334.GetName]§!."
  aetas_trade_events.1.b.tt:0 "\nWhatever §Y[334.GetName]§! gains §Rwill be taken§! from §Y[1751.GetName]§!."
