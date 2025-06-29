@@ -243,7 +243,7 @@ aetas_sty_branch_2c = {
 		position = 3
 		required_missions = { sty_judenberg } 
 		provinces_to_highlight = {
-			province_id = 123
+			province_id = 132
 			NOT = {
 				OR = {
 					has_production_building_trigger = yes
@@ -254,7 +254,7 @@ aetas_sty_branch_2c = {
 		}
 
 		trigger = {
-			123 = {
+			132 = {
 				has_production_building_trigger = yes
 				num_of_times_improved = 7
 				pure_unrest = 0
@@ -263,7 +263,7 @@ aetas_sty_branch_2c = {
 		}
 
 		effect = {
-			123 = {
+			132 = {
 				add_province_modifier = {
 					name = "judenberg_mod"
 					duration = -1
@@ -595,7 +595,7 @@ aetas_sty_branch_5 = {
 		trigger = {
 			OR = {
 				AND = {
-					CLI = { NOT = { has_ruler = Herman }  } 
+					CLI = { NOT = { has_ruler = Hermann }  } 
 					CLI = { NOT = { prestige = ROOT }  } 
 				}
 				AND = {
@@ -1101,7 +1101,7 @@ ai_hab_hre_branch_2 = {
 
 		trigger = {
 			is_emperor = yes
-			authority = 50
+			imperial_influence = 50
 		}
 
 		effect = {
@@ -1991,9 +1991,11 @@ ai_hab_dip_branch_1 = {
 		}
 
 		trigger = {
-			CAS = { dynasty = ROOT } 
-			SPA = { dynasty = ROOT } 
-			SPN = { dynasty = ROOT } 
+			OR = {
+				CAS = { dynasty = ROOT } 
+				SPA = { dynasty = ROOT } 
+				SPN = { dynasty = ROOT } 
+			}
 		}
 
 		effect = {
