@@ -351,6 +351,7 @@
  
  #Modifiers
  ai_tribal_activity:0 "Tribal Activity in Province"
+ mozarabic_mod:0 "Mozarabic Population in Province"
 
  #Province special modifiers
  ai_catanzaro:0 "Silk Factories of Catanzaro"
