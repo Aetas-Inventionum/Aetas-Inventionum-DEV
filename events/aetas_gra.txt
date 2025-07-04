@@ -1083,6 +1083,15 @@ country_event = {
 			}
 			else = { add_core = ZRZ }
 		}
+		upper_aragon_area = { 
+			if = { 
+				limit = { owned_by = ROOT }
+				add_core = ZRZ 
+				cede_province = ZRZ 
+				remove_core = ROOT 
+			}
+			else = { add_core = ZRZ }
+		}
 		hidden_effect = { 
 			ZRZ = { define_ruler = { dynasty = "Banu Hud" } }
 		}
