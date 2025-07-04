@@ -1334,7 +1334,7 @@ ai_adu_branch_4 = {
 			OR = { 
 				province_id = 4557
 				province_id = 5611
-				province_id = 3665 #was 3664 which doesnt exist
+				province_id = 3365 #was 3664 which doesnt exist
 				province_id = 214
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -1343,7 +1343,7 @@ ai_adu_branch_4 = {
 		trigger = {  
 			4557 = { country_or_non_sovereign_subject_holds = ROOT }
 			5611 = { country_or_non_sovereign_subject_holds = ROOT }
-			3665 = { country_or_non_sovereign_subject_holds = ROOT }
+			3365 = { country_or_non_sovereign_subject_holds = ROOT }
 			214 = { country_or_non_sovereign_subject_holds = ROOT }
 		} 
 
