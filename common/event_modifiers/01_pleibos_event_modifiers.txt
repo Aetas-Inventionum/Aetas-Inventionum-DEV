@@ -2578,7 +2578,7 @@ egypt_india = {
 }
 mam_nile_mod = { 
 	trade_goods_size = 1
-	development_cost_modifier = -0.1
+	development_cost = -0.1
 }
 mam_nile_delta = { 
 	trade_goods_size = 3
