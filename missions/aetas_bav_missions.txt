@@ -1936,6 +1936,13 @@ ai_bav_branch_4 = {
 				else = { 
 					set_country_flag = bav_hab_foe_flag
 					swap_non_generic_missions = yes 
+					tirol_area = {
+						limit = {
+							NOT = { is_permanent_claim = ROOT } 
+							NOT = { is_core = ROOT } 
+						}
+						add_permanent_claim = ROOT
+					}
 				}
 			}
 		} 
