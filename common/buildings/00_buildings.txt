@@ -5443,7 +5443,8 @@ wharf = {
 	manufactory = {
 		naval_supplies
 		fish
-		salt
+		salt 
+		whaling
 	}
 	modifier = {
 		#trade_goods_size = 0.4			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
@@ -5457,6 +5458,7 @@ wharf = {
 			trade_goods = naval_supplies
 			trade_goods = fish
 			trade_goods = salt
+			trade_goods = whaling
 		}
 	}
 	onmap = yes
@@ -5631,6 +5633,7 @@ weapons = {
 	manufactory = {
 		copper
 		iron
+		metallurgy
 	}
 	modifier = {
 		#trade_goods_size = 0.4			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
@@ -5644,6 +5647,7 @@ weapons = {
 		OR = {
 			trade_goods = copper
 			trade_goods = iron
+			trade_goods = metallurgy
 		}
 	}
 	on_built = {
@@ -5818,6 +5822,8 @@ textile = {
 		silk
 		dyes
 		books #bt_trade_good_books
+		leather
+		alum
 	}
 	modifier = {
 		#trade_goods_size = 0.4			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
@@ -5834,6 +5840,8 @@ textile = {
 			trade_goods = silk
 			trade_goods = dyes
 			trade_goods = books #bt_trade_good_books
+			trade_goods = leather
+			trade_goods = alum
 		}
 	}
 	on_built = {
@@ -6012,6 +6020,7 @@ plantations = {
 		tobacco
 		tea
 		cocoa
+		tar
 	}
 	modifier = {
 		#trade_goods_size = 0.4			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
@@ -6029,6 +6038,7 @@ plantations = {
 			trade_goods = tobacco
 			trade_goods = tea
 			trade_goods = cocoa
+			trade_goods = tar
 		}
 	}
 	
@@ -6405,6 +6415,7 @@ farm_estate = {
 		beer #bt_trade_good_beer
 		fruit #bt_trade_good_fruit
 		apiculture #bt_trade_good_apiculture
+		oils
 	}
 	modifier = {
 		#trade_goods_size = 0.4			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
@@ -6422,6 +6433,7 @@ farm_estate = {
 			trade_goods = beer #bt_trade_good_beer
 			trade_goods = fruit #bt_trade_good_fruit
 			trade_goods = apiculture #bt_trade_good_apiculture
+			trade_goods = oils
 		}
 	}
 	
@@ -6617,6 +6629,8 @@ mills = {
 		tropical_wood
 		glass
 		chinaware
+		stone
+		mercury
 	}
 	modifier = {
 		#trade_goods_size = 0.4			#BTAddon Note - Alright, alright. I'm giving in. It makes no sense, but vanilla apparently didn't bother to code in compatibility with the modifier version, so I have little choice but to give a flat bonus here.
@@ -6633,6 +6647,8 @@ mills = {
 			trade_goods = tropical_wood
 			trade_goods = glass
 			trade_goods = chinaware
+			trade_goods = stone
+			trade_goods = mercury
 		}
 	}
 	
