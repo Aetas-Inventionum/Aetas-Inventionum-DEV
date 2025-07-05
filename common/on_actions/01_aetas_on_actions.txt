@@ -2347,18 +2347,28 @@ on_culture_demoted = {
 	}
 }
 
-on_battle_lost_country = {
-	if = {
-		limit = {
-			ROOT = {
-				OR = {
-					tag = FRA
-					is_subject_of = FRA
+on_battle_lost_country = { 
+	if = { 
+		limit = { 
+			ROOT = { 
+				OR = { 
+					tag = FRA 
+					is_subject_of = FRA 
 				}
 				has_global_flag = hyw_flag
 			}
 			FROM = { tag = ENG }
 		}
-		FRA = { country_event = { id = aetas_hyw.1 } }
+		FRA = { 
+			while = {
+				limit = {
+					check_variable = {
+						which = land_units_lost
+						value = 6000
+					}
+				}
+				country_event = { id = aetas_hyw.1 } 
+			}
+		}
 	}
 }

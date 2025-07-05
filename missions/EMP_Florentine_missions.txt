@@ -709,7 +709,7 @@ ai_lan_branch_4 = {
 				name = luc_campaign #missing loc
 				duration = 3650
 			}
-			116 = { add_permanent_claim = ROOT }
+			117 = { add_permanent_claim = ROOT }
 			5072 = { add_permanent_claim = ROOT }
 			5073 = { add_permanent_claim = ROOT }
 			5074 = { add_permanent_claim = ROOT }
