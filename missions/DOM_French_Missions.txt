@@ -475,12 +475,14 @@ ai_fra_hyw_branch_3 = {
 	fra_coronation = {
 		icon = mission_reims_coronation
 		position = 3
-		required_missions = { fra_dauphin } 
+		required_missions = { 
+			fra_dauphin 
+			fra_bur_compromise
+		} 
 		provinces_to_highlight = {  } 
 
 		trigger = {
 			stability = 1
-			mission_completed = fra_bur_compromise
 			186 = {
 				AND = {
 					owned_by = ROOT

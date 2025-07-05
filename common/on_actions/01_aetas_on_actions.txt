@@ -2,309 +2,313 @@
 
 # country
 on_startup = {
-	if = { 
-		limit = { tag = NAP }
-		set_ruler_flag = giovanna_flag
-	}
-	if = { 
-		limit = { tag = LOR }
-		set_heir_flag = lor_isabelle_heir_flag
-	}
-	set_global_flag = hyw_flag
 	if = {
-		limit = { tag = NAV }
-		set_heir_flag = blanka_heir_flag
-	}
-	if = {
-		limit = { 
-			has_government_attribute = castile_cortes
+		limit = { NOT = { has_global_flag = aetas_startup_happened } }
+		if = {
+			limit = { tag = NAP }
+			set_ruler_flag = giovanna_flag
 		}
-		capital_scope = { set_province_flag = cas_capital_location_flag }
-	}
-	if = {
-		limit = { 
-			has_government_attribute = castile_cortes
+		if = {
+			limit = { tag = LOR }
+			set_heir_flag = lor_isabelle_heir_flag
 		}
-		random_list = { 
-			27 = { 
-				trigger = { 
-					owns_core_province = 215
-					NOT = { 215 = { is_capital_of = ROOT } } 
-				}
-				215 = { set_province_flag = cas_capital_flag }
-			}
-			20 = { 
-				trigger = { 
-					owns_core_province = 1746
-					NOT = { 1746 = { is_capital_of = ROOT } } 
-				}
-				1746 = { set_province_flag = cas_capital_flag }
-			}
-			15 = { 
-				trigger = { 
-					owns_core_province = 217
-					NOT = { 217 = { is_capital_of = ROOT } } 
-				}
-				217 = { set_province_flag = cas_capital_flag }
-			}
-			15 = { 
-				trigger = { 
-					owns_core_province = 4789
-					NOT = { 4789 = { is_capital_of = ROOT } } 
-				}
-				4789 = { set_province_flag = cas_capital_flag }
-			}
-			15 = {
-				trigger = { 
-					owns_core_province = 223
-					NOT = { 223 = { is_capital_of = ROOT } } 
-				}
-				223 = { set_province_flag = cas_capital_flag }
-			}
-			15 = { 
-				trigger = { 
-					owns_core_province = 219
-					NOT = { 219 = { is_capital_of = ROOT } } 
-				}
-				219 = { set_province_flag = cas_capital_flag }
-			}
-			9 = { 
-				trigger = { 
-					owns_core_province = 4971
-					NOT = { 4971 = { is_capital_of = ROOT } } 
-				}
-				4971 = { set_province_flag = cas_capital_flag }
-			}
-			5 = { 
-				trigger = { 
-					owns_core_province = 4552
-					NOT = { 4552 = { is_capital_of = ROOT } } 
-				}
-				4552 = { set_province_flag = cas_capital_flag }
-			}
-			3 = {
-				trigger = { 
-					owns_core_province = 4553
-					NOT = { 4553 = { is_capital_of = ROOT } } 
-				}
-				4553 = { set_province_flag = cas_capital_flag }
-			}
-			3 = {
-				trigger = { 
-					owns_core_province = 216
-					NOT = { 216 = { is_capital_of = ROOT } } 
-				}
-				216 = { set_province_flag = cas_capital_flag }
-			}
-			1 = {
-				trigger = { 
-					owns_core_province = 225
-					NOT = { 225 = { is_capital_of = ROOT } } 
-				}
-				225 = { set_province_flag = cas_capital_flag }
-			}
-			1 = {
-				trigger = { 
-					owns_core_province = 4955
-					NOT = { 4955 = { is_capital_of = ROOT } } 
-				}
-				4955 = { set_province_flag = cas_capital_flag }
-			}
-			1 = {
-				trigger = { 
-					owns_core_province = 2755
-					NOT = { 2755 = { is_capital_of = ROOT } } 
-				}
-				2755 = { set_province_flag = cas_capital_flag }
-			}
-			1 = {
-				trigger = { 
-					owns_core_province = 208
-					NOT = { 208 = { is_capital_of = ROOT } } 
-				}
-				208 = { set_province_flag = cas_capital_flag }
-			}
-			1 = {
-				trigger = { 
-					owns_core_province = 2754
-					NOT = { 2754 = { is_capital_of = ROOT } } 
-				}
-				2754 = { set_province_flag = cas_capital_flag }
-			}
-			1 = {
-				trigger = { 
-					owns_core_province = 3404
-					NOT = { 3404 = { is_capital_of = ROOT } } 
-				}
-				3404 = { set_province_flag = cas_capital_flag }
-			}
-			1 = {
-				trigger = { 
-					owns_core_province = 224
-					NOT = { 224 = { is_capital_of = ROOT } } 
-				}
-				224 = { set_province_flag = cas_capital_flag }
-			}
-			1 = {
-				trigger = { 
-					owns_core_province = 4949
-					NOT = { 4949 = { is_capital_of = ROOT } } 
-				}
-				4949 = { set_province_flag = cas_capital_flag }
-			}
+		set_global_flag = hyw_flag
+		if = {
+			limit = { tag = NAV }
+			set_heir_flag = blanka_heir_flag
 		}
-	}
-	if = { 
-		limit = { tag = ANJ }
-		country_event = { id = aetas_anj.1 }
-	}
-	if = { 
-		limit = { tag = FRA }
-		set_heir_flag = louis_de_guyenne_flag
-	}
-	if = { 
-		limit = { tag = ENG }
-		disband_all_regiments = yes 
-		3227 = { 
-			build_to_forcelimit = { 
-				infantry = 0.8
-				cavalry = 0.2
+		if = {
+			limit = {
+				has_government_attribute = castile_cortes
+			}
+			capital_scope = { set_province_flag = cas_capital_location_flag }
+		}
+		if = {
+			limit = {
+				has_government_attribute = castile_cortes
+			}
+			random_list = {
+				27 = {
+					trigger = {
+						owns_core_province = 215
+						NOT = { 215 = { is_capital_of = ROOT } }
+					}
+					215 = { set_province_flag = cas_capital_flag }
+				}
+				20 = {
+					trigger = {
+						owns_core_province = 1746
+						NOT = { 1746 = { is_capital_of = ROOT } }
+					}
+					1746 = { set_province_flag = cas_capital_flag }
+				}
+				15 = {
+					trigger = {
+						owns_core_province = 217
+						NOT = { 217 = { is_capital_of = ROOT } }
+					}
+					217 = { set_province_flag = cas_capital_flag }
+				}
+				15 = {
+					trigger = {
+						owns_core_province = 4789
+						NOT = { 4789 = { is_capital_of = ROOT } }
+					}
+					4789 = { set_province_flag = cas_capital_flag }
+				}
+				15 = {
+					trigger = {
+						owns_core_province = 223
+						NOT = { 223 = { is_capital_of = ROOT } }
+					}
+					223 = { set_province_flag = cas_capital_flag }
+				}
+				15 = {
+					trigger = {
+						owns_core_province = 219
+						NOT = { 219 = { is_capital_of = ROOT } }
+					}
+					219 = { set_province_flag = cas_capital_flag }
+				}
+				9 = {
+					trigger = {
+						owns_core_province = 4971
+						NOT = { 4971 = { is_capital_of = ROOT } }
+					}
+					4971 = { set_province_flag = cas_capital_flag }
+				}
+				5 = {
+					trigger = {
+						owns_core_province = 4552
+						NOT = { 4552 = { is_capital_of = ROOT } }
+					}
+					4552 = { set_province_flag = cas_capital_flag }
+				}
+				3 = {
+					trigger = {
+						owns_core_province = 4553
+						NOT = { 4553 = { is_capital_of = ROOT } }
+					}
+					4553 = { set_province_flag = cas_capital_flag }
+				}
+				3 = {
+					trigger = {
+						owns_core_province = 216
+						NOT = { 216 = { is_capital_of = ROOT } }
+					}
+					216 = { set_province_flag = cas_capital_flag }
+				}
+				1 = {
+					trigger = {
+						owns_core_province = 225
+						NOT = { 225 = { is_capital_of = ROOT } }
+					}
+					225 = { set_province_flag = cas_capital_flag }
+				}
+				1 = {
+					trigger = {
+						owns_core_province = 4955
+						NOT = { 4955 = { is_capital_of = ROOT } }
+					}
+					4955 = { set_province_flag = cas_capital_flag }
+				}
+				1 = {
+					trigger = {
+						owns_core_province = 2755
+						NOT = { 2755 = { is_capital_of = ROOT } }
+					}
+					2755 = { set_province_flag = cas_capital_flag }
+				}
+				1 = {
+					trigger = {
+						owns_core_province = 208
+						NOT = { 208 = { is_capital_of = ROOT } }
+					}
+					208 = { set_province_flag = cas_capital_flag }
+				}
+				1 = {
+					trigger = {
+						owns_core_province = 2754
+						NOT = { 2754 = { is_capital_of = ROOT } }
+					}
+					2754 = { set_province_flag = cas_capital_flag }
+				}
+				1 = {
+					trigger = {
+						owns_core_province = 3404
+						NOT = { 3404 = { is_capital_of = ROOT } }
+					}
+					3404 = { set_province_flag = cas_capital_flag }
+				}
+				1 = {
+					trigger = {
+						owns_core_province = 224
+						NOT = { 224 = { is_capital_of = ROOT } }
+					}
+					224 = { set_province_flag = cas_capital_flag }
+				}
+				1 = {
+					trigger = {
+						owns_core_province = 4949
+						NOT = { 4949 = { is_capital_of = ROOT } }
+					}
+					4949 = { set_province_flag = cas_capital_flag }
+				}
 			}
 		}
-	}
-	if = { 
-		limit = { 
-			OR = { 
-				tag = FRI
-				tag = GRN
-				tag = OMM
-				tag = EFR
+		if = {
+			limit = { tag = ANJ }
+			country_event = { id = aetas_anj.1 }
+		}
+		if = {
+			limit = { tag = FRA }
+			set_heir_flag = louis_de_guyenne_flag
+		}
+		if = {
+			limit = { tag = ENG }
+			disband_all_regiments = yes
+			3227 = {
+				build_to_forcelimit = {
+					infantry = 0.8
+					cavalry = 0.2
+				}
 			}
 		}
-		country_event = { id = aetas_fri.1 }
-	}
-	if = { 
-		limit = { tag = BRI }
-		country_event = { id = aetas_bri.10 }
-	}
-	if = { 
-		limit = { 
-			OR = { 
-				owns_core_province = 372
-				owns_core_province = 5168
-				owns_core_province = 374
-				owns_core_province = 5181
-				owns_core_province = 5169
+		if = {
+			limit = {
+				OR = {
+					tag = FRI
+					tag = GRN
+					tag = OMM
+					tag = EFR
+				}
 			}
-			primary_culture = irish 
+			country_event = { id = aetas_fri.1 }
 		}
-		country_event = { id = aetas_ire.1 }
-	}
-	if = { 
-		limit = { tag = WLS }
-		country_event = { id = aetas_eng.12 }
-	}
-	if = { 
-		limit = { tag = WLM }
-		country_event = { id = aetas_eng.12 }
-	}
-	if = { 
-		limit = { tag = SCO }
-		country_event = { id = aetas_sco.1 }
-	}
-	if = { 
-		limit = { 
-			tag = PAP 
+		if = {
+			limit = { tag = BRI }
+			country_event = { id = aetas_bri.10 }
 		}
-		country_event = { id = aetas_pap.1 }
-	}
-	if = { 
-		limit = { 
-			tag = ENG 
+		if = {
+			limit = {
+				OR = {
+					owns_core_province = 372
+					owns_core_province = 5168
+					owns_core_province = 374
+					owns_core_province = 5181
+					owns_core_province = 5169
+				}
+				primary_culture = irish
+			}
+			country_event = { id = aetas_ire.1 }
 		}
-		country_event = { id = aetas_eng.1 }
-	}
-	if = { 
-		limit = { 
-			tag = TUN 
+		if = {
+			limit = { tag = WLS }
+			country_event = { id = aetas_eng.12 }
 		}
-		country_event = { id = aetas_tun.3 }
+		if = {
+			limit = { tag = WLM }
+			country_event = { id = aetas_eng.12 }
+		}
+		if = {
+			limit = { tag = SCO }
+			country_event = { id = aetas_sco.1 }
+		}
+		if = {
+			limit = {
+				tag = PAP
+			}
+			country_event = { id = aetas_pap.1 }
+		}
+		if = {
+			limit = {
+				tag = ENG
+			}
+			country_event = { id = aetas_eng.1 }
+		}
+		if = {
+			limit = {
+				tag = TUN
+			}
+			country_event = { id = aetas_tun.3 }
+		}
+		set_global_flag = aetas_startup_happened
 	}
-	events = { 
+	events = {
 		aetas_cor.1
 	}
 }
 # country
 # root = winning country, from = location
 on_siege_won_country = {
-	if = { 
-		limit = { 
-			root = { 
-				OR = { 
-					tag = ENG 
-					alliance_with = ENG 
-					is_subject_of = ENG 
+	if = {
+		limit = {
+			root = {
+				OR = {
+					tag = ENG
+					alliance_with = ENG
+					is_subject_of = ENG
 				}
 			}
 			from = {
-				OR = { 
+				OR = {
 					area = normandy_area
 					area = lower_normandy_area
 				}
 			}
 			has_global_flag = hyw_flag
-			all_province = { 
-				OR = { 
+			all_province = {
+				OR = {
 					area = normandy_area
 					area = lower_normandy_area
 				}
-				controller = { 
-					OR = { 
-						tag = ENG 
-						alliance_with = ENG 
-						is_subject_of = ENG 
+				controller = {
+					OR = {
+						tag = ENG
+						alliance_with = ENG
+						is_subject_of = ENG
 					}
 				}
 			}
 		}
 		ENG = { country_event = { id = aetas_hyw.4 } }
 	}
-	if = { 
-		limit = { 
-			root = { 
+	if = {
+		limit = {
+			root = {
 				has_global_flag = cas_confront_flag
-				OR = { 
-					tag = CAS 
-					alliance_with = CAS 
-					is_subject_of = CAS 
+				OR = {
+					tag = CAS
+					alliance_with = CAS
+					is_subject_of = CAS
 				}
 			}
-			all_province = { 
-				OR = { 
-					AND = { 
-						owned_by = ABQ 
+			all_province = {
+				OR = {
+					AND = {
+						owned_by = ABQ
 						ABQ = { defensive_war_with = CAS }
 					}
-					AND = { 
+					AND = {
 						owned_by = PNF
 						PNF = { defensive_war_with = CAS }
 					}
 				}
-				controller = { 
+				controller = {
 					OR = {
-						tag = CAS 
-						alliance_with = CAS 
-						is_subject_of = CAS 
+						tag = CAS
+						alliance_with = CAS
+						is_subject_of = CAS
 					}
 				}
 			}
-			from = { 
-				OR = { 
-					AND = { 
-						owned_by = ABQ 
+			from = {
+				OR = {
+					AND = {
+						owned_by = ABQ
 						ABQ = { defensive_war_with = CAS }
 					}
-					AND = { 
+					AND = {
 						owned_by = PNF
 						PNF = { defensive_war_with = CAS }
 					}
@@ -313,102 +317,102 @@ on_siege_won_country = {
 		}
 		CAS = { country_event = { id = aetas_ioa.10 } }
 	}
-	if = { 
-		limit = { 
-			root = { 
+	if = {
+		limit = {
+			root = {
 				has_global_flag = cor_gen_crisis_flag
-				OR = { 
-					tag = GEN 
-					alliance_with = GEN 
-					is_subject_of = GEN 
+				OR = {
+					tag = GEN
+					alliance_with = GEN
+					is_subject_of = GEN
 				}
 			}
-			from = { 
-				is_capital = yes 
+			from = {
+				is_capital = yes
 				owner = { tag = COR }
 			}
 		}
 		GEN = { country_event = { id = aetas_cor.4 } }
 	}
-	if = { 
-		limit = { 
-			root = { 
+	if = {
+		limit = {
+			root = {
 				has_global_flag = cor_gen_crisis_flag
-				OR = { 
-					tag = COR 
-					AND = { 
-						tag = ARA 
+				OR = {
+					tag = COR
+					AND = {
+						tag = ARA
 						has_global_flag = ara_help_cor_flag
 					}
-					alliance_with = COR 
+					alliance_with = COR
 				}
-				corsica_area = { 
+				corsica_area = {
 					controller = {
-						OR = { 
-							tag = COR 
-							AND = { 
-								tag = ARA 
+						OR = {
+							tag = COR
+							AND = {
+								tag = ARA
 								has_global_flag = ara_help_cor_flag
 							}
 							alliance_with = COR
 						}
 					}
-					type = all 
+					type = all
 				}
 			}
-			FROM = { 
-				area = corsica_area 
+			FROM = {
+				area = corsica_area
 				owner = { tag = GEN }
 			}
 		}
-		if = { 
+		if = {
 			limit = { has_global_flag = ara_help_cor_flag }
 			ARA = { country_event = { id = aetas_cor.3 } }
 		}
 		else = { COR = { country_event = { id = aetas_cor.3 } } }
 	}
-	if = { 
-		limit = { 
-			OR = { 
-				tag = BUR 
-				was_tag = BUR 
-				alliance_with = BUR 
-				is_subject_of = BUR 
+	if = {
+		limit = {
+			OR = {
+				tag = BUR
+				was_tag = BUR
+				alliance_with = BUR
+				is_subject_of = BUR
 			}
 			has_global_flag = bur_utr_war_flag
 			FROM = { is_capital_of = UTR }
 		}
 		BUR = { country_event = { id = aetas_utr.3 } }
 	}
-	if = { 
-		limit = { 
-			OR = { 
-				tag = BUR 
-				was_tag = BUR 
-				alliance_with = BUR 
-				is_subject_of = BUR 
+	if = {
+		limit = {
+			OR = {
+				tag = BUR
+				was_tag = BUR
+				alliance_with = BUR
+				is_subject_of = BUR
 			}
 			has_global_flag = bur_lie_war_flag
 			FROM = { is_capital_of = LIE }
 		}
 		BUR = { country_event = { id = aetas_bur.21 } }
 	}
-	if = { 
-		limit = { 
-			OR = { 
-				tag = BUR 
-				alliance_with = BUR 
-				is_subject_of = BUR 
+	if = {
+		limit = {
+			OR = {
+				tag = BUR
+				alliance_with = BUR
+				is_subject_of = BUR
 			}
 			has_global_flag = bur_hol_jacoba_war
 			FROM = { province_id = 4383 }
 		}
 		BUR = { country_event = { id = aetas_hol.8 } }
 	}
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			has_global_flag = stb_brb_war
-			OR = { 
+			OR = {
 				tag = BRB
 				alliance_with = BRB
 				is_subject_of = BRB
@@ -417,35 +421,35 @@ on_siege_won_country = {
 		}
 		BRB = { country_event = { id = aetas_stb.4 } }
 	}
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			has_global_flag = stb_hol_alt_war
-			OR = { 
-				tag = STB 
-				alliance_with = STB 
-				is_subject_of = STB 
+			OR = {
+				tag = STB
+				alliance_with = STB
+				is_subject_of = STB
 			}
 			FROM = { province_id = 4383 }
 		}
 		STB = { country_event = { id = aetas_stb.3 } }
 	}
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			has_global_flag = stb_brb_war
-			OR = { 
-				tag = STB 
-				alliance_with = STB 
-				is_subject_of = STB 
+			OR = {
+				tag = STB
+				alliance_with = STB
+				is_subject_of = STB
 			}
 			FROM = { province_id = 92 }
 		}
 		STB = { country_event = { id = aetas_stb.3 } }
 	}
-	if = { 
+	if = {
 		limit = {
 			has_global_flag = gfw_flag
 			OR = {
-				tag = FRI 
+				tag = FRI
 				alliance_with = FRI
 			}
 			FROM = {
@@ -454,14 +458,14 @@ on_siege_won_country = {
 		}
 		FRI = { country_event = { id = aetas_fri.4 } }
 	}
-	if = { 
+	if = {
 		limit = {
 			has_global_flag = gfw_flag
 			OR = {
-				tag = FRI 
+				tag = FRI
 				alliance_with = FRI
 			}
-			OR = { 
+			OR = {
 				FRI = { controls = 1931   }
 				FRI = { any_ally = { controls = 1931 } }
 			}
@@ -471,14 +475,14 @@ on_siege_won_country = {
 		}
 		FRI = { country_event = { id = aetas_fri.4 } }
 	}
-	if = { 
+	if = {
 		limit = {
 			has_global_flag = gfw_flag
 			OR = {
-				tag = EFR 
+				tag = EFR
 				alliance_with = EFR
 			}
-			OR = { 
+			OR = {
 				EFR = { controls = 100   }
 				EFR = { any_ally = { controls = 100 } }
 			}
@@ -488,14 +492,14 @@ on_siege_won_country = {
 		}
 		EFR = { country_event = { id = aetas_fri.3 } }
 	}
-	if = { 
+	if = {
 		limit = {
 			has_global_flag = gfw_flag
 			OR = {
-				tag = EFR 
+				tag = EFR
 				alliance_with = EFR
 			}
-			OR = { 
+			OR = {
 				EFR = { controls = 4382 }
 				EFR = { any_ally = { controls = 4382 } }
 			}
@@ -505,28 +509,28 @@ on_siege_won_country = {
 		}
 		EFR = { country_event = { id = aetas_fri.3 } }
 	}
-	if = { 
-		limit = { 
-			OR = { 
-				tag = EFR 
-				tag = OMM 
-				alliance_with = EFR 
+	if = {
+		limit = {
+			OR = {
+				tag = EFR
+				tag = OMM
+				alliance_with = EFR
 			}
 			FROM = { province_id = 4382 }
 		}
 		country_event = { id = aetas_fri.2 }
 	}
-	if = { 
-		limit = { 
-			tag = TUR 
+	if = {
+		limit = {
+			tag = TUR
 			has_global_flag = dobrudja_war
 			FROM = { is_capital_of = WAL }
 		}
 		country_event = { id = aetas_wal.13 }
 	}
-	if = { 
-		limit = { 
-			tag = SCO 
+	if = {
+		limit = {
+			tag = SCO
 			has_global_flag = douglas_revolt_flag
 			FROM = { is_capital_of = DUG }
 		}
@@ -534,25 +538,25 @@ on_siege_won_country = {
 	}
 	if = {
 		limit = {
-			tag = SWI 
-			has_global_flag = zur_war 
+			tag = SWI
+			has_global_flag = zur_war
 			FROM = { is_capital_of = ZUR }
 		}
 		country_event = { id = aetas_hab.22 }
 	}
-	if = { 
-		limit = { 
-			OR = { 
+	if = {
+		limit = {
+			OR = {
 				tag = HAB
 				tag = ZUR
 			}
-			has_global_flag = zur_war 
+			has_global_flag = zur_war
 			FROM = { is_capital_of = SWI }
 		}
 		HAB = { country_event = { id = aetas_hab.21 } }
 	}
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			tag = PRO
 			has_global_flag = pro_nap_war
 			FROM = { is_capital_of = NAP }
@@ -563,13 +567,13 @@ on_siege_won_country = {
 # province
 # root = location, from = losing country
 on_siege_won_province = {
-	if = { 
-		limit = { 
-			OR = { 
-				controlled_by = REB 
+	if = {
+		limit = {
+			OR = {
+				controlled_by = REB
 				controlled_by = BYZ
 			}
-			from = { 
+			from = {
 				has_country_flag = mustafas_revolt
 			}
 		}
@@ -580,20 +584,20 @@ on_siege_won_province = {
 # OBS: Consider that the following on_actions can be called for Personal Union juniors as well.
 # country
 on_new_monarch = {
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			tag = LOR
-			OR = { 
+			OR = {
 				has_ruler_flag = isabelle_rene_flag
 				has_ruler = "René I"
 			}
 		}
-		if = { 
-			limit = { 
-				exists = GUI 
-				GUI = { 
-					OR = { 
-						has_ruler = "René I" 
+		if = {
+			limit = {
+				exists = GUI
+				GUI = {
+					OR = {
+						has_ruler = "René I"
 						has_heir_flag = gui_rene_heir_flag
 					}
 					is_lesser_in_union = no
@@ -601,45 +605,45 @@ on_new_monarch = {
 			}
 			GUI = { country_event = { id = aetas_anj.7 } }
 		}
-		else_if = { 
-			limit = { 
-				exists = BAR 
-				BAR = { 
+		else_if = {
+			limit = {
+				exists = BAR
+				BAR = {
 					has_ruler = "René I"
-					is_lesser_in_union = no 
+					is_lesser_in_union = no
 					was_tag = GUI
 				}
 			}
 			BAR = { country_event = { id = aetas_anj.7 } }
 		}
-		else_if = { 
-			limit = { 
-				exists = ANJ 
-				ANJ = { 
-					OR = { 
+		else_if = {
+			limit = {
+				exists = ANJ
+				ANJ = {
+					OR = {
 						has_ruler = "René I"
 						has_ruler_flag = anj_rene_heir_flag
 					}
-					is_lesser_in_union = no 
+					is_lesser_in_union = no
 				}
 			}
 			ANJ = { country_event = { id = aetas_anj.6 } }
 		}
 	}
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			tag = BAR
-			OR = { 
+			OR = {
 				has_ruler_flag = bar_rene_heir_flag
 				has_ruler = "René I"
 				has_country_flag = rene_bar_flag
 			}
 		}
-		if = { 
-			limit = { 
-				exists = GUI 
-				GUI = { 
-					OR = { 
+		if = {
+			limit = {
+				exists = GUI
+				GUI = {
+					OR = {
 						has_ruler = "René I"
 						has_heir_flag = gui_rene_heir_flag
 					}
@@ -648,121 +652,121 @@ on_new_monarch = {
 			}
 			GUI = { country_event = { id = aetas_anj.6 } }
 		}
-		else_if = { 
-			limit = { 
-				exists = ANJ 
-				ANJ = { 
-					OR = { 
+		else_if = {
+			limit = {
+				exists = ANJ
+				ANJ = {
+					OR = {
 						has_ruler = "René I"
 						has_ruler_flag = anj_rene_heir_flag
 					}
-					is_lesser_in_union = no 
+					is_lesser_in_union = no
 				}
 			}
 			ANJ = { country_event = { id = aetas_anj.6 } }
 		}
 	}
-	if = { 
-		limit = { 
-			tag = ANJ 
+	if = {
+		limit = {
+			tag = ANJ
 			NOT = { has_country_flag = rene_made_heir_anj_flag }
 		}
-		if = { 
+		if = {
 			limit = { has_heir = yes }
 			remove_heir = { allow_new_heir = no }
 		}
-		define_heir = { 
+		define_heir = {
 			name = "René"
 			monarch_name = "René I"
 			dynasty = "de Valois"
-			culture = angevin 
+			culture = angevin
 			birth_date = 1409.1.16
 			claim = 95
 			adm = 5
-			dip = 5 
+			dip = 5
 			mil = 2
 		}
 		set_heir_flag = anj_rene_heir_flag
 		set_country_flag = rene_made_heir_anj_flag
 	}
-	if = { 
-		limit = { 
-			tag = ANJ 
-			OR = { 
+	if = {
+		limit = {
+			tag = ANJ
+			OR = {
 				has_ruler = "René I"
 				has_ruler_flag = anj_rene_heir_flag
 			}
 			GUI = { has_ruler = "René I" }
 		}
-		if = { 
+		if = {
 			limit = { GUI = { senior_union_with = BAR } }
-			create_union = BAR 
+			create_union = BAR
 		}
-		if = { 
+		if = {
 			limit = { GUI = { senior_union_with = LOR } }
 			create_union = LOR
 		}
-		inherit = GUI 
+		inherit = GUI
 	}
-	if = { 
-		limit = { 
-			tag = ANJ 
-			OR = { 
+	if = {
+		limit = {
+			tag = ANJ
+			OR = {
 				has_ruler = "René I"
 				has_ruler_flag = anj_rene_heir_flag
 			}
-			BAR = { 
-				has_ruler = "René I" 
+			BAR = {
+				has_ruler = "René I"
 				has_ruler_flag = bar_rene_heir_flag
-				is_lesser_in_union = no 
+				is_lesser_in_union = no
 			}
 		}
-		create_union = BAR 
+		create_union = BAR
 	}
-	if = { 
-		limit = { 
-			tag = ANJ 
-			OR = { 
+	if = {
+		limit = {
+			tag = ANJ
+			OR = {
 				has_ruler = "René I"
 				has_ruler_flag = anj_rene_heir_flag
 			}
-			LOR = { 
-				has_ruler = "René I" 
+			LOR = {
+				has_ruler = "René I"
 				has_ruler_flag = lor_rene_heir_flag
-				is_lesser_in_union = no 
+				is_lesser_in_union = no
 			}
 		}
 		create_union = LOR
 	}
-	if = { 
+	if = {
 		limit = { has_ruler_flag = abt_heir_flag }
-		if = { 
-			limit = { 
-				exists = ABT 
+		if = {
+			limit = {
+				exists = ABT
 				ABT = { is_lesser_in_union = no }
 			}
-			if = { 
-				limit = { 
+			if = {
+				limit = {
 					ABT = { senior_union_with = LIM }
 				}
 				ABT = { inherit = LIM }
 			}
-			create_union = ABT 
+			create_union = ABT
 		}
-		else = {  
-			every_province = { 
+		else = {
+			every_province = {
 				limit = { is_core = ABT }
 				add_core = ROOT
 			}
 		}
 	}
-	if = { 
+	if = {
 		limit = { has_ruler_flag = charles_viana_flag }
 		NAV = { country_event = { id = aetas_nav.6 } }
 	}
-	if = { 
-		limit = { 
-			tag = NAV 
+	if = {
+		limit = {
+			tag = NAV
 			has_ruler = "Blanka I"
 			has_country_flag = nav_trastamara_missions_flag
 		}
@@ -771,23 +775,23 @@ on_new_monarch = {
 			name = "Joanes II"
 			dynasty = "de Trastámara"
 			age = 30
-			culture = castillian 
-			country_of_origin = ARA 
+			culture = castillian
+			country_of_origin = ARA
 			male = yes
 			adm = 4
 			dip = 3
 			mil = 4
 		}
-		if = { 
+		if = {
 			limit = { has_heir = yes }
 			remove_heir = { allow_new_heir = no }
 		}
-		define_heir = { 
+		define_heir = {
 			name = "Karlos"
 			monarch_name = "Karlos IV"
 			dynasty = "de Trastámara"
 			block_disinherit = yes
-			male = yes 
+			male = yes
 			adm = 3
 			dip = 4
 			mil = 3
@@ -796,9 +800,9 @@ on_new_monarch = {
 		}
 		set_heir_flag = charles_viana_flag
 	}
-	if = { 
-		limit = { 
-			tag = NAV 
+	if = {
+		limit = {
+			tag = NAV
 			has_ruler = "Blanka I"
 			has_country_flag = nav_foix_missions_flag
 		}
@@ -814,16 +818,16 @@ on_new_monarch = {
 			dip = 2
 			mil = 2
 		}
-		if = { 
+		if = {
 			limit = { has_heir = yes }
 			remove_heir = { allow_new_heir = no }
 		}
-		define_heir = { 
+		define_heir = {
 			name = "Gaston"
 			monarch_name = "Gaston I"
 			dynasty = "de Fois"
-			block_disinherit = yes 
-			male = yes 
+			block_disinherit = yes
+			male = yes
 			culture = gascon
 			adm = 2
 			dip = 3
@@ -832,72 +836,72 @@ on_new_monarch = {
 			claim = 95
 		}
 	}
-	if = { 
-		limit = { 
-			tag = CAS 
+	if = {
+		limit = {
+			tag = CAS
 			has_ruler = "Juan II"
 			not = { has_ruler_modifier = juan_ii }
 		}
 		country_event = { id = aetas_cas.5 }
 	}
-	if = { 
-		limit = { 
-			tag = HUN 
-			OR = { 
-				AND = { 
-					has_country_flag = jags_hun 
+	if = {
+		limit = {
+			tag = HUN
+			OR = {
+				AND = {
+					has_country_flag = jags_hun
 					NOT = {  dynasty = "Jagiellonowie" }
 				}
-				AND = { 
-					has_country_flag = habs_hun 
+				AND = {
+					has_country_flag = habs_hun
 					NOT = { dynasty = "von Habsburg" }
 				}
-				AND = { 
-					has_country_flag = hunyadi_hun 
-					OR = { 
+				AND = {
+					has_country_flag = hunyadi_hun
+					OR = {
 						dynasty = "von Habsburg"
 						dynasty = "Jagiellonowie"
 					}
 				}
 			}
 		}
-		if = { 
-			limit = { 
-				has_country_flag = jags_hun 
+		if = {
+			limit = {
+				has_country_flag = jags_hun
 				NOT = {  dynasty = "Jagiellonowie" }
 			}
-			clr_country_flag = jags_hun 
+			clr_country_flag = jags_hun
 		}
-		if = { 
-			limit = { 
-				has_country_flag = habs_hun 
+		if = {
+			limit = {
+				has_country_flag = habs_hun
 				NOT = { dynasty = "von Habsburg" }
 			}
-			clr_country_flag = habs_hun 
+			clr_country_flag = habs_hun
 		}
-		if = { 
-			limit = { 
-				has_country_flag = hunyadi_hun 
-				OR = { 
+		if = {
+			limit = {
+				has_country_flag = hunyadi_hun
+				OR = {
 					dynasty = "von Habsburg"
 					dynasty = "Jagiellonowie"
 				}
 			}
-			clr_country_flag = hunyadi_hun 
+			clr_country_flag = hunyadi_hun
 		}
-		if = { 
-			limit = { 
+		if = {
+			limit = {
 				dynasty = "von Habsburg"
 			}
 			set_country_flag = habs_hun
-			swap_non_generic_missions = yes 
+			swap_non_generic_missions = yes
 		}
-		if = { 
+		if = {
 			limit = { dynasty = "Jagiellonowie" }
 			set_country_flag = jags_hun
 			swap_non_generic_missions = yes
 		}
-		else = { 
+		else = {
 			set_country_flag = hunyadi_hun
 			swap_non_generic_missions = yes
 		}
@@ -906,98 +910,98 @@ on_new_monarch = {
 
 # country
 on_monarch_death = {
-	if = { 
+	if = {
 		limit = { tag = BAR }
 		country_event = { id = aetas_anj.4 }
 	}
-	if = { 
+	if = {
 		limit = { tag = ANJ }
 		country_event = { id = aetas_anj.3 }
 	}
-	if = { 
-		limit = { 
-			tag = LIM 
-			has_heir = no 
-			exists = ABT 
+	if = {
+		limit = {
+			tag = LIM
+			has_heir = no
+			exists = ABT
 			ABT = { is_lesser_in_union = no }
 		}
 		ABT = { country_event = { id = aetas_fra.23 } }
 	}
-	if = { 
-		limit = { 
-			tag = GDI 
-			has_heir = no 
-			is_subject_of = ARA 
-			is_lesser_in_union = no 
-			is_free_or_tributary_trigger = no 
+	if = {
+		limit = {
+			tag = GDI
+			has_heir = no
+			is_subject_of = ARA
+			is_lesser_in_union = no
+			is_free_or_tributary_trigger = no
 		}
 		ARA = { country_event = { id = aetas_ara.28 } }
 	}
-	if = { 
+	if = {
 		limit = {
-			tag = PAP 
+			tag = PAP
 			SAV = { has_country_flag = amedee_electable }
 			NOT = { is_year = 1440 }
 		}
 		SAV = { country_event = { id = aetas_sav.4 } }
 	}
-	if = { 
-		limit = { 
-			tag = PIE 
+	if = {
+		limit = {
+			tag = PIE
 			NOT = { has_global_flag = sav_inherited_pie }
 		}
 		set_global_flag = sav_inherited_pie
 		SAV = { country_event = { id = aetas_sav.2 } }
 	}
-	if = { 
-		limit = { 
-			tag = VLN 
+	if = {
+		limit = {
+			tag = VLN
 			NOT = { has_global_flag = fra_inherited_vln_flag }
 		}
 		FRA = { country_event = { id = aetas_fra.21 } }
 	}
-	if = { 
-		limit = { 
-			tag = LUX 
+	if = {
+		limit = {
+			tag = LUX
 			is_subject_of_type = lithuania_union
-			OR = { 
-				is_subject_of = BRB 
-				is_subject_of = STB 
-				is_subject_of = HOL 
+			OR = {
+				is_subject_of = BRB
+				is_subject_of = STB
+				is_subject_of = HOL
 			}
 		}
 		overlord = { create_union = ROOT }
 	}
-	if = { 
-		limit = { 
-			OR = { 
-				AND = { 
-					tag = HOL 
+	if = {
+		limit = {
+			OR = {
+				AND = {
+					tag = HOL
 					has_country_flag = johan_hol
-					senior_union_with = STB 
+					senior_union_with = STB
 				}
-				AND = { 
-					tag = STB 
-					has_country_flag = johan_hol 
+				AND = {
+					tag = STB
+					has_country_flag = johan_hol
 				}
 			}
 		}
 		UBV = { country_event = { id = aetas_bav.3 } }
 	}
-	if = { 
-		limit = { 
-			OR = { 
-				tag = HOL 
-				tag = STB 
+	if = {
+		limit = {
+			OR = {
+				tag = HOL
+				tag = STB
 			}
 			has_country_flag = johan_hol
-			has_heir = no 
+			has_heir = no
 			BUR = { has_country_flag = bur_hol_flag }
 		}
-		if = { 
-			limit = {  
-				LUX = { 
-					is_subject_of = ROOT 
+		if = {
+			limit = {
+				LUX = {
+					is_subject_of = ROOT
 					is_subject_of_type = lithuania_union
 				}
 			}
@@ -1005,411 +1009,411 @@ on_monarch_death = {
 		}
 		HOL = { country_event = { id = aetas_hol.6 } }
 	}
-	if = { 
-		limit = { 
-			tag = HOL 
-			faction_in_power = aetas_cods 
+	if = {
+		limit = {
+			tag = HOL
+			faction_in_power = aetas_cods
 		}
 		HOL = { country_event = { id = aetas_hol.3 } }
-		if = { 
+		if = {
 			limit = { HAI = { junior_union_with = HOL } }
 			BRB = { create_union = HAI }
 		}
 	}
-	if = { 
-		limit = { 
-			government = theocracy 
-			any_subject_country = { 
-				AND = { 
-					junior_union_with = ROOT 
-					government = theocracy 
+	if = {
+		limit = {
+			government = theocracy
+			any_subject_country = {
+				AND = {
+					junior_union_with = ROOT
+					government = theocracy
 				}
 			}
 		}
-		every_subject_country = { 
-			limit = { 
-				AND = { 
-					junior_union_with = ROOT 
-					government = theocracy 
+		every_subject_country = {
+			limit = {
+				AND = {
+					junior_union_with = ROOT
+					government = theocracy
 				}
 			}
 			country_event = { id = aetas_kol.8 }
 		}
 	}
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			tag = GTT
-			has_heir = no 
-			exists = CLB 
+			has_heir = no
+			exists = CLB
 			CLB = { dynasty = "von Welf" }
 		}
 		CLB = { country_event = { id = aetas_brl.4 } }
 	}
-	else_if = { 
-		limit = { 
+	else_if = {
+		limit = {
 			tag = GTT
-			has_heir = no 
-			exists = BRU 
+			has_heir = no
+			exists = BRU
 			BRU = { dynasty = "von Welf" }
 		}
 		BRU = { country_event = { id = aetas_brl.4 } }
 	}
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			tag = ZIE
-			is_subject = yes 
+			is_subject = yes
 			overlord = { mission_completed = hes_zie }
-			has_heir = no 
+			has_heir = no
 		}
 		overlord = { country_event = { id = aetas_hes.3 } }
 	}
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			tag = KTZ
 			has_country_flag = hes_inherit_ktz_flag
 		}
-		if = { 
+		if = {
 			limit = { exists = HES }
-			HES = { 
+			HES = {
 				set_country_flag = hes_inherited_ktz_flag
-				inherit = KTZ 
+				inherit = KTZ
 			}
 		}
-		else_if = { 
+		else_if = {
 			limit = { exists = KSS }
-			KSS = { 
+			KSS = {
 				set_country_flag = hes_inherited_ktz_flag
-				inherit = KTZ 
+				inherit = KTZ
 			}
 		}
 	}
-	if = { 
-		limit = { 
-			tag = HES 
+	if = {
+		limit = {
+			tag = HES
 			NOT = { is_subject = yes }
 		}
 		country_event = { id = aetas_hes.1 }
 	}
-	if = { 
-		limit = { 
-			tag = WUR 
+	if = {
+		limit = {
+			tag = WUR
 			senior_union_with = MBD
 		}
 		country_event = { id = aetas_wur.1 }
 	}
-	if = { 
+	if = {
 		limit = {
 			tag = NMK
-			has_heir = no 
-			OR = { 
+			has_heir = no
+			OR = {
 				exists = MBC
-				exists = PAL 
+				exists = PAL
 			}
 		}
-		if = { 
+		if = {
 			limit = { exists = MBC }
 			MBC = { country_event = { id = aetas_pal.13 } }
 		}
 		else = { PAL = { inherit = NMK } }
 	}
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			tag = MBC
-			has_heir = no 
-			exists = PAL 
+			has_heir = no
+			exists = PAL
 		}
 		PAL = { inherit = MBC }
 	}
-	if = { 
-		limit = { 
-			tag = ZWE 
-			has_heir = no 
-			exists = PAL 
+	if = {
+		limit = {
+			tag = ZWE
+			has_heir = no
+			exists = PAL
 		}
 		PAL = { inherit = ZWE }
 	}
-	if = { 
-		limit = { 
-			tag = ZAG 
+	if = {
+		limit = {
+			tag = ZAG
 			owns_core_province = 5262
 			is_year = 1450
 		}
 		BRA = { country_event = { id = aetas_bra.12 } }
 	}
-	if = { 
-		limit = { 
-			tag = BYT 
-			is_subject_of = BRA 
+	if = {
+		limit = {
+			tag = BYT
+			is_subject_of = BRA
 		}
 		BRA = { country_event = { id = aetas_bra.10 } }
 	}
-	if = { 
-		limit = { 
-			tag = NAV 
-			has_country_flag = nav_abt_flag 
+	if = {
+		limit = {
+			tag = NAV
+			has_country_flag = nav_abt_flag
 		}
 		country_event = { id = aetas_nav.5 }
 	}
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			tag = NAV
-			has_country_flag = nav_foix 
+			has_country_flag = nav_foix
 		}
 		country_event = { id = aetas_nav.3 }
 	}
-	if = { 
-		limit = { 
-			tag = KST 
+	if = {
+		limit = {
+			tag = KST
 		}
 		country_event = { id = aetas_alb.4 }
-		if = { 
-			limit = { 
+		if = {
+			limit = {
 				KST = { is_subject_of = TUR }
 				5432 = { owned_by = KST }
 			}
 			TUR = { country_event = { id = aetas_alb.6 } }
-		} 
+		}
 	}
-	if = { 
-		limit = { 
-			tag = TUR 
+	if = {
+		limit = {
+			tag = TUR
 			NOT = { has_country_flag = not_mehmed_i_flag }
 		}
 		set_country_flag = not_mehmed_i_flag
 	}
-	if = { 
-		limit = { 
-			tag = WAL 
+	if = {
+		limit = {
+			tag = WAL
 			has_country_flag = alex_wal
 		}
 		country_event = { id = aetas_wal.1 }
 	}
-	if = { 
-		limit = { 
-			tag = MON 
+	if = {
+		limit = {
+			tag = MON
 			dynasty = "Balshich"
 		}
 		SER = { country_event = { id = aetas_ser.2 } }
 	}
-	if = { 
-		limit = { 
-			OR = { 
+	if = {
+		limit = {
+			OR = {
 				owns_core_province = 372
 				owns_core_province = 5168
 				owns_core_province = 374
 				owns_core_province = 5181
 				owns_core_province = 5169
 			}
-			primary_culture = irish 
+			primary_culture = irish
 		}
 		country_event = { id = aetas_ire.1 }
 	}
-	if = { 
+	if = {
 		limit = { has_country_modifier = lord_warden }
-		every_province = { 
+		every_province = {
 			limit = { has_province_modifier = eng_march_mod }
 			remove_province_modifier = eng_march_mod
 		}
 	}
-	if = { 
-		limit = { 
-			tag = MRS 
-			is_subject_of = SCO 
+	if = {
+		limit = {
+			tag = MRS
+			is_subject_of = SCO
 		}
 		SCO = { country_event = { id = aetas_sco.16 } }
 	}
-	if = { 
-		limit = { 
-			tag = SCO 
+	if = {
+		limit = {
+			tag = SCO
 			NOT = { capital = 248 }
 		}
 		country_event = { id = aetas_sco.10 }
 	}
-	if = { 
+	if = {
 		limit = {
-			tag = SHL 
+			tag = SHL
 			has_country_flag = shl_dan_inherit
 		}
 		DAN = { inherit = SHL }
 	}
-	if = { 
-		limit = { 
-			tag = CLI 
+	if = {
+		limit = {
+			tag = CLI
 			NOT = { has_heir = yes }
 			has_country_flag = sty_cli_flag
 		}
-		CLI = { 
+		CLI = {
 			overlord = { inherit = CLI }
 		}
 	}
-	if = { 
-		limit = { 
-			tag = ORT 
+	if = {
+		limit = {
+			tag = ORT
 		}
 		CLI = { country_event = { id = aetas_hab.7 } }
 	}
-	if = { 
-		limit = { 
-			tag = ARA 
-			senior_union_with = NAV 
-			has_country_flag = nav_joan3 
-			exists = FOI 
+	if = {
+		limit = {
+			tag = ARA
+			senior_union_with = NAV
+			has_country_flag = nav_joan3
+			exists = FOI
 			NAV = { ai = yes }
 			FOI = { is_free_or_tributary_trigger = yes }
 		}
 		FOI = { country_event = { id = aetas_ara.23 } }
 	}
-	else_if = { 
-		limit = { 
-			tag = ARA 
-			senior_union_with = NAV 
-			has_country_flag = nav_joan3 
+	else_if = {
+		limit = {
+			tag = ARA
+			senior_union_with = NAV
+			has_country_flag = nav_joan3
 			NAV = { ai = yes }
-			OR = { 
+			OR = {
 				NOT = { exists = FOI }
 				NOT = { FOI = { is_free_or_tributary_trigger = yes } }
 			}
 		}
 		NAV = { country_event = { id = aetas_ara.23 } }
 	}
-	if = { 
-		limit = { 
-			tag = NAV 
-			has_country_flag = nav_joan 
+	if = {
+		limit = {
+			tag = NAV
+			has_country_flag = nav_joan
 			ARA = { has_ruler = "Chuan II" }
 		}
 		ARA = { country_event = { id = aetas_ara.22 } }
 	}
 	if = {
-		limit = { 
-			tag = ARA 
+		limit = {
+			tag = ARA
 			has_heir_flag = joan_trastamara_flag
 			NAV = { has_country_flag = nav_joan2 }
 		}
-		define_heir = { 
+		define_heir = {
 			name = "Ferrando"
 			monarch_name = "Ferrando II"
 			dynasty = "de Trastámara"
-			claim = 90 
-			age = 20 
+			claim = 90
+			age = 20
 			adm = 5
 			dip = 3
 			mil = 5
 		}
 		country_event = { id = aetas_ara.22 }
 	}
-	if = { 
-		limit = { 
-			tag = CYP 
+	if = {
+		limit = {
+			tag = CYP
 			has_country_flag = ven_to_inherit
 		}
 		VEN = { country_event = { id = aetas_ven.13 } }
 	}
-	if = { 
-		limit = { 
-			tag = ARA 
+	if = {
+		limit = {
+			tag = ARA
 			has_country_flag = ara_conquer_nap
-			NAP = { 
-				capital_scope = { 
+			NAP = {
+				capital_scope = {
 					controlled_by = ARA
 				}
 			}
 		}
 		country_event = { id = aetas_nap.11 }
 	}
-	if = { 
-		limit = { 
-			tag = NAP 
+	if = {
+		limit = {
+			tag = NAP
 			NAP = { ai = no }
-			has_country_flag = pro_heir_nap 
+			has_country_flag = pro_heir_nap
 		}
 		country_event = { id = aetas_nap.8 }
 	}
-	if = { 
-		limit = { 
-			tag = NAP 
+	if = {
+		limit = {
+			tag = NAP
 			NAP = { ai = yes }
-			has_country_flag = pro_heir_nap 
+			has_country_flag = pro_heir_nap
 		}
 		PRO = { country_event = { id = aetas_nap.8 } }
 	}
-	if = { 
-		limit = { 
-			tag = NPO 
-			has_country_flag = alf_nap 
+	if = {
+		limit = {
+			tag = NPO
+			has_country_flag = alf_nap
 		}
 		country_event = { id = aetas_nap.12 }
 	}
-	if = { 
-		limit = { 
-			tag = NAP 
+	if = {
+		limit = {
+			tag = NAP
 			has_country_flag = ara_heir_nap
 		}
 		country_event = { id = aetas_nap.11 }
 	}
-	if = { 
-		limit = { 
-			tag = MLO 
+	if = {
+		limit = {
+			tag = MLO
 			has_country_flag = chose_ambrose
 		}
 		country_event = { id = aetas_mlo.12 }
 	}
-	if = { 
-		limit = { 
-			tag = FRL 
-			MLO = { 
+	if = {
+		limit = {
+			tag = FRL
+			MLO = {
 				dynasty = "Visconti"
 			}
 		}
 		MLO = { country_event = { id = aetas_lw.1 } }
 	}
-#	if = { #Jackkade Removed, Nonexistant Event 
-#		limit = { 
-#			tag = CAS 
-#			has_country_flag = maria_cas 
+#	if = { #Jackkade Removed, Nonexistant Event
+#		limit = {
+#			tag = CAS
+#			has_country_flag = maria_cas
 #		}
 #		ARA = { country_event = { id = aetas_cas.9 } }
 #	}
-	if = { 
-		limit = { 
-			tag = BYT 
-			has_country_flag = byt_union 
+	if = {
+		limit = {
+			tag = BYT
+			has_country_flag = byt_union
 		}
-		BRA = { 
+		BRA = {
 			create_union = BYT
 		}
 	}
-	if = { 
-		limit = { 
-			tag = RAW 
-			NOT = { 
+	if = {
+		limit = {
+			tag = RAW
+			NOT = {
 				has_country_flag = raw_partition
 			}
 		}
-		POL = { 
+		POL = {
 			country_event = { id = aetas_pol.3 }
 		}
 	}
-	if = { 
-		limit = { 
-			tag = RAW 
+	if = {
+		limit = {
+			tag = RAW
 			has_country_flag = raw_partition
 		}
-		POL = { 
+		POL = {
 			country_event = { id = aetas_pol.4 }
 		}
 	}
-	if = { 
-		limit = { 
-			tag = LUX 
+	if = {
+		limit = {
+			tag = LUX
 			has_global_flag = hun_lux_inheritance
 		}
 		country_event = { id = aetas_hun.17 }
 		clr_global_flag = hun_lux_inheritance
 	}
-	if = { 
-		limit = { 
-			tag = KNI 
+	if = {
+		limit = {
+			tag = KNI
 			has_reform = hospitaller_order_reform
 			NOT = {
 				has_country_flag = kni_1_fix
@@ -1417,196 +1421,196 @@ on_monarch_death = {
 		}
 		country_event =  { id = aetas_kni.1 }
 	}
-	if = { 
-		limit = { 
-			tag = ENG 
-			government = monarchy 
+	if = {
+		limit = {
+			tag = ENG
+			government = monarchy
 			owns = 236
 		}
 		country_event = { id = aetas_eng.15 }
 	}
-	if = { 
-		limit = { 
-			tag = WLM  
+	if = {
+		limit = {
+			tag = WLM
 		}
 		ENG = { country_event = { id = aetas_eng.13 } }
 	}
-	if = { 
-		limit = { 
-			tag = FRA 
+	if = {
+		limit = {
+			tag = FRA
 			owns = 183
 			government = monarchy
-			4389 = { 
-				country_or_non_sovereign_subject_holds = ROOT 
+			4389 = {
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		country_event = { id = aetas_fra.2 }
 	}
-	if ={ 
-		limit ={ 
-			tag = GRM 
-			GRM = { 
-				is_subject_of = TUR 
+	if ={
+		limit ={
+			tag = GRM
+			GRM = {
+				is_subject_of = TUR
 				has_country_flag = tur_inherit
 			}
 		}
 		TUR = { country_event = { id = aetas_tur.27 } }
 	}
-	if = { 
+	if = {
 		limit = {
-			tag = TUN 
-			TUN = { 
+			tag = TUN
+			TUN = {
 				NOT = { has_country_flag = hafsid_stability }
 			}
 		}
 		country_event = { id = aetas_tun.2 }
 	}
-	if = { 
-		limit = { 
-			tag = BUR 
+	if = {
+		limit = {
+			tag = BUR
 			has_country_flag = bur_inherit_lux
-			LUX = { 
-				AND = { 
-					exists = yes 
-					junior_union_with = BUR 
+			LUX = {
+				AND = {
+					exists = yes
+					junior_union_with = BUR
 				}
 			}
 		}
 		inherit = LUX
 	}
-	if = { 
-		limit = { 
-			tag = BUR 
+	if = {
+		limit = {
+			tag = BUR
 			has_country_flag = bur_inherit_hai
-			HAI = { 
-				AND = { 
-					exists = yes 
-					junior_union_with = BUR 
+			HAI = {
+				AND = {
+					exists = yes
+					junior_union_with = BUR
 				}
 			}
 		}
 		inherit = HAI
 	}
-	if = { 
-		limit = { 
-			tag = BUR 
+	if = {
+		limit = {
+			tag = BUR
 			has_country_flag = bur_inherit_hol
-			HOL = { 
-				AND = { 
-					exists = yes 
-					junior_union_with = BUR 
+			HOL = {
+				AND = {
+					exists = yes
+					junior_union_with = BUR
 				}
 			}
 		}
 		inherit = HOL
 	}
-	if = { 
-		limit = { 
-			tag = BUR 
+	if = {
+		limit = {
+			tag = BUR
 			has_country_flag = bur_inherit_zee
-			ZEE = { 
-				AND = { 
-					exists = yes 
-					junior_union_with = BUR 
+			ZEE = {
+				AND = {
+					exists = yes
+					junior_union_with = BUR
 				}
 			}
 		}
 		inherit = ZEE
 	}
-	if = { 
-		limit = { 
-			tag = BUR 
+	if = {
+		limit = {
+			tag = BUR
 			has_country_flag = bur_inherit_flanders
-			FLA = { 
-				AND = { 
-					exists = yes 
-					junior_union_with = BUR 
+			FLA = {
+				AND = {
+					exists = yes
+					junior_union_with = BUR
 				}
 			}
 		}
-		inherit = FLA 
+		inherit = FLA
 	}
-	if = { 
-		limit = { 
-			tag = GEL 
+	if = {
+		limit = {
+			tag = GEL
 			NOT = { has_heir = yes }
 		}
 		country_event = { id = aetas_gel.1 }
 	}
-	if = { 
-		limit = { 
-			tag = DAN 
+	if = {
+		limit = {
+			tag = DAN
 			has_country_flag = chris_wittl
 		}
 		SWE = { country_event = { id = aetas_swe.6 } }
 	}
-	if = { 
-		limit = { 
-			tag = LIT 
+	if = {
+		limit = {
+			tag = LIT
 			has_country_flag = lit_accepts_grodno
 		}
 		country_event = { id = aetas_lit.4 }
 	}
-	if = { 
-		limit = { 
-			tag = LIT 
+	if = {
+		limit = {
+			tag = LIT
 			NOT = { has_country_flag = vyt_succession }
 		}
 		country_event = { id = aetas_lit.1 }
 	}
-	if = { 
-		limit = { 
-			tag = BOH 
-			AND = { 
-				has_ruler = "Zikmund I" 
-				has_country_flag = sigi_in_boh 
+	if = {
+		limit = {
+			tag = BOH
+			AND = {
+				has_ruler = "Zikmund I"
+				has_country_flag = sigi_in_boh
 			}
-			NOT = { 
-				HUN = { 
+			NOT = {
+				HUN = {
 					has_ruler = "Sigismund I"
 				}
 			}
 		}
-		kill_ruler = yes 
+		kill_ruler = yes
 	}
-	if = { 
-		limit = { 
-			tag = HUN 
+	if = {
+		limit = {
+			tag = HUN
 			has_ruler = "Zsigmond I"
-			BOH = { 
-				AND = { 
-					has_country_flag = sigi_in_boh 
+			BOH = {
+				AND = {
+					has_country_flag = sigi_in_boh
 					NOT = { has_ruler = "Zikmund I" }
 				}
 			}
 		}
-		kill_ruler = yes 
+		kill_ruler = yes
 	}
-	if = { 
-		limit = { 
-			tag = BOH 
+	if = {
+		limit = {
+			tag = BOH
 			NOT = { has_country_flag = wenzel_dead }
 		}
 		country_event = { id = aetas_boh.1 }
 		set_country_flag = boh_sigi_election
 	}
-	if = { 
-		limit = { 
-			tag = NAP 
-			has_country_flag = ara_inherit_nap 
+	if = {
+		limit = {
+			tag = NAP
+			has_country_flag = ara_inherit_nap
 		}
 		ARA = { create_union = NAP }
 	}
-	if = { 
-		limit = { 
-			tag = NAP 
-			has_country_flag = pro_inherit_nap 
+	if = {
+		limit = {
+			tag = NAP
+			has_country_flag = pro_inherit_nap
 		}
 		PRO = { create_union = NAP }
 	}
 	if = {
 		limit = {
-			tag = STB 
+			tag = STB
 			has_country_flag = stb_munich_partition
 		}
 		UBV = {
@@ -1615,23 +1619,23 @@ on_monarch_death = {
 	}
 	if = {
 		limit = {
-			tag = SWB 
+			tag = SWB
 			has_global_flag = sax_inherit_swb_flag
 		}
 		MEI = { country_event = { id = aetas_sax.5 } }
 	}
-	if = { 
-		limit = { 
-			tag = LUX 
-			has_country_flag = lux_bur_inheritance 
+	if = {
+		limit = {
+			tag = LUX
+			has_country_flag = lux_bur_inheritance
 		}
-		BUR = { 
+		BUR = {
 			country_event = { id = aetas_lux.3 }
 		}
 	}
 	if = {
 		limit = {
-			tag = SAX 
+			tag = SAX
 			has_country_flag = sax_friedrich_destiny
 		}
 		country_event = { id = aetas_sax.1 }
@@ -1644,28 +1648,28 @@ on_monarch_death = {
 		}
 		country_event = { id = aetas_hab.1 }
 	}
-	if = { 
-		limit = { 
-			tag = BOH 
+	if = {
+		limit = {
+			tag = BOH
 			has_reform = bohemian_elective_kingdom_reform
 		}
 		country_event = { id = government_events.3 }
 	}
 	if = {
 		limit = {
-			tag = POL 
+			tag = POL
 			has_country_flag = pol_kings_hungary
 		}
 		country_event = { id = aetas_hun.8 }
 	}
-	if = { 
+	if = {
 		limit = {
-			tag = HUN 
+			tag = HUN
 			NOT = { has_country_flag = sigismund_ded }
 		}
 		country_event = { id = aetas_hun.5 }
 	}
-	if = { 
+	if = {
 		limit = {
 			tag = TUR
 		}
@@ -1736,7 +1740,7 @@ on_monarch_death = {
 			AND = {
 				OR = {
 					tag = CAS
-					tag = SPA 
+					tag = SPA
 				}
 				OR = {
 					owns = 219
@@ -1755,7 +1759,7 @@ on_monarch_death = {
 	}
 	if = {
 		limit = {
-			tag = HOL 
+			tag = HOL
 			BRB = { has_country_flag = brb_married_jacoba }
 			faction_in_power = aetas_hooks
 		}
@@ -1807,31 +1811,31 @@ on_war_won = {  #kdjafl;ndsa;nf #what
 	}
 }
 on_war_lost = {
-	if = { 
-		limit = { 
-			ROOT = { 
-				tag = ARA 
-				has_disaster = catalan_civil_war 
-				is_lesser_in_union = yes 
+	if = {
+		limit = {
+			ROOT = {
+				tag = ARA
+				has_disaster = catalan_civil_war
+				is_lesser_in_union = yes
 			}
-			FROM = { 
-				OR = { 
-					tag = CAS 
-					tag = FRA 
+			FROM = {
+				OR = {
+					tag = CAS
+					tag = FRA
 				}
-				senior_union_with = ROOT 
+				senior_union_with = ROOT
 			}
 		}
-		ROOT = { 
+		ROOT = {
 			end_disaster = catalan_civil_war
-			if = { 
-				limit = { 
+			if = {
+				limit = {
 					has_reform = pactist_aragonese_monarchy_reform
 				}
 				remove_government_reform = pactist_aragonese_monarchy_reform
 				add_government_reform = aragonese_monarchy_reform
 			}
-			every_province = { 
+			every_province = {
 				limit = { has_province_modifier = cat_council }
 				remove_province_modifier = cat_council
 			}
@@ -1866,310 +1870,310 @@ on_war_lost = {
 	}
 }
 on_dependency_lost = {
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			has_country_modifier = nap_arb_mod
 			FROM = { tag = ARB }
 		}
 		remove_country_modifier = nap_arb_mod
 	}
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			has_country_modifier = cas_mds_mod
 			FROM = { tag = MDS }
 		}
 		remove_country_modifier = cas_mds_mod
 	}
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			has_country_modifier = sav_cyp_mod
 			FROM = { tag = CYP }
 		}
 		remove_country_modifier = sav_cyp_mod
 	}
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			has_country_modifier = bur_zut_mod
 			FROM = { tag = ZUT }
 		}
 		remove_country_modifier = bur_zut_mod
 	}
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			has_country_modifier = bur_gel_mod
 			FROM = { tag = GEL }
 		}
 		remove_country_modifier = bur_gel_mod
 	}
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			has_country_modifier = bur_hol_mod
 			FROM = { tag = HOL }
 		}
 		remove_country_modifier = bur_hol_mod
 	}
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			has_country_modifier = bur_zee_mod
 			FROM = { tag = ZEE }
 		}
 		remove_country_modifier = bur_zee_mod
 	}
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			has_country_modifier = bur_hai_mod
 			FROM = { tag = HAI }
 		}
 		remove_country_modifier = bur_hai_mod
 	}
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			has_country_modifier = bur_brb_mod
 			FROM = { tag = BRB }
 		}
 		remove_country_modifier = bur_brb_mod
 	}
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			has_country_modifier = bur_chs_mod
 			FROM = { tag = CHS }
 		}
 		remove_country_modifier = bur_chs_mod
 	}
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			has_country_modifier = plc_voi_mod
-			FROM = { 
-				OR = { 
-					tag = KIE 
-					tag = BCW 
+			FROM = {
+				OR = {
+					tag = KIE
+					tag = BCW
 				}
 			}
 		}
 		remove_country_modifier = plc_voi_mod
 	}
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			has_country_modifier = boh_plv_mod
 			FROM = { tag = PLV }
 		}
 		remove_country_modifier = boh_plv_mod
 	}
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			has_country_modifier = boh_bra_mod
 			FROM = { tag = BRA }
 		}
 		remove_country_modifier = boh_bra_mod
 	}
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			has_country_modifier = mor_tmb_mod
 			FROM = { tag = TMB }
 		}
 		remove_country_modifier = mor_tmb_mod
 	}
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			has_country_modifier = koj_sid_mod
-			FROM = { tag = SID } 
+			FROM = { tag = SID }
 		}
 		remove_country_modifier = koj_sid_mod
 	}
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			has_country_modifier = koj_gli_mod
-			FROM = { tag = GLI } 
+			FROM = { tag = GLI }
 		}
 		remove_country_modifier = koj_gli_mod
 	}
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			has_country_modifier = koj_jaf_mod
-			FROM = { tag = JAF } 
+			FROM = { tag = JAF }
 		}
 		remove_country_modifier = koj_jaf_mod
 	}
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			has_country_modifier = mam_ram_mod2
 			FROM = { tag = RAM }
 		}
 		remove_country_modifier = mam_ram_mod2
 	}
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			has_country_modifier = mam_fad_mod
 			FROM = { tag = FAD }
 		}
 		remove_country_modifier = mam_fad_mod
 	}
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			has_country_modifier = crg_mod
 			FROM = { tag = MON }
 		}
 		remove_country_modifier = crg_mod
 	}
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			has_country_modifier = byz_moe_subject
 			FROM = { tag = MOE }
 		}
 		remove_country_modifier = byz_moe_subject
 	}
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			has_country_modifier = byz_ath_subject
 			FROM = { tag = ATH }
 		}
 		remove_country_modifier = byz_ath_subject
 	}
-	if = { 
-		limit = { 
-			has_country_modifier = byz_athos 
+	if = {
+		limit = {
+			has_country_modifier = byz_athos
 			FROM = { tag = ATO }
 		}
-		remove_country_modifier = byz_athos 
+		remove_country_modifier = byz_athos
 	}
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			has_country_modifier = tur_wal_subject
 			FROM = { tag = WAL }
 		}
 		remove_country_modifier = tur_wal_subject
 	}
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			has_country_modifier = belfast_mod2
 			FROM = { tag = ANI }
 		}
 		remove_country_modifier = belfast_mod2
 	}
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			has_country_modifier = norman_port2
 			FROM = { tag = ANI }
 		}
 		remove_country_modifier = norman_port2
 	}
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			has_country_modifier = tribes_galway2
 			FROM = { tag = ANI }
 		}
 		remove_country_modifier = tribes_galway2
 	}
-	if = { 
-		limit = { 
-			has_country_modifier = kid_ulster 
+	if = {
+		limit = {
+			has_country_modifier = kid_ulster
 			FROM = { tag = ULS }
 		}
 		remove_country_modifier = kid_ulster
 	}
-	if = { 
+	if = {
 		limit = {
-			any_province = { 
+			any_province = {
 				has_province_modifier = eng_march_mod
 			}
-			FROM = { 
-				OR = { 
-					tag = NVL 
-					tag = NBL 
+			FROM = {
+				OR = {
+					tag = NVL
+					tag = NBL
 				}
 			}
 		}
-		every_province = { 
+		every_province = {
 			limit = { has_province_modifier = eng_march_mod }
-			remove_province_modifier = eng_march_mod 
+			remove_province_modifier = eng_march_mod
 		}
 	}
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			has_country_modifier = swe_vbg_mod
 			FROM = { tag = VBG }
 		}
 		remove_country_modifier = swe_vbg_mod
 	}
-	if = { 
-		limit = { 
-			has_country_modifier = hun_wal_vassal 
+	if = {
+		limit = {
+			has_country_modifier = hun_wal_vassal
 			FROM = { tag = WAL }
 		}
 		remove_country_modifier = hun_wal_vassal
 	}
 	if = {
-		limit = { 
+		limit = {
 			has_country_modifier = hun_tra_mod
 			FROM = { tag = TRA }
 		}
 		remove_country_modifier = hun_tra_mod
 	}
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			has_country_modifier = zur_subject
 			FROM = { tag = HAB }
 		}
 		remove_country_modifier = zur_subject
 	}
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			has_country_modifier = mam_ram_mod
 			FROM = { tag = RAM }
 		}
 		remove_country_modifier = mam_ram_mod
 	}
-	if = { 
-		limit = { 
-			has_country_modifier = wal_march 
+	if = {
+		limit = {
+			has_country_modifier = wal_march
 			FROM = { tag = WAL }
 		}
 		remove_country_modifier = wal_march
 	}
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			has_country_flag = hun_rag_mod
 			FROM  = { tag = RAG }
 		}
 		remove_country_modifier = hun_rag_mod
 	}
-	if = { 
-		limit = { 
-			has_country_modifier = ara_koj_mod 
+	if = {
+		limit = {
+			has_country_modifier = ara_koj_mod
 			FROM = { tag = KOJ }
 		}
 		remove_country_modifier = ara_koj_mod
 	}
 	if = {
-		limit = { 
-			has_country_modifier = catania_uni_mod 
+		limit = {
+			has_country_modifier = catania_uni_mod
 			FROM = { tag = SIC }
 		}
 		remove_country_modifier = catania_uni_mod
 	}
-	if = { 
-		limit = { 
-			has_country_modifier = pal_hagenau_cooperation 
+	if = {
+		limit = {
+			has_country_modifier = pal_hagenau_cooperation
 			FROM = { tag = HGE }
 		}
 		remove_country_modifier = pal_hagenau_cooperation
 	}
-	if = { 
-		limit = { 
-			has_country_modifier = pal_master_worms 
+	if = {
+		limit = {
+			has_country_modifier = pal_master_worms
 			FROM = { tag = WOR }
 		}
 		remove_country_modifier = pal_master_worms
 	}
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			has_country_modifier = cas_gra_tribute
 			FROM = { tag = GRA }
 		}
 		remove_country_modifier = cas_gra_tribute
 	}
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			any_owned_province = {
 				has_province_modifier = hawwarah_middle_egypt
 				FROM = { tag = HWH }
@@ -2180,28 +2184,28 @@ on_dependency_lost = {
 			remove_province_modifier = hawwarah_middle_egypt
 		}
 	}
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			has_country_modifier = sic_viceroyalty
 			FROM = { tag = SIC }
 		}
 		remove_country_modifier = sic_viceroyalty
 	}
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			has_country_modifier = sar_viceroyalty
 			FROM = { tag = SAR }
 		}
 		remove_country_modifier = sar_viceroyalty
 	}
-	if = { 
-		limit = { 
-			has_country_modifier = ara_lte 
+	if = {
+		limit = {
+			has_country_modifier = ara_lte
 			FROM = { tag = LTE }
 		}
 		remove_country_modifier = ara_lte
 	}
-	if = { 
+	if = {
 		limit = {
 			has_country_modifier = tir_march_mod
 			FROM = { tag = TIR }
@@ -2211,39 +2215,39 @@ on_dependency_lost = {
 }
 on_alliance_broken = { #ROOT - Original alliance creator, FROM - Alliance accepter
 	on_alliance_broken_effect = yes
-	if = { 
-		limit = { 
+	if = {
+		limit = {
 			has_country_modifier = nap_lan_mod
-			FROM = { 
-				OR = { 
-					tag = LAN 
-					was_tag = LAN 
+			FROM = {
+				OR = {
+					tag = LAN
+					was_tag = LAN
 				}
 			}
 		}
 		remove_country_modifier = nap_lan_mod
 	}
-	if = { 
-		limit = { 
-			has_country_modifier = eng_por_mod 
-			FROM = { 
-				OR = { 
-					tag = ENG 
-					was_tag = ENG 
+	if = {
+		limit = {
+			has_country_modifier = eng_por_mod
+			FROM = {
+				OR = {
+					tag = ENG
+					was_tag = ENG
 				}
 			}
 		}
 		remove_country_modifier = eng_por_mod
 	}
-	if = { 
-		limit = { 
-			has_country_modifier = kst_rag_mod 
-			FROM = { 
-				OR = { 
-					tag = KST 
-					was_tag = KST 
-					tag = RAG 
-					was_tag = RAG 
+	if = {
+		limit = {
+			has_country_modifier = kst_rag_mod
+			FROM = {
+				OR = {
+					tag = KST
+					was_tag = KST
+					tag = RAG
+					was_tag = RAG
 				}
 			}
 		}
@@ -2251,41 +2255,41 @@ on_alliance_broken = { #ROOT - Original alliance creator, FROM - Alliance accept
 		FROM = { remove_country_modifier = kst_rag_mod }
 	}
 	if = {
-		limit = { 
+		limit = {
 			has_country_modifier = eng_relations
 			FROM = { tag = ENG }
 		}
-		every_country = { 
+		every_country = {
 			limit = { has_country_modifier = eng_relations }
 			remove_country_modifier = eng_relations
 		}
 	}
 	if = {
-		limit = { 
+		limit = {
 			has_country_modifier = eng_relations
 			FROM = { tag = SCO }
 		}
-		every_country = { 
+		every_country = {
 			limit = { has_country_modifier = eng_relations }
 			remove_country_modifier = eng_relations
 		}
 	}
 	if = {
-		limit = { 
+		limit = {
 			has_country_modifier = auld_mod
 			FROM = { tag = SCO }
 		}
-		every_country = { 
+		every_country = {
 			limit = { has_country_modifier = auld_mod }
 			remove_country_modifier = auld_mod
 		}
 	}
 	if = {
-		limit = { 
+		limit = {
 			has_country_modifier = auld_mod
 			FROM = { tag = FRA }
 		}
-		every_country = { 
+		every_country = {
 			limit = { has_country_modifier = auld_mod }
 			remove_country_modifier = auld_mod
 		}
@@ -2293,15 +2297,15 @@ on_alliance_broken = { #ROOT - Original alliance creator, FROM - Alliance accept
 }
 
 on_province_religion_converted = {
-	if = { 
-		limit = { 
-			culture = andalusi 
+	if = {
+		limit = {
+			culture = andalusi
 			religion = catholic
 			NOT = { has_province_flag = morisco_flag }
-			owner = { 
-				OR = { 
-					tag = CAS 
-					was_tag = CAS 
+			owner = {
+				OR = {
+					tag = CAS
+					was_tag = CAS
 				}
 				religion = catholic
 				NOT = { has_country_flag = expelled_moriscos_flag }
@@ -2313,9 +2317,9 @@ on_province_religion_converted = {
 }
 
 #ROOT = new capital province, FROM = old capital
-on_capital_moved = { 
-	if = { 
-		limit = { 
+on_capital_moved = {
+	if = {
+		limit = {
 			owner = {
 				has_government_attribute = castile_cortes
 				NOT = { mission_completed = spa_cortes_representation }
@@ -2326,30 +2330,30 @@ on_capital_moved = {
 	}
 }
 
-on_culture_demoted = { 
-	if = { 
-		limit = { 
+on_culture_demoted = {
+	if = {
+		limit = {
 			has_country_modifier = nav_gascon_mod
 			NOT = { accepted_culture = gascon }
 		}
 		remove_country_modifier = nav_gascon_mod
 	}
-	if = { 
-		limit = { 
-			has_country_modifier = norman_barons_mod 
+	if = {
+		limit = {
+			has_country_modifier = norman_barons_mod
 			NOT = { accepted_culture = normand }
 		}
 		remove_country_modifier = norman_barons_mod
 	}
 }
 
-on_battle_lost_country = { 
-	if = { 
-		limit = { 
-			ROOT = { 
-				OR = { 
-					tag = FRA 
-					is_subject_of = FRA 
+on_battle_lost_country = {
+	if = {
+		limit = {
+			ROOT = {
+				OR = {
+					tag = FRA
+					is_subject_of = FRA
 				}
 				has_global_flag = hyw_flag
 			}

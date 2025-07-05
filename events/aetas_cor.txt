@@ -8,12 +8,13 @@ country_event = {
 	desc = aetas_cor.1.d
 	picture = BORDER_TENSION_eventPicture
 
-	is_triggered_only = yes 
-	trigger = { 
-		OR = { 
-			tag = COR 
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			tag = COR
 			tag = GEN
 		}
+		NOT = { has_global_flag = cor_gen_crisis_flag }
 	}
 
 	immediate = { hidden_effect = { set_global_flag = cor_gen_crisis_flag } }
@@ -24,18 +25,18 @@ country_event = {
 		custom_tooltip = cor_crisis.1.tt
 	}
 	option = { #The Terra di Comune will be retaken!
-		name = aetas_cor.1.b 
+		name = aetas_cor.1.b
 		ai_chance = { factor = 1 }
 		trigger = { tag = COR }
 		custom_tooltip = cor_crisis.1.tt
 	}
-	option = { 
+	option = {
 		name = aetas_cor.1.c #Call upon Aragon if they will accept us as their fief in return
 		ai_chance = { factor = 5 }
 		trigger = { tag = COR }
 		custom_tooltip = cor_crisis.2.tt
-		ARA = { 
-			country_event = { 
+		ARA = {
+			country_event = {
 				id = aetas_cor.2
 				days = 14
 			}
@@ -49,52 +50,52 @@ country_event = {
 	desc = aetas_cor.2.d
 	picture = ITALIAN_wars_eventPicture
 
-	is_triggered_only = yes 
-	fire_only_once = yes 
-	major = yes 
-	major_trigger  ={ 
-		OR = { 
-			tag = COR 
-			tag = GEN 
+	is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+	major_trigger  ={
+		OR = {
+			tag = COR
+			tag = GEN
 		}
 	}
 
-	option = { 
+	option = {
 		name = aetas_cor.2.a #we accept
-		ai_chance = { 
+		ai_chance = {
 			factor = 1
-			modifier = { 
+			modifier = {
 				factor = 5
-				is_at_war = no 
+				is_at_war = no
 			}
-			modifier = { 
+			modifier = {
 				factor = 2
-				any_province = { 
+				any_province = {
 					AND = {
 						area = corsica_sardinia_area
-						country_or_non_sovereign_subject_holds = ROOT 
+						country_or_non_sovereign_subject_holds = ROOT
 					}
 				}
 			}
 		}
 		hidden_effect = { set_global_flag = ara_help_cor_flag }
-		join_all_defensive_wars_of = COR 
-		create_subject = { 
-			who = COR 
-			subject_type = fief 
+		join_all_defensive_wars_of = COR
+		create_subject = {
+			who = COR
+			subject_type = fief
 		}
 		custom_tooltip = cor_crisis.1.tt
-		hidden_effect = { 
+		hidden_effect = {
 			COR = { change_country_color = { color = { 200 133 45 } } }
 		}
 	}
-	option = { 
+	option = {
 		name = aetas_cor.2.b #no thanks
-		ai_chance = { 
-			factor = 1 
-			modifier = { 
+		ai_chance = {
+			factor = 1
+			modifier = {
 				factor = 5
-				is_at_war = yes 
+				is_at_war = yes
 			}
 		}
 		add_truce_with = GEN
@@ -107,29 +108,29 @@ country_event = {
 	desc = aetas_cor.3.d
 	picture = ITALIAN_wars_eventPicture
 
-	is_triggered_only = yes 
-	fire_only_once = yes 
-	major = yes 
-	major_trigger  ={ 
-		OR = { 
-			tag = GEN 
-			if = { 
+	is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+	major_trigger  ={
+		OR = {
+			tag = GEN
+			if = {
 				limit = { has_global_flag = ara_help_cor_flag }
-				tag = COR 
+				tag = COR
 			}
 		}
 	}
 
-	option = { 
+	option = {
 		name = aetas_cor.3.a #hooray!
-		every_province = { 
-			limit = { 
-				area = corsica_area 
+		every_province = {
+			limit = {
+				area = corsica_area
 				owner = { tag = GEN }
 			}
-			cede_province = COR 
+			cede_province = COR
 		}
-		if = { 
+		if = {
 			limit = { is_subject = yes }
 			overlord = { white_peace = GEN }
 		}
@@ -143,26 +144,26 @@ country_event = {
 	desc = aetas_cor.4.d
 	picture = COUNTRY_COLLAPSE_eventPicture
 
-	is_triggered_only = yes 
-	fire_only_once = yes 
-	major = yes 
-	major_trigger  ={ 
-		OR = { 
-			tag = COR 
-			if = { 
+	is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+	major_trigger  ={
+		OR = {
+			tag = COR
+			if = {
 				limit = { has_global_flag = ara_help_cor_flag }
-				tag = ARA 
+				tag = ARA
 			}
 		}
 	}
 
-	option = { 
+	option = {
 		name = aetas_cor.4.a #hooray!
-		if = { 
+		if = {
 			limit = { has_global_flag = ara_help_cor_flag }
-			white_peace = ARA 
+			white_peace = ARA
 		}
 		else = { white_peace = COR }
-		inherit = COR 
+		inherit = COR
 	}
 }
