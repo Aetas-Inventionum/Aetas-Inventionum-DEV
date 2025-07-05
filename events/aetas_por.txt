@@ -15,8 +15,8 @@ country_event = {
 	}
 
 	trigger = { 
-			tag = POR 
-			owns = 1751
+		tag = POR 
+		owns = 1751
 	}
 
 	option = {
@@ -137,6 +137,10 @@ country_event = {
 
 	fire_only_once = yes
 
+	trigger = {
+		tag = POR
+		owns_core_province = 1751
+	}
 
 	mean_time_to_happen = { 
 		years = 1
