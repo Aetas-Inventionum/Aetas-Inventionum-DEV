@@ -352,6 +352,8 @@
  #Modifiers
  ai_tribal_activity:0 "Tribal Activity in Province"
  mozarabic_mod:0 "Mozarabic Population in Province"
+ total_gibraltar_monopolization:0 "Total Monopolization of Gibraltar"
+ desc_total_gibraltar_monopolization:0 "Our nation has completely monopolized the movement of trade between Africa and Europe  at the Strait of Gibraltar. For this, we reap bountiful economic rewards.\n"
 
  #Province special modifiers
  ai_catanzaro:0 "Silk Factories of Catanzaro"
@@ -489,7 +491,7 @@
  ai_episkopi:0 "Episkopi's Sugar Factory"
  desc_ai_episkopi:0 "By 1374, Episkopi, known as La Piscopia in Italian, was granted in fief to the Cornaro family who ran large sugarcane plantations. Cyprus became the main producer of sugar for the whole Christian world in the Late Medieval Era and Cypriot sugar was often considered the finest. The Cornaro's domains, located on the south west of the island, eventually became the largest sugar producer and exporter."
  african_terminus_disunity:0 "Disunity of the African Terminus"
- desc_african_terminus_disunity:0 "When Portugal took Ceuta in 1415, it was with the goal of monopolising on African trade into Europe. However, the lords in Fez had other plans. They diverted trade westward to Tangier instead, splitting the mercantile movement of the region in two.\n\nOur issues today find root in this, and §Mtrade will not stabilise until one nation owns both cities§! or §MGlobal Trade develops§!.\n"
+ desc_african_terminus_disunity:0 "When Portugal took Ceuta in 1415, it was with the goal of monopolising on African trade into Europe. However, the lords in Fez had other plans. They diverted trade westward to Tangier instead, splitting the mercantile movement of the region in two.\n\nOur issues today find root in this, and §Mtrade will not stabilise until one nation owns both cities§!.\n"
  low_countries_nodam:0 "Lack of Flood Defences"
  desc_low_countries_nodam:0 "This province lacks any flood defences, meaning that floods periodically ravage the landscape.\n"
  low_countries_yesdam:0 "Protective Dams"

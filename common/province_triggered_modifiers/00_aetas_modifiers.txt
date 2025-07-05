@@ -6,7 +6,6 @@
 african_terminus_disunity = {
 	potential = {
 		owner = {
-			NOT = { has_institution = global_trade } #does this work? maybe?????
 			NOT = {
 				AND = {
 					owns_core_province = 1751
@@ -19,7 +18,6 @@ african_terminus_disunity = {
 	trigger = {
 		hidden_trigger = {
 			owner = {
-				NOT = { has_institution = global_trade } #does this work? maybe?????
 				NOT = {
 					AND = {
 						owns_core_province = 1751
@@ -36,17 +34,63 @@ african_terminus_disunity = {
 	
 	#Province scope
 	on_activation = {
-		#doesnt work dunno why, not about to figure out why
-		#province_event = {
-		#	id = aetas_trade_events.2
-		#}
+		1751 = {
+  			owner = {
+    			country_event = {
+      				id = aetas_trade_events.2
+ 				}
+  			}
+		}
+		334 = {
+  			owner = {
+    			country_event = {
+      				id = aetas_trade_events.2
+ 				}
+  			}
+		}
 	}
 	
 	on_deactivation = {
-		province_event = {
-			id = aetas_trade_events.1 # does in fact work
+		1751 = {
+  			owner = {
+    			country_event = {
+      				id = aetas_trade_events.1
+ 				}
+  			}
 		}
 	}	
+}
+
+total_gibraltar_monopolization = {
+	potential = {
+		owner = {
+			is_or_was_tag = {
+				tag = GRA
+			}
+			mission_completed = gra_control_terminus
+		}
+	}
+
+	trigger = {
+		owner = {
+			AND = {
+				owns_core_province = 226
+				owns_core_province = 334
+				owns_core_province = 1751
+			}
+		}
+	}
+
+	merchants = 1
+	global_own_trade_power = 0.1
+
+	on_activation = {
+		
+	}
+
+	on_deactivation = {
+		
+	}
 }
 
 low_countries_nodam = {

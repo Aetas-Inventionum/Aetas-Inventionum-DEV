@@ -327,10 +327,14 @@ ai_gra_branch_2 = {
 		} 
 
 		effect = {  
-			226 = { center_of_trade = 1 }
-			add_country_modifier = { 
-				name = gra_term
-				duration = -1
+			226 = { 
+				center_of_trade = 1
+				add_province_triggered_modifier = total_gibraltar_monopolization
+			}
+			#add_country_modifier = { -- replaced by a conditional province modifier above
+			#	name = gra_term
+			#	duration = -1
+			#}
 			}
 			if = { 
 				limit = { NOT = { 4565 = { has_discovered = ROOT } } }

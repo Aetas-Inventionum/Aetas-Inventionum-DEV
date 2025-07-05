@@ -24,6 +24,9 @@ country_event = { #Tangier and Ceuta have been brought under one nation's flag, 
 			add_base_production = 3
 			add_prosperity = 20
 			change_religion = ROOT
+			hidden_effect = {
+				center_of_trade = 1
+			}
 		}
 		custom_tooltip = aetas_trade_events.1.a.tt #Whatever the chosen port gains will be taken from the other.
 		hidden_effect = {
