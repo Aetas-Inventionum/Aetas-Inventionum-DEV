@@ -32,6 +32,10 @@ country_event = {
 	option = { 
 		name = aetas_cae.1.a #The Counts of Niebla will be Kings of the Canaries.
 		ai_chance = { factor = 10 }
+		trigger = {
+			tag = NIE
+			exists = yes
+		}
 		if = { 
 			limit = { ai = no }
 			switch_tag = NIE
