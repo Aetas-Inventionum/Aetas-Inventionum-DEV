@@ -726,8 +726,13 @@ ai_fra_hyw_branch_5 = {
 		position = 2
 		required_missions = { fra_jeans } 
 		provinces_to_highlight = {
-			owner = { is_subject_of = FRA }
-			owner = { is_subject_of_type = fief }
+			#owner = { is_subject_of = FRA }
+			#owner = { is_subject_of_type = fief }
+			OR = {
+				province_id = 184
+				province_id = 4776
+				province_id = 3219
+			}
 		}
 
 		trigger = {
@@ -1737,7 +1742,9 @@ ai_fra_mid_branch_5 = {
 
 		effect = {
 			custom_tooltip = fra_cloth_fairs.tt
-			country_event = { id = aetas_fra.18 } 
+			FRA = {
+				country_event = { id = aetas_fra.18 } 
+			}
 		}
 	}
 
@@ -1766,7 +1773,7 @@ ai_fra_mid_branch_5 = {
 				}
 				value = 40
 			}
-			NOT = { average_autonomy_above_min = 10 } 
+			NOT = { average_autonomy_above_min = 33 } 
 		}
 
 		effect = {
@@ -2730,7 +2737,7 @@ ai_fra_wars_branch_2 = {
 		required_missions = { fra_house_united } 
 		provinces_to_highlight = {
 			OR = {
-				province_id = 201
+				province_id = 3294
 				province_id = 4696
 			}
 			OR = {
@@ -2742,7 +2749,7 @@ ai_fra_wars_branch_2 = {
 		trigger = {
 			num_of_galley = 12
 			sailors_percentage = 0.8
-			201 = {
+			3294 = {
 				country_or_non_sovereign_subject_holds = ROOT
 				has_dock_building_trigger = yes
 				has_shipyard_building_trigger = yes
