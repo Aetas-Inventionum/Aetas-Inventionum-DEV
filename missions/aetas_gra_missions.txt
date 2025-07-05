@@ -335,7 +335,6 @@ ai_gra_branch_2 = {
 			#	name = gra_term
 			#	duration = -1
 			#}
-			}
 			if = { 
 				limit = { NOT = { 4565 = { has_discovered = ROOT } } }
 				4565 = { discover_country = ROOT }
@@ -470,6 +469,7 @@ ai_gra_branch_2 = {
 		} 
 	}
 }
+
 ai_gra_branch_3 = {
 	slot = 3
 	generic = no
