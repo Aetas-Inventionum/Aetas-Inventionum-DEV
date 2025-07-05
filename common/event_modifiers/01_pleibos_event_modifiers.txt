@@ -930,6 +930,7 @@ mythical_isles = {
 por_henrique_ambition = { 
 	admiral_cost = -0.25
 	may_explore = yes 
+	range = 0.15
 }
 por_expanding_horizons = { 
 	range = 0.2 
