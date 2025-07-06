@@ -297,7 +297,7 @@ province_event = {
 				area = munster_area
 				area = leinster_area
 				area = connacht_area
-				area = ulster_area
+				#area = ulster_area - pretty close, will exclude from exclusion for now!
 			}
 		}
 	}
