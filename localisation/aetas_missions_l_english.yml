@@ -4461,6 +4461,8 @@
  kid_cnn_desc:0 "The Burghs of Clanricade and Mayo were once Hiberno-Normans themselves, but have lost their way. Let us remind them from where they once came and bring them under our control."
  kid_ord_title:0 "Loyalty of the Butlers"
  kid_ord_desc:0 "The Butlers of Ormond are much like us in that we are both largely loyal to England. However, they have yet to truly prove their allegiance. As Justiciars of Ireland, let us obtain their loyalty, one way or another."
+ kid_ord_trigger_tt_1:0 "§Y[ORD.GetName]§!'s opinion of §Y[KID.GetName]§! or their §YEnglish liege§! is at least §Y100§!."
+ kid_ord_trigger_tt_2:0 "§Y[KID.GetName]§!, their §YEnglish liege§!, or a subject of either owns the provinces of §Y[4377.GetName]§! and §Y[5173.GetName]§!."
  kid_dms_title:0 "The Gaelic Twin"
  kid_dms_desc:0 "Although we are of the same family, the FitzGeralds of Desmond and Kildare could not be anymore different; those of Desmond have chosen to Gaelicize, becoming one with the local Irish, while we, on the other hand, have stuck to our roots from England. Along with the rest of the Gaelicized Norman lords, their mere existence is a threat to our legitimacy, and must be destroyed."
  kid_justiciar_title:0 "Justiciar of Ireland"

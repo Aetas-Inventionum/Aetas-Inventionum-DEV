@@ -292,6 +292,14 @@ province_event = {
 		NOT = { exists = GBR }
 		NOT = { is_year = 1600 }
 		NOT = { has_province_modifier = sco_reivers }
+		NOT = {
+			AND = {
+				area = munster_area
+				area = leinster_area
+				area = connacht_area
+				area = ulster_area
+			}
+		}
 	}
 
 	mean_time_to_happen = { 

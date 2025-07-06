@@ -174,43 +174,55 @@ ai_kid1_branch_2 = {
 			OR = {
 				ORD = {
 					AND = {
-						exists = yes
+						hidden_trigger = {
+							exists = yes
+						}
 						OR = {
 							NOT = { num_of_cities = 4 } 
 							NOT = { total_development = ROOT } 
 						}
-						OR = {
-							has_opinion = {
-								who = ROOT
-								value = 100
-							}
-							has_opinion = {
-								who = ENG
-								value = 100
+						custom_trigger_tooltip = {
+							tooltip = kid_ord_trigger_tt_1
+						}
+						hidden_trigger = {
+							OR = {
+								has_opinion = {
+									who = ROOT
+									value = 100
+								}
+								has_opinion = {
+									who = ENG
+									value = 100
+								}
 							}
 						}
 					}
 				}
 				AND = {
-					NOT = { exists = ORD } 
-					4377 = {
-						OR = {
-							country_or_non_sovereign_subject_holds = ROOT
-							owner = {
-								OR = {
-									overlord_of = ROOT
-									overlord = { overlord_of = ROOT } 
+					NOT = { exists = ORD }
+					custom_trigger_tooltip = {
+						tooltip = kid_ord_trigger_tt_2
+					}
+					hidden_trigger = {
+						4377 = {
+							OR = {
+								country_or_non_sovereign_subject_holds = ROOT
+								owner = {
+									OR = {
+										overlord_of = ROOT
+										overlord = { overlord_of = ROOT } 
+									}
 								}
 							}
 						}
-					}
-					5173 = {
-						OR = {
-							country_or_non_sovereign_subject_holds = ROOT
-							owner = {
-								OR = {
-									overlord_of = ROOT
-									overlord = { overlord_of = ROOT } 
+						5173 = {
+							OR = {
+								country_or_non_sovereign_subject_holds = ROOT
+								owner = {
+									OR = {
+										overlord_of = ROOT
+										overlord = { overlord_of = ROOT } 
+									}
 								}
 							}
 						}
