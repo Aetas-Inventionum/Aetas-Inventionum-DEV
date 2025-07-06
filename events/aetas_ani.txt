@@ -235,3 +235,57 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = aetas_ani.3 # -- Event for ORD to be subject to DMS in dms_ord mission
+	title = aetas_ani.3.t
+	desc = aetas_ani.3.d
+	picture = DIPLOMACY_eventPicture
+
+	is_triggered_only = yes 
+	fire_only_once = yes 
+	major = yes 
+	major_trigger = { 
+		OR = { 
+			tag = ORD 
+			tag = DMS
+		}
+	}
+
+	option = { 
+		name = aetas_ani.3.a #sure
+		ai_chance = { 
+			factor = 90
+		}
+		DMS = { 
+			create_subject = { 
+				subject = ORD 
+				subject_type = fief 
+			}
+		}
+		hidden_effect = { 
+			if = { 
+				limit = { FROM = { tag = DMS } }
+				ORD = { 
+					change_country_color = { 
+						color = { 185  55  51 }
+					}
+				}
+			}
+			else = { 
+				ORD = { 
+					change_country_color = { country = KRR }
+				}
+			}
+		}
+	}
+	option = { 
+		name = aetas_ani.3.b #no thanks 
+		ai_chance = { 
+			factor = 10
+		}
+		every_owned_province = { 
+			add_permanent_claim = DMS
+		}
+	}
+}
