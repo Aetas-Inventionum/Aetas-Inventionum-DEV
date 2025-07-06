@@ -382,16 +382,55 @@ ai_kid1_branch_3 = {
 		required_missions = { kid_ord } 
 		provinces_to_highlight = {
 			province_id = 374
-			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+			NOT = {
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					owner = {
+						OR = {
+							overlord_of = ROOT
+							overlord = { overlord_of = ROOT } 
+						}
+					}
+				}
+			} 
 		}
 
-		trigger = { 374 = { country_or_non_sovereign_subject_holds = ROOT }  } 
+		trigger = {
+			374 = {
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					owner = {
+						OR = {
+							overlord_of = ROOT
+							overlord = { overlord_of = ROOT } 
+						}
+					}
+				}
+			}
+		} 
 
 		effect = {
 			override_country_name = "KID_LEINSTER"
 			add_country_modifier = {
 				name = "dukes_leinster"
 				duration = -1
+			}
+			if = {
+				limit = {
+					374 = {
+						NOT = {
+							owned_by = KID
+						}
+					}
+				}
+				custom_tooltip = kid_lei_tt
+				hidden_effect = {
+					374 = {
+						cede_province = KID
+						add_core = KID
+					}
+				}
+				
 			}
 		}
 	}
@@ -477,6 +516,7 @@ ai_kid1_branch_3 = {
 		effect = { country_event = { id = aetas_eng.30 }  } 
 	}
 }
+
 ai_kid1_branch_4 = {
 	slot = 4
 	generic = no
