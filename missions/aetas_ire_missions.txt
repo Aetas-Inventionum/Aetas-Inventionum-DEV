@@ -201,7 +201,7 @@ sln_ire_branch = {
 	sln_special = {
 		icon = invest_in_the_rich_trades
 		position = 2
-		required_missions = { cnn_merchants } 
+		required_missions = { ire_clan_seat } 
 		provinces_to_highlight = {
 			province_id = 4119
 			NOT = {
@@ -990,13 +990,20 @@ tyr_branch_5 = {
 		provinces_to_highlight = {  } 
 
 		trigger = {
-			calc_true_if = {
-				all_ally = {
-					capital_scope = { NOT = { region = british_isles_region }  } 
-					marriage_with = ROOT
+			custom_trigger_tooltip = {
+				tooltip = tyr_geraldine_league_tt
+				hidden_trigger = {
+					calc_true_if = {
+						all_ally = {
+							capital_scope = { NOT = { region = british_isles_region }  } 
+							marriage_with = ROOT
+						}
+						amount = 1
+					}
 				}
-				amount = 4
 			}
+			
+			
 		}
 
 		effect = {

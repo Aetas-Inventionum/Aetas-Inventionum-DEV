@@ -335,9 +335,14 @@ country_event = {
 
 	fire_only_once = yes
 
+	trigger = {
+		tag = POR
+		has_ruler = "João I"
+		mission_completed = por_ceuta
+	}
 
 	mean_time_to_happen = { 
-		months = 1
+		months = 6
 	}
 
 	option = { 
@@ -349,6 +354,7 @@ country_event = {
 		add_stability = 1
 	}
 }
+
 #Purchase of Surat
 country_event = {
 	id = aetas_por.12
