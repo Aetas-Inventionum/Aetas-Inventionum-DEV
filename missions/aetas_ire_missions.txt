@@ -372,29 +372,34 @@ try_ire_branch_1 = {
 	generic = no
 	ai = yes
 	has_country_shield = yes
-	potential = { tag = TRY } 
+	potential = {
+		tag = TRY 
+		} 
 
-	mobilize_gallowglass = {
-		icon = mission_rb_unite_the_clans
-		position = 1
-		provinces_to_highlight = {  } 
-
-		trigger = {
-			mil_power = 400
-			capital_scope = {
-				culture = norse_gael
-				has_manpower_building_trigger = yes
-			}
-		}
-
-		effect = { custom_tooltip = unlock_gallowglass_reform_tt } 
-	}
+	#mobilize_gallowglass = { -- i couldnt get the reform assignment to work and its a badly implemented mission anyway i just wanna stop fiddling this man.
+	#	icon = mission_rb_unite_the_clans
+	#	position = 1
+	#	provinces_to_highlight = {  } 
+	#
+	#	trigger = {
+	#		mil_power = 400
+	#		capital_scope = {
+	#			culture = norse_gael
+	#			has_manpower_building_trigger = yes
+	#		}
+	#	}
+	#
+	#	effect = {
+	#		#custom_tooltip = unlock_gallowglass_reform_tt
+	#		unlock_government_reform = { government_reform = try_gallowglass_reform }
+	#	} 
+	#}
 
 	try_special2 = {
 		icon = mission_extent_yasak_to_the_east
 		position = 2
 		required_missions = {
-			mobilize_gallowglass
+			#mobilize_gallowglass
 			ire_clan_seat
 		}
 		provinces_to_highlight = {

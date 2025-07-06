@@ -10,19 +10,19 @@ wlm_branch_1 = {
 		position = 2
 		required_missions = { wlm_ruin } 
 		provinces_to_highlight = {  
-			province_id = 4369
+			province_id = 3324
 			NOT = { num_of_times_improved = 5 }
 		} 
 
 		trigger = {  
-			4369 = { 
+			3324 = { 
 				owned_by = ROOT 
 				num_of_times_improved = 5
 			}
 		} 
 
 		effect = {  
-			4369 = { 
+			3324 = { 
 				change_culture = english
 			}
 		} 
@@ -58,7 +58,7 @@ wlm_branch_2 = {
 
 		effect = {  
 			241 = { 
-				add_province_modifier = { 
+				add_permanent_province_modifier = { 
 					name = castles_glamorgan
 					duration = -1
 				}
@@ -98,7 +98,7 @@ wlm_branch_2 = {
 			}
 			else = { 
 				241 = { 
-					add_province_modifier = { 
+					add_permanent_province_modifier = { 
 						name = royal_cardiff
 						duration = -1 
 					}
@@ -169,7 +169,8 @@ wlm_branch_3 = {
 		} 
 
 		trigger = {  
-			stability = 3
+			#stability = 3 #-- too annoying for an overlord to get up
+			monthly_income = 5
 			all_owned_province = { 
 				NOT = { devastation = 1 }
 			}
@@ -181,7 +182,7 @@ wlm_branch_3 = {
 				remove_province_modifier = welsh_revolt 
 			}
 			wales_area = { 
-				add_province_modifier = { 
+				add_permanent_province_modifier = { 
 					name = rebuild_wales
 					duration = 36500
 				}
@@ -235,7 +236,7 @@ wlm_branch_4 = {
 				AND = { 
 					base_manpower = 5
 					has_fort_building_trigger = yes 
-					has_manpower_building_trigger = yes 
+					#has_manpower_building_trigger = yes -- not completable for ages
 				}
 			}
 		} 
@@ -250,7 +251,7 @@ wlm_branch_4 = {
 
 		effect = {  
 			5167 = { 
-				add_province_modifier = { 
+				add_permanent_province_modifier = { 
 					name = trim_mod
 					duration = -1
 				}

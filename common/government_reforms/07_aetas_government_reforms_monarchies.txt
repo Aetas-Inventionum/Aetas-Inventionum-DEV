@@ -2405,6 +2405,12 @@ try_gallowglass_reform = {
 		}
 		mission_completed = mobilize_gallowglass
 	}
+	trigger = {
+		OR = {
+			tag = TRY 
+			was_tag = TRY 
+		}
+	}
 	nation_designer_cost = 0
 	modifiers = {
 		mercenary_cost = -0.1
