@@ -14,7 +14,7 @@ country_event = {
 		tag = DMS 
 		AND = { 
 			owns_core_province = 5178
-			owns_core_province = 4377
+			owns_core_province = 5175
 		}
 	}
 
@@ -28,7 +28,7 @@ country_event = {
 		5178 = {
 			add_province_triggered_modifier = cork_city
 		}
-		4377 = { 
+		5175 = { 
 			add_province_triggered_modifier = cork_city
 		}
 	}
@@ -41,7 +41,7 @@ country_event = {
 				duration = 7300
 			}
 		}
-		4377 = { 
+		5175 = { 
 			add_province_modifier = { 
 				name = cork_unhappy
 				duration = 7300
