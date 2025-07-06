@@ -1030,7 +1030,15 @@ ai_kid2_branch_5 = {
 
 		trigger = { 4121 = { num_of_times_improved = 5 }  } 
 
-		effect = { 4121 = { change_culture = hiberno_norman }  } 
+		effect = { 
+			4121 = { 
+				change_culture = hiberno_norman
+				add_prosperity = 25
+				owner = {
+					add_legitimacy = 10
+				}
+			}
+		} 
 	}
 
 	kid_belfast = {
@@ -1041,7 +1049,8 @@ ai_kid2_branch_5 = {
 			province_id = 4121
 			NOT = {
 				AND = {
-					num_of_times_improved = 10
+					#num_of_times_improved = 10
+					base_production = 8
 					has_tax_building_trigger = yes
 					has_trade_building_trigger = yes
 					has_production_building_trigger = yes
@@ -1051,7 +1060,8 @@ ai_kid2_branch_5 = {
 
 		trigger = {
 			4121 = {
-				num_of_times_improved = 10
+				#num_of_times_improved = 10
+				base_production = 8
 				has_tax_building_trigger = yes
 				has_trade_building_trigger = yes
 				has_production_building_trigger = yes
