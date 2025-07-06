@@ -354,6 +354,7 @@
  mozarabic_mod:0 "Mozarabic Population in Province"
  total_gibraltar_monopolization:0 "Total Monopolization of Gibraltar"
  desc_total_gibraltar_monopolization:0 "Our nation has completely monopolized the movement of trade between Africa and Europe  at the Strait of Gibraltar. For this, we reap bountiful economic rewards.\n"
+ lei_prep_for_war:0 "Prepared for War"
 
  #Province special modifiers
  ai_catanzaro:0 "Silk Factories of Catanzaro"

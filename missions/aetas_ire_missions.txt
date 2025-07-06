@@ -291,7 +291,7 @@ lei_ire_branch_1 = {
 		effect = {
 			add_country_modifier = {
 				name = "lei_kings"
-				duration = -1
+				duration = 7300
 			}
 		}
 	}
@@ -588,8 +588,17 @@ gen_ire_branch_2 = {
 			}
 			else_if = {
 				limit = { tag = LEI } 
-				owns_core_province = 5174
-				5120 = { country_or_non_sovereign_subject_holds = ROOT } 
+				#owns_core_province = 5174
+				#4120 = { country_or_non_sovereign_subject_holds = ROOT } -- this is the same as ai_ire_lei??
+				num_of_owned_provinces_with = {
+					value = 5
+					OR = {
+						area = ulster_area
+						area = leinster_area
+						area = connacht_area
+						area = munster_area
+					}
+				}
 			}
 			else_if = {
 				limit = {

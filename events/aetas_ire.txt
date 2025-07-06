@@ -682,10 +682,10 @@ country_event = {
 	option = { 
 		name = aetas_ire.8.a #Droichead Átha
 		trigger = { 
-			NOT = { capital = 5167 }
+			NOT = { capital = 5168 }
 		}
-		set_capital = 5167
-		5167 = { 
+		set_capital = 5168
+		5168 = { 
 			add_province_triggered_modifier = ire_capital_mod
 		}
 	}
