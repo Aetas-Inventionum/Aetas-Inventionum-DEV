@@ -355,6 +355,7 @@
  total_gibraltar_monopolization:0 "Total Monopolization of Gibraltar"
  desc_total_gibraltar_monopolization:0 "Our nation has completely monopolized the movement of trade between Africa and Europe  at the Strait of Gibraltar. For this, we reap bountiful economic rewards.\n"
  lei_prep_for_war:0 "Prepared for War"
+ caisael:0 "Caiseal"
 
  #Province special modifiers
  ai_catanzaro:0 "Silk Factories of Catanzaro"
@@ -555,6 +556,7 @@
  test:0 "test"
  is_ally_of_enemy_tt:0 "[From.GetName] is an ally of our enemy."
  does_not_border_tt:0 "We do not border [From.GetName]."
+ DESMOND:0 "Desmond"
  
  #Decisions 
  sardinian_nation_decision_title:0 "Form the Kingdom of Sardinia"
