@@ -1,0 +1,36 @@
+country_decisions = {
+
+	ANIirelandWestMeath = {
+		major = yes
+		potential = {
+			has_country_flag = KIDnowANI #Assigned by kid_ire
+			5167 = {
+				NOT = {
+					owned_by = ANI #The Ireland tag that KID becomes in eng.30 
+				}
+			}
+		}
+
+		allow = {
+			5167 = {
+				NOT = {
+					owned_by = ANI #The Ireland tag that KID becomes in eng.30 
+				}
+				owner = {
+					has_opinion = {
+						who = THIS
+						value = 120
+					}
+				}
+			}
+			treasury = 100
+		}
+
+		effect = {
+			add_treasury = -100
+			5167 = {
+				cede_province = ANI
+			}
+		}
+	}
+}

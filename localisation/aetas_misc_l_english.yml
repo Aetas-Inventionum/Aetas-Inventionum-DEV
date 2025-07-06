@@ -592,6 +592,8 @@
  low_saxon_nation_desc:0 "The Low Saxons are an ancient people, having dwelled on these grounds for over a millennia and perhaps even longer. We represent the old past of Germanic people while yet still pushing our kin ever forward with powerful innovations and a contagious culture. However, our region lacks the unity that others may have which thus brings with it great weakness and vulnerability to outside aggressors. In the name of our history and defense, a united Lower Saxony will become a reality!"
  nassau_nation_title:0 "Unite the County of Nassau"
  nassau_nation_desc:0 "From 1255, the County of Nassau has been divided amongst many branches of the main royal house of Nassau and has produced many prestigious characters from a Holy Roman Emperor to the future Stadtholders of the Netherlands. But, alas, where are the Counts of Nassau? All claim to be thus, but none truly rule all of the county. Let us finally bring great change and unite the entirety of Nassau under one banner."
+ ANIirelandWestMeath_title:0 "Purchase [5167.GetName] from [5167.Owner.GetName]"
+ ANIirelandWestMeath_desc:0 "Although we have been granted domionship over Ireland by our overlord, the country fief of §Y[5167.GetName]§! is still in servitude to §Y[5167.Owner.GetName]§!. Perhaps, with some oiling of the diplomatic machine, we can encourage them to grant this fiefdom to us."
   
  #misc colonial regions 
  GIPUZKOA_BERRIA:0 "Gipuzkoa Berria"

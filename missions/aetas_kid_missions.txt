@@ -525,7 +525,11 @@ ai_kid1_branch_3 = {
 			}
 		}
 
-		effect = { country_event = { id = aetas_eng.30 }  } 
+		effect = { 
+			country_event = { 
+				id = aetas_eng.30 
+			}
+		} 
 	}
 }
 
