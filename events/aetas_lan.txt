@@ -226,7 +226,7 @@ country_event = {
 			type = artist 
 			discount = yes 
 		}
-		117 = { 
+		116 = { 
 			add_province_modifier = { #Was add_country_modifier but like.. huh? Maybe it wanted to add a country one to whoever owned this, but then idk why
 				name = donatello_mod
 				duration = -1
@@ -386,7 +386,7 @@ country_event = {
 			type = statesman
 			discount = yes 
 		}
-		117 = { 
+		116 = { 
 			add_province_modifier = { #Was add_country_modifier but like.. huh? Maybe it wanted to add a country one to whoever owned this, but then idk why
 				name = machiavelli_mod
 				duration = -1
@@ -413,7 +413,7 @@ country_event = {
 			type = natural_scientist
 			discount = yes 
 		}
-		117 = { 
+		116 = { 
 			add_province_modifier = { #Was add_country_modifier but like.. huh? Maybe it wanted to add a country one to whoever owned this, but then idk why
 				name = davinci_mod
 				duration = -1
