@@ -280,7 +280,10 @@ ai_wal_branch_2 = {
 				estate = estate_burghers
 				loyalty = 60
 			}
-			accepted_culture = carpathian_german
+			OR = {
+			accepted_culture = transylvanian_saxon
+			NOT = { any_owned_province = { culture = transylvanian_saxon } }
+			}
 		}
 
 		effect = {
