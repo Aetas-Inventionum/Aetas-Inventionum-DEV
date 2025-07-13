@@ -306,7 +306,7 @@ ai_wal_branch_2 = {
 			NOT = {
 				AND = {
 					owned_by = ROOT
-					culture = carpathian_german
+					#culture = carpathian_german
 					num_of_times_improved = 5
 					has_trade_building_trigger = yes
 				}
@@ -314,16 +314,16 @@ ai_wal_branch_2 = {
 		}
 
 		trigger = {
-			accepted_culture = carpathian_german
+			#accepted_culture = carpathian_german
 			5508 = {
 				owned_by = ROOT
-				culture = carpathian_german
+				#culture = carpathian_german
 				num_of_times_improved = 5
 				has_trade_building_trigger = yes
 			}
 			161 = {
 				owned_by = ROOT
-				culture = carpathian_german
+				#culture = carpathian_german
 				num_of_times_improved = 5
 				has_trade_building_trigger = yes
 			}
