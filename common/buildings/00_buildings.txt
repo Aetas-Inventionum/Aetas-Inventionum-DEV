@@ -870,7 +870,7 @@ barracks = {
 	cost = 50			#BTAddOn changed from 100. Part of the comprehensive balance overhaul to adjust buildings to the BT map (with all its new provinces)
 	time = 12
 	modifier = {
-		local_manpower_modifier = 0.5			#BTAddOn changed from 0.5. Part of the comprehensive balance overhaul to adjust buildings to the BT map (with all its new provinces)
+		local_manpower_modifier = 0.25			#BTAddOn changed from 0.5. Part of the comprehensive balance overhaul to adjust buildings to the BT map (with all its new provinces)
 		
 	}
 	on_built = {

@@ -5002,7 +5002,7 @@ arges_cathedral = {
 	}
 
 	local_tax_modifier = 0.05
-	yearly_patriarch_authority = 0.5
+	yearly_patriarch_authority = 0.005 #Original value was 0.5 which equals to 50pa in game, which is absurd.
 	
 	#Province scope
 	on_activation = {
