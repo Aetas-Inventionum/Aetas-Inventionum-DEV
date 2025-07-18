@@ -231,20 +231,29 @@ hun_hunyadi_branch_1 = {
 		trigger = {
 			OR = {
 				AND = {
-					upper_austria_area = {
-						country_or_non_sovereign_subject_holds = ROOT
-						NOT = {
-							OR = {
-								province_id = 5211
-								province_id = 4760
-							}
+					custom_trigger_tooltip = {
+						tooltip = hun_upper_austria_provs.tt					
+						AND = {
+							#Upper Austria
+							133 = { country_or_non_sovereign_subject_holds = ROOT }
+							4761 = { country_or_non_sovereign_subject_holds = ROOT }
+							5210 = { country_or_non_sovereign_subject_holds = ROOT }
+							5213 = { country_or_non_sovereign_subject_holds = ROOT }
+							5216 = { country_or_non_sovereign_subject_holds = ROOT }
 						}
-						type = all
 					}
-					austria_proper_area = {
-						country_or_non_sovereign_subject_holds = ROOT
-						NOT = { province_id = 5218 } 
-						type = all
+					custom_trigger_tooltip = {
+						tooltip = hun_lower_austria_provs.tt
+						AND = {
+							#Lower Austria
+							134 = { country_or_non_sovereign_subject_holds = ROOT }
+							1770 = { country_or_non_sovereign_subject_holds = ROOT }
+							4762 = { country_or_non_sovereign_subject_holds = ROOT }
+							5214 = { country_or_non_sovereign_subject_holds = ROOT }
+							5215 = { country_or_non_sovereign_subject_holds = ROOT }
+							5217 = { country_or_non_sovereign_subject_holds = ROOT }
+							5218 = { country_or_non_sovereign_subject_holds = ROOT }
+						}
 					}
 				}
 				HAB = { junior_union_with = HUN } 
@@ -343,6 +352,7 @@ jag_branch_1 = {
 				area = erzgebirge_area
 				area = bohemia_area
 				area = sudetes_area
+				area = sumava_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
 		}
@@ -360,6 +370,10 @@ jag_branch_1 = {
 						type = all
 					}
 					sudetes_area = {
+						country_or_non_sovereign_subject_holds = ROOT
+						type = all
+					}
+					sumava_area = {
 						country_or_non_sovereign_subject_holds = ROOT
 						type = all
 					}
@@ -908,9 +922,11 @@ jag_branch_3 = {
 			OR = {
 				senior_union_with = POL
 				AND = {
-					all_province = {
-						is_core = POL
-						owned_by = ROOT
+					NOT = {
+						any_province = {
+							is_core = POL
+							NOT = { owned_by = ROOT }
+						}
 					}
 				}
 			}
@@ -1310,10 +1326,17 @@ hun_balkans_branch_1 = {
 		}
 
 		trigger = {
-			east_adriatic_coast_area = {
-				country_or_non_sovereign_subject_holds = ROOT
-				NOT = { province_id = 5395 } 
-				type = all
+			custom_trigger_tooltip = {
+				tooltip = hun_dalmatia_provs.tt					
+				AND = {
+					136 = { country_or_non_sovereign_subject_holds = ROOT }
+					1826 = { country_or_non_sovereign_subject_holds = ROOT }
+					4753 = { country_or_non_sovereign_subject_holds = ROOT }
+					5392 = { country_or_non_sovereign_subject_holds = ROOT }
+					5393 = { country_or_non_sovereign_subject_holds = ROOT }
+					5407 = { country_or_non_sovereign_subject_holds = ROOT }
+					5408 = { country_or_non_sovereign_subject_holds = ROOT }
+				}
 			}
 		}
 
@@ -1783,11 +1806,18 @@ hun_balkans_branch_3 = {
 		provinces_to_highlight = { owned_by = USR } 
 
 		trigger = {
-			USR = {
-				has_opinion = {
-					WHO = HUN
-					value = 120
+			if = {
+				limit = { exists = USR }
+				USR = {
+					has_opinion = {
+						WHO = HUN
+						value = 120
+					}
 				}
+			}
+			else = {
+				5419 = { country_or_non_sovereign_subject_holds = ROOT }
+				5420 = { country_or_non_sovereign_subject_holds = ROOT }
 			}
 		}
 
@@ -2024,11 +2054,38 @@ hun_balkans_branch_4 = {
 		}
 
 		trigger = {
-			1954 = { country_or_non_sovereign_subject_holds = ROOT } 
-			4239 = { country_or_non_sovereign_subject_holds = ROOT } 
+			OR = {
+				AND = {
+					1954 = { owned_by = HUN } 
+					4239 = { owned_by = HUN } 
+				}
+				SER = {
+					exists = yes
+					NOT = { dynasty = Lazarevic } 
+				}
+			}
 		}
 
 		effect = {
+			if = {
+				limit = {
+					NOT = {
+						AND = {
+							owns = 1954
+							owns = 4239
+						}
+					}
+				}
+				country_event = { id = aetas_hun.1 } 
+			}
+			syrmia_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+					NOT = { is_permanent_claim = ROOT } 
+					NOT = { is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
 			serbia_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT } 
@@ -2133,10 +2190,12 @@ hun_balkans_branch_4 = {
 		}
 
 		trigger = {
-			all_province = {
-				area = dardania_area
-				culture = serbian
-				country_or_non_sovereign_subject_holds = ROOT
+			NOT = {
+				any_province = {
+					area = dardania_area
+					culture = serbian
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
 			}
 		}
 
