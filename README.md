@@ -12,6 +12,12 @@ a. In order to update your install of the mod, you need to press the "Fetch orig
 
 ### Insert Manual install steps here 
 <sup>(Playtesters & Contributors do NOT do this, use above method.)</sup>
+0. Make sure that you have "Europa Universalis IV" and the mod's repository downloaded.
+1. Launch the EU4 Launcher and navigate to the "Upload a Mod" button in "All installed mods", then click "Create a Mod".
+2. In the following panel, name the folder that will be created however you wish. Tags, version, and name do not matter.
+3. Navigate to the folder you just made, located in your Documents/Paradox Interactive/Europa Universalis IV/mod folder.
+4. Open the archive for the repository you downloaded, and copy the entire contents EXCEPT for the descriptor.mod into the new mod folder.
+5. Open the game and press play :)
 
 --------------------------------------------------------------------------------
 ### Credits
